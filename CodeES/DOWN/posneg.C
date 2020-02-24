@@ -64,10 +64,10 @@ TH1F* sPiphi_rec_pos=new TH1F("h1", "sPi_PHI_reco_pos", 50,-4,4);
 TH1F* sPiphi_rec_neg=new TH1F("h1", "sPi_PHI_reco_neg", 50,-4,4);
     TH1F* sPiphi_neg=new TH1F("h2", "sPi_PHI_neg", 50,-4,4);
     
-TH1F* sPieta_rec_pos=new TH1F("h1", "sPi_eta_reco_pos", 50,0,5);
-    TH1* sPieta_pos=new TH1F("h2", "sPi_eta", 50,0,5);
-TH1F* sPieta_rec_neg=new TH1F("h1", "sPi_eta_reco_neg", 50,0,5);
-    TH1* sPieta_neg=new TH1F("h2", "sPi_eta_neg", 50,0,5);
+TH1F* sPieta_rec_pos=new TH1F("h1", "sPi_eta_reco_pos", 50,2,5);
+    TH1* sPieta_pos=new TH1F("h2", "sPi_eta", 50,2,5);
+TH1F* sPieta_rec_neg=new TH1F("h1", "sPi_eta_reco_neg", 50,2,5);
+    TH1* sPieta_neg=new TH1F("h2", "sPi_eta_neg", 50,2,5);
     
 TH1F* sPipt_rec_pos=new TH1F("h1", "sPi_PT_reco_pos", 50,0,900);
     TH1* sPipt_pos=new TH1F("h1", "sPi_PT_reco_pos", 50,0,900);
@@ -87,20 +87,20 @@ TH1F* sPitheta_rec_neg=new TH1F("h1", "sPi_THETA_reco_neg", 50,0,0.2);
     TH1F* P1phi_neg=new TH1F("h2", "P1_PHI_neg", 50,-4,4);
  
     
-TH1F* P1eta_rec_pos=new TH1F("h1", "P1_eta_reco_pos", 50,0,5);
-    TH1* P1eta_pos=new TH1F("h2", "P1_eta_pos", 50,0,5);
-TH1F* P1eta_rec_neg=new TH1F("h1", "P1_eta_reco_neg", 50,0,5);
-    TH1* P1eta_neg=new TH1F("h2", "P1_eta_neg", 50,0,5);
+TH1F* P1eta_rec_pos=new TH1F("h1", "P1_eta_reco_pos", 50,2,5);
+    TH1* P1eta_pos=new TH1F("h2", "P1_eta_pos", 50,2,5);
+TH1F* P1eta_rec_neg=new TH1F("h1", "P1_eta_reco_neg", 50,2,5);
+    TH1* P1eta_neg=new TH1F("h2", "P1_eta_neg", 50,2,5);
     
 TH1F* P1pt_rec_pos=new TH1F("h1", "P1_PT_reco_pos", 50,0,6000);
     TH1* P1pt_pos=new TH1F("h2", "sPi_PT_reco_pos", 50,0,6000);
  TH1F* P1pt_rec_neg=new TH1F("h1", "P1_PT_reco_neg", 50,0,6000);
     TH1* P1pt_neg=new TH1F("h2", "sPi_PT_reco_neg", 50,0,6000);
     
-TH1* P1theta_rec_pos=new TH1F("h1", "P1_THETA_reco_pos", 50,-0.5,0.5);
-    TH1F* P1theta_pos=new TH1F("h2", "P1_THETA_reco_pos", 50,-0.5,0.5);
-TH1* P1theta_rec_neg=new TH1F("h1", "P1_THETA_reco_neg", 50,-0.5,0.5);
-    TH1F* P1theta_neg=new TH1F("h2", "P1_THETA_reco_neg", 50,-0.5,0.5);
+TH1* P1theta_rec_pos=new TH1F("h1", "P1_THETA_reco_pos", 50,0,0.3);
+    TH1F* P1theta_pos=new TH1F("h2", "P1_THETA_reco_pos", 50,0,0.3);
+TH1* P1theta_rec_neg=new TH1F("h1", "P1_THETA_reco_neg", 50,0,0.3);
+    TH1F* P1theta_neg=new TH1F("h2", "P1_THETA_reco_neg", 50,0,0.3);
 //-----------------------------
  
  TH1F* P2phi_rec_pos=new TH1F("h1", "P2_PHI_reco_pos", 50,-4,4);
@@ -108,20 +108,20 @@ TH1* P1theta_rec_neg=new TH1F("h1", "P1_THETA_reco_neg", 50,-0.5,0.5);
  TH1F* P2phi_rec_neg=new TH1F("h1", "P2_PHI_reco_neg", 50,-4,4);
     TH1F* P2phi_neg=new TH1F("h2", "P2_PHI_neg", 50,-4,4);
     
-TH1F* P2eta_rec_pos=new TH1F("h1", "P2_eta_reco_pos", 50,0,5);
-    TH1* P2eta_pos=new TH1F("h2", "P2_eta_pos", 50,0,5);
- TH1F* P2eta_rec_neg=new TH1F("h1", "P2_eta_reco_neg", 50,0,5);
-    TH1* P2eta_neg=new TH1F("h2", "P2_eta_neg", 50,0,5);
+TH1F* P2eta_rec_pos=new TH1F("h1", "P2_eta_reco_pos", 50,2,5);
+    TH1* P2eta_pos=new TH1F("h2", "P2_eta_pos", 50,2,5);
+ TH1F* P2eta_rec_neg=new TH1F("h1", "P2_eta_reco_neg", 50,2,5);
+    TH1* P2eta_neg=new TH1F("h2", "P2_eta_neg", 50,2,5);
     
  TH1F* P2pt_rec_pos=new TH1F("h1", "P2_PT_reco_pos", 50,0,9000);
     TH1* P2pt_pos=new TH1F("h2", "P2_PT_reco_pos", 50,0,9000);
  TH1F* P2pt_rec_neg=new TH1F("h1", "P2_PT_reco_neg", 50,0,9000);
     TH1* P2pt_neg=new TH1F("h2", "P2_PT_reco_neg", 50,0,9000);
     
-TH1F* P2theta_rec_pos=new TH1F("h1", "P2_THETA_reco_pos", 50,-0.5,0.5);
-    TH1F* P2theta_pos=new TH1F("h2", "P2_THETA_reco_pos", 50,-0.5,0.5);
- TH1F* P2theta_rec_neg=new TH1F("h1", "P2_THETA_reco_neg", 50,-0.5,0.5);
-    TH1F* P2theta_neg=new TH1F("h2", "P2_THETA_reco_neg", 50,-0.5,0.5);
+TH1F* P2theta_rec_pos=new TH1F("h1", "P2_THETA_reco_pos", 50,0,0.3);
+    TH1F* P2theta_pos=new TH1F("h2", "P2_THETA_reco_pos", 50,0,0.3);
+ TH1F* P2theta_rec_neg=new TH1F("h1", "P2_THETA_reco_neg", 50,0,0.3);
+    TH1F* P2theta_neg=new TH1F("h2", "P2_THETA_reco_neg", 50,0,0.3);
  
  //---------------------------
  
@@ -130,10 +130,10 @@ TH1F* P2theta_rec_pos=new TH1F("h1", "P2_THETA_reco_pos", 50,-0.5,0.5);
  TH1F* D0phi_rec_neg=new TH1F("h1", "D0_PHI_reco_neg", 50,-4,4);
     TH1F* D0phi_neg=new TH1F("h2", "D0_PHI_neg", 50,-4,4);
     
-TH1F* D0eta_rec_pos=new TH1F("h1", "DO_eta_reco_pos", 50,0,5);
-    TH1* D0eta_pos=new TH1F("h2", "D0_eta_pos", 50,0,5);
-TH1F* D0eta_rec_neg=new TH1F("h1", "DO_eta_reco_neg", 50,0,5);
-    TH1* D0eta_neg=new TH1F("h2", "D0_eta_neg", 50,0,5);
+TH1F* D0eta_rec_pos=new TH1F("h1", "DO_eta_reco_pos", 50,2,5);
+    TH1* D0eta_pos=new TH1F("h2", "D0_eta_pos", 50,2,5);
+TH1F* D0eta_rec_neg=new TH1F("h1", "DO_eta_reco_neg", 50,2,5);
+    TH1* D0eta_neg=new TH1F("h2", "D0_eta_neg", 50,2,5);
     
 TH1F* D0pt_rec_pos=new TH1F("h1", "D0_PT_reco_pos", 50,0,9000);
     TH1* D0pt_pos=new TH1F("h2", "D0_PT_reco_pos", 50,0,9000);
@@ -153,10 +153,10 @@ TH1F* D0pt_rec_pos=new TH1F("h1", "D0_PT_reco_pos", 50,0,9000);
   TH1F* Dstphi_rec_neg=new TH1F("h1", "Dst_PHI_reco_neg", 50,-4,4);
     TH1F* Dstphi_neg=new TH1F("h2", "Dst_PHI_neg", 50,-4,4);
     
-TH1F* Dsteta_rec_pos=new TH1F("h1", "Dst_eta_reco_pos", 50,0,5);
-    TH1* Dsteta_pos=new TH1F("h2", "Dst_eta_pos", 50,0,5);
- TH1F* Dsteta_rec_neg=new TH1F("h1", "Dst_eta_reco_neg", 50,0,5);
-    TH1* Dsteta_neg=new TH1F("h2", "Dst_eta_neg", 50,0,5);
+TH1F* Dsteta_rec_pos=new TH1F("h1", "Dst_eta_reco_pos", 50,2,5);
+    TH1* Dsteta_pos=new TH1F("h2", "Dst_eta_pos", 50,2,5);
+ TH1F* Dsteta_rec_neg=new TH1F("h1", "Dst_eta_reco_neg", 50,2,5);
+    TH1* Dsteta_neg=new TH1F("h2", "Dst_eta_neg", 50,2,5);
     
 TH1F* Dstpt_rec_pos=new TH1F("h1", "Dst_PT_reco_pos", 50,0,10000);
     TH1* Dstpt_pos=new TH1F("h2", "Dst_PT_reco_pos", 50,0,10000);
@@ -479,17 +479,29 @@ if (sPi_ID<0)
     Double_t err_dis_Dst = sqrt(pow(1/(eff_Dst_pos+eff_Dst_neg)-(eff_Dst_pos-eff_Dst_neg)/((eff_Dst_pos+eff_Dst_neg)*(eff_Dst_pos+eff_Dst_neg)),2)*Dst_pos_err*Dst_pos_err+pow(1/(eff_Dst_pos+eff_Dst_neg)+(eff_Dst_pos-eff_Dst_neg)/((eff_Dst_pos+eff_Dst_neg)*(eff_Dst_pos+eff_Dst_neg)),2)*Dst_neg_err*Dst_neg_err);
     
     double disN_P1 = (P1_pos_rec-P1_neg_rec)/(P1_pos_rec+P1_neg_rec);
+    Double_t err_disN_P1 = sqrt(pow(1/(P1_pos_rec+P1_neg_rec)-(P1_pos_rec-P1_neg_rec)/((P1_pos_rec+P1_neg_rec)*(P1_pos_rec+P1_neg_rec)),2)*P1_pos_rec+pow(1/(P1_pos_rec+P1_neg_rec)+(P1_pos_rec-P1_neg_rec)/((P1_pos_rec+P1_neg_rec)*(P1_pos_rec+P1_neg_rec)),2)*P1_neg_rec);
+    
+    
     double disN_P2 = (P2_pos_rec-P2_neg_rec)/(P2_pos_rec+P2_neg_rec);
+    Double_t err_disN_P2 = sqrt(pow(1/(P2_pos_rec+P2_neg_rec)-(P2_pos_rec-P2_neg_rec)/((P2_pos_rec+P2_neg_rec)*(P2_pos_rec+P2_neg_rec)),2)*P2_pos_rec+pow(1/(P2_pos_rec+P2_neg_rec)+(P2_pos_rec-P2_neg_rec)/((P2_pos_rec+P2_neg_rec)*(P2_pos_rec+P2_neg_rec)),2)*P2_neg_rec);
+    
+    
     double disN_sPi = (sPi_pos_rec-sPi_neg_rec)/(sPi_pos_rec+sPi_neg_rec);
+    Double_t err_disN_sPi = sqrt(pow(1/(sPi_pos_rec+sPi_neg_rec)-(sPi_pos_rec-sPi_neg_rec)/((sPi_pos_rec+sPi_neg_rec)*(sPi_pos_rec+sPi_neg_rec)),2)*sPi_pos_rec+pow(1/(sPi_pos_rec+sPi_neg_rec)+(sPi_pos_rec-sPi_neg_rec)/((sPi_pos_rec+sPi_neg_rec)*(sPi_pos_rec+sPi_neg_rec)),2)*sPi_neg_rec);
+    
+    
     double disN_D0 = (D0_pos_rec-D0_neg_rec)/(D0_pos_rec+D0_neg_rec);
+    Double_t err_disN_D0 = sqrt(pow(1/(D0_pos_rec+D0_neg_rec)-(D0_pos_rec-D0_neg_rec)/((D0_pos_rec+D0_neg_rec)*(D0_pos_rec+D0_neg_rec)),2)*D0_pos_rec+pow(1/(D0_pos_rec+D0_neg_rec)+(D0_pos_rec-D0_neg_rec)/((D0_pos_rec+D0_neg_rec)*(D0_pos_rec+D0_neg_rec)),2)*D0_neg_rec);
+    
     double disN_Dst = (Dst_pos_rec-Dst_neg_rec)/(Dst_pos_rec+Dst_neg_rec);
+    Double_t err_disN_Dst = sqrt(pow(1/(Dst_pos_rec+Dst_neg_rec)-(Dst_pos_rec-Dst_neg_rec)/((Dst_pos_rec+Dst_neg_rec)*(Dst_pos_rec+Dst_neg_rec)),2)*Dst_pos_rec+pow(1/(Dst_pos_rec+Dst_neg_rec)+(Dst_pos_rec-Dst_neg_rec)/((Dst_pos_rec+Dst_neg_rec)*(Dst_pos_rec+Dst_neg_rec)),2)*Dst_neg_rec);
     
     
-    cout<<"P1 discrepancy with eff "<<dis_P1<<" +- " <<err_dis_P1<< " VS " << disN_P1<< endl;
-    cout<<"P2 discrepancy with eff "<<dis_P2<<" +- " <<err_dis_P2<<" VS " << disN_P2<< endl;
-    cout<<"sPi discrepancy with eff "<<dis_sPi<<" +- " <<err_dis_sPi<<" VS " << disN_sPi<< endl;
-    cout<<"D0 discrepancy with eff "<<dis_D0<<" +- " <<err_dis_D0<<" VS " << disN_D0<< endl;
-    cout<<"Dst discrepancy with eff "<<dis_Dst<<" +- " <<err_dis_Dst<<" VS " << disN_Dst<< endl;
+    cout<<"P1 discrepancy with eff "<<dis_P1<<" +- " <<err_dis_P1<< " VS " << disN_P1<<" +- " <<err_disN_P1<<  endl;
+    cout<<"P2 discrepancy with eff "<<dis_P2<<" +- " <<err_dis_P2<<" VS " << disN_P2<<" +- " <<err_disN_P2<< endl;
+    cout<<"sPi discrepancy with eff "<<dis_sPi<<" +- " <<err_dis_sPi<<" VS " << disN_sPi<<" +- " <<err_disN_sPi<<endl;
+    cout<<"D0 discrepancy with eff "<<dis_D0<<" +- " <<err_dis_D0<<" VS " << disN_D0<< " +- " <<err_disN_D0<<endl;
+    cout<<"Dst discrepancy with eff "<<dis_Dst<<" +- " <<err_dis_Dst<<" VS " << disN_Dst<<" +- " <<err_disN_Dst<< endl;
         
         
     cout<<"Pions pos efficiency: "<< eff_P1_pos<<" +- "<< P1_pos_err  <<'\n';
@@ -630,6 +642,15 @@ TH1F *h3_sPiphi_neg = (TH1F*)sPiphi_rec_neg->Clone("h3_phi_neg"); h3_sPiphi_neg-
 
  TH1F *h3_sPieta_pos = (TH1F*)sPieta_rec_pos->Clone("h3_sPieta_pos"); h3_sPieta_pos->Divide(sPieta_rec_pos,sPieta_pos);
  TH1F *h3_sPieta_neg = (TH1F*)sPieta_rec_neg->Clone("h3_sPieta_neg"); h3_sPieta_neg->Divide(sPieta_rec_neg,sPieta_neg);
+    
+TH1F *h3_sPipt_pos = (TH1F*)sPipt_rec_pos->Clone("h3_sPipt_pos"); h3_sPipt_pos->Divide(sPipt_rec_pos,sPipt_pos);
+TH1F *h3_sPipt_neg = (TH1F*)sPipt_rec_neg->Clone("h3_sPipt_neg"); h3_sPipt_neg->Divide(sPipt_rec_neg,sPipt_neg);
+  
+
+      
+ TH1F *h3_sPitheta_pos = (TH1F*)sPitheta_rec_pos->Clone("h3_sPitheta_pos"); h3_sPitheta_pos->Divide(sPitheta_rec_pos,sPitheta_pos);
+ TH1F *h3_sPitheta_neg = (TH1F*)sPitheta_rec_neg->Clone("h3_sPitheta_neg"); h3_sPitheta_neg->Divide(sPitheta_rec_neg,sPitheta_neg);
+   
 
 sPiphi_rec_pos->Add(sPiphi_rec_neg,-1);
 sPiphi_rec_neg->Add(sPiphi_rec_pos);
@@ -647,15 +668,7 @@ sPitheta_rec_pos->Add(sPitheta_rec_neg,-1);
 sPitheta_rec_neg->Add(sPitheta_rec_pos);
 sPitheta_rec_pos->Divide(sPitheta_rec_neg);
        
-    
-TH1F *h3_sPipt_pos = (TH1F*)sPipt_rec_pos->Clone("h3_sPipt_pos"); h3_sPipt_pos->Divide(sPipt_rec_pos,sPipt_pos);
-TH1F *h3_sPipt_neg = (TH1F*)sPipt_rec_neg->Clone("h3_sPipt_neg"); h3_sPipt_neg->Divide(sPipt_rec_neg,sPipt_neg);
-  
 
-      
- TH1F *h3_sPitheta_pos = (TH1F*)sPitheta_rec_pos->Clone("h3_sPitheta_pos"); h3_sPitheta_pos->Divide(sPitheta_rec_pos,sPitheta_pos);
- TH1F *h3_sPitheta_neg = (TH1F*)sPitheta_rec_neg->Clone("h3_sPitheta_neg"); h3_sPitheta_neg->Divide(sPitheta_rec_neg,sPitheta_neg);
-   
   
  //---------------
  TH1F *h3_P1phi_pos = (TH1F*)P1phi_rec_pos->Clone("h3_P1phi_pos"); h3_P1phi_pos->Divide(P1phi_rec_pos,P1phi_pos);
