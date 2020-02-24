@@ -97,10 +97,10 @@ TH1F* P1pt_rec_pos=new TH1F("h1", "P1_PT_reco_pos", 50,0,6000);
  TH1F* P1pt_rec_neg=new TH1F("h1", "P1_PT_reco_neg", 50,0,6000);
     TH1* P1pt_neg=new TH1F("h2", "sPi_PT_reco_neg", 50,0,6000);
     
-TH1* P1theta_rec_pos=new TH1F("h1", "P1_THETA_reco_pos", 50,0,0.3);
-    TH1F* P1theta_pos=new TH1F("h2", "P1_THETA_reco_pos", 50,0,0.3);
-TH1* P1theta_rec_neg=new TH1F("h1", "P1_THETA_reco_neg", 50,0,0.3);
-    TH1F* P1theta_neg=new TH1F("h2", "P1_THETA_reco_neg", 50,0,0.3);
+TH1* P1theta_rec_pos=new TH1F("h1", "P1_THETA_reco_pos", 50,0,0.25);
+    TH1F* P1theta_pos=new TH1F("h2", "P1_THETA_reco_pos", 50,0,0.25);
+TH1* P1theta_rec_neg=new TH1F("h1", "P1_THETA_reco_neg", 50,0,0.25);
+    TH1F* P1theta_neg=new TH1F("h2", "P1_THETA_reco_neg", 50,0,0.25);
 //-----------------------------
  
  TH1F* P2phi_rec_pos=new TH1F("h1", "P2_PHI_reco_pos", 50,-4,4);
@@ -113,15 +113,15 @@ TH1F* P2eta_rec_pos=new TH1F("h1", "P2_eta_reco_pos", 50,2,5);
  TH1F* P2eta_rec_neg=new TH1F("h1", "P2_eta_reco_neg", 50,2,5);
     TH1* P2eta_neg=new TH1F("h2", "P2_eta_neg", 50,2,5);
     
- TH1F* P2pt_rec_pos=new TH1F("h1", "P2_PT_reco_pos", 50,0,9000);
-    TH1* P2pt_pos=new TH1F("h2", "P2_PT_reco_pos", 50,0,9000);
- TH1F* P2pt_rec_neg=new TH1F("h1", "P2_PT_reco_neg", 50,0,9000);
-    TH1* P2pt_neg=new TH1F("h2", "P2_PT_reco_neg", 50,0,9000);
+ TH1F* P2pt_rec_pos=new TH1F("h1", "P2_PT_reco_pos", 50,0,6200);
+    TH1* P2pt_pos=new TH1F("h2", "P2_PT_reco_pos", 50,0,6200);
+ TH1F* P2pt_rec_neg=new TH1F("h1", "P2_PT_reco_neg", 50,0,6200);
+    TH1* P2pt_neg=new TH1F("h2", "P2_PT_reco_neg", 50,0,6200);
     
-TH1F* P2theta_rec_pos=new TH1F("h1", "P2_THETA_reco_pos", 50,0,0.3);
-    TH1F* P2theta_pos=new TH1F("h2", "P2_THETA_reco_pos", 50,0,0.3);
- TH1F* P2theta_rec_neg=new TH1F("h1", "P2_THETA_reco_neg", 50,0,0.3);
-    TH1F* P2theta_neg=new TH1F("h2", "P2_THETA_reco_neg", 50,0,0.3);
+TH1F* P2theta_rec_pos=new TH1F("h1", "P2_THETA_reco_pos", 50,0,0.25);
+    TH1F* P2theta_pos=new TH1F("h2", "P2_THETA_reco_pos", 50,0,0.25);
+ TH1F* P2theta_rec_neg=new TH1F("h1", "P2_THETA_reco_neg", 50,0,0.25);
+    TH1F* P2theta_neg=new TH1F("h2", "P2_THETA_reco_neg", 50,0,0.25);
  
  //---------------------------
  
@@ -791,13 +791,28 @@ Dsttheta_rec_pos->Divide(Dsttheta_rec_neg);
  TCanvas * c1aa= new TCanvas("c1aa","c1aa",400,10,600,400);
 c1aa->Divide(2,2);
 c1aa->cd(1);
-sPiphi_rec_pos->Draw("E"); 
+sPiphi_rec_pos->Draw("E");
+TLine *line1 = new TLine(-4,0,4,0); 
+line1->SetLineColor(kRed);
+line1->Draw("same");
+
 c1aa->cd(2);
 sPipt_rec_pos->Draw("E");
+TLine *line2 = new TLine(0,0,900,0); 
+line2->SetLineColor(kRed);
+line2->Draw("same");    
+
 c1aa->cd(3);
 sPieta_rec_pos->Draw("E");
+TLine *line3 = new TLine(2,0,5,0); 
+line3->SetLineColor(kRed);
+line3->Draw("same");
+
 c1aa->cd(4);
 sPitheta_rec_pos->Draw("E");
+TLine *line4 = new TLine(0,0,0.2,0); 
+line4->SetLineColor(kRed);
+line4->Draw("same");
 c1aa ->SaveAs("asymmetriessPi.pdf"); 
     
 
@@ -805,25 +820,49 @@ c1aa ->SaveAs("asymmetriessPi.pdf");
 c1bb->Divide(2,2);
 c1bb->cd(1);
 P1phi_rec_pos->Draw("E"); 
+line1->SetLineColor(kRed);
+line1->Draw("same");
+    
 c1bb->cd(2);
 P1pt_rec_pos->Draw("E");
+TLine *line2a = new TLine(0,0,6100,0); 
+line2a->SetLineColor(kRed);
+line2a->Draw("same"); 
+
 c1bb->cd(3);
 P1eta_rec_pos->Draw("E");
+line3->SetLineColor(kRed);
+line3->Draw("same");
+
 c1bb->cd(4);
 P1theta_rec_pos->Draw("E");
+TLine *line4a = new TLine(0,0,0.25,0); 
+line4a->SetLineColor(kRed);
+line4a->Draw("same");
 c1bb ->SaveAs("asymmetriesP1.pdf"); 
     
     
      TCanvas * c1cc= new TCanvas("c1cc","c1cc",400,10,600,400);
 c1cc->Divide(2,2);
 c1cc->cd(1);
-P2phi_rec_pos->Draw("E"); 
+P2phi_rec_pos->Draw("E");
+line1->SetLineColor(kRed);
+line1->Draw("same");
+    
 c1cc->cd(2);
 P2pt_rec_pos->Draw("E");
+line2a->SetLineColor(kRed);
+line2a->Draw("same"); 
+    
 c1cc->cd(3);
 P2eta_rec_pos->Draw("E");
+line3->SetLineColor(kRed);
+line3->Draw("same");
+    
 c1cc->cd(4);
 P2theta_rec_pos->Draw("E");
+line4a->SetLineColor(kRed);
+line4a->Draw("same");
 c1cc ->SaveAs("asymmetriesP2.pdf"); 
     
     
@@ -831,12 +870,24 @@ c1cc ->SaveAs("asymmetriesP2.pdf");
 c1dd->Divide(2,2);
 c1dd->cd(1);
 D0phi_rec_pos->Draw("E"); 
+line1->SetLineColor(kRed);
+line1->Draw("same");
+    
 c1dd->cd(2);
 D0pt_rec_pos->Draw("E");
+TLine *line2b = new TLine(0,0,9100,0); 
+line2b->SetLineColor(kRed);
+line2b->Draw("same");
+    
 c1dd->cd(3);
 D0eta_rec_pos->Draw("E");
+line3->SetLineColor(kRed);
+line3->Draw("same");
+    
 c1dd->cd(4);
 D0theta_rec_pos->Draw("E");
+line4->SetLineColor(kRed);
+line4->Draw("same");
 c1dd->SaveAs("asymmetriesD0.pdf"); 
     
     
@@ -844,12 +895,24 @@ TCanvas * c1ee= new TCanvas("c1ee","c1ee",400,10,600,400);
 c1ee->Divide(2,2);
 c1ee->cd(1);
 Dstphi_rec_pos->Draw("E"); 
+line1->SetLineColor(kRed);
+line1->Draw("same");
+    
 c1ee->cd(2);
 Dstpt_rec_pos->Draw("E");
+TLine *line2c = new TLine(0,0,9500,0); 
+line2c->SetLineColor(kRed);
+line2c->Draw("same");
+    
 c1ee->cd(3);
 Dsteta_rec_pos->Draw("E");
+line3->SetLineColor(kRed);
+line3->Draw("same");
+    
 c1ee->cd(4);
 Dsttheta_rec_pos->Draw("E");
+line4->SetLineColor(kRed);
+line4->Draw("same");
 
 c1ee ->SaveAs("asymmetriesDST.pdf"); 
     
@@ -860,6 +923,7 @@ c1a->Divide(2,2);
 c1a->cd(1);
 h3_sPiphi_pos->Draw("E"); 
 h3_sPiphi_pos->Draw("hist same"); 
+
  
 c1a->cd(2);
 h3_sPieta_pos->Draw("E"); 
