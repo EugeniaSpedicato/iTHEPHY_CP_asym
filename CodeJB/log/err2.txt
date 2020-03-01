@@ -1,4 +1,20 @@
 Info in <TUnixSystem::ACLiC>: creating shared library /home/smjoblan/iTHEPHY/iTHEPHY/CodeJB/./eff_cc.so
+Warning in <TROOT::Append>: Replacing existing TH1: h_pT_reco_Pi_pos (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_pT_reco_Pi_neg (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_phi_reco_Pi_pos (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_phi_reco_Pi_neg (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_theta_reco_Pi_pos (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_theta_reco_Pi_neg (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_eta_reco_Pi_pos (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_eta_reco_Pi_neg (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
 Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
 Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_pT_reco_Pi_pos.pdf has been created
@@ -11,6 +27,22 @@ Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_theta_reco_Pi_pos.p
 Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
 Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_eta_reco_Pi_pos.pdf has been created
+Warning in <TROOT::Append>: Replacing existing TH1: h_pT_reco_SPi_pos (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_pT_reco_SPi_neg (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_phi_reco_SPi_pos (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_phi_reco_SPi_neg (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_theta_reco_SPi_pos (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_theta_reco_SPi_neg (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_eta_reco_SPi_pos (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_eta_reco_SPi_neg (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
 Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
 Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_pT_reco_SPi_pos.pdf has been created
@@ -23,6 +55,22 @@ Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_theta_reco_SPi_pos.
 Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
 Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_eta_reco_SPi_pos.pdf has been created
+Warning in <TROOT::Append>: Replacing existing TH1: h_pT_reco_K_pos (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_pT_reco_K_neg (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_phi_reco_K_pos (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_phi_reco_K_neg (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_theta_reco_K_pos (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_theta_reco_K_neg (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_eta_reco_K_pos (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_eta_reco_K_neg (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
 Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
 Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_pT_reco_K_pos.pdf has been created
@@ -35,6 +83,22 @@ Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_theta_reco_K_pos.pd
 Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
 Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_eta_reco_K_pos.pdf has been created
+Warning in <TROOT::Append>: Replacing existing TH1: h_pT_reco_D0_pos (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_pT_reco_D0_neg (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_phi_reco_D0_pos (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_phi_reco_D0_neg (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_theta_reco_D0_pos (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_theta_reco_D0_neg (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_eta_reco_D0_pos (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_eta_reco_D0_neg (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
 Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
 Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_pT_reco_D0_pos.pdf has been created
@@ -47,6 +111,22 @@ Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_theta_reco_D0_pos.p
 Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
 Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_eta_reco_D0_pos.pdf has been created
+Warning in <TROOT::Append>: Replacing existing TH1: h_pT_reco_Dst_pos (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_pT_reco_Dst_neg (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_phi_reco_Dst_pos (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_phi_reco_Dst_neg (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_theta_reco_Dst_pos (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_theta_reco_Dst_neg (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_eta_reco_Dst_pos (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
+Warning in <TROOT::Append>: Replacing existing TH1: h_eta_reco_Dst_neg (Potential memory leak).
+Info in <TH1F::Add>: Attempt to add histograms with different axis limits - trying to use TH1::Merge
 Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
 Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_pT_reco_Dst_pos.pdf has been created

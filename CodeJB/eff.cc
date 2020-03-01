@@ -83,12 +83,22 @@ void printdevhists(vector<TH1F*> v_get_hist_pos, vector<TH1F*> v_get_hist_neg, s
   int size = v_get_hist_pos.size();
   vector<TH1F*> v_hist_pos;
   vector<TH1F*> v_hist_neg;
-  for (int i = 0; i < size;++i)
+  int nbins;
+  double min,max;
+  for (int i = 0; i < size; ++i)
   {
-  v_hist_pos.push_back(v_get_hist_pos.at(i));
-  v_hist_neg.push_back(v_get_hist_neg.at(i));
-  v_hist_pos.at(i)->SetDirectory(0);
-  v_hist_neg.at(i)->SetDirectory(0);
+  nbins = v_get_hist_pos.at(i)->GetNbinsX();
+  min = v_get_hist_pos.at(i)->GetXaxis()->GetBinLowEdge(0);
+  max = v_get_hist_pos.at(i)->GetXaxis()->GetBinLowEdge(nbins-1) + v_get_hist_pos.at(i)->GetXaxis()->GetBinWidth(nbins-1);
+  TH1F *h_temp_pos = new TH1F(v_get_hist_pos.at(i)->GetName(),v_get_hist_pos.at(i)->GetName(), nbins, min, max);
+  h_temp_pos->Add(v_get_hist_pos.at(i));
+  v_hist_pos.push_back(h_temp_pos);
+  nbins = v_get_hist_neg.at(i)->GetNbinsX();
+  min = v_get_hist_neg.at(i)->GetXaxis()->GetBinLowEdge(0);
+  max = v_get_hist_neg.at(i)->GetXaxis()->GetBinLowEdge(nbins-1) + v_get_hist_neg.at(i)->GetXaxis()->GetBinWidth(nbins-1);
+  TH1F *h_temp_neg = new TH1F(v_get_hist_neg.at(i)->GetName(),v_get_hist_neg.at(i)->GetName(), nbins, min, max);
+  h_temp_neg->Add(v_get_hist_neg.at(i));
+  v_hist_neg.push_back(h_temp_neg);
   }  
   bool up_down = (polarisation == "UP")? true : false;
   string directory = (up_down == true)? "up_pdf" : "down_pdf";
