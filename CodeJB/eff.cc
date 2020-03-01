@@ -80,9 +80,16 @@ void printhists(vector<TH1F*> v_hist, vector<TH1F*> v_hist_pos, vector<TH1F*> v_
 }
 void printdevhists(vector<TH1F*> v_get_hist_pos, vector<TH1F*> v_get_hist_neg, string polarisation)
 {
-  vector<TH1F*> v_hist_pos = v_get_hist_pos;
-  vector<TH1F*> v_hist_neg = v_get_hist_neg;
-  int size = v_hist_pos.size();
+  int size = v_get_hist_pos.size();
+  vector<TH1F*> v_hist_pos;
+  vector<TH1F*> v_hist_neg;
+  for (int i = 0; i < size;++i)
+  {
+  v_hist_pos.push_back(v_get_hist_pos.at(i));
+  v_hist_neg.push_back(v_get_hist_neg.at(i));
+  v_hist_pos.at(i)->SetDirectory(0);
+  v_hist_neg.at(i)->SetDirectory(0);
+  }  
   bool up_down = (polarisation == "UP")? true : false;
   string directory = (up_down == true)? "up_pdf" : "down_pdf";
   TCanvas *c = new TCanvas();
