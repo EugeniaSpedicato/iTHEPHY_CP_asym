@@ -78,8 +78,10 @@ void printhists(vector<TH1F*> v_hist, vector<TH1F*> v_hist_pos, vector<TH1F*> v_
     c->SaveAs(save_name.c_str());
   }
 }
-void printdevhists(vector<TH1F*> v_hist_pos, vector<TH1F*> v_hist_neg, string polarisation)
+void printdevhists(vector<TH1F*> v_get_hist_pos, vector<TH1F*> v_get_hist_neg, string polarisation)
 {
+  vector<TH1F*> v_hist_pos = v_get_hist_pos;
+  vector<TH1F*> v_hist_neg = v_get_hist_neg;
   int size = v_hist_pos.size();
   bool up_down = (polarisation == "UP")? true : false;
   string directory = (up_down == true)? "up_pdf" : "down_pdf";
