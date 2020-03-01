@@ -1,4 +1,65 @@
 Info in <TUnixSystem::ACLiC>: creating shared library /home/smjoblan/iTHEPHY/iTHEPHY/CodeJB/./eff_cc.so
+Error in <TChain::LoadTree>: Cannot find tree with name ntp in file $dir/minisample_Dst2D0pi_D02Kpi_2016_Dw_GEN.root
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_pT_reco_Pi_pos.pdf has been created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_phi_reco_Pi_pos.pdf has been created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_theta_reco_Pi_pos.pdf has been created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_eta_reco_Pi_pos.pdf has been created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_pT_reco_SPi_pos.pdf has been created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_phi_reco_SPi_pos.pdf has been created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_theta_reco_SPi_pos.pdf has been created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_eta_reco_SPi_pos.pdf has been created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_pT_reco_K_pos.pdf has been created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_phi_reco_K_pos.pdf has been created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_theta_reco_K_pos.pdf has been created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_eta_reco_K_pos.pdf has been created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_pT_reco_D0_pos.pdf has been created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_phi_reco_D0_pos.pdf has been created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_theta_reco_D0_pos.pdf has been created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_eta_reco_D0_pos.pdf has been created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_pT_reco_Dst_pos.pdf has been created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_phi_reco_Dst_pos.pdf has been created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_theta_reco_Dst_pos.pdf has been created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
+Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_eta_reco_Dst_pos.pdf has been created
 Info in <TCanvas::Print>: pdf file output/down_pdf/single/tot/h_pT_reco_Pi.pdf has been created
 Info in <TCanvas::Print>: pdf file output/down_pdf/single/pos/h_pT_reco_Pi_pos.pdf has been created
 Info in <TCanvas::Print>: pdf file output/down_pdf/single/neg/h_pT_reco_Pi_neg.pdf has been created
@@ -79,63 +140,3 @@ Info in <TCanvas::Print>: pdf file output/down_pdf/single/tot/h_eta_reco_Dst.pdf
 Info in <TCanvas::Print>: pdf file output/down_pdf/single/pos/h_eta_reco_Dst_pos.pdf has been created
 Info in <TCanvas::Print>: pdf file output/down_pdf/single/neg/h_eta_reco_Dst_neg.pdf has been created
 Info in <TCanvas::Print>: pdf file output/down_pdf/combined/h_eta_reco_Dst.pdf has been created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_pT_reco_Pi_pos.pdf has been created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_phi_reco_Pi_pos.pdf has been created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_theta_reco_Pi_pos.pdf has been created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_eta_reco_Pi_pos.pdf has been created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_pT_reco_SPi_pos.pdf has been created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_phi_reco_SPi_pos.pdf has been created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_theta_reco_SPi_pos.pdf has been created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_eta_reco_SPi_pos.pdf has been created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_pT_reco_K_pos.pdf has been created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_phi_reco_K_pos.pdf has been created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_theta_reco_K_pos.pdf has been created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_eta_reco_K_pos.pdf has been created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_pT_reco_D0_pos.pdf has been created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_phi_reco_D0_pos.pdf has been created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_theta_reco_D0_pos.pdf has been created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_eta_reco_D0_pos.pdf has been created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_pT_reco_Dst_pos.pdf has been created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_phi_reco_Dst_pos.pdf has been created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_theta_reco_Dst_pos.pdf has been created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
-Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_eta_reco_Dst_pos.pdf has been created

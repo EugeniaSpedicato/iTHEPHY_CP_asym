@@ -535,6 +535,13 @@ void eff(string dir, string sample, string polarisation)
   vector<double> v_dev = deviation(v_eff_pos,v_eff_neg);
   vector<double> v_dev_err = deviation_err(v_eff_pos,v_err_pos,v_eff_neg,v_err_neg);
 
+  
+  printdevhists(v_Pi_hist_reco_pos, v_Pi_hist_reco_neg, polarisation);
+  printdevhists(v_SPi_hist_reco_pos, v_SPi_hist_reco_neg, polarisation);
+  printdevhists(v_K_hist_reco_pos, v_K_hist_reco_neg, polarisation);
+  printdevhists(v_D0_hist_reco_pos, v_D0_hist_reco_neg, polarisation);
+  printdevhists(v_Dst_hist_reco_pos, v_Dst_hist_reco_neg, polarisation);
+  
   hist_divide(v_Pi_hist,v_Pi_hist_reco);
   hist_divide(v_K_hist,v_K_hist_reco);
   hist_divide(v_SPi_hist,v_SPi_hist_reco);
@@ -701,11 +708,6 @@ void eff(string dir, string sample, string polarisation)
   printhists(v_Dst_hist_reco, v_Dst_hist_reco_pos, v_Dst_hist_reco_neg, polarisation);
 
   
-  printdevhists(v_Pi_hist_reco_pos, v_Pi_hist_reco_neg, polarisation);
-  printdevhists(v_SPi_hist_reco_pos, v_SPi_hist_reco_neg, polarisation);
-  printdevhists(v_K_hist_reco_pos, v_K_hist_reco_neg, polarisation);
-  printdevhists(v_D0_hist_reco_pos, v_D0_hist_reco_neg, polarisation);
-  printdevhists(v_Dst_hist_reco_pos, v_Dst_hist_reco_neg, polarisation);
 
 
 }
