@@ -1,5 +1,4 @@
 Info in <TUnixSystem::ACLiC>: creating shared library /home/smjoblan/iTHEPHY/iTHEPHY/CodeJB/./eff_cc.so
-Error in <TChain::LoadTree>: Cannot find tree with name ntp in file $dir/minisample_Dst2D0pi_D02Kpi_2016_Dw_GEN.root
 Warning in <TROOT::Append>: Replacing existing TH1: h_pT_reco_Pi_pos (Potential memory leak).
 Warning in <TROOT::Append>: Replacing existing TH1: h_pT_reco_Pi_neg (Potential memory leak).
 Warning in <TROOT::Append>: Replacing existing TH1: h_phi_reco_Pi_pos (Potential memory leak).
