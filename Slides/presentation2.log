@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.3.9)  24 FEB 2020 15:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.3.9)  4 MAR 2020 14:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1382,6 +1382,14 @@ Package caption Info: Hyperref support is turned off
 \c@subtable=\count334
 )
 (./presentation2.aux)
+Runaway argument?
+{\headcommand {\bea 
+./presentation2.tex:20: File ended while scanning use of \@writefile.
+<inserted text> 
+                \par 
+l.20 \begin{document}
+                     
+? 
 \openout1 = `presentation2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
@@ -1398,7 +1406,6 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
 LaTeX Font Info:    ... okay on input line 20.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
 LaTeX Font Info:    ... okay on input line 20.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -2367,10 +2374,10 @@ Package rerunfilecheck Info: File `presentation2.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 29784 strings out of 492982
- 605701 string characters out of 6132528
+ 29785 strings out of 492982
+ 605704 string characters out of 6132528
  651562 words of memory out of 5000000
- 32744 multiletter control sequences out of 15000+600000
+ 32745 multiletter control sequences out of 15000+600000
  544243 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,15n,55p,10385b,721s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2391,7 +2398,7 @@ al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
 live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texli
 ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on presentation2.pdf (34 pages, 1159731 bytes).
+Output written on presentation2.pdf (34 pages, 1157828 bytes).
 PDF statistics:
  4004 PDF objects out of 4296 (max. 8388607)
  2154 compressed objects within 22 object streams
