@@ -104,11 +104,12 @@ void printdevhists(vector<TH1F*> v_get_hist_pos, vector<TH1F*> v_get_hist_neg, s
   string directory = (up_down == true)? "up_pdf" : "down_pdf";
   TCanvas *c = new TCanvas();
   string title_name;
+  string new_title;
   string save_name;
   for (int i = 0; i < size; ++i)
   {
-    v_hist_pos.at(i)->Sumw2();
-    v_hist_neg.at(i)->Sumw2();
+    //v_hist_pos.at(i)->Sumw2();
+    //v_hist_neg.at(i)->Sumw2();
     v_hist_pos.at(i)->Add(v_hist_neg.at(i),-1);
     v_hist_neg.at(i)->Scale(2.);
     v_hist_neg.at(i)->Add(v_hist_pos.at(i));
@@ -116,7 +117,11 @@ void printdevhists(vector<TH1F*> v_get_hist_pos, vector<TH1F*> v_get_hist_neg, s
     v_hist_pos.at(i)->SetAxisRange(-0.15, 0.15, "Y");
     v_hist_pos.at(i)->Draw();
     title_name = v_hist_pos.at(i)->GetName();
-    save_name = "output/"+directory+"/deviation/"+title_name+".pdf";
+    new_title = title_name+"_dev";
+    v_hist_pos.at(i)->SetName(new_title.c_str());
+    v_hist_pos.at(i)->SetTitle(new_title.c_str());
+    v_hist_pos.at(i)->Write();
+    save_name = "output/"+directory+"/deviation/"+new_title+".pdf";
     c->SaveAs(save_name.c_str());
   }
 }
@@ -555,6 +560,10 @@ void eff(string dir, string sample, string polarisation)
   vector<double> v_dev_err = deviation_err(v_eff_pos,v_err_pos,v_eff_neg,v_err_neg);
 
   
+  string output_hist_name;
+  output_hist_name = "output/histOut_"+sample+".root";
+  TFile *out_hist_fi = new TFile(output_hist_name.c_str(),"RECREATE");
+  
   printdevhists(v_Pi_hist_reco_pos, v_Pi_hist_reco_neg, polarisation);
   printdevhists(v_SPi_hist_reco_pos, v_SPi_hist_reco_neg, polarisation);
   printdevhists(v_K_hist_reco_pos, v_K_hist_reco_neg, polarisation);
@@ -580,9 +589,6 @@ void eff(string dir, string sample, string polarisation)
   hist_divide(v_Dst_hist_neg,v_Dst_hist_reco_neg);
 
 
-  string output_hist_name;
-  output_hist_name = "output/histOut_"+sample+".root";
-  TFile *out_hist_fi = new TFile(output_hist_name.c_str(),"RECREATE");
   h_pT_reco_Pi->Write();
   h_pT_reco_K->Write();
   h_pT_reco_SPi->Write();
