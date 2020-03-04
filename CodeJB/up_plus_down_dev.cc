@@ -27,14 +27,14 @@ void up_plus_down_dev()
   TCanvas *c = new TCanvas();
   for (int i =0; i < size;++i)
   {
-    v_h_dev_up_eta.at(i)->Sumw2();
+    /***v_h_dev_up_eta.at(i)->Sumw2();
     v_h_dev_dw_eta.at(i)->Sumw2();
     v_h_dev_up_pT.at(i)->Sumw2();
     v_h_dev_dw_pT.at(i)->Sumw2();
     v_h_dev_up_phi.at(i)->Sumw2();
     v_h_dev_dw_phi.at(i)->Sumw2();
     v_h_dev_up_theta.at(i)->Sumw2();
-    v_h_dev_dw_theta.at(i)->Sumw2();
+    v_h_dev_dw_theta.at(i)->Sumw2();***/
     v_h_dev_up_eta.at(i)->Add(v_h_dev_dw_eta.at(i));
     save_name = "output/up_plus_down_pdf/eta_"+to_string(i)+".pdf";
     v_h_dev_up_eta.at(i)->Draw();
