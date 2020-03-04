@@ -6,29 +6,6 @@
 
 void ntp::Loop()
 {
-//   In a ROOT session, you can do:
-//      root> .L ntp.C
-//      root> ntp t
-//      root> t.GetEntry(12); // Fill t data members with entry number 12
-//      root> t.Show();       // Show values of entry 12
-//      root> t.Show(16);     // Read and show values of entry 16
-//      root> t.Loop();       // Loop on all entries
-//
-
-//     This is the loop skeleton where:
-//    jentry is the global entry number in the chain
-//    ientry is the entry number in the current Tree
-//  Note that the argument to GetEntry must be:
-//    jentry for TChain::GetEntry
-//    ientry for TTree::GetEntry and TBranch::GetEntry
-//
-//       To read only selected branches, Insert statements like:
-// METHOD1:
-//    fChain->SetBranchStatus("*",0);  // disable all branches
-//    fChain->SetBranchStatus("branchname",1);  // activate branchname
-// METHOD2: replace line
-//    fChain->GetEntry(jentry);       //read all branches
-//by  b_branchname->GetEntry(ientry); //read only this branch
   Double_t P1_pos=0;
  Double_t P1_pos_rec=0;
  Double_t P1_neg=0;
@@ -135,10 +112,10 @@ TH1F* D0eta_rec_pos=new TH1F("h1", "DO_eta_reco_pos", 50,2,5);
 TH1F* D0eta_rec_neg=new TH1F("h1", "DO_eta_reco_neg", 50,2,5);
     TH1* D0eta_neg=new TH1F("h2", "D0_eta_neg", 50,2,5);
     
-TH1F* D0pt_rec_pos=new TH1F("h1", "D0_PT_reco_pos", 50,0,9000);
-    TH1* D0pt_pos=new TH1F("h2", "D0_PT_reco_pos", 50,0,9000);
- TH1F* D0pt_rec_neg=new TH1F("h1", "D0_PT_reco_pos_neg", 50,0,9000);
-    TH1* D0pt_neg=new TH1F("h2", "D0_PT_reco_neg", 50,0,9000);
+TH1F* D0pt_rec_pos=new TH1F("h1", "D0_PT_reco_pos", 50,0,9500);
+    TH1* D0pt_pos=new TH1F("h2", "D0_PT_reco_pos", 50,0,9500);
+ TH1F* D0pt_rec_neg=new TH1F("h1", "D0_PT_reco_pos_neg", 50,0,9500);
+    TH1* D0pt_neg=new TH1F("h2", "D0_PT_reco_neg", 50,0,9500);
     
     
  TH1F* D0theta_rec_pos=new TH1F("h1", "D0_THETA_reco_pos", 50,0,0.2);
@@ -667,7 +644,11 @@ sPipt_rec_pos->Divide(sPipt_rec_neg);
 sPitheta_rec_pos->Add(sPitheta_rec_neg,-1);
 sPitheta_rec_neg->Add(sPitheta_rec_pos);
 sPitheta_rec_pos->Divide(sPitheta_rec_neg);
-       
+
+sPiphi_rec_pos->SetAxisRange(-0.15, 0.15, "Y");
+sPieta_rec_pos->SetAxisRange(-0.15, 0.15, "Y");
+sPipt_rec_pos->SetAxisRange(-0.15, 0.15, "Y");
+sPitheta_rec_pos->SetAxisRange(-0.15, 0.15, "Y");
 
   
  //---------------
@@ -698,7 +679,13 @@ P1pt_rec_pos->Divide(P1pt_rec_neg);
     
 P1theta_rec_pos->Add(P1theta_rec_neg,-1);
 P1theta_rec_neg->Add(P1theta_rec_pos);
-P1theta_rec_pos->Divide(P1theta_rec_neg);    
+P1theta_rec_pos->Divide(P1theta_rec_neg);   
+    
+P1phi_rec_pos->SetAxisRange(-0.15, 0.15, "Y");
+P1eta_rec_pos->SetAxisRange(-0.15, 0.15, "Y");
+P1pt_rec_pos->SetAxisRange(-0.15, 0.15, "Y");
+P1theta_rec_pos->SetAxisRange(-0.15, 0.15, "Y");
+    
  //---------
   TH1F *h3_P2phi_pos = (TH1F*)P2phi_rec_pos->Clone("h3_P2phi_pos"); h3_P2phi_pos->Divide(P2phi_rec_pos,P2phi_pos);
  TH1F *h3_P2phi_neg = (TH1F*)P2phi_rec_neg->Clone("h3_P2phi_neg"); h3_P2phi_neg->Divide(P2phi_rec_neg,P2phi_neg);
@@ -726,7 +713,12 @@ P2pt_rec_pos->Divide(P2pt_rec_neg);
     
 P2theta_rec_pos->Add(P2theta_rec_neg,-1);
 P2theta_rec_neg->Add(P2theta_rec_pos);
-P2theta_rec_pos->Divide(P2theta_rec_neg);    
+P2theta_rec_pos->Divide(P2theta_rec_neg); 
+    
+P2phi_rec_pos->SetAxisRange(-0.15, 0.15, "Y");
+P2eta_rec_pos->SetAxisRange(-0.15, 0.15, "Y");
+P2pt_rec_pos->SetAxisRange(-0.15, 0.15, "Y");
+P2theta_rec_pos->SetAxisRange(-0.15, 0.15, "Y");
  
  //-----------------
   TH1F *h3_D0phi_pos = (TH1F*)D0phi_rec_pos->Clone("h3_D0phi_pos"); h3_D0phi_pos->Divide(D0phi_rec_pos,D0phi_pos);
@@ -756,6 +748,11 @@ D0pt_rec_pos->Divide(D0pt_rec_neg);
 D0theta_rec_pos->Add(D0theta_rec_neg,-1);
 D0theta_rec_neg->Add(D0theta_rec_pos);
 D0theta_rec_pos->Divide(D0theta_rec_neg);
+    
+D0phi_rec_pos->SetAxisRange(-0.15, 0.15, "Y");
+D0eta_rec_pos->SetAxisRange(-0.15, 0.15, "Y");
+D0pt_rec_pos->SetAxisRange(-0.15, 0.15, "Y");
+D0theta_rec_pos->SetAxisRange(-0.15, 0.15, "Y");
 //--------
  
     TH1F *h3_Dstphi_pos = (TH1F*)Dstphi_rec_pos->Clone("h3_Dstphi_pos"); h3_Dstphi_pos->Divide(Dstphi_rec_pos,Dstphi_pos);
@@ -786,7 +783,10 @@ Dsttheta_rec_pos->Add(Dsttheta_rec_neg,-1);
 Dsttheta_rec_neg->Add(Dsttheta_rec_pos);
 Dsttheta_rec_pos->Divide(Dsttheta_rec_neg);
     
-    
+Dstphi_rec_pos->SetAxisRange(-0.15, 0.15, "Y");
+Dsteta_rec_pos->SetAxisRange(-0.15, 0.15, "Y");
+Dstpt_rec_pos->SetAxisRange(-0.15, 0.15, "Y");
+Dsttheta_rec_pos->SetAxisRange(-0.15, 0.15, "Y");
     
  TCanvas * c1aa= new TCanvas("c1aa","c1aa",400,10,600,400);
 c1aa->Divide(2,2);
