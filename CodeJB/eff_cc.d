@@ -102,5 +102,13 @@
 ./eff_cc.so: /home/smjoblan/builddir/include/ROOT/TSpinMutex.hxx
 ./eff_cc.so: /home/smjoblan/builddir/include/TStyle.h
 ./eff_cc.so: /home/smjoblan/builddir/include/TColor.h
+./eff_cc.so: /home/smjoblan/builddir/include/TF1.h
+./eff_cc.so: /home/smjoblan/builddir/include/TFormula.h
+./eff_cc.so: /home/smjoblan/builddir/include/TMethodCall.h
+./eff_cc.so: /home/smjoblan/builddir/include/Math/Types.h
+./eff_cc.so: /home/smjoblan/builddir/include/TROOT.h
+./eff_cc.so: /home/smjoblan/builddir/include/TF1AbsComposition.h
+./eff_cc.so: /home/smjoblan/builddir/include/TMath.h
+./eff_cc.so: /home/smjoblan/builddir/include/Math/ParamFunctor.h
 ./eff_cc.so: /home/smjoblan/builddir/include/RVersion.h /home/smjoblan/builddir/include/RConfig.h /home/smjoblan/builddir/include/TClass.h /home/smjoblan/builddir/include/TDictAttributeMap.h /home/smjoblan/builddir/include/TInterpreter.h /home/smjoblan/builddir/include/TROOT.h /home/smjoblan/builddir/include/TBuffer.h /home/smjoblan/builddir/include/TMemberInspector.h /home/smjoblan/builddir/include/TError.h /home/smjoblan/builddir/include/RtypesImp.h /home/smjoblan/builddir/include/TIsAProxy.h /home/smjoblan/builddir/include/TFileMergeInfo.h /home/smjoblan/builddir/include/TCollectionProxyInfo.h /home/smjoblan/builddir/bin/rootcling
 eff_cc__ROOTBUILDVERSION= 6.16/00

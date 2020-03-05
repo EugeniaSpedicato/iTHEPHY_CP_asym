@@ -1,5 +1,5 @@
 #include "eff.h"
-
+#include <chrono>
 
 void setcolors(vector<TH1F*> v_hist, vector<TH1F*> v_hist_pos, vector<TH1F*> v_hist_neg)
 {
@@ -80,6 +80,7 @@ void printhists(vector<TH1F*> v_hist, vector<TH1F*> v_hist_pos, vector<TH1F*> v_
 }
 void printdevhists(vector<TH1F*> v_get_hist_pos, vector<TH1F*> v_get_hist_neg, string polarisation)
 {
+  TF1 func("0*x", "0*x", 0., 9600.);
   int size = v_get_hist_pos.size();
   vector<TH1F*> v_hist_pos;
   vector<TH1F*> v_hist_neg;
@@ -115,14 +116,15 @@ void printdevhists(vector<TH1F*> v_get_hist_pos, vector<TH1F*> v_get_hist_neg, s
     v_hist_neg.at(i)->Add(v_hist_pos.at(i));
     v_hist_pos.at(i)->Divide(v_hist_neg.at(i));
     v_hist_pos.at(i)->SetAxisRange(-0.15, 0.15, "Y");
-    v_hist_pos.at(i)->Draw();
     title_name = v_hist_pos.at(i)->GetName();
     new_title = title_name+"_dev";
     v_hist_pos.at(i)->SetName(new_title.c_str());
     v_hist_pos.at(i)->SetTitle(new_title.c_str());
-    v_hist_pos.at(i)->Write();
+    v_hist_pos.at(i)->Draw();
+    func.Draw("same");
     save_name = "output/"+directory+"/deviation/"+new_title+".pdf";
     c->SaveAs(save_name.c_str());
+    v_hist_pos.at(i)->Write();
   }
 }
 
@@ -231,6 +233,8 @@ void hist_divide(vector<TH1F*> v_hist, vector<TH1F*> v_hist_reco)
 
 void eff(string dir, string sample, string polarisation)
 {
+  uint64_t start_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
+
   string input_name = dir+"/"+sample+".root";
   TChain *ntp = new TChain("ntp");
   ntp->Add(input_name.c_str());
@@ -733,6 +737,9 @@ void eff(string dir, string sample, string polarisation)
   printhists(v_Dst_hist_reco, v_Dst_hist_reco_pos, v_Dst_hist_reco_neg, polarisation);
 
   
-
+  uint64_t end_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
+  float elapsed = (end_time - start_time)*0.000001;
+  std::cout << "computation time/s: " << elapsed << std::endl;
+  std::cout << "computation time/min: " << elapsed/60. << std::endl;
 
 }
