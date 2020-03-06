@@ -505,6 +505,7 @@ void eff(string dir, string sample, string polarisation)
   sumhisterr(v_D0_hist_reco, v_D0_hist_reco_pos, v_D0_hist_reco_neg);
   sumhisterr(v_Dst_hist_reco, v_Dst_hist_reco_pos, v_Dst_hist_reco_neg);
 
+  gStyle->SetOptStat(0);
 
   for(int i = 0; i < nEvents; ++i)
   {
@@ -727,8 +728,6 @@ void eff(string dir, string sample, string polarisation)
   sethists(v_D0_hist_reco, v_D0_hist_reco_pos, v_D0_hist_reco_neg);
   sethists(v_Dst_hist_reco, v_Dst_hist_reco_pos, v_Dst_hist_reco_neg);
 
-
-  gStyle->SetOptStat(0);
 
   printhists(v_Pi_hist_reco, v_Pi_hist_reco_pos, v_Pi_hist_reco_neg, polarisation);
   printhists(v_SPi_hist_reco, v_SPi_hist_reco_pos, v_SPi_hist_reco_neg, polarisation);

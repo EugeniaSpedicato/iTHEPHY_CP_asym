@@ -25,6 +25,7 @@ void up_plus_down_dev()
   int size = v_h_dev_dw_eta.size();
   string save_name;
   TCanvas *c = new TCanvas();
+  gStyle->SetOptStat(0);
   TF1 func("0*x", "0*x", -5., 9600.);
   for (int i =0; i < size;++i)
   {
