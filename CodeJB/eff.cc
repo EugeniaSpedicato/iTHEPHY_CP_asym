@@ -775,11 +775,12 @@ void eff(string dir, string sample, string polarisation)
   h_phi_test_SPi_neg->Draw("hist same");
   saving = "output/"+directory+"/test/h_phi_test_SPi_neg.pdf";
   c_test->Print(saving.c_str());
-  h_phi_test_SPi->Draw();
-  h_phi_test_SPi->Draw("hist same");
+  
+  h_phi_test_SPi_pos->SetLineColor(kAzure);
+  h_phi_test_SPi_neg->SetLineColor(kRed);
   h_phi_test_SPi_pos->Draw();
   h_phi_test_SPi_pos->Draw("hist same");
-  h_phi_test_SPi_neg->Draw();
+  h_phi_test_SPi_neg->Draw("same");
   h_phi_test_SPi_neg->Draw("hist same");
   saving = "output/"+directory+"/test/h_phi_test_SPi_combined.pdf";
   c_test->Print(saving.c_str());
