@@ -193,6 +193,7 @@ void hist_fill(vector<TH1F*> v_hist, vector<TH1F*> v_hist_reco, vector<TH1F*> v_
   }
   else if(ID < 0 & n_neg < 3000000)
   {
+    ++n_neg;
     for(int i = 0; i < size; ++i)
     {
       v_hist_neg.at(i)->Fill(v_var.at(i));
