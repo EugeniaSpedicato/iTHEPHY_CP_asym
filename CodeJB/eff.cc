@@ -100,7 +100,7 @@ void printdevhists(vector<TH1F*> v_get_hist_pos, vector<TH1F*> v_get_hist_neg, s
   TH1F *h_temp_neg = new TH1F(v_get_hist_neg.at(i)->GetName(),v_get_hist_neg.at(i)->GetName(), nbins, min, max);
   h_temp_neg->Add(v_get_hist_neg.at(i));
   v_hist_neg.push_back(h_temp_neg);
-  }  
+  }
   bool up_down = (polarisation == "UP")? true : false;
   string directory = (up_down == true)? "up_pdf" : "down_pdf";
   TCanvas *c = new TCanvas();
@@ -176,14 +176,14 @@ vector<double> deviation_err(vector<double> v_eff_pos, vector<double> v_err_pos,
 
 }
 
-void hist_fill(vector<TH1F*> v_hist, vector<TH1F*> v_hist_reco, vector<TH1F*> v_hist_pos, vector<TH1F*> v_hist_reco_pos, vector<TH1F*> v_hist_neg, vector<TH1F*> v_hist_reco_neg, vector<double> v_var, int is_reco, double &n_reco, double &n_pos, double &n_reco_pos, int ID)
+void hist_fill(vector<TH1F*> v_hist, vector<TH1F*> v_hist_reco, vector<TH1F*> v_hist_pos, vector<TH1F*> v_hist_reco_pos, vector<TH1F*> v_hist_neg, vector<TH1F*> v_hist_reco_neg, vector<double> v_var, int is_reco, double &n_reco, double &n_pos, double &n_reco_pos, double &n_neg, double &n_reco_neg, int ID)
 {
   int size = v_hist.size();
   for(int i = 0; i < size; ++i)
   {
     v_hist.at(i)->Fill(v_var.at(i));
   }
-  if(ID > 0)
+  if(ID > 0 && n_pos < 3000000)
   {
     ++n_pos;
     for(int i = 0; i < size; ++i)
@@ -191,7 +191,7 @@ void hist_fill(vector<TH1F*> v_hist, vector<TH1F*> v_hist_reco, vector<TH1F*> v_
       v_hist_pos.at(i)->Fill(v_var.at(i));
     }
   }
-  else
+  else if(ID < 0 & n_neg < 3000000)
   {
     for(int i = 0; i < size; ++i)
     {
@@ -215,6 +215,7 @@ void hist_fill(vector<TH1F*> v_hist, vector<TH1F*> v_hist_reco, vector<TH1F*> v_
     }
     else
     {
+      ++n_reco_neg;
       for(int i = 0; i < size; ++i)
       {
         v_hist_reco_neg.at(i)->Fill(v_var.at(i));
@@ -253,7 +254,7 @@ void eff(string dir, string sample, string polarisation)
   double nPi_neg = 0.;
   double nK_neg = 0.;
   double nSPi_neg = 0.;
-  
+
   double nDst_reco = 0.;
   double nD0_reco = 0.;
   double nPi_reco = 0.;
@@ -521,11 +522,11 @@ void eff(string dir, string sample, string polarisation)
     (isPi_reco == 1 && isK_reco == 1)? isD0_reco = 1 : isD0_reco = 0;
     (isSPi_reco == 1 && isD0_reco == 1)? isDst_reco = 1 : isDst_reco = 0;
 
-    hist_fill(v_Pi_hist, v_Pi_hist_reco, v_Pi_hist_pos, v_Pi_hist_reco_pos, v_Pi_hist_neg, v_Pi_hist_reco_neg, v_Pi_var, isPi_reco, nPi_reco, nPi_pos, nPi_reco_pos, Pi_ID);
-    hist_fill(v_K_hist, v_K_hist_reco, v_K_hist_pos, v_K_hist_reco_pos, v_K_hist_neg, v_K_hist_reco_neg, v_K_var, isK_reco, nK_reco, nK_pos, nK_reco_pos, K_ID);
-    hist_fill(v_SPi_hist, v_SPi_hist_reco, v_SPi_hist_pos, v_SPi_hist_reco_pos, v_SPi_hist_neg, v_SPi_hist_reco_neg, v_SPi_var, isSPi_reco, nSPi_reco, nSPi_pos, nSPi_reco_pos, SPi_ID);
-    hist_fill(v_D0_hist, v_D0_hist_reco, v_D0_hist_pos, v_D0_hist_reco_pos, v_D0_hist_neg, v_D0_hist_reco_neg, v_D0_var, isD0_reco, nD0_reco, nD0_pos, nD0_reco_pos, D0_ID);
-    hist_fill(v_Dst_hist, v_Dst_hist_reco, v_Dst_hist_pos, v_Dst_hist_reco_pos, v_Dst_hist_neg, v_Dst_hist_reco_neg, v_Dst_var, isDst_reco, nDst_reco, nDst_pos, nDst_reco_pos, Dst_ID);
+    hist_fill(v_Pi_hist, v_Pi_hist_reco, v_Pi_hist_pos, v_Pi_hist_reco_pos, v_Pi_hist_neg, v_Pi_hist_reco_neg, v_Pi_var, isPi_reco, nPi_reco, nPi_pos, nPi_reco_pos, nPi_neg, nPi_reco_neg, Pi_ID);
+    hist_fill(v_K_hist, v_K_hist_reco, v_K_hist_pos, v_K_hist_reco_pos, v_K_hist_neg, v_K_hist_reco_neg, v_K_var, isK_reco, nK_reco, nK_pos, nK_reco_pos, nK_neg, nK_reco_neg, K_ID);
+    hist_fill(v_SPi_hist, v_SPi_hist_reco, v_SPi_hist_pos, v_SPi_hist_reco_pos, v_SPi_hist_neg, v_SPi_hist_reco_neg, v_SPi_var, isSPi_reco, nSPi_reco, nSPi_pos, nSPi_reco_pos, nSPi_neg, nSPi_reco_neg, SPi_ID);
+    hist_fill(v_D0_hist, v_D0_hist_reco, v_D0_hist_pos, v_D0_hist_reco_pos, v_D0_hist_neg, v_D0_hist_reco_neg, v_D0_var, isD0_reco, nD0_reco, nD0_pos, nD0_reco_pos, nD0_neg, nD0_reco_neg, D0_ID);
+    hist_fill(v_Dst_hist, v_Dst_hist_reco, v_Dst_hist_pos, v_Dst_hist_reco_pos, v_Dst_hist_neg, v_Dst_hist_reco_neg, v_Dst_var, isDst_reco, nDst_reco, nDst_pos, nDst_reco_pos, nDst_neg, nDst_reco_neg, Dst_ID);
 
     v_Pi_var.clear();
     v_K_var.clear();
@@ -533,18 +534,6 @@ void eff(string dir, string sample, string polarisation)
     v_D0_var.clear();
     v_Dst_var.clear();
   }
-  nPi_neg = nTot - nPi_pos;
-  nK_neg = nTot - nK_pos;
-  nSPi_neg = nTot - nSPi_pos;
-  nD0_neg = nTot - nD0_pos;
-  nDst_neg = nTot - nDst_pos;
- 
-  nPi_reco_neg = nPi_reco - nPi_reco_pos;
-  nK_reco_neg = nK_reco - nK_reco_pos;
-  nSPi_reco_neg = nSPi_reco - nSPi_reco_pos;
-  nD0_reco_neg = nD0_reco - nD0_reco_pos;
-  nDst_reco_neg = nDst_reco - nDst_reco_pos;
-
 
   vector<double> v_n_reco_ges = {nPi_reco,nK_reco,nSPi_reco,nD0_reco,nDst_reco};
   vector<double> v_n_reco_pos = {nPi_reco_pos,nK_reco_pos,nSPi_reco_pos,nD0_reco_pos,nDst_reco_pos};
@@ -564,17 +553,17 @@ void eff(string dir, string sample, string polarisation)
   vector<double> v_dev = deviation(v_eff_pos,v_eff_neg);
   vector<double> v_dev_err = deviation_err(v_eff_pos,v_err_pos,v_eff_neg,v_err_neg);
 
-  
+
   string output_hist_name;
   output_hist_name = "output/histOut_"+sample+".root";
   TFile *out_hist_fi = new TFile(output_hist_name.c_str(),"RECREATE");
-  
+
   printdevhists(v_Pi_hist_reco_pos, v_Pi_hist_reco_neg, polarisation);
   printdevhists(v_SPi_hist_reco_pos, v_SPi_hist_reco_neg, polarisation);
   printdevhists(v_K_hist_reco_pos, v_K_hist_reco_neg, polarisation);
   printdevhists(v_D0_hist_reco_pos, v_D0_hist_reco_neg, polarisation);
   printdevhists(v_Dst_hist_reco_pos, v_Dst_hist_reco_neg, polarisation);
-  
+
   hist_divide(v_Pi_hist,v_Pi_hist_reco);
   hist_divide(v_K_hist,v_K_hist_reco);
   hist_divide(v_SPi_hist,v_SPi_hist_reco);
@@ -735,7 +724,7 @@ void eff(string dir, string sample, string polarisation)
   printhists(v_D0_hist_reco, v_D0_hist_reco_pos, v_D0_hist_reco_neg, polarisation);
   printhists(v_Dst_hist_reco, v_Dst_hist_reco_pos, v_Dst_hist_reco_neg, polarisation);
 
-  
+
   uint64_t end_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
   float elapsed = (end_time - start_time)*0.000001;
   std::cout << "computation time/s: " << elapsed << std::endl;
