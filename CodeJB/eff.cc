@@ -456,9 +456,9 @@ void eff(string dir, string sample, string polarisation)
   TH1F *h_theta_D0_neg = new TH1F("h_theta_D0_neg", ";#theta;Events", 50, 0.02, 0.24);
   TH1F *h_theta_Dst_neg = new TH1F("h_theta_Dst_neg", ";#theta;Events", 50, 0.02, 0.24);
 
-  TH1F *h_phi_test_SPi = new TH1F("h_phi_test_SPi","h_phi_test_SPi", 25, -3.5, 0.);
-  TH1F *h_phi_test_SPi_pos = new TH1F("h_phi_test_SPi","h_phi_test_SPi", 25, -3.5, 0.);
-  TH1F *h_phi_test_SPi_neg = new TH1F("h_phi_test_SPi","h_phi_test_SPi", 25, -3.5, 0.);
+  TH1F *h_phi_test_SPi = new TH1F("h_phi_test_SPi",";|#phi|;#Delta eff", 25, 0., 3.5);
+  TH1F *h_phi_test_SPi_pos = new TH1F("h_phi_test_SPi_pos",";|#phi|;#Delta eff", 25, 0., 3.5);
+  TH1F *h_phi_test_SPi_neg = new TH1F("h_phi_test_SPi_neg",";|#phi|;#Delta eff", 25, 0., 3.5);
   
   h_phi_test_SPi->SetAxisRange(0.,1.,"Y");
   h_phi_test_SPi_pos->SetAxisRange(0.,1.,"Y");
@@ -745,24 +745,24 @@ void eff(string dir, string sample, string polarisation)
   
   for(int i = 0; i < size/2; ++i)
   {
-    phi_min = h_phi_reco_SPi->GetBinContent(i);
-    min_err = h_phi_reco_SPi->GetBinError(i);
-    phi_plus = h_phi_reco_SPi->GetBinContent(size - i - 1);
-    plus_err = h_phi_reco_SPi->GetBinError(size - i - 1);
+    phi_min = h_phi_reco_SPi->GetBinContent(size/2 - i - 1);
+    min_err = h_phi_reco_SPi->GetBinError(size/2 - i -1);
+    phi_plus = h_phi_reco_SPi->GetBinContent(size/2 + i);
+    plus_err = h_phi_reco_SPi->GetBinError(size/2 + i);
     h_phi_test_SPi->SetBinContent(i, abs(phi_min - phi_plus));
     h_phi_test_SPi->SetBinError(i, sqrt(pow(min_err, 2.) + pow(plus_err, 2.)));
 
-    phi_min = h_phi_reco_SPi_pos->GetBinContent(i);
-    min_err = h_phi_reco_SPi_pos->GetBinError(i);
-    phi_plus = h_phi_reco_SPi_pos->GetBinContent(size - i - 1);
-    plus_err = h_phi_reco_SPi_pos->GetBinError(size - i - 1);
+    phi_min = h_phi_reco_SPi_pos->GetBinContent(size/2 - i - 1);
+    min_err = h_phi_reco_SPi_pos->GetBinError(size/2 - i - 1);
+    phi_plus = h_phi_reco_SPi_pos->GetBinContent(size/2 + i);
+    plus_err = h_phi_reco_SPi_pos->GetBinError(size/2 + i);
     h_phi_test_SPi_pos->SetBinContent(i, abs(phi_min - phi_plus));
     h_phi_test_SPi_pos->SetBinError(i, sqrt(pow(min_err, 2.) + pow(plus_err, 2.)));
 
-    phi_min = h_phi_reco_SPi_neg->GetBinContent(i);
-    min_err = h_phi_reco_SPi_neg->GetBinError(i);
-    phi_plus = h_phi_reco_SPi_neg->GetBinContent(size - i - 1);
-    plus_err = h_phi_reco_SPi_neg->GetBinError(size - i - 1);
+    phi_min = h_phi_reco_SPi_neg->GetBinContent(size/2 - i - 1);
+    min_err = h_phi_reco_SPi_neg->GetBinError(size/2 - i - 1);
+    phi_plus = h_phi_reco_SPi_neg->GetBinContent(size/2 + i);
+    plus_err = h_phi_reco_SPi_neg->GetBinError(size/2 + i);
     h_phi_test_SPi_neg->SetBinContent(i, abs(phi_min - phi_plus));
     h_phi_test_SPi_neg->SetBinError(i, sqrt(pow(min_err, 2.) + pow(plus_err, 2.)));
   }
