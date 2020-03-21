@@ -459,6 +459,10 @@ void eff(string dir, string sample, string polarisation)
   TH1F *h_phi_test_SPi = new TH1F("h_phi_test_SPi","h_phi_test_SPi", 25, -3.5, 0.);
   TH1F *h_phi_test_SPi_pos = new TH1F("h_phi_test_SPi","h_phi_test_SPi", 25, -3.5, 0.);
   TH1F *h_phi_test_SPi_neg = new TH1F("h_phi_test_SPi","h_phi_test_SPi", 25, -3.5, 0.);
+  
+  h_phi_test_SPi->SetAxisRange(0.,1.,"Y");
+  h_phi_test_SPi_pos->SetAxisRange(0.,1.,"Y");
+  h_phi_test_SPi_neg->SetAxisRange(0.,1.,"Y");
 
   vector<TH1F*> v_Pi_hist_reco = {h_pT_reco_Pi, h_phi_reco_Pi, h_theta_reco_Pi, h_eta_reco_Pi};
   vector<TH1F*> v_SPi_hist_reco = {h_pT_reco_SPi, h_phi_reco_SPi, h_theta_reco_SPi, h_eta_reco_SPi};
