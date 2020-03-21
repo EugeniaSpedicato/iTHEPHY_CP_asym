@@ -731,46 +731,49 @@ void eff(string dir, string sample, string polarisation)
 
 
 
-  double phi_plus, phi_min;
-  double plus_err, min_err, new err;
+  double phi_plus = 0.;
+  double phi_min = 0.;
+  double plus_err = 0.;
+  double min_err = 0.;
   int size = h_phi_SPi->GetNbinsX();
   string saving;
-
+  string directory = (polarisation == "UP")? "up_pdf" : "down_pdf";
+  
   for(int i = 0; i < size/2; ++i)
   {
-    phi_min = h_phi_SPi_reco->GetBinContent(i);
-    min_err = h_phi_SPi_reco->GetBinError(i);
-    phi_plus = h_phi_SPi_reco->GetBinContent(size - i - 1);
-    plus_err = h_phi_SPi_reco->GetBinError(size - i - 1);
+    phi_min = h_phi_reco_SPi->GetBinContent(i);
+    min_err = h_phi_reco_SPi->GetBinError(i);
+    phi_plus = h_phi_reco_SPi->GetBinContent(size - i - 1);
+    plus_err = h_phi_reco_SPi->GetBinError(size - i - 1);
     h_phi_test_SPi->SetBinContent(i, abs(phi_min - phi_plus));
     h_phi_test_SPi->SetBinError(i, sqrt(pow(min_err, 2.) + pow(plus_err, 2.)));
 
-    phi_min = h_phi_SPi_reco_pos->GetBinContent(i);
-    min_err = h_phi_SPi_reco_pos->GetBinError(i);
-    phi_plus = h_phi_SPi_reco_pos->GetBinContent(size - i - 1);
-    plus_err = h_phi_SPi_reco_pos->GetBinError(size - i - 1);
+    phi_min = h_phi_reco_SPi_pos->GetBinContent(i);
+    min_err = h_phi_reco_SPi_pos->GetBinError(i);
+    phi_plus = h_phi_reco_SPi_pos->GetBinContent(size - i - 1);
+    plus_err = h_phi_reco_SPi_pos->GetBinError(size - i - 1);
     h_phi_test_SPi_pos->SetBinContent(i, abs(phi_min - phi_plus));
     h_phi_test_SPi_pos->SetBinError(i, sqrt(pow(min_err, 2.) + pow(plus_err, 2.)));
 
-    phi_min = h_phi_SPi_reco_neg->GetBinContent(i);
-    min_err = h_phi_SPi_reco_neg->GetBinError(i);
-    phi_plus = h_phi_SPi_reco_neg->GetBinContent(size - i - 1);
-    plus_err = h_phi_SPi_reco_neg->GetBinError(size - i - 1);
+    phi_min = h_phi_reco_SPi_neg->GetBinContent(i);
+    min_err = h_phi_reco_SPi_neg->GetBinError(i);
+    phi_plus = h_phi_reco_SPi_neg->GetBinContent(size - i - 1);
+    plus_err = h_phi_reco_SPi_neg->GetBinError(size - i - 1);
     h_phi_test_SPi_neg->SetBinContent(i, abs(phi_min - phi_plus));
     h_phi_test_SPi_neg->SetBinError(i, sqrt(pow(min_err, 2.) + pow(plus_err, 2.)));
   }
   TCanvas *c_test = new TCanvas();
   h_phi_test_SPi->Draw();
   h_phi_test_SPi->Draw("hist same");
-  saving = "output/"+polarisation+"test/h_phi_test_SPi.pdf"
+  saving = "output/"+directory+"/test/h_phi_test_SPi.pdf";
   c_test->Print(saving.c_str());
   h_phi_test_SPi_pos->Draw();
   h_phi_test_SPi_pos->Draw("hist same");
-  saving = "output/"+polarisation+"test/h_phi_test_SPi_pos.pdf"
+  saving = "output/"+directory+"/test/h_phi_test_SPi_pos.pdf";
   c_test->Print(saving.c_str());
   h_phi_test_SPi_neg->Draw();
   h_phi_test_SPi_neg->Draw("hist same");
-  saving = "output/"+polarisation+"test/h_phi_test_SPi_neg.pdf"
+  saving = "output/"+directory+"/test/h_phi_test_SPi_neg.pdf";
   c_test->Print(saving.c_str());
   h_phi_test_SPi->Draw();
   h_phi_test_SPi->Draw("hist same");
@@ -778,7 +781,7 @@ void eff(string dir, string sample, string polarisation)
   h_phi_test_SPi_pos->Draw("hist same");
   h_phi_test_SPi_neg->Draw();
   h_phi_test_SPi_neg->Draw("hist same");
-  saving = "output/"+polarisation+"test/h_phi_test_SPi_combined.pdf"
+  saving = "output/"+directory+"/test/h_phi_test_SPi_combined.pdf";
   c_test->Print(saving.c_str());
 
 
