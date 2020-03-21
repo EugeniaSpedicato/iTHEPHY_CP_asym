@@ -23,22 +23,22 @@ Reconstructed number of soft pions: 2.35291e+06 of 3e+06 , eff.: 0.784304 +/- 0.
 Reconstructed number of D0: 2.24937e+06 of 3e+06 , eff.: 0.749789 +/- 0.00025007
 Reconstructed number of D*: 1.72094e+06 of 3e+06 , eff.: 0.573648 +/- 0.000285526
 Charge: -
-Reconstructed number of pions: 2.67054e+06 of 0 , eff.: inf +/- -nan
-Reconstructed number of Kaons: 2.59582e+06 of 0 , eff.: inf +/- -nan
-Reconstructed number of soft pions: 2.37106e+06 of 0 , eff.: inf +/- -nan
-Reconstructed number of D0: 2.27052e+06 of 0 , eff.: inf +/- -nan
-Reconstructed number of D*: 1.74945e+06 of 0 , eff.: inf +/- -nan
+Reconstructed number of pions: 2.67054e+06 of 3e+06 , eff.: 0.890181 +/- 0.000180517
+Reconstructed number of Kaons: 2.59582e+06 of 3e+06 , eff.: 0.865274 +/- 0.000197125
+Reconstructed number of soft pions: 2.37106e+06 of 3e+06 , eff.: 0.790354 +/- 0.000235014
+Reconstructed number of D0: 2.27052e+06 of 3e+06 , eff.: 0.756839 +/- 0.000247678
+Reconstructed number of D*: 1.74945e+06 of 3e+06 , eff.: 0.583151 +/- 0.000284655
 Deviation via efficiencies:
-Pions: -nan +/- -nan , in sigmas: nan
-Kaons: -nan +/- -nan , in sigmas: nan
-soft Pions: -nan +/- -nan , in sigmas: nan
-D0: -nan +/- -nan , in sigmas: nan
-Dst: -nan +/- -nan , in sigmas: nan
+Pions: -0.000103735 +/- 0.00014346 , in sigmas: 0.723096
+Kaons: 0.0046878 +/- 0.000158274 , in sigmas: 29.6182
+soft Pions: -0.00384231 +/- 0.000212182 , in sigmas: 18.1086
+D0: -0.00467932 +/- 0.000233624 , in sigmas: 20.0293
+Dst: -0.0082152 +/- 0.000348551 , in sigmas: 23.5696
 Deviation via total numbers:
 Pions: -0.000103735 +/- 0.000432721 , in sigmas: 0.239727
 Kaons: 0.0046878 +/- 0.000437847 , in sigmas: 10.7065
 soft Pions: -0.00384231 +/- 0.00046009 , in sigmas: 8.35122
 D0: -0.00467932 +/- 0.000470361 , in sigmas: 9.94836
 Dst: -0.0082152 +/- 0.000536779 , in sigmas: 15.3046
-computation time/s: 87.2844
-computation time/min: 1.45474
+computation time/s: 57.1782
+computation time/min: 0.952969
