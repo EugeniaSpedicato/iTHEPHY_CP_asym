@@ -456,6 +456,9 @@ void eff(string dir, string sample, string polarisation)
   TH1F *h_theta_D0_neg = new TH1F("h_theta_D0_neg", ";#theta;Events", 50, 0.02, 0.24);
   TH1F *h_theta_Dst_neg = new TH1F("h_theta_Dst_neg", ";#theta;Events", 50, 0.02, 0.24);
 
+  TH1F *h_phi_test_SPi = new TH1F("h_phi_test_SPi","h_phi_test_SPi", 25, -3.5, 0.);
+  TH1F *h_phi_test_SPi_pos = new TH1F("h_phi_test_SPi","h_phi_test_SPi", 25, -3.5, 0.);
+  TH1F *h_phi_test_SPi_neg = new TH1F("h_phi_test_SPi","h_phi_test_SPi", 25, -3.5, 0.);
 
   vector<TH1F*> v_Pi_hist_reco = {h_pT_reco_Pi, h_phi_reco_Pi, h_theta_reco_Pi, h_eta_reco_Pi};
   vector<TH1F*> v_SPi_hist_reco = {h_pT_reco_SPi, h_phi_reco_SPi, h_theta_reco_SPi, h_eta_reco_SPi};
@@ -724,6 +727,61 @@ void eff(string dir, string sample, string polarisation)
   printhists(v_K_hist_reco, v_K_hist_reco_pos, v_K_hist_reco_neg, polarisation);
   printhists(v_D0_hist_reco, v_D0_hist_reco_pos, v_D0_hist_reco_neg, polarisation);
   printhists(v_Dst_hist_reco, v_Dst_hist_reco_pos, v_Dst_hist_reco_neg, polarisation);
+
+
+
+
+  double phi_plus, phi_min;
+  double plus_err, min_err, new err;
+  int size = h_phi_SPi->GetNbinsX();
+  string saving;
+
+  for(int i = 0; i < size/2; ++i)
+  {
+    phi_min = h_phi_SPi_reco->GetBinContent(i);
+    min_err = h_phi_SPi_reco->GetBinError(i);
+    phi_plus = h_phi_SPi_reco->GetBinContent(size - i - 1);
+    plus_err = h_phi_SPi_reco->GetBinError(size - i - 1);
+    h_phi_test_SPi->SetBinContent(i, abs(phi_min - phi_plus));
+    h_phi_test_SPi->SetBinError(i, sqrt(pow(min_err, 2.) + pow(plus_err, 2.)));
+
+    phi_min = h_phi_SPi_reco_pos->GetBinContent(i);
+    min_err = h_phi_SPi_reco_pos->GetBinError(i);
+    phi_plus = h_phi_SPi_reco_pos->GetBinContent(size - i - 1);
+    plus_err = h_phi_SPi_reco_pos->GetBinError(size - i - 1);
+    h_phi_test_SPi_pos->SetBinContent(i, abs(phi_min - phi_plus));
+    h_phi_test_SPi_pos->SetBinError(i, sqrt(pow(min_err, 2.) + pow(plus_err, 2.)));
+
+    phi_min = h_phi_SPi_reco_neg->GetBinContent(i);
+    min_err = h_phi_SPi_reco_neg->GetBinError(i);
+    phi_plus = h_phi_SPi_reco_neg->GetBinContent(size - i - 1);
+    plus_err = h_phi_SPi_reco_neg->GetBinError(size - i - 1);
+    h_phi_test_SPi_neg->SetBinContent(i, abs(phi_min - phi_plus));
+    h_phi_test_SPi_neg->SetBinError(i, sqrt(pow(min_err, 2.) + pow(plus_err, 2.)));
+  }
+  TCanvas *c_test = new TCanvas();
+  h_phi_test_SPi->Draw();
+  h_phi_test_SPi->Draw("hist same");
+  saving = "output/"+polarisation+"test/h_phi_test_SPi.pdf"
+  c_test->Print(saving.c_str());
+  h_phi_test_SPi_pos->Draw();
+  h_phi_test_SPi_pos->Draw("hist same");
+  saving = "output/"+polarisation+"test/h_phi_test_SPi_pos.pdf"
+  c_test->Print(saving.c_str());
+  h_phi_test_SPi_neg->Draw();
+  h_phi_test_SPi_neg->Draw("hist same");
+  saving = "output/"+polarisation+"test/h_phi_test_SPi_neg.pdf"
+  c_test->Print(saving.c_str());
+  h_phi_test_SPi->Draw();
+  h_phi_test_SPi->Draw("hist same");
+  h_phi_test_SPi_pos->Draw();
+  h_phi_test_SPi_pos->Draw("hist same");
+  h_phi_test_SPi_neg->Draw();
+  h_phi_test_SPi_neg->Draw("hist same");
+  saving = "output/"+polarisation+"test/h_phi_test_SPi_combined.pdf"
+  c_test->Print(saving.c_str());
+
+
 
 
   uint64_t end_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
