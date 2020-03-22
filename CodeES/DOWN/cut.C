@@ -1,5 +1,5 @@
 #define ntp_cxx
-#include "asym.h"
+#include "cut.h"
 #include <TH2.h>
 #include <TStyle.h>
 #include <TCanvas.h>
@@ -55,6 +55,38 @@ TH1F* sPitheta_rec_pos=new TH1F("h1", "sPi_THETA_reco_pos", 50,0,0.2);
     TH1F* sPitheta_pos=new TH1F("h2", "sPi_THETA_reco_pos", 50,0,0.2);
 TH1F* sPitheta_rec_neg=new TH1F("h1", "sPi_THETA_reco_neg", 50,0,0.2);
     TH1F* sPitheta_neg=new TH1F("h2", "sPi_THETA_reco_neg", 50,0,0.2);
+    
+TH1F* sPiX_rec_pos=new TH1F("h1", "sPi X Rec pos",50,0.6,1.1);
+    TH1F* sPiX_pos=new TH1F("h2", "sPi X pos",50,0.6,1.1);
+TH1F* sPiX_rec_neg =new TH1F("h1", "sPi X Rec neg",50,0.6,1.1);
+    TH1F* sPiX_neg =new TH1F("h2", "sPi X neg",50,0.6,1.1);
+    
+TH1F* sPiY_rec_pos=new TH1F("h1", "sPi Y Rec pos",50,-0.6,-1.1);
+    TH1F* sPiY_pos=new TH1F("h2", "sPi Y pos",50,-0.6,-1.1);
+TH1F* sPiY_rec_neg =new TH1F("h1", "sPi Y Rec neg",50,-0.6,-1.1);
+    TH1F* sPiY_neg =new TH1F("h2", "sPi Y neg",50,-0.6,-1.1);
+    
+TH1F* sPiZ_rec_pos=new TH1F("h1", "sPi Z Rec pos",50,-150,150);
+    TH1F* sPiZ_pos=new TH1F("h2", "sPi Z pos",50,-150,150);
+TH1F* sPiZ_rec_neg =new TH1F("h1", "sPi Z Rec neg",50,-150,150);
+    TH1F* sPiZ_neg =new TH1F("h2", "sPi Z neg",50,-150,150);
+    
+    TH1F* DstX_rec_pos=new TH1F("h1", "Dst X Rec pos",50,0.6,1.1);
+    TH1F* DstX_pos=new TH1F("h2", "Dst X pos",50,0.6,1.1);
+TH1F* DstX_rec_neg =new TH1F("h1", "Dst X Rec neg",50,0.6,1.1);
+    TH1F* DstX_neg =new TH1F("h2", "Dst X neg",50,0.6,1.1);
+    
+TH1F* DstY_rec_pos=new TH1F("h1", "Dst Y Rec pos",50,-0.6,-1.1);
+    TH1F* DstY_pos=new TH1F("h2", "Dst Y pos",50,-0.6,-1.1);
+TH1F* DstY_rec_neg =new TH1F("h1", "Dst Y Rec neg",50,-0.6,-1.1);
+    TH1F* DstY_neg =new TH1F("h2", "Dst Y neg",50,-0.6,-1.1);
+    
+TH1F* DstZ_rec_pos=new TH1F("h1", "Dst Z Rec pos",50,-150,150);
+    TH1F* DstZ_pos=new TH1F("h2", "Dst Z pos",50,-150,150);
+TH1F* DstZ_rec_neg =new TH1F("h1", "Dst Z Rec neg",50,-150,150);
+    TH1F* DstZ_neg =new TH1F("h2", "Dst Z neg",50,-150,150);
+
+
 
 //---------------------------- 
  
@@ -145,6 +177,9 @@ TH1F* Dsttheta_rec_pos=new TH1F("h1", "Dst_THETA_reco_pos", 50,0,0.2);
     TH1F* Dsttheta_pos=new TH1F("h2", "Dst_THETA_reco_pos", 50,0,0.2);
  TH1F* Dsttheta_rec_neg=new TH1F("h1", "Dst_THETA_reco_neg", 50,0,0.2);
     TH1F* Dsttheta_neg=new TH1F("h2", "Dst_THETA_reco_neg", 50,0,0.2);
+
+
+
  
  
  
@@ -193,6 +228,9 @@ if (P1_Reconstructed==1 && P2_Reconstructed==1 && sPi_Reconstructed==1)
     Dstphi_rec_pos->Fill(Dst_PHI);
     Dstpt_rec_pos->Fill(Dst_PT);
     Dsttheta_rec_pos->Fill(Dst_THETA);
+    DstX_rec_pos->Fill(Dst_TRUEORIGINVERTEX_X);
+    DstY_rec_pos->Fill(Dst_TRUEORIGINVERTEX_Y);
+    DstZ_rec_pos->Fill(Dst_TRUEORIGINVERTEX_Z);
 }
 if (Dst_ID<0)
 {
@@ -201,6 +239,9 @@ if (Dst_ID<0)
     Dstphi_rec_neg->Fill(Dst_PHI);
     Dstpt_rec_neg->Fill(Dst_PT);
     Dsttheta_rec_neg->Fill(Dst_THETA);
+    DstX_rec_neg->Fill(Dst_TRUEORIGINVERTEX_X);
+    DstY_rec_neg->Fill(Dst_TRUEORIGINVERTEX_Y);
+    DstZ_rec_neg->Fill(Dst_TRUEORIGINVERTEX_Z);
 } 
 }
 //----
@@ -213,6 +254,9 @@ if (Dst_ID>0)
     Dsteta_pos->Fill(Dst_ETA);
     Dstpt_pos->Fill(Dst_PT);
     Dsttheta_pos->Fill(Dst_THETA);
+    DstX_pos->Fill(Dst_TRUEORIGINVERTEX_X);
+    DstY_pos->Fill(Dst_TRUEORIGINVERTEX_Y);
+    DstZ_pos->Fill(Dst_TRUEORIGINVERTEX_Z);
     
 }
 if (Dst_ID<0)
@@ -222,6 +266,9 @@ if (Dst_ID<0)
     Dstphi_neg->Fill(Dst_PHI);
     Dstpt_neg->Fill(Dst_PT);
     Dsttheta_neg->Fill(Dst_THETA);
+    DstX_neg->Fill(Dst_TRUEORIGINVERTEX_X);
+    DstY_neg->Fill(Dst_TRUEORIGINVERTEX_Y);
+    DstZ_neg->Fill(Dst_TRUEORIGINVERTEX_Z);
     
 }
     
@@ -358,42 +405,59 @@ if (P1_ID<0)
 if (sPi_Reconstructed==1)
 {
    sPi_rec++; 
-    if (sPi_ID>0)
+    if (sPi_ID>0 && sPi_PT>420)
 {
    sPi_pos_rec++; 
     sPipt_rec_pos->Fill(sPi_PT);
     sPiphi_rec_pos->Fill(sPi_PHI);
     sPieta_rec_pos->Fill(sPi_ETA);
     sPitheta_rec_pos->Fill(sPi_THETA);
+    sPiX_rec_pos->Fill(sPi_TRUEORIGINVERTEX_X);
+    sPiY_rec_pos->Fill(sPi_TRUEORIGINVERTEX_Y);
+    sPiZ_rec_pos->Fill(sPi_TRUEORIGINVERTEX_Z);
+    
+        
 }
-if (sPi_ID<0)
+if (sPi_ID<0 && sPi_PT>420)
 {
    sPi_neg_rec++;
     sPieta_rec_neg->Fill(sPi_ETA);
     sPiphi_rec_neg->Fill(sPi_PHI);
     sPipt_rec_neg->Fill(sPi_PT);
     sPitheta_rec_neg->Fill(sPi_THETA);
+    sPiX_rec_neg->Fill(sPi_TRUEORIGINVERTEX_X);
+    sPiY_rec_neg->Fill(sPi_TRUEORIGINVERTEX_Y);
+    sPiZ_rec_neg->Fill(sPi_TRUEORIGINVERTEX_Z);
+    
 } 
 
 
     
 }         
 //------        
-    if (sPi_ID>0)
+    if (sPi_ID>0 && sPi_PT>420)
 {
    sPi_pos++; 
     sPipt_pos->Fill(sPi_PT);
     sPiphi_pos->Fill(sPi_PHI);
     sPieta_pos->Fill(sPi_ETA);
     sPitheta_pos->Fill(sPi_THETA);
+    sPiX_pos->Fill(sPi_TRUEORIGINVERTEX_X);
+    sPiY_pos->Fill(sPi_TRUEORIGINVERTEX_Y);
+    sPiZ_pos->Fill(sPi_TRUEORIGINVERTEX_Z);
+        
 }
-if (sPi_ID<0)
+if (sPi_ID<0 && sPi_PT>420)
 {
    sPi_neg++;
     sPieta_neg->Fill(sPi_ETA);
     sPiphi_neg->Fill(sPi_PHI);
     sPipt_neg->Fill(sPi_PT);
     sPitheta_neg->Fill(sPi_THETA);
+    sPiX_neg->Fill(sPi_TRUEORIGINVERTEX_X);
+    sPiY_neg->Fill(sPi_TRUEORIGINVERTEX_Y);
+    sPiZ_neg->Fill(sPi_TRUEORIGINVERTEX_Z);
+    
 } 
       
       // if (Cut(ientry) < 0) continue;
@@ -474,12 +538,18 @@ if (sPi_ID<0)
     Double_t err_disN_Dst = sqrt(pow(1/(Dst_pos_rec+Dst_neg_rec)-(Dst_pos_rec-Dst_neg_rec)/((Dst_pos_rec+Dst_neg_rec)*(Dst_pos_rec+Dst_neg_rec)),2)*Dst_pos_rec+pow(1/(Dst_pos_rec+Dst_neg_rec)+(Dst_pos_rec-Dst_neg_rec)/((Dst_pos_rec+Dst_neg_rec)*(Dst_pos_rec+Dst_neg_rec)),2)*Dst_neg_rec);
     
     
-    cout<<"P1 discrepancy with eff "<<dis_P1<<" +- " <<err_dis_P1<< " VS " << disN_P1<<" +- " <<err_disN_P1<<  endl;
-    cout<<"P2 discrepancy with eff "<<dis_P2<<" +- " <<err_dis_P2<<" VS " << disN_P2<<" +- " <<err_disN_P2<< endl;
-    cout<<"sPi discrepancy with eff "<<dis_sPi<<" +- " <<err_dis_sPi<<" VS " << disN_sPi<<" +- " <<err_disN_sPi<<endl;
-    cout<<"D0 discrepancy with eff "<<dis_D0<<" +- " <<err_dis_D0<<" VS " << disN_D0<< " +- " <<err_disN_D0<<endl;
-    cout<<"Dst discrepancy with eff "<<dis_Dst<<" +- " <<err_dis_Dst<<" VS " << disN_Dst<<" +- " <<err_disN_Dst<< endl;
+    cout<<"P1 asymmetry "<< disN_P1<<" +- " <<err_disN_P1<<  endl;
+    cout<<"P2 asymmetry "<< disN_P2<<" +- " <<err_disN_P2<< endl;
+    cout<<"sPi asymmetry"<< disN_sPi<<" +- " <<err_disN_sPi<<endl;
+    cout<<"D0 asymmetry "<< disN_D0<< " +- " <<err_disN_D0<<endl;
+    cout<<"Dst asymmetry"<< disN_Dst<<" +- " <<err_disN_Dst<< endl;
         
+        cout<<"P1 reco pos " << P1_pos_rec <<" P1 reco neg " << P1_neg_rec <<endl;
+    cout<<"P2 reco pos " << P2_pos_rec <<" P2 reco neg " << P2_neg_rec <<endl;
+    cout<<"sPi reco pos " << sPi_pos_rec <<" sPi reco neg " << sPi_neg_rec <<endl;
+    cout<<"D0 reco pos " << D0_pos_rec <<" D0 reco neg " << D0_neg_rec <<endl;
+    cout<<"Dst reco pos " << Dst_pos_rec <<" Dst reco neg " << Dst_neg_rec <<endl;
+    
         
     cout<<"Pions pos efficiency: "<< eff_P1_pos<<" +- "<< P1_pos_err  <<'\n';
     cout<<"Pions neg efficiency: "<< eff_P1_neg<<" +- "<< P1_neg_err <<'\n';
@@ -532,6 +602,23 @@ sPitheta_rec_pos->Sumw2();
 sPitheta_pos->Sumw2();
 sPitheta_rec_neg->Sumw2();
 sPitheta_neg->Sumw2(); 
+    
+sPiX_rec_pos->Sumw2();
+sPiX_pos->Sumw2();
+sPiX_rec_neg->Sumw2();
+sPiX_neg->Sumw2();  
+
+sPiY_rec_pos->Sumw2();
+sPiY_pos->Sumw2();
+sPiY_rec_neg->Sumw2();
+sPiY_neg->Sumw2();  
+    
+sPiZ_rec_pos->Sumw2();
+sPiZ_pos->Sumw2();
+sPiZ_rec_neg->Sumw2();
+sPiZ_neg->Sumw2();  
+    
+
 //---------------------- 
 Dstphi_rec_pos->Sumw2();
 Dstphi_pos->Sumw2();
@@ -552,6 +639,22 @@ Dsttheta_rec_pos->Sumw2();
 Dsttheta_pos->Sumw2();
 Dsttheta_rec_neg->Sumw2();
 Dsttheta_neg->Sumw2(); 
+    
+    DstX_rec_pos->Sumw2();
+DstX_pos->Sumw2();
+DstX_rec_neg->Sumw2();
+DstX_neg->Sumw2();  
+
+DstY_rec_pos->Sumw2();
+DstY_pos->Sumw2();
+DstY_rec_neg->Sumw2();
+DstY_neg->Sumw2();  
+    
+DstZ_rec_pos->Sumw2();
+DstZ_pos->Sumw2();
+DstZ_rec_neg->Sumw2();
+DstZ_neg->Sumw2();  
+    
 //---------------------- 
 D0phi_rec_pos->Sumw2();
 D0phi_pos->Sumw2();
@@ -627,7 +730,38 @@ TH1F *h3_sPipt_neg = (TH1F*)sPipt_rec_neg->Clone("h3_sPipt_neg"); h3_sPipt_neg->
       
  TH1F *h3_sPitheta_pos = (TH1F*)sPitheta_rec_pos->Clone("h3_sPitheta_pos"); h3_sPitheta_pos->Divide(sPitheta_rec_pos,sPitheta_pos);
  TH1F *h3_sPitheta_neg = (TH1F*)sPitheta_rec_neg->Clone("h3_sPitheta_neg"); h3_sPitheta_neg->Divide(sPitheta_rec_neg,sPitheta_neg);
-   
+    
+ TH1F *h3_sPiX_pos = (TH1F*)sPiX_rec_pos->Clone("h3_sPiX_pos"); h3_sPiX_pos->Divide(sPiX_rec_pos,sPiX_pos);
+ TH1F *h3_sPiX_neg = (TH1F*)sPiX_rec_neg->Clone("h3_sPiX_neg"); h3_sPiX_neg->Divide(sPiX_rec_neg,sPiX_neg);
+    
+ TH1F *h3_sPiY_pos = (TH1F*)sPiY_rec_pos->Clone("h3_sPiY_pos"); h3_sPiY_pos->Divide(sPiY_rec_pos,sPiY_pos);
+ TH1F *h3_sPiY_neg = (TH1F*)sPiY_rec_neg->Clone("h3_sPiY_neg"); h3_sPiY_neg->Divide(sPiY_rec_neg,sPiY_neg);
+    
+ TH1F *h3_sPiZ_pos = (TH1F*)sPiZ_rec_pos->Clone("h3_sPiZ_pos"); h3_sPiZ_pos->Divide(sPiZ_rec_pos,sPiZ_pos);
+ TH1F *h3_sPiZ_neg = (TH1F*)sPiZ_rec_neg->Clone("h3_sPiZ_neg"); h3_sPiZ_neg->Divide(sPiZ_rec_neg,sPiZ_neg);    
+
+Double_t MeanZp=h3_sPiZ_pos->GetMean();
+Double_t StdDZp=h3_sPiZ_pos->GetStdDev();
+Double_t MeanZn=h3_sPiZ_neg->GetMean();
+Double_t StdDZn=h3_sPiZ_neg->GetStdDev();    
+
+Double_t MeanXp=h3_sPiX_pos->GetMean();
+Double_t StdDXp=h3_sPiX_pos->GetStdDev();  
+Double_t MeanXn=h3_sPiX_neg->GetMean();
+Double_t StdDXn=h3_sPiX_neg->GetStdDev();  
+    
+Double_t x0n[1]={MeanXn};
+Double_t z0n[1]={MeanZn};
+Double_t exn[1]={StdDXn};
+Double_t ezn[1]={StdDZn};
+TGraphErrors* pointNEG = new TGraphErrors(1,x0n,z0n,exn,ezn);
+Double_t x0p[1]={MeanXp};
+Double_t z0p[1]={MeanZp};
+Double_t exp[1]={StdDXp};
+Double_t ezp[1]={StdDZp};
+TGraphErrors* pointPOS = new TGraphErrors(1,x0p,z0p,exp,ezp);    
+
+    
 
 sPiphi_rec_pos->Add(sPiphi_rec_neg,-1);
 sPiphi_rec_neg->Add(sPiphi_rec_pos);
@@ -766,6 +900,17 @@ D0theta_rec_pos->SetAxisRange(-0.15, 0.15, "Y");
 
  TH1F *h3_Dsttheta_pos = (TH1F*)Dsttheta_rec_pos->Clone("h3_Dsttheta_pos"); h3_Dsttheta_pos->Divide(Dsttheta_rec_pos,Dsttheta_pos);
  TH1F *h3_Dsttheta_neg = (TH1F*)Dsttheta_rec_neg->Clone("h3_Dsttheta_neg"); h3_Dsttheta_neg->Divide(Dsttheta_rec_neg,Dsttheta_neg);
+    
+    
+ TH1F *h3_DstX_pos = (TH1F*)DstX_rec_pos->Clone("h3_DstX_pos"); h3_DstX_pos->Divide(DstX_rec_pos,DstX_pos);
+ TH1F *h3_DstX_neg = (TH1F*)DstX_rec_neg->Clone("h3_DstX_neg"); h3_DstX_neg->Divide(DstX_rec_neg,DstX_neg);
+    
+ TH1F *h3_DstY_pos = (TH1F*)DstY_rec_pos->Clone("h3_DstY_pos"); h3_DstY_pos->Divide(DstY_rec_pos,DstY_pos);
+ TH1F *h3_DstY_neg = (TH1F*)DstY_rec_neg->Clone("h3_DstY_neg"); h3_DstY_neg->Divide(DstY_rec_neg,DstY_neg);
+    
+ TH1F *h3_DstZ_pos = (TH1F*)DstZ_rec_pos->Clone("h3_DstZ_pos"); h3_DstZ_pos->Divide(DstZ_rec_pos,DstZ_pos);
+ TH1F *h3_DstZ_neg = (TH1F*)DstZ_rec_neg->Clone("h3_DstZ_neg"); h3_DstZ_neg->Divide(DstZ_rec_neg,DstZ_neg);        
+    
     
 Dstphi_rec_pos->Add(Dstphi_rec_neg,-1);
 Dstphi_rec_neg->Add(Dstphi_rec_pos);
@@ -1128,6 +1273,82 @@ h3_Dsttheta_neg->Draw("E");
 h3_Dsttheta_neg->Draw("hist same"); 
 
     c2e->SaveAs("Dst neg.pdf"); 
+    
+    
+TCanvas * c2coo= new TCanvas("c2coo","c2coo",400,10,600,400);
+c2coo->Divide(2,3);
+c2coo->cd(1);
+sPiX_rec_neg->Draw("E");
+sPiX_rec_neg->Draw("hist same");
  
+c2coo->cd(2);
+sPiX_rec_pos->Draw("E"); 
+sPiX_rec_pos->Draw("hist same"); 
+
+c2coo->cd(3);
+sPiY_rec_neg->Draw("E");
+sPiY_rec_neg->Draw("hist same");
  
+c2coo->cd(4);
+sPiY_rec_pos->Draw("E"); 
+sPiY_rec_pos->Draw("hist same"); 
+
+c2coo->cd(5);
+sPiZ_rec_neg->Draw("E");
+sPiZ_rec_neg->Draw("hist same");
+ 
+c2coo->cd(6);
+sPiZ_rec_pos->Draw("E"); 
+sPiZ_rec_pos->Draw("hist same"); 
+
+TCanvas * c2dst= new TCanvas("c2dst","c2dst",400,10,600,400);
+c2dst->Divide(2,3);
+c2dst->cd(1);
+DstX_rec_neg->Draw("E");
+DstX_rec_neg->Draw("hist same");
+ 
+c2dst->cd(2);
+DstX_rec_pos->Draw("E"); 
+DstX_rec_pos->Draw("hist same"); 
+
+c2dst->cd(3);
+DstY_rec_neg->Draw("E");
+DstY_rec_neg->Draw("hist same");
+ 
+c2dst->cd(4);
+DstY_rec_pos->Draw("E"); 
+DstY_rec_pos->Draw("hist same"); 
+
+c2dst->cd(5);
+DstZ_rec_neg->Draw("E");
+DstZ_rec_neg->Draw("hist same");
+ 
+c2dst->cd(6);
+DstZ_rec_pos->Draw("E"); 
+DstZ_rec_pos->Draw("hist same"); 
+
+
+    c2dst->SaveAs("Dstcoo.pdf");        
+ 
+TCanvas * c2vx= new TCanvas("c2vx","c2vx",400,10,600,400);
+c2vx->Divide(2,1);
+c2vx->cd(1);
+pointPOS->Draw("ALP");
+c2vx->cd(2);
+pointNEG->Draw("ALP");
+c2vx->SaveAs("sPivx.pdf");   
+    
+TCanvas *cpn=new TCanvas("cpn","cpn",400,10,600,400);
+h3_sPipt_neg->Draw();
+h3_sPipt_neg->Draw("hist same");
+
+h3_sPipt_pos->SetMarkerColor(kRed);
+h3_sPipt_pos->SetLineColor(kRed);
+    
+h3_sPipt_pos->Draw("same");
+h3_sPipt_pos->Draw("hist same");
+
+    cpn->SaveAs("sPiPTconfronto.pdf");     
+    
+    
 }

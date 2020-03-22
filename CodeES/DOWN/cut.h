@@ -1,12 +1,12 @@
 //////////////////////////////////////////////////////////
 // This class has been automatically generated on
-// Wed Mar  4 14:11:02 2020 by ROOT version 6.12/06
+// Fri Mar 20 13:09:52 2020 by ROOT version 6.12/06
 // from TTree ntp/ntp
 // found on file: minisample_Dst2D0pi_D02Kpi_2016_Dw_GEN.root
 //////////////////////////////////////////////////////////
 
-#ifndef asym_h
-#define asym_h
+#ifndef cut_h
+#define cut_h
 
 #include <TROOT.h>
 #include <TChain.h>
