@@ -1,5 +1,5 @@
 #define ntp_cxx
-#include "asym.h"
+#include "NOcut.h"
 #include <TH2.h>
 #include <TStyle.h>
 #include <TCanvas.h>
@@ -145,7 +145,13 @@ TH1F* Dsttheta_rec_pos=new TH1F("h1", "Dst_THETA_reco_pos", 50,0,0.2);
     TH1F* Dsttheta_pos=new TH1F("h2", "Dst_THETA_reco_pos", 50,0,0.2);
  TH1F* Dsttheta_rec_neg=new TH1F("h1", "Dst_THETA_reco_neg", 50,0,0.2);
     TH1F* Dsttheta_neg=new TH1F("h2", "Dst_THETA_reco_neg", 50,0,0.2);
- 
+     
+TH1F* sPiX_rec_pos=new TH1F("h1", "sPi X Rec pos",50,0.6,1.1);
+    TH1F* sPiX_pos=new TH1F("h2", "sPi X pos",50,0.6,1.1);
+
+TH1F* sPiX_rec_neg =new TH1F("h1", "sPi X Rec neg",50,0.6,1.1);
+    TH1F* sPiX_neg =new TH1F("h2", "sPi X neg",50,0.6,1.1);
+
  
  
 //   In a ROOT session, you can do:
@@ -365,6 +371,8 @@ if (sPi_Reconstructed==1)
     sPiphi_rec_pos->Fill(sPi_PHI);
     sPieta_rec_pos->Fill(sPi_ETA);
     sPitheta_rec_pos->Fill(sPi_THETA);
+    sPiX_rec_pos->Fill(sPi_TRUEORIGINVERTEX_X);
+        
 }
 if (sPi_ID<0)
 {
@@ -373,6 +381,7 @@ if (sPi_ID<0)
     sPiphi_rec_neg->Fill(sPi_PHI);
     sPipt_rec_neg->Fill(sPi_PT);
     sPitheta_rec_neg->Fill(sPi_THETA);
+    sPiX_rec_neg->Fill(sPi_TRUEORIGINVERTEX_X);
 } 
 
 
@@ -386,6 +395,8 @@ if (sPi_ID<0)
     sPiphi_pos->Fill(sPi_PHI);
     sPieta_pos->Fill(sPi_ETA);
     sPitheta_pos->Fill(sPi_THETA);
+    sPiX_pos->Fill(sPi_TRUEORIGINVERTEX_X);
+        
 }
 if (sPi_ID<0)
 {
@@ -394,6 +405,8 @@ if (sPi_ID<0)
     sPiphi_neg->Fill(sPi_PHI);
     sPipt_neg->Fill(sPi_PT);
     sPitheta_neg->Fill(sPi_THETA);
+    sPiX_neg->Fill(sPi_TRUEORIGINVERTEX_X);
+    
 } 
       
       // if (Cut(ientry) < 0) continue;
@@ -473,12 +486,17 @@ if (sPi_ID<0)
     double disN_Dst = (Dst_pos_rec-Dst_neg_rec)/(Dst_pos_rec+Dst_neg_rec);
     Double_t err_disN_Dst = sqrt(pow(1/(Dst_pos_rec+Dst_neg_rec)-(Dst_pos_rec-Dst_neg_rec)/((Dst_pos_rec+Dst_neg_rec)*(Dst_pos_rec+Dst_neg_rec)),2)*Dst_pos_rec+pow(1/(Dst_pos_rec+Dst_neg_rec)+(Dst_pos_rec-Dst_neg_rec)/((Dst_pos_rec+Dst_neg_rec)*(Dst_pos_rec+Dst_neg_rec)),2)*Dst_neg_rec);
     
+    cout<<"P1 asymmetry "<< disN_P1<<" +- " <<err_disN_P1<<  endl;
+    cout<<"P2 asymmetry "<< disN_P2<<" +- " <<err_disN_P2<< endl;
+    cout<<"sPi asymmetry"<< disN_sPi<<" +- " <<err_disN_sPi<<endl;
+    cout<<"D0 asymmetry "<< disN_D0<< " +- " <<err_disN_D0<<endl;
+    cout<<"Dst asymmetry"<< disN_Dst<<" +- " <<err_disN_Dst<< endl;
     
-    cout<<"P1 discrepancy with eff "<<dis_P1<<" +- " <<err_dis_P1<< " VS " << disN_P1<<" +- " <<err_disN_P1<<  endl;
-    cout<<"P2 discrepancy with eff "<<dis_P2<<" +- " <<err_dis_P2<<" VS " << disN_P2<<" +- " <<err_disN_P2<< endl;
-    cout<<"sPi discrepancy with eff "<<dis_sPi<<" +- " <<err_dis_sPi<<" VS " << disN_sPi<<" +- " <<err_disN_sPi<<endl;
-    cout<<"D0 discrepancy with eff "<<dis_D0<<" +- " <<err_dis_D0<<" VS " << disN_D0<< " +- " <<err_disN_D0<<endl;
-    cout<<"Dst discrepancy with eff "<<dis_Dst<<" +- " <<err_dis_Dst<<" VS " << disN_Dst<<" +- " <<err_disN_Dst<< endl;
+    cout<<"P1 reco pos " << P1_pos_rec <<" P1 reco neg " << P1_neg_rec <<endl;
+    cout<<"P2 reco pos " << P2_pos_rec <<" P2 reco neg " << P2_neg_rec <<endl;
+    cout<<"sPi reco pos " << sPi_pos_rec <<" sPi reco neg " << sPi_neg_rec <<endl;
+    cout<<"D0 reco pos " << D0_pos_rec <<" D0 reco neg " << D0_neg_rec <<endl;
+    cout<<"Dst reco pos " << Dst_pos_rec <<" Dst reco neg " << Dst_neg_rec <<endl;
         
         
     cout<<"Pions pos efficiency: "<< eff_P1_pos<<" +- "<< P1_pos_err  <<'\n';
@@ -532,6 +550,13 @@ sPitheta_rec_pos->Sumw2();
 sPitheta_pos->Sumw2();
 sPitheta_rec_neg->Sumw2();
 sPitheta_neg->Sumw2(); 
+    
+sPiX_rec_pos->Sumw2();
+sPiX_pos->Sumw2();
+sPiX_rec_neg->Sumw2();
+sPiX_neg->Sumw2();     
+    
+
 //---------------------- 
 Dstphi_rec_pos->Sumw2();
 Dstphi_pos->Sumw2();
@@ -627,6 +652,10 @@ TH1F *h3_sPipt_neg = (TH1F*)sPipt_rec_neg->Clone("h3_sPipt_neg"); h3_sPipt_neg->
       
  TH1F *h3_sPitheta_pos = (TH1F*)sPitheta_rec_pos->Clone("h3_sPitheta_pos"); h3_sPitheta_pos->Divide(sPitheta_rec_pos,sPitheta_pos);
  TH1F *h3_sPitheta_neg = (TH1F*)sPitheta_rec_neg->Clone("h3_sPitheta_neg"); h3_sPitheta_neg->Divide(sPitheta_rec_neg,sPitheta_neg);
+    
+ TH1F *h3_sPiX_pos = (TH1F*)sPiX_rec_pos->Clone("h3_sPiX_pos"); h3_sPiX_pos->Divide(sPiX_rec_pos,sPiX_pos);
+ TH1F *h3_sPiX_neg = (TH1F*)sPiX_rec_neg->Clone("h3_sPiX_neg"); h3_sPiX_neg->Divide(sPiX_rec_neg,sPiX_neg);
+    
    
 
 sPiphi_rec_pos->Add(sPiphi_rec_neg,-1);
@@ -644,7 +673,7 @@ sPipt_rec_pos->Divide(sPipt_rec_neg);
 sPitheta_rec_pos->Add(sPitheta_rec_neg,-1);
 sPitheta_rec_neg->Add(sPitheta_rec_pos);
 sPitheta_rec_pos->Divide(sPitheta_rec_neg);
-       
+
 sPiphi_rec_pos->SetAxisRange(-0.15, 0.15, "Y");
 sPieta_rec_pos->SetAxisRange(-0.15, 0.15, "Y");
 sPipt_rec_pos->SetAxisRange(-0.15, 0.15, "Y");
@@ -1128,6 +1157,33 @@ h3_Dsttheta_neg->Draw("E");
 h3_Dsttheta_neg->Draw("hist same"); 
 
     c2e->SaveAs("Dst neg.pdf"); 
+    
+    
+TCanvas * c2X= new TCanvas("c2X","c2X",400,10,600,400);
+c2X->Divide(2,1);
+c2X->cd(1);
+sPiX_rec_neg->Draw("E");
+sPiX_rec_neg->Draw("hist same");
  
+c2X->cd(2);
+sPiX_rec_pos->Draw("E"); 
+sPiX_rec_pos->Draw("hist same"); 
+
+
+    c2X->SaveAs("sPiX.pdf");     
  
+ TCanvas *cpn=new TCanvas("cpn","cpn",400,10,600,400);
+h3_sPipt_neg->Draw();
+h3_sPipt_neg->Draw("hist same");
+
+h3_sPipt_pos->SetMarkerColor(kRed);
+h3_sPipt_pos->SetLineColor(kRed);
+    
+h3_sPipt_pos->Draw("same");
+h3_sPipt_pos->Draw("hist same");
+    
+    cpn->SaveAs("sPiPTconfronto.pdf");     
+    
+
+
 }
