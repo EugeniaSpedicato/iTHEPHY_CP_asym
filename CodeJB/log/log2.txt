@@ -13,32 +13,32 @@ Processing eff.cc++("$dir", "minisample_Dst2D0pi_D02Kpi_2016_Up_GEN", "UP")...
 Total: 
 Reconstructed number of pions: 5.34053e+06, eff.: 0.866532 +/- 0.000136988
 Reconstructed number of Kaons: 5.2161e+06, eff.: 0.846342 +/- 0.000145262
-Reconstructed number of soft pions: 4.72398e+06, eff.: 0.766492 +/- 0.000170414
+Reconstructed number of soft pions: 3.28234e+06, eff.: 0.532578 +/- 0.000200977
 Reconstructed number of D0: 4.51989e+06, eff.: 0.733377 +/- 0.00017812
-Reconstructed number of D*: 3.4704e+06, eff.: 0.563092 +/- 0.000199795
+Reconstructed number of D*: 2.39923e+06, eff.: 0.389289 +/- 0.000196406
 Charge: +
 Reconstructed number of pions: 2.66999e+06 of 3e+06 , eff.: 0.889996 +/- 0.00018065
 Reconstructed number of Kaons: 2.62028e+06 of 3e+06  eff.: 0.873425 +/- 0.000191967
-Reconstructed number of soft pions: 2.35291e+06 of 3e+06 , eff.: 0.784304 +/- 0.000237467
+Reconstructed number of soft pions: 1.63668e+06 of 2.05066e+06 , eff.: 0.798122 +/- 0.000280306
 Reconstructed number of D0: 2.24937e+06 of 3e+06 , eff.: 0.749789 +/- 0.00025007
-Reconstructed number of D*: 1.72094e+06 of 3e+06 , eff.: 0.573648 +/- 0.000285526
+Reconstructed number of D*: 1.19101e+06 of 2.05066e+06 , eff.: 0.580794 +/- 0.00034457
 Charge: -
 Reconstructed number of pions: 2.67054e+06 of 3e+06 , eff.: 0.890181 +/- 0.000180517
 Reconstructed number of Kaons: 2.59582e+06 of 3e+06 , eff.: 0.865274 +/- 0.000197125
-Reconstructed number of soft pions: 2.37106e+06 of 3e+06 , eff.: 0.790354 +/- 0.000235014
+Reconstructed number of soft pions: 1.64566e+06 of 2.05109e+06 , eff.: 0.802335 +/- 0.000278068
 Reconstructed number of D0: 2.27052e+06 of 3e+06 , eff.: 0.756839 +/- 0.000247678
-Reconstructed number of D*: 1.74945e+06 of 3e+06 , eff.: 0.583151 +/- 0.000284655
+Reconstructed number of D*: 1.20822e+06 of 2.05109e+06 , eff.: 0.589063 +/- 0.000343539
 Deviation via efficiencies:
 Pions: -0.000103735 +/- 0.00014346 , in sigmas: 0.723096
 Kaons: 0.0046878 +/- 0.000158274 , in sigmas: 29.6182
-soft Pions: -0.00384231 +/- 0.000212182 , in sigmas: 18.1086
+soft Pions: -0.00263267 +/- 0.000246706 , in sigmas: 10.6713
 D0: -0.00467932 +/- 0.000233624 , in sigmas: 20.0293
-Dst: -0.0082152 +/- 0.000348551 , in sigmas: 23.5696
+Dst: -0.00706861 +/- 0.000415939 , in sigmas: 16.9943
 Deviation via total numbers:
 Pions: -0.000103735 +/- 0.000432721 , in sigmas: 0.239727
 Kaons: 0.0046878 +/- 0.000437847 , in sigmas: 10.7065
-soft Pions: -0.00384231 +/- 0.00046009 , in sigmas: 8.35122
+soft Pions: -0.00273677 +/- 0.000551959 , in sigmas: 4.95828
 D0: -0.00467932 +/- 0.000470361 , in sigmas: 9.94836
-Dst: -0.0082152 +/- 0.000536779 , in sigmas: 15.3046
-computation time/s: 61.4632
-computation time/min: 1.02439
+Dst: -0.00717271 +/- 0.000645584 , in sigmas: 11.1104
+computation time/s: 57.9779
+computation time/min: 0.966299
