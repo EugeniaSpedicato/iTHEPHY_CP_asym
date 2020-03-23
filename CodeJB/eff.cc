@@ -423,16 +423,16 @@ void eff(string dir, string sample, string polarisation)
   TH1F *h_pT_D0_neg = new TH1F("h_pT_D0_neg", ";p_{T}/MeV;Events", 70, 2000., 9000.);
   TH1F *h_pT_Dst_neg = new TH1F("h_pT_Dst_neg", ";p_{T}/MeV;Events", 74, 2200., 9600.);
 
-  TH1F *h_phi_reco_SPi_neg = new TH1F("h_phi_reco_SPi_neg", ";#phi; reconstructed Events", 50, -3.5, 3.5);
-  TH1F *h_phi_reco_Pi_neg = new TH1F("h_phi_reco_Pi_neg", ";#phi; reconstructed Events", 50, -3.5, 3.5);
-  TH1F *h_phi_reco_K_neg = new TH1F("h_phi_reco_K_neg", ";#phi; reconstructed Events", 50, -3.5, 3.5);
-  TH1F *h_phi_reco_D0_neg = new TH1F("h_phi_reco_D0_neg", ";#phi; reconstructed Events", 50, -3.5, 3.5);
-  TH1F *h_phi_reco_Dst_neg = new TH1F("h_phi_reco_Dst_neg", ";#phi; reconstructed Events", 50, -3.5, 3.5);
-  TH1F *h_phi_SPi_neg = new TH1F("h_phi_SPi_neg", ";#phi;Events", 50, -3.5, 3.5);
-  TH1F *h_phi_Pi_neg = new TH1F("h_phi_Pi_neg", ";#phi;Events", 50, -3.5, 3.5);
-  TH1F *h_phi_K_neg = new TH1F("h_phi_K_neg", ";#phi;Events", 50, -3.5, 3.5);
-  TH1F *h_phi_D0_neg = new TH1F("h_phi_D0_neg", ";#phi;Events", 50, -3.5, 3.5);
-  TH1F *h_phi_Dst_neg = new TH1F("h_phi_Dst_neg", ";#phi;Events", 50, -3.5, 3.5);
+  TH1F *h_phi_reco_SPi_neg = new TH1F("h_phi_reco_SPi_neg", ";#phi; reconstructed Events", 100, -3.5, 3.5);
+  TH1F *h_phi_reco_Pi_neg = new TH1F("h_phi_reco_Pi_neg", ";#phi; reconstructed Events", 100, -3.5, 3.5);
+  TH1F *h_phi_reco_K_neg = new TH1F("h_phi_reco_K_neg", ";#phi; reconstructed Events", 100, -3.5, 3.5);
+  TH1F *h_phi_reco_D0_neg = new TH1F("h_phi_reco_D0_neg", ";#phi; reconstructed Events", 100, -3.5, 3.5);
+  TH1F *h_phi_reco_Dst_neg = new TH1F("h_phi_reco_Dst_neg", ";#phi; reconstructed Events", 100, -3.5, 3.5);
+  TH1F *h_phi_SPi_neg = new TH1F("h_phi_SPi_neg", ";#phi;Events", 100, -3.5, 3.5);
+  TH1F *h_phi_Pi_neg = new TH1F("h_phi_Pi_neg", ";#phi;Events", 100, -3.5, 3.5);
+  TH1F *h_phi_K_neg = new TH1F("h_phi_K_neg", ";#phi;Events", 100, -3.5, 3.5);
+  TH1F *h_phi_D0_neg = new TH1F("h_phi_D0_neg", ";#phi;Events", 100, -3.5, 3.5);
+  TH1F *h_phi_Dst_neg = new TH1F("h_phi_Dst_neg", ";#phi;Events", 100, -3.5, 3.5);
 
   TH1F *h_eta_reco_SPi_neg = new TH1F("h_eta_reco_SPi_neg", ";#eta; reconstructed Events", 50, 2.0, 4.5);
   TH1F *h_eta_reco_Pi_neg = new TH1F("h_eta_reco_Pi_neg", ";#eta; reconstructed Events", 50, 2.0, 4.5);
@@ -456,9 +456,9 @@ void eff(string dir, string sample, string polarisation)
   TH1F *h_theta_D0_neg = new TH1F("h_theta_D0_neg", ";#theta;Events", 50, 0.02, 0.24);
   TH1F *h_theta_Dst_neg = new TH1F("h_theta_Dst_neg", ";#theta;Events", 50, 0.02, 0.24);
 
-  TH1F *h_phi_test_SPi = new TH1F("h_phi_test_SPi",";|#phi|;#Delta eff", 25, 0., 3.5);
-  TH1F *h_phi_test_SPi_pos = new TH1F("h_phi_test_SPi_pos",";|#phi|;#Delta eff", 25, 0., 3.5);
-  TH1F *h_phi_test_SPi_neg = new TH1F("h_phi_test_SPi_neg",";|#phi|;#Delta eff", 25, 0., 3.5);
+  TH1F *h_phi_test_SPi = new TH1F("h_phi_test_SPi",";|#phi|;#Delta eff", 50, 0., 3.5);
+  TH1F *h_phi_test_SPi_pos = new TH1F("h_phi_test_SPi_pos",";|#phi|;#Delta eff", 50, 0., 3.5);
+  TH1F *h_phi_test_SPi_neg = new TH1F("h_phi_test_SPi_neg",";|#phi|;#Delta eff", 50, 0., 3.5);
 
   h_phi_test_SPi->SetAxisRange(0.,1.,"Y");
   h_phi_test_SPi_pos->SetAxisRange(0.,1.,"Y");
@@ -534,11 +534,11 @@ void eff(string dir, string sample, string polarisation)
     hist_fill(v_K_hist, v_K_hist_reco, v_K_hist_pos, v_K_hist_reco_pos, v_K_hist_neg, v_K_hist_reco_neg, v_K_var, isK_reco, nK_reco, nK_pos, nK_reco_pos, nK_neg, nK_reco_neg, K_ID);
     hist_fill(v_D0_hist, v_D0_hist_reco, v_D0_hist_pos, v_D0_hist_reco_pos, v_D0_hist_neg, v_D0_hist_reco_neg, v_D0_var, isD0_reco, nD0_reco, nD0_pos, nD0_reco_pos, nD0_neg, nD0_reco_neg, D0_ID);
 
-    if((abs(SPi_phi) > 0.5 && abs(SPi_phi) < 2.5) && SPi_theta < 0.13)
-    {
+    //if((abs(SPi_phi) > 0.3 && abs(SPi_phi) < 2.5) && SPi_theta < 0.13)
+    //{
       hist_fill(v_SPi_hist, v_SPi_hist_reco, v_SPi_hist_pos, v_SPi_hist_reco_pos, v_SPi_hist_neg, v_SPi_hist_reco_neg, v_SPi_var, isSPi_reco, nSPi_reco, nSPi_pos, nSPi_reco_pos, nSPi_neg, nSPi_reco_neg, SPi_ID);
       hist_fill(v_Dst_hist, v_Dst_hist_reco, v_Dst_hist_pos, v_Dst_hist_reco_pos, v_Dst_hist_neg, v_Dst_hist_reco_neg, v_Dst_var, isDst_reco, nDst_reco, nDst_pos, nDst_reco_pos, nDst_neg, nDst_reco_neg, Dst_ID);
-    }
+    //}
     v_Pi_var.clear();
     v_K_var.clear();
     v_SPi_var.clear();
