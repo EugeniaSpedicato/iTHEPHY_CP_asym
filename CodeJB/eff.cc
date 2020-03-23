@@ -534,7 +534,7 @@ void eff(string dir, string sample, string polarisation)
     hist_fill(v_K_hist, v_K_hist_reco, v_K_hist_pos, v_K_hist_reco_pos, v_K_hist_neg, v_K_hist_reco_neg, v_K_var, isK_reco, nK_reco, nK_pos, nK_reco_pos, nK_neg, nK_reco_neg, K_ID);
     hist_fill(v_D0_hist, v_D0_hist_reco, v_D0_hist_pos, v_D0_hist_reco_pos, v_D0_hist_neg, v_D0_hist_reco_neg, v_D0_var, isD0_reco, nD0_reco, nD0_pos, nD0_reco_pos, nD0_neg, nD0_reco_neg, D0_ID);
 
-    if((abs(SPi_phi) > 0.35 && abs(SPi_phi) < 2.65))// && SPi_theta < 0.13)
+    if((abs(SPi_phi) > 0.35 && abs(SPi_phi) < 2.65) && (SPi_pT < 750. && SPi_eta > 2.5))
     {
       hist_fill(v_SPi_hist, v_SPi_hist_reco, v_SPi_hist_pos, v_SPi_hist_reco_pos, v_SPi_hist_neg, v_SPi_hist_reco_neg, v_SPi_var, isSPi_reco, nSPi_reco, nSPi_pos, nSPi_reco_pos, nSPi_neg, nSPi_reco_neg, SPi_ID);
       hist_fill(v_Dst_hist, v_Dst_hist_reco, v_Dst_hist_pos, v_Dst_hist_reco_pos, v_Dst_hist_neg, v_Dst_hist_reco_neg, v_Dst_var, isDst_reco, nDst_reco, nDst_pos, nDst_reco_pos, nDst_neg, nDst_reco_neg, Dst_ID);
