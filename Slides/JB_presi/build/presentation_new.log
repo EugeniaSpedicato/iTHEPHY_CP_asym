@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.23)  23 MAR 2020 21:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.23)  23 MAR 2020 21:47
 entering extended mode
 **./presentation_new.tex
 (presentation_new.tex
@@ -1978,6 +1978,323 @@ Package pdftex.def Info: first/up_plus_down_pdf/eta_2.pdf  used on input line 3
 us_down_pdf/phi_2.pdf, page is rotated 90 degrees> <./first/up_plus_down_pdf/th
 eta_2.pdf, page is rotated 90 degrees> <./first/up_plus_down_pdf/eta_2.pdf, pag
 e is rotated 90 degrees>]
+File: first/up_pdf/test_u/h_phi_test_SPi_combined.pdf Graphic file (type pdf)
+<use first/up_pdf/test_u/h_phi_test_SPi_combined.pdf>
+Package pdftex.def Info: first/up_pdf/test_u/h_phi_test_SPi_combined.pdf  used 
+on input line 469.
+(pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
+File: first/down_pdf/test_d/h_phi_test_SPi_combined.pdf Graphic file (type pdf)
+
+<use first/down_pdf/test_d/h_phi_test_SPi_combined.pdf>
+Package pdftex.def Info: first/down_pdf/test_d/h_phi_test_SPi_combined.pdf  use
+d on input line 469.
+(pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
+
+[23
+
+]
+Overfull \hbox (8.5167pt too wide) detected at line 496
+ 
+ []
+
+
+Overfull \hbox (8.5167pt too wide) detected at line 496
+ 
+ []
+
+
+Overfull \hbox (8.5167pt too wide) detected at line 496
+ 
+ []
+
+
+Overfull \hbox (8.5167pt too wide) detected at line 496
+ 
+ []
+
+
+Overfull \hbox (8.5167pt too wide) detected at line 496
+ 
+ []
+
+
+Overfull \hbox (8.5167pt too wide) detected at line 496
+ 
+ []
+
+
+Overfull \hbox (8.5167pt too wide) detected at line 496
+ 
+ []
+
+
+Overfull \hbox (8.5167pt too wide) detected at line 496
+ 
+ []
+
+
+Overfull \hbox (8.5167pt too wide) detected at line 496
+ 
+ []
+
+
+Overfull \hbox (8.5167pt too wide) detected at line 496
+ 
+ []
+
+
+Overfull \hbox (8.5167pt too wide) detected at line 496
+ 
+ []
+
+
+Overfull \hbox (8.5167pt too wide) detected at line 496
+ 
+ []
+
+
+Overfull \hbox (8.5167pt too wide) detected at line 496
+ 
+ []
+
+
+Overfull \hbox (8.5167pt too wide) detected at line 496
+ 
+ []
+
+[24
+
+]
+<sec/up_pdf/combined/h_pt_reco_SPi.pdf, id=1624, 569.12625pt x 385.44pt>
+File: sec/up_pdf/combined/h_pt_reco_SPi.pdf Graphic file (type pdf)
+<use sec/up_pdf/combined/h_pt_reco_SPi.pdf>
+Package pdftex.def Info: sec/up_pdf/combined/h_pt_reco_SPi.pdf  used on input l
+ine 512.
+(pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
+<sec/up_pdf/combined/h_phi_reco_SPi.pdf, id=1625, 569.12625pt x 385.44pt>
+File: sec/up_pdf/combined/h_phi_reco_SPi.pdf Graphic file (type pdf)
+<use sec/up_pdf/combined/h_phi_reco_SPi.pdf>
+Package pdftex.def Info: sec/up_pdf/combined/h_phi_reco_SPi.pdf  used on input 
+line 512.
+(pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
+<sec/up_pdf/combined/h_theta_reco_SPi.pdf, id=1626, 569.12625pt x 385.44pt>
+File: sec/up_pdf/combined/h_theta_reco_SPi.pdf Graphic file (type pdf)
+<use sec/up_pdf/combined/h_theta_reco_SPi.pdf>
+Package pdftex.def Info: sec/up_pdf/combined/h_theta_reco_SPi.pdf  used on inpu
+t line 512.
+(pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
+<sec/up_pdf/combined/h_eta_reco_SPi.pdf, id=1627, 569.12625pt x 385.44pt>
+File: sec/up_pdf/combined/h_eta_reco_SPi.pdf Graphic file (type pdf)
+<use sec/up_pdf/combined/h_eta_reco_SPi.pdf>
+Package pdftex.def Info: sec/up_pdf/combined/h_eta_reco_SPi.pdf  used on input 
+line 512.
+(pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
+ [25
+
+ <./sec/up_pdf/combined/h_pt_reco_SPi.pdf, page is rotated 90 degrees> <./sec/u
+p_pdf/combined/h_phi_reco_SPi.pdf, page is rotated 90 degrees> <./sec/up_pdf/co
+mbined/h_theta_reco_SPi.pdf, page is rotated 90 degrees> <./sec/up_pdf/combined
+/h_eta_reco_SPi.pdf, page is rotated 90 degrees>]
+<sec/down_pdf/combined/h_pt_reco_SPi.pdf, id=1827, 569.12625pt x 385.44pt>
+File: sec/down_pdf/combined/h_pt_reco_SPi.pdf Graphic file (type pdf)
+<use sec/down_pdf/combined/h_pt_reco_SPi.pdf>
+Package pdftex.def Info: sec/down_pdf/combined/h_pt_reco_SPi.pdf  used on input
+ line 528.
+(pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
+<sec/down_pdf/combined/h_phi_reco_SPi.pdf, id=1828, 569.12625pt x 385.44pt>
+File: sec/down_pdf/combined/h_phi_reco_SPi.pdf Graphic file (type pdf)
+<use sec/down_pdf/combined/h_phi_reco_SPi.pdf>
+Package pdftex.def Info: sec/down_pdf/combined/h_phi_reco_SPi.pdf  used on inpu
+t line 528.
+(pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
+<sec/down_pdf/combined/h_theta_reco_SPi.pdf, id=1829, 569.12625pt x 385.44pt>
+File: sec/down_pdf/combined/h_theta_reco_SPi.pdf Graphic file (type pdf)
+<use sec/down_pdf/combined/h_theta_reco_SPi.pdf>
+Package pdftex.def Info: sec/down_pdf/combined/h_theta_reco_SPi.pdf  used on in
+put line 528.
+(pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
+<sec/down_pdf/combined/h_eta_reco_SPi.pdf, id=1830, 569.12625pt x 385.44pt>
+File: sec/down_pdf/combined/h_eta_reco_SPi.pdf Graphic file (type pdf)
+<use sec/down_pdf/combined/h_eta_reco_SPi.pdf>
+Package pdftex.def Info: sec/down_pdf/combined/h_eta_reco_SPi.pdf  used on inpu
+t line 528.
+(pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
+ [26
+
+ <./sec/down_pdf/combined/h_pt_reco_SPi.pdf, page is rotated 90 degrees> <./sec
+/down_pdf/combined/h_phi_reco_SPi.pdf, page is rotated 90 degrees> <./sec/down_
+pdf/combined/h_theta_reco_SPi.pdf, page is rotated 90 degrees> <./sec/down_pdf/
+combined/h_eta_reco_SPi.pdf, page is rotated 90 degrees>]
+File: sec/up_pdf/combined/h_pt_reco_SPi.pdf Graphic file (type pdf)
+<use sec/up_pdf/combined/h_pt_reco_SPi.pdf>
+Package pdftex.def Info: sec/up_pdf/combined/h_pt_reco_SPi.pdf  used on input l
+ine 533.
+(pdftex.def)             Requested size: 147.49782pt x 99.89444pt.
+File: sec/down_pdf/combined/h_pt_reco_SPi.pdf Graphic file (type pdf)
+<use sec/down_pdf/combined/h_pt_reco_SPi.pdf>
+Package pdftex.def Info: sec/down_pdf/combined/h_pt_reco_SPi.pdf  used on input
+ line 533.
+(pdftex.def)             Requested size: 147.49782pt x 99.89444pt.
+ [27
+
+]
+File: sec/up_pdf/combined/h_phi_reco_SPi.pdf Graphic file (type pdf)
+<use sec/up_pdf/combined/h_phi_reco_SPi.pdf>
+Package pdftex.def Info: sec/up_pdf/combined/h_phi_reco_SPi.pdf  used on input 
+line 538.
+(pdftex.def)             Requested size: 147.49782pt x 99.89444pt.
+File: sec/down_pdf/combined/h_phi_reco_SPi.pdf Graphic file (type pdf)
+<use sec/down_pdf/combined/h_phi_reco_SPi.pdf>
+Package pdftex.def Info: sec/down_pdf/combined/h_phi_reco_SPi.pdf  used on inpu
+t line 538.
+(pdftex.def)             Requested size: 147.49782pt x 99.89444pt.
+ [28
+
+]
+File: sec/up_pdf/combined/h_theta_reco_SPi.pdf Graphic file (type pdf)
+<use sec/up_pdf/combined/h_theta_reco_SPi.pdf>
+Package pdftex.def Info: sec/up_pdf/combined/h_theta_reco_SPi.pdf  used on inpu
+t line 543.
+(pdftex.def)             Requested size: 147.49782pt x 99.89444pt.
+File: sec/down_pdf/combined/h_theta_reco_SPi.pdf Graphic file (type pdf)
+<use sec/down_pdf/combined/h_theta_reco_SPi.pdf>
+Package pdftex.def Info: sec/down_pdf/combined/h_theta_reco_SPi.pdf  used on in
+put line 543.
+(pdftex.def)             Requested size: 147.49782pt x 99.89444pt.
+ [29
+
+]
+File: sec/up_pdf/combined/h_eta_reco_SPi.pdf Graphic file (type pdf)
+<use sec/up_pdf/combined/h_eta_reco_SPi.pdf>
+Package pdftex.def Info: sec/up_pdf/combined/h_eta_reco_SPi.pdf  used on input 
+line 548.
+(pdftex.def)             Requested size: 147.49782pt x 99.89444pt.
+File: sec/down_pdf/combined/h_eta_reco_SPi.pdf Graphic file (type pdf)
+<use sec/down_pdf/combined/h_eta_reco_SPi.pdf>
+Package pdftex.def Info: sec/down_pdf/combined/h_eta_reco_SPi.pdf  used on inpu
+t line 548.
+(pdftex.def)             Requested size: 147.49782pt x 99.89444pt.
+ [30
+
+]
+<sec/up_pdf/deviation/h_pt_reco_SPi_pos_dev.pdf, id=2133, 569.12625pt x 385.44p
+t>
+File: sec/up_pdf/deviation/h_pt_reco_SPi_pos_dev.pdf Graphic file (type pdf)
+<use sec/up_pdf/deviation/h_pt_reco_SPi_pos_dev.pdf>
+Package pdftex.def Info: sec/up_pdf/deviation/h_pt_reco_SPi_pos_dev.pdf  used o
+n input line 564.
+(pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
+<sec/up_pdf/deviation/h_phi_reco_SPi_pos_dev.pdf, id=2134, 569.12625pt x 385.44
+pt>
+File: sec/up_pdf/deviation/h_phi_reco_SPi_pos_dev.pdf Graphic file (type pdf)
+<use sec/up_pdf/deviation/h_phi_reco_SPi_pos_dev.pdf>
+Package pdftex.def Info: sec/up_pdf/deviation/h_phi_reco_SPi_pos_dev.pdf  used 
+on input line 564.
+(pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
+<sec/up_pdf/deviation/h_theta_reco_SPi_pos_dev.pdf, id=2135, 569.12625pt x 385.
+44pt>
+File: sec/up_pdf/deviation/h_theta_reco_SPi_pos_dev.pdf Graphic file (type pdf)
+
+<use sec/up_pdf/deviation/h_theta_reco_SPi_pos_dev.pdf>
+Package pdftex.def Info: sec/up_pdf/deviation/h_theta_reco_SPi_pos_dev.pdf  use
+d on input line 564.
+(pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
+<sec/up_pdf/deviation/h_eta_reco_SPi_pos_dev.pdf, id=2136, 569.12625pt x 385.44
+pt>
+File: sec/up_pdf/deviation/h_eta_reco_SPi_pos_dev.pdf Graphic file (type pdf)
+<use sec/up_pdf/deviation/h_eta_reco_SPi_pos_dev.pdf>
+Package pdftex.def Info: sec/up_pdf/deviation/h_eta_reco_SPi_pos_dev.pdf  used 
+on input line 564.
+(pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
+ [31
+
+ <./sec/up_pdf/deviation/h_pt_reco_SPi_pos_dev.pdf, page is rotated 90 degrees>
+ <./sec/up_pdf/deviation/h_phi_reco_SPi_pos_dev.pdf, page is rotated 90 degrees
+> <./sec/up_pdf/deviation/h_theta_reco_SPi_pos_dev.pdf, page is rotated 90 degr
+ees> <./sec/up_pdf/deviation/h_eta_reco_SPi_pos_dev.pdf, page is rotated 90 deg
+rees>]
+<sec/down_pdf/deviation/h_pt_reco_SPi_pos_dev.pdf, id=2336, 569.12625pt x 385.4
+4pt>
+File: sec/down_pdf/deviation/h_pt_reco_SPi_pos_dev.pdf Graphic file (type pdf)
+<use sec/down_pdf/deviation/h_pt_reco_SPi_pos_dev.pdf>
+Package pdftex.def Info: sec/down_pdf/deviation/h_pt_reco_SPi_pos_dev.pdf  used
+ on input line 580.
+(pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
+<sec/down_pdf/deviation/h_phi_reco_SPi_pos_dev.pdf, id=2337, 569.12625pt x 385.
+44pt>
+File: sec/down_pdf/deviation/h_phi_reco_SPi_pos_dev.pdf Graphic file (type pdf)
+
+<use sec/down_pdf/deviation/h_phi_reco_SPi_pos_dev.pdf>
+Package pdftex.def Info: sec/down_pdf/deviation/h_phi_reco_SPi_pos_dev.pdf  use
+d on input line 580.
+(pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
+<sec/down_pdf/deviation/h_theta_reco_SPi_pos_dev.pdf, id=2338, 569.12625pt x 38
+5.44pt>
+File: sec/down_pdf/deviation/h_theta_reco_SPi_pos_dev.pdf Graphic file (type pd
+f)
+<use sec/down_pdf/deviation/h_theta_reco_SPi_pos_dev.pdf>
+Package pdftex.def Info: sec/down_pdf/deviation/h_theta_reco_SPi_pos_dev.pdf  u
+sed on input line 580.
+(pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
+<sec/down_pdf/deviation/h_eta_reco_SPi_pos_dev.pdf, id=2339, 569.12625pt x 385.
+44pt>
+File: sec/down_pdf/deviation/h_eta_reco_SPi_pos_dev.pdf Graphic file (type pdf)
+
+<use sec/down_pdf/deviation/h_eta_reco_SPi_pos_dev.pdf>
+Package pdftex.def Info: sec/down_pdf/deviation/h_eta_reco_SPi_pos_dev.pdf  use
+d on input line 580.
+(pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
+ [32
+
+ <./sec/down_pdf/deviation/h_pt_reco_SPi_pos_dev.pdf, page is rotated 90 degree
+s> <./sec/down_pdf/deviation/h_phi_reco_SPi_pos_dev.pdf, page is rotated 90 deg
+rees> <./sec/down_pdf/deviation/h_theta_reco_SPi_pos_dev.pdf, page is rotated 9
+0 degrees> <./sec/down_pdf/deviation/h_eta_reco_SPi_pos_dev.pdf, page is rotate
+d 90 degrees>]
+File: sec/up_pdf/deviation/h_phi_reco_SPi_pos_dev.pdf Graphic file (type pdf)
+<use sec/up_pdf/deviation/h_phi_reco_SPi_pos_dev.pdf>
+Package pdftex.def Info: sec/up_pdf/deviation/h_phi_reco_SPi_pos_dev.pdf  used 
+on input line 585.
+(pdftex.def)             Requested size: 147.49782pt x 99.89444pt.
+File: sec/down_pdf/deviation/h_phi_reco_SPi_pos_dev.pdf Graphic file (type pdf)
+
+<use sec/down_pdf/deviation/h_phi_reco_SPi_pos_dev.pdf>
+Package pdftex.def Info: sec/down_pdf/deviation/h_phi_reco_SPi_pos_dev.pdf  use
+d on input line 585.
+(pdftex.def)             Requested size: 147.49782pt x 99.89444pt.
+ [33
+
+]
+<sec/up_plus_down_pdf/pT_2.pdf, id=2564, 569.12625pt x 385.44pt>
+File: sec/up_plus_down_pdf/pT_2.pdf Graphic file (type pdf)
+<use sec/up_plus_down_pdf/pT_2.pdf>
+Package pdftex.def Info: sec/up_plus_down_pdf/pT_2.pdf  used on input line 601.
+
+(pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
+<sec/up_plus_down_pdf/phi_2.pdf, id=2565, 569.12625pt x 385.44pt>
+File: sec/up_plus_down_pdf/phi_2.pdf Graphic file (type pdf)
+<use sec/up_plus_down_pdf/phi_2.pdf>
+Package pdftex.def Info: sec/up_plus_down_pdf/phi_2.pdf  used on input line 601
+.
+(pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
+<sec/up_plus_down_pdf/theta_2.pdf, id=2566, 569.12625pt x 385.44pt>
+File: sec/up_plus_down_pdf/theta_2.pdf Graphic file (type pdf)
+<use sec/up_plus_down_pdf/theta_2.pdf>
+Package pdftex.def Info: sec/up_plus_down_pdf/theta_2.pdf  used on input line 6
+01.
+(pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
+<sec/up_plus_down_pdf/eta_2.pdf, id=2567, 569.12625pt x 385.44pt>
+File: sec/up_plus_down_pdf/eta_2.pdf Graphic file (type pdf)
+<use sec/up_plus_down_pdf/eta_2.pdf>
+Package pdftex.def Info: sec/up_plus_down_pdf/eta_2.pdf  used on input line 601
+.
+(pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
+ [34
+
+ <./sec/up_plus_down_pdf/pT_2.pdf, page is rotated 90 degrees> <./sec/up_plus_d
+own_pdf/phi_2.pdf, page is rotated 90 degrees> <./sec/up_plus_down_pdf/theta_2.
+pdf, page is rotated 90 degrees> <./sec/up_plus_down_pdf/eta_2.pdf, page is rot
+ated 90 degrees>]
 \tf@nav=\write6
 \openout6 = `presentation_new.nav'.
 
@@ -1987,21 +2304,21 @@ e is rotated 90 degrees>]
 \tf@snm=\write8
 \openout8 = `presentation_new.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 324.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 324.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 602.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 602.
 
 (C:\Users\Jonah\Desktop\Projekte\iTHEPHY\Slides\JB_presi\build\presentation_new
 .aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 324.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 324.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 602.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 602.
 Package rerunfilecheck Info: File `presentation_new.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 30836 strings out of 492902
- 615301 string characters out of 3133550
+ 30945 strings out of 492902
+ 619860 string characters out of 3133550
  673586 words of memory out of 3000000
- 34209 multiletter control sequences out of 15000+200000
+ 34289 multiletter control sequences out of 15000+200000
  546309 words of font info for 77 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,15n,70p,803b,729s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2020,9 +2337,9 @@ les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmsy8.pfb>
 Output written on C:\Users\Jonah\Desktop\Projekte\iTHEPHY\Slides\JB_presi\build
-\presentation_new.pdf (22 pages, 617356 bytes).
+\presentation_new.pdf (34 pages, 998546 bytes).
 PDF statistics:
- 1631 PDF objects out of 1728 (max. 8388607)
- 45 named destinations out of 1000 (max. 500000)
- 153 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2829 PDF objects out of 2984 (max. 8388607)
+ 69 named destinations out of 1000 (max. 500000)
+ 253 words of extra memory for PDF output out of 10000 (max. 10000000)
 
