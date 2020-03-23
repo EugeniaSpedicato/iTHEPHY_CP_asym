@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.23)  23 MAR 2020 22:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.23)  23 MAR 2020 23:33
 entering extended mode
 **./presentation_new.tex
 (presentation_new.tex
@@ -2587,25 +2587,25 @@ sed on input line 732.
  [45
 
 ]
-<third/up_plus_down_pdf/pT_2.pdf, id=3759, 569.12625pt x 385.44pt>
+<third/up_plus_down_pdf/pT_2.pdf, id=3760, 569.12625pt x 385.44pt>
 File: third/up_plus_down_pdf/pT_2.pdf Graphic file (type pdf)
 <use third/up_plus_down_pdf/pT_2.pdf>
 Package pdftex.def Info: third/up_plus_down_pdf/pT_2.pdf  used on input line 74
 8.
 (pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
-<third/up_plus_down_pdf/phi_2.pdf, id=3760, 569.12625pt x 385.44pt>
+<third/up_plus_down_pdf/phi_2.pdf, id=3761, 569.12625pt x 385.44pt>
 File: third/up_plus_down_pdf/phi_2.pdf Graphic file (type pdf)
 <use third/up_plus_down_pdf/phi_2.pdf>
 Package pdftex.def Info: third/up_plus_down_pdf/phi_2.pdf  used on input line 7
 48.
 (pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
-<third/up_plus_down_pdf/theta_2.pdf, id=3761, 569.12625pt x 385.44pt>
+<third/up_plus_down_pdf/theta_2.pdf, id=3762, 569.12625pt x 385.44pt>
 File: third/up_plus_down_pdf/theta_2.pdf Graphic file (type pdf)
 <use third/up_plus_down_pdf/theta_2.pdf>
 Package pdftex.def Info: third/up_plus_down_pdf/theta_2.pdf  used on input line
  748.
 (pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
-<third/up_plus_down_pdf/eta_2.pdf, id=3762, 569.12625pt x 385.44pt>
+<third/up_plus_down_pdf/eta_2.pdf, id=3763, 569.12625pt x 385.44pt>
 File: third/up_plus_down_pdf/eta_2.pdf Graphic file (type pdf)
 <use third/up_plus_down_pdf/eta_2.pdf>
 Package pdftex.def Info: third/up_plus_down_pdf/eta_2.pdf  used on input line 7
@@ -2637,31 +2637,37 @@ Package rerunfilecheck Info: File `presentation_new.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 31102 strings out of 492902
- 624973 string characters out of 3133550
+ 31128 strings out of 492902
+ 625211 string characters out of 3133550
  673586 words of memory out of 3000000
- 34417 multiletter control sequences out of 15000+200000
+ 34441 multiletter control sequences out of 15000+200000
  546309 words of font info for 77 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,15n,70p,803b,729s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmssi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mssi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi8.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmsy8.pfb>
+pdfTeX warning (dest): name{Navigation47} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Navigation58} has been referenced but does not exis
+t, replaced by a fixed one
+
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmss12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmssi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
+si12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi8.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmsy8.pfb>
 Output written on C:\Users\Jonah\Desktop\Projekte\iTHEPHY\Slides\JB_presi\build
-\presentation_new.pdf (46 pages, 1383577 bytes).
+\presentation_new.pdf (46 pages, 1391162 bytes).
 PDF statistics:
- 4030 PDF objects out of 4296 (max. 8388607)
- 93 named destinations out of 1000 (max. 500000)
+ 4032 PDF objects out of 4296 (max. 8388607)
+ 95 named destinations out of 1000 (max. 500000)
  353 words of extra memory for PDF output out of 10000 (max. 10000000)
 
