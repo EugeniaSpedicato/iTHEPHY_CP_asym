@@ -3,32 +3,22 @@ Warning in cling::IncrementalParser::CheckABICompatibility():
   Possible C++ standard library mismatch, compiled with __GLIBCXX__ '20181206'
   Extraction of runtime standard library version was: '20191114'
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_pT_reco_Pi_pos_dev.pdf has been created
-Error in <TH1F::Add>: Attempt to add histograms with different number of bins : nbins h1 = 50 , nbins h2 =  100
-Info in <TH1F::Add>: Attempt to add histograms with different number of bins - trying to use TH1::Merge
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_phi_reco_Pi_pos_dev.pdf has been created
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_theta_reco_Pi_pos_dev.pdf has been created
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_eta_reco_Pi_pos_dev.pdf has been created
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_pT_reco_SPi_pos_dev.pdf has been created
-Error in <TH1F::Add>: Attempt to add histograms with different number of bins : nbins h1 = 50 , nbins h2 =  100
-Info in <TH1F::Add>: Attempt to add histograms with different number of bins - trying to use TH1::Merge
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_phi_reco_SPi_pos_dev.pdf has been created
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_theta_reco_SPi_pos_dev.pdf has been created
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_eta_reco_SPi_pos_dev.pdf has been created
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_pT_reco_K_pos_dev.pdf has been created
-Error in <TH1F::Add>: Attempt to add histograms with different number of bins : nbins h1 = 50 , nbins h2 =  100
-Info in <TH1F::Add>: Attempt to add histograms with different number of bins - trying to use TH1::Merge
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_phi_reco_K_pos_dev.pdf has been created
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_theta_reco_K_pos_dev.pdf has been created
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_eta_reco_K_pos_dev.pdf has been created
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_pT_reco_D0_pos_dev.pdf has been created
-Error in <TH1F::Add>: Attempt to add histograms with different number of bins : nbins h1 = 50 , nbins h2 =  100
-Info in <TH1F::Add>: Attempt to add histograms with different number of bins - trying to use TH1::Merge
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_phi_reco_D0_pos_dev.pdf has been created
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_theta_reco_D0_pos_dev.pdf has been created
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_eta_reco_D0_pos_dev.pdf has been created
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_pT_reco_Dst_pos_dev.pdf has been created
-Error in <TH1F::Add>: Attempt to add histograms with different number of bins : nbins h1 = 50 , nbins h2 =  100
-Info in <TH1F::Add>: Attempt to add histograms with different number of bins - trying to use TH1::Merge
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_phi_reco_Dst_pos_dev.pdf has been created
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_theta_reco_Dst_pos_dev.pdf has been created
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_eta_reco_Dst_pos_dev.pdf has been created
