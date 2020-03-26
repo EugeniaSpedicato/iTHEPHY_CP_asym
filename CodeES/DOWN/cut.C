@@ -216,11 +216,12 @@ TH1F* Dsttheta_rec_pos=new TH1F("h1", "Dst_THETA_reco_pos", 50,0,0.2);
       if (ientry < 0) break;
       nb = fChain->GetEntry(jentry);   nbytes += nb;
  
-
+if(sPi_PT>420 && (abs(sPi_PHI)>0.32 && abs(sPi_PHI)<2.7)){
 
 if (P1_Reconstructed==1 && P2_Reconstructed==1 && sPi_Reconstructed==1)
 {
    Dst_rec++; 
+
     if (Dst_ID>0)
 {
    Dst_pos_rec++; 
@@ -247,7 +248,7 @@ if (Dst_ID<0)
 //----
 
        
-if (Dst_ID>0)
+if (Dst_ID>0 && Dst_pos<3000000)
 {
     Dst_pos++; 
     Dstphi_pos->Fill(Dst_PHI);
@@ -259,7 +260,7 @@ if (Dst_ID>0)
     DstZ_pos->Fill(Dst_TRUEORIGINVERTEX_Z);
     
 }
-if (Dst_ID<0)
+if (Dst_ID<0 && Dst_neg<3000000)
 {
    Dst_neg++;
     Dsteta_neg->Fill(Dst_ETA);
@@ -272,6 +273,63 @@ if (Dst_ID<0)
     
 }
     
+if (sPi_Reconstructed==1 )
+{
+   sPi_rec++; 
+    if (sPi_ID>0 )
+{
+   sPi_pos_rec++; 
+    sPipt_rec_pos->Fill(sPi_PT);
+    sPiphi_rec_pos->Fill(sPi_PHI);
+    sPieta_rec_pos->Fill(sPi_ETA);
+    sPitheta_rec_pos->Fill(sPi_THETA);
+    sPiX_rec_pos->Fill(sPi_TRUEORIGINVERTEX_X);
+    sPiY_rec_pos->Fill(sPi_TRUEORIGINVERTEX_Y);
+    sPiZ_rec_pos->Fill(sPi_TRUEORIGINVERTEX_Z);
+    
+        
+}
+if (sPi_ID<0)
+{
+   sPi_neg_rec++;
+    sPieta_rec_neg->Fill(sPi_ETA);
+    sPiphi_rec_neg->Fill(sPi_PHI);
+    sPipt_rec_neg->Fill(sPi_PT);
+    sPitheta_rec_neg->Fill(sPi_THETA);
+    sPiX_rec_neg->Fill(sPi_TRUEORIGINVERTEX_X);
+    sPiY_rec_neg->Fill(sPi_TRUEORIGINVERTEX_Y);
+    sPiZ_rec_neg->Fill(sPi_TRUEORIGINVERTEX_Z);
+    
+} 
+
+
+    
+}         
+//------        
+    if (sPi_ID>0 && sPi_pos<3000000)
+{
+   sPi_pos++; 
+    sPipt_pos->Fill(sPi_PT);
+    sPiphi_pos->Fill(sPi_PHI);
+    sPieta_pos->Fill(sPi_ETA);
+    sPitheta_pos->Fill(sPi_THETA);
+    sPiX_pos->Fill(sPi_TRUEORIGINVERTEX_X);
+    sPiY_pos->Fill(sPi_TRUEORIGINVERTEX_Y);
+    sPiZ_pos->Fill(sPi_TRUEORIGINVERTEX_Z);
+        
+}
+if (sPi_ID<0 && sPi_neg<3000000)
+{
+   sPi_neg++;
+    sPieta_neg->Fill(sPi_ETA);
+    sPiphi_neg->Fill(sPi_PHI);
+    sPipt_neg->Fill(sPi_PT);
+    sPitheta_neg->Fill(sPi_THETA);
+    sPiX_neg->Fill(sPi_TRUEORIGINVERTEX_X);
+    sPiY_neg->Fill(sPi_TRUEORIGINVERTEX_Y);
+    sPiZ_neg->Fill(sPi_TRUEORIGINVERTEX_Z);
+    
+} }     
        
 if (P1_Reconstructed==1 && P2_Reconstructed==1)
 {
@@ -297,7 +355,7 @@ if (D0_ID<0)
 }    
 }  
 //-----
-if (D0_ID>0)
+if (D0_ID>0 && D0_pos<3000000)
 {
    D0_pos++; 
     D0phi_pos->Fill(D0_PHI);
@@ -308,7 +366,7 @@ if (D0_ID>0)
     
     
 }
-if (D0_ID<0)
+if (D0_ID<0 && D0_neg<3000000)
 {
    D0_neg++;
     
@@ -340,7 +398,7 @@ if (P2_ID<0)
 } 
 }  
 //------  
-if (P2_ID>0)
+if (P2_ID>0 && P2_pos<3000000)
 {
    P2_pos++; 
     P2theta_pos->Fill(P2_THETA);
@@ -348,7 +406,7 @@ if (P2_ID>0)
     P2phi_pos->Fill(P2_PHI);       
     P2eta_pos->Fill(P2_ETA);
 }
-if (P2_ID<0)
+if (P2_ID<0 && P2_neg<3000000)
 {
    P2_neg++;
     P2eta_neg->Fill(P2_ETA);
@@ -382,7 +440,7 @@ if (P1_ID<0)
 } 
 }  
 //------  
-if (P1_ID>0)
+if (P1_ID>0 && P1_pos<3000000)
 {
    P1_pos++; 
     P1theta_pos->Fill(P1_THETA); 
@@ -390,7 +448,7 @@ if (P1_ID>0)
     P1phi_pos->Fill(P1_PHI);  
     P1eta_pos->Fill(P1_ETA);
 }
-if (P1_ID<0)
+if (P1_ID<0 && P1_neg<3000000)
 {
    P1_neg++;
     P1eta_neg->Fill(P1_ETA);
@@ -400,68 +458,7 @@ if (P1_ID<0)
 } 
     
 
-    
-       
-if (sPi_Reconstructed==1)
-{
-   sPi_rec++; 
-    if (sPi_ID>0 && sPi_PT>420)
-{
-   sPi_pos_rec++; 
-    sPipt_rec_pos->Fill(sPi_PT);
-    sPiphi_rec_pos->Fill(sPi_PHI);
-    sPieta_rec_pos->Fill(sPi_ETA);
-    sPitheta_rec_pos->Fill(sPi_THETA);
-    sPiX_rec_pos->Fill(sPi_TRUEORIGINVERTEX_X);
-    sPiY_rec_pos->Fill(sPi_TRUEORIGINVERTEX_Y);
-    sPiZ_rec_pos->Fill(sPi_TRUEORIGINVERTEX_Z);
-    
-        
-}
-if (sPi_ID<0 && sPi_PT>420)
-{
-   sPi_neg_rec++;
-    sPieta_rec_neg->Fill(sPi_ETA);
-    sPiphi_rec_neg->Fill(sPi_PHI);
-    sPipt_rec_neg->Fill(sPi_PT);
-    sPitheta_rec_neg->Fill(sPi_THETA);
-    sPiX_rec_neg->Fill(sPi_TRUEORIGINVERTEX_X);
-    sPiY_rec_neg->Fill(sPi_TRUEORIGINVERTEX_Y);
-    sPiZ_rec_neg->Fill(sPi_TRUEORIGINVERTEX_Z);
-    
-} 
-
-
-    
-}         
-//------        
-    if (sPi_ID>0 && sPi_PT>420)
-{
-   sPi_pos++; 
-    sPipt_pos->Fill(sPi_PT);
-    sPiphi_pos->Fill(sPi_PHI);
-    sPieta_pos->Fill(sPi_ETA);
-    sPitheta_pos->Fill(sPi_THETA);
-    sPiX_pos->Fill(sPi_TRUEORIGINVERTEX_X);
-    sPiY_pos->Fill(sPi_TRUEORIGINVERTEX_Y);
-    sPiZ_pos->Fill(sPi_TRUEORIGINVERTEX_Z);
-        
-}
-if (sPi_ID<0 && sPi_PT>420)
-{
-   sPi_neg++;
-    sPieta_neg->Fill(sPi_ETA);
-    sPiphi_neg->Fill(sPi_PHI);
-    sPipt_neg->Fill(sPi_PT);
-    sPitheta_neg->Fill(sPi_THETA);
-    sPiX_neg->Fill(sPi_TRUEORIGINVERTEX_X);
-    sPiY_neg->Fill(sPi_TRUEORIGINVERTEX_Y);
-    sPiZ_neg->Fill(sPi_TRUEORIGINVERTEX_Z);
-    
-} 
-      
-      // if (Cut(ientry) < 0) continue;
-   }
+     }
 
     Double_t c=nentries; 
  
@@ -1130,7 +1127,7 @@ c1b->SaveAs("P1 pos.pdf");
 TCanvas * c2b= new TCanvas("c2b","c2b",400,10,600,400);
 c2b->Divide(2,2);
 c2b->cd(1);
-h3_P1phi_neg->Draw("A");
+h3_P1phi_neg->Draw("E");
 h3_P1phi_neg->Draw("hist same");
  
 c2b->cd(2);
@@ -1339,6 +1336,9 @@ pointNEG->Draw("ALP");
 c2vx->SaveAs("sPivx.pdf");   
     
 TCanvas *cpn=new TCanvas("cpn","cpn",400,10,600,400);
+cpn->Divide(2,2);
+cpn->cd(1);
+    
 h3_sPipt_neg->Draw();
 h3_sPipt_neg->Draw("hist same");
 
@@ -1348,7 +1348,39 @@ h3_sPipt_pos->SetLineColor(kRed);
 h3_sPipt_pos->Draw("same");
 h3_sPipt_pos->Draw("hist same");
 
-    cpn->SaveAs("sPiPTconfronto.pdf");     
+cpn->cd(2);
+h3_sPiphi_neg->Draw();
+h3_sPiphi_neg->Draw("hist same");
+
+h3_sPiphi_pos->SetMarkerColor(kRed);
+h3_sPiphi_pos->SetLineColor(kRed);
     
+h3_sPiphi_pos->Draw("same");
+h3_sPiphi_pos->Draw("hist same");
+
+cpn->cd(3);
+
+h3_sPieta_neg->Draw();
+h3_sPieta_neg->Draw("hist same");
+
+h3_sPieta_pos->SetMarkerColor(kRed);
+h3_sPieta_pos->SetLineColor(kRed);
+    
+h3_sPieta_pos->Draw("same");
+h3_sPieta_pos->Draw("hist same");
+
+cpn->cd(4);
+
+h3_sPitheta_neg->Draw();
+h3_sPitheta_neg->Draw("hist same");
+
+h3_sPitheta_pos->SetMarkerColor(kRed);
+h3_sPitheta_pos->SetLineColor(kRed);
+    
+h3_sPitheta_pos->Draw("same");
+h3_sPitheta_pos->Draw("hist same");    
+
+cpn->SaveAs("sPiconfronto.pdf");  
+
     
 }

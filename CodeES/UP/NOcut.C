@@ -189,9 +189,11 @@ TH1F* sPiX_rec_neg =new TH1F("h1", "sPi X Rec neg",50,0.6,1.1);
  
 
 
+
 if (P1_Reconstructed==1 && P2_Reconstructed==1 && sPi_Reconstructed==1)
 {
    Dst_rec++; 
+
     if (Dst_ID>0)
 {
    Dst_pos_rec++; 
@@ -199,38 +201,89 @@ if (P1_Reconstructed==1 && P2_Reconstructed==1 && sPi_Reconstructed==1)
     Dstphi_rec_pos->Fill(Dst_PHI);
     Dstpt_rec_pos->Fill(Dst_PT);
     Dsttheta_rec_pos->Fill(Dst_THETA);
+
 }
-if (Dst_ID<0)
+else
 {
    Dst_neg_rec++;
     Dsteta_rec_neg->Fill(Dst_ETA);
     Dstphi_rec_neg->Fill(Dst_PHI);
     Dstpt_rec_neg->Fill(Dst_PT);
     Dsttheta_rec_neg->Fill(Dst_THETA);
+
 } 
 }
 //----
 
        
-if (Dst_ID>0)
+if (Dst_ID>0 && Dst_pos<3000000)
 {
     Dst_pos++; 
     Dstphi_pos->Fill(Dst_PHI);
     Dsteta_pos->Fill(Dst_ETA);
     Dstpt_pos->Fill(Dst_PT);
     Dsttheta_pos->Fill(Dst_THETA);
+
     
 }
-if (Dst_ID<0)
+else if (Dst_ID<0 && Dst_neg<3000000)
 {
    Dst_neg++;
     Dsteta_neg->Fill(Dst_ETA);
     Dstphi_neg->Fill(Dst_PHI);
     Dstpt_neg->Fill(Dst_PT);
     Dsttheta_neg->Fill(Dst_THETA);
+
     
 }
     
+if (sPi_Reconstructed==1 )
+{
+   sPi_rec++; 
+    if (sPi_ID>0 )
+{
+   sPi_pos_rec++; 
+    sPipt_rec_pos->Fill(sPi_PT);
+    sPiphi_rec_pos->Fill(sPi_PHI);
+    sPieta_rec_pos->Fill(sPi_ETA);
+    sPitheta_rec_pos->Fill(sPi_THETA);
+
+        
+}
+else
+{
+   sPi_neg_rec++;
+    sPieta_rec_neg->Fill(sPi_ETA);
+    sPiphi_rec_neg->Fill(sPi_PHI);
+    sPipt_rec_neg->Fill(sPi_PT);
+    sPitheta_rec_neg->Fill(sPi_THETA);
+
+    
+} 
+
+
+    
+}         
+//------        
+if (sPi_ID>0 && sPi_pos<3000000)
+{
+   sPi_pos++; 
+    sPipt_pos->Fill(sPi_PT);
+    sPiphi_pos->Fill(sPi_PHI);
+    sPieta_pos->Fill(sPi_ETA);
+    sPitheta_pos->Fill(sPi_THETA);
+
+}
+else if (sPi_ID<0 && sPi_neg<3000000)
+{
+   sPi_neg++;
+    sPieta_neg->Fill(sPi_ETA);
+    sPiphi_neg->Fill(sPi_PHI);
+    sPipt_neg->Fill(sPi_PT);
+    sPitheta_neg->Fill(sPi_THETA);
+
+    
+}   
        
 if (P1_Reconstructed==1 && P2_Reconstructed==1)
 {
@@ -244,7 +297,7 @@ if (P1_Reconstructed==1 && P2_Reconstructed==1)
     D0pt_rec_pos->Fill(D0_PT);
     D0theta_rec_pos->Fill(D0_THETA);
 }
-if (D0_ID<0)
+else
 {
    D0_neg_rec++;
 
@@ -256,7 +309,7 @@ if (D0_ID<0)
 }    
 }  
 //-----
-if (D0_ID>0)
+if (D0_ID>0 && D0_pos<3000000)
 {
    D0_pos++; 
     D0phi_pos->Fill(D0_PHI);
@@ -267,7 +320,7 @@ if (D0_ID>0)
     
     
 }
-if (D0_ID<0)
+else if (D0_ID<0 && D0_neg<3000000)
 {
    D0_neg++;
     
@@ -289,7 +342,7 @@ if (P2_Reconstructed==1)
     P2phi_rec_pos->Fill(P2_PHI);       
     P2eta_rec_pos->Fill(P2_ETA);
 }
-if (P2_ID<0)
+else
 {
    P2_neg_rec++;
     P2eta_rec_neg->Fill(P2_ETA);
@@ -299,7 +352,7 @@ if (P2_ID<0)
 } 
 }  
 //------  
-if (P2_ID>0)
+if (P2_ID>0 && P2_pos<3000000)
 {
    P2_pos++; 
     P2theta_pos->Fill(P2_THETA);
@@ -307,7 +360,7 @@ if (P2_ID>0)
     P2phi_pos->Fill(P2_PHI);       
     P2eta_pos->Fill(P2_ETA);
 }
-if (P2_ID<0)
+else if (P2_ID<0 && P2_neg<3000000)
 {
    P2_neg++;
     P2eta_neg->Fill(P2_ETA);
@@ -331,7 +384,7 @@ if (P1_Reconstructed==1)
     P1eta_rec_pos->Fill(P1_ETA);
        
 }
-if (P1_ID<0)
+else
 {
    P1_neg_rec++;
     P1eta_rec_neg->Fill(P1_ETA);
@@ -341,7 +394,7 @@ if (P1_ID<0)
 } 
 }  
 //------  
-if (P1_ID>0)
+if (P1_ID>0 && P1_pos<3000000)
 {
    P1_pos++; 
     P1theta_pos->Fill(P1_THETA); 
@@ -349,7 +402,7 @@ if (P1_ID>0)
     P1phi_pos->Fill(P1_PHI);  
     P1eta_pos->Fill(P1_ETA);
 }
-if (P1_ID<0)
+else if (P1_ID<0 && P1_neg<3000000)
 {
    P1_neg++;
     P1eta_neg->Fill(P1_ETA);
@@ -359,59 +412,7 @@ if (P1_ID<0)
 } 
     
 
-    
-       
-if (sPi_Reconstructed==1)
-{
-   sPi_rec++; 
-    if (sPi_ID>0)
-{
-   sPi_pos_rec++; 
-    sPipt_rec_pos->Fill(sPi_PT);
-    sPiphi_rec_pos->Fill(sPi_PHI);
-    sPieta_rec_pos->Fill(sPi_ETA);
-    sPitheta_rec_pos->Fill(sPi_THETA);
-    sPiX_rec_pos->Fill(sPi_TRUEORIGINVERTEX_X);
-        
-}
-if (sPi_ID<0)
-{
-   sPi_neg_rec++;
-    sPieta_rec_neg->Fill(sPi_ETA);
-    sPiphi_rec_neg->Fill(sPi_PHI);
-    sPipt_rec_neg->Fill(sPi_PT);
-    sPitheta_rec_neg->Fill(sPi_THETA);
-    sPiX_rec_neg->Fill(sPi_TRUEORIGINVERTEX_X);
-} 
-
-
-    
-}         
-//------        
-    if (sPi_ID>0)
-{
-   sPi_pos++; 
-    sPipt_pos->Fill(sPi_PT);
-    sPiphi_pos->Fill(sPi_PHI);
-    sPieta_pos->Fill(sPi_ETA);
-    sPitheta_pos->Fill(sPi_THETA);
-    sPiX_pos->Fill(sPi_TRUEORIGINVERTEX_X);
-        
-}
-if (sPi_ID<0)
-{
-   sPi_neg++;
-    sPieta_neg->Fill(sPi_ETA);
-    sPiphi_neg->Fill(sPi_PHI);
-    sPipt_neg->Fill(sPi_PT);
-    sPitheta_neg->Fill(sPi_THETA);
-    sPiX_neg->Fill(sPi_TRUEORIGINVERTEX_X);
-    
-} 
-      
-      // if (Cut(ientry) < 0) continue;
-   }
-
+     }
     Double_t c=nentries; 
  
 
@@ -1014,7 +1015,7 @@ c1b->SaveAs("P1 pos.pdf");
 TCanvas * c2b= new TCanvas("c2b","c2b",400,10,600,400);
 c2b->Divide(2,2);
 c2b->cd(1);
-h3_P1phi_neg->Draw("A");
+h3_P1phi_neg->Draw("E");
 h3_P1phi_neg->Draw("hist same");
  
 c2b->cd(2);
@@ -1172,7 +1173,10 @@ sPiX_rec_pos->Draw("hist same");
 
     c2X->SaveAs("sPiX.pdf");     
  
- TCanvas *cpn=new TCanvas("cpn","cpn",400,10,600,400);
+TCanvas *cpn=new TCanvas("cpn","cpn",400,10,600,400);
+cpn->Divide(2,2);
+cpn->cd(1);
+    
 h3_sPipt_neg->Draw();
 h3_sPipt_neg->Draw("hist same");
 
@@ -1181,8 +1185,40 @@ h3_sPipt_pos->SetLineColor(kRed);
     
 h3_sPipt_pos->Draw("same");
 h3_sPipt_pos->Draw("hist same");
+
+cpn->cd(2);
+h3_sPiphi_neg->Draw();
+h3_sPiphi_neg->Draw("hist same");
+
+h3_sPiphi_pos->SetMarkerColor(kRed);
+h3_sPiphi_pos->SetLineColor(kRed);
     
-    cpn->SaveAs("sPiPTconfronto.pdf");     
+h3_sPiphi_pos->Draw("same");
+h3_sPiphi_pos->Draw("hist same");
+
+cpn->cd(3);
+
+h3_sPieta_neg->Draw();
+h3_sPieta_neg->Draw("hist same");
+
+h3_sPieta_pos->SetMarkerColor(kRed);
+h3_sPieta_pos->SetLineColor(kRed);
+    
+h3_sPieta_pos->Draw("same");
+h3_sPieta_pos->Draw("hist same");
+
+cpn->cd(4);
+
+h3_sPitheta_neg->Draw();
+h3_sPitheta_neg->Draw("hist same");
+
+h3_sPitheta_pos->SetMarkerColor(kRed);
+h3_sPitheta_pos->SetLineColor(kRed);
+    
+h3_sPitheta_pos->Draw("same");
+h3_sPitheta_pos->Draw("hist same");    
+
+cpn->SaveAs("sPiconfronto.pdf");  
     
 
 

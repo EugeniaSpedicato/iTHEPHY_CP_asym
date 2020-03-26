@@ -146,12 +146,20 @@ TH1F* Dsttheta_rec_pos=new TH1F("h1", "Dst_THETA_reco_pos", 50,0,0.2);
  TH1F* Dsttheta_rec_neg=new TH1F("h1", "Dst_THETA_reco_neg", 50,0,0.2);
     TH1F* Dsttheta_neg=new TH1F("h2", "Dst_THETA_reco_neg", 50,0,0.2);
      
-TH1F* sPiX_rec_pos=new TH1F("h1", "sPi X Rec pos",50,0.6,1.1);
-    TH1F* sPiX_pos=new TH1F("h2", "sPi X pos",50,0.6,1.1);
-
-TH1F* sPiX_rec_neg =new TH1F("h1", "sPi X Rec neg",50,0.6,1.1);
-    TH1F* sPiX_neg =new TH1F("h2", "sPi X neg",50,0.6,1.1);
-
+    TH1F* DstX_rec_pos=new TH1F("h1", "Dst X Rec pos",50,0.6,1.1);
+    TH1F* DstX_pos=new TH1F("h2", "Dst X pos",50,0.6,1.1);
+TH1F* DstX_rec_neg =new TH1F("h1", "Dst X Rec neg",50,0.6,1.1);
+    TH1F* DstX_neg =new TH1F("h2", "Dst X neg",50,0.6,1.1);
+    
+TH1F* DstY_rec_pos=new TH1F("h1", "Dst Y Rec pos",50,-0.6,-1.1);
+    TH1F* DstY_pos=new TH1F("h2", "Dst Y pos",50,-0.6,-1.1);
+TH1F* DstY_rec_neg =new TH1F("h1", "Dst Y Rec neg",50,-0.6,-1.1);
+    TH1F* DstY_neg =new TH1F("h2", "Dst Y neg",50,-0.6,-1.1);
+    
+TH1F* DstZ_rec_pos=new TH1F("h1", "Dst Z Rec pos",50,-150,150);
+    TH1F* DstZ_pos=new TH1F("h2", "Dst Z pos",50,-150,150);
+TH1F* DstZ_rec_neg =new TH1F("h1", "Dst Z Rec neg",50,-150,150);
+    TH1F* DstZ_neg =new TH1F("h2", "Dst Z neg",50,-150,150);
  
  
 //   In a ROOT session, you can do:
@@ -192,6 +200,7 @@ TH1F* sPiX_rec_neg =new TH1F("h1", "sPi X Rec neg",50,0.6,1.1);
 if (P1_Reconstructed==1 && P2_Reconstructed==1 && sPi_Reconstructed==1)
 {
    Dst_rec++; 
+
     if (Dst_ID>0)
 {
    Dst_pos_rec++; 
@@ -199,6 +208,7 @@ if (P1_Reconstructed==1 && P2_Reconstructed==1 && sPi_Reconstructed==1)
     Dstphi_rec_pos->Fill(Dst_PHI);
     Dstpt_rec_pos->Fill(Dst_PT);
     Dsttheta_rec_pos->Fill(Dst_THETA);
+
 }
 if (Dst_ID<0)
 {
@@ -207,30 +217,80 @@ if (Dst_ID<0)
     Dstphi_rec_neg->Fill(Dst_PHI);
     Dstpt_rec_neg->Fill(Dst_PT);
     Dsttheta_rec_neg->Fill(Dst_THETA);
-} 
+}
 }
 //----
 
        
-if (Dst_ID>0)
+if (Dst_ID>0 && Dst_pos<3000000)
 {
     Dst_pos++; 
     Dstphi_pos->Fill(Dst_PHI);
     Dsteta_pos->Fill(Dst_ETA);
     Dstpt_pos->Fill(Dst_PT);
     Dsttheta_pos->Fill(Dst_THETA);
+
     
 }
-if (Dst_ID<0)
+if (Dst_ID<0 && Dst_neg<3000000)
 {
    Dst_neg++;
     Dsteta_neg->Fill(Dst_ETA);
     Dstphi_neg->Fill(Dst_PHI);
     Dstpt_neg->Fill(Dst_PT);
     Dsttheta_neg->Fill(Dst_THETA);
-    
+
 }
     
+if (sPi_Reconstructed==1 )
+{
+   sPi_rec++; 
+    if (sPi_ID>0 )
+{
+   sPi_pos_rec++; 
+    sPipt_rec_pos->Fill(sPi_PT);
+    sPiphi_rec_pos->Fill(sPi_PHI);
+    sPieta_rec_pos->Fill(sPi_ETA);
+    sPitheta_rec_pos->Fill(sPi_THETA);
+
+    
+        
+}
+if (sPi_ID<0)
+{
+   sPi_neg_rec++;
+    sPieta_rec_neg->Fill(sPi_ETA);
+    sPiphi_rec_neg->Fill(sPi_PHI);
+    sPipt_rec_neg->Fill(sPi_PT);
+    sPitheta_rec_neg->Fill(sPi_THETA);
+
+    
+} 
+
+
+    
+}         
+//------        
+    if (sPi_ID>0 && sPi_pos<3000000)
+{
+   sPi_pos++; 
+    sPipt_pos->Fill(sPi_PT);
+    sPiphi_pos->Fill(sPi_PHI);
+    sPieta_pos->Fill(sPi_ETA);
+    sPitheta_pos->Fill(sPi_THETA);
+
+        
+}
+if (sPi_ID<0 && sPi_neg<3000000)
+{
+   sPi_neg++;
+    sPieta_neg->Fill(sPi_ETA);
+    sPiphi_neg->Fill(sPi_PHI);
+    sPipt_neg->Fill(sPi_PT);
+    sPitheta_neg->Fill(sPi_THETA);
+
+    
+}      
        
 if (P1_Reconstructed==1 && P2_Reconstructed==1)
 {
@@ -256,7 +316,7 @@ if (D0_ID<0)
 }    
 }  
 //-----
-if (D0_ID>0)
+if (D0_ID>0 && D0_pos<3000000)
 {
    D0_pos++; 
     D0phi_pos->Fill(D0_PHI);
@@ -267,7 +327,7 @@ if (D0_ID>0)
     
     
 }
-if (D0_ID<0)
+if (D0_ID<0 && D0_neg<3000000)
 {
    D0_neg++;
     
@@ -299,7 +359,7 @@ if (P2_ID<0)
 } 
 }  
 //------  
-if (P2_ID>0)
+if (P2_ID>0 && P2_pos<3000000)
 {
    P2_pos++; 
     P2theta_pos->Fill(P2_THETA);
@@ -307,7 +367,7 @@ if (P2_ID>0)
     P2phi_pos->Fill(P2_PHI);       
     P2eta_pos->Fill(P2_ETA);
 }
-if (P2_ID<0)
+if (P2_ID<0 && P2_neg<3000000)
 {
    P2_neg++;
     P2eta_neg->Fill(P2_ETA);
@@ -341,7 +401,7 @@ if (P1_ID<0)
 } 
 }  
 //------  
-if (P1_ID>0)
+if (P1_ID>0 && P1_pos<3000000)
 {
    P1_pos++; 
     P1theta_pos->Fill(P1_THETA); 
@@ -349,7 +409,7 @@ if (P1_ID>0)
     P1phi_pos->Fill(P1_PHI);  
     P1eta_pos->Fill(P1_ETA);
 }
-if (P1_ID<0)
+if (P1_ID<0 && P1_neg<3000000)
 {
    P1_neg++;
     P1eta_neg->Fill(P1_ETA);
@@ -359,58 +419,7 @@ if (P1_ID<0)
 } 
     
 
-    
-       
-if (sPi_Reconstructed==1)
-{
-   sPi_rec++; 
-    if (sPi_ID>0)
-{
-   sPi_pos_rec++; 
-    sPipt_rec_pos->Fill(sPi_PT);
-    sPiphi_rec_pos->Fill(sPi_PHI);
-    sPieta_rec_pos->Fill(sPi_ETA);
-    sPitheta_rec_pos->Fill(sPi_THETA);
-    sPiX_rec_pos->Fill(sPi_TRUEORIGINVERTEX_X);
-        
-}
-if (sPi_ID<0)
-{
-   sPi_neg_rec++;
-    sPieta_rec_neg->Fill(sPi_ETA);
-    sPiphi_rec_neg->Fill(sPi_PHI);
-    sPipt_rec_neg->Fill(sPi_PT);
-    sPitheta_rec_neg->Fill(sPi_THETA);
-    sPiX_rec_neg->Fill(sPi_TRUEORIGINVERTEX_X);
-} 
-
-
-    
-}         
-//------        
-    if (sPi_ID>0)
-{
-   sPi_pos++; 
-    sPipt_pos->Fill(sPi_PT);
-    sPiphi_pos->Fill(sPi_PHI);
-    sPieta_pos->Fill(sPi_ETA);
-    sPitheta_pos->Fill(sPi_THETA);
-    sPiX_pos->Fill(sPi_TRUEORIGINVERTEX_X);
-        
-}
-if (sPi_ID<0)
-{
-   sPi_neg++;
-    sPieta_neg->Fill(sPi_ETA);
-    sPiphi_neg->Fill(sPi_PHI);
-    sPipt_neg->Fill(sPi_PT);
-    sPitheta_neg->Fill(sPi_THETA);
-    sPiX_neg->Fill(sPi_TRUEORIGINVERTEX_X);
-    
-} 
-      
-      // if (Cut(ientry) < 0) continue;
-   }
+     }
 
     Double_t c=nentries; 
  
@@ -551,11 +560,6 @@ sPitheta_pos->Sumw2();
 sPitheta_rec_neg->Sumw2();
 sPitheta_neg->Sumw2(); 
     
-sPiX_rec_pos->Sumw2();
-sPiX_pos->Sumw2();
-sPiX_rec_neg->Sumw2();
-sPiX_neg->Sumw2();     
-    
 
 //---------------------- 
 Dstphi_rec_pos->Sumw2();
@@ -653,8 +657,6 @@ TH1F *h3_sPipt_neg = (TH1F*)sPipt_rec_neg->Clone("h3_sPipt_neg"); h3_sPipt_neg->
  TH1F *h3_sPitheta_pos = (TH1F*)sPitheta_rec_pos->Clone("h3_sPitheta_pos"); h3_sPitheta_pos->Divide(sPitheta_rec_pos,sPitheta_pos);
  TH1F *h3_sPitheta_neg = (TH1F*)sPitheta_rec_neg->Clone("h3_sPitheta_neg"); h3_sPitheta_neg->Divide(sPitheta_rec_neg,sPitheta_neg);
     
- TH1F *h3_sPiX_pos = (TH1F*)sPiX_rec_pos->Clone("h3_sPiX_pos"); h3_sPiX_pos->Divide(sPiX_rec_pos,sPiX_pos);
- TH1F *h3_sPiX_neg = (TH1F*)sPiX_rec_neg->Clone("h3_sPiX_neg"); h3_sPiX_neg->Divide(sPiX_rec_neg,sPiX_neg);
     
    
 
@@ -1014,7 +1016,7 @@ c1b->SaveAs("P1 pos.pdf");
 TCanvas * c2b= new TCanvas("c2b","c2b",400,10,600,400);
 c2b->Divide(2,2);
 c2b->cd(1);
-h3_P1phi_neg->Draw("A");
+h3_P1phi_neg->Draw("E");
 h3_P1phi_neg->Draw("hist same");
  
 c2b->cd(2);
@@ -1158,21 +1160,12 @@ h3_Dsttheta_neg->Draw("hist same");
 
     c2e->SaveAs("Dst neg.pdf"); 
     
+  
+ 
+TCanvas *cpn=new TCanvas("cpn","cpn",400,10,600,400);
+cpn->Divide(2,2);
+cpn->cd(1);
     
-TCanvas * c2X= new TCanvas("c2X","c2X",400,10,600,400);
-c2X->Divide(2,1);
-c2X->cd(1);
-sPiX_rec_neg->Draw("E");
-sPiX_rec_neg->Draw("hist same");
- 
-c2X->cd(2);
-sPiX_rec_pos->Draw("E"); 
-sPiX_rec_pos->Draw("hist same"); 
-
-
-    c2X->SaveAs("sPiX.pdf");     
- 
- TCanvas *cpn=new TCanvas("cpn","cpn",400,10,600,400);
 h3_sPipt_neg->Draw();
 h3_sPipt_neg->Draw("hist same");
 
@@ -1181,9 +1174,39 @@ h3_sPipt_pos->SetLineColor(kRed);
     
 h3_sPipt_pos->Draw("same");
 h3_sPipt_pos->Draw("hist same");
-    
-    cpn->SaveAs("sPiPTconfronto.pdf");     
-    
 
+cpn->cd(2);
+h3_sPiphi_neg->Draw();
+h3_sPiphi_neg->Draw("hist same");
+
+h3_sPiphi_pos->SetMarkerColor(kRed);
+h3_sPiphi_pos->SetLineColor(kRed);
+    
+h3_sPiphi_pos->Draw("same");
+h3_sPiphi_pos->Draw("hist same");
+
+cpn->cd(3);
+
+h3_sPieta_neg->Draw();
+h3_sPieta_neg->Draw("hist same");
+
+h3_sPieta_pos->SetMarkerColor(kRed);
+h3_sPieta_pos->SetLineColor(kRed);
+    
+h3_sPieta_pos->Draw("same");
+h3_sPieta_pos->Draw("hist same");
+
+cpn->cd(4);
+
+h3_sPitheta_neg->Draw();
+h3_sPitheta_neg->Draw("hist same");
+
+h3_sPitheta_pos->SetMarkerColor(kRed);
+h3_sPitheta_pos->SetLineColor(kRed);
+    
+h3_sPitheta_pos->Draw("same");
+h3_sPitheta_pos->Draw("hist same");    
+
+cpn->SaveAs("sPiconfronto.pdf");  
 
 }
