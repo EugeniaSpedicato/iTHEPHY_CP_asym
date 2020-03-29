@@ -577,6 +577,8 @@ void eff(string dir, string sample, string polarisation)
   h_weight_y->Divide(h_or_y);
   h_weight_z->Divide(h_or_z);
   
+  
+  
   double weight_x, weight_y, weight_z, weight_tot;
   
   for(int i = 0; i < nEvents; ++i)
@@ -885,6 +887,18 @@ void eff(string dir, string sample, string polarisation)
   saving = "output/"+directory+"/test/h_phi_test_SPi_combined.pdf";
   c_test->Print(saving.c_str());
 
+  
+  h_weight_x->Draw();
+  saving = "output/"+directory+"/weights/h_weight_x.pdf";
+  c_test->Print(saving.c_str());
+
+  h_weight_y->Draw();
+  saving = "output/"+directory+"/weights/h_weight_y.pdf";
+  c_test->Print(saving.c_str());
+
+  h_weight_z->Draw();
+  saving = "output/"+directory+"/weights/h_weight_z.pdf";
+  c_test->Print(saving.c_str());
 
 
 

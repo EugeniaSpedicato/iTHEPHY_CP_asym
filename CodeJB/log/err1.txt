@@ -106,3 +106,6 @@ Info in <TCanvas::Print>: pdf file output/down_pdf/test/h_phi_test_SPi.pdf has b
 Info in <TCanvas::Print>: pdf file output/down_pdf/test/h_phi_test_SPi_pos.pdf has been created
 Info in <TCanvas::Print>: pdf file output/down_pdf/test/h_phi_test_SPi_neg.pdf has been created
 Info in <TCanvas::Print>: pdf file output/down_pdf/test/h_phi_test_SPi_combined.pdf has been created
+Info in <TCanvas::Print>: pdf file output/down_pdf/weights/h_weight_x.pdf has been created
+Info in <TCanvas::Print>: pdf file output/down_pdf/weights/h_weight_y.pdf has been created
+Info in <TCanvas::Print>: pdf file output/down_pdf/weights/h_weight_z.pdf has been created
