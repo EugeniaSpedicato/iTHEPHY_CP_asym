@@ -176,19 +176,19 @@ vector<double> deviation_err(vector<double> v_eff_pos, vector<double> v_err_pos,
 
 }
 
-void hist_fill(vector<TH1F*> v_hist, vector<TH1F*> v_hist_reco, vector<TH1F*> v_hist_pos, vector<TH1F*> v_hist_reco_pos, vector<TH1F*> v_hist_neg, vector<TH1F*> v_hist_reco_neg, vector<double> v_var, int is_reco, double &n_reco, double &n_pos, double &n_reco_pos, double &n_neg, double &n_reco_neg, int ID)
+void hist_fill(vector<TH1F*> v_hist, vector<TH1F*> v_hist_reco, vector<TH1F*> v_hist_pos, vector<TH1F*> v_hist_reco_pos, vector<TH1F*> v_hist_neg, vector<TH1F*> v_hist_reco_neg, vector<double> v_var, int is_reco, double &n_reco, double &n_pos, double &n_reco_pos, double &n_neg, double &n_reco_neg, int ID, double weight_tot)
 {
   int size = v_hist.size();
   for(int i = 0; i < size; ++i)
   {
-    v_hist.at(i)->Fill(v_var.at(i));
+    v_hist.at(i)->Fill(v_var.at(i), weight_tot);
   }
   if(ID > 0 && n_pos < 3000000)
   {
     ++n_pos;
     for(int i = 0; i < size; ++i)
     {
-      v_hist_pos.at(i)->Fill(v_var.at(i));
+      v_hist_pos.at(i)->Fill(v_var.at(i), weight_tot);
     }
   }
   else if(ID < 0 & n_neg < 3000000)
@@ -196,14 +196,14 @@ void hist_fill(vector<TH1F*> v_hist, vector<TH1F*> v_hist_reco, vector<TH1F*> v_
     ++n_neg;
     for(int i = 0; i < size; ++i)
     {
-      v_hist_neg.at(i)->Fill(v_var.at(i));
+      v_hist_neg.at(i)->Fill(v_var.at(i), weight_tot);
     }
   }
   if(is_reco == 1)
   {
     for(int i = 0; i < size; ++i)
     {
-      v_hist_reco.at(i)->Fill(v_var.at(i));
+      v_hist_reco.at(i)->Fill(v_var.at(i), weight_tot);
     }
     ++n_reco;
     if(ID > 0)
@@ -211,7 +211,7 @@ void hist_fill(vector<TH1F*> v_hist, vector<TH1F*> v_hist_reco, vector<TH1F*> v_
       ++n_reco_pos;
       for(int i = 0; i < size; ++i)
       {
-        v_hist_reco_pos.at(i)->Fill(v_var.at(i));
+        v_hist_reco_pos.at(i)->Fill(v_var.at(i), weight_tot);
       }
     }
     else
@@ -219,7 +219,7 @@ void hist_fill(vector<TH1F*> v_hist, vector<TH1F*> v_hist_reco, vector<TH1F*> v_
       ++n_reco_neg;
       for(int i = 0; i < size; ++i)
       {
-        v_hist_reco_neg.at(i)->Fill(v_var.at(i));
+        v_hist_reco_neg.at(i)->Fill(v_var.at(i), weight_tot);
       }
     }
   }
@@ -284,8 +284,16 @@ void eff(string dir, string sample, string polarisation)
 
   int Dst_ID, D0_ID, Pi_ID, K_ID, SPi_ID;
 
+  double x_origin, y_origin, z_origin;
+  
   int  isPi_reco, isK_reco, isSPi_reco, isD0_reco, isDst_reco;
   ntp->SetBranchStatus("*",0);
+  
+  ntp->SetBranchStatus("Dst_TRUEORIGINVERTEX_X",1); ntp->SetBranchAddress("Dst_TRUEORIGINVERTEX_X", &(x_origin));
+  ntp->SetBranchStatus("Dst_TRUEORIGINVERTEX_Y",1); ntp->SetBranchAddress("Dst_TRUEORIGINVERTEX_Y", &(y_origin));
+  ntp->SetBranchStatus("Dst_TRUEORIGINVERTEX_Z",1); ntp->SetBranchAddress("Dst_TRUEORIGINVERTEX_Z", &(z_origin));  
+  
+  
   ntp->SetBranchStatus("P1_Reconstructed",1); ntp->SetBranchAddress("P1_Reconstructed", &(isPi_reco));
   ntp->SetBranchStatus("P2_Reconstructed",1); ntp->SetBranchAddress("P2_Reconstructed", &(isK_reco));
   ntp->SetBranchStatus("sPi_Reconstructed",1); ntp->SetBranchAddress("sPi_Reconstructed", &(isSPi_reco));
@@ -516,11 +524,71 @@ void eff(string dir, string sample, string polarisation)
 
   gStyle->SetOptStat(0);
 
+  double x_sig, y_sig, z_sig;
+  double x_N, y_N, z_N;
+  
+  if(polarisation == "DOWN")
+  {
+    x_sig = 0.02948;
+    y_sig = 0.02949;
+    z_sig = 37.46;
+  }
+  else
+  {
+    x_sig = 0.03103;
+    y_sig = 0.031030;
+    z_sig = 44.56;
+  }
+
+  x_N = nEvents/(x_sig*sqrt(2*M_PI));
+  y_N = nEvents/(x_sig*sqrt(2*M_PI));
+  z_N = nEvents/(x_sig*sqrt(2*M_PI));
+
+  TF1 *x_func = new TF1("x_gaus","gaus(0)", -0.95, 0.95);
+  TF1 *y_func = new TF1("y_gaus","gaus(0)", -0.3, 0.3);
+  TF1 *z_func = new TF1("z_gaus","gaus(0)", -130., 130.);
+  
+  x_func->SetParameters(x_N, 0., x_sig);
+  y_func->SetParameters(y_N, 0., y_sig);
+  z_func->SetParameters(z_N, 0., z_sig);
+
+  
+  TH1F *h_weight_x = new TH1F("h_weight_x","h_weight_x", 190, -0.95, 0.95);
+  TH1F *h_weight_y = new TH1F("h_weight_y","h_weight_y", 60, -0.3, 0.3);
+  TH1F *h_weight_z = new TH1F("h_weight_z","h_weight_z", 260, -130., 130.);
+
+  TH1F *h_or_x = new TH1F("h_or_x","h_weight_x", 190, -0.95, 0.95);
+  TH1F *h_or_y = new TH1F("h_or_y","h_weight_y", 60, -0.3, 0.3);
+  TH1F *h_or_z = new TH1F("h_or_z","h_weight_z", 260, -130., 130.);
+
+  for(int i = 0; i < nEvents; ++i)
+  {
+      
+    ntp->GetEvent(i);
+    h_weight_x->Fill(x_func->GetRandom());
+    h_weight_y->Fill(y_func->GetRandom());
+    h_weight_z->Fill(z_func->GetRandom());
+    
+    h_or_x->Fill(x_origin);
+    h_or_y->Fill(y_origin);
+    h_or_z->Fill(z_origin);
+  }
+  h_weight_x->Divide(h_or_x);
+  h_weight_y->Divide(h_or_y);
+  h_weight_z->Divide(h_or_z);
+  
+  double weight_x, weight_y, weight_z, weight_tot;
+  
   for(int i = 0; i < nEvents; ++i)
   {
     ntp->GetEvent(i);
     if (i % (nEvents/10) == 0)cout << "=== Event " << i/(nEvents/10) * 10 << "%" << endl;
 
+    weight_x = h_weight_x->GetBinContent(int(100*x_origin+95.));
+    weight_y = h_weight_y->GetBinContent(int(100*y_origin+60.));
+    weight_z = h_weight_z->GetBinContent(int(100*z_origin+130.));
+    weight_tot = weight_x * weight_y * weight_z;
+    
     vector<double> v_Pi_var = {Pi_pT, Pi_phi, Pi_theta, Pi_eta};
     vector<double> v_K_var = {K_pT, K_phi, K_theta, K_eta};
     vector<double> v_SPi_var = {SPi_pT, SPi_phi, SPi_theta, SPi_eta};
@@ -530,15 +598,16 @@ void eff(string dir, string sample, string polarisation)
     (isPi_reco == 1 && isK_reco == 1)? isD0_reco = 1 : isD0_reco = 0;
     (isSPi_reco == 1 && isD0_reco == 1)? isDst_reco = 1 : isDst_reco = 0;
 
-    hist_fill(v_Pi_hist, v_Pi_hist_reco, v_Pi_hist_pos, v_Pi_hist_reco_pos, v_Pi_hist_neg, v_Pi_hist_reco_neg, v_Pi_var, isPi_reco, nPi_reco, nPi_pos, nPi_reco_pos, nPi_neg, nPi_reco_neg, Pi_ID);
-    hist_fill(v_K_hist, v_K_hist_reco, v_K_hist_pos, v_K_hist_reco_pos, v_K_hist_neg, v_K_hist_reco_neg, v_K_var, isK_reco, nK_reco, nK_pos, nK_reco_pos, nK_neg, nK_reco_neg, K_ID);
-    hist_fill(v_D0_hist, v_D0_hist_reco, v_D0_hist_pos, v_D0_hist_reco_pos, v_D0_hist_neg, v_D0_hist_reco_neg, v_D0_var, isD0_reco, nD0_reco, nD0_pos, nD0_reco_pos, nD0_neg, nD0_reco_neg, D0_ID);
+    hist_fill(v_Pi_hist, v_Pi_hist_reco, v_Pi_hist_pos, v_Pi_hist_reco_pos, v_Pi_hist_neg, v_Pi_hist_reco_neg, v_Pi_var, isPi_reco, nPi_reco, nPi_pos, nPi_reco_pos, nPi_neg, nPi_reco_neg, Pi_ID,weight_tot);
+    hist_fill(v_K_hist, v_K_hist_reco, v_K_hist_pos, v_K_hist_reco_pos, v_K_hist_neg, v_K_hist_reco_neg, v_K_var, isK_reco, nK_reco, nK_pos, nK_reco_pos, nK_neg, nK_reco_neg, K_ID, weight_tot);
+    hist_fill(v_D0_hist, v_D0_hist_reco, v_D0_hist_pos, v_D0_hist_reco_pos, v_D0_hist_neg, v_D0_hist_reco_neg, v_D0_var, isD0_reco, nD0_reco, nD0_pos, nD0_reco_pos, nD0_neg, nD0_reco_neg, D0_ID, weight_tot);
 
-    if((abs(SPi_phi) > 0.35 && abs(SPi_phi) < 2.65) && (SPi_pT < 750. && SPi_eta > 2.5))
-    {
-      hist_fill(v_SPi_hist, v_SPi_hist_reco, v_SPi_hist_pos, v_SPi_hist_reco_pos, v_SPi_hist_neg, v_SPi_hist_reco_neg, v_SPi_var, isSPi_reco, nSPi_reco, nSPi_pos, nSPi_reco_pos, nSPi_neg, nSPi_reco_neg, SPi_ID);
-      hist_fill(v_Dst_hist, v_Dst_hist_reco, v_Dst_hist_pos, v_Dst_hist_reco_pos, v_Dst_hist_neg, v_Dst_hist_reco_neg, v_Dst_var, isDst_reco, nDst_reco, nDst_pos, nDst_reco_pos, nDst_neg, nDst_reco_neg, Dst_ID);
-    }
+    //if((abs(SPi_phi) > 0.35 && abs(SPi_phi) < 2.65) && (SPi_pT < 750. && SPi_eta > 2.5))
+    //{
+      hist_fill(v_SPi_hist, v_SPi_hist_reco, v_SPi_hist_pos, v_SPi_hist_reco_pos, v_SPi_hist_neg, v_SPi_hist_reco_neg, v_SPi_var, isSPi_reco, nSPi_reco, nSPi_pos, nSPi_reco_pos, nSPi_neg, nSPi_reco_neg, SPi_ID, weight_tot);
+      hist_fill(v_Dst_hist, v_Dst_hist_reco, v_Dst_hist_pos, v_Dst_hist_reco_pos, v_Dst_hist_neg, v_Dst_hist_reco_neg, v_Dst_var, isDst_reco, nDst_reco, nDst_pos, nDst_reco_pos, nDst_neg, nDst_reco_neg, Dst_ID, weight_tot);
+    //}
+    
     v_Pi_var.clear();
     v_K_var.clear();
     v_SPi_var.clear();

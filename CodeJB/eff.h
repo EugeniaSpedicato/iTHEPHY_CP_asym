@@ -7,5 +7,6 @@
 #include <TFile.h>
 #include <TStyle.h>
 #include <TF1.h>
+#include <TMath.h>
 
 using namespace std;
