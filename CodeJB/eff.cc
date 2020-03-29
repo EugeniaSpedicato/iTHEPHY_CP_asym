@@ -573,9 +573,9 @@ void eff(string dir, string sample, string polarisation)
     h_or_y->Fill(y_origin);
     h_or_z->Fill(z_origin);
   }
-  h_weight_x->Divide(h_or_x);
-  h_weight_y->Divide(h_or_y);
-  h_weight_z->Divide(h_or_z);
+  //h_weight_x->Divide(h_or_x);
+  //h_weight_y->Divide(h_or_y);
+  //h_weight_z->Divide(h_or_z);
   
   
   
@@ -586,10 +586,10 @@ void eff(string dir, string sample, string polarisation)
     ntp->GetEvent(i);
     if (i % (nEvents/10) == 0)cout << "=== Event " << i/(nEvents/10) * 10 << "%" << endl;
 
-    weight_x = h_weight_x->GetBinContent(int(100*x_origin+95.));
-    weight_y = h_weight_y->GetBinContent(int(100*y_origin+60.));
-    weight_z = h_weight_z->GetBinContent(int(100*z_origin+130.));
-    weight_tot = weight_x * weight_y * weight_z;
+    //weight_x = h_weight_x->GetBinContent(int(100*x_origin+95.));
+    //weight_y = h_weight_y->GetBinContent(int(100*y_origin+60.));
+    //weight_z = h_weight_z->GetBinContent(int(100*z_origin+130.));
+    weight_tot = 1.; //weight_x * weight_y * weight_z;
     
     vector<double> v_Pi_var = {Pi_pT, Pi_phi, Pi_theta, Pi_eta};
     vector<double> v_K_var = {K_pT, K_phi, K_theta, K_eta};
@@ -887,16 +887,25 @@ void eff(string dir, string sample, string polarisation)
   saving = "output/"+directory+"/test/h_phi_test_SPi_combined.pdf";
   c_test->Print(saving.c_str());
 
+  h_weight_x->SetLineColor(kAzure);
+  h_or_x->SetLineColor(kRed);
+  h_weight_y->SetLineColor(kAzure);
+  h_or_y->SetLineColor(kRed);
+  h_weight_z->SetLineColor(kAzure);
+  h_or_z->SetLineColor(kRed);
   
   h_weight_x->Draw();
+  h_or_x->Draw("SAME");
   saving = "output/"+directory+"/weights/h_weight_x.pdf";
   c_test->Print(saving.c_str());
 
   h_weight_y->Draw();
+  h_or_y->Draw("SAME");
   saving = "output/"+directory+"/weights/h_weight_y.pdf";
   c_test->Print(saving.c_str());
 
   h_weight_z->Draw();
+  h_or_z->Draw("SAME");
   saving = "output/"+directory+"/weights/h_weight_z.pdf";
   c_test->Print(saving.c_str());
 
