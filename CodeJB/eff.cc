@@ -540,8 +540,8 @@ void eff(string dir, string sample, string polarisation)
   }
   else
   {
-    x_sig = 0.03103;
-    y_sig = 0.031030;
+    x_sig = 0.3103;
+    y_sig = 0.3103;
     z_sig = 44.56;
   }
 
@@ -579,7 +579,15 @@ void eff(string dir, string sample, string polarisation)
     h_or_z->Fill(z_origin);
   }
   
-h_weight_x->Draw();
+  h_weight_x->SetLineColor(kAzure);
+  h_or_x->SetLineColor(kRed);
+  h_weight_y->SetLineColor(kAzure);
+  h_or_y->SetLineColor(kRed);
+  h_weight_z->SetLineColor(kAzure);
+  h_or_z->SetLineColor(kRed);
+
+  
+  h_weight_x->Draw();
   h_or_x->Draw("SAME");
   saving = "output/"+directory+"/weights/h_dist_x.pdf";
   c_test->Print(saving.c_str());
@@ -599,6 +607,18 @@ h_weight_x->Draw();
   h_weight_z->Divide(h_or_z);
   
   
+  h_weight_x->Draw();
+  saving = "output/"+directory+"/weights/h_weight_x.pdf";
+  c_test->Print(saving.c_str());
+
+  h_weight_y->Draw();
+  saving = "output/"+directory+"/weights/h_weight_y.pdf";
+  c_test->Print(saving.c_str());
+
+  h_weight_z->Draw();
+  saving = "output/"+directory+"/weights/h_weight_z.pdf";
+  c_test->Print(saving.c_str());
+
   
   double weight_x, weight_y, weight_z, weight_tot;
   
@@ -904,29 +924,7 @@ h_weight_x->Draw();
   h_phi_test_SPi_neg->Draw("hist same");
   saving = "output/"+directory+"/test/h_phi_test_SPi_combined.pdf";
   c_test->Print(saving.c_str());
-
-  h_weight_x->SetLineColor(kAzure);
-  h_or_x->SetLineColor(kRed);
-  h_weight_y->SetLineColor(kAzure);
-  h_or_y->SetLineColor(kRed);
-  h_weight_z->SetLineColor(kAzure);
-  h_or_z->SetLineColor(kRed);
   
-  h_weight_x->Draw();
-  //h_or_x->Draw("SAME");
-  saving = "output/"+directory+"/weights/h_weight_x.pdf";
-  c_test->Print(saving.c_str());
-
-  h_weight_y->Draw();
-  //h_or_y->Draw("SAME");
-  saving = "output/"+directory+"/weights/h_weight_y.pdf";
-  c_test->Print(saving.c_str());
-
-  h_weight_z->Draw();
-  //h_or_z->Draw("SAME");
-  saving = "output/"+directory+"/weights/h_weight_z.pdf";
-  c_test->Print(saving.c_str());
-
 
 
   uint64_t end_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
