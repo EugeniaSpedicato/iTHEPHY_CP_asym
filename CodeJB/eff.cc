@@ -534,14 +534,14 @@ void eff(string dir, string sample, string polarisation)
   
   if(polarisation == "DOWN")
   {
-    x_sig = 0.2948;
-    y_sig = 0.2949;
+    x_sig = 0.2948*2.;
+    y_sig = 0.2949*2.;
     z_sig = 37.46;
   }
   else
   {
-    x_sig = 0.3103;
-    y_sig = 0.3103;
+    x_sig = 0.3103*2.;
+    y_sig = 0.3103*2.;
     z_sig = 44.56;
   }
 
