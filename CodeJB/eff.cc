@@ -627,10 +627,10 @@ void eff(string dir, string sample, string polarisation)
     ntp->GetEvent(i);
     if (i % (nEvents/10) == 0)cout << "=== Event " << i/(nEvents/10) * 10 << "%" << endl;
 
-    weight_x = h_weight_x->GetBinContent(int(100*x_origin+95.));
-    weight_y = h_weight_y->GetBinContent(int(100*y_origin+60.));
-    weight_z = h_weight_z->GetBinContent(int(100*z_origin+130.));
-    weight_tot = weight_x * weight_y * weight_z;
+    //weight_x = h_weight_x->GetBinContent(int(100*x_origin+95.));
+    //weight_y = h_weight_y->GetBinContent(int(100*y_origin+60.));
+    //weight_z = h_weight_z->GetBinContent(int(100*z_origin+130.));
+    //weight_tot = weight_x * weight_y * weight_z;
     
     vector<double> v_Pi_var = {Pi_pT, Pi_phi, Pi_theta, Pi_eta};
     vector<double> v_K_var = {K_pT, K_phi, K_theta, K_eta};
