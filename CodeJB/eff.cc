@@ -241,6 +241,8 @@ void eff(string dir, string sample, string polarisation)
   TChain *ntp = new TChain("ntp");
   ntp->Add(input_name.c_str());
 
+  TCanvas *c_test = new TCanvas();
+  
   int nEvents = ntp->GetEntries();
   double nTot = double(nEvents);
 
@@ -529,8 +531,8 @@ void eff(string dir, string sample, string polarisation)
   
   if(polarisation == "DOWN")
   {
-    x_sig = 0.02948;
-    y_sig = 0.02949;
+    x_sig = 0.2948;
+    y_sig = 0.2949;
     z_sig = 37.46;
   }
   else
@@ -573,9 +575,25 @@ void eff(string dir, string sample, string polarisation)
     h_or_y->Fill(y_origin);
     h_or_z->Fill(z_origin);
   }
-  //h_weight_x->Divide(h_or_x);
-  //h_weight_y->Divide(h_or_y);
-  //h_weight_z->Divide(h_or_z);
+  
+h_weight_x->Draw();
+  h_or_x->Draw("SAME");
+  saving = "output/"+directory+"/weights/h_dist_x.pdf";
+  c_test->Print(saving.c_str());
+
+  h_weight_y->Draw();
+  h_or_y->Draw("SAME");
+  saving = "output/"+directory+"/weights/h_dist_y.pdf";
+  c_test->Print(saving.c_str());
+
+  h_weight_z->Draw();
+  h_or_z->Draw("SAME");
+  saving = "output/"+directory+"/weights/h_dist_z.pdf";
+  c_test->Print(saving.c_str());
+  
+  h_weight_x->Divide(h_or_x);
+  h_weight_y->Divide(h_or_y);
+  h_weight_z->Divide(h_or_z);
   
   
   
@@ -864,7 +882,6 @@ void eff(string dir, string sample, string polarisation)
       h_phi_test_SPi_neg->SetBinError(size/2 - i - 1, 0.);
     }
   }
-  TCanvas *c_test = new TCanvas();
   h_phi_test_SPi->Draw();
   h_phi_test_SPi->Draw("hist same");
   saving = "output/"+directory+"/test/h_phi_test_SPi.pdf";
@@ -895,17 +912,17 @@ void eff(string dir, string sample, string polarisation)
   h_or_z->SetLineColor(kRed);
   
   h_weight_x->Draw();
-  h_or_x->Draw("SAME");
+  //h_or_x->Draw("SAME");
   saving = "output/"+directory+"/weights/h_weight_x.pdf";
   c_test->Print(saving.c_str());
 
   h_weight_y->Draw();
-  h_or_y->Draw("SAME");
+  //h_or_y->Draw("SAME");
   saving = "output/"+directory+"/weights/h_weight_y.pdf";
   c_test->Print(saving.c_str());
 
   h_weight_z->Draw();
-  h_or_z->Draw("SAME");
+  //h_or_z->Draw("SAME");
   saving = "output/"+directory+"/weights/h_weight_z.pdf";
   c_test->Print(saving.c_str());
 
