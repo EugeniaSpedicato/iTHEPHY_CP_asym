@@ -531,39 +531,46 @@ void eff(string dir, string sample, string polarisation)
 
   double x_sig, y_sig, z_sig;
   double x_N, y_N, z_N;
+  double x_mean, y_mean, z_mean;
   
   if(polarisation == "DOWN")
   {
-    x_sig = 0.2948/2.;
-    y_sig = 0.2949/2.;
+    x_sig = 0.02948;
+    x_mean = 0.84;
+    y_sig = 0.02949;
+    y_mean = -0.18;
     z_sig = 37.46;
+    z_mean = -3.14;
   }
   else
   {
-    x_sig = 0.3103/2.;
-    y_sig = 0.3103/2.;
+    x_sig = 0.03103;
+    x_mean = 0.84;
+    y_sig = 0.03103;
+    y_mean = -0.18;
     z_sig = 44.56;
+    z_mean = -2.64;
   }
 
   x_N = nEvents/(x_sig*sqrt(2*M_PI));
   y_N = nEvents/(x_sig*sqrt(2*M_PI));
   z_N = nEvents/(x_sig*sqrt(2*M_PI));
 
-  TF1 *x_func = new TF1("x_gaus","gaus(0)", -0.95, 0.95);
-  TF1 *y_func = new TF1("y_gaus","gaus(0)", -0.3, 0.3);
+  TF1 *x_func = new TF1("x_gaus","gaus(0)",  0.6, 0.95);
+  TF1 *y_func = new TF1("y_gaus","gaus(0)", -0.3, 0.);
   TF1 *z_func = new TF1("z_gaus","gaus(0)", -130., 130.);
   
-  x_func->SetParameters(x_N, 0., x_sig);
-  y_func->SetParameters(y_N, 0., y_sig);
+  x_func->SetParameters(x_N, x_mean - 2.5*x_sig, x_sig);
+  y_func->SetParameters(y_N, y_mean + 2.5*y_sig, y_sig);
   z_func->SetParameters(z_N, 0., z_sig);
 
   
-  TH1F *h_weight_x = new TH1F("h_weight_x","h_weight_x", 190, -0.95, 0.95);
-  TH1F *h_weight_y = new TH1F("h_weight_y","h_weight_y", 60, -0.3, 0.3);
+  TH1F *h_weight_x = new TH1F("h_weight_x","h_weight_x", 70, 0.6, 0.95);
+  TH1F *h_weight_y = new TH1F("h_weight_y","h_weight_y", 60, -0.3, 0.);
   TH1F *h_weight_z = new TH1F("h_weight_z","h_weight_z", 260, -130., 130.);
 
-  TH1F *h_or_x = new TH1F("h_or_x","h_weight_x", 190, -0.95, 0.95);
-  TH1F *h_or_y = new TH1F("h_or_y","h_weight_y", 60, -0.3, 0.3);
+  TH1F *h_or_x = new TH1F("h_or_x","h_weight_x", 70, 0.6, 0.95);
+  TH1F *h_or_y = new TH1F("h_or_y","h_weight_y", 60, -0.3, 0.);
   TH1F *h_or_z = new TH1F("h_or_z","h_weight_z", 260, -130., 130.);
 
   for(int i = 0; i < nEvents; ++i)
@@ -630,7 +637,7 @@ void eff(string dir, string sample, string polarisation)
     //weight_x = h_weight_x->GetBinContent(int(100*x_origin+95.));
     //weight_y = h_weight_y->GetBinContent(int(100*y_origin+60.));
     //weight_z = h_weight_z->GetBinContent(int(100*z_origin+130.));
-    //weight_tot = weight_x * weight_y * weight_z;
+    weight_tot = 1; //weight_x * weight_y * weight_z;
     
     vector<double> v_Pi_var = {Pi_pT, Pi_phi, Pi_theta, Pi_eta};
     vector<double> v_K_var = {K_pT, K_phi, K_theta, K_eta};
