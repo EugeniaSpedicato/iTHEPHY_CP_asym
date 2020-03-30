@@ -2,32 +2,113 @@ Info in <TUnixSystem::ACLiC>: creating shared library /home/smjoblan/iTHEPHY/iTH
 Warning in cling::IncrementalParser::CheckABICompatibility():
   Possible C++ standard library mismatch, compiled with __GLIBCXX__ '20181206'
   Extraction of runtime standard library version was: '20191114'
-In file included from input_line_12:9:
-././eff.cc:581:3: error: use of undeclared identifier 'saving'
-  saving = "output/"+directory+"/weights/h_dist_x.pdf";
-  ^
-././eff.cc:581:22: error: use of undeclared identifier 'directory'
-  saving = "output/"+directory+"/weights/h_dist_x.pdf";
-                     ^
-././eff.cc:582:17: error: use of undeclared identifier 'saving'
-  c_test->Print(saving.c_str());
-                ^
-././eff.cc:586:3: error: use of undeclared identifier 'saving'
-  saving = "output/"+directory+"/weights/h_dist_y.pdf";
-  ^
-././eff.cc:586:22: error: use of undeclared identifier 'directory'
-  saving = "output/"+directory+"/weights/h_dist_y.pdf";
-                     ^
-././eff.cc:587:17: error: use of undeclared identifier 'saving'
-  c_test->Print(saving.c_str());
-                ^
-././eff.cc:591:3: error: use of undeclared identifier 'saving'
-  saving = "output/"+directory+"/weights/h_dist_z.pdf";
-  ^
-././eff.cc:591:22: error: use of undeclared identifier 'directory'
-  saving = "output/"+directory+"/weights/h_dist_z.pdf";
-                     ^
-././eff.cc:592:17: error: use of undeclared identifier 'saving'
-  c_test->Print(saving.c_str());
-                ^
-Error in <ACLiC>: Dictionary generation failed!
+Info in <TCanvas::Print>: pdf file output/up_pdf/weights/h_dist_x.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/weights/h_dist_y.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/weights/h_dist_z.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_pT_reco_Pi_pos_dev.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_phi_reco_Pi_pos_dev.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_theta_reco_Pi_pos_dev.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_eta_reco_Pi_pos_dev.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_pT_reco_SPi_pos_dev.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_phi_reco_SPi_pos_dev.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_theta_reco_SPi_pos_dev.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_eta_reco_SPi_pos_dev.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_pT_reco_K_pos_dev.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_phi_reco_K_pos_dev.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_theta_reco_K_pos_dev.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_eta_reco_K_pos_dev.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_pT_reco_D0_pos_dev.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_phi_reco_D0_pos_dev.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_theta_reco_D0_pos_dev.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_eta_reco_D0_pos_dev.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_pT_reco_Dst_pos_dev.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_phi_reco_Dst_pos_dev.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_theta_reco_Dst_pos_dev.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_eta_reco_Dst_pos_dev.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/tot/h_pT_reco_Pi.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/pos/h_pT_reco_Pi_pos.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/neg/h_pT_reco_Pi_neg.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/combined/h_pT_reco_Pi.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/tot/h_phi_reco_Pi.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/pos/h_phi_reco_Pi_pos.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/neg/h_phi_reco_Pi_neg.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/combined/h_phi_reco_Pi.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/tot/h_theta_reco_Pi.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/pos/h_theta_reco_Pi_pos.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/neg/h_theta_reco_Pi_neg.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/combined/h_theta_reco_Pi.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/tot/h_eta_reco_Pi.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/pos/h_eta_reco_Pi_pos.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/neg/h_eta_reco_Pi_neg.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/combined/h_eta_reco_Pi.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/tot/h_pT_reco_SPi.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/pos/h_pT_reco_SPi_pos.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/neg/h_pT_reco_SPi_neg.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/combined/h_pT_reco_SPi.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/tot/h_phi_reco_SPi.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/pos/h_phi_reco_SPi_pos.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/neg/h_phi_reco_SPi_neg.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/combined/h_phi_reco_SPi.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/tot/h_theta_reco_SPi.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/pos/h_theta_reco_SPi_pos.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/neg/h_theta_reco_SPi_neg.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/combined/h_theta_reco_SPi.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/tot/h_eta_reco_SPi.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/pos/h_eta_reco_SPi_pos.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/neg/h_eta_reco_SPi_neg.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/combined/h_eta_reco_SPi.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/tot/h_pT_reco_K.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/pos/h_pT_reco_K_pos.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/neg/h_pT_reco_K_neg.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/combined/h_pT_reco_K.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/tot/h_phi_reco_K.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/pos/h_phi_reco_K_pos.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/neg/h_phi_reco_K_neg.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/combined/h_phi_reco_K.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/tot/h_theta_reco_K.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/pos/h_theta_reco_K_pos.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/neg/h_theta_reco_K_neg.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/combined/h_theta_reco_K.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/tot/h_eta_reco_K.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/pos/h_eta_reco_K_pos.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/neg/h_eta_reco_K_neg.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/combined/h_eta_reco_K.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/tot/h_pT_reco_D0.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/pos/h_pT_reco_D0_pos.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/neg/h_pT_reco_D0_neg.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/combined/h_pT_reco_D0.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/tot/h_phi_reco_D0.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/pos/h_phi_reco_D0_pos.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/neg/h_phi_reco_D0_neg.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/combined/h_phi_reco_D0.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/tot/h_theta_reco_D0.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/pos/h_theta_reco_D0_pos.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/neg/h_theta_reco_D0_neg.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/combined/h_theta_reco_D0.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/tot/h_eta_reco_D0.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/pos/h_eta_reco_D0_pos.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/neg/h_eta_reco_D0_neg.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/combined/h_eta_reco_D0.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/tot/h_pT_reco_Dst.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/pos/h_pT_reco_Dst_pos.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/neg/h_pT_reco_Dst_neg.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/combined/h_pT_reco_Dst.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/tot/h_phi_reco_Dst.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/pos/h_phi_reco_Dst_pos.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/neg/h_phi_reco_Dst_neg.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/combined/h_phi_reco_Dst.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/tot/h_theta_reco_Dst.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/pos/h_theta_reco_Dst_pos.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/neg/h_theta_reco_Dst_neg.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/combined/h_theta_reco_Dst.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/tot/h_eta_reco_Dst.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/pos/h_eta_reco_Dst_pos.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/neg/h_eta_reco_Dst_neg.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/combined/h_eta_reco_Dst.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/test/h_phi_test_SPi.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/test/h_phi_test_SPi_pos.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/test/h_phi_test_SPi_neg.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/test/h_phi_test_SPi_combined.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/weights/h_weight_x.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/weights/h_weight_y.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/weights/h_weight_z.pdf has been created

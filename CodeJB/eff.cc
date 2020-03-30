@@ -243,6 +243,9 @@ void eff(string dir, string sample, string polarisation)
 
   TCanvas *c_test = new TCanvas();
   
+  string saving;
+  string directory = (polarisation == "UP")? "up_pdf" : "down_pdf";
+  
   int nEvents = ntp->GetEntries();
   double nTot = double(nEvents);
 
@@ -832,8 +835,6 @@ h_weight_x->Draw();
   double plus_err = 0.;
   double min_err = 0.;
   int size = h_phi_SPi->GetNbinsX();
-  string saving;
-  string directory = (polarisation == "UP")? "up_pdf" : "down_pdf";
 
   for(int i = 0; i < size/2; ++i)
   {
