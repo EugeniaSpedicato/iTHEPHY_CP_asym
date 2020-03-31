@@ -11,34 +11,34 @@ Processing eff.cc++("$dir", "minisample_Dst2D0pi_D02Kpi_2016_Dw_GEN", "DOWN")...
 === Event 80%
 === Event 90%
 Total: 
-Reconstructed number of pions: 0, eff.: 0 +/- 0
-Reconstructed number of Kaons: 0, eff.: 0 +/- 0
-Reconstructed number of soft pions: 0, eff.: 0 +/- 0
-Reconstructed number of D0: 0, eff.: 0 +/- 0
-Reconstructed number of D*: 0, eff.: 0 +/- 0
+Reconstructed number of pions: 147613, eff.: 0.0239182 +/- 6.15047e-05
+Reconstructed number of Kaons: 144903, eff.: 0.0234791 +/- 6.09513e-05
+Reconstructed number of soft pions: 131478, eff.: 0.0213038 +/- 5.81238e-05
+Reconstructed number of D0: 125217, eff.: 0.0202893 +/- 5.67524e-05
+Reconstructed number of D*: 96751.7, eff.: 0.0156769 +/- 5.00036e-05
 Charge: +
-Reconstructed number of pions: 0 of 0 , eff.: -nan +/- -nan
-Reconstructed number of Kaons: 0 of 0  eff.: -nan +/- -nan
-Reconstructed number of soft pions: 0 of 0 , eff.: -nan +/- -nan
-Reconstructed number of D0: 0 of 0 , eff.: -nan +/- -nan
-Reconstructed number of D*: 0 of 0 , eff.: -nan +/- -nan
+Reconstructed number of pions: 73664.5 of 85408.5 , eff.: 0.862496 +/- 0.00117838
+Reconstructed number of Kaons: 72683.8 of 85466.3  eff.: 0.850438 +/- 0.00121993
+Reconstructed number of soft pions: 66114.8 of 85408.5 , eff.: 0.774101 +/- 0.00143089
+Reconstructed number of D0: 62293.8 of 85408.5 , eff.: 0.729363 +/- 0.00152025
+Reconstructed number of D*: 48603.9 of 85408.5 , eff.: 0.569076 +/- 0.00169447
 Charge: -
-Reconstructed number of pions: 0 of 0 , eff.: -nan +/- -nan
-Reconstructed number of Kaons: 0 of 0 , eff.: -nan +/- -nan
-Reconstructed number of soft pions: 0 of 0 , eff.: -nan +/- -nan
-Reconstructed number of D0: 0 of 0 , eff.: -nan +/- -nan
-Reconstructed number of D*: 0 of 0 , eff.: -nan +/- -nan
+Reconstructed number of pions: 73948.6 of 85466.3 , eff.: 0.865237 +/- 0.00116803
+Reconstructed number of Kaons: 72219.5 of 85408.5 , eff.: 0.845577 +/- 0.00123646
+Reconstructed number of soft pions: 65363.5 of 85466.3 , eff.: 0.764787 +/- 0.00145079
+Reconstructed number of D0: 62923.6 of 85466.3 , eff.: 0.736238 +/- 0.00150736
+Reconstructed number of D*: 48147.8 of 85466.3 , eff.: 0.563354 +/- 0.00169652
 Deviation via efficiencies:
-Pions: -nan +/- -nan , in sigmas: nan
-Kaons: -nan +/- -nan , in sigmas: nan
-soft Pions: -nan +/- -nan , in sigmas: nan
-D0: -nan +/- -nan , in sigmas: nan
-Dst: -nan +/- -nan , in sigmas: nan
+Pions: -0.00158625 +/- 0.000960337 , in sigmas: 1.65176
+Kaons: 0.00286598 +/- 0.00102419 , in sigmas: 2.79828
+soft Pions: 0.00605226 +/- 0.00132427 , in sigmas: 4.57025
+D0: -0.00469077 +/- 0.00146082 , in sigmas: 3.21106
+Dst: 0.00505252 +/- 0.00211743 , in sigmas: 2.38616
 Deviation via total numbers:
-Pions: -nan +/- -nan , in sigmas: nan
-Kaons: -nan +/- -nan , in sigmas: nan
-soft Pions: -nan +/- -nan , in sigmas: nan
-D0: -nan +/- -nan , in sigmas: nan
-Dst: -nan +/- -nan , in sigmas: nan
-computation time/s: 62.99
-computation time/min: 1.04983
+Pions: -0.00192469 +/- 0.00260278 , in sigmas: 0.739475
+Kaons: 0.00320442 +/- 0.00262699 , in sigmas: 1.2198
+soft Pions: 0.00571383 +/- 0.00275782 , in sigmas: 2.07187
+D0: -0.00502921 +/- 0.00282594 , in sigmas: 1.77966
+Dst: 0.00471408 +/- 0.00321489 , in sigmas: 1.46633
+computation time/s: 75.7527
+computation time/min: 1.26255
