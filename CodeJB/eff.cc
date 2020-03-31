@@ -560,8 +560,8 @@ void eff(string dir, string sample, string polarisation)
   TF1 *y_func = new TF1("y_gaus","gaus(0)", -0.3, 0.);
   TF1 *z_func = new TF1("z_gaus","gaus(0)", -130., 130.);
   
-  x_func->SetParameters(x_N, x_mean - 7./6.*x_sig, x_sig*2./3.);
-  y_func->SetParameters(y_N, y_mean + 7./6.*y_sig, y_sig*2./3.);
+  x_func->SetParameters(x_N, x_mean - 8./6.*x_sig, x_sig*2./3.);
+  y_func->SetParameters(y_N, y_mean + 8./6.*y_sig, y_sig*2./3.);
   z_func->SetParameters(z_N, 0., z_sig);
 
   
