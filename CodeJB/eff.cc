@@ -185,7 +185,7 @@ void hist_fill(vector<TH1F*> v_hist, vector<TH1F*> v_hist_reco, vector<TH1F*> v_
   }
   if(ID > 0 && n_pos < 3000000)
   {
-    ++n_pos;
+    n_pos += weight_tot;
     for(int i = 0; i < size; ++i)
     {
       v_hist_pos.at(i)->Fill(v_var.at(i), weight_tot);
@@ -193,7 +193,7 @@ void hist_fill(vector<TH1F*> v_hist, vector<TH1F*> v_hist_reco, vector<TH1F*> v_
   }
   else if(ID < 0 & n_neg < 3000000)
   {
-    ++n_neg;
+    n_neg += weight_tot;
     for(int i = 0; i < size; ++i)
     {
       v_hist_neg.at(i)->Fill(v_var.at(i), weight_tot);
@@ -205,10 +205,10 @@ void hist_fill(vector<TH1F*> v_hist, vector<TH1F*> v_hist_reco, vector<TH1F*> v_
     {
       v_hist_reco.at(i)->Fill(v_var.at(i), weight_tot);
     }
-    ++n_reco;
+    n_reco += weight_tot;
     if(ID > 0)
     {
-      ++n_reco_pos;
+      n_reco_pos += weight_tot;
       for(int i = 0; i < size; ++i)
       {
         v_hist_reco_pos.at(i)->Fill(v_var.at(i), weight_tot);
@@ -216,7 +216,7 @@ void hist_fill(vector<TH1F*> v_hist, vector<TH1F*> v_hist_reco, vector<TH1F*> v_
     }
     else
     {
-      ++n_reco_neg;
+      n_reco_neg += weight_tot;
       for(int i = 0; i < size; ++i)
       {
         v_hist_reco_neg.at(i)->Fill(v_var.at(i), weight_tot);
@@ -560,8 +560,8 @@ void eff(string dir, string sample, string polarisation)
   TF1 *y_func = new TF1("y_gaus","gaus(0)", -0.3, 0.);
   TF1 *z_func = new TF1("z_gaus","gaus(0)", -130., 130.);
   
-  x_func->SetParameters(x_N, x_mean - 8./6.*x_sig, x_sig*2./3.);
-  y_func->SetParameters(y_N, y_mean + 8./6.*y_sig, y_sig*2./3.);
+  x_func->SetParameters(x_N, x_mean - x_sig, x_sig*2./3.);
+  y_func->SetParameters(y_N, y_mean + y_sig, y_sig*2./3.);
   z_func->SetParameters(z_N, 0., z_sig);
 
   
@@ -634,10 +634,10 @@ void eff(string dir, string sample, string polarisation)
     ntp->GetEvent(i);
     if (i % (nEvents/10) == 0)cout << "=== Event " << i/(nEvents/10) * 10 << "%" << endl;
 
-    //weight_x = h_weight_x->GetBinContent(int(100*x_origin+95.));
-    //weight_y = h_weight_y->GetBinContent(int(100*y_origin+60.));
-    //weight_z = h_weight_z->GetBinContent(int(100*z_origin+130.));
-    weight_tot = 1; //weight_x * weight_y * weight_z;
+    weight_x = h_weight_x->GetBinContent(int(100*x_origin+95.));
+    weight_y = h_weight_y->GetBinContent(int(100*y_origin+60.));
+    weight_z = h_weight_z->GetBinContent(int(100*z_origin+130.));
+    weight_tot = weight_x * weight_y * weight_z;
     
     vector<double> v_Pi_var = {Pi_pT, Pi_phi, Pi_theta, Pi_eta};
     vector<double> v_K_var = {K_pT, K_phi, K_theta, K_eta};
