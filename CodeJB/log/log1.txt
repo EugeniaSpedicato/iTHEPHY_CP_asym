@@ -11,34 +11,34 @@ Processing eff.cc++("$dir", "minisample_Dst2D0pi_D02Kpi_2016_Dw_GEN", "DOWN")...
 === Event 80%
 === Event 90%
 Total: 
-Reconstructed number of pions: 151710, eff.: 0.024582 +/- 6.23312e-05
-Reconstructed number of Kaons: 147277, eff.: 0.0238637 +/- 6.14364e-05
-Reconstructed number of soft pions: 134670, eff.: 0.0218209 +/- 5.88095e-05
-Reconstructed number of D0: 129568, eff.: 0.0209943 +/- 5.77091e-05
-Reconstructed number of D*: 101883, eff.: 0.0165084 +/- 5.12907e-05
+Reconstructed number of pions: 149595, eff.: 0.0242393 +/- 6.1906e-05
+Reconstructed number of Kaons: 146310, eff.: 0.0237071 +/- 6.12393e-05
+Reconstructed number of soft pions: 133272, eff.: 0.0215944 +/- 5.85102e-05
+Reconstructed number of D0: 126948, eff.: 0.0205698 +/- 5.71352e-05
+Reconstructed number of D*: 98599.9, eff.: 0.0159764 +/- 5.04712e-05
 Charge: +
-Reconstructed number of pions: 75723.1 of 85847.8 , eff.: 0.882063 +/- 0.00110081
-Reconstructed number of Kaons: 73972 of 86620.6  eff.: 0.853978 +/- 0.00119984
-Reconstructed number of soft pions: 67862.5 of 85847.8 , eff.: 0.790498 +/- 0.00138893
-Reconstructed number of D0: 64572.7 of 85847.8 , eff.: 0.752177 +/- 0.00147355
-Reconstructed number of D*: 51671.8 of 85847.8 , eff.: 0.6019 +/- 0.00167068
+Reconstructed number of pions: 74320.4 of 85681.3 , eff.: 0.867405 +/- 0.00115859
+Reconstructed number of Kaons: 73644.4 of 86738.7  eff.: 0.849037 +/- 0.0012156
+Reconstructed number of soft pions: 66813.1 of 85681.3 , eff.: 0.779787 +/- 0.00141568
+Reconstructed number of D0: 62974.9 of 85681.3 , eff.: 0.73499 +/- 0.00150775
+Reconstructed number of D*: 49606.7 of 85681.3 , eff.: 0.578968 +/- 0.00168672
 Charge: -
-Reconstructed number of pions: 75986.7 of 86620.6 , eff.: 0.877237 +/- 0.00111502
-Reconstructed number of Kaons: 73305.1 of 85847.8 , eff.: 0.853897 +/- 0.0012055
-Reconstructed number of soft pions: 66807.2 of 86620.6 , eff.: 0.771263 +/- 0.00142711
-Reconstructed number of D0: 64995.4 of 86620.6 , eff.: 0.750346 +/- 0.00147058
-Reconstructed number of D*: 50211.1 of 86620.6 , eff.: 0.579667 +/- 0.00167716
+Reconstructed number of pions: 75274.5 of 86738.7 , eff.: 0.86783 +/- 0.00114995
+Reconstructed number of Kaons: 72665.9 of 85681.3 , eff.: 0.848096 +/- 0.00122621
+Reconstructed number of soft pions: 66458.6 of 86738.7 , eff.: 0.766192 +/- 0.00143712
+Reconstructed number of D0: 63973.6 of 86738.7 , eff.: 0.737543 +/- 0.00149388
+Reconstructed number of D*: 48993.2 of 86738.7 , eff.: 0.564837 +/- 0.00168338
 Deviation via efficiencies:
-Pions: 0.0027432 +/- 0.000890649 , in sigmas: 3.08
-Kaons: 4.75618e-05 +/- 0.000995879 , in sigmas: 0.0477586
-soft Pions: 0.0123163 +/- 0.00127564 , in sigmas: 9.65498
-D0: 0.00121849 +/- 0.00138555 , in sigmas: 0.879432
-Dst: 0.0188165 +/- 0.00200402 , in sigmas: 9.38937
+Pions: -0.000244818 +/- 0.000940737 , in sigmas: 0.260241
+Kaons: 0.000554676 +/- 0.00101739 , in sigmas: 0.545195
+soft Pions: 0.00879363 +/- 0.00130509 , in sigmas: 6.73797
+D0: -0.00173372 +/- 0.00144142 , in sigmas: 1.20279
+Dst: 0.0123544 +/- 0.00208352 , in sigmas: 5.92958
 Deviation via total numbers:
-Pions: -0.00173744 +/- 0.00256739 , in sigmas: 0.676734
-Kaons: 0.00452818 +/- 0.00260572 , in sigmas: 1.73778
-soft Pions: 0.00783606 +/- 0.00272491 , in sigmas: 2.87572
-D0: -0.00326214 +/- 0.0027781 , in sigmas: 1.17423
-Dst: 0.014337 +/- 0.0031326 , in sigmas: 4.57673
-computation time/s: 82.6758
-computation time/min: 1.37793
+Pions: -0.00637805 +/- 0.00258543 , in sigmas: 2.46692
+Kaons: 0.0066879 +/- 0.00261428 , in sigmas: 2.55821
+soft Pions: 0.00266052 +/- 0.00273924 , in sigmas: 0.971265
+D0: -0.00786689 +/- 0.00280655 , in sigmas: 2.80304
+Dst: 0.00622163 +/- 0.00318459 , in sigmas: 1.95367
+computation time/s: 67.3135
+computation time/min: 1.12189
