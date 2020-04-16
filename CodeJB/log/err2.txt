@@ -12,6 +12,7 @@ Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_theta_reco_SPi_pos_
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_eta_reco_SPi_pos_dev.pdf has been created
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_primary_x_pos_SPi_reco_dev.pdf has been created
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_primary_y_pos_SPi_reco_dev.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_primary_z_pos_SPi_reco_dev.pdf has been created
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_primary_r_pos_SPi_reco_dev.pdf has been created
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_pT_reco_K_pos_dev.pdf has been created
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_phi_reco_K_pos_dev.pdf has been created
@@ -65,6 +66,10 @@ Info in <TCanvas::Print>: pdf file output/up_pdf/single/tot/h_primary_y_SPi_reco
 Info in <TCanvas::Print>: pdf file output/up_pdf/single/pos/h_primary_y_pos_SPi_reco.pdf has been created
 Info in <TCanvas::Print>: pdf file output/up_pdf/single/neg/h_primary_y_neg_SPi_reco.pdf has been created
 Info in <TCanvas::Print>: pdf file output/up_pdf/combined/h_primary_y_SPi_reco.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/tot/h_primary_z_SPi_reco.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/pos/h_primary_z_pos_SPi_reco.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/single/neg/h_primary_z_neg_SPi_reco.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/combined/h_primary_z_SPi_reco.pdf has been created
 Info in <TCanvas::Print>: pdf file output/up_pdf/single/tot/h_primary_r_SPi_reco.pdf has been created
 Info in <TCanvas::Print>: pdf file output/up_pdf/single/pos/h_primary_r_pos_SPi_reco.pdf has been created
 Info in <TCanvas::Print>: pdf file output/up_pdf/single/neg/h_primary_r_neg_SPi_reco.pdf has been created
