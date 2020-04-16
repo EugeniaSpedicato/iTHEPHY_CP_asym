@@ -560,8 +560,8 @@ void eff(string dir, string sample, string polarisation)
   TF1 *y_func = new TF1("y_gaus","gaus(0)", -0.3, 0.);
   TF1 *z_func = new TF1("z_gaus","gaus(0)", -130., 130.);
   
-  x_func->SetParameters(x_N, x_mean - 1.25*x_sig, x_sig*0.8);
-  y_func->SetParameters(y_N, y_mean + 1.25*y_sig, y_sig*0.8);
+  x_func->SetParameters(x_N, x_mean - 0.5*x_sig, x_sig);
+  y_func->SetParameters(y_N, y_mean + 0.5*y_sig, y_sig);
   z_func->SetParameters(z_N, 0., z_sig);
 
   
@@ -637,7 +637,7 @@ void eff(string dir, string sample, string polarisation)
     weight_x = h_weight_x->GetBinContent(int(200*x_origin-120.));
     weight_y = h_weight_y->GetBinContent(int(200*y_origin+60.));
     weight_z = h_weight_z->GetBinContent(int(100*z_origin+130.));
-    weight_tot = weight_x * weight_y * weight_z;
+    weight_tot = 1;// weight_x * weight_y * weight_z;
     
     vector<double> v_Pi_var = {Pi_pT, Pi_phi, Pi_theta, Pi_eta};
     vector<double> v_K_var = {K_pT, K_phi, K_theta, K_eta};
