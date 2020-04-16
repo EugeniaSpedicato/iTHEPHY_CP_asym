@@ -480,7 +480,7 @@ void eff(string dir, string sample, string polarisation)
   TH1F *h_primary_r_neg_SPi_reco = new TH1F("h_primary_r_neg_SPi_reco", "h_primary_r_neg_SPi_reco", 60, 0.78, 0.95);
   TH1F *h_primary_r_SPi_reco = new TH1F("h_primary_r_SPi_reco", "h_primary_r_SPi_reco", 60, 0.78, 0.95);
 
-  TH1F *h_primaxy_x_pos_SPi = new TH1F("h_primary_x_pos_SPi", "h_primary_x_pos_SPi", 60, 0.75, 0.95);
+  TH1F *h_primary_x_pos_SPi = new TH1F("h_primary_x_pos_SPi", "h_primary_x_pos_SPi", 60, 0.75, 0.95);
   TH1F *h_primary_x_neg_SPi = new TH1F("h_primary_x_neg_SPi", "h_primary_x_neg_SPi", 60, 0.75, 0.95);
   TH1F *h_primary_x_SPi = new TH1F("h_primary_x_SPi", "h_primary_x_SPi", 60, 0.75, 0.95);
   TH1F *h_primary_x_pos_SPi_reco = new TH1F("h_primary_x_pos_SPi_reco", "h_primary_x_pos_SPi_reco", 60, 0.75, 0.95);
