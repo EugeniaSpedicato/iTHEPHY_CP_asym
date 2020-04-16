@@ -476,10 +476,23 @@ void eff(string dir, string sample, string polarisation)
   TH1F *h_primary_r_pos_SPi = new TH1F("h_primary_r_pos_SPi", "h_primary_r_pos_SPi", 60, 0.78, 0.95);
   TH1F *h_primary_r_neg_SPi = new TH1F("h_primary_r_neg_SPi", "h_primary_r_neg_SPi", 60, 0.78, 0.95);
   TH1F *h_primary_r_SPi = new TH1F("h_primary_r_SPi", "h_primary_r_SPi", 60, 0.78, 0.95);
-
   TH1F *h_primary_r_pos_SPi_reco = new TH1F("h_primary_r_pos_SPi_reco", "h_primary_r_pos_SPi_reco", 60, 0.78, 0.95);
   TH1F *h_primary_r_neg_SPi_reco = new TH1F("h_primary_r_neg_SPi_reco", "h_primary_r_neg_SPi_reco", 60, 0.78, 0.95);
   TH1F *h_primary_r_SPi_reco = new TH1F("h_primary_r_SPi_reco", "h_primary_r_SPi_reco", 60, 0.78, 0.95);
+
+  TH1F *h_primaxy_x_pos_SPi = new TH1F("h_primary_x_pos_SPi", "h_primary_x_pos_SPi", 60, 0.75, 0.95);
+  TH1F *h_primary_x_neg_SPi = new TH1F("h_primary_x_neg_SPi", "h_primary_x_neg_SPi", 60, 0.75, 0.95);
+  TH1F *h_primary_x_SPi = new TH1F("h_primary_x_SPi", "h_primary_x_SPi", 60, 0.75, 0.95);
+  TH1F *h_primary_x_pos_SPi_reco = new TH1F("h_primary_x_pos_SPi_reco", "h_primary_x_pos_SPi_reco", 60, 0.75, 0.95);
+  TH1F *h_primary_x_neg_SPi_reco = new TH1F("h_primary_x_neg_SPi_reco", "h_primary_x_neg_SPi_reco", 60, 0.75, 0.95);
+  TH1F *h_primary_x_SPi_reco = new TH1F("h_primary_x_SPi_reco", "h_primary_x_SPi_reco", 60, 0.75, 0.95);
+
+  TH1F *h_primary_y_pos_SPi = new TH1F("h_primary_y_pos_SPi", "h_primary_y_pos_SPi", 66, -0.3, -0.08);
+  TH1F *h_primary_y_neg_SPi = new TH1F("h_primary_y_neg_SPi", "h_primary_y_neg_SPi", 66, -0.3, -0.08);
+  TH1F *h_primary_y_SPi = new TH1F("h_primary_y_SPi", "h_primary_y_SPi", 66, -0.3, -0.08);
+  TH1F *h_primary_y_pos_SPi_reco = new TH1F("h_primary_y_pos_SPi_reco", "h_primary_y_pos_SPi_reco", 66, -0.3, -0.08);
+  TH1F *h_primary_y_neg_SPi_reco = new TH1F("h_primary_y_neg_SPi_reco", "h_primary_y_neg_SPi_reco", 66, -0.3, -0.08);
+  TH1F *h_primary_y_SPi_reco = new TH1F("h_primary_y_SPi_reco", "h_primary_y_SPi_reco", 66, -0.3, -0.08);
 
   TH1F *h_phi_test_SPi = new TH1F("h_phi_test_SPi",";|#phi|;#Delta eff", 25, 0., 3.5);
   TH1F *h_phi_test_SPi_pos = new TH1F("h_phi_test_SPi_pos",";|#phi|;#Delta eff", 25, 0., 3.5);
@@ -491,39 +504,39 @@ void eff(string dir, string sample, string polarisation)
   h_phi_test_SPi_neg->SetAxisRange(0.,1.,"Y");
 
   vector<TH1F*> v_Pi_hist_reco = {h_pT_reco_Pi, h_phi_reco_Pi, h_theta_reco_Pi, h_eta_reco_Pi};
-  vector<TH1F*> v_SPi_hist_reco = {h_pT_reco_SPi, h_phi_reco_SPi, h_theta_reco_SPi, h_eta_reco_SPi, h_primary_r_SPi_reco};
+  vector<TH1F*> v_SPi_hist_reco = {h_pT_reco_SPi, h_phi_reco_SPi, h_theta_reco_SPi, h_eta_reco_SPi, h_primary_x_SPi_reco, h_primary_y_SPi_reco, h_primary_r_SPi_reco};
   vector<TH1F*> v_K_hist_reco = {h_pT_reco_K, h_phi_reco_K, h_theta_reco_K, h_eta_reco_K};
   vector<TH1F*> v_D0_hist_reco = {h_pT_reco_D0, h_phi_reco_D0, h_theta_reco_D0, h_eta_reco_D0};
   vector<TH1F*> v_Dst_hist_reco = {h_pT_reco_Dst, h_phi_reco_Dst, h_theta_reco_Dst, h_eta_reco_Dst};
 
   vector<TH1F*> v_Pi_hist = {h_pT_Pi, h_phi_Pi, h_theta_Pi, h_eta_Pi};
-  vector<TH1F*> v_SPi_hist = {h_pT_SPi, h_phi_SPi, h_theta_SPi, h_eta_SPi, h_primary_r_SPi};
+  vector<TH1F*> v_SPi_hist = {h_pT_SPi, h_phi_SPi, h_theta_SPi, h_eta_SPi, h_primary_x_SPi, h_primary_y_SPi, h_primary_r_SPi};
   vector<TH1F*> v_K_hist = {h_pT_K, h_phi_K, h_theta_K, h_eta_K};
   vector<TH1F*> v_D0_hist = {h_pT_D0, h_phi_D0, h_theta_D0, h_eta_D0};
   vector<TH1F*> v_Dst_hist = {h_pT_Dst, h_phi_Dst, h_theta_Dst, h_eta_Dst};
 
 
   vector<TH1F*> v_Pi_hist_reco_pos = {h_pT_reco_Pi_pos, h_phi_reco_Pi_pos, h_theta_reco_Pi_pos, h_eta_reco_Pi_pos};
-  vector<TH1F*> v_SPi_hist_reco_pos = {h_pT_reco_SPi_pos, h_phi_reco_SPi_pos, h_theta_reco_SPi_pos, h_eta_reco_SPi_pos, h_primary_r_pos_SPi_reco};
+  vector<TH1F*> v_SPi_hist_reco_pos = {h_pT_reco_SPi_pos, h_phi_reco_SPi_pos, h_theta_reco_SPi_pos, h_eta_reco_SPi_pos, h_primary_x_pos_SPi_reco, h_primary_y_pos_SPi_reco, h_primary_r_pos_SPi_reco};
   vector<TH1F*> v_K_hist_reco_pos = {h_pT_reco_K_pos, h_phi_reco_K_pos, h_theta_reco_K_pos, h_eta_reco_K_pos};
   vector<TH1F*> v_D0_hist_reco_pos = {h_pT_reco_D0_pos, h_phi_reco_D0_pos, h_theta_reco_D0_pos, h_eta_reco_D0_pos};
   vector<TH1F*> v_Dst_hist_reco_pos = {h_pT_reco_Dst_pos, h_phi_reco_Dst_pos, h_theta_reco_Dst_pos, h_eta_reco_Dst_pos};
 
   vector<TH1F*> v_Pi_hist_pos = {h_pT_Pi_pos, h_phi_Pi_pos, h_theta_Pi_pos, h_eta_Pi_pos};
-  vector<TH1F*> v_SPi_hist_pos = {h_pT_SPi_pos, h_phi_SPi_pos, h_theta_SPi_pos, h_eta_SPi_pos, h_primary_r_pos_SPi};
+  vector<TH1F*> v_SPi_hist_pos = {h_pT_SPi_pos, h_phi_SPi_pos, h_theta_SPi_pos, h_eta_SPi_pos, h_primary_x_pos_SPi, h_primary_y_pos_SPi, h_primary_r_pos_SPi};
   vector<TH1F*> v_K_hist_pos = {h_pT_K_pos, h_phi_K_pos, h_theta_K_pos, h_eta_K_pos};
   vector<TH1F*> v_D0_hist_pos = {h_pT_D0_pos, h_phi_D0_pos, h_theta_D0_pos, h_eta_D0_pos};
   vector<TH1F*> v_Dst_hist_pos = {h_pT_Dst_pos, h_phi_Dst_pos, h_theta_Dst_pos, h_eta_Dst_pos};
 
 
   vector<TH1F*> v_Pi_hist_reco_neg = {h_pT_reco_Pi_neg, h_phi_reco_Pi_neg, h_theta_reco_Pi_neg, h_eta_reco_Pi_neg};
-  vector<TH1F*> v_SPi_hist_reco_neg = {h_pT_reco_SPi_neg, h_phi_reco_SPi_neg, h_theta_reco_SPi_neg, h_eta_reco_SPi_neg, h_primary_r_neg_SPi_reco};
+  vector<TH1F*> v_SPi_hist_reco_neg = {h_pT_reco_SPi_neg, h_phi_reco_SPi_neg, h_theta_reco_SPi_neg, h_eta_reco_SPi_neg, h_primary_x_neg_SPi_reco, h_primary_y_neg_SPi_reco, h_primary_r_neg_SPi_reco};
   vector<TH1F*> v_K_hist_reco_neg = {h_pT_reco_K_neg, h_phi_reco_K_neg, h_theta_reco_K_neg, h_eta_reco_K_neg};
   vector<TH1F*> v_D0_hist_reco_neg = {h_pT_reco_D0_neg, h_phi_reco_D0_neg, h_theta_reco_D0_neg, h_eta_reco_D0_neg};
   vector<TH1F*> v_Dst_hist_reco_neg = {h_pT_reco_Dst_neg, h_phi_reco_Dst_neg, h_theta_reco_Dst_neg, h_eta_reco_Dst_neg};
 
   vector<TH1F*> v_Pi_hist_neg = {h_pT_Pi_neg, h_phi_Pi_neg, h_theta_Pi_neg, h_eta_Pi_neg};
-  vector<TH1F*> v_SPi_hist_neg = {h_pT_SPi_neg, h_phi_SPi_neg, h_theta_SPi_neg, h_eta_SPi_neg, h_primary_r_neg_SPi};
+  vector<TH1F*> v_SPi_hist_neg = {h_pT_SPi_neg, h_phi_SPi_neg, h_theta_SPi_neg, h_eta_SPi_neg, h_primary_x_neg_SPi, h_primary_y_neg_SPi, h_primary_r_neg_SPi};
   vector<TH1F*> v_K_hist_neg = {h_pT_K_neg, h_phi_K_neg, h_theta_K_neg, h_eta_K_neg};
   vector<TH1F*> v_D0_hist_neg = {h_pT_D0_neg, h_phi_D0_neg, h_theta_D0_neg, h_eta_D0_neg};
   vector<TH1F*> v_Dst_hist_neg = {h_pT_Dst_neg, h_phi_Dst_neg, h_theta_Dst_neg, h_eta_Dst_neg};
@@ -659,7 +672,7 @@ void eff(string dir, string sample, string polarisation)
 
     vector<double> v_Pi_var = {Pi_pT, Pi_phi, Pi_theta, Pi_eta};
     vector<double> v_K_var = {K_pT, K_phi, K_theta, K_eta};
-    vector<double> v_SPi_var = {SPi_pT, SPi_phi, SPi_theta, SPi_eta, r_origin};
+    vector<double> v_SPi_var = {SPi_pT, SPi_phi, SPi_theta, SPi_eta, x_origin, y_origin, r_origin};
     vector<double> v_D0_var = {D0_pT, D0_phi, D0_theta, D0_eta};
     vector<double> v_Dst_var = {Dst_pT, Dst_phi, Dst_theta, Dst_eta};
 
