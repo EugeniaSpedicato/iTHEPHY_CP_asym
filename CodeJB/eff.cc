@@ -494,12 +494,12 @@ void eff(string dir, string sample, string polarisation)
   TH1F *h_primary_y_neg_SPi_reco = new TH1F("h_primary_y_neg_SPi_reco", "h_primary_y_neg_SPi_reco", 66, -0.3, -0.08);
   TH1F *h_primary_y_SPi_reco = new TH1F("h_primary_y_SPi_reco", "h_primary_y_SPi_reco", 66, -0.3, -0.08);
   
-  TH1F *h_primary_z_pos_SPi = new TH1F("h_primary_z_pos_SPi", "h_primary_z_pos_SPi", 260, -130., 130.);
-  TH1F *h_primary_z_neg_SPi = new TH1F("h_primary_z_neg_SPi", "h_primary_z_neg_SPi", 260, -130., 130.);
-  TH1F *h_primary_z_SPi = new TH1F("h_primary_z_SPi", "h_primary_z_SPi", 260, -130., 130.);
-  TH1F *h_primary_z_pos_SPi_reco = new TH1F("h_primary_z_pos_SPi_reco", "h_primary_z_pos_SPi_reco", 260, -130., 130.);
-  TH1F *h_primary_z_neg_SPi_reco = new TH1F("h_primary_z_neg_SPi_reco", "h_primary_z_neg_SPi_reco", 260, -130., 130.);
-  TH1F *h_primary_z_SPi_reco = new TH1F("h_primary_z_SPi_reco", "h_primary_z_SPi_reco", 260, -130., 130.);
+  TH1F *h_primary_z_pos_SPi = new TH1F("h_primary_z_pos_SPi", "h_primary_z_pos_SPi", 52, -130., 130.);
+  TH1F *h_primary_z_neg_SPi = new TH1F("h_primary_z_neg_SPi", "h_primary_z_neg_SPi", 52, -130., 130.);
+  TH1F *h_primary_z_SPi = new TH1F("h_primary_z_SPi", "h_primary_z_SPi", 52, -130., 130.);
+  TH1F *h_primary_z_pos_SPi_reco = new TH1F("h_primary_z_pos_SPi_reco", "h_primary_z_pos_SPi_reco", 52, -130., 130.);
+  TH1F *h_primary_z_neg_SPi_reco = new TH1F("h_primary_z_neg_SPi_reco", "h_primary_z_neg_SPi_reco", 52, -130., 130.);
+  TH1F *h_primary_z_SPi_reco = new TH1F("h_primary_z_SPi_reco", "h_primary_z_SPi_reco", 52, -130., 130.);
 
   TH1F *h_phi_test_SPi = new TH1F("h_phi_test_SPi",";|#phi|;#Delta eff", 25, 0., 3.5);
   TH1F *h_phi_test_SPi_pos = new TH1F("h_phi_test_SPi_pos",";|#phi|;#Delta eff", 25, 0., 3.5);
