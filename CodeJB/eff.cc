@@ -469,13 +469,13 @@ void eff(string dir, string sample, string polarisation)
   TH1F *h_theta_D0_neg = new TH1F("h_theta_D0_neg", ";#theta;Events", 50, 0.02, 0.24);
   TH1F *h_theta_Dst_neg = new TH1F("h_theta_Dst_neg", ";#theta;Events", 50, 0.02, 0.24);
 
-  TH1F *h_primary_r_pos_SPi = new TH1F("h_primary_r_pos_SPi", "h_primary_r_pos_SPi", 50, 0., 0.1);
-  TH1F *h_primary_r_neg_SPi = new TH1F("h_primary_r_neg_SPi", "h_primary_r_neg_SPi", 50, 0., 0.1);
-  TH1F *h_primary_r_SPi = new TH1F("h_primary_r_SPi", "h_primary_r_SPi", 50, 0., 0.1);
+  TH1F *h_primary_r_pos_SPi = new TH1F("h_primary_r_pos_SPi", "h_primary_r_pos_SPi", 50, 0., 1.);
+  TH1F *h_primary_r_neg_SPi = new TH1F("h_primary_r_neg_SPi", "h_primary_r_neg_SPi", 50, 0., 1.);
+  TH1F *h_primary_r_SPi = new TH1F("h_primary_r_SPi", "h_primary_r_SPi", 50, 0., 1.);
 
-  TH1F *h_primary_r_pos_SPi_reco = new TH1F("h_primary_r_pos_SPi_reco", "h_primary_r_pos_SPi_reco", 50, 0., 0.1);
-  TH1F *h_primary_r_neg_SPi_reco = new TH1F("h_primary_r_neg_SPi_reco", "h_primary_r_neg_SPi_reco", 50, 0., 0.1);
-  TH1F *h_primary_r_SPi_reco = new TH1F("h_primary_r_SPi_reco", "h_primary_r_SPi_reco", 50, 0., 0.1);
+  TH1F *h_primary_r_pos_SPi_reco = new TH1F("h_primary_r_pos_SPi_reco", "h_primary_r_pos_SPi_reco", 50, 0., 1.);
+  TH1F *h_primary_r_neg_SPi_reco = new TH1F("h_primary_r_neg_SPi_reco", "h_primary_r_neg_SPi_reco", 50, 0., 1.);
+  TH1F *h_primary_r_SPi_reco = new TH1F("h_primary_r_SPi_reco", "h_primary_r_SPi_reco", 50, 0., 1.);
 
   TH1F *h_phi_test_SPi = new TH1F("h_phi_test_SPi",";|#phi|;#Delta eff", 25, 0., 3.5);
   TH1F *h_phi_test_SPi_pos = new TH1F("h_phi_test_SPi_pos",";|#phi|;#Delta eff", 25, 0., 3.5);
@@ -650,7 +650,7 @@ void eff(string dir, string sample, string polarisation)
     weight_z = h_weight_z->GetBinContent(int(100*z_origin+130.));
     weight_tot = weight_x * weight_y * weight_z;
     */
-    
+
     double r_origin = sqrt( pow(x_origin, 2.) + pow(y_origin ,2.));
 
     vector<double> v_Pi_var = {Pi_pT, Pi_phi, Pi_theta, Pi_eta};
