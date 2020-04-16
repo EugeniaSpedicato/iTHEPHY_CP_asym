@@ -115,7 +115,11 @@ void printdevhists(vector<TH1F*> v_get_hist_pos, vector<TH1F*> v_get_hist_neg, s
     v_hist_neg.at(i)->Scale(2.);
     v_hist_neg.at(i)->Add(v_hist_pos.at(i));
     v_hist_pos.at(i)->Divide(v_hist_neg.at(i));
-    v_hist_pos.at(i)->SetAxisRange(-0.15, 0.15, "Y");
+    if ( size > 4 && i == size -1 )
+    {
+      v_hist_pos.at(i)->SetAxisRange(-0.02, 0.02, "Y");
+    }
+    else v_hist_pos.at(i)->SetAxisRange(-0.15, 0.15, "Y");
     title_name = v_hist_pos.at(i)->GetName();
     new_title = title_name+"_dev";
     v_hist_pos.at(i)->SetName(new_title.c_str());
@@ -469,13 +473,13 @@ void eff(string dir, string sample, string polarisation)
   TH1F *h_theta_D0_neg = new TH1F("h_theta_D0_neg", ";#theta;Events", 50, 0.02, 0.24);
   TH1F *h_theta_Dst_neg = new TH1F("h_theta_Dst_neg", ";#theta;Events", 50, 0.02, 0.24);
 
-  TH1F *h_primary_r_pos_SPi = new TH1F("h_primary_r_pos_SPi", "h_primary_r_pos_SPi", 60, 0.7, 1.);
-  TH1F *h_primary_r_neg_SPi = new TH1F("h_primary_r_neg_SPi", "h_primary_r_neg_SPi", 60, 0.7, 1.);
-  TH1F *h_primary_r_SPi = new TH1F("h_primary_r_SPi", "h_primary_r_SPi", 60, 0.7, 1.);
+  TH1F *h_primary_r_pos_SPi = new TH1F("h_primary_r_pos_SPi", "h_primary_r_pos_SPi", 60, 0.78, 0.95);
+  TH1F *h_primary_r_neg_SPi = new TH1F("h_primary_r_neg_SPi", "h_primary_r_neg_SPi", 60, 0.78, 0.95);
+  TH1F *h_primary_r_SPi = new TH1F("h_primary_r_SPi", "h_primary_r_SPi", 60, 0.78, 0.95);
 
-  TH1F *h_primary_r_pos_SPi_reco = new TH1F("h_primary_r_pos_SPi_reco", "h_primary_r_pos_SPi_reco", 60, 0.7, 1.);
-  TH1F *h_primary_r_neg_SPi_reco = new TH1F("h_primary_r_neg_SPi_reco", "h_primary_r_neg_SPi_reco", 60, 0.7, 1.);
-  TH1F *h_primary_r_SPi_reco = new TH1F("h_primary_r_SPi_reco", "h_primary_r_SPi_reco", 60, 0.7, 1.);
+  TH1F *h_primary_r_pos_SPi_reco = new TH1F("h_primary_r_pos_SPi_reco", "h_primary_r_pos_SPi_reco", 60, 0.78, 0.95);
+  TH1F *h_primary_r_neg_SPi_reco = new TH1F("h_primary_r_neg_SPi_reco", "h_primary_r_neg_SPi_reco", 60, 0.78, 0.95);
+  TH1F *h_primary_r_SPi_reco = new TH1F("h_primary_r_SPi_reco", "h_primary_r_SPi_reco", 60, 0.78, 0.95);
 
   TH1F *h_phi_test_SPi = new TH1F("h_phi_test_SPi",";|#phi|;#Delta eff", 25, 0., 3.5);
   TH1F *h_phi_test_SPi_pos = new TH1F("h_phi_test_SPi_pos",";|#phi|;#Delta eff", 25, 0., 3.5);
