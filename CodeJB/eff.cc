@@ -651,7 +651,7 @@ void eff(string dir, string sample, string polarisation)
     weight_tot = weight_x * weight_y * weight_z;
     */
     
-    double r_origin = sqrt( pow(x_origin, 2.) + pow(y_origin ,2.))
+    double r_origin = sqrt( pow(x_origin, 2.) + pow(y_origin ,2.));
 
     vector<double> v_Pi_var = {Pi_pT, Pi_phi, Pi_theta, Pi_eta};
     vector<double> v_K_var = {K_pT, K_phi, K_theta, K_eta};
