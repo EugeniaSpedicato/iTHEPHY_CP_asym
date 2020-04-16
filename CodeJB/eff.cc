@@ -115,7 +115,7 @@ void printdevhists(vector<TH1F*> v_get_hist_pos, vector<TH1F*> v_get_hist_neg, s
     v_hist_neg.at(i)->Scale(2.);
     v_hist_neg.at(i)->Add(v_hist_pos.at(i));
     v_hist_pos.at(i)->Divide(v_hist_neg.at(i));
-    if ( size > 4 && i == size -1 )
+    if ( size > 4 && i >= 4 )
     {
       v_hist_pos.at(i)->SetAxisRange(-0.02, 0.02, "Y");
     }
