@@ -242,10 +242,10 @@ void eff(string dir, string sample, string polarisation)
   ntp->Add(input_name.c_str());
 
   TCanvas *c_test = new TCanvas();
-  
+
   string saving;
   string directory = (polarisation == "UP")? "up_pdf" : "down_pdf";
-  
+
   int nEvents = ntp->GetEntries();
   double nTot = double(nEvents);
 
@@ -290,15 +290,15 @@ void eff(string dir, string sample, string polarisation)
   int Dst_ID, D0_ID, Pi_ID, K_ID, SPi_ID;
 
   double x_origin, y_origin, z_origin;
-  
+
   int  isPi_reco, isK_reco, isSPi_reco, isD0_reco, isDst_reco;
   ntp->SetBranchStatus("*",0);
-  
+
   ntp->SetBranchStatus("Dst_TRUEORIGINVERTEX_X",1); ntp->SetBranchAddress("Dst_TRUEORIGINVERTEX_X", &(x_origin));
   ntp->SetBranchStatus("Dst_TRUEORIGINVERTEX_Y",1); ntp->SetBranchAddress("Dst_TRUEORIGINVERTEX_Y", &(y_origin));
-  ntp->SetBranchStatus("Dst_TRUEORIGINVERTEX_Z",1); ntp->SetBranchAddress("Dst_TRUEORIGINVERTEX_Z", &(z_origin));  
-  
-  
+  ntp->SetBranchStatus("Dst_TRUEORIGINVERTEX_Z",1); ntp->SetBranchAddress("Dst_TRUEORIGINVERTEX_Z", &(z_origin));
+
+
   ntp->SetBranchStatus("P1_Reconstructed",1); ntp->SetBranchAddress("P1_Reconstructed", &(isPi_reco));
   ntp->SetBranchStatus("P2_Reconstructed",1); ntp->SetBranchAddress("P2_Reconstructed", &(isK_reco));
   ntp->SetBranchStatus("sPi_Reconstructed",1); ntp->SetBranchAddress("sPi_Reconstructed", &(isSPi_reco));
@@ -469,48 +469,57 @@ void eff(string dir, string sample, string polarisation)
   TH1F *h_theta_D0_neg = new TH1F("h_theta_D0_neg", ";#theta;Events", 50, 0.02, 0.24);
   TH1F *h_theta_Dst_neg = new TH1F("h_theta_Dst_neg", ";#theta;Events", 50, 0.02, 0.24);
 
+  TH1F *h_primary_r_pos_SPi = new TH1F("h_primary_r_pos_SPi", "h_primary_r_pos_SPi", 50, 0., 0.1);
+  TH1F *h_primary_r_neg_SPi = new TH1F("h_primary_r_neg_SPi", "h_primary_r_neg_SPi", 50, 0., 0.1);
+  TH1F *h_primary_r_SPi = new TH1F("h_primary_r_SPi", "h_primary_r_SPi", 50, 0., 0.1);
+
+  TH1F *h_primary_r_pos_SPi_reco = new TH1F("h_primary_r_pos_SPi_reco", "h_primary_r_pos_SPi_reco", 50, 0., 0.1);
+  TH1F *h_primary_r_neg_SPi_reco = new TH1F("h_primary_r_neg_SPi_reco", "h_primary_r_neg_SPi_reco", 50, 0., 0.1);
+  TH1F *h_primary_r_SPi_reco = new TH1F("h_primary_r_SPi_reco", "h_primary_r_SPi_reco", 50, 0., 0.1);
+
   TH1F *h_phi_test_SPi = new TH1F("h_phi_test_SPi",";|#phi|;#Delta eff", 25, 0., 3.5);
   TH1F *h_phi_test_SPi_pos = new TH1F("h_phi_test_SPi_pos",";|#phi|;#Delta eff", 25, 0., 3.5);
   TH1F *h_phi_test_SPi_neg = new TH1F("h_phi_test_SPi_neg",";|#phi|;#Delta eff", 25, 0., 3.5);
+
 
   h_phi_test_SPi->SetAxisRange(0.,1.,"Y");
   h_phi_test_SPi_pos->SetAxisRange(0.,1.,"Y");
   h_phi_test_SPi_neg->SetAxisRange(0.,1.,"Y");
 
   vector<TH1F*> v_Pi_hist_reco = {h_pT_reco_Pi, h_phi_reco_Pi, h_theta_reco_Pi, h_eta_reco_Pi};
-  vector<TH1F*> v_SPi_hist_reco = {h_pT_reco_SPi, h_phi_reco_SPi, h_theta_reco_SPi, h_eta_reco_SPi};
+  vector<TH1F*> v_SPi_hist_reco = {h_pT_reco_SPi, h_phi_reco_SPi, h_theta_reco_SPi, h_eta_reco_SPi, h_primary_r_SPi_reco};
   vector<TH1F*> v_K_hist_reco = {h_pT_reco_K, h_phi_reco_K, h_theta_reco_K, h_eta_reco_K};
   vector<TH1F*> v_D0_hist_reco = {h_pT_reco_D0, h_phi_reco_D0, h_theta_reco_D0, h_eta_reco_D0};
   vector<TH1F*> v_Dst_hist_reco = {h_pT_reco_Dst, h_phi_reco_Dst, h_theta_reco_Dst, h_eta_reco_Dst};
 
   vector<TH1F*> v_Pi_hist = {h_pT_Pi, h_phi_Pi, h_theta_Pi, h_eta_Pi};
-  vector<TH1F*> v_SPi_hist = {h_pT_SPi, h_phi_SPi, h_theta_SPi, h_eta_SPi};
+  vector<TH1F*> v_SPi_hist = {h_pT_SPi, h_phi_SPi, h_theta_SPi, h_eta_SPi, h_primary_r_SPi};
   vector<TH1F*> v_K_hist = {h_pT_K, h_phi_K, h_theta_K, h_eta_K};
   vector<TH1F*> v_D0_hist = {h_pT_D0, h_phi_D0, h_theta_D0, h_eta_D0};
   vector<TH1F*> v_Dst_hist = {h_pT_Dst, h_phi_Dst, h_theta_Dst, h_eta_Dst};
 
 
   vector<TH1F*> v_Pi_hist_reco_pos = {h_pT_reco_Pi_pos, h_phi_reco_Pi_pos, h_theta_reco_Pi_pos, h_eta_reco_Pi_pos};
-  vector<TH1F*> v_SPi_hist_reco_pos = {h_pT_reco_SPi_pos, h_phi_reco_SPi_pos, h_theta_reco_SPi_pos, h_eta_reco_SPi_pos};
+  vector<TH1F*> v_SPi_hist_reco_pos = {h_pT_reco_SPi_pos, h_phi_reco_SPi_pos, h_theta_reco_SPi_pos, h_eta_reco_SPi_pos, h_primary_r_pos_SPi_reco};
   vector<TH1F*> v_K_hist_reco_pos = {h_pT_reco_K_pos, h_phi_reco_K_pos, h_theta_reco_K_pos, h_eta_reco_K_pos};
   vector<TH1F*> v_D0_hist_reco_pos = {h_pT_reco_D0_pos, h_phi_reco_D0_pos, h_theta_reco_D0_pos, h_eta_reco_D0_pos};
   vector<TH1F*> v_Dst_hist_reco_pos = {h_pT_reco_Dst_pos, h_phi_reco_Dst_pos, h_theta_reco_Dst_pos, h_eta_reco_Dst_pos};
 
   vector<TH1F*> v_Pi_hist_pos = {h_pT_Pi_pos, h_phi_Pi_pos, h_theta_Pi_pos, h_eta_Pi_pos};
-  vector<TH1F*> v_SPi_hist_pos = {h_pT_SPi_pos, h_phi_SPi_pos, h_theta_SPi_pos, h_eta_SPi_pos};
+  vector<TH1F*> v_SPi_hist_pos = {h_pT_SPi_pos, h_phi_SPi_pos, h_theta_SPi_pos, h_eta_SPi_pos, h_primary_r_pos_SPi};
   vector<TH1F*> v_K_hist_pos = {h_pT_K_pos, h_phi_K_pos, h_theta_K_pos, h_eta_K_pos};
   vector<TH1F*> v_D0_hist_pos = {h_pT_D0_pos, h_phi_D0_pos, h_theta_D0_pos, h_eta_D0_pos};
   vector<TH1F*> v_Dst_hist_pos = {h_pT_Dst_pos, h_phi_Dst_pos, h_theta_Dst_pos, h_eta_Dst_pos};
 
 
   vector<TH1F*> v_Pi_hist_reco_neg = {h_pT_reco_Pi_neg, h_phi_reco_Pi_neg, h_theta_reco_Pi_neg, h_eta_reco_Pi_neg};
-  vector<TH1F*> v_SPi_hist_reco_neg = {h_pT_reco_SPi_neg, h_phi_reco_SPi_neg, h_theta_reco_SPi_neg, h_eta_reco_SPi_neg};
+  vector<TH1F*> v_SPi_hist_reco_neg = {h_pT_reco_SPi_neg, h_phi_reco_SPi_neg, h_theta_reco_SPi_neg, h_eta_reco_SPi_neg, h_primary_r_neg_SPi_reco};
   vector<TH1F*> v_K_hist_reco_neg = {h_pT_reco_K_neg, h_phi_reco_K_neg, h_theta_reco_K_neg, h_eta_reco_K_neg};
   vector<TH1F*> v_D0_hist_reco_neg = {h_pT_reco_D0_neg, h_phi_reco_D0_neg, h_theta_reco_D0_neg, h_eta_reco_D0_neg};
   vector<TH1F*> v_Dst_hist_reco_neg = {h_pT_reco_Dst_neg, h_phi_reco_Dst_neg, h_theta_reco_Dst_neg, h_eta_reco_Dst_neg};
 
   vector<TH1F*> v_Pi_hist_neg = {h_pT_Pi_neg, h_phi_Pi_neg, h_theta_Pi_neg, h_eta_Pi_neg};
-  vector<TH1F*> v_SPi_hist_neg = {h_pT_SPi_neg, h_phi_SPi_neg, h_theta_SPi_neg, h_eta_SPi_neg};
+  vector<TH1F*> v_SPi_hist_neg = {h_pT_SPi_neg, h_phi_SPi_neg, h_theta_SPi_neg, h_eta_SPi_neg, h_primary_r_neg_SPi};
   vector<TH1F*> v_K_hist_neg = {h_pT_K_neg, h_phi_K_neg, h_theta_K_neg, h_eta_K_neg};
   vector<TH1F*> v_D0_hist_neg = {h_pT_D0_neg, h_phi_D0_neg, h_theta_D0_neg, h_eta_D0_neg};
   vector<TH1F*> v_Dst_hist_neg = {h_pT_Dst_neg, h_phi_Dst_neg, h_theta_Dst_neg, h_eta_Dst_neg};
@@ -528,11 +537,11 @@ void eff(string dir, string sample, string polarisation)
   sumhisterr(v_Dst_hist_reco, v_Dst_hist_reco_pos, v_Dst_hist_reco_neg);
 
   gStyle->SetOptStat(0);
-
+/*
   double x_sig, y_sig, z_sig;
   double x_N, y_N, z_N;
   double x_mean, y_mean, z_mean;
-  
+
   if(polarisation == "DOWN")
   {
     x_sig = 0.02948;
@@ -559,12 +568,12 @@ void eff(string dir, string sample, string polarisation)
   TF1 *x_func = new TF1("x_gaus","gaus(0)",  0.6, 0.95);
   TF1 *y_func = new TF1("y_gaus","gaus(0)", -0.3, 0.);
   TF1 *z_func = new TF1("z_gaus","gaus(0)", -130., 130.);
-  
+
   x_func->SetParameters(x_N, x_mean - 0.5*x_sig, x_sig);
   y_func->SetParameters(y_N, y_mean + 0.5*y_sig, y_sig);
   z_func->SetParameters(z_N, 0., z_sig);
 
-  
+
   TH1F *h_weight_x = new TH1F("h_weight_x","h_weight_x", 70, 0.6, 0.95);
   TH1F *h_weight_y = new TH1F("h_weight_y","h_weight_y", 60, -0.3, 0.);
   TH1F *h_weight_z = new TH1F("h_weight_z","h_weight_z", 260, -130., 130.);
@@ -575,17 +584,17 @@ void eff(string dir, string sample, string polarisation)
 
   for(int i = 0; i < nEvents; ++i)
   {
-      
+
     ntp->GetEvent(i);
     h_weight_x->Fill(x_func->GetRandom());
     h_weight_y->Fill(y_func->GetRandom());
     h_weight_z->Fill(z_func->GetRandom());
-    
+
     h_or_x->Fill(x_origin);
     h_or_y->Fill(y_origin);
     h_or_z->Fill(z_origin);
   }
-  
+
   h_weight_x->SetLineColor(kAzure);
   h_or_x->SetLineColor(kRed);
   h_weight_y->SetLineColor(kAzure);
@@ -593,7 +602,7 @@ void eff(string dir, string sample, string polarisation)
   h_weight_z->SetLineColor(kAzure);
   h_or_z->SetLineColor(kRed);
 
-  
+
   h_weight_x->Draw();
   h_or_x->Draw("SAME");
   saving = "output/"+directory+"/weights/h_dist_x.pdf";
@@ -608,12 +617,12 @@ void eff(string dir, string sample, string polarisation)
   h_or_z->Draw("SAME");
   saving = "output/"+directory+"/weights/h_dist_z.pdf";
   c_test->Print(saving.c_str());
-  
+
   h_weight_x->Divide(h_or_x);
   h_weight_y->Divide(h_or_y);
   h_weight_z->Divide(h_or_z);
-  
-  
+
+
   h_weight_x->Draw();
   saving = "output/"+directory+"/weights/h_weight_x.pdf";
   c_test->Print(saving.c_str());
@@ -626,22 +635,27 @@ void eff(string dir, string sample, string polarisation)
   saving = "output/"+directory+"/weights/h_weight_z.pdf";
   c_test->Print(saving.c_str());
 
-  
+
   double weight_x, weight_y, weight_z, weight_tot;
-  
+  */
+  double weight_tot = 1.;
   for(int i = 0; i < nEvents; ++i)
   {
     ntp->GetEvent(i);
     if (i % (nEvents/10) == 0)cout << "=== Event " << i/(nEvents/10) * 10 << "%" << endl;
 
+    /*
     weight_x = h_weight_x->GetBinContent(int(200*x_origin-120.));
     weight_y = h_weight_y->GetBinContent(int(200*y_origin+60.));
     weight_z = h_weight_z->GetBinContent(int(100*z_origin+130.));
-    weight_tot = 1;// weight_x * weight_y * weight_z;
+    weight_tot = weight_x * weight_y * weight_z;
+    */
     
+    double r_origin = sqrt( pow(x_origin, 2.) + pow(y_origin ,2.))
+
     vector<double> v_Pi_var = {Pi_pT, Pi_phi, Pi_theta, Pi_eta};
     vector<double> v_K_var = {K_pT, K_phi, K_theta, K_eta};
-    vector<double> v_SPi_var = {SPi_pT, SPi_phi, SPi_theta, SPi_eta};
+    vector<double> v_SPi_var = {SPi_pT, SPi_phi, SPi_theta, SPi_eta, r_origin};
     vector<double> v_D0_var = {D0_pT, D0_phi, D0_theta, D0_eta};
     vector<double> v_Dst_var = {Dst_pT, Dst_phi, Dst_theta, Dst_eta};
 
@@ -657,7 +671,7 @@ void eff(string dir, string sample, string polarisation)
       hist_fill(v_SPi_hist, v_SPi_hist_reco, v_SPi_hist_pos, v_SPi_hist_reco_pos, v_SPi_hist_neg, v_SPi_hist_reco_neg, v_SPi_var, isSPi_reco, nSPi_reco, nSPi_pos, nSPi_reco_pos, nSPi_neg, nSPi_reco_neg, SPi_ID, weight_tot);
       hist_fill(v_Dst_hist, v_Dst_hist_reco, v_Dst_hist_pos, v_Dst_hist_reco_pos, v_Dst_hist_neg, v_Dst_hist_reco_neg, v_Dst_var, isDst_reco, nDst_reco, nDst_pos, nDst_reco_pos, nDst_neg, nDst_reco_neg, Dst_ID, weight_tot);
     //}
-    
+
     v_Pi_var.clear();
     v_K_var.clear();
     v_SPi_var.clear();
@@ -931,7 +945,7 @@ void eff(string dir, string sample, string polarisation)
   h_phi_test_SPi_neg->Draw("hist same");
   saving = "output/"+directory+"/test/h_phi_test_SPi_combined.pdf";
   c_test->Print(saving.c_str());
-  
+
 
 
   uint64_t end_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
