@@ -1,0 +1,5 @@
+
+Processing data.cc++("$dir", "D02Kmpip_15_Up")...
+The total Dst assymmetry is: 1
+computation time/s: 26.2775
+computation time/min: 0.437959
