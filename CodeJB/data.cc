@@ -8,6 +8,7 @@ void data(string dir, string sample)
   string input_name = dir+"/"+sample+".root";
   TChain *ntp = new TChain("ntp");
   ntp->Add(input_name.c_str());
+  ntp->Add(input_name.c_str());
 
   int nEvents = ntp->GetEntries();
 
