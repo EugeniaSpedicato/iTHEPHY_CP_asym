@@ -7,7 +7,7 @@ void printhists(TH1F *h)
   h->Draw();
   h->Draw("hist same");
   string title_name = h->GetName();
-  string save_name = "output/data/plots"+title_name+".pdf";
+  string save_name = "output/data/plots/"+title_name+".pdf";
   c->SaveAs(save_name.c_str());
 }
 
@@ -54,8 +54,12 @@ void data(string dir, string sample)
 
   for (int i = 0; i < nEvents; ++i)
   {
+    if (i % (nEvents/10) == 0)
+    {
+      std::cout << "=== Event " << i/(nEvents/10) * 10 << "%" << std::endl;
+    }
     ntp->GetEvent(i);
-    if(Dst_ID < 0)
+    if(Dst_ID < 0.)
     {
       h_Dst_neg_D0m->Fill(D0_mass);
       h_Dst_neg_DTFm->Fill(DTF_mass);
@@ -89,7 +93,7 @@ void data(string dir, string sample)
   h_Dst_neg_D0m->Scale(2.);
   h_Dst_neg_D0m->Add(h_Dst_pos_D0m);
   h_Dst_pos_D0m->Divide(h_Dst_neg_D0m);
-  h_Dst_asym_D0m = h_Dst_pos_D0m;
+
   printhists(h_Dst_asym_D0m);
 
   h_Dst_pos_DTFm->Add(h_Dst_neg_DTFm,-1);
