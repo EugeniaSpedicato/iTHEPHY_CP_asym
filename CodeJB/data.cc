@@ -6,9 +6,9 @@ void data(string dir, string sample)
 {
   uint64_t start_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
   string input_name = dir+"/"+sample+".root";
-  TChain *ntp = new TChain("ntp");
-  ntp->Add(input_name.c_str());
-  ntp->Add(input_name.c_str());
+  TChain *ntp = new TChain();
+  ntp->AddFile(input_name.c_str(),"mtp;25");
+  ntp->AddFile(input_name.c_str(),"mtp;26");
 
   int nEvents = ntp->GetEntries();
 
