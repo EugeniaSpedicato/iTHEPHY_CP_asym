@@ -9,9 +9,6 @@ void data(string dir, string sample)
   TChain *ntp = new TChain("ntp");
   ntp->Add(input_name.c_str());
 
-  TChain *ntp = new TChain("ntp");
-
-
   int nEvents = ntp->GetEntries();
 
   cout << "Number of events: " << nEvents << endl;
