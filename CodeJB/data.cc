@@ -52,14 +52,15 @@ void data(string dir, string sample)
   h_Dst_neg_DTFm->Sumw2();
   h_Dst_asym_DTFm->Sumw2();
 
-  for (int i = 0; i < nEvents; ++i)
+  for (int i = 0; i < 50; ++i)
   {
     if (i % (nEvents/10) == 0)
     {
       std::cout << "=== Event " << i/(nEvents/10) * 10 << "%" << std::endl;
     }
     ntp->GetEvent(i);
-    if(Dst_ID < 0.)
+    cout << D0_mass << endl;
+    if(Dst_ID < 0)
     {
       h_Dst_neg_D0m->Fill(D0_mass);
       h_Dst_neg_DTFm->Fill(DTF_mass);
@@ -73,6 +74,9 @@ void data(string dir, string sample)
     }
   }
   double Dst_asym = (nDst_pos-nDst_neg)/(nDst_pos+nDst_neg);
+
+  cout << "Number of reconstructed -: " << nDst_neg << endl;  
+  cout << "Number of reconstructed +: " << nDst_pos << endl;
   cout << "The total Dst assymmetry is: " << Dst_asym << endl;
 
   printhists(h_Dst_pos_D0m);
