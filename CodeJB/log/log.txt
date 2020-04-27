@@ -1,58 +1,18 @@
 
 Processing data.cc++("$dir", "D02Kmpip_15_Up")...
 === Event 0%
-1859.99
-1873.48
-1870.87
-1873.12
-1845.3
-1872.44
-1867.07
-1878.6
-1877.47
-1852.89
-1869.28
-1885.9
-1864.55
-1868.62
-1869.67
-1867.11
-1867.51
-1859.43
-1862.15
-1864.12
-1881.51
-1880.93
-1869.51
-1857.69
-1867.72
-1879.24
-1852.06
-1871.62
-1869.37
-1865.27
-1860.6
-1868.24
-1871.99
-1855.45
-1867.79
-1865.69
-1879.91
-1872.38
-1851.29
-1872.18
-1872.36
-1864.39
-1859.38
-1853.25
-1853.14
-1880.23
-1872.84
-1865.78
-1873.98
-1846.95
-Number of reconstructed -: 0
-Number of reconstructed +: 50
-The total Dst assymmetry is: 1
-computation time/s: 0.309544
-computation time/min: 0.00515907
+=== Event 10%
+=== Event 20%
+=== Event 30%
+=== Event 40%
+=== Event 50%
+=== Event 60%
+=== Event 70%
+=== Event 80%
+=== Event 90%
+=== Event 100%
+Number of reconstructed -: 1.34762e+06
+Number of reconstructed +: 1.29188e+06
+The total Dst assymmetry is: -0.0211162
+computation time/s: 21.109
+computation time/min: 0.351817

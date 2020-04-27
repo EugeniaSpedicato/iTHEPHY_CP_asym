@@ -58,7 +58,6 @@ void data(string dir, string sample)
       std::cout << "=== Event " << i/(nEvents/10) * 10 << "%" << std::endl;
     }
     ntp->GetEvent(i);
-    cout << D0_mass << endl;
     if(Dst_ID < 0)
     {
       h_Dst_neg_D0m->Fill(D0_mass);
