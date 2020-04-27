@@ -21,7 +21,7 @@ void data(string dir, string sample)
 
   int nEvents = ntp->GetEntries();
   double nDst_pos = 0.; double nDst_neg = 0.;
-  int Dst_ID, D0_ID, Pi_ID, K_ID, SPi_ID;
+  int Dst_ID, D0_ID, Pi_ID, K_ID;
   double D0_mass;
   double DTF_mass;
 
