@@ -37,7 +37,7 @@ void data(string dir, string sample)
   dataset->plotOn(xframe, RooFit::Binning(80));
   TCanvas *canvas2 = new TCanvas();
   xframe->Draw();
-  canvas2->SaveAs("/output/data/plots/RooData.pdf");
+  canvas2->SaveAs("output/data/plots/RooData.pdf");
 
   RooRealVar *mean = new RooRealVar("mean", "mean", 2011., 2008., 2014.);
   RooRealVar *sigma = new RooRealVar("sigma", "sigma", 2.5, 2., 3.);
@@ -55,7 +55,7 @@ void data(string dir, string sample)
   model->plotOn(xframe2);
   model->paramOn(xframe2, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
   xframe2->Draw();
-  canvas2->SaveAs("/output/data/plots/RooFit.pdf");
+  canvas2->SaveAs("output/data/plots/RooFit.pdf");
 
 
   ntp->SetBranchStatus("*",0);
