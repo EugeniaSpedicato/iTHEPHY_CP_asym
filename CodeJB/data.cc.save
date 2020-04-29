@@ -5,7 +5,6 @@
 #include "RooDataSet.h"
 #include "RooPlot.h"
 #include "RooAddPdf.h"
-#include "RooUniform.h"
 
 void printhists(TH1F *h)
 {
@@ -42,15 +41,14 @@ void data(string dir, string sample)
 
   RooRealVar *mean = new RooRealVar("mean", "mean", 2011., 2008., 2014.);
   RooRealVar *sigma = new RooRealVar("sigma", "sigma", 1., 0., 3.);
-  RooRealVar *rel_frac = new RooRealVar("rel_frac", "Relative Fraction", 0.7, 0.0, 1.0);
+  RooRealVar * rel_frac = new RooRealVar("rel_frac", "Relative Fraction", 0.6, 0.0, 1.0);
   RooBreitWigner *bw = new RooBreitWigner("BW", "BW", *x, *mean, *sigma);
-  RooUniform *bkg = new RooUniform("bkg", "bkg", *x);
-  RooAddPdf *model = new RooAddPdf("model", "model", RooArgList(*bw,*bkg), RooArgList(*rel_frac));
+  RooAddPdf *model = new RooAddPdf("model", "model", RooArgList(*bw,*bw2), RooArgList(*rel_frac));
   model->fitTo(*dataset, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   RooPlot * xframe2 = x->frame();
   dataset->plotOn(xframe2);
   model->plotOn(xframe2);
-  model->plotOn(xframe2, RooFit::Components("bkg"), RooFit::LineColor(kAzure), RooFit::LineStyle(kDashed));
+  model->plotOn(xframe2, RooFit::Components("BW"), RooFit::LineColor(kAzure));
   model->plotOn(xframe2);
   model->paramOn(xframe2, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
   xframe2->Draw();

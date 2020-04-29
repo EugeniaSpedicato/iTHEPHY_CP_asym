@@ -172,5 +172,6 @@
 ./data_cc.so: /home/smjoblan/builddir/include/RooAddPdf.h
 ./data_cc.so: /home/smjoblan/builddir/include/RooSetProxy.h
 ./data_cc.so: /home/smjoblan/builddir/include/RooAICRegistry.h
+./data_cc.so: /home/smjoblan/builddir/include/RooUniform.h
 ./data_cc.so: /home/smjoblan/builddir/include/RVersion.h /home/smjoblan/builddir/include/RConfig.h /home/smjoblan/builddir/include/TClass.h /home/smjoblan/builddir/include/TDictAttributeMap.h /home/smjoblan/builddir/include/TInterpreter.h /home/smjoblan/builddir/include/TROOT.h /home/smjoblan/builddir/include/TBuffer.h /home/smjoblan/builddir/include/TMemberInspector.h /home/smjoblan/builddir/include/TError.h /home/smjoblan/builddir/include/RtypesImp.h /home/smjoblan/builddir/include/TIsAProxy.h /home/smjoblan/builddir/include/TFileMergeInfo.h /home/smjoblan/builddir/include/TCollectionProxyInfo.h /home/smjoblan/builddir/bin/rootcling
 data_cc__ROOTBUILDVERSION= 6.16/00
