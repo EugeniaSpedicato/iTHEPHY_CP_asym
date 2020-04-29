@@ -5,7 +5,6 @@ Processing data.cc++("$dir", "D02Kmpip_15_Up")...
                 Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
                 All rights reserved, please read http://roofit.sourceforge.net/license.txt
 
-ERROR in TPDF::Open: Cannot open file:/output/data/plots/RooData.pdf
 [#0] ERROR:InputArguments -- RooUniformBinning::setRange: ERROR low bound > high bound
 [#0] WARNING:InputArguments -- RooRealVar::setRange(mean): Proposed new fit max. smaller than min., setting max. to min.
 [#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
@@ -13,7 +12,6 @@ ERROR in TPDF::Open: Cannot open file:/output/data/plots/RooData.pdf
 [#1] INFO:Minization -- RooMinimizer::optimizeConst: deactivating const optimization
 [#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (BW)
 [#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: ()
-ERROR in TPDF::Open: Cannot open file:/output/data/plots/RooFit.pdf
 === Event 0%
 === Event 10%
 === Event 20%
@@ -28,5 +26,5 @@ ERROR in TPDF::Open: Cannot open file:/output/data/plots/RooFit.pdf
 Number of reconstructed -: 1.34762e+06
 Number of reconstructed +: 1.29188e+06
 The total Dst assymmetry is: -0.0211162
-computation time/s: 70.374
-computation time/min: 1.1729
+computation time/s: 89.8107
+computation time/min: 1.49684
