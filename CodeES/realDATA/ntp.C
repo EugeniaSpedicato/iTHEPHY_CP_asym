@@ -463,13 +463,15 @@ Double_t Dst_tot=0;
     
 RooRealVar Dst_DTF_D0_M("Dst_DTF_D0_M", "Dst_DTF_D0_M", 1820, 1910); 
 RooRealVar D0_ID("D0_ID", "D0_ID",-450,-300 ); 
-    RooPlot* frameneg=Dst_DTF_D0_M.frame();
+    
     RooPlot* frame=Dst_DTF_D0_M.frame();
+    RooPlot* frameneg=Dst_DTF_D0_M.frame();
+    
    
 RooWorkspace w("w");
 w.import(Dst_DTF_D0_M);
 w.import(D0_ID);
-    
+
   
 w.factory("Gaussian::gausD(Dst_DTF_D0_M,m[1865,1860,1870],s[5,30])");
 
@@ -479,10 +481,37 @@ w.import(data1);
 
 
 w.pdf("gausD")->fitTo(data1);
-data1.plotOn(frame,MarkerColor(kBlue),LineColor(kBlue));
-w.pdf("gausD")->plotOn(frame,LineColor(kRed));
+data1.plotOn(frame,MarkerColor(40), MarkerStyle(kFullDotMedium),LineColor(40));
+w.pdf("gausD")->plotOn(frame,LineColor(46));
 frame->Draw();
 
+RooWorkspace e("e");
+e.import(Dst_DTF_D0_M);
+e.import(D0_ID);
+e.var("D0_ID")->setMin(300);
+e.var("D0_ID")->setMax(450);
+  
+e.factory("Gaussian::gausD(Dst_DTF_D0_M,m[1865,1860,1870],s[5,30])");
 
 
+RooDataSet data2("data","data",RooArgSet(Dst_DTF_D0_M,D0_ID),ImportFromFile("/Users/eugenia/Desktop/MYithephy/upVertex/D02Kmpip_15_Up.root", "ntp;25"));
+e.import(data2); 
+    
+e.pdf("gausD")->fitTo(data2);
+data2.plotOn(frameneg,MarkerStyle(kFullDotMedium),MarkerColor(12));
+e.pdf("gausD")->plotOn(frameneg,LineColor(kOrange));
+frameneg->Draw();
+    
+TCanvas* cROO= new TCanvas("cROO","cROO",400,10,1000,600);
+cROO->Divide(2,1);
+cROO->cd(1);
+frame->GetXaxis()->SetTitle("D0 bar invariant mass");
+
+frame->Draw();
+cROO->cd(2);
+frameneg->GetXaxis()->SetTitle("D0 invariant mass");
+frameneg->Draw();
+    
+cROO->SaveAs("D0roofit.pdf");
+    
 }
