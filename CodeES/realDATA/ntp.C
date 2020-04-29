@@ -481,8 +481,9 @@ w.import(data1);
 
 
 w.pdf("gausD")->fitTo(data1);
-data1.plotOn(frame,MarkerColor(40), MarkerStyle(kFullDotMedium),LineColor(40));
+data1.plotOn(frame, MarkerStyle(kFullDotMedium));
 w.pdf("gausD")->plotOn(frame,LineColor(46));
+w.pdf("gausD")->paramOn(frame);
 frame->Draw();
 
 RooWorkspace e("e");
@@ -498,20 +499,72 @@ RooDataSet data2("data","data",RooArgSet(Dst_DTF_D0_M,D0_ID),ImportFromFile("/Us
 e.import(data2); 
     
 e.pdf("gausD")->fitTo(data2);
-data2.plotOn(frameneg,MarkerStyle(kFullDotMedium),MarkerColor(12));
-e.pdf("gausD")->plotOn(frameneg,LineColor(kOrange));
+data2.plotOn(frameneg,MarkerStyle(kFullDotMedium));
+e.pdf("gausD")->plotOn(frameneg,LineColor(42));
+e.pdf("gausD")->paramOn(frameneg);
 frameneg->Draw();
+   
     
-TCanvas* cROO= new TCanvas("cROO","cROO",400,10,1000,600);
-cROO->Divide(2,1);
+ RooRealVar DTF_Mass("DTF_Mass", "DTF_Mass", 2007, 2013); 
+RooRealVar Dst_ID("Dst_ID", "Dst_ID",-450,-300 );    
+    RooPlot* frameDpos=DTF_Mass.frame();
+    RooPlot* frameDneg=DTF_Mass.frame();
+    
+   
+RooWorkspace f("f");
+f.import(DTF_Mass);
+f.import(Dst_ID);
+
+  
+f.factory("Gaussian::gausDf(DTF_Mass,m[2010.27,2009.8,2011],s[0.08,0.3])");
+
+
+RooDataSet data3("data","data",RooArgSet(DTF_Mass,Dst_ID),ImportFromFile("/Users/eugenia/Desktop/MYithephy/upVertex/D02Kmpip_15_Up.root", "ntp;26"));
+f.import(data3);    
+
+
+f.pdf("gausDf")->fitTo(data3);
+data3.plotOn(frameDneg, MarkerStyle(kFullDotMedium));
+f.pdf("gausDf")->plotOn(frameDneg,LineColor(38));
+f.pdf("gausDf")->paramOn(frameDneg);
+frameDneg->Draw();
+    
+ RooWorkspace g("g");
+g.import(DTF_Mass);
+g.import(Dst_ID);
+g.var("Dst_ID")->setMin(300);
+g.var("Dst_ID")->setMax(450);
+  
+g.factory("Gaussian::gausDe(DTF_Mass,m[2010.27,2009.9,2011.2],s[0.08,0.3])");
+
+
+RooDataSet data4("data","data",RooArgSet(DTF_Mass,Dst_ID),ImportFromFile("/Users/eugenia/Desktop/MYithephy/upVertex/D02Kmpip_15_Up.root", "ntp;25"));
+g.import(data4); 
+    
+g.pdf("gausDe")->fitTo(data4);
+data4.plotOn(frameDpos,MarkerStyle(kFullDotMedium));
+g.pdf("gausDe")->plotOn(frameDpos,LineColor(32));
+g.pdf("gausDe")->paramOn(frameDpos);
+frameDpos->Draw();   
+    
+    
+    
+    
+TCanvas* cROO= new TCanvas("cROO","cROO",400,10,1100,800);
+cROO->Divide(2,2);
 cROO->cd(1);
 frame->GetXaxis()->SetTitle("D0 bar invariant mass");
-
 frame->Draw();
 cROO->cd(2);
 frameneg->GetXaxis()->SetTitle("D0 invariant mass");
 frameneg->Draw();
+cROO->cd(3);
+frameDneg->GetXaxis()->SetTitle("D*- invariant mass");
+frameDneg->Draw();
+cROO->cd(4);
+frameDpos->GetXaxis()->SetTitle("D*+ invariant mass");
+frameDpos->Draw();
     
-cROO->SaveAs("D0roofit.pdf");
+cROO->SaveAs("D0D*roofit.pdf");
     
 }
