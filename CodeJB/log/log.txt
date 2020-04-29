@@ -1,5 +1,28 @@
 
 Processing data.cc++("$dir", "D02Kmpip_15_Up")...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+ERROR in TPDF::Open: Cannot open file:/output/data/plots/RooData.pdf
+[#0] ERROR:InputArguments -- RooAddPdf::RooAddPdf(model) pdf BW is not extendable, ignored
+[#1] INFO:Minization -- p.d.f. provides expected number of events, including extended term in likelihood.
+[#0] WARNING:Eval -- RooAddPdf::updateCoefCache(model) WARNING: total number of expected events is 0
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
+[#0] WARNING:Minization -- RooMinimizer::hesse: Error, run Migrad before Hesse!
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: deactivating const optimization
+[#0] ERROR:Plotting -- RooAddPdf::model:plotOn: WARNING: variable is not an explicit dependent: DTF_Mass
+[#0] ERROR:Plotting -- RooAddPdf::model:plotOn: WARNING: variable is not an explicit dependent: DTF_Mass
+[#0] ERROR:Plotting -- RooAddPdf::model:createPlotProjection: "DTF_Mass" is not a dependent and will be ignored.
+[#0] WARNING:Eval -- RooAddPdf::updateCoefCache(model) WARNING: total number of expected events is 0
+[#0] ERROR:Plotting -- RooAddPdf::model:plotOn: WARNING: variable is not an explicit dependent: DTF_Mass
+[#0] ERROR:Plotting -- RooAbsPdf::plotOn(model) ERROR: component selection expression 'BW' does not select any components of p.d.f.
+[#0] ERROR:Plotting -- RooAddPdf::model:plotOn: WARNING: variable is not an explicit dependent: DTF_Mass
+[#0] ERROR:Plotting -- RooAddPdf::model:plotOn: WARNING: variable is not an explicit dependent: DTF_Mass
+[#0] ERROR:Plotting -- RooAddPdf::model:createPlotProjection: "DTF_Mass" is not a dependent and will be ignored.
+[#0] WARNING:Eval -- RooAddPdf::updateCoefCache(model) WARNING: total number of expected events is 0
+ERROR in TPDF::Open: Cannot open file:/output/data/plots/RooFit.pdf
 === Event 0%
 === Event 10%
 === Event 20%
@@ -14,5 +37,5 @@ Processing data.cc++("$dir", "D02Kmpip_15_Up")...
 Number of reconstructed -: 1.34762e+06
 Number of reconstructed +: 1.29188e+06
 The total Dst assymmetry is: -0.0211162
-computation time/s: 21.109
-computation time/min: 0.351817
+computation time/s: 30.4829
+computation time/min: 0.508049

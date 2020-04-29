@@ -1,5 +1,10 @@
 #include "eff.h"
 #include <chrono>
+#include "RooRealVar.h"
+#include "RooBreitWigner.h"
+#include "RooDataSet.h"
+#include "RooPlot.h"
+#include "RooAddPdf.h"
 
 void printhists(TH1F *h)
 {
@@ -36,20 +41,20 @@ void data(string dir, string sample)
 
   RooRealVar *mean = new RooRealVar("mean", "mean", 2011., 2008., 2014.);
   RooRealVar *sigma = new RooRealVar("sigma", "sigma", 2.5, 2., 3.);
-  RooBreitWigner *gaus = new RooGaussian("gaus", "gaus", *x, *mean, *sigma)
-  RooAbsPdf *model = new RooAbsPdf("model", "model", RooArgList(*gaus));
+  RooBreitWigner *bw = new RooBreitWigner("BW", "BW", *x, *mean, *sigma);
+  RooAddPdf *model = new RooAddPdf("model", "model", RooArgList(*bw));
   model->fitTo(*dataset, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   RooPlot * xframe2 = x->frame();
   dataset->plotOn(xframe2);
   model->plotOn(xframe2);
-  model->plotOn(xframe2, RooFit::Components("gaus"), RooFit::LineColor(kAzure));
+  model->plotOn(xframe2, RooFit::Components("BW"), RooFit::LineColor(kAzure));
   model->plotOn(xframe2);
   model->paramOn(xframe2, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
   xframe2->Draw();
   canvas2->SaveAs("/output/data/plots/RooFit.pdf");
 
 
-  events->SetBranchStatus("*",0);
+  ntp->SetBranchStatus("*",0);
   ntp->SetBranchStatus("D0_M",1); ntp->SetBranchAddress("D0_M", &(D0_mass));
   ntp->SetBranchStatus("DTF_Mass",1); ntp->SetBranchAddress("DTF_Mass", &(DTF_mass));
 
