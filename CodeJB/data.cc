@@ -26,6 +26,16 @@ void data(string dir, string sample)
   double DTF_mass;
 
 
+  RooRealVar * x = new RooRealVar("DTF_Mass", "DTF mass [MeV]", 0, 2004., 2021.);
+  RooDataSet * dataset = new RooDataSet("data", "DTF_Mass data", ntp, RooArgSet(*x));
+  RooPlot * xframe = x->frame();
+  dataset->plotOn(xframe, RooFit::Binning(85));
+  TCanvas * canvas2 = new TCanvas();
+  xframe->Draw();
+  canvas2->SaveAs("/output/data/plots/RooData.pdf");
+  canvas2->Draw();
+
+
   ntp->SetBranchStatus("D0_M",1); ntp->SetBranchAddress("D0_M", &(D0_mass));
   ntp->SetBranchStatus("DTF_Mass",1); ntp->SetBranchAddress("DTF_Mass", &(DTF_mass));
 
