@@ -41,8 +41,12 @@ void data(string dir, string sample)
 
   RooRealVar *mean = new RooRealVar("mean", "mean", 2011., 2008., 2014.);
   RooRealVar *sigma = new RooRealVar("sigma", "sigma", 2.5, 2., 3.);
+  RooRealVar *mean2 = new RooRealVar("mean", "mean", 2013., 20010., 2014.);
+  RooRealVar *sigma2 = new RooRealVar("sigma", "sigma", 2.5, 2.4, 2.55);
+  RooRealVar * rel_frac = new RooRealVar("rel_frac", "Relative Fraction", 0.6, 0.0, 1.0);
   RooBreitWigner *bw = new RooBreitWigner("BW", "BW", *x, *mean, *sigma);
-  RooAddPdf *model = new RooAddPdf("model", "model", RooArgList(*bw));
+  RooBreitWigner *bw2 = new RooBreitWigner("BW2", "BW2", *x, *mean2, *sigma2);
+  RooAddPdf *model = new RooAddPdf("model", "model", RooArgList(*bw,*bw2), RooArgList(*rel_frac));
   model->fitTo(*dataset, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   RooPlot * xframe2 = x->frame();
   dataset->plotOn(xframe2);
