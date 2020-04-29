@@ -26,16 +26,30 @@ void data(string dir, string sample)
   double DTF_mass;
 
 
-  RooRealVar * x = new RooRealVar("DTF_Mass", "DTF mass [MeV]", 0, 2004., 2021.);
-  RooDataSet * dataset = new RooDataSet("data", "DTF_Mass data", ntp, RooArgSet(*x));
-  RooPlot * xframe = x->frame();
-  dataset->plotOn(xframe, RooFit::Binning(85));
-  TCanvas * canvas2 = new TCanvas();
+  RooRealVar *x = new RooRealVar("DTF_Mass", "DTF mass [MeV]", 0, 2004., 2020.);
+  RooDataSet *dataset = new RooDataSet("data", "DTF_Mass data", ntp, RooArgSet(*x));
+  RooPlot *xframe = x->frame();
+  dataset->plotOn(xframe, RooFit::Binning(80));
+  TCanvas *canvas2 = new TCanvas();
   xframe->Draw();
   canvas2->SaveAs("/output/data/plots/RooData.pdf");
-  canvas2->Draw();
+
+  RooRealVar *mean = new RooRealVar("mean", "mean", 2011., 2008., 2014.);
+  RooRealVar *sigma = new RooRealVar("sigma", "sigma", 2.5, 2., 3.);
+  RooBreitWigner *gaus = new RooGaussian("gaus", "gaus", *x, *mean, *sigma)
+  RooAbsPdf *model = new RooAbsPdf("model", "model", RooArgList(*gaus));
+  model->fitTo(*dataset, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+  RooPlot * xframe2 = x->frame();
+  dataset->plotOn(xframe2);
+  model->plotOn(xframe2);
+  model->plotOn(xframe2, RooFit::Components("gaus"), RooFit::LineColor(kAzure));
+  model->plotOn(xframe2);
+  model->paramOn(xframe2, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
+  xframe2->Draw();
+  canvas2->SaveAs("/output/data/plots/RooFit.pdf");
 
 
+  events->SetBranchStatus("*",0);
   ntp->SetBranchStatus("D0_M",1); ntp->SetBranchAddress("D0_M", &(D0_mass));
   ntp->SetBranchStatus("DTF_Mass",1); ntp->SetBranchAddress("DTF_Mass", &(DTF_mass));
 
@@ -53,9 +67,9 @@ void data(string dir, string sample)
   h_Dst_neg_D0m->Sumw2();
   h_Dst_asym_D0m->Sumw2();
 
-  TH1F *h_Dst_pos_DTFm = new TH1F("h_Dst_pos_DTFm", ";invariant DTF mass/MeV; Events", 85, 2004., 2021.);
-  TH1F *h_Dst_neg_DTFm = new TH1F("h_Dst_neg_DTFm", ";invariant DTF mass/MeV; Events", 85, 2004., 2021.);
-  TH1F *h_Dst_asym_DTFm = new TH1F("h_Dst_asym_DTFm", ";invariant DTF mass/MeV; assymmetry", 85, 2004., 2021.);
+  TH1F *h_Dst_pos_DTFm = new TH1F("h_Dst_pos_DTFm", ";invariant DTF mass/MeV; Events", 80, 2004., 2020.);
+  TH1F *h_Dst_neg_DTFm = new TH1F("h_Dst_neg_DTFm", ";invariant DTF mass/MeV; Events", 80, 2004., 2020.);
+  TH1F *h_Dst_asym_DTFm = new TH1F("h_Dst_asym_DTFm", ";invariant DTF mass/MeV; assymmetry", 80, 2004., 2020.);
 
   h_Dst_pos_DTFm->Sumw2();
   h_Dst_neg_DTFm->Sumw2();
