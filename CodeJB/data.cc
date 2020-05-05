@@ -29,7 +29,7 @@ void data(string dir, string sample)
 
   TCanvas *canvas2 = new TCanvas();
   TFile *f = new TFile("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root");
-  TH1F *h_pT_Dst = (TH1F*)f->Get("h_pT_Dst");
+  TH1F *h_pT_Dst = (TH1F*)f->Get("h_pT_reco_Dst");
   int nMCEvents = h_pT_Dst->GetEntries();
 
   h_pT_Dst->Scale(double(nEvents)/nMCEvents);
