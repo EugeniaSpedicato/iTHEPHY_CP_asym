@@ -39,7 +39,7 @@ void data(string dir, string sample)
   double D0_mass;
   double DTF_mass;
 
-  RooRealVar *y = new RooRealVar("Dst_PT", "Dstar pT/GeV", 2000.,11100.);
+  RooRealVar *y = new RooRealVar("Dst_DTF_PT", "Dstar pT/GeV", 2000.,11100.);
   RooDataSet *datahist = new RooDataSet("data_pT", "Dstar pT data", ntp, RooArgSet(*y));
   RooPlot *yframe = y->frame();
   datahist->plotOn(yframe, RooFit::Binning(182));
