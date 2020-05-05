@@ -22,10 +22,10 @@ void data(string dir, string sample)
 {
   uint64_t start_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
   string input_name = dir+"/"+sample+".root";
-  TChain *ntp = new TChain();
-  ntp->AddFile(input_name.c_str(),-1,"ntp;25");
-  ntp->AddFile(input_name.c_str(),-1,"ntp;26");
-  int nEvents = ntp->GetEntries();
+  TChain *nntp = new TChain();
+  nntp->AddFile(input_name.c_str(),-1,"ntp;25");
+  nntp->AddFile(input_name.c_str(),-1,"ntp;26");
+  int nEvents = nntp->GetEntries();
 
   TCanvas *canvas2 = new TCanvas();
   TFile *f = new TFile("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root");
@@ -38,7 +38,7 @@ void data(string dir, string sample)
   double DTF_mass;
 
   RooRealVar *y = new RooRealVar("Dst_PT", "Dstar pT/GeV", 2000.,11100.);
-  RooDataSet *datahist = new RooDataSet("data_pT", "Dstar pT data", ntp, RooArgSet(*y));
+  RooDataSet *datahist = new RooDataSet("data_pT", "Dstar pT data", nntp, RooArgSet(*y));
   RooPlot *yframe = y->frame();
   datahist->plotOn(yframe, RooFit::Binning(200));
 //  h_pT_Dst->Draw();
