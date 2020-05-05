@@ -3,11 +3,3 @@ Warning in cling::IncrementalParser::CheckABICompatibility():
   Possible C++ standard library mismatch, compiled with __GLIBCXX__ '20181206'
   Extraction of runtime standard library version was: '20191114'
 Info in <TCanvas::Print>: pdf file output/data/plots/pT_MC_data.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/RooData.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/RooFit.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/h_Dst_pos_D0m.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/h_Dst_neg_D0m.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/h_Dst_pos_DTFm.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/h_Dst_neg_DTFm.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/h_Dst_asym_D0m.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/h_Dst_asym_DTFm.pdf has been created

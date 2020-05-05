@@ -37,7 +37,7 @@ void data(string dir, string sample)
   double D0_mass;
   double DTF_mass;
 
-  RooRealVar *y = new RooRealVar("Dst_pT", "Dstar pT/GeV", 2000.,11100.);
+  RooRealVar *y = new RooRealVar("Dst_PT", "Dstar pT/GeV", 2000.,11100.);
   RooDataSet *datahist = new RooDataSet("data_pT", "Dstar pT data", ntp, RooArgSet(*y));
   RooPlot *yframe = y->frame();
   datahist->plotOn(yframe, RooFit::Binning(182));
@@ -45,7 +45,7 @@ void data(string dir, string sample)
   h_pT_Dst->Draw("same");
   h_pT_Dst->Draw("same hist");
   canvas2->SaveAs("output/data/plots/pT_MC_data.pdf");
-
+/*
   RooRealVar *x = new RooRealVar("DTF_Mass", "DTF mass [MeV]", 2004., 2020.);
   RooDataSet *dataset = new RooDataSet("data", "DTF_Mass data", ntp, RooArgSet(*x));
   RooPlot *xframe = x->frame();
@@ -158,7 +158,7 @@ void data(string dir, string sample)
   h_Dst_asym_DTFm->Write();
   out_hist_fi->Write();
   out_hist_fi->Close();
-
+*/
   uint64_t end_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
   float elapsed = (end_time - start_time)*0.000001;
   std::cout << "computation time/s: " << elapsed << std::endl;
