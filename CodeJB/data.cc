@@ -40,10 +40,10 @@ void data(string dir, string sample)
   RooRealVar *y = new RooRealVar("Dst_PT", "Dstar pT/GeV", 2000.,11100.);
   RooDataSet *datahist = new RooDataSet("data_pT", "Dstar pT data", ntp, RooArgSet(*y));
   RooPlot *yframe = y->frame();
-  datahist->plotOn(yframe, RooFit::Binning(182));
-  yframe->Draw();
-  h_pT_Dst->Draw("same");
+  datahist->plotOn(yframe, RooFit::Binning(200));
+  h_pT_Dst->Draw();
   h_pT_Dst->Draw("same hist");
+  yframe->Draw("same");
   canvas2->SaveAs("output/data/plots/pT_MC_data.pdf");
 /*
   RooRealVar *x = new RooRealVar("DTF_Mass", "DTF mass [MeV]", 2004., 2020.);
