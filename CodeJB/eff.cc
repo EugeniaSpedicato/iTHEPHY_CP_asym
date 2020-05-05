@@ -702,8 +702,7 @@ void eff(string dir, string sample, string polarisation)
     v_D0_var.clear();
     v_Dst_var.clear();
   }
-  h_pT_reco_Dst->Write();
-
+  
   vector<double> v_n_reco_ges = {nPi_reco,nK_reco,nSPi_reco,nD0_reco,nDst_reco};
   vector<double> v_n_reco_pos = {nPi_reco_pos,nK_reco_pos,nSPi_reco_pos,nD0_reco_pos,nDst_reco_pos};
   vector<double> v_n_reco_neg = {nPi_reco_neg,nK_reco_neg,nSPi_reco_neg,nD0_reco_neg,nDst_reco_neg};
@@ -743,20 +742,20 @@ void eff(string dir, string sample, string polarisation)
   hist_divide(v_K_hist_pos,v_K_hist_reco_pos);
   hist_divide(v_SPi_hist_pos,v_SPi_hist_reco_pos);
   hist_divide(v_D0_hist_pos,v_D0_hist_reco_pos);
-  hist_divide(v_Dst_hist_pos,v_Dst_hist_reco_pos);
+//  hist_divide(v_Dst_hist_pos,v_Dst_hist_reco_pos);
 
   hist_divide(v_Pi_hist_neg,v_Pi_hist_reco_neg);
   hist_divide(v_K_hist_neg,v_K_hist_reco_neg);
   hist_divide(v_SPi_hist_neg,v_SPi_hist_reco_neg);
   hist_divide(v_D0_hist_neg,v_D0_hist_reco_neg);
-  hist_divide(v_Dst_hist_neg,v_Dst_hist_reco_neg);
+//  hist_divide(v_Dst_hist_neg,v_Dst_hist_reco_neg);
 
 
   h_pT_reco_Pi->Write();
   h_pT_reco_K->Write();
   h_pT_reco_SPi->Write();
   h_pT_reco_D0->Write();
-//  h_pT_reco_Dst->Write();
+  h_pT_reco_Dst->Write();
 
   h_pT_Dst->Write();
 
