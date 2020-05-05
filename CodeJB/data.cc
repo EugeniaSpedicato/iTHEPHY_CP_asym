@@ -22,14 +22,16 @@ void data(string dir, string sample)
 {
   uint64_t start_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
   string input_name = dir+"/"+sample+".root";
-  TChain *nntp = new TChain();
-//  nntp->AddFile(input_name.c_str(),-1,"ntp;25");
-  nntp->AddFile(input_name.c_str(),-1,"ntp;26");
-  int nEvents = nntp->GetEntries();
+  TChain *ntp = new TChain();
+  ntp->AddFile(input_name.c_str(),-1,"ntp;25");
+  ntp->AddFile(input_name.c_str(),-1,"ntp;26");
+  int nEvents = ntp->GetEntries();
 
   TCanvas *canvas2 = new TCanvas();
   TFile *f = new TFile("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root");
-  TH1F *h_pT_Dst = (TH1F*)f->Get("h_pT_Dst");
+  TH1F *h_pT_Dst = (TH1F*)f->Get("h_pT_reco_Dst_neg;2");
+  int nMCevents = h_pT_Dst->GetEntries();
+
   h_pT_Dst->Scale(double(nEvents)/6163110.);
 
   double nDst_pos = 0.; double nDst_neg = 0.;
@@ -38,7 +40,7 @@ void data(string dir, string sample)
   double DTF_mass;
 
   RooRealVar *y = new RooRealVar("Dst_PT", "Dstar pT/GeV", 2000.,11100.);
-  RooDataSet *datahist = new RooDataSet("data_pT", "Dstar pT data", nntp, RooArgSet(*y));
+  RooDataSet *datahist = new RooDataSet("data_pT", "Dstar pT data", ntp, RooArgSet(*y));
   RooPlot *yframe = y->frame();
   datahist->plotOn(yframe, RooFit::Binning(200));
   yframe->Draw();
@@ -69,7 +71,7 @@ void data(string dir, string sample)
   xframe2->Draw();
   canvas2->SaveAs("output/data/plots/RooFit.pdf");
 
-
+*/
   ntp->SetBranchStatus("*",0);
   ntp->SetBranchStatus("D0_M",1); ntp->SetBranchAddress("D0_M", &(D0_mass));
   ntp->SetBranchStatus("DTF_Mass",1); ntp->SetBranchAddress("DTF_Mass", &(DTF_mass));
@@ -158,7 +160,7 @@ void data(string dir, string sample)
   h_Dst_asym_DTFm->Write();
   out_hist_fi->Write();
   out_hist_fi->Close();
-*/
+
   uint64_t end_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
   float elapsed = (end_time - start_time)*0.000001;
   std::cout << "computation time/s: " << elapsed << std::endl;
