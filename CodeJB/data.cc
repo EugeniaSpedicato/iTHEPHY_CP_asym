@@ -30,9 +30,9 @@ void data(string dir, string sample)
   TCanvas *canvas2 = new TCanvas();
   TFile *f = new TFile("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root");
   TH1F *h_pT_Dst = (TH1F*)f->Get("h_pT_reco_Dst_neg;2");
-  int nMCevents = h_pT_Dst->GetEntries();
+  int nMCEvents = h_pT_Dst->GetEntries();
 
-  h_pT_Dst->Scale(double(nEvents)/6163110.);
+  h_pT_Dst->Scale(double(nEvents)/nMCEvents);
 
   double nDst_pos = 0.; double nDst_neg = 0.;
   int Dst_ID, D0_ID, Pi_ID, K_ID;
