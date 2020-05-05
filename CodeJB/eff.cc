@@ -187,7 +187,7 @@ void hist_fill(vector<TH1F*> v_hist, vector<TH1F*> v_hist_reco, vector<TH1F*> v_
   {
     v_hist.at(i)->Fill(v_var.at(i), weight_tot);
   }
-  if(ID > 0 && n_pos < 3000000)
+  if(ID > 0)// && n_pos) < 3000000)
   {
     n_pos += weight_tot;
     for(int i = 0; i < size; ++i)
@@ -195,7 +195,7 @@ void hist_fill(vector<TH1F*> v_hist, vector<TH1F*> v_hist_reco, vector<TH1F*> v_
       v_hist_pos.at(i)->Fill(v_var.at(i), weight_tot);
     }
   }
-  else if(ID < 0 & n_neg < 3000000)
+  else if(ID < 0)// & n_neg < 3000000)
   {
     n_neg += weight_tot;
     for(int i = 0; i < size; ++i)
