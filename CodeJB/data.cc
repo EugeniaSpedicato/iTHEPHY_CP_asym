@@ -3,6 +3,7 @@
 #include "RooRealVar.h"
 #include "RooBreitWigner.h"
 #include "RooDataSet.h"
+#include "RooDataHist.h"
 #include "RooPlot.h"
 #include "RooAddPdf.h"
 #include "RooUniform.h"
@@ -27,22 +28,23 @@ void data(string dir, string sample)
   int nEvents = ntp->GetEntries();
 
   TCanvas *canvas2 = new TCanvas();
-  TFile *f = new TFile("output/minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root");
-  TH1F *h_pT_Dst = (TH1F*)f.Get("h_pT_Dst");
+  TFile *f = new TFile("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root");
+  TH1F *h_pT_Dst = (TH1F*)f->Get("h_pT_Dst");
   h_pT_Dst->Scale(double(nEvents)/6163110.);
 
   double nDst_pos = 0.; double nDst_neg = 0.;
   int Dst_ID, D0_ID, Pi_ID, K_ID;
   double D0_mass;
   double DTF_mass;
+
   RooRealVar *y = new RooRealVar("Dst_pT", "Dstar pT/GeV", 2000.,11100.);
-  RooDataHist *datahist = new RooDataSet("data_pT", "Dstar pT data", RooArgSet(*y), h_pT_Dst);
+  RooDataSet *datahist = new RooDataSet("data_pT", "Dstar pT data", ntp, RooArgSet(*y));
   RooPlot *yframe = y->frame();
   datahist->plotOn(yframe, RooFit::Binning(182));
   yframe->Draw();
   h_pT_Dst->Draw("same");
   h_pT_Dst->Draw("same hist");
-  canvas2->SaveAs("output/data/plots/pT_MC_data.pdf")
+  canvas2->SaveAs("output/data/plots/pT_MC_data.pdf");
 
   RooRealVar *x = new RooRealVar("DTF_Mass", "DTF mass [MeV]", 2004., 2020.);
   RooDataSet *dataset = new RooDataSet("data", "DTF_Mass data", ntp, RooArgSet(*x));

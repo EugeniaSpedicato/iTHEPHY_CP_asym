@@ -167,6 +167,7 @@
 ./data_cc.so: /home/smjoblan/builddir/include/TMatrixDUtils.h
 ./data_cc.so: /home/smjoblan/builddir/include/TMatrixDUtilsfwd.h
 ./data_cc.so: /home/smjoblan/builddir/include/RooDirItem.h
+./data_cc.so: /home/smjoblan/builddir/include/RooDataHist.h
 ./data_cc.so: /home/smjoblan/builddir/include/RooPlot.h
 ./data_cc.so: /home/smjoblan/builddir/include/RooList.h
 ./data_cc.so: /home/smjoblan/builddir/include/RooAddPdf.h
