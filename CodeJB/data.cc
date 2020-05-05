@@ -39,7 +39,7 @@ void data(string dir, string sample)
   double D0_mass;
   double DTF_mass;
 
-  RooRealVar *y = new RooRealVar("Dst_DTF_PT", "Dstar pT/GeV", 2000.,11100.);
+/*  RooRealVar *y = new RooRealVar("Dst_DTF_PT", "Dstar pT/GeV", 2000.,11100.);
   RooDataSet *datahist = new RooDataSet("data_pT", "Dstar pT data", ntp, RooArgSet(*y));
   RooPlot *yframe = y->frame();
   datahist->plotOn(yframe, RooFit::Binning(182));
@@ -47,7 +47,7 @@ void data(string dir, string sample)
   h_pT_Dst->Draw("same");
   h_pT_Dst->Draw("same hist");
   canvas2->SaveAs("output/data/plots/pT_MC_data.pdf");
-/*
+
   RooRealVar *x = new RooRealVar("DTF_Mass", "DTF mass [MeV]", 2004., 2020.);
   RooDataSet *dataset = new RooDataSet("data", "DTF_Mass data", ntp, RooArgSet(*x));
   RooPlot *xframe = x->frame();
@@ -94,9 +94,17 @@ void data(string dir, string sample)
   TH1F *h_Dst_neg_DTFm = new TH1F("h_Dst_neg_DTFm", ";invariant DTF mass/MeV; Events", 80, 2004., 2020.);
   TH1F *h_Dst_asym_DTFm = new TH1F("h_Dst_asym_DTFm", ";invariant DTF mass/MeV; assymmetry", 80, 2004., 2020.);
 
+  TH1F *h_delta_m_pos = new TH1F("h_delta_m_pos", "; #Delta m; Events", 124, 116., 178.);
+  TH1F *h_delta_m_neg = new TH1F("h_delta_m_neg", ";#Delta m; Events", 124, 116., 178.);
+  TH1F *h_delta_m_asym = new TH1F("h_delta_m_asym", ";#Delta m; assymmetry", 124, 116., 178.);
+
   h_Dst_pos_DTFm->Sumw2();
   h_Dst_neg_DTFm->Sumw2();
   h_Dst_asym_DTFm->Sumw2();
+
+  h_delta_m_neg->Sumw2();
+  h_delta_m_pos->Sumw2();
+  h_delta_m_asym->Sumw2();
 
   for (int i = 0; i < nEvents; ++i)
   {
@@ -109,12 +117,14 @@ void data(string dir, string sample)
     {
       h_Dst_neg_D0m->Fill(D0_mass);
       h_Dst_neg_DTFm->Fill(DTF_mass);
+      h_delta_m_neg->Fill(DTF_mass - D0_mass);
       ++nDst_neg;
     }
     else
     {
       h_Dst_pos_D0m->Fill(D0_mass);
       h_Dst_pos_DTFm->Fill(DTF_mass);
+      h_delta_m_pos->Fill(DTF_mass-D0_mass);
       ++nDst_pos;
     }
   }
@@ -128,6 +138,8 @@ void data(string dir, string sample)
   printhists(h_Dst_neg_D0m);
   printhists(h_Dst_pos_DTFm);
   printhists(h_Dst_neg_DTFm);
+  printhists(h_delta_m_neg);
+  printhists(h_delta_m_pos);
 
   string output_hist_name;
   output_hist_name = "output/data/histOut_"+sample+".root";
@@ -137,6 +149,16 @@ void data(string dir, string sample)
   h_Dst_neg_D0m->Write();
   h_Dst_pos_DTFm->Write();
   h_Dst_neg_DTFm->Write();
+
+  h_delta_m_pos->Add(h_delta_m_neg,-1);
+  h_delta_m_neg->Scale(2.);
+  h_delta_m_neg->Add(h_delta_m_pos);
+  h_delta_m_pos->Divide(h_delta_m_neg);
+  h_delta_m_asym = h_delta_m_pos;
+  h_delta_m_asym->SetName("h_delta_m_asym");
+  h_delta_m_asym->SetTitle(";#Delta m/MeV; assymmetry");
+  printhists(h_delta_m_asym);
+
 
   h_Dst_pos_D0m->Add(h_Dst_neg_D0m,-1);
   h_Dst_neg_D0m->Scale(2.);
