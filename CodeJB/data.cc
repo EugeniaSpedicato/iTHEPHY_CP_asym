@@ -157,6 +157,7 @@ void data(string dir, string sample)
   h_delta_m_asym = h_delta_m_pos;
   h_delta_m_asym->SetName("h_delta_m_asym");
   h_delta_m_asym->SetTitle(";#Delta m/MeV; assymmetry");
+  h_delta_m_asym->SetAxisRange(-0.2,0.2, "Y");
   printhists(h_delta_m_asym);
 
 
