@@ -42,7 +42,7 @@ void data(string dir, string sample)
   RooRealVar *y = new RooRealVar("Dst_PT", "Dstar pT/GeV", 2000.,11100.);
   RooDataSet *datahist = new RooDataSet("data_pT", "Dstar pT data", ntp, RooArgSet(*y));
   RooPlot *yframe = y->frame();
-  datahist->plotOn(yframe, RooFit::Binning(200));
+  datahist->plotOn(yframe, RooFit::Binning(182));
   yframe->Draw();
   h_pT_Dst->Draw("same");
   h_pT_Dst->Draw("same hist");
