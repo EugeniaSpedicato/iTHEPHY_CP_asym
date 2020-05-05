@@ -23,7 +23,7 @@ void data(string dir, string sample)
   uint64_t start_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
   string input_name = dir+"/"+sample+".root";
   TChain *nntp = new TChain();
-  nntp->AddFile(input_name.c_str(),-1,"ntp;25");
+//  nntp->AddFile(input_name.c_str(),-1,"ntp;25");
   nntp->AddFile(input_name.c_str(),-1,"ntp;26");
   int nEvents = nntp->GetEntries();
 
@@ -41,9 +41,9 @@ void data(string dir, string sample)
   RooDataSet *datahist = new RooDataSet("data_pT", "Dstar pT data", nntp, RooArgSet(*y));
   RooPlot *yframe = y->frame();
   datahist->plotOn(yframe, RooFit::Binning(200));
-//  h_pT_Dst->Draw();
-//  h_pT_Dst->Draw("same hist");
   yframe->Draw();
+  h_pT_Dst->Draw("same");
+  h_pT_Dst->Draw("same hist");
   canvas2->SaveAs("output/data/plots/pT_MC_data.pdf");
 /*
   RooRealVar *x = new RooRealVar("DTF_Mass", "DTF mass [MeV]", 2004., 2020.);
