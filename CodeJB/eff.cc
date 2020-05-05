@@ -493,7 +493,7 @@ void eff(string dir, string sample, string polarisation)
   TH1F *h_primary_y_pos_SPi_reco = new TH1F("h_primary_y_pos_SPi_reco", "h_primary_y_pos_SPi_reco", 66, -0.3, -0.08);
   TH1F *h_primary_y_neg_SPi_reco = new TH1F("h_primary_y_neg_SPi_reco", "h_primary_y_neg_SPi_reco", 66, -0.3, -0.08);
   TH1F *h_primary_y_SPi_reco = new TH1F("h_primary_y_SPi_reco", "h_primary_y_SPi_reco", 66, -0.3, -0.08);
-  
+
   TH1F *h_primary_z_pos_SPi = new TH1F("h_primary_z_pos_SPi", "h_primary_z_pos_SPi", 52, -130., 130.);
   TH1F *h_primary_z_neg_SPi = new TH1F("h_primary_z_neg_SPi", "h_primary_z_neg_SPi", 52, -130., 130.);
   TH1F *h_primary_z_SPi = new TH1F("h_primary_z_SPi", "h_primary_z_SPi", 52, -130., 130.);
@@ -756,6 +756,8 @@ void eff(string dir, string sample, string polarisation)
   h_pT_reco_SPi->Write();
   h_pT_reco_D0->Write();
   h_pT_reco_Dst->Write();
+  
+  h_pT_Dst->Write();
 
   h_phi_reco_Pi->Write();
   h_phi_reco_K->Write();
