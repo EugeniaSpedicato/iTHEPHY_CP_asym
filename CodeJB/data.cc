@@ -198,8 +198,8 @@ void data(string dir, string sample)
 
   data.plotOn(frame);
   //data2.plotOn(frame,RooFit::MarkerColor(2));
-  frame->Draw();
-  h_delta_m_neg->Draw("same hist");
+  h_delta_m_neg->Draw("hist");
+  //frame->Draw();
   canvas2->SaveAs("output/data/plots/datahist.pdf");
 
 
