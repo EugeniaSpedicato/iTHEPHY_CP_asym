@@ -209,8 +209,8 @@ void data(string dir, string sample)
   model_neg->paramOn(frame1, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
 
   TCanvas *canvas2 = new TCanvas();
-  frame1->Draw();
-  canvas2->SaveAs("output/data/plots/datahist.pdf");
+  //frame1->Draw();
+  //canvas2->SaveAs("output/data/plots/datahist.pdf");
 
   model_pos->fitTo(*data2, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   model_pos->plotOn(frame2, RooFit::Components("bkg_pos"), RooFit::LineColor(kAzure), RooFit::LineStyle(kDashed));
