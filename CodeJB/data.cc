@@ -198,7 +198,7 @@ void data(string dir, string sample)
   RooPlot *frame = dm->frame();
 
   TCanvas *canvas2 = new TCanvas();
-  data.plotOn(frame);
+//  data.plotOn(frame);
   data2.plotOn(frame,RooFit::MarkerColor(2));
   frame->Draw();
 
