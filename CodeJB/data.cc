@@ -188,17 +188,17 @@ void data(string dir, string sample)
 
   //RooFit things
 
-  RooRealVar *dm_neg = new RooRealVar("dm_neg", "dm_neg", 116., 178.);
-  RooDataHist *datahist_dmneg = new RooDataHist("data", "datahist", RooArgList(*dm_neg), h_delta_m_neg);
+  RooRealVar dm_neg("dm_neg", "dm_neg", 116., 178.);
+  RooDataHist datahist_dmneg("data", "datahist", dm_neg, h_delta_m_neg);
 
-  RooRealVar *dm_pos = new RooRealVar("dm_pos", "dm_pos", 116., 178.);
-  RooDataHist *datahist_dmpos = new RooDataHist("data2", "datahist2", RooArgList(*dm_pos), h_delta_m_pos);
+  RooRealVar dm_pos("dm_pos", "dm_pos", 116., 178.);
+  RooDataHist datahist_dmpos("data2", "datahist2", dm_pos, h_delta_m_pos);
 
-  RooPlot *neg_frame = dm_neg->frame();
-  RooPlot *pos_frame = dm_pos->frame();
+  RooPlot *neg_frame = dm_neg.frame();
+  RooPlot *pos_frame = dm_pos.frame();
 
-  datahist_dmneg->plotOn(neg_frame);
-  datahist_dmpos->plotOn(pos_frame);
+  datahist_dmneg.plotOn(neg_frame);
+  datahist_dmpos.plotOn(pos_frame);
 
   neg_frame->Draw();
   canvas2->SaveAs("output/data/plots/datahist_neg.pdf");
