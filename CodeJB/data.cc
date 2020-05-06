@@ -29,7 +29,7 @@ void data(string dir, string sample)
   ntp->AddFile(input_name.c_str(),-1,"ntp;26");
   int nEvents = ntp->GetEntries();
 
-  TCanvas *canvas2 = new TCanvas();
+
   TFile *f = new TFile("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root");
   TH1F *h_pT_Dst = (TH1F*)f->Get("h_pT_reco_Dst");
   int nMCEvents = h_pT_Dst->GetEntries();
@@ -181,14 +181,16 @@ void data(string dir, string sample)
   h_Dst_asym_DTFm->SetTitle(";invariant DTF mass/MeV; assymmetry");
   printhists(h_Dst_asym_DTFm);
 
-  h_delta_m_neg->Draw("hist");
-  canvas2->SaveAs("output/data/plots/datahist.pdf");
-  
+
   h_Dst_asym_D0m->Write();
   h_Dst_asym_DTFm->Write();
   out_hist_fi->Write();
   out_hist_fi->Close();
 
+  TCanvas *canvas2 = new TCanvas();
+  h_delta_m_neg->Draw("hist");
+
+  canvas2->SaveAs("output/data/plots/datahist.pdf");
   //RooFit things
 
   RooRealVar *dm = new RooRealVar("dm_neg", "dm_neg", 116., 178.);
