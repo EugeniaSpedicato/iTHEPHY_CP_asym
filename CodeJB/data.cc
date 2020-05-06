@@ -190,9 +190,9 @@ void data(string dir, string sample)
 
   RooRealVar *dm = new RooRealVar("dm_neg", "dm_neg", 116., 178.);
   //RooArgList list_dm = RooArgList(dm);
-  RooDataHist data("data", "datahist", RooArgList(dm), h_delta_m_neg);
+  RooDataHist data("data", "datahist", RooArgList(&dm), h_delta_m_neg);
 
-  RooDataHist data2("data2", "datahist2", RooArgList(dm), h_delta_m_pos);
+  RooDataHist data2("data2", "datahist2", RooArgList(&dm), h_delta_m_pos);
 
   RooPlot *frame = dm->frame();
 
