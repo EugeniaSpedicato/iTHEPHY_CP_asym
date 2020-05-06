@@ -193,7 +193,7 @@ void data(string dir, string sample)
   RooRealVar *c2 = new RooRealVar("c2", "c2", -3., -10., 10.);
   RooRealVar *mean2 = new RooRealVar("mean2", "mean2", 145., 140., 150.);
   RooRealVar *sigma2 = new RooRealVar("sigm2a", "sigma2", 8.3, 6., 10.);
-  RooRealVar *rel_frac = new RooRealVar("rel_frac", "rel_frac", 0.9, 0.2, 1.);
+  RooRealVar *rel_frac = new RooRealVar("rel_frac", "rel_frac", 0.7, 0.2, 1.);
   RooArgusBG *bkg_neg = new RooArgusBG("bkg_neg", "bkg_neg", *dm_neg, *m0, *c);
   RooGaussian *sig_neg = new RooGaussian("sig_neg", "sig_neg", *dm_neg, *mean, *sigma);
   RooArgusBG *bkg_pos = new RooArgusBG("bkg_neg", "bkg_pos", *dm_pos, *m0, *c);
@@ -206,14 +206,14 @@ void data(string dir, string sample)
   model_neg->plotOn(frame1, RooFit::Components("bkg_neg"), RooFit::LineColor(kAzure), RooFit::LineStyle(kDashed));
   data->plotOn(frame1);
   model_neg->plotOn(frame1);
-  model_neg->paramOn(frame1, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.8,0.9,0.8));
+  model_neg->paramOn(frame1, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.65,0.9,0.8));
 
 
   model_pos->fitTo(*data2, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   model_pos->plotOn(frame2, RooFit::Components("bkg_pos"), RooFit::LineColor(kAzure), RooFit::LineStyle(kDashed));
   data2->plotOn(frame2);
   model_pos->plotOn(frame2);
-  model_pos->paramOn(frame2, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.8,0.9,0.8));
+  model_pos->paramOn(frame2, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.65,0.9,0.8));
 
 
   TCanvas *canvas2 = new TCanvas();
@@ -221,8 +221,6 @@ void data(string dir, string sample)
   canvas2->SaveAs("output/data/plots/datahist.pdf");
   frame2->Draw();
   canvas2->SaveAs("output/data/plots/datahist2.pdf");
-  frame3->Draw();
-  canvas2->SaveAs("output/data/plots/datahist3.pdf");
 
   h_delta_m_pos->Add(h_delta_m_neg,-1);
   h_delta_m_neg->Scale(2.);
