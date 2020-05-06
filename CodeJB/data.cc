@@ -196,8 +196,8 @@ void data(string dir, string sample)
   RooRealVar *rel_frac = new RooRealVar("rel_frac", "rel_frac", 0.7, 0.2, 1.);
   RooArgusBG *bkg_neg = new RooArgusBG("bkg_neg", "bkg_neg", *dm_neg, *m0, *c);
   RooGaussian *sig_neg = new RooGaussian("sig_neg", "sig_neg", *dm_neg, *mean, *sigma);
-  RooArgusBG *bkg_pos = new RooArgusBG("bkg_neg", "bkg_pos", *dm_pos, *m02, *c2);
-  RooGaussian *sig_pos = new RooGaussian("sig_neg", "sig_pos", *dm_pos, *mean2, *sigma2);
+  RooArgusBG *bkg_pos = new RooArgusBG("bkg_pos", "bkg_pos", *dm_pos, *m02, *c2);
+  RooGaussian *sig_pos = new RooGaussian("sig_pos", "sig_pos", *dm_pos, *mean2, *sigma2);
   RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig_neg,*bkg_neg), RooArgList(*rel_frac));
   RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig_pos,*bkg_pos), RooArgList(*rel_frac));
 
