@@ -201,9 +201,9 @@ void data(string dir, string sample)
   datahist_dmpos->plotOn(pos_frame, RooFit::Binning(124));
 
   neg_frame->Draw();
-  canvas2.SaveAs("output/data/plots/datahist_neg.pdf");
+  canvas2->SaveAs("output/data/plots/datahist_neg.pdf");
   pos_frame->Draw();
-  canvas2.SaveAs("output/data/plots/datahist_pos.pdf");
+  canvas2->SaveAs("output/data/plots/datahist_pos.pdf");
 
 /*  RooRealVar *m0 = new RooRealVar("m0", "m0", 176., 170., 178.);
   RooRealVar *c = new RooRealVar("c", "c", 2., 0.5, 5.);
