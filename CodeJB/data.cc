@@ -172,7 +172,10 @@ void data(string dir, string sample)
   h_Dst_asym_DTFm->SetTitle(";invariant DTF mass/MeV; assymmetry");
   printhists(h_Dst_asym_DTFm);
 
-
+  double scale1 = h_delta_m_neg->GetEntries();
+  double scale2 = h_delta_m_pos->GetEntries();
+  h_delta_m_neg->Scale(1./scale1);
+  h_delta_m_pos->Scale(1./scale2);
   //RooFit things
 
   RooRealVar *dm_neg = new RooRealVar("dm_neg", "dm_neg", 116., 178.);
