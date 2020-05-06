@@ -194,8 +194,8 @@ void data(string dir, string sample)
   RooRealVar *dm_pos = new RooRealVar("dm_pos", "dm_pos", 116., 178.);
   RooDataHist *datahist_dmpos = new RooDataHist("data2", "datahist2", RooArgList(*dm_pos), h_delta_m_pos);
 
-  RooPlot *neg_frame = dm_neg.frame();
-  RooPlot *pos_frame = dm_pos.frame();
+  RooPlot *neg_frame = dm_neg->frame();
+  RooPlot *pos_frame = dm_pos->frame();
 
   RooRealVar *m0 = new RooRealVar("m0", "m0", 176., 170., 178.);
   RooRealVar *c = new RooRealVar("c", "c", 2., 0.5, 5.);
@@ -209,8 +209,10 @@ void data(string dir, string sample)
 
   model_neg->fitTo(*datahist_dmneg, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   model_pos->fitTo(*datahist_dmpos, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+
   datahist_dmneg->plotOn(neg_frame);
   datahist_dmpos->plotOn(pos_frame);
+
   model_neg->plotOn(neg_frame);
   model_pos->plotOn(pos_frame);
   model_neg->plotOn(neg_frame, RooFit::Components("bkg_neg"), RooFit::LineColor(kAzure), RooFit::LineStyle(kDashed));
