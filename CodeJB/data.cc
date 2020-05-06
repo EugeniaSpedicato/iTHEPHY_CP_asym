@@ -204,8 +204,12 @@ void data(string dir, string sample)
   RooRealVar *rel_frac = new RooRealVar("rel_frac", "rel_frac", 0.8, 0., 1.);
   RooArgusBG *bkg_neg = new RooArgusBG("bkg_neg", "bkg_neg", *dm_neg, *m0, *c);
   RooGaussian *sig_neg = new RooGaussian("sig_neg", "sig_neg", *dm_neg, *mean, *sigma);
-  RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig_neg,*bkg_neg), RooArgList(*rel_frac));
-  RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig_neg,*bkg_neg), RooArgList(*rel_frac));
+  //RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig_neg,*bkg_neg), RooArgList(*rel_frac));
+  //RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig_neg,*bkg_neg), RooArgList(*rel_frac));
+
+  RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig_neg));
+  RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig_neg));
+
 
   model_neg->fitTo(*datahist_dmneg, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   model_pos->fitTo(*datahist_dmpos, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
@@ -215,8 +219,8 @@ void data(string dir, string sample)
 
   model_neg->plotOn(neg_frame);
   model_pos->plotOn(pos_frame);
-  model_neg->plotOn(neg_frame, RooFit::Components("bkg_neg"), RooFit::LineColor(kAzure), RooFit::LineStyle(kDashed));
-  model_pos->plotOn(pos_frame, RooFit::Components("bkg_neg"), RooFit::LineColor(kAzure), RooFit::LineStyle(kDashed));
+  //model_neg->plotOn(neg_frame, RooFit::Components("bkg_neg"), RooFit::LineColor(kAzure), RooFit::LineStyle(kDashed));
+  //model_pos->plotOn(pos_frame, RooFit::Components("bkg_neg"), RooFit::LineColor(kAzure), RooFit::LineStyle(kDashed));
   model_neg->plotOn(neg_frame);  model_pos->plotOn(pos_frame);
   model_neg->paramOn(neg_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
   model_pos->paramOn(pos_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
