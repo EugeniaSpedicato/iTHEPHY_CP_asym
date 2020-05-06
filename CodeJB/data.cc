@@ -199,9 +199,9 @@ void data(string dir, string sample)
 
   TCanvas *canvas2 = new TCanvas();
   data.plotOn(frame);
-  //data2.plotOn(frame,RooFit::MarkerColor(2));
+  data2.plotOn(frame,RooFit::MarkerColor(2));
   frame->Draw();
-  h_delta_m_neg->Draw("same hist");
+
 
   canvas2->SaveAs("output/data/plots/datahist.pdf");
 
