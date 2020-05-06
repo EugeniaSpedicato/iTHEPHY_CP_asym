@@ -187,10 +187,6 @@ void data(string dir, string sample)
   out_hist_fi->Write();
   out_hist_fi->Close();
 
-  TCanvas *canvas2 = new TCanvas();
-  h_delta_m_neg->Draw("hist");
-
-  canvas2->SaveAs("output/data/plots/datahist.pdf");
   //RooFit things
 
   RooRealVar *dm = new RooRealVar("dm_neg", "dm_neg", 116., 178.);
@@ -201,9 +197,13 @@ void data(string dir, string sample)
 
   RooPlot *frame = dm->frame();
 
+  TCanvas *canvas2 = new TCanvas();
   data.plotOn(frame);
   //data2.plotOn(frame,RooFit::MarkerColor(2));
-  //frame->Draw();
+  frame->Draw();
+  h_delta_m_neg->Draw("same hist");
+
+  canvas2->SaveAs("output/data/plots/datahist.pdf");
 
 
 /*  RooRealVar *m0 = new RooRealVar("m0", "m0", 176., 170., 178.);
