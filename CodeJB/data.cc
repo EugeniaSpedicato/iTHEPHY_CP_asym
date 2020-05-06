@@ -189,7 +189,7 @@ void data(string dir, string sample)
   //RooFit things
 
   RooRealVar dm("dm_neg", "dm_neg", 116., 178.);
-  list_dm = RooArgList(dm);
+  RooArgList list_dm = RooArgList(dm);
   RooDataHist data("data", "datahist", list_dm, h_delta_m_neg);
 
   RooDataHist data2("data2", "datahist2", list_dm, h_delta_m_pos);
