@@ -8,7 +8,7 @@ Info in <TCanvas::Print>: pdf file output/data/plots/h_Dst_pos_DTFm.pdf has been
 Info in <TCanvas::Print>: pdf file output/data/plots/h_Dst_neg_DTFm.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/h_delta_m_neg.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/h_delta_m_pos.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/h_delta_m_asym.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/h_Dst_asym_D0m.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/h_Dst_asym_DTFm.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/datahist.pdf has been created
+Info in <TCanvas::Print>: pdf file output/data/plots/h_delta_m_asym.pdf has been created
