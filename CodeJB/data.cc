@@ -196,8 +196,8 @@ void data(string dir, string sample)
   RooRealVar *rel_frac = new RooRealVar("rel_frac", "rel_frac", 0.7, 0.2, 1.);
   RooArgusBG *bkg_neg = new RooArgusBG("bkg_neg", "bkg_neg", *dm_neg, *m0, *c);
   RooGaussian *sig_neg = new RooGaussian("sig_neg", "sig_neg", *dm_neg, *mean, *sigma);
-  RooArgusBG *bkg_pos = new RooArgusBG("bkg_neg", "bkg_pos", *dm_pos, *m0, *c);
-  RooGaussian *sig_pos = new RooGaussian("sig_neg", "sig_pos", *dm_pos, *mean, *sigma);
+  RooArgusBG *bkg_pos = new RooArgusBG("bkg_neg", "bkg_pos", *dm_pos, *m02, *c2);
+  RooGaussian *sig_pos = new RooGaussian("sig_neg", "sig_pos", *dm_pos, *mean2, *sigma2);
   RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig_neg,*bkg_neg), RooArgList(*rel_frac));
   RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig_pos,*bkg_pos), RooArgList(*rel_frac));
 
@@ -209,8 +209,8 @@ void data(string dir, string sample)
   model_neg->paramOn(frame1, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
 
   TCanvas *canvas2 = new TCanvas();
-  //frame1->Draw();
-  //canvas2->SaveAs("output/data/plots/datahist.pdf");
+  frame1->Draw();
+  canvas2->SaveAs("output/data/plots/datahist.pdf");
 
   model_pos->fitTo(*data2, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   model_pos->plotOn(frame2, RooFit::Components("bkg_pos"), RooFit::LineColor(kAzure), RooFit::LineStyle(kDashed));
