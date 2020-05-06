@@ -181,6 +181,9 @@ void data(string dir, string sample)
   h_Dst_asym_DTFm->SetTitle(";invariant DTF mass/MeV; assymmetry");
   printhists(h_Dst_asym_DTFm);
 
+  h_delta_m_neg->Draw("hist");
+  canvas2->SaveAs("output/data/plots/datahist.pdf");
+  
   h_Dst_asym_D0m->Write();
   h_Dst_asym_DTFm->Write();
   out_hist_fi->Write();
@@ -198,9 +201,7 @@ void data(string dir, string sample)
 
   data.plotOn(frame);
   //data2.plotOn(frame,RooFit::MarkerColor(2));
-  h_delta_m_neg->Draw("hist");
   //frame->Draw();
-  canvas2->SaveAs("output/data/plots/datahist.pdf");
 
 
 /*  RooRealVar *m0 = new RooRealVar("m0", "m0", 176., 170., 178.);
