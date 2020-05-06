@@ -152,15 +152,6 @@ void data(string dir, string sample)
   h_Dst_pos_DTFm->Write();
   h_Dst_neg_DTFm->Write();
 
-  h_delta_m_pos->Add(h_delta_m_neg,-1);
-  h_delta_m_neg->Scale(2.);
-  h_delta_m_neg->Add(h_delta_m_pos);
-  h_delta_m_pos->Divide(h_delta_m_neg);
-  h_delta_m_asym = h_delta_m_pos;
-  h_delta_m_asym->SetName("h_delta_m_asym");
-  h_delta_m_asym->SetTitle(";#Delta m/MeV; assymmetry");
-  h_delta_m_asym->SetAxisRange(-0.05, 0.05, "Y");
-  printhists(h_delta_m_asym);
 
 
   h_Dst_pos_D0m->Add(h_Dst_neg_D0m,-1);
@@ -182,11 +173,6 @@ void data(string dir, string sample)
   printhists(h_Dst_asym_DTFm);
 
 
-  h_Dst_asym_D0m->Write();
-  h_Dst_asym_DTFm->Write();
-  out_hist_fi->Write();
-  out_hist_fi->Close();
-
   //RooFit things
 
   RooRealVar *dm = new RooRealVar("dm_neg", "dm_neg", 116., 178.);
@@ -198,7 +184,7 @@ void data(string dir, string sample)
   RooPlot *frame = dm->frame();
 
   TCanvas *canvas2 = new TCanvas();
-//  data.plotOn(frame);
+  data.plotOn(frame);
   data2.plotOn(frame,RooFit::MarkerColor(2));
   frame->Draw();
 
@@ -236,6 +222,21 @@ void data(string dir, string sample)
   model_neg->paramOn(neg_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
   model_pos->paramOn(pos_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
 */
+
+  h_delta_m_pos->Add(h_delta_m_neg,-1);
+  h_delta_m_neg->Scale(2.);
+  h_delta_m_neg->Add(h_delta_m_pos);
+  h_delta_m_pos->Divide(h_delta_m_neg);
+  h_delta_m_asym = h_delta_m_pos;
+  h_delta_m_asym->SetName("h_delta_m_asym");
+  h_delta_m_asym->SetTitle(";#Delta m/MeV; assymmetry");
+  h_delta_m_asym->SetAxisRange(-0.05, 0.05, "Y");
+  printhists(h_delta_m_asym);
+
+  h_Dst_asym_D0m->Write();
+  h_Dst_asym_DTFm->Write();
+  out_hist_fi->Write();
+  out_hist_fi->Close();
 
   uint64_t end_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
   float elapsed = (end_time - start_time)*0.000001;
