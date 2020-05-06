@@ -197,7 +197,15 @@ void data(string dir, string sample)
   RooPlot *neg_frame = dm_neg->frame();
   RooPlot *pos_frame = dm_pos->frame();
 
-  RooRealVar *m0 = new RooRealVar("m0", "m0", 176., 170., 178.);
+  datahist_dmneg->plotOn(neg_frame, RooFit::Binning(124));
+  datahist_dmpos->plotOn(pos_frame, RooFit::Binning(124));
+
+  neg_frame->Draw();
+  canvas2.SaveAs("output/data/plots/datahist_neg.pdf");
+  pos_frame->Draw();
+  canvas2.SaveAs("output/data/plots/datahist_pos.pdf");
+
+/*  RooRealVar *m0 = new RooRealVar("m0", "m0", 176., 170., 178.);
   RooRealVar *c = new RooRealVar("c", "c", 2., 0.5, 5.);
   RooRealVar *mean = new RooRealVar("mean", "mean", 146., 135., 155.);
   RooRealVar *sigma = new RooRealVar("sigma", "sigma", 8., 4., 10.);
@@ -226,7 +234,7 @@ void data(string dir, string sample)
   model_neg->plotOn(neg_frame);  model_pos->plotOn(pos_frame);
   model_neg->paramOn(neg_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
   model_pos->paramOn(pos_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
-
+*/
 
   uint64_t end_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
   float elapsed = (end_time - start_time)*0.000001;
