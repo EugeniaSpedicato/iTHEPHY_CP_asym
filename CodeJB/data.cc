@@ -189,13 +189,17 @@ void data(string dir, string sample)
   RooRealVar *c = new RooRealVar("c", "c", 2., 0.5, 5.);
   RooRealVar *mean = new RooRealVar("mean", "mean", 146., 135., 155.);
   RooRealVar *sigma = new RooRealVar("sigma", "sigma", 8., 4., 10.);
-  RooRealVar *rel_frac = new RooRealVar("rel_frac", "rel_frac", 0.9, 0.7, 1.);
+  RooRealVar *m02 = new RooRealVar("m02", "m02", 176., 170., 178.);
+  RooRealVar *c2 = new RooRealVar("c2", "c2", 2., 0.5, 5.);
+  RooRealVar *mean2 = new RooRealVar("mean2", "mean2", 145., 140., 150.);
+  RooRealVar *sigma2 = new RooRealVar("sigm2a", "sigma2", 8.3, 6., 10.);
+  RooRealVar *rel_frac = new RooRealVar("rel_frac", "rel_frac", 0.9, 0.2, 1.);
   RooArgusBG *bkg_neg = new RooArgusBG("bkg_neg", "bkg_neg", *dm_neg, *m0, *c);
   RooGaussian *sig_neg = new RooGaussian("sig_neg", "sig_neg", *dm_neg, *mean, *sigma);
   RooArgusBG *bkg_pos = new RooArgusBG("bkg_neg", "bkg_pos", *dm_pos, *m0, *c);
   RooGaussian *sig_pos = new RooGaussian("sig_neg", "sig_pos", *dm_pos, *mean, *sigma);
-  RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig_neg,*sig_pos), RooArgList(*rel_frac));
-  RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig_pos,*sig_neg), RooArgList(*rel_frac));
+  RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig_neg,*bkg_neg), RooArgList(*rel_frac));
+  RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig_pos,*bkg_pos), RooArgList(*rel_frac));
 
   //RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig_neg));
   //RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig_pos));
