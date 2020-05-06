@@ -175,24 +175,17 @@ void data(string dir, string sample)
 
   //RooFit things
 
-  RooRealVar *dm = new RooRealVar("dm_neg", "dm_neg", 116., 178.);
-  //RooArgList list_dm = RooArgList(dm);
-  RooDataHist data("data", "datahist", RooArgList(*dm), h_delta_m_neg);
+  RooRealVar *dm_neg = new RooRealVar("dm_neg", "dm_neg", 116., 178.);
+  RooRealVar *dm_pos = new RooRealVar("dm_neg", "dm_neg", 116., 178.);
+  RooDataHist data("data", "datahist", RooArgList(*dm_neg), h_delta_m_neg);
 
-  RooDataHist data2("data2", "datahist2", RooArgList(*dm), h_delta_m_pos);
+  RooDataHist data2("data2", "datahist2", RooArgList(*dm_pos), h_delta_m_pos);
 
-  RooPlot *frame = dm->frame();
-
-  TCanvas *canvas2 = new TCanvas();
-  data.plotOn(frame);
-  data2.plotOn(frame,RooFit::MarkerColor(2));
-  frame->Draw();
+  RooPlot *frame1 = dm_neg->frame();  RooPlot *frame2 = dm_pos->frame();
 
 
-  canvas2->SaveAs("output/data/plots/datahist.pdf");
 
-
-/*  RooRealVar *m0 = new RooRealVar("m0", "m0", 176., 170., 178.);
+  RooRealVar *m0 = new RooRealVar("m0", "m0", 176., 170., 178.);
   RooRealVar *c = new RooRealVar("c", "c", 2., 0.5, 5.);
   RooRealVar *mean = new RooRealVar("mean", "mean", 146., 135., 155.);
   RooRealVar *sigma = new RooRealVar("sigma", "sigma", 8., 4., 10.);
@@ -208,20 +201,28 @@ void data(string dir, string sample)
   RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig_pos));
 
 
-  model_neg->fitTo(*datahist_dmneg, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
-  model_pos->fitTo(*datahist_dmpos, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+  model_neg->fitTo(*data, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+  model_pos->fitTo(*data2, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
 
-  datahist_dmneg->plotOn(neg_frame);
-  datahist_dmpos->plotOn(pos_frame);
+  data->plotOn(frame1);
+  model_neg->plotOn(frame1);
+  model_neg->paramOn(frame1, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
 
-  model_neg->plotOn(neg_frame);
-  model_pos->plotOn(pos_frame);
+
+
   //model_neg->plotOn(neg_frame, RooFit::Components("bkg_neg"), RooFit::LineColor(kAzure), RooFit::LineStyle(kDashed));
   //model_pos->plotOn(pos_frame, RooFit::Components("bkg_pos"), RooFit::LineColor(kAzure), RooFit::LineStyle(kDashed));
-  model_neg->plotOn(neg_frame);  model_pos->plotOn(pos_frame);
-  model_neg->paramOn(neg_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
-  model_pos->paramOn(pos_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
-*/
+
+  data2->plotOn(frame2);
+  model_pos->plotOn(frame2);
+  model_pos->paramOn(frame2, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
+
+
+  TCanvas *canvas2 = new TCanvas();
+  frame1->Draw();
+  canvas2->SaveAs("output/data/plots/datahist.pdf");
+  frame2->Draw();
+  canvas2->SaveAs("output/data/plots/datahist2.pdf");
 
   h_delta_m_pos->Add(h_delta_m_neg,-1);
   h_delta_m_neg->Scale(2.);
