@@ -181,7 +181,7 @@ void data(string dir, string sample)
 
   RooDataHist *data2 =  new RooDataHist("data2", "datahist2", RooArgList(*dm_pos), h_delta_m_pos);
 
-  RooPlot *frame1 = dm_neg->frame();  RooPlot *frame2 = dm_pos->frame();
+  RooPlot *frame1 = dm_neg->frame();  RooPlot *frame2 = dm_pos->frame(); RooPlot *frame3 = dm_pos->frame();
 
 
 
@@ -210,19 +210,19 @@ void data(string dir, string sample)
   sig_neg->fitTo(*data, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   data->plotOn(frame1);
   sig_neg->plotOn(frame1);
-  sig_neg->paramOn(frame1, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.8,0.9,0.8));
+  sig_neg->paramOn(frame1, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.65,0.9,0.8));
 
   //model_neg->plotOn(frame1);
   //model_neg->paramOn(frame1, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.8,0.9,0.8));
 
-
+  bkg_pos->plotOn(frame3);
 
   //model_neg->plotOn(frame1, RooFit::Components("bkg_neg"), RooFit::LineColor(kAzure), RooFit::LineStyle(kDashed));
   //model_pos->plotOn(frame2, RooFit::Components("bkg_pos"), RooFit::LineColor(kAzure), RooFit::LineStyle(kDashed));
   sig_pos->fitTo(*data2, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   data2->plotOn(frame2);
   sig_pos->plotOn(frame2);
-  sig_pos->paramOn(frame2, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.8,0.9,0.8));
+  sig_pos->paramOn(frame2, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.65,0.9,0.8));
 
   //model_pos->plotOn(frame2);
   //model_pos->paramOn(frame2, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.8,0.9,0.8));
@@ -233,6 +233,8 @@ void data(string dir, string sample)
   canvas2->SaveAs("output/data/plots/datahist.pdf");
   frame2->Draw();
   canvas2->SaveAs("output/data/plots/datahist2.pdf");
+  frame3->Draw();
+  canvas2->SaveAs("output/data/plots/datahist3.pdf");
 
   h_delta_m_pos->Add(h_delta_m_neg,-1);
   h_delta_m_neg->Scale(2.);
