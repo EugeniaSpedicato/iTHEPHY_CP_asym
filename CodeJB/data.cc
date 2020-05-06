@@ -185,12 +185,12 @@ void data(string dir, string sample)
 
 
 
-  RooRealVar *m0 = new RooRealVar("m0", "m0", 176., 170., 178.);
-  RooRealVar *c = new RooRealVar("c", "c", 2., 0.5, 5.);
+  RooRealVar *m0 = new RooRealVar("m0", "m0", 600., 0., 1000.);
+  RooRealVar *c = new RooRealVar("c", "c", 6., 0.5, 10.);
   RooRealVar *mean = new RooRealVar("mean", "mean", 146., 135., 155.);
   RooRealVar *sigma = new RooRealVar("sigma", "sigma", 8., 4., 10.);
-  RooRealVar *m02 = new RooRealVar("m02", "m02", 176., 170., 178.);
-  RooRealVar *c2 = new RooRealVar("c2", "c2", 2., 0.5, 5.);
+  RooRealVar *m02 = new RooRealVar("m02", "m02", 500., 0., 900.);
+  RooRealVar *c2 = new RooRealVar("c2", "c2", 7., 2.5, 10.);
   RooRealVar *mean2 = new RooRealVar("mean2", "mean2", 145., 140., 150.);
   RooRealVar *sigma2 = new RooRealVar("sigm2a", "sigma2", 8.3, 6., 10.);
   RooRealVar *rel_frac = new RooRealVar("rel_frac", "rel_frac", 0.9, 0.2, 1.);
