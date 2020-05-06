@@ -188,10 +188,10 @@ void data(string dir, string sample)
 
   //RooFit things
 
-  RooRealVar dm_neg("dm_neg", "dm_neg", 116., 178.);
+  RooRealVar dm_neg("dm_neg", "dm_neg", 116, 178);
   RooDataHist datahist_dmneg("data", "datahist", dm_neg, h_delta_m_neg);
 
-  RooRealVar dm_pos("dm_pos", "dm_pos", 116., 178.);
+  RooRealVar dm_pos("dm_pos", "dm_pos", 116, 178);
   RooDataHist datahist_dmpos("data2", "datahist2", dm_pos, h_delta_m_pos);
 
   RooPlot *neg_frame = dm_neg.frame();
