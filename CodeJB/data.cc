@@ -188,13 +188,13 @@ void data(string dir, string sample)
 
   //RooFit things
 
-  RooRealVar dm("dm_neg", "dm_neg", 116., 178.);
-  RooArgList list_dm = RooArgList(dm);
-  RooDataHist data("data", "datahist", list_dm, h_delta_m_neg);
+  RooRealVar *dm = new RooRealVar("dm_neg", "dm_neg", 116., 178.);
+  //RooArgList list_dm = RooArgList(dm);
+  RooDataHist data("data", "datahist", RooArgList(*dm), &h_delta_m_neg);
 
-  RooDataHist data2("data2", "datahist2", list_dm, h_delta_m_pos);
+  RooDataHist data2("data2", "datahist2", RooArgList(*dm), &h_delta_m_pos);
 
-  RooPlot *frame = dm.frame();
+  RooPlot *frame = dm->frame();
 
   data.plotOn(frame);
   data2.plotOn(frame,RooFit::MarkerColor(2));
