@@ -206,19 +206,19 @@ void data(string dir, string sample)
   model_neg->plotOn(frame1, RooFit::Components("bkg_neg"), RooFit::LineColor(kAzure), RooFit::LineStyle(kDashed));
   data->plotOn(frame1);
   model_neg->plotOn(frame1);
-  model_neg->paramOn(frame1, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.65,0.9,0.8));
+  model_neg->paramOn(frame1, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
 
+  TCanvas *canvas2 = new TCanvas();
+  frame1->Draw();
+  canvas2->SaveAs("output/data/plots/datahist.pdf");
 
   model_pos->fitTo(*data2, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   model_pos->plotOn(frame2, RooFit::Components("bkg_pos"), RooFit::LineColor(kAzure), RooFit::LineStyle(kDashed));
   data2->plotOn(frame2);
   model_pos->plotOn(frame2);
-  model_pos->paramOn(frame2, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.65,0.9,0.8));
+  model_pos->paramOn(frame2, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
 
 
-  TCanvas *canvas2 = new TCanvas();
-  frame1->Draw();
-  canvas2->SaveAs("output/data/plots/datahist.pdf");
   frame2->Draw();
   canvas2->SaveAs("output/data/plots/datahist2.pdf");
 
