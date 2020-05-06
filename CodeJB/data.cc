@@ -197,12 +197,10 @@ void data(string dir, string sample)
   RooPlot *frame = dm.frame();
 
   data.plotOn(frame);
+  data2.plotOn(frame,RooFit::MarkerColor(2));
   frame->Draw();
-  canvas2->SaveAs("output/data/plots/datahist_neg.pdf");
+  canvas2->SaveAs("output/data/plots/datahist.pdf");
 
-  data2.plotOn(frame);
-  frame->Draw();
-  canvas2->SaveAs("output/data/plots/datahist_pos.pdf");
 
 /*  RooRealVar *m0 = new RooRealVar("m0", "m0", 176., 170., 178.);
   RooRealVar *c = new RooRealVar("c", "c", 2., 0.5, 5.);
