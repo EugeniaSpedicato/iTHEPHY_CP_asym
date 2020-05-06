@@ -197,8 +197,8 @@ void data(string dir, string sample)
   RooPlot *neg_frame = dm_neg->frame();
   RooPlot *pos_frame = dm_pos->frame();
 
-  datahist_dmneg->plotOn(neg_frame, RooFit::Binning(124));
-  datahist_dmpos->plotOn(pos_frame, RooFit::Binning(124));
+  datahist_dmneg->plotOn(neg_frame);
+  datahist_dmpos->plotOn(pos_frame);
 
   neg_frame->Draw();
   canvas2->SaveAs("output/data/plots/datahist_neg.pdf");
