@@ -11,6 +11,7 @@
 #include "RooGaussian.h"
 #include "RooPolynomial.h"
 #include <fstream>
+#include "RooClassFactory.h"
 #include "RooMyPdf.cxx"
 
 void printhists(TH1F *h)
