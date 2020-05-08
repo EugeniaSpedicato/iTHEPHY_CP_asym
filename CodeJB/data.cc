@@ -141,7 +141,7 @@ void data(string dir, string sample)
       //else if(DTF_mass > 2012.) h_Dst_pos_DTFm_gr_side;
       ++nDst_pos;
     }
-    if(Dst_ID < 0(DTF_mass < 2009. || DTF_mass >2012)) cout << DTF_mass << endl;
+    if(Dst_ID < 0 && (DTF_mass < 2009. || DTF_mass >2012)) cout << DTF_mass << endl;
   }
   double Dst_asym = (nDst_pos-nDst_neg)/(nDst_pos+nDst_neg);
 
