@@ -236,12 +236,17 @@ void data(string dir, string sample)
   RooRealVar *dtf_neg_sides = new RooRealVar("dtf_neg_sides", "dtf_neg_sides", 2004.5, 2020.);
   RooRealVar *dtf_pos_sides = new RooRealVar("dtf_pos_sides", "dtf_pos_sides", 2004.5, 2020.);
 
+  RooRealVar *dtf_neg = new RooRealVar("dtf_neg", "dtf_neg", 2004.5, 2020.);
+  RooRealVar *dtf_pos = new RooRealVar("dtf_pos", "dtf_pos", 2004.5, 2020.);
+
   RooDataHist *data = new RooDataHist("data", "datahist", RooArgList(*dtf_neg_low), h_Dst_neg_DTFm_lw_side);
   RooDataHist *data2 =  new RooDataHist("data2", "datahist2", RooArgList(*dtf_neg_gr), h_Dst_neg_DTFm_gr_side);
   RooDataHist *data3 = new RooDataHist("data3", "datahist3", RooArgList(*dtf_pos_low), h_Dst_pos_DTFm_lw_side);
   RooDataHist *data4 =  new RooDataHist("data4", "datahist4", RooArgList(*dtf_pos_gr), h_Dst_pos_DTFm_gr_side);
   RooDataHist *data5 = new RooDataHist("data5", "datahist5", RooArgList(*dtf_pos_sides), h_Dst_pos_DTFm_sides);
   RooDataHist *data6 = new RooDataHist("data6", "datahist6", RooArgList(*dtf_neg_sides), h_Dst_neg_DTFm_sides);
+  RooDataHist *data7 = new RooDataHist("data7", "datahist7", RooArgList(*dtf_pos), h_Dst_pos_DTFm);
+  RooDataHist *data8 = new RooDataHist("data8", "datahist8", RooArgList(*dtf_neg), h_Dst_neg_DTFm);
 
   RooPlot *neg_low_frame = dtf_neg_low->frame();
   RooPlot *neg_gr_frame = dtf_neg_gr->frame();
@@ -250,6 +255,9 @@ void data(string dir, string sample)
 
   RooPlot *neg_sides_frame = dtf_neg_sides->frame();
   RooPlot *pos_sides_frame = dtf_pos_sides->frame();
+
+  RooPlot *neg_frame = dtf_neg->frame();
+  RooPlot *pos_frame = dtf_pos->frame();
 
   TCanvas *canvas2 = new TCanvas();
 
@@ -276,26 +284,26 @@ data6->plotOn(neg_sides_frame);
   RooRealVar *a = new RooRealVar("a", "a", 2004.38, 2004., 2005.);
   RooRealVar *c = new RooRealVar("c", "c", 0.051, 0., 0.1);
   RooRealVar *b = new RooRealVar("b", "b", 0.72, 0., 2.);
-  /*RooRealVar *m0_pos = new RooRealVar("m0_pos", "m0_pos", 2020, 2005., 2021.);
-  RooRealVar *c0_pos = new RooRealVar("c0_pos", "c0_pos", -3., -10., 10.);
-  RooRealVar *p_pos = new RooRealVar("p_pos", "p_pos", 2., -10., 10.);
-  */
+  RooRealVar *mean = new RooRealVar("mean", "mean", 2010., 2008., 2011.);
+  RooRealVar *sigma = new RooRealVar("sigma", "sigma", 2., 0., 4.);
 
-//  RooPolynomial *arg_neg = new RooPolynomial("arg_neg", "arg_neg", *dtf_neg_low);
-  RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("GenPdf", "1/N*pow(dtf_neg_sides-a,b)*exp(-c*(dtf_neg_sides-a))", RooArgSet(*dtf_neg_sides, *N, *a, *b, *c));
-//  RooArgusBG *arg_pos = new RooArgusBG("arg_pos", "arg_pos", *dtf_pos_low, *m0_pos, *c0_pos, *p_pos);
+  RooGaussian *sig_neg = new RooGaussian("sig_neg", "sig_neg", *dtf_neg, *mean, *sigma);
+  RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("GenPdf", "1/N*pow(dtf_neg-a,b)*exp(-c*(dtf_neg-a))", RooArgSet(*dtf_neg, *N, *a, *b, *c));
+  RooAddPdf model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig_neg, *arg_neg),RooArgList(*rel_frac));
+  RooRealVar *rel_frac = new RooRealVar("rel_frac", "rel_frac", 0.5, 0., 1.);
 
-  arg_neg->fitTo(*data, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
-  data->plotOn(neg_sides_frame);
-  arg_neg->plotOn(neg_sides_frame);
-  arg_neg->paramOn(neg_sides_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)));
+  model_neg->fitTo(*data8, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+  data8->plotOn(neg_frame);
+  model_neg->plotOn(frame1, RooFit::Components("arg_neg"), RooFit::LineColor(kAzure), RooFit::LineStyle(kDashed));
+  model_neg->plotOn(neg_frame);
+  model_neg->paramOn(neg_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)));
 
   /*data->plotOn(neg_low_frame);
   arg_neg->plotOn(neg_low_frame);
   arg_neg->paramOn(neg_low_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
 */
   neg_low_frame->Draw();
-  canvas2->SaveAs("output/data/plots/neg_sides_fit.pdf");
+  canvas2->SaveAs("output/data/plots/dtf_neg_fit.pdf");
 
 
 
@@ -313,13 +321,10 @@ data6->plotOn(neg_sides_frame);
 
   RooRealVar *m0 = new RooRealVar("m0", "m0", 178., 170., 200.);
   RooRealVar *c = new RooRealVar("c", "c", -2., -10., 10.);
-  RooRealVar *mean = new RooRealVar("mean", "mean", 146., 135., 155.);
-  RooRealVar *sigma = new RooRealVar("sigma", "sigma", 8., 4., 10.);
   RooRealVar *m02 = new RooRealVar("m02", "m02", 177., 170., 190.);
   RooRealVar *c2 = new RooRealVar("c2", "c2", -3., -10., 10.);
   RooRealVar *mean2 = new RooRealVar("mean2", "mean2", 145., 140., 150.);
   RooRealVar *sigma2 = new RooRealVar("sigm2a", "sigma2", 8.3, 6., 10.);
-  RooRealVar *rel_frac = new RooRealVar("rel_frac", "rel_frac", 0.7, 0.2, 1.);
   RooArgusBG *bkg_neg = new RooArgusBG("bkg_neg", "bkg_neg", *dm_neg, *m0, *c);
   RooGaussian *sig_neg = new RooGaussian("sig_neg", "sig_neg", *dm_neg, *mean, *sigma);
   RooArgusBG *bkg_pos = new RooArgusBG("bkg_pos", "bkg_pos", *dm_pos, *m02, *c2);
@@ -328,9 +333,9 @@ data6->plotOn(neg_sides_frame);
   RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig_pos,*bkg_pos), RooArgList(*rel_frac));
 
 
+  data->plotOn(frame1);
   model_neg->fitTo(*data, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   model_neg->plotOn(frame1, RooFit::Components("bkg_neg"), RooFit::LineColor(kAzure), RooFit::LineStyle(kDashed));
-  data->plotOn(frame1);
   model_neg->plotOn(frame1);
   model_neg->paramOn(frame1, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
 
