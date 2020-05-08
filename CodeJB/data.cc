@@ -203,10 +203,19 @@ void data(string dir, string sample)
   RooPlot *pos_gr_frame = dtf_pos_gr->frame();
 
   data->plotOn(neg_low_frame);
+  data2->plotOn(neg_gr_frame);
+  data3->plotOn(pos_low_frame);
+  data4->plotOn(pos_gr_frame);
 
   TCanvas *canvas2 = new TCanvas();
   neg_low_frame->Draw();
-  canvas2->SaveAs("output/data/plots/datahist.pdf");
+  canvas2->SaveAs("output/data/plots/neg_low.pdf");
+  neg_gr_frame->Draw();
+  canvas2->SaveAs("output/data/plots/neg_gr.pdf");
+  pos_low_frame->Draw();
+  canvas2->SaveAs("output/data/plots/pos_low.pdf");
+  pos_gr_frame->Draw();
+  canvas2->SaveAs("output/data/plots/pos_gr.pdf");
 
 
 /*  RooRealVar *dm_neg = new RooRealVar("dm_neg", "dm_neg", 116., 178.);
