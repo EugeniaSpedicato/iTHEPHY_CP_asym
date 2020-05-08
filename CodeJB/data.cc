@@ -221,9 +221,7 @@ void data(string dir, string sample)
   RooDataHist *data3 = new RooDataHist("data3", "datahist3", RooArgList(*dtf_pos_low), h_Dst_pos_DTFm_lw_side);
   RooDataHist *data4 =  new RooDataHist("data4", "datahist4", RooArgList(*dtf_pos_gr), h_Dst_pos_DTFm_gr_side);
   RooDataHist *data5 = new RooDataHist("data5", "datahist5", RooArgList(*dtf_pos_sides), h_Dst_pos_DTFm_sides);
-  //RooDataHist *data6 = new RooDataHist("data6", "datahist6", RooArgList(*dtf_neg_sides), h_Dst_neg_DTFm_sides);
-  RooDataHist *data7 = new RooDataHist("data7", "datahist7", RooArgList(*dtf_neg_sides), data);
-  data7->append(data2);
+  RooDataHist *data6 = new RooDataHist("data6", "datahist6", RooArgList(*dtf_neg_sides), h_Dst_neg_DTFm_sides);
 
   RooPlot *neg_low_frame = dtf_neg_low->frame();
   RooPlot *neg_gr_frame = dtf_neg_gr->frame();
@@ -264,10 +262,10 @@ data6->plotOn(neg_sides_frame);
   RooArgusBG *arg_neg = new RooArgusBG("arg_neg", "arg_neg", *dtf_neg_sides, *m0_neg, *c0_neg, *p_neg);
 //  RooArgusBG *arg_pos = new RooArgusBG("arg_pos", "arg_pos", *dtf_pos_low, *m0_pos, *c0_pos, *p_pos);
 
-  arg_neg->fitTo(*data7, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
-  data7->plotOn(neg_sides_frame);
-  arg_neg->plotOn(neg_sides_frame);
-  arg_neg->paramOn(neg_sides_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)));
+  arg_neg->fitTo(*data, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+  data->plotOn(neg_low_frame);
+  arg_neg->plotOn(neg_low_frame);
+  arg_neg->paramOn(neg_low_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)));
 
   /*data->plotOn(neg_low_frame);
   arg_neg->plotOn(neg_low_frame);
