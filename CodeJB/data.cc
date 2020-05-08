@@ -116,7 +116,7 @@ void data(string dir, string sample)
   h_delta_m_pos->Sumw2();
   h_delta_m_asym->Sumw2();
 
-  for (int i = 0; i < 100; ++i)
+  for (int i = 0; i < nEvents; ++i)
   {
     if (i % (nEvents/10) == 0)
     {
