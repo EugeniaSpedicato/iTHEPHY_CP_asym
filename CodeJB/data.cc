@@ -258,9 +258,9 @@ data6->plotOn(neg_sides_frame);
 
   RooArgusBG *arg_neg = new RooArgusBG("arg_neg", "arg_neg", *dtf_neg_low, *m0_neg, *c0_neg, *p_neg);
   arg_neg->fitTo(*data, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
-  data6->plotOn(neg_low_frame);
-  arg_neg->plotOn(neg_low_frame);
-  arg_neg->paramOn(neg_low_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
+  data6->plotOn(neg_sides_frame);
+  arg_neg->plotOn(neg_sides_frame);
+  arg_neg->paramOn(neg_sides_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
 
   neg_low_frame->Draw();
   canvas2->SaveAs("output/data/plots/neg_low_fit.pdf");
