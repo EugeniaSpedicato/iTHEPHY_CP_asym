@@ -8,15 +8,15 @@
 
 #include "Riostream.h" 
 
-#include "RooGenPdfPdf.h" 
+#include "RooArg_negPdf.h" 
 #include "RooAbsReal.h" 
 #include "RooAbsCategory.h" 
 #include <math.h> 
 #include "TMath.h" 
 
-ClassImp(RooGenPdfPdf); 
+ClassImp(RooArg_negPdf); 
 
- RooGenPdfPdf::RooGenPdfPdf(const char *name, const char *title, 
+ RooArg_negPdf::RooArg_negPdf(const char *name, const char *title, 
                         RooAbsReal& _dtf_neg,
                         RooAbsReal& _N,
                         RooAbsReal& _a,
@@ -32,7 +32,7 @@ ClassImp(RooGenPdfPdf);
  } 
 
 
- RooGenPdfPdf::RooGenPdfPdf(const RooGenPdfPdf& other, const char* name) :  
+ RooArg_negPdf::RooArg_negPdf(const RooArg_negPdf& other, const char* name) :  
    RooAbsPdf(other,name), 
    dtf_neg("dtf_neg",this,other.dtf_neg),
    N("N",this,other.N),
@@ -44,7 +44,7 @@ ClassImp(RooGenPdfPdf);
 
 
 
- Double_t RooGenPdfPdf::evaluate() const 
+ Double_t RooArg_negPdf::evaluate() const 
  { 
    // ENTER EXPRESSION IN TERMS OF VARIABLE ARGUMENTS HERE 
    return 1/N*pow(dtf_neg-a,b)*exp(-c*(dtf_neg-a)) ; 

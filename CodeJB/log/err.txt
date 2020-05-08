@@ -20,9 +20,9 @@ Info in <TCanvas::Print>: pdf file output/data/plots/pos_low.pdf has been create
 Info in <TCanvas::Print>: pdf file output/data/plots/pos_gr.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/pos_sides.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/neg_sides.pdf has been created
-Info in <TUnixSystem::ACLiC>: creating shared library /home/smjoblan/iTHEPHY/iTHEPHY/CodeJB/RooGenPdfPdf_cxx.so
+Info in <TUnixSystem::ACLiC>: creating shared library /home/smjoblan/iTHEPHY/iTHEPHY/CodeJB/RooArg_negPdf_cxx.so
 Warning in cling::IncrementalParser::CheckABICompatibility():
   Possible C++ standard library mismatch, compiled with __GLIBCXX__ '20181206'
   Extraction of runtime standard library version was: '20191114'
-Info in <TCanvas::Print>: pdf file output/data/plots/neg_low_fit.pdf has been created
+Info in <TCanvas::Print>: pdf file output/data/plots/dtf_neg_fit.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/h_delta_m_asym.pdf has been created
