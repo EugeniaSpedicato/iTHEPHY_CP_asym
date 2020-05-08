@@ -231,14 +231,14 @@ void data(string dir, string sample)
   RooPlot *neg_sides_frame = dtf_neg_sides->frame();
   RooPlot *pos_sides_frame = dtf_pos_sides->frame();
 
-  data->plotOn(neg_low_frame);
-  data2->plotOn(neg_gr_frame);
-  data3->plotOn(pos_low_frame);
-  data4->plotOn(pos_gr_frame);
-  data5->plotOn(pos_sides_frame);
-  data6->plotOn(neg_sides_frame);
-
   TCanvas *canvas2 = new TCanvas();
+/*
+data->plotOn(neg_low_frame);
+data2->plotOn(neg_gr_frame);
+data3->plotOn(pos_low_frame);
+data4->plotOn(pos_gr_frame);
+data5->plotOn(pos_sides_frame);
+data6->plotOn(neg_sides_frame);
   neg_low_frame->Draw();
   canvas2->SaveAs("output/data/plots/neg_low.pdf");
   neg_gr_frame->Draw();
@@ -250,7 +250,7 @@ void data(string dir, string sample)
   pos_sides_frame->Draw();
   canvas2->SaveAs("output/data/plots/pos_sides.pdf");
   neg_sides_frame->Draw();
-  canvas2->SaveAs("output/data/plots/neg_sides.pdf");
+  canvas2->SaveAs("output/data/plots/neg_sides.pdf");*/
 
   RooRealVar *m0_neg = new RooRealVar("m0_neg", "m0_neg", 2020, 2005., 2021.);
   RooRealVar *c0_neg = new RooRealVar("c0_neg", "c0_neg", -3., -10., 10.);
