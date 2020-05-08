@@ -213,8 +213,8 @@ void data(string dir, string sample)
   RooRealVar *dtf_pos_low = new RooRealVar("dtf_pos_low", "dtf_pos_low", 2004.5, 2008.5);
   RooRealVar *dtf_pos_gr = new RooRealVar("dtf_pos_gr", "dtf_pos_gr", 2012., 2020.);
 
-  RooRealVar *dtf_neg_sides = new RooRealVar("dtf_neg_sides", "dtf_neg_sides", 2004., 2020.);
-  RooRealVar *dtf_pos_sides = new RooRealVar("dtf_pos_sides", "dtf_pos_sides", 2004., 2020.);
+  RooRealVar *dtf_neg_sides = new RooRealVar("dtf_neg_sides", "dtf_neg_sides", 2004.5, 2020.);
+  RooRealVar *dtf_pos_sides = new RooRealVar("dtf_pos_sides", "dtf_pos_sides", 2004.5, 2020.);
 
   RooDataHist *data = new RooDataHist("data", "datahist", RooArgList(*dtf_neg_low), h_Dst_neg_DTFm_lw_side);
   RooDataHist *data2 =  new RooDataHist("data2", "datahist2", RooArgList(*dtf_neg_gr), h_Dst_neg_DTFm_gr_side);
