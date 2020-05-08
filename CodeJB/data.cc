@@ -272,17 +272,17 @@ data6->plotOn(neg_sides_frame);
   neg_sides_frame->Draw();
   canvas2->SaveAs("output/data/plots/neg_sides.pdf");
 
-  RooRealVar *n_neg = new RooRealVar("n_neg", "n_neg", 0.006, 0., 0.01);
-  RooRealVar *m0_neg = new RooRealVar("m0_neg", "m0_neg", 2004.5, 2004., 2005.);
-  RooRealVar *c0_neg = new RooRealVar("c0_neg", "c0_neg", 0.051, 0., 0.1);
-  RooRealVar *p_neg = new RooRealVar("p_neg", "p_neg", 0.72, 0., 2.);
+  RooRealVar *N = new RooRealVar("N", "N", 0.006, 0., 0.01);
+  RooRealVar *a = new RooRealVar("a", "a", 2004.5, 2004., 2005.);
+  RooRealVar *c = new RooRealVar("c", "c", 0.051, 0., 0.1);
+  RooRealVar *b = new RooRealVar("b", "b", 0.72, 0., 2.);
   /*RooRealVar *m0_pos = new RooRealVar("m0_pos", "m0_pos", 2020, 2005., 2021.);
   RooRealVar *c0_pos = new RooRealVar("c0_pos", "c0_pos", -3., -10., 10.);
   RooRealVar *p_pos = new RooRealVar("p_pos", "p_pos", 2., -10., 10.);
   */
 
 //  RooPolynomial *arg_neg = new RooPolynomial("arg_neg", "arg_neg", *dtf_neg_low);
-  RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("GenPdf", "1/N*pow(x-a,b)*exp(-c*(x-a))", RooArgSet(*dtf_neg_low, *n_neg, *m0_neg, *p_neg, *c0_neg));
+  RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("GenPdf", "1/N*pow(x-a,b)*exp(-c*(x-a))", RooArgSet(*dtf_neg_low, *N, *a, *b, *c));
 //  RooArgusBG *arg_pos = new RooArgusBG("arg_pos", "arg_pos", *dtf_pos_low, *m0_pos, *c0_pos, *p_pos);
 
   arg_neg->fitTo(*data, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
