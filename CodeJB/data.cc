@@ -286,15 +286,15 @@ data6->plotOn(neg_sides_frame);
   RooRealVar *b = new RooRealVar("b", "b", 0.72, 0., 2.);
   RooRealVar *mean = new RooRealVar("mean", "mean", 2010., 2008., 2011.);
   RooRealVar *sigma = new RooRealVar("sigma", "sigma", 2., 0., 4.);
+  RooRealVar *rel_frac = new RooRealVar("rel_frac", "rel_frac", 0.5, 0., 1.);
 
   RooGaussian *sig_neg = new RooGaussian("sig_neg", "sig_neg", *dtf_neg, *mean, *sigma);
   RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("GenPdf", "1/N*pow(dtf_neg-a,b)*exp(-c*(dtf_neg-a))", RooArgSet(*dtf_neg, *N, *a, *b, *c));
-  RooAddPdf model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig_neg, *arg_neg),RooArgList(*rel_frac));
-  RooRealVar *rel_frac = new RooRealVar("rel_frac", "rel_frac", 0.5, 0., 1.);
+  RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig_neg, *arg_neg),RooArgList(*rel_frac));
 
   model_neg->fitTo(*data8, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   data8->plotOn(neg_frame);
-  model_neg->plotOn(frame1, RooFit::Components("arg_neg"), RooFit::LineColor(kAzure), RooFit::LineStyle(kDashed));
+  model_neg->plotOn(neg_frame, RooFit::Components("arg_neg"), RooFit::LineColor(kAzure), RooFit::LineStyle(kDashed));
   model_neg->plotOn(neg_frame);
   model_neg->paramOn(neg_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)));
 
