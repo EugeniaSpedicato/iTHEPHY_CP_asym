@@ -281,11 +281,11 @@ data6->plotOn(neg_sides_frame);
   canvas2->SaveAs("output/data/plots/neg_sides.pdf");
 
   RooRealVar *N = new RooRealVar("N", "N", 0.006, 0., 0.01);
-  RooRealVar *a = new RooRealVar("a", "a", 2004.38, 2004., 2005.);
+  RooRealVar *a = new RooRealVar("a", "a", 2004.38, 2004., 2004.5);
   RooRealVar *c = new RooRealVar("c", "c", 0.051, 0., 0.1);
   RooRealVar *b = new RooRealVar("b", "b", 0.72, 0., 2.);
   RooRealVar *mean = new RooRealVar("mean", "mean", 2010., 2008., 2011.);
-  RooRealVar *sigma = new RooRealVar("sigma", "sigma", 2., 0., 4.);
+  RooRealVar *sigma = new RooRealVar("sigma", "sigma", 0.1, 0., 1.);
   RooRealVar *rel_frac = new RooRealVar("rel_frac", "rel_frac", 0.5, 0., 1.);
 
   RooGaussian *sig_neg = new RooGaussian("sig_neg", "sig_neg", *dtf_neg, *mean, *sigma);
