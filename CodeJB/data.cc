@@ -258,7 +258,7 @@ void data(string dir, string sample)
 
   RooArgusBG *arg_neg = new RooArgusBG("arg_neg", "arg_neg", *dtf_neg_low, *m0_neg, *c0_neg, *p_neg);
   arg_neg->fitTo(*data, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
-  data->plotOn(neg_low_frame);
+  data6->plotOn(neg_low_frame);
   arg_neg->plotOn(neg_low_frame);
   arg_neg->paramOn(neg_low_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
 
