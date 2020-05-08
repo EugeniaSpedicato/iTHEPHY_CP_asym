@@ -211,8 +211,8 @@ void data(string dir, string sample)
 
   cheb->fitTo(*data, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   data->plotOn(neg_low_frame);
-  model_neg->plotOn(neg_low_frame);
-  model_neg->paramOn(neg_low_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
+  cheb->plotOn(neg_low_frame);
+  cheb->paramOn(neg_low_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
 
   TCanvas *canvas2 = new TCanvas();
   neg_low_frame->Draw();
