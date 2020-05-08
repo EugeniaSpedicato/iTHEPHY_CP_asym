@@ -247,9 +247,9 @@ void data(string dir, string sample)
   canvas2->SaveAs("output/data/plots/pos_low.pdf");
   pos_gr_frame->Draw();
   canvas2->SaveAs("output/data/plots/pos_gr.pdf");
-  pos_sides_frame->Draw()
-  canvas2->SaveAs("output/data/plots/pos_sides.pdf");");
-  neg_sides_frame->Draw()
+  pos_sides_frame->Draw();
+  canvas2->SaveAs("output/data/plots/pos_sides.pdf");
+  neg_sides_frame->Draw();
   canvas2->SaveAs("output/data/plots/neg_sides.pdf");
 
 
