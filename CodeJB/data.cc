@@ -167,12 +167,12 @@ void data(string dir, string sample)
       ++nDst_pos;
     }
   }
-  int size = h_Dst_neg_DTFm_lw_side->GetEntries();
+  int size = h_Dst_neg_DTFm_lw_side->GetNbinsX();
   for (int i = 0; i < size; ++i)
   {
     outfile << 2004.5 + i * 0.02 << " " << h_Dst_neg_DTFm_lw_side->GetBinContent(i) << "\n";
   }
-  size = h_Dst_neg_DTFm_gr_side->GetEntries();
+  size = h_Dst_neg_DTFm_gr_side->GetNbinsX();
   for (int i = 0; i < size; ++i)
   {
     outfile << 2012. + i * 0.05 << " " << h_Dst_neg_DTFm_gr_side->GetBinContent(i) << "\n";
