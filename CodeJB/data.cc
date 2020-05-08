@@ -289,7 +289,7 @@ data6->plotOn(neg_sides_frame);
   RooRealVar *rel_frac = new RooRealVar("rel_frac", "rel_frac", 0.5, 0., 1.);
 
   RooGaussian *sig_neg = new RooGaussian("sig_neg", "sig_neg", *dtf_neg, *mean, *sigma);
-  RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("GenPdf", "1/N*pow(dtf_neg-a,b)*exp(-c*(dtf_neg-a))", RooArgSet(*dtf_neg, *N, *a, *b, *c));
+  RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("arg_neg", "1/N*pow(dtf_neg-a,b)*exp(-c*(dtf_neg-a))", RooArgSet(*dtf_neg, *N, *a, *b, *c));
   RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig_neg, *arg_neg),RooArgList(*rel_frac));
 
   model_neg->fitTo(*data8, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
