@@ -93,20 +93,20 @@ void data(string dir, string sample)
   h_Dst_neg_D0m->Sumw2();
   h_Dst_asym_D0m->Sumw2();
 
-  TH1F *h_Dst_pos_DTFm = new TH1F("h_Dst_pos_DTFm", ";invariant DTF mass/MeV; Events", 80, 2004., 2020.);
-  TH1F *h_Dst_neg_DTFm = new TH1F("h_Dst_neg_DTFm", ";invariant DTF mass/MeV; Events", 80, 2004., 2020.);
+  TH1F *h_Dst_pos_DTFm = new TH1F("h_Dst_pos_DTFm", ";invariant DTF mass/MeV; Events", 80, 2004., 2021.);
+  TH1F *h_Dst_neg_DTFm = new TH1F("h_Dst_neg_DTFm", ";invariant DTF mass/MeV; Events", 80, 2004., 2021.);
 
-  TH1F *h_Dst_pos_DTFm_gr_side = new TH1F("h_Dst_pos_DTFm_gr_side", ";invariant DTF mass/MeV; Events", 80, 2004., 2020.);
-  TH1F *h_Dst_neg_DTFm_gr_side = new TH1F("h_Dst_neg_DTFm_gr_side", ";invariant DTF mass/MeV; Events", 80, 2004., 2020.);
+  TH1F *h_Dst_pos_DTFm_gr_side = new TH1F("h_Dst_pos_DTFm_gr_side", ";invariant DTF mass/MeV; Events", 80, 2004., 2021.);
+  TH1F *h_Dst_neg_DTFm_gr_side = new TH1F("h_Dst_neg_DTFm_gr_side", ";invariant DTF mass/MeV; Events", 80, 2004., 2021.);
 
-  TH1F *h_Dst_pos_DTFm_lw_side = new TH1F("h_Dst_pos_DTFm_gr_side", ";invariant DTF mass/MeV; Events", 80, 2004., 2020.);
-  TH1F *h_Dst_neg_DTFm_lw_side = new TH1F("h_Dst_neg_DTFm_gr_side", ";invariant DTF mass/MeV; Events", 80, 2004., 2020.);
+  TH1F *h_Dst_pos_DTFm_lw_side = new TH1F("h_Dst_pos_DTFm_gr_side", ";invariant DTF mass/MeV; Events", 80, 2004., 2021.);
+  TH1F *h_Dst_neg_DTFm_lw_side = new TH1F("h_Dst_neg_DTFm_gr_side", ";invariant DTF mass/MeV; Events", 80, 2004., 2021.);
 
-  TH1F *h_Dst_asym_DTFm = new TH1F("h_Dst_asym_DTFm", ";invariant DTF mass/MeV; assymmetry", 80, 2004., 2020.);
+  TH1F *h_Dst_asym_DTFm = new TH1F("h_Dst_asym_DTFm", ";invariant DTF mass/MeV; assymmetry", 80, 2004., 2021.);
 
-  TH1F *h_delta_m_pos = new TH1F("h_delta_m_pos", "; #Delta m; Events", 124, 116., 178.);
-  TH1F *h_delta_m_neg = new TH1F("h_delta_m_neg", ";#Delta m; Events", 124, 116., 178.);
-  TH1F *h_delta_m_asym = new TH1F("h_delta_m_asym", ";#Delta m; assymmetry", 124, 116., 178.);
+  TH1F *h_delta_m_pos = new TH1F("h_delta_m_pos", "; #Delta m; Events", 124, 116., 180.);
+  TH1F *h_delta_m_neg = new TH1F("h_delta_m_neg", ";#Delta m; Events", 124, 116., 180.);
+  TH1F *h_delta_m_asym = new TH1F("h_delta_m_asym", ";#Delta m; assymmetry", 124, 116., 180.);
 
   h_Dst_pos_DTFm->Sumw2();
   h_Dst_neg_DTFm->Sumw2();
@@ -188,9 +188,9 @@ void data(string dir, string sample)
   //RooFit things
 
   RooRealVar *dtf_neg_low = new RooRealVar("dtf_neg_low", "dtf_neg_low", 2004., 2009.);
-  RooRealVar *dtf_neg_gr = new RooRealVar("dtf_neg_gr", "dtf_neg_gr", 2012., 2020.);
+  RooRealVar *dtf_neg_gr = new RooRealVar("dtf_neg_gr", "dtf_neg_gr", 2012., 2021.);
   RooRealVar *dtf_pos_low = new RooRealVar("dtf_pos_low", "dtf_pos_low", 2004., 2009.);
-  RooRealVar *dtf_pos_gr = new RooRealVar("dtf_pos_gr", "dtf_pos_gr", 2012., 2020.);
+  RooRealVar *dtf_pos_gr = new RooRealVar("dtf_pos_gr", "dtf_pos_gr", 2012., 2021.);
 
   RooDataHist *data = new RooDataHist("data", "datahist", RooArgList(*dtf_neg_low), h_Dst_neg_DTFm_lw_side);
   RooDataHist *data2 =  new RooDataHist("data2", "datahist2", RooArgList(*dtf_neg_gr), h_Dst_neg_DTFm_gr_side);
@@ -218,8 +218,8 @@ void data(string dir, string sample)
   canvas2->SaveAs("output/data/plots/pos_gr.pdf");
 
 
-/*  RooRealVar *dm_neg = new RooRealVar("dm_neg", "dm_neg", 116., 178.);
-  RooRealVar *dm_pos = new RooRealVar("dm_neg", "dm_neg", 116., 178.);
+/*  RooRealVar *dm_neg = new RooRealVar("dm_neg", "dm_neg", 116., 180.);
+  RooRealVar *dm_pos = new RooRealVar("dm_neg", "dm_neg", 116., 180.);
   RooDataHist *data = new RooDataHist("data", "datahist", RooArgList(*dm_neg), h_delta_m_neg);
 
   RooDataHist *data2 =  new RooDataHist("data2", "datahist2", RooArgList(*dm_pos), h_delta_m_pos);
