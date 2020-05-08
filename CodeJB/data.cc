@@ -93,16 +93,19 @@ void data(string dir, string sample)
   h_Dst_neg_D0m->Sumw2();
   h_Dst_asym_D0m->Sumw2();
 
-  TH1F *h_Dst_pos_DTFm = new TH1F("h_Dst_pos_DTFm", ";invariant DTF mass/MeV; Events", 81, 2004., 2020.2);
-  TH1F *h_Dst_neg_DTFm = new TH1F("h_Dst_neg_DTFm", ";invariant DTF mass/MeV; Events", 81, 2004., 2020.2);
+  TH1F *h_Dst_pos_DTFm = new TH1F("h_Dst_pos_DTFm", ";invariant DTF mass/MeV; Events", 80, 2004., 2020.);
+  TH1F *h_Dst_neg_DTFm = new TH1F("h_Dst_neg_DTFm", ";invariant DTF mass/MeV; Events", 80, 2004., 2020.);
 
-  TH1F *h_Dst_pos_DTFm_gr_side = new TH1F("h_Dst_pos_DTFm_gr_side", ";invariant DTF mass/MeV; Events", 81, 2004., 2020.2);
-  TH1F *h_Dst_neg_DTFm_gr_side = new TH1F("h_Dst_neg_DTFm_gr_side", ";invariant DTF mass/MeV; Events", 81, 2004., 2020.2);
+  TH1F *h_Dst_pos_DTFm_gr_side = new TH1F("h_Dst_pos_DTFm_gr_side", ";invariant DTF mass/MeV; Events", 80, 2012., 2020.);
+  TH1F *h_Dst_neg_DTFm_gr_side = new TH1F("h_Dst_neg_DTFm_gr_side", ";invariant DTF mass/MeV; Events", 80, 2012., 2020.);
 
-  TH1F *h_Dst_pos_DTFm_lw_side = new TH1F("h_Dst_pos_DTFm_gr_side", ";invariant DTF mass/MeV; Events", 81, 2004., 2020.2);
-  TH1F *h_Dst_neg_DTFm_lw_side = new TH1F("h_Dst_neg_DTFm_gr_side", ";invariant DTF mass/MeV; Events", 81, 2004., 2020.2);
+  TH1F *h_Dst_pos_DTFm_lw_side = new TH1F("h_Dst_pos_DTFm_gr_side", ";invariant DTF mass/MeV; Events", 90, 2004., 2008.5);
+  TH1F *h_Dst_neg_DTFm_lw_side = new TH1F("h_Dst_neg_DTFm_gr_side", ";invariant DTF mass/MeV; Events", 90, 2004., 2008.5);
 
-  TH1F *h_Dst_asym_DTFm = new TH1F("h_Dst_asym_DTFm", ";invariant DTF mass/MeV; assymmetry", 81, 2004., 2020.2);
+  TH1F *h_Dst_pos_DTFm_sides = new TH1F("h_Dst_pos_DTFm_gr_side", ";invariant DTF mass/MeV; Events", 80, 2004., 2020.);
+  TH1F *h_Dst_neg_DTFm_sides = new TH1F("h_Dst_neg_DTFm_gr_side", ";invariant DTF mass/MeV; Events", 80, 2004., 2020.);
+
+  TH1F *h_Dst_asym_DTFm = new TH1F("h_Dst_asym_DTFm", ";invariant DTF mass/MeV; assymmetry", 80, 2004., 2020.);
 
   TH1F *h_delta_m_pos = new TH1F("h_delta_m_pos", "; #Delta m; Events", 124, 116., 180.);
   TH1F *h_delta_m_neg = new TH1F("h_delta_m_neg", ";#Delta m; Events", 124, 116., 180.);
@@ -128,8 +131,17 @@ void data(string dir, string sample)
       h_Dst_neg_D0m->Fill(D0_mass);
       h_Dst_neg_DTFm->Fill(DTF_mass);
       h_delta_m_neg->Fill(DTF_mass - D0_mass);
-      if(DTF_mass < 2009.) h_Dst_neg_DTFm_lw_side->Fill(DTF_mass);
-      else if(DTF_mass > 2012.) h_Dst_neg_DTFm_gr_side->Fill(DTF_mass);
+      if(DTF_mass < 2008.5)
+      {
+        h_Dst_neg_DTFm_lw_side->Fill(DTF_mass);
+        h_Dst_neg_DTFm_sides->Fill(DTF_mass);
+
+      }
+      else if(DTF_mass > 2012.)
+      {
+        h_Dst_neg_DTFm_gr_side->Fill(DTF_mass);
+        h_Dst_neg_DTFm_sides->Fill(DTF_mass);
+      }
       ++nDst_neg;
     }
     else
@@ -137,8 +149,17 @@ void data(string dir, string sample)
       h_Dst_pos_D0m->Fill(D0_mass);
       h_Dst_pos_DTFm->Fill(DTF_mass);
       h_delta_m_pos->Fill(DTF_mass-D0_mass);
-      if(DTF_mass < 2009.) h_Dst_pos_DTFm_lw_side->Fill(DTF_mass);
-      else if(DTF_mass > 2012.) h_Dst_pos_DTFm_gr_side->Fill(DTF_mass);
+      if(DTF_mass < 2008.5)
+      {
+        h_Dst_pos_DTFm_lw_side->Fill(DTF_mass);
+        h_Dst_pos_DTFm_sides->Fill(DTF_mass);
+
+      }
+      else if(DTF_mass > 2012.)
+      {
+        h_Dst_pos_DTFm_gr_side->Fill(DTF_mass);
+        h_Dst_pos_DTFm_sides->Fill(DTF_mass);
+      }
       ++nDst_pos;
     }
   }
@@ -187,25 +208,35 @@ void data(string dir, string sample)
 
   //RooFit things
 
-  RooRealVar *dtf_neg_low = new RooRealVar("dtf_neg_low", "dtf_neg_low", 2004., 2009.);
-  RooRealVar *dtf_neg_gr = new RooRealVar("dtf_neg_gr", "dtf_neg_gr", 2012., 2020.2);
-  RooRealVar *dtf_pos_low = new RooRealVar("dtf_pos_low", "dtf_pos_low", 2004., 2009.);
-  RooRealVar *dtf_pos_gr = new RooRealVar("dtf_pos_gr", "dtf_pos_gr", 2012., 2020.2);
+  RooRealVar *dtf_neg_low = new RooRealVar("dtf_neg_low", "dtf_neg_low", 2004., 2008.5);
+  RooRealVar *dtf_neg_gr = new RooRealVar("dtf_neg_gr", "dtf_neg_gr", 2012., 2020.);
+  RooRealVar *dtf_pos_low = new RooRealVar("dtf_pos_low", "dtf_pos_low", 2004., 2008.5);
+  RooRealVar *dtf_pos_gr = new RooRealVar("dtf_pos_gr", "dtf_pos_gr", 2012., 2020.);
+
+  RooRealVar *dtf_neg_sides = new RooRealVar("dtf_neg_sides", "dtf_neg_sides", 2004., 2020.);
+  RooRealVar *dtf_pos_sides = new RooRealVar("dtf_pos_sides", "dtf_pos_sides", 2004., 2020.);
 
   RooDataHist *data = new RooDataHist("data", "datahist", RooArgList(*dtf_neg_low), h_Dst_neg_DTFm_lw_side);
   RooDataHist *data2 =  new RooDataHist("data2", "datahist2", RooArgList(*dtf_neg_gr), h_Dst_neg_DTFm_gr_side);
   RooDataHist *data3 = new RooDataHist("data3", "datahist3", RooArgList(*dtf_pos_low), h_Dst_pos_DTFm_lw_side);
   RooDataHist *data4 =  new RooDataHist("data4", "datahist4", RooArgList(*dtf_pos_gr), h_Dst_pos_DTFm_gr_side);
+  RooDataHist *data5 = new RooDataHist("data5", "datahist5", RooArgList(*dtf_pos_sides), h_Dst_pos_DTFm_sides);
+  RooDataHist *data6 = new RooDataHist("data6", "datahist6", RooArgList(*dtf_neg_sides), h_Dst_neg_DTFm_sides);
 
   RooPlot *neg_low_frame = dtf_neg_low->frame();
   RooPlot *neg_gr_frame = dtf_neg_gr->frame();
   RooPlot *pos_low_frame = dtf_pos_low->frame();
   RooPlot *pos_gr_frame = dtf_pos_gr->frame();
 
+  RooPlot *neg_sides_frame = dtf_neg_sides->frame();
+  RooPlot *pos_sides_frame = dtf_pos_sides->frame();
+
   data->plotOn(neg_low_frame);
   data2->plotOn(neg_gr_frame);
   data3->plotOn(pos_low_frame);
   data4->plotOn(pos_gr_frame);
+  data5->plotOn(pos_sides_frame);
+  data6->plotOn(neg_sides_frame);
 
   TCanvas *canvas2 = new TCanvas();
   neg_low_frame->Draw();
@@ -216,6 +247,10 @@ void data(string dir, string sample)
   canvas2->SaveAs("output/data/plots/pos_low.pdf");
   pos_gr_frame->Draw();
   canvas2->SaveAs("output/data/plots/pos_gr.pdf");
+  pos_sides_frame->Draw()
+  canvas2->SaveAs("output/data/plots/pos_sides.pdf");");
+  neg_sides_frame->Draw()
+  canvas2->SaveAs("output/data/plots/neg_sides.pdf");
 
 
 /*  RooRealVar *dm_neg = new RooRealVar("dm_neg", "dm_neg", 116., 180.);
