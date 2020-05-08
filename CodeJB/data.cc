@@ -10,6 +10,7 @@
 #include "RooArgusBG.h"
 #include "RooGaussian.h"
 #include "RooChebychev.h"
+#include "RooKeysPdf.h"
 
 void printhists(TH1F *h)
 {
@@ -259,7 +260,8 @@ data6->plotOn(neg_sides_frame);
   RooRealVar *c0_pos = new RooRealVar("c0_pos", "c0_pos", -3., -10., 10.);
   RooRealVar *p_pos = new RooRealVar("p_pos", "p_pos", 2., -10., 10.);
   */
-  RooArgusBG *arg_neg = new RooArgusBG("arg_neg", "arg_neg", *dtf_neg_low, *m0_neg, *c0_neg, *p_neg);
+  RooKeysPdf *arg_neg = new RooKeysPdf("arg_neg", "arg_neg", *dtf_neg_low, *data);
+//RooArgusBG *arg_neg = new RooArgusBG("arg_neg", "arg_neg", *dtf_neg_low, *m0_neg, *c0_neg, *p_neg);
 //  RooArgusBG *arg_pos = new RooArgusBG("arg_pos", "arg_pos", *dtf_pos_low, *m0_pos, *c0_pos, *p_pos);
 
   arg_neg->fitTo(*data, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
