@@ -293,8 +293,8 @@ data6->plotOn(neg_sides_frame);
   RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig_neg, *arg_neg),RooArgList(*rel_frac));
 
   model_neg->fitTo(*data8, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
-  data8->plotOn(neg_frame);
-  model_neg->plotOn(neg_frame, RooFit::Components("arg_neg"), RooFit::LineColor(kAzure), RooFit::LineStyle(kDashed));
+  //data8->plotOn(neg_frame);
+  model_neg->plotOn(neg_frame, RooFit::Components("arg_neg"), RooFit::FillColor(kRed), RooFit::LineStyle(kDashed));
   model_neg->plotOn(neg_frame);
   model_neg->paramOn(neg_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)));
 
