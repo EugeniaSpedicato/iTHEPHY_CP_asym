@@ -248,7 +248,7 @@ void data(string dir, string sample)
   RooPlot *pos_sides_frame = dtf_pos_sides->frame();
 
   TCanvas *canvas2 = new TCanvas();
-/*
+
 data->plotOn(neg_low_frame);
 data2->plotOn(neg_gr_frame);
 data3->plotOn(pos_low_frame);
@@ -266,7 +266,7 @@ data6->plotOn(neg_sides_frame);
   pos_sides_frame->Draw();
   canvas2->SaveAs("output/data/plots/pos_sides.pdf");
   neg_sides_frame->Draw();
-  canvas2->SaveAs("output/data/plots/neg_sides.pdf");*/
+  canvas2->SaveAs("output/data/plots/neg_sides.pdf");
 
   RooRealVar *m0_neg = new RooRealVar("m0_neg", "m0_neg", 2004.5, 2004., 2025.);
   RooRealVar *c0_neg = new RooRealVar("c0_neg", "c0_neg", -10., -100., 0.);
