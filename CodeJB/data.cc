@@ -11,6 +11,7 @@
 #include "RooGaussian.h"
 #include "RooPolynomial.h"
 #include <fstream>
+#include "RooMyPdf.cxx"
 
 void printhists(TH1F *h)
 {
@@ -268,16 +269,17 @@ data6->plotOn(neg_sides_frame);
   neg_sides_frame->Draw();
   canvas2->SaveAs("output/data/plots/neg_sides.pdf");
 
+  RooRealVar *n_neg = new RooRealVar("n_neg", "n_neg", 0.006, 0., 0.01);
   RooRealVar *m0_neg = new RooRealVar("m0_neg", "m0_neg", 2004.5, 2004., 2005.);
-  RooRealVar *c0_neg = new RooRealVar("c0_neg", "c0_neg", -0.051, -1., 0.);
-  RooRealVar *p_neg = new RooRealVar("p_neg", "p_neg", 0.72, -2., 2.5);
+  RooRealVar *c0_neg = new RooRealVar("c0_neg", "c0_neg", 0.051, 0., 0.1);
+  RooRealVar *p_neg = new RooRealVar("p_neg", "p_neg", 0.72, 0., 2.);
   /*RooRealVar *m0_pos = new RooRealVar("m0_pos", "m0_pos", 2020, 2005., 2021.);
   RooRealVar *c0_pos = new RooRealVar("c0_pos", "c0_pos", -3., -10., 10.);
   RooRealVar *p_pos = new RooRealVar("p_pos", "p_pos", 2., -10., 10.);
   */
 
 //  RooPolynomial *arg_neg = new RooPolynomial("arg_neg", "arg_neg", *dtf_neg_low);
-  RooArgusBG *arg_neg = new RooArgusBG("arg_neg", "arg_neg", *dtf_neg_low, *m0_neg, *c0_neg, *p_neg);
+  RooMyPdf *arg_neg = new RooMyPdf("arg_neg", "arg_neg", *dtf_neg_low, *n_neg, *m0_neg, *p_neg, *c0_neg);
 //  RooArgusBG *arg_pos = new RooArgusBG("arg_pos", "arg_pos", *dtf_pos_low, *m0_pos, *c0_pos, *p_pos);
 
   arg_neg->fitTo(*data, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
