@@ -280,10 +280,10 @@ data6->plotOn(neg_sides_frame);
   RooArgusBG *arg_neg = new RooArgusBG("arg_neg", "arg_neg", *dtf_neg_sides, *m0_neg, *c0_neg, *p_neg);
 //  RooArgusBG *arg_pos = new RooArgusBG("arg_pos", "arg_pos", *dtf_pos_low, *m0_pos, *c0_pos, *p_pos);
 
-/*  arg_neg->fitTo(*data2, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
-  data2->plotOn(neg_gr_frame);
-  arg_neg->plotOn(neg_gr_frame);
-  arg_neg->paramOn(neg_gr_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)));
+  arg_neg->fitTo(*data6, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+  data6->plotOn(neg_sides_frame);
+  arg_neg->plotOn(neg_sides_frame);
+  arg_neg->paramOn(neg_sides_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)));
 */
   /*data->plotOn(neg_low_frame);
   arg_neg->plotOn(neg_low_frame);
