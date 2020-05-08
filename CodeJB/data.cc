@@ -175,7 +175,7 @@ void data(string dir, string sample)
   size = h_Dst_neg_DTFm_gr_side->GetNbinsX();
   for (int i = 0; i < size; ++i)
   {
-    outfile << 2012. + i * 0.05 << " " << h_Dst_neg_DTFm_gr_side->GetBinContent(i) << "\n";
+    outfile << 2012.5 + i * 0.02 << " " << h_Dst_neg_DTFm_gr_side->GetBinContent(i) << "\n";
   }
   outfile.flush();
   outfile.close();
@@ -277,14 +277,14 @@ data6->plotOn(neg_sides_frame);
   */
 
 //  RooPolynomial *arg_neg = new RooPolynomial("arg_neg", "arg_neg", *dtf_neg_low);
-  RooArgusBG *arg_neg = new RooArgusBG("arg_neg", "arg_neg", *dtf_neg_gr, *m0_neg, *c0_neg, *p_neg);
+//  RooArgusBG *arg_neg = new RooArgusBG("arg_neg", "arg_neg", *dtf_neg_gr, *m0_neg, *c0_neg, *p_neg);
 //  RooArgusBG *arg_pos = new RooArgusBG("arg_pos", "arg_pos", *dtf_pos_low, *m0_pos, *c0_pos, *p_pos);
 
-  arg_neg->fitTo(*data2, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+/*  arg_neg->fitTo(*data2, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   data2->plotOn(neg_gr_frame);
   arg_neg->plotOn(neg_gr_frame);
   arg_neg->paramOn(neg_gr_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)));
-
+*/
   /*data->plotOn(neg_low_frame);
   arg_neg->plotOn(neg_low_frame);
   arg_neg->paramOn(neg_low_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
