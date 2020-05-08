@@ -4,6 +4,8 @@ Warning in cling::IncrementalParser::CheckABICompatibility():
   Extraction of runtime standard library version was: '20191114'
 Warning in <TFile::Append>: Replacing existing TH1: h_Dst_pos_DTFm_gr_side (Potential memory leak).
 Warning in <TFile::Append>: Replacing existing TH1: h_Dst_neg_DTFm_gr_side (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_Dst_pos_DTFm_gr_side (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_Dst_neg_DTFm_gr_side (Potential memory leak).
 Info in <TCanvas::Print>: pdf file output/data/plots/h_Dst_pos_D0m.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/h_Dst_neg_D0m.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/h_Dst_pos_DTFm.pdf has been created
@@ -16,4 +18,6 @@ Info in <TCanvas::Print>: pdf file output/data/plots/neg_low.pdf has been create
 Info in <TCanvas::Print>: pdf file output/data/plots/neg_gr.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/pos_low.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/pos_gr.pdf has been created
+Info in <TCanvas::Print>: pdf file output/data/plots/pos_sides.pdf has been created
+Info in <TCanvas::Print>: pdf file output/data/plots/neg_sides.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/h_delta_m_asym.pdf has been created
