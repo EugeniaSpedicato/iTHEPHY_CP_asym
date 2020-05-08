@@ -252,7 +252,18 @@ void data(string dir, string sample)
   neg_sides_frame->Draw();
   canvas2->SaveAs("output/data/plots/neg_sides.pdf");
 
+  RooRealVar *m0_neg = new RooRealVar("m0_neg", "m0_neg", 2004.5, 2004., 2005.);
+  RooRealVar *c0_neg = new RooRealVar("c0_neg", "c0_neg", -3., -10., 10.);
+  RooRealVar *p_neg = new RooRealVar("p_neg", "p_neg", 2., -10., 10.);
 
+  RooArgusBG *arg_neg = new RooArgusBG("arg_neg", "arg_neg", *dtf_neg_sides, *m0_neg, *c_neg, *p_neg);
+  arg_neg->fitTo(data6, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+  data6->plotOn(neg_sides_frame);
+  arg_neg->plotOn(neg_sides_frame);
+  arg_neg->paramOn(neg_sides_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
+
+  neg_sides_frame->Draw();
+  canvas2->SaveAs("output/data/plots/neg_sides_fit.pdf");
 /*  RooRealVar *dm_neg = new RooRealVar("dm_neg", "dm_neg", 116., 180.);
   RooRealVar *dm_pos = new RooRealVar("dm_neg", "dm_neg", 116., 180.);
   RooDataHist *data = new RooDataHist("data", "datahist", RooArgList(*dm_neg), h_delta_m_neg);
