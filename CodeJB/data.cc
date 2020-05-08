@@ -10,6 +10,7 @@
 #include "RooArgusBG.h"
 #include "RooGaussian.h"
 #include "RooPolynomial.h"
+#include <fstream>
 
 void printhists(TH1F *h)
 {
@@ -119,6 +120,9 @@ void data(string dir, string sample)
   h_delta_m_pos->Sumw2();
   h_delta_m_asym->Sumw2();
 
+  ofstream outfile("output/data/plots/data.txt", ofstream::trunc);
+  outfile << "#m, E\n ";
+
   for (int i = 0; i < nEvents; ++i)
   {
     if (i % (nEvents/10) == 0)
@@ -163,6 +167,13 @@ void data(string dir, string sample)
       ++nDst_pos;
     }
   }
+  int size = h_Dst_neg_DTFm_lw_side->GetEntries();
+  for (int i = 0; i < size; ++i)
+  {
+    outfile << 2004.5+i*0.02 << " " << h_Dst_neg_DTFm_lw_side->GetBinContent(i) << "\n";
+  }
+  outfile.flush();
+  outfile.close();
   double Dst_asym = (nDst_pos-nDst_neg)/(nDst_pos+nDst_neg);
 
   cout << "Number of reconstructed -: " << nDst_neg << endl;
