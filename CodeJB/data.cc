@@ -12,7 +12,9 @@
 #include "RooPolynomial.h"
 #include <fstream>
 #include "RooClassFactory.h"
-#include "RooMyPdf.cxx"
+//#include "RooMyPdf.cxx"
+#include "RooWorkspace.h"
+RooWorkspace w = ("w")
 
 void printhists(TH1F *h)
 {
@@ -280,7 +282,7 @@ data6->plotOn(neg_sides_frame);
   */
 
 //  RooPolynomial *arg_neg = new RooPolynomial("arg_neg", "arg_neg", *dtf_neg_low);
-  RooMyPdf::RooMyPdf *arg_neg = new RooMyPdf::RooMyPdf("arg_neg", "arg_neg", *dtf_neg_low, *n_neg, *m0_neg, *p_neg, *c0_neg);
+  RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("GenPdf", "1/N*pow(x-a,b)*exp(-c*(x-a))", RooArgSet(*dtf_neg_low, *n_neg, *m0_neg, *p_neg, *c0_neg));
 //  RooArgusBG *arg_pos = new RooArgusBG("arg_pos", "arg_pos", *dtf_pos_low, *m0_pos, *c0_pos, *p_pos);
 
   arg_neg->fitTo(*data, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
