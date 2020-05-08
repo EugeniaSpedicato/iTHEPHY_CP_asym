@@ -256,7 +256,7 @@ void data(string dir, string sample)
   RooRealVar *c0_neg = new RooRealVar("c0_neg", "c0_neg", -3., -10., 10.);
   RooRealVar *p_neg = new RooRealVar("p_neg", "p_neg", 2., -10., 10.);
 
-  RooArgusBG *arg_neg = new RooArgusBG("arg_neg", "arg_neg", *dtf_neg_sides, *m0_neg, *c0_neg, *p_neg);
+  RooArgusBG *arg_neg = new RooArgusBG("arg_neg", "arg_neg", *dtf_neg_low, *m0_neg, *c0_neg, *p_neg);
   arg_neg->fitTo(*data, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   data->plotOn(neg_low_frame);
   arg_neg->plotOn(neg_low_frame);
