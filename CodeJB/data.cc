@@ -128,8 +128,8 @@ void data(string dir, string sample)
       h_Dst_neg_D0m->Fill(D0_mass);
       h_Dst_neg_DTFm->Fill(DTF_mass);
       h_delta_m_neg->Fill(DTF_mass - D0_mass);
-      //if(DTF_mass < 2009.) h_Dst_neg_DTFm_lw_side;
-      //else if(DTF_mass > 2012.) h_Dst_neg_DTFm_gr_side;
+      if(DTF_mass < 2009.) h_Dst_neg_DTFm_lw_side->Fill(DTF_mass);
+      else if(DTF_mass > 2012.) h_Dst_neg_DTFm_gr_side->Fill(DTF_mass);
       ++nDst_neg;
     }
     else
@@ -137,11 +137,10 @@ void data(string dir, string sample)
       h_Dst_pos_D0m->Fill(D0_mass);
       h_Dst_pos_DTFm->Fill(DTF_mass);
       h_delta_m_pos->Fill(DTF_mass-D0_mass);
-      //if(DTF_mass < 2009.) h_Dst_pos_DTFm_lw_side;
-      //else if(DTF_mass > 2012.) h_Dst_pos_DTFm_gr_side;
+      if(DTF_mass < 2009.) h_Dst_pos_DTFm_lw_side->Fill(DTF_mass);
+      else if(DTF_mass > 2012.) h_Dst_pos_DTFm_gr_side->Fill(DTF_mass);
       ++nDst_pos;
     }
-    if(Dst_ID < 0 && (DTF_mass < 2009. || DTF_mass >2012)) cout << DTF_mass << endl;
   }
   double Dst_asym = (nDst_pos-nDst_neg)/(nDst_pos+nDst_neg);
 
@@ -203,14 +202,7 @@ void data(string dir, string sample)
   RooPlot *pos_low_frame = dtf_pos_low->frame();
   RooPlot *pos_gr_frame = dtf_pos_gr->frame();
 
-  RooRealVar *c0 = new RooRealVar("c0", "c0", 0., -1., 1.);
-  RooRealVar *c1 = new RooRealVar("c1", "c1", 0.5, -1., 1.);
-  RooChebychev *cheb = new RooChebychev("cheb", "cheb", *dtf_pos_low, RooArgList(*c0, *c1));
-
-  //cheb->fitTo(*data, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
-  //data->plotOn(neg_low_frame);
-  //cheb->plotOn(neg_low_frame);
-  //cheb->paramOn(neg_low_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
+  data->plotOn(neg_low_frame);
 
   TCanvas *canvas2 = new TCanvas();
   neg_low_frame->Draw();
