@@ -295,7 +295,7 @@ data6->plotOn(neg_sides_frame);
   arg_neg->paramOn(neg_low_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
 */
   neg_low_frame->Draw();
-  canvas2->SaveAs("output/data/plots/neg_low_fit.pdf");
+  canvas2->SaveAs("output/data/plots/neg_sides_fit.pdf");
 
 
 
