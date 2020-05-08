@@ -273,7 +273,7 @@ data6->plotOn(neg_sides_frame);
   canvas2->SaveAs("output/data/plots/neg_sides.pdf");
 
   RooRealVar *N = new RooRealVar("N", "N", 0.006, 0., 0.01);
-  RooRealVar *a = new RooRealVar("a", "a", 2004.5, 2004., 2005.);
+  RooRealVar *a = new RooRealVar("a", "a", 2004.38, 2004., 2005.);
   RooRealVar *c = new RooRealVar("c", "c", 0.051, 0., 0.1);
   RooRealVar *b = new RooRealVar("b", "b", 0.72, 0., 2.);
   /*RooRealVar *m0_pos = new RooRealVar("m0_pos", "m0_pos", 2020, 2005., 2021.);
@@ -282,13 +282,13 @@ data6->plotOn(neg_sides_frame);
   */
 
 //  RooPolynomial *arg_neg = new RooPolynomial("arg_neg", "arg_neg", *dtf_neg_low);
-  RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("GenPdf", "1/N*pow(dtf_neg_low-a,b)*exp(-c*(dtf_neg_low-a))", RooArgSet(*dtf_neg_low, *N, *a, *b, *c));
+  RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("GenPdf", "1/N*pow(dtf_neg_bside-a,b)*exp(-c*(dtf_neg_bside-a))", RooArgSet(*dtf_neg_bside, *N, *a, *b, *c));
 //  RooArgusBG *arg_pos = new RooArgusBG("arg_pos", "arg_pos", *dtf_pos_low, *m0_pos, *c0_pos, *p_pos);
 
   arg_neg->fitTo(*data, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
-  data->plotOn(neg_low_frame);
-  arg_neg->plotOn(neg_low_frame);
-  arg_neg->paramOn(neg_low_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)));
+  data->plotOn(neg_bside_frame);
+  arg_neg->plotOn(neg_bside_frame);
+  arg_neg->paramOn(neg_bside_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)));
 
   /*data->plotOn(neg_low_frame);
   arg_neg->plotOn(neg_low_frame);
