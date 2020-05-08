@@ -280,7 +280,7 @@ data6->plotOn(neg_sides_frame);
   */
 
 //  RooPolynomial *arg_neg = new RooPolynomial("arg_neg", "arg_neg", *dtf_neg_low);
-  RooMyPdf *arg_neg = new RooMyPdf("arg_neg", "arg_neg", *dtf_neg_low, *n_neg, *m0_neg, *p_neg, *c0_neg);
+  RooMyPdf::RooMyPdf *arg_neg = new RooMyPdf::RooMyPdf("arg_neg", "arg_neg", *dtf_neg_low, *n_neg, *m0_neg, *p_neg, *c0_neg);
 //  RooArgusBG *arg_pos = new RooArgusBG("arg_pos", "arg_pos", *dtf_pos_low, *m0_pos, *c0_pos, *p_pos);
 
   arg_neg->fitTo(*data, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
