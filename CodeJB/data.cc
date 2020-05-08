@@ -9,6 +9,7 @@
 #include "RooUniform.h"
 #include "RooArgusBG.h"
 #include "RooGaussian.h"
+#include "RooChebychev.h"
 
 void printhists(TH1F *h)
 {
@@ -94,6 +95,13 @@ void data(string dir, string sample)
 
   TH1F *h_Dst_pos_DTFm = new TH1F("h_Dst_pos_DTFm", ";invariant DTF mass/MeV; Events", 80, 2004., 2020.);
   TH1F *h_Dst_neg_DTFm = new TH1F("h_Dst_neg_DTFm", ";invariant DTF mass/MeV; Events", 80, 2004., 2020.);
+
+  TH1F *h_Dst_pos_DTFm_gr_side = new TH1F("h_Dst_pos_DTFm_gr_side", ";invariant DTF mass/MeV; Events", 80, 2004., 2020.);
+  TH1F *h_Dst_neg_DTFm_gr_side = new TH1F("h_Dst_neg_DTFm_gr_side", ";invariant DTF mass/MeV; Events", 80, 2004., 2020.);
+
+  TH1F *h_Dst_pos_DTFm_lw_side = new TH1F("h_Dst_pos_DTFm_gr_side", ";invariant DTF mass/MeV; Events", 80, 2004., 2020.);
+  TH1F *h_Dst_neg_DTFm_lw_side = new TH1F("h_Dst_neg_DTFm_gr_side", ";invariant DTF mass/MeV; Events", 80, 2004., 2020.);
+
   TH1F *h_Dst_asym_DTFm = new TH1F("h_Dst_asym_DTFm", ";invariant DTF mass/MeV; assymmetry", 80, 2004., 2020.);
 
   TH1F *h_delta_m_pos = new TH1F("h_delta_m_pos", "; #Delta m; Events", 124, 116., 178.);
@@ -120,6 +128,8 @@ void data(string dir, string sample)
       h_Dst_neg_D0m->Fill(D0_mass);
       h_Dst_neg_DTFm->Fill(DTF_mass);
       h_delta_m_neg->Fill(DTF_mass - D0_mass);
+      if(DTF_mass < 2009.) h_Dst_neg_DTFm_lw_side;
+      else if(DTF_mass > 2012.) h_Dst_neg_DTFm_gr_side;
       ++nDst_neg;
     }
     else
@@ -127,6 +137,8 @@ void data(string dir, string sample)
       h_Dst_pos_D0m->Fill(D0_mass);
       h_Dst_pos_DTFm->Fill(DTF_mass);
       h_delta_m_pos->Fill(DTF_mass-D0_mass);
+      if(DTF_mass < 2009.) h_Dst_pos_DTFm_lw_side;
+      else if(DTF_mass > 2012.) h_Dst_pos_DTFm_gr_side;
       ++nDst_pos;
     }
   }
@@ -178,7 +190,36 @@ void data(string dir, string sample)
   h_delta_m_pos->Scale(1./scale2);
   //RooFit things
 
-  RooRealVar *dm_neg = new RooRealVar("dm_neg", "dm_neg", 116., 178.);
+  RooRealVar *dtf_neg_low = new RooRealVar("dtf_neg_low", "dtf_neg_low", 2004., 2009.);
+  RooRealVar *dtf_neg_gr = new RooRealVar("dtf_neg_gr", "dtf_neg_gr", 2012., 2020.);
+  RooRealVar *dtf_pos_low = new RooRealVar("dtf_pos_low", "dtf_pos_low", 2004., 2009.);
+  RooRealVar *dtf_pos_gr = new RooRealVar("dtf_pos_gr", "dtf_pos_gr", 2012., 2020.);
+
+  RooDataHist *data = new RooDataHist("data", "datahist", RooArgList(*dtf_neg_low), h_Dst_neg_DTFm_lw_side);
+  RooDataHist *data2 =  new RooDataHist("data2", "datahist2", RooArgList(*dtf_neg_gr), h_Dst_neg_DTFm_gr_side);
+  RooDataHist *data = new RooDataHist("data3", "datahist3", RooArgList(*dtf_pos_low), h_Dst_pos_DTFm_lw_side);
+  RooDataHist *data2 =  new RooDataHist("data4", "datahist4", RooArgList(*dtf_pos_gr), h_Dst_pos_DTFm_gr_side);
+
+  RooPlot *neg_low_frame = dtf_neg_low->frame();
+  RooPlot *neg_gr_frame = dtf_neg_gr->frame();
+  RooPlot *pos_low_frame = dtf_pos_low->frame();
+  RooPlot *pos_gr_frame = dtf_pos_gr->frame();
+
+  RooRealVar *c0 = new RooRealVar("c0", "c0", 0., -1., 1.);
+  RooRealVar *c1 = new RooRealVar("c1", "c1", 0.5., -1., 1.);
+  RooChebychev *cheb = new RooChebychev("cheb", "cheb", *dtf_pos_low, RooArgList(*c0, *c1));
+
+  cheb->fitTo(*data, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+  data->plotOn(neg_low_frame);
+  model_neg->plotOn(neg_low_frame);
+  model_neg->paramOn(neg_low_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
+
+  TCanvas *canvas2 = new TCanvas();
+  neg_low_frame->Draw();
+  canvas2->SaveAs("output/data/plots/datahist.pdf");
+
+
+/*  RooRealVar *dm_neg = new RooRealVar("dm_neg", "dm_neg", 116., 178.);
   RooRealVar *dm_pos = new RooRealVar("dm_neg", "dm_neg", 116., 178.);
   RooDataHist *data = new RooDataHist("data", "datahist", RooArgList(*dm_neg), h_delta_m_neg);
 
@@ -223,7 +264,7 @@ void data(string dir, string sample)
 
 
   frame2->Draw();
-  canvas2->SaveAs("output/data/plots/datahist2.pdf");
+  canvas2->SaveAs("output/data/plots/datahist2.pdf");*/
 
   h_delta_m_pos->Add(h_delta_m_neg,-1);
   h_delta_m_neg->Scale(2.);
