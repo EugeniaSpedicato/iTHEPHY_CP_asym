@@ -269,7 +269,7 @@ data6->plotOn(neg_sides_frame);
   canvas2->SaveAs("output/data/plots/neg_sides.pdf");
 
   RooRealVar *m0_neg = new RooRealVar("m0_neg", "m0_neg", 2004.5, 2004., 2005.);
-  RooRealVar *c0_neg = new RooRealVar("c0_neg", "c0_neg", -0.05., -1., 0.);
+  RooRealVar *c0_neg = new RooRealVar("c0_neg", "c0_neg", -0.05, -1., 0.);
   RooRealVar *p_neg = new RooRealVar("p_neg", "p_neg", 0.7, -2., 2.5);
   /*RooRealVar *m0_pos = new RooRealVar("m0_pos", "m0_pos", 2020, 2005., 2021.);
   RooRealVar *c0_pos = new RooRealVar("c0_pos", "c0_pos", -3., -10., 10.);
