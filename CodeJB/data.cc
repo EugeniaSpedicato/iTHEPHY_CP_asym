@@ -222,7 +222,8 @@ void data(string dir, string sample)
   RooDataHist *data4 =  new RooDataHist("data4", "datahist4", RooArgList(*dtf_pos_gr), h_Dst_pos_DTFm_gr_side);
   RooDataHist *data5 = new RooDataHist("data5", "datahist5", RooArgList(*dtf_pos_sides), h_Dst_pos_DTFm_sides);
   //RooDataHist *data6 = new RooDataHist("data6", "datahist6", RooArgList(*dtf_neg_sides), h_Dst_neg_DTFm_sides);
-  RooDataHist *data7 = new RooDataHist("data7", "datahist7", RooArgList(*dtf_neg_sides), data->append(data2));
+  RooDataHist *data7 = new RooDataHist("data7", "datahist7", RooArgList(*dtf_neg_sides), data);
+  data7->append(data2);
 
   RooPlot *neg_low_frame = dtf_neg_low->frame();
   RooPlot *neg_gr_frame = dtf_neg_gr->frame();
