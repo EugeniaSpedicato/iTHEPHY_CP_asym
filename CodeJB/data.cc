@@ -14,7 +14,7 @@
 #include "RooClassFactory.h"
 //#include "RooMyPdf.cxx"
 #include "RooWorkspace.h"
-RooWorkspace w = ("w")
+RooWorkspace w = ("w");
 
 void printhists(TH1F *h)
 {
