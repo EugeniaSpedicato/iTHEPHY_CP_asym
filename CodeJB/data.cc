@@ -97,8 +97,8 @@ void data(string dir, string sample)
   TH1F *h_Dst_pos_DTFm = new TH1F("h_Dst_pos_DTFm", ";invariant DTF mass/MeV; Events", 155, 2004.5, 2020.);
   TH1F *h_Dst_neg_DTFm = new TH1F("h_Dst_neg_DTFm", ";invariant DTF mass/MeV; Events", 155, 2004.5, 2020.);
 
-  TH1F *h_Dst_pos_DTFm_gr_side = new TH1F("h_Dst_pos_DTFm_gr_side", ";invariant DTF mass/MeV; Events", 160, 2012., 2020.);
-  TH1F *h_Dst_neg_DTFm_gr_side = new TH1F("h_Dst_neg_DTFm_gr_side", ";invariant DTF mass/MeV; Events", 160, 2012., 2020.);
+  TH1F *h_Dst_pos_DTFm_gr_side = new TH1F("h_Dst_pos_DTFm_gr_side", ";invariant DTF mass/MeV; Events", 375, 2012.5, 2020.);
+  TH1F *h_Dst_neg_DTFm_gr_side = new TH1F("h_Dst_neg_DTFm_gr_side", ";invariant DTF mass/MeV; Events", 375, 2012.5, 2020.);
 
   TH1F *h_Dst_pos_DTFm_lw_side = new TH1F("h_Dst_pos_DTFm_gr_side", ";invariant DTF mass/MeV; Events", 200, 2004.5, 2008.5);
   TH1F *h_Dst_neg_DTFm_lw_side = new TH1F("h_Dst_neg_DTFm_gr_side", ";invariant DTF mass/MeV; Events", 200, 2004.5, 2008.5);
@@ -141,7 +141,7 @@ void data(string dir, string sample)
         h_Dst_neg_DTFm_sides->Fill(DTF_mass);
 
       }
-      else if(DTF_mass > 2012.)
+      else if(DTF_mass > 2012.5)
       {
         h_Dst_neg_DTFm_gr_side->Fill(DTF_mass);
         h_Dst_neg_DTFm_sides->Fill(DTF_mass);
@@ -159,7 +159,7 @@ void data(string dir, string sample)
         h_Dst_pos_DTFm_sides->Fill(DTF_mass);
 
       }
-      else if(DTF_mass > 2012.)
+      else if(DTF_mass > 2012.5)
       {
         h_Dst_pos_DTFm_gr_side->Fill(DTF_mass);
         h_Dst_pos_DTFm_sides->Fill(DTF_mass);
@@ -225,9 +225,9 @@ void data(string dir, string sample)
   //RooFit things
 
   RooRealVar *dtf_neg_low = new RooRealVar("dtf_neg_low", "dtf_neg_low", 2004.5, 2008.5);
-  RooRealVar *dtf_neg_gr = new RooRealVar("dtf_neg_gr", "dtf_neg_gr", 2012., 2020.);
+  RooRealVar *dtf_neg_gr = new RooRealVar("dtf_neg_gr", "dtf_neg_gr", 2012.5, 2020.);
   RooRealVar *dtf_pos_low = new RooRealVar("dtf_pos_low", "dtf_pos_low", 2004.5, 2008.5);
-  RooRealVar *dtf_pos_gr = new RooRealVar("dtf_pos_gr", "dtf_pos_gr", 2012., 2020.);
+  RooRealVar *dtf_pos_gr = new RooRealVar("dtf_pos_gr", "dtf_pos_gr", 2012.5, 2020.);
 
   RooRealVar *dtf_neg_sides = new RooRealVar("dtf_neg_sides", "dtf_neg_sides", 2004.5, 2020.);
   RooRealVar *dtf_pos_sides = new RooRealVar("dtf_pos_sides", "dtf_pos_sides", 2004.5, 2020.);
