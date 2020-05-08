@@ -203,7 +203,7 @@ void data(string dir, string sample)
   RooPlot *pos_gr_frame = dtf_pos_gr->frame();
 
   RooRealVar *c0 = new RooRealVar("c0", "c0", 0., -1., 1.);
-  RooRealVar *c1 = new RooRealVar("c1", "c1", 0.5., -1., 1.);
+  RooRealVar *c1 = new RooRealVar("c1", "c1", 0.5, -1., 1.);
   RooChebychev *cheb = new RooChebychev("cheb", "cheb", *dtf_pos_low, RooArgList(*c0, *c1));
 
   cheb->fitTo(*data, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
