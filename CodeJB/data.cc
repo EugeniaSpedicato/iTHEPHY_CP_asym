@@ -282,13 +282,13 @@ data6->plotOn(neg_sides_frame);
   */
 
 //  RooPolynomial *arg_neg = new RooPolynomial("arg_neg", "arg_neg", *dtf_neg_low);
-  RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("GenPdf", "1/N*pow(dtf_neg_bside-a,b)*exp(-c*(dtf_neg_bside-a))", RooArgSet(*dtf_neg_bside, *N, *a, *b, *c));
+  RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("GenPdf", "1/N*pow(dtf_neg_side-a,b)*exp(-c*(dtf_neg_side-a))", RooArgSet(*dtf_neg_side, *N, *a, *b, *c));
 //  RooArgusBG *arg_pos = new RooArgusBG("arg_pos", "arg_pos", *dtf_pos_low, *m0_pos, *c0_pos, *p_pos);
 
   arg_neg->fitTo(*data, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
-  data->plotOn(neg_bside_frame);
-  arg_neg->plotOn(neg_bside_frame);
-  arg_neg->paramOn(neg_bside_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)));
+  data->plotOn(neg_side_frame);
+  arg_neg->plotOn(neg_side_frame);
+  arg_neg->paramOn(neg_side_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)));
 
   /*data->plotOn(neg_low_frame);
   arg_neg->plotOn(neg_low_frame);
