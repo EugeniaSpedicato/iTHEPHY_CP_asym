@@ -177,5 +177,10 @@
 ./data_cc.so: /home/smjoblan/builddir/include/RooArgusBG.h
 ./data_cc.so: /home/smjoblan/builddir/include/RooGaussian.h
 ./data_cc.so: /home/smjoblan/builddir/include/RooPolynomial.h
+./data_cc.so: /home/smjoblan/builddir/include/RooClassFactory.h
+./data_cc.so: /home/smjoblan/builddir/include/RooFactoryWSTool.h
+./data_cc.so: /home/smjoblan/builddir/include/RooWorkspace.h
+./data_cc.so: /home/smjoblan/builddir/include/RooExpensiveObjectCache.h
+./data_cc.so: /home/smjoblan/builddir/include/ROOT/RMakeUnique.hxx
 ./data_cc.so: /home/smjoblan/builddir/include/RVersion.h /home/smjoblan/builddir/include/RConfig.h /home/smjoblan/builddir/include/TClass.h /home/smjoblan/builddir/include/TDictAttributeMap.h /home/smjoblan/builddir/include/TInterpreter.h /home/smjoblan/builddir/include/TROOT.h /home/smjoblan/builddir/include/TBuffer.h /home/smjoblan/builddir/include/TMemberInspector.h /home/smjoblan/builddir/include/TError.h /home/smjoblan/builddir/include/RtypesImp.h /home/smjoblan/builddir/include/TIsAProxy.h /home/smjoblan/builddir/include/TFileMergeInfo.h /home/smjoblan/builddir/include/TCollectionProxyInfo.h /home/smjoblan/builddir/bin/rootcling
 data_cc__ROOTBUILDVERSION= 6.16/00
