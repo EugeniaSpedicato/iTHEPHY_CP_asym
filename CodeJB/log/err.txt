@@ -20,4 +20,5 @@ Info in <TCanvas::Print>: pdf file output/data/plots/pos_low.pdf has been create
 Info in <TCanvas::Print>: pdf file output/data/plots/pos_gr.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/pos_sides.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/neg_sides.pdf has been created
+Info in <TCanvas::Print>: pdf file output/data/plots/neg_sides_fit.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/h_delta_m_asym.pdf has been created
