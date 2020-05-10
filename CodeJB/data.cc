@@ -269,11 +269,11 @@ data6->plotOn(neg_sides_frame);
   RooRealVar *rel_frac = new RooRealVar("rel_frac", "rel_frac", 0.5, 0., 1.);
 
   RooBreitWigner *sig_neg = new RooBreitWigner("sig_neg", "sig_neg", *dtf_neg, *mean, *sigma);
-  RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("arg_neg", "1/N*pow(dtf_neg-a,b)*exp(-c*(dtf_neg-a))", RooArgSet(*dtf_neg, *N, *a, *b, *c));
+  RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("arg_neg", "1/N*pow(dtf_neg-a,b)", RooArgSet(*dtf_neg, *N, *a, *b));
   RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig_neg, *arg_neg),RooArgList(*rel_frac));
 
   RooBreitWigner *sig_pos = new RooBreitWigner("sig_pos", "sig_pos", *dtf_pos, *mean, *sigma);
-  RooAbsPdf *arg_pos = RooClassFactory::makePdfInstance("arg_pos", "1/N*pow(dtf_pos-a,b)*exp(-c*(dtf_pos-a))", RooArgSet(*dtf_pos, *N, *a, *b, *c));
+  RooAbsPdf *arg_pos = RooClassFactory::makePdfInstance("arg_pos", "1/N*pow(dtf_pos-a,b)", RooArgSet(*dtf_pos, *N, *a, *b));
   RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig_pos, *arg_pos),RooArgList(*rel_frac));
 
 
