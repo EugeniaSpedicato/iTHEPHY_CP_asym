@@ -8,21 +8,21 @@
 
 #include "Riostream.h" 
 
-#include "RooArg_negPdf.h" 
+#include "RooArg_neg_sidePdf.h" 
 #include "RooAbsReal.h" 
 #include "RooAbsCategory.h" 
 #include <math.h> 
 #include "TMath.h" 
 
-ClassImp(RooArg_negPdf); 
+ClassImp(RooArg_neg_sidePdf); 
 
- RooArg_negPdf::RooArg_negPdf(const char *name, const char *title, 
-                        RooAbsReal& _dtf_neg,
+ RooArg_neg_sidePdf::RooArg_neg_sidePdf(const char *name, const char *title, 
+                        RooAbsReal& _dtf_neg_low,
                         RooAbsReal& _N,
                         RooAbsReal& _a,
                         RooAbsReal& _b) :
    RooAbsPdf(name,title), 
-   dtf_neg("dtf_neg","dtf_neg",this,_dtf_neg),
+   dtf_neg_low("dtf_neg_low","dtf_neg_low",this,_dtf_neg_low),
    N("N","N",this,_N),
    a("a","a",this,_a),
    b("b","b",this,_b)
@@ -30,9 +30,9 @@ ClassImp(RooArg_negPdf);
  } 
 
 
- RooArg_negPdf::RooArg_negPdf(const RooArg_negPdf& other, const char* name) :  
+ RooArg_neg_sidePdf::RooArg_neg_sidePdf(const RooArg_neg_sidePdf& other, const char* name) :  
    RooAbsPdf(other,name), 
-   dtf_neg("dtf_neg",this,other.dtf_neg),
+   dtf_neg_low("dtf_neg_low",this,other.dtf_neg_low),
    N("N",this,other.N),
    a("a",this,other.a),
    b("b",this,other.b)
@@ -41,10 +41,10 @@ ClassImp(RooArg_negPdf);
 
 
 
- Double_t RooArg_negPdf::evaluate() const 
+ Double_t RooArg_neg_sidePdf::evaluate() const 
  { 
    // ENTER EXPRESSION IN TERMS OF VARIABLE ARGUMENTS HERE 
-   return 1./N*pow(dtf_neg-a,b) ; 
+   return 1/N*pow(dtf_neg_low-a,b) ; 
  } 
 
 
