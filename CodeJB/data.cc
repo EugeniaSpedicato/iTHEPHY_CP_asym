@@ -5,6 +5,7 @@
 #include "RooDataSet.h"
 #include "RooDataHist.h"
 #include "RooPlot.h"
+#include "RooFit.h"
 #include "RooAddPdf.h"
 #include "RooUniform.h"
 #include "RooArgusBG.h"
