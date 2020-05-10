@@ -12,8 +12,6 @@ Info in <TCanvas::Print>: pdf file output/data/plots/h_Dst_pos_DTFm.pdf has been
 Info in <TCanvas::Print>: pdf file output/data/plots/h_Dst_neg_DTFm.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/h_delta_m_neg.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/h_delta_m_pos.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/h_Dst_asym_D0m.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/h_Dst_asym_DTFm.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/neg_low.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/neg_gr.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/pos_low.pdf has been created
@@ -24,5 +22,10 @@ Info in <TUnixSystem::ACLiC>: creating shared library /home/smjoblan/iTHEPHY/iTH
 Warning in cling::IncrementalParser::CheckABICompatibility():
   Possible C++ standard library mismatch, compiled with __GLIBCXX__ '20181206'
   Extraction of runtime standard library version was: '20191114'
-Info in <TCanvas::Print>: pdf file output/data/plots/dtf_neg_fit_model.pdf has been created
+Info in <TUnixSystem::ACLiC>: creating shared library /home/smjoblan/iTHEPHY/iTHEPHY/CodeJB/RooArg_posPdf_cxx.so
+Warning in cling::IncrementalParser::CheckABICompatibility():
+  Possible C++ standard library mismatch, compiled with __GLIBCXX__ '20181206'
+  Extraction of runtime standard library version was: '20191114'
+Info in <TCanvas::Print>: pdf file output/data/plots/dtf_neg_fit.pdf has been created
+Info in <TCanvas::Print>: pdf file output/data/plots/dtf_pos_fit.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/h_delta_m_asym.pdf has been created
