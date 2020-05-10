@@ -280,17 +280,28 @@ data6->plotOn(neg_sides_frame);
   RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig_pos, *arg_pos),RooArgList(*rel_frac));
 
 
-  model_neg->fitTo(*data8, Extended(), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+  model_neg->fitTo(*data8, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   data8->plotOn(neg_frame);
   model_neg->plotOn(neg_frame, RooFit::Components("arg_neg"), RooFit::FillColor(kRed), RooFit::LineStyle(kDashed),RooFit::DrawOption("F") );
   model_neg->plotOn(neg_frame);
   model_neg->paramOn(neg_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)));
 
-  model_pos->fitTo(*data7, Extended(), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+  model_pos->fitTo(*data7, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   data7->plotOn(pos_frame);
   model_pos->plotOn(pos_frame, RooFit::Components("arg_pos"), RooFit::FillColor(kRed), RooFit::LineStyle(kDashed),RooFit::DrawOption("F") );
   model_pos->plotOn(pos_frame);
   model_pos->paramOn(pos_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)));
+
+  RooAbsPdf *arg_pos_side = RooClassFactory::makePdfInstance("arg_pos_side", "1/N*pow(dtf_pos_low-a,b)", RooArgSet(*dtf_pos_low, *N, *a, *b));
+  RooAbsPdf *arg_neg_side = RooClassFactory::makePdfInstance("arg_neg_side", "1/N*pow(dtf_neg_low-a,b)", RooArgSet(*dtf_neg_low, *N, *a, *b));
+
+  arg_pos_side->fitTo(*data3, Extended(), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+  arg_neg_side->fitTo(*data, Extended(), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+
+  double nExpPos, nExpNeg;
+
+  nExpPos = arg_pos_side->expectedEvents(*dtf_pos);
+  nExpNeg = arg_neg_side->expectedEvents(*dtf_neg);
 
   neg_frame->Draw();
   canvas2->SaveAs("output/data/plots/dtf_neg_fit.pdf");
