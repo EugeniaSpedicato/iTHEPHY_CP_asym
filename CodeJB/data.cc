@@ -330,7 +330,7 @@ data6->plotOn(neg_sides_frame);
   h_sig_asym_dtf = h_sig_pos_dtf;
   h_sig_asym_dtf->SetName("h_sig_asym_dtf");
   h_sig_asym_dtf->SetTitle(";m(D*)/MeV; assymmetry");
-  h_sig_asym_dtf->SetAxisRange(-0.05, 0.05, "Y");
+  //h_sig_asym_dtf->SetAxisRange(-0.05, 0.05, "Y");
   printhists(h_sig_asym_dtf);
 
   h_Dst_asym_D0m->Write();
