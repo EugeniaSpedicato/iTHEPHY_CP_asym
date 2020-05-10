@@ -13,6 +13,8 @@
 #include <fstream>
 #include "RooClassFactory.h"
 #include "RooWorkspace.h"
+#include "RooExtendPdf.h"
+
 RooWorkspace w = ("w");
 
 void printhists(TH1F *h)
@@ -277,13 +279,13 @@ data6->plotOn(neg_sides_frame);
   RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig_pos, *arg_pos),RooArgList(*rel_frac));
 
 
-  model_neg->fitTo(*data8, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+  model_neg->fitTo(*data8, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1), RooFit::Extend(RooFit.kTrue));
   data8->plotOn(neg_frame);
   model_neg->plotOn(neg_frame, RooFit::Components("arg_neg"), RooFit::FillColor(kRed), RooFit::LineStyle(kDashed),RooFit::DrawOption("F") );
   model_neg->plotOn(neg_frame);
   model_neg->paramOn(neg_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)));
 
-  model_pos->fitTo(*data7, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+  model_pos->fitTo(*data7, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1), RooFit::Extend(RooFit.kTrue));
   data7->plotOn(pos_frame);
   model_pos->plotOn(pos_frame, RooFit::Components("arg_pos"), RooFit::FillColor(kRed), RooFit::LineStyle(kDashed),RooFit::DrawOption("F") );
   model_pos->plotOn(pos_frame);
@@ -294,11 +296,12 @@ data6->plotOn(neg_sides_frame);
   pos_frame->Draw();
   canvas2->SaveAs("output/data/plots/dtf_pos_fit.pdf");
 
+
   TH1F *h_sig_pos_dtf = new TH1F("h_sig_pos_dtf", "h_sig_pos_dtf", 80, 2004., 2020.);
   TH1F *h_sig_neg_dtf = new TH1F("h_sig_neg_dtf", "h_sig_neg_dtf", 80, 2004., 2020.);
   TH1F *h_sig_asym_dtf = new TH1F("h_sig_asym_dtf", "h_sig_asym_dtf", 80, 2004., 2020.);
 
-  int nSigPos = 0;
+/*  int nSigPos = 0;
   int nSigNeg = 0;
 
   for (int i = 0; i < 150; ++i)
@@ -327,7 +330,7 @@ data6->plotOn(neg_sides_frame);
       }
     }
   }
-
+*/
   h_sig_neg_dtf->Write();
   h_sig_pos_dtf->Write();
   printhists(h_sig_neg_dtf);
