@@ -272,11 +272,11 @@ data6->plotOn(neg_sides_frame);
   RooRealVar *rel_frac = new RooRealVar("rel_frac", "rel_frac", 0.5, 0., 1.);
 
   RooBreitWigner *sig_neg = new RooBreitWigner("sig_neg", "sig_neg", *dtf_neg, *mean, *sigma);
-  RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("arg_neg", "1/N*pow(dtf_neg-a,b)", RooArgSet(*dtf_neg, *N, *a, *b));
+  RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("arg_neg", "1./N*pow(dtf_neg-a,b)", RooArgSet(*dtf_neg, *N, *a, *b));
   RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig_neg, *arg_neg),RooArgList(*rel_frac));
 
   RooBreitWigner *sig_pos = new RooBreitWigner("sig_pos", "sig_pos", *dtf_pos, *mean, *sigma);
-  RooAbsPdf *arg_pos = RooClassFactory::makePdfInstance("arg_pos", "1/N*pow(dtf_pos-a,b)", RooArgSet(*dtf_pos, *N, *a, *b));
+  RooAbsPdf *arg_pos = RooClassFactory::makePdfInstance("arg_pos", "1./N*pow(dtf_pos-a,b)", RooArgSet(*dtf_pos, *N, *a, *b));
   RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig_pos, *arg_pos),RooArgList(*rel_frac));
 
 
@@ -292,16 +292,7 @@ data6->plotOn(neg_sides_frame);
   model_pos->plotOn(pos_frame);
   model_pos->paramOn(pos_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)));
 
-  RooAbsPdf *arg_pos_side = RooClassFactory::makePdfInstance("arg_pos_side", "1/N*pow(dtf_pos_low-a,b)", RooArgSet(*dtf_pos_low, *N, *a, *b));
-  RooAbsPdf *arg_neg_side = RooClassFactory::makePdfInstance("arg_neg_side", "1/N*pow(dtf_neg_low-a,b)", RooArgSet(*dtf_neg_low, *N, *a, *b));
 
-  arg_pos_side->fitTo(*data3, Extended(), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
-  arg_neg_side->fitTo(*data, Extended(), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
-
-  double nExpPos, nExpNeg;
-
-  nExpPos = arg_pos_side->expectedEvents(*dtf_pos);
-  nExpNeg = arg_neg_side->expectedEvents(*dtf_neg);
 
   neg_frame->Draw();
   canvas2->SaveAs("output/data/plots/dtf_neg_fit.pdf");
@@ -313,10 +304,10 @@ data6->plotOn(neg_sides_frame);
   TH1F *h_sig_neg_dtf = new TH1F("h_sig_neg_dtf", "h_sig_neg_dtf", 80, 2004., 2020.);
   TH1F *h_sig_asym_dtf = new TH1F("h_sig_asym_dtf", "h_sig_asym_dtf", 80, 2004., 2020.);
 
-/*  int nSigPos = 0;
+  int nSigPos = 0;
   int nSigNeg = 0;
 
-  for (int i = 0; i < 150; ++i)
+  for (int i = 0; i < nEvents; ++i)
   {
     if (i % (nEvents/10) == 0)
     {
@@ -325,24 +316,27 @@ data6->plotOn(neg_sides_frame);
     ntp->GetEvent(i);
     if (Dst_ID < 0)
     {
-      ++nSigNeg;
-      cout << "neg: " << 1/0.005*pow((DTF_mass-2000.8),1.52) << endl;
-      if(nSigNeg > 1/0.005*pow((DTF_mass-2000.8),1.52))
-      {
-        h_sig_neg_dtf->Fill(DTF_mass);
-      }
+      h_sig_neg_dtf->Fill(DTF_mass);
     }
     else if (Dst_ID > 0)
     {
-      ++nSigPos;
-      cout << "pos: " << 1/0.003*pow((DTF_mass-2000.46),1.551) << endl;
-      if(nSigPos > 1/0.003*pow((DTF_mass-2000.46),1.551))
-      {
-        h_sig_pos_dtf->Fill(DTF_mass);
-      }
+      h_sig_pos_dtf->Fill(DTF_mass);
     }
   }
-*/
+
+  size = h_sig_neg_dtf->GetNbinsX();
+  double func, sig_bkg;
+  for(int i = 0; i < size; ++i)
+  {
+    func = 1./0.005*pow((2004.1+i*0.2 - 2000.8), 1.52);
+    sig_bkg = h_sig_neg_dtf->GetBinContent(i);
+    h_sig_neg_dtf->SetBinContent(i, sig_bkg - func);
+
+    func = 1./0.003*pow((2004.1+i*0.2 - 2000.46), 1.551);
+    sig_bkg = h_sig_pos_dtf->GetBinContent(i);
+    h_sig_pos_dtf->SetBinContent(i, sig_bkg - func);
+  }
+
   h_sig_neg_dtf->Write();
   h_sig_pos_dtf->Write();
   printhists(h_sig_neg_dtf);
