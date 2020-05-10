@@ -332,7 +332,7 @@ data6->plotOn(neg_sides_frame);
     sig_bkg = h_sig_neg_dtf->GetBinContent(i);
     (sig_bkg - func >=0)? h_sig_neg_dtf->SetBinContent(i, sig_bkg - func) : h_sig_neg_dtf->SetBinContent(i, 0.);
 
-    func = (1./0.003*pow((2004.025+i*0.05 - 2000.46), 1.551) + 1./0.003*pow((2004.+i*0.0.05 - 2000.46), 1.551) + 1./0.003*pow((2004.05+i*0.2 - 2000.46), 1.551))/3.;
+    func = (1./0.003*pow((2004.025+i*0.05 - 2000.46), 1.551) + 1./0.003*pow((2004.+i*0.05 - 2000.46), 1.551) + 1./0.003*pow((2004.05+i*0.2 - 2000.46), 1.551))/3.;
     sig_bkg = h_sig_pos_dtf->GetBinContent(i);
     (sig_bkg - func >=0)? h_sig_pos_dtf->SetBinContent(i, sig_bkg - func) : h_sig_pos_dtf->SetBinContent(i, 0.);
   }
