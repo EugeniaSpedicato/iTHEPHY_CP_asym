@@ -289,25 +289,49 @@ data6->plotOn(neg_sides_frame);
   model_pos->plotOn(pos_frame);
   model_pos->paramOn(pos_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)));
 
-
-
-
   neg_frame->Draw();
   canvas2->SaveAs("output/data/plots/dtf_neg_fit.pdf");
   pos_frame->Draw();
   canvas2->SaveAs("output/data/plots/dtf_pos_fit.pdf");
 
+  TH1F *h_sig_pos_dtf = new TH1F("h_sig_pos_dtf", "h_sig_pos_dtf", 80, 2004., 2020.);
+  TH1F *h_sig_neg_dtf = new TH1F("h_sig_neg_dtf", "h_sig_neg_dtf", 80, 2004., 2020.);
+  TH1F *h_sig_asym_dtf = new TH1F("h_sig_asym_dtf", "h_sig_asym_dtf", 80, 2004., 2020.);
 
+  int nSigPos = 0;
+  int nSigNeg = 0;
 
-  h_delta_m_pos->Add(h_delta_m_neg,-1);
-  h_delta_m_neg->Scale(2.);
-  h_delta_m_neg->Add(h_delta_m_pos);
-  h_delta_m_pos->Divide(h_delta_m_neg);
-  h_delta_m_asym = h_delta_m_pos;
-  h_delta_m_asym->SetName("h_delta_m_asym");
-  h_delta_m_asym->SetTitle(";#Delta m/MeV; assymmetry");
-  h_delta_m_asym->SetAxisRange(-0.05, 0.05, "Y");
-  printhists(h_delta_m_asym);
+  for (int i = 0; i < nEvents; ++i)
+  {
+    if (i % (nEvents/10) == 0)
+    {
+      std::cout << "=== Event " << i/(nEvents/10) * 10 << "%" << std::endl;
+    }
+    ntp->GetEvent(i);
+    if (Dst_ID < 0 && nSigNeg < 1/0.005*pow((DTF_mass-2000.8),1.52))
+    {
+      h_sig_neg_dtf->Fill(DTF_mass)
+    }
+    else if (Dst_ID > 0 && nSigPos < 1/0.005*pow((DTF_mass-2000.8),1.52))
+    {
+      h_sig_pos_dtf->Fill(DTF_mass)
+    }
+  }
+
+  h_sig_neg_dtf->Write();
+  h_sig_pos_dtf->Write();
+  printhists(h_sig_neg_dtf);
+  printhists(h_sig_pos_dtf);
+
+  h_sig_pos_dtf->Add(h_sig_neg_dtf,-1);
+  h_sig_neg_dtf->Scale(2.);
+  h_sig_neg_dtf->Add(h_sig_pos_dtf);
+  h_sig_pos_dtf->Divide(h_sig_neg_dtf);
+  h_sig_asym_dtf = h_sig_pos_dtf;
+  h_sig_asym_dtf->SetName("h_sig_asym_dtf");
+  h_sig_asym_dtf->SetTitle(";m(D*)/MeV; assymmetry");
+  h_sig_asym_dtf->SetAxisRange(-0.05, 0.05, "Y");
+  printhists(h_sig_asym_dtf);
 
   h_Dst_asym_D0m->Write();
   h_Dst_asym_DTFm->Write();
