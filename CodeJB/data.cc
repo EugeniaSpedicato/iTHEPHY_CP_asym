@@ -260,7 +260,7 @@ data6->plotOn(neg_sides_frame);
   neg_sides_frame->Draw();
   canvas2->SaveAs("output/data/plots/neg_sides.pdf");
 
-  RooRealVar *N = new RooRealVar("N", "N", 0.0058, 0., 1);
+  RooRealVar *N = new RooRealVar("N", "N", 0.0058, 0., 0.3);
   RooRealVar *a = new RooRealVar("a", "a", 2004.38, 2004., 2004.5);
   RooRealVar *c = new RooRealVar("c", "c", 0.051, 0., 0.1);
   RooRealVar *b = new RooRealVar("b", "b", 0.72, 0., 2.);
