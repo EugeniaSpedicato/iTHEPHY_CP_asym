@@ -310,11 +310,11 @@ data6->plotOn(neg_sides_frame);
     ntp->GetEvent(i);
     if (Dst_ID < 0 && nSigNeg < 1/0.005*pow((DTF_mass-2000.8),1.52))
     {
-      h_sig_neg_dtf->Fill(DTF_mass)
+      h_sig_neg_dtf->Fill(DTF_mass);
     }
     else if (Dst_ID > 0 && nSigPos < 1/0.005*pow((DTF_mass-2000.8),1.52))
     {
-      h_sig_pos_dtf->Fill(DTF_mass)
+      h_sig_pos_dtf->Fill(DTF_mass);
     }
   }
 
