@@ -300,9 +300,9 @@ data6->plotOn(neg_sides_frame);
   canvas2->SaveAs("output/data/plots/dtf_pos_fit.pdf");
 
 
-  TH1F *h_sig_pos_dtf = new TH1F("h_sig_pos_dtf", "h_sig_pos_dtf", 80, 2004., 2020.);
-  TH1F *h_sig_neg_dtf = new TH1F("h_sig_neg_dtf", "h_sig_neg_dtf", 80, 2004., 2020.);
-  TH1F *h_sig_asym_dtf = new TH1F("h_sig_asym_dtf", "h_sig_asym_dtf", 80, 2004., 2020.);
+  TH1F *h_sig_pos_dtf = new TH1F("h_sig_pos_dtf", "h_sig_pos_dtf", 80, 2008., 2012.);
+  TH1F *h_sig_neg_dtf = new TH1F("h_sig_neg_dtf", "h_sig_neg_dtf", 80, 2008., 2012.);
+  TH1F *h_sig_asym_dtf = new TH1F("h_sig_asym_dtf", "h_sig_asym_dtf", 80, 2008., 2012.);
 
   int nSigPos = 0;
   int nSigNeg = 0;
@@ -328,13 +328,13 @@ data6->plotOn(neg_sides_frame);
   double func, sig_bkg;
   for(int i = 0; i < size; ++i)
   {
-    func = (1./0.005*pow((2004.1+i*0.2 - 2000.8), 1.52) + 1./0.005*pow((2004.+i*0.2 - 2000.8), 1.52) + 1./0.005*pow((2004.2+i*0.2 - 2000.8), 1.52))/3.;
+    func = (1./0.005*pow((2004.025+i*0.05 - 2000.8), 1.52) + 1./0.005*pow((2004.+i*0.05 - 2000.8), 1.52) + 1./0.005*pow((2004.05+i*0.05 - 2000.8), 1.52))/3.;
     sig_bkg = h_sig_neg_dtf->GetBinContent(i);
-    (int(sig_bkg) - func >=0)? h_sig_neg_dtf->SetBinContent(i, float(int(sig_bkg) - func)):h_sig_neg_dtf->SetBinContent(i, 0.);
+    (sig_bkg - func >=0)? h_sig_neg_dtf->SetBinContent(i, sig_bkg) - func):h_sig_neg_dtf->SetBinContent(i, 0.);
 
-    func = (1./0.003*pow((2004.1+i*0.2 - 2000.46), 1.551) + 1./0.003*pow((2004.+i*0.2 - 2000.46), 1.551) + 1./0.003*pow((2004.2+i*0.2 - 2000.46), 1.551))/3.;
+    func = (1./0.003*pow((2004.025+i*0.05 - 2000.46), 1.551) + 1./0.003*pow((2004.+i*0.0.05 - 2000.46), 1.551) + 1./0.003*pow((2004.05+i*0.2 - 2000.46), 1.551))/3.;
     sig_bkg = h_sig_pos_dtf->GetBinContent(i);
-    (int(sig_bkg) - func >=0)? h_sig_pos_dtf->SetBinContent(i, float(int(sig_bkg) - func)):h_sig_pos_dtf->SetBinContent(i, 0.);
+    (sig_bkg - func >=0)? h_sig_pos_dtf->SetBinContent(i, sig_bkg) - func):h_sig_pos_dtf->SetBinContent(i, 0.);
   }
 
   h_sig_neg_dtf->Write();
