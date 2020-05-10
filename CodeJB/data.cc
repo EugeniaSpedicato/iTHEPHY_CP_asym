@@ -12,7 +12,6 @@
 #include "RooPolynomial.h"
 #include <fstream>
 #include "RooClassFactory.h"
-//#include "RooMyPdf.cxx"
 #include "RooWorkspace.h"
 RooWorkspace w = ("w");
 
@@ -290,20 +289,27 @@ data6->plotOn(neg_sides_frame);
 
   RooGaussian *sig_neg = new RooGaussian("sig_neg", "sig_neg", *dtf_neg, *mean, *sigma);
   RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("arg_neg", "1/N*pow(dtf_neg-a,b)*exp(-c*(dtf_neg-a))", RooArgSet(*dtf_neg, *N, *a, *b, *c));
-  RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig_neg, *arg_neg),RooArgList(*rel_frac));
+  RooAddPdf *model = new RooAddPdf("model", "model", RooArgList(*sig_neg, *arg_neg),RooArgList(*rel_frac));
 
-  model_neg->fitTo(*data8, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
-  //data8->plotOn(neg_frame);
-  model_neg->plotOn(neg_frame, RooFit::Components("arg_neg"), RooFit::FillColor(kRed), RooFit::LineStyle(kDashed),RooFit::DrawOption("F") );
-  model_neg->plotOn(neg_frame);
-  model_neg->paramOn(neg_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)));
+  model->fitTo(*data8, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+  data8->plotOn(neg_frame);
+  model->plotOn(neg_frame, RooFit::Components("arg_neg"), RooFit::FillColor(kRed), RooFit::LineStyle(kDashed),RooFit::DrawOption("F") );
+  model->plotOn(neg_frame);
+  model->paramOn(neg_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)));
 
-  /*data->plotOn(neg_low_frame);
-  arg_neg->plotOn(neg_low_frame);
-  arg_neg->paramOn(neg_low_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
-*/
+  model->fitTo(*data7, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+  data7->plotOn(pos_frame);
+  model->plotOn(pos_frame, RooFit::Components("arg_neg"), RooFit::FillColor(kRed), RooFit::LineStyle(kDashed),RooFit::DrawOption("F") );
+  model->plotOn(pos_frame);
+  model->paramOn(pos_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)));
+
+
+
+
   neg_frame->Draw();
-  canvas2->SaveAs("output/data/plots/dtf_neg_fit_model.pdf");
+  canvas2->SaveAs("output/data/plots/dtf_neg_fit.pdf");
+  pos_frame->Draw();
+  canvas2->SaveAs("output/data/plots/dtf_pos_fit.pdf");
 
 
 
