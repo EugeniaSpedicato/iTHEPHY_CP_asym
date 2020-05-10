@@ -311,6 +311,7 @@ data6->plotOn(neg_sides_frame);
     if (Dst_ID < 0)
     {
       ++nSigNeg;
+      cout << "pos: " << 1/0.005*pow((DTF_mass-2000.8),1.52) << endl;
       if(nSigNeg > 1/0.005*pow((DTF_mass-2000.8),1.52))
       {
         h_sig_neg_dtf->Fill(DTF_mass);
@@ -319,6 +320,7 @@ data6->plotOn(neg_sides_frame);
     else if (Dst_ID > 0)
     {
       ++nSigPos;
+      cout << "pos: " << 1/0.003*pow((DTF_mass-2000.46),1.551) << endl;
       if(nSigPos > 1/0.003*pow((DTF_mass-2000.46),1.551))
       {
         h_sig_pos_dtf->Fill(DTF_mass);
