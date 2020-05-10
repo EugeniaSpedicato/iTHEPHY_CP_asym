@@ -206,25 +206,6 @@ void data(string dir, string sample)
 
 
 
-  h_Dst_pos_D0m->Add(h_Dst_neg_D0m,-1);
-  h_Dst_neg_D0m->Scale(2.);
-  h_Dst_neg_D0m->Add(h_Dst_pos_D0m);
-  h_Dst_pos_D0m->Divide(h_Dst_neg_D0m);
-  h_Dst_asym_D0m = h_Dst_pos_D0m;
-  h_Dst_asym_D0m->SetName("h_Dst_asym_D0m");
-  h_Dst_asym_D0m->SetTitle(";invariant D0 mass/MeV; assymmetry");
-  printhists(h_Dst_asym_D0m);
-
-  h_Dst_pos_DTFm->Add(h_Dst_neg_DTFm,-1);
-  h_Dst_neg_DTFm->Scale(2.);
-  h_Dst_neg_DTFm->Add(h_Dst_pos_DTFm);
-  h_Dst_pos_DTFm->Divide(h_Dst_neg_DTFm);
-  h_Dst_asym_DTFm = h_Dst_pos_DTFm;
-  h_Dst_asym_DTFm->SetName("h_Dst_asym_DTFm");
-  h_Dst_asym_DTFm->SetTitle(";invariant DTF mass/MeV; assymmetry");
-  printhists(h_Dst_asym_DTFm);
-
-
   //RooFit things
 
   RooRealVar *dtf_neg_low = new RooRealVar("dtf_neg_low", "dtf_neg_low", 2004.5, 2008.5);
