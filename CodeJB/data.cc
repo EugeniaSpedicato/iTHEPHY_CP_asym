@@ -328,13 +328,13 @@ data6->plotOn(neg_sides_frame);
   double func, sig_bkg;
   for(int i = 0; i < size; ++i)
   {
-    func = 1./0.005*pow((2004.1+i*0.2 - 2000.8), 1.52);
+    func = (1./0.005*pow((2004.1+i*0.2 - 2000.8), 1.52) + 1./0.005*pow((2004.+i*0.2 - 2000.8), 1.52) + 1./0.005*pow((2004.2+i*0.2 - 2000.8), 1.52))/3.;
     sig_bkg = h_sig_neg_dtf->GetBinContent(i);
-    h_sig_neg_dtf->SetBinContent(i, sig_bkg - func);
+    (sig_bkg - func >=0)? h_sig_neg_dtf->SetBinContent(i, sig_bkg - func):h_sig_neg_dtf->SetBinContent(i, 0);
 
-    func = 1./0.003*pow((2004.1+i*0.2 - 2000.46), 1.551);
+    func = (1./0.003*pow((2004.1+i*0.2 - 2000.46), 1.551) + 1./0.003*pow((2004.+i*0.2 - 2000.46), 1.551) + 1./0.003*pow((2004.2+i*0.2 - 2000.46), 1.551))/3.;
     sig_bkg = h_sig_pos_dtf->GetBinContent(i);
-    h_sig_pos_dtf->SetBinContent(i, sig_bkg - func);
+    (sig_bkg - func >=0)? h_sig_pos_dtf->SetBinContent(i, sig_bkg - func):h_sig_pos_dtf->SetBinContent(i, 0);
   }
 
   h_sig_neg_dtf->Write();
