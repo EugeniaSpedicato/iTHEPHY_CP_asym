@@ -308,13 +308,21 @@ data6->plotOn(neg_sides_frame);
       std::cout << "=== Event " << i/(nEvents/10) * 10 << "%" << std::endl;
     }
     ntp->GetEvent(i);
-    if (Dst_ID < 0 && nSigNeg < 1/0.005*pow((DTF_mass-2000.8),1.52))
+    if (Dst_ID < 0)
     {
-      h_sig_neg_dtf->Fill(DTF_mass);
+      ++nSigNeg;
+      if(nSigNeg > 1/0.005*pow((DTF_mass-2000.8),1.52))
+      {
+        h_sig_neg_dtf->Fill(DTF_mass);
+      }
     }
-    else if (Dst_ID > 0 && nSigPos < 1/0.005*pow((DTF_mass-2000.8),1.52))
+    else if (Dst_ID > 0)
     {
-      h_sig_pos_dtf->Fill(DTF_mass);
+      ++nSigPos;
+      if(nSigPos > 1/0.003*pow((DTF_mass-2000.46),1.551))
+      {
+        h_sig_pos_dtf->Fill(DTF_mass);
+      }
     }
   }
 
