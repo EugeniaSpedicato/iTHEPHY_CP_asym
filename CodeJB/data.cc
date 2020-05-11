@@ -307,9 +307,9 @@ data6->plotOn(neg_sides_frame);
   TH1F *h_sig_neg_dtf = new TH1F("h_sig_neg_dtf", "h_sig_neg_dtf", 80, 2008., 2012.);
   TH1F *h_sig_asym_dtf = new TH1F("h_sig_asym_dtf", "h_sig_asym_dtf", 80, 2008., 2012.);
 
-  h_sig_pos_dtf->SumW2();
-  h_sig_neg_dtf->SumW2();
-  h_sig_neg_dtf->SumW2();
+  h_sig_pos_dtf->Sumw2();
+  h_sig_neg_dtf->Sumw2();
+  h_sig_neg_dtf->Sumw2();
 
   int nSigPos = 0;
   int nSigNeg = 0;
