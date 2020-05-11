@@ -1,6 +1,5 @@
 #include "eff.h"
 #include <chrono>
-#include "RooRealVar.h"
 #include "RooBreitWigner.h"
 #include "RooDataSet.h"
 #include "RooDataHist.h"
@@ -19,7 +18,17 @@
 #include "TThread.h"
 #include <Riostream.h>
 #include <thread>
+#include "RooRealVar.h"
 #include "RooStats/SPlot.h"
+#include "RooRealVar.h"
+#include "RooProdPdf.h"
+#include "RooAddition.h"
+#include "RooProduct.h"
+#include "RooAbsPdf.h"
+#include "RooFitResult.h"
+#include "RooWorkspace.h"
+#include "RooConstVar.h"
+#include <iomanip>
 using namespace RooFit;
 
 void printhists(TH1F *h)
@@ -275,7 +284,7 @@ data6->plotOn(neg_sides_frame);
   RooStats::SPlot *sData = new RooStats::SPlot("sData", "An SPlot", *data8, model_neg, RooArgList(*sig_yield_neg, *bkg_yield_neg));
   RooDataSet *dataw_8 = new RooDataSet(data8->GetName(), data8->GetTitle(), data8, *data8->get(), 0, "sig_yield_neg_sw");
   dataw_8->plotOn(neg_frame2, DataError(RooAbsData::SumW2));
-  
+
   canvas2->cd(2);
   neg_frame->Draw();
 
