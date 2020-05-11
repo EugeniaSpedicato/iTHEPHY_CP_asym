@@ -81,7 +81,7 @@ void data(string dir, string sample)
   RooRealVar *sig_yield = new RooRealVar("sig_yield", "sig_yield", 50000., 0., 400000.);
   RooRealVar *bkg_yield = new RooRealVar("bkg_yield", "bkg_yield", 2000., 0., 20000.);
   RooRealVar *dtf = new RooRealVar("DTF_Mass", "DTF_Mass", 2004.5, 2020.);
-  RooRealVar *dtf_sig = new RooRealVar("DTF_Mass_sig", "DTF_Mass_sig", 2008.5, 2011.);
+  RooRealVar *dtf_sig = new RooRealVar("DTF_Mass", "DTF_Mass", 2008.5, 2011.);
   RooDataSet *dataset = new RooDataSet("dataset", "dataset", ntp, RooArgList(*dtf));
 
   RooBreitWigner *sig = new RooBreitWigner("sig", "sig", *dtf, *mean, *sigma);
