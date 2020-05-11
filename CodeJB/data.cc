@@ -329,7 +329,7 @@ data6->plotOn(neg_sides_frame);
   cdata->cd(3);
   RooDataSet *dataw_b = new RooDataSet(dataset->GetName(), dataset->GetTitle(), dataset, *dataset->get(), 0, "bkg_yield_sw");
   RooPlot *frame3 = dtf_sig->frame();
-  dataw_qcd->plotOn(frame3, DataError(RooAbsData::SumW2));
+  dataw_b->plotOn(frame3, DataError(RooAbsData::SumW2));
   frame3->Draw();
   cdata->SaveAs("output/data/plots/sPlot.pdf");
 
