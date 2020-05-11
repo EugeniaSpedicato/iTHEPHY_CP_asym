@@ -28,6 +28,7 @@ Warning in cling::IncrementalParser::CheckABICompatibility():
   Extraction of runtime standard library version was: '20191114'
 Info in <TCanvas::Print>: pdf file output/data/plots/dtf_neg_fit.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/dtf_pos_fit.pdf has been created
+Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
 Info in <TCanvas::Print>: pdf file output/data/plots/h_sig_neg_dtf.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/h_sig_pos_dtf.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/h_sig_asym_dtf.pdf has been created
