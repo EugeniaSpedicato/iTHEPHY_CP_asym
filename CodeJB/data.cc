@@ -321,7 +321,7 @@ data6->plotOn(neg_sides_frame);
   frame->Draw();
 
   cdata->cd(2);
-  RooDataSet *dataw_s = new RooDataSet(dataset->GetName(), dataset->GetTitle(), dataset, *dataset->get(), 0, sig_yield_sw");
+  RooDataSet *dataw_s = new RooDataSet(dataset->GetName(), dataset->GetTitle(), dataset, *dataset->get(), 0, "sig_yield_sw");
   RooPlot *frame2 = dtf_sig->frame();
   dataw_s->plotOn(frame2, DataError(RooAbsData::SumW2));
   frame2->Draw();
