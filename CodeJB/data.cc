@@ -73,7 +73,7 @@ void data(string dir, string sample)
 
   RooRealVar *N = new RooRealVar("N", "N", 0.0023, 0., 0.01);
   RooRealVar *a = new RooRealVar("a", "a", 2004., 2000., 2005.);
-  RooRealVar *c = new RooRealVar("c", "c", 0.159, 0., 0.1);
+  RooRealVar *c = new RooRealVar("c", "c", 0.159, 0., 0.5);
   RooRealVar *b = new RooRealVar("b", "b", 1.125, 0., 2.);
   RooRealVar *mean = new RooRealVar("mean", "mean", 2010., 2008., 2012.);
   RooRealVar *sigma = new RooRealVar("sigma", "sigma", 0.3, 0., 1.);
