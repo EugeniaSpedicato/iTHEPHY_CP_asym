@@ -85,7 +85,7 @@ void data(string dir, string sample)
   RooDataSet *dataset = new RooDataSet("dataset", "dataset", ntp, RooArgList(*dtf));
 
   RooBreitWigner *sig = new RooBreitWigner("sig", "sig", *dtf, *mean, *sigma);
-  RooAbsPdf *arg = RooClassFactory::makePdfInstance("arg", "1./N*pow(dtf-a,b)*exp(-c*(dtf-a))", RooArgSet(*dtf, *N, *a, *b, *c));
+  RooAbsPdf *arg = RooClassFactory::makePdfInstance("arg", "1./N*pow(DTF_Mass-a,b)*exp(-c*(DTF_Mass-a))", RooArgSet(*dtf, *N, *a, *b, *c));
   RooAddPdf *model = new RooAddPdf("model", "model", RooArgList(*sig, *arg),RooArgList(*sig_yield, *bkg_yield));
 
   model->fitTo(*dataset, Extended());
