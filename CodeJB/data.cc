@@ -95,7 +95,7 @@ void data(string dir, string sample)
 
   cdata->cd(1);
   RooPlot *frame = dtf->frame();
-  data->plotOn(frame);
+  dataset->plotOn(frame);
   model->plotOn(frame, Name("FullModel"));
   model->plotOn(frame, Components(*sig), LineStyle(kDashed), LineColor(kRed), Name("SigModel"));
   model->plotOn(frame, Components(*arg), LineStyle(kDashed), LineColor(kGreen), Name("BkgModel"));
