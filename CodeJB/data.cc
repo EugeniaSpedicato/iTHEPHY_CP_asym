@@ -297,8 +297,41 @@ data6->plotOn(neg_sides_frame);
 
 
 
+  RooRealVar *sig_yield = new RooRealVar("sig_yield", "sig_yield", 50000., 0., 400000.);
+  RooRealVar *bkg_yield = new RooRealVar("bkg_yield", "bkg_yield", 2000., 0., 20000.);
   RooRealVar *dtf = new RooRealVar("DTF_Mass", "DTF_mass", 2004.5, 2020.);
+  RooRealVar *dtf_sig = new RooRealVar("DTF_Mass", "DTF_mass", 2008.5, 2011.);
   RooDataSet *dataset = new RooDataSet("dataset", "dataset", ntp, RooArgSet(*dtf));
+
+  RooBreitWigner *sig = new RooBreitWigner("sig", "sig", *dtf, *mean, *sigma);
+  RooAbsPdf *arg = RooClassFactory::makePdfInstance("arg", "1./N*pow(dtf-a,b)*exp(-c*(dtf-a))", RooArgSet(*dtf, *N, *a, *b, *c));
+  RooAddPdf *model = new RooAddPdf("model", "model", RooArgList(*sig, *arg),RooArgList(*sig_yield, *bkg_yield));
+
+  model->fitTo(*dataset, Extended());
+  RooStats::SPlot *sData = new RooStats::SPlot("sData", "An SPlot", *dataset, model, RooArgList(*sig_yield, *bkg_yield));
+
+  TCanvas *cdata = new TCanvas("sPlot", "sPlot demo", 400, 600); cdata->Divide(1, 3);
+
+  cdata->cd(1);
+  RooPlot *frame = dtf->frame();
+  data->plotOn(frame);
+  model->plotOn(frame, Name("FullModel"));
+  model->plotOn(frame, Components(*sig), LineStyle(kDashed), LineColor(kRed), Name("SigModel"));
+  model->plotOn(frame, Components(*arg), LineStyle(kDashed), LineColor(kGreen), Name("BkgModel"));
+  frame->Draw();
+
+  cdata->cd(2);
+  RooDataSet *dataw_s = new RooDataSet(dataset->GetName(), dataset->GetTitle(), dataset, *dataset->get(), 0, sig_yield_sw");
+  RooPlot *frame2 = dtf_sig->frame();
+  dataw_s->plotOn(frame2, DataError(RooAbsData::SumW2));
+  frame2->Draw();
+
+  cdata->cd(3);
+  RooDataSet *dataw_b = new RooDataSet(dataset->GetName(), dataset->GetTitle(), dataset, *dataset->get(), 0, "bkg_yield_sw");
+  RooPlot *frame3 = dtf_sig->frame();
+  dataw_qcd->plotOn(frame3, DataError(RooAbsData::SumW2));
+  frame3->Draw();
+  cdata->SaveAs("output/data/plots/sPlot.pdf");
 
 
   TH1F *h_sig_pos_dtf = new TH1F("h_sig_pos_dtf", "h_sig_pos_dtf", 35, 2009.9, 2010.6);
