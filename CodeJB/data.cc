@@ -88,7 +88,7 @@ void data(string dir, string sample)
   RooAbsPdf *arg = RooClassFactory::makePdfInstance("arg", "1./N*pow(DTF_Mass-a,b)*exp(-c*(DTF_Mass-a))", RooArgSet(*dtf, *N, *a, *b, *c));
   RooAddPdf *model = new RooAddPdf("model", "model", RooArgList(*sig, *arg),RooArgList(*sig_yield, *bkg_yield));
 
-  model->fitTo(*dataset, Extended());
+  model->fitTo(*dataset, Extended(), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   RooStats::SPlot *sData = new RooStats::SPlot("sData", "An SPlot", *dataset, model, RooArgList(*sig_yield, *bkg_yield));
 
   TCanvas *cdata = new TCanvas("sPlot", "sPlot demo", 400, 600); cdata->Divide(1, 3);
