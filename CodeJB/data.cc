@@ -82,7 +82,7 @@ void data(string dir, string sample)
   RooRealVar *bkg_yield = new RooRealVar("bkg_yield", "bkg_yield", 2000., 0., 20000.);
   RooRealVar *dtf = new RooRealVar("DTF_Mass", "DTF_mass", 2004.5, 2020.);
   RooRealVar *dtf_sig = new RooRealVar("DTF_Mass", "DTF_mass", 2008.5, 2011.);
-  RooDataSet *dataset = new RooDataSet("dataset", "dataset", ntp, RooArgSet(*dtf));
+  RooDataSet *dataset = new RooDataSet("dataset", "dataset", ntp, RooArgList(*dtf));
 
   RooBreitWigner *sig = new RooBreitWigner("sig", "sig", *dtf, *mean, *sigma);
   RooAbsPdf *arg = RooClassFactory::makePdfInstance("arg", "1./N*pow(dtf-a,b)*exp(-c*(dtf-a))", RooArgSet(*dtf, *N, *a, *b, *c));
