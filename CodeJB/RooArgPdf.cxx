@@ -8,22 +8,22 @@
 
 #include "Riostream.h" 
 
-#include "RooArg_posPdf.h" 
+#include "RooArgPdf.h" 
 #include "RooAbsReal.h" 
 #include "RooAbsCategory.h" 
 #include <math.h> 
 #include "TMath.h" 
 
-ClassImp(RooArg_posPdf); 
+ClassImp(RooArgPdf); 
 
- RooArg_posPdf::RooArg_posPdf(const char *name, const char *title, 
-                        RooAbsReal& _dtf_pos,
+ RooArgPdf::RooArgPdf(const char *name, const char *title, 
+                        RooAbsReal& _DTF_Mass,
                         RooAbsReal& _N,
                         RooAbsReal& _a,
                         RooAbsReal& _b,
                         RooAbsReal& _c) :
    RooAbsPdf(name,title), 
-   dtf_pos("dtf_pos","dtf_pos",this,_dtf_pos),
+   DTF_Mass("DTF_Mass","DTF_Mass",this,_DTF_Mass),
    N("N","N",this,_N),
    a("a","a",this,_a),
    b("b","b",this,_b),
@@ -32,9 +32,9 @@ ClassImp(RooArg_posPdf);
  } 
 
 
- RooArg_posPdf::RooArg_posPdf(const RooArg_posPdf& other, const char* name) :  
+ RooArgPdf::RooArgPdf(const RooArgPdf& other, const char* name) :  
    RooAbsPdf(other,name), 
-   dtf_pos("dtf_pos",this,other.dtf_pos),
+   DTF_Mass("DTF_Mass",this,other.DTF_Mass),
    N("N",this,other.N),
    a("a",this,other.a),
    b("b",this,other.b),
@@ -44,10 +44,10 @@ ClassImp(RooArg_posPdf);
 
 
 
- Double_t RooArg_posPdf::evaluate() const 
+ Double_t RooArgPdf::evaluate() const 
  { 
    // ENTER EXPRESSION IN TERMS OF VARIABLE ARGUMENTS HERE 
-   return 1./N*pow(dtf_pos-a,b)*exp(-c*(dtf_pos-a)) ; 
+   return 1./N*pow(DTF_Mass-a,b)*exp(-c*(DTF_Mass-a)) ; 
  } 
 
 
