@@ -282,13 +282,13 @@ data6->plotOn(neg_sides_frame);
   neg_frame->Draw();
 
   RooStats::SPlot *sData = new RooStats::SPlot("sData", "An SPlot", *data8, model_neg, RooArgList(*sig_yield_neg, *bkg_yield_neg));
-  RooDataSet *dataw_8 = new RooDataSet(data8->GetName(), data8->GetTitle(), data8, *data8->get(), 0, "sig_yield_neg_sw");
+  RooDataHist *dataw_8 = new RooDataHist(data8->GetName(), data8->GetTitle(), data8, *data8->get(), 0, "sig_yield_neg_sw");
   dataw_8->plotOn(neg_frame2, DataError(RooAbsData::SumW2));
 
   canvas2->cd(2);
   neg_frame->Draw();
 
-  RooDataSet *dataw_8b = new RooDataSet(data8->GetName(), data8->GetTitle(), data8, *data8->get(), 0, "bkg_yield_neg_sw");
+  RooDataHist *dataw_8b = new RooDataHist(data8->GetName(), data8->GetTitle(), data8, *data8->get(), 0, "bkg_yield_neg_sw");
   dataw_qcd->plotOn(neg_frame3, DataError(RooAbsData::SumW2));
 
   canvas2->cd(3);
