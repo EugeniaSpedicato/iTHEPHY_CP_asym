@@ -71,7 +71,7 @@ void data(string dir, string sample)
   ntp->SetBranchStatus("P1_ID",1); ntp->SetBranchAddress("P1_ID", &(Pi_ID));
   ntp->SetBranchStatus("P2_ID",1); ntp->SetBranchAddress("P2_ID", &(K_ID));
 
-  RooRealVar *N = new RooRealVar("N", "N", 0.0058, 0., 0.01);
+  RooRealVar *N = new RooRealVar("N", "N", 0.003, 0., 0.01);
   RooRealVar *a = new RooRealVar("a", "a", 2004.5, 2000., 2004.5);
   RooRealVar *c = new RooRealVar("c", "c", 0.16, 0., 0.1);
   RooRealVar *b = new RooRealVar("b", "b", 1.13, 0., 2.);
