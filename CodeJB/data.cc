@@ -303,9 +303,9 @@ data6->plotOn(neg_sides_frame);
   canvas2->SaveAs("output/data/plots/dtf_pos_fit.pdf");
 
 
-  TH1F *h_sig_pos_dtf = new TH1F("h_sig_pos_dtf", "h_sig_pos_dtf", 160, 2008., 2012.);
-  TH1F *h_sig_neg_dtf = new TH1F("h_sig_neg_dtf", "h_sig_neg_dtf", 160, 2008., 2012.);
-  TH1F *h_sig_asym_dtf = new TH1F("h_sig_asym_dtf", "h_sig_asym_dtf", 160, 2008., 2012.);
+  TH1F *h_sig_pos_dtf = new TH1F("h_sig_pos_dtf", "h_sig_pos_dtf", 150, 2009.5, 2011.);
+  TH1F *h_sig_neg_dtf = new TH1F("h_sig_neg_dtf", "h_sig_neg_dtf", 150, 2009.5, 2011.);
+  TH1F *h_sig_asym_dtf = new TH1F("h_sig_asym_dtf", "h_sig_asym_dtf", 150, 2009.5, 2011.);
 
   h_sig_pos_dtf->Sumw2();
   h_sig_neg_dtf->Sumw2();
@@ -335,11 +335,11 @@ data6->plotOn(neg_sides_frame);
   double func, sig_bkg;
   for(int i = 0; i < size; ++i)
   {
-    func = (1./0.005*pow((2004.0125+i*0.025 - 2000.8), 1.52) + 1./0.005*pow((2004.+i*0.025 - 2000.8), 1.52) + 1./0.005*pow((2004.025+i*0.025 - 2000.8), 1.52))/3.;
+    func = (1./0.005*pow((2009.505+i*0.01 - 2000.8), 1.52) + 1./0.005*pow((2009.5+i*0.01 - 2000.8), 1.52) + 1./0.005*pow((2009.51+i*0.01 - 2000.8), 1.52))/3.;
     sig_bkg = h_sig_neg_dtf->GetBinContent(i);
     (sig_bkg - int(func) >=0)? h_sig_neg_dtf->SetBinContent(i, sig_bkg - int(func)) : h_sig_neg_dtf->SetBinContent(i, 0.);
 
-    func = (1./0.005*pow((2004.0125+i*0.025 - 2000.8), 1.52) + 1./0.005*pow((2004.+i*0.025 - 2000.8), 1.52) + 1./0.005*pow((2004.025+i*0.025 - 2000.8), 1.52))/3.;
+    func = (1./0.005*pow((2009.505+i*0.01 - 2000.8), 1.52) + 1./0.005*pow((2009.5+i*0.01 - 2000.8), 1.52) + 1./0.005*pow((2009.51+i*0.01 - 2000.8), 1.52))/3.;
     sig_bkg = h_sig_pos_dtf->GetBinContent(i);
     (sig_bkg - int(func) >=0)? h_sig_pos_dtf->SetBinContent(i, sig_bkg - int(func)) : h_sig_pos_dtf->SetBinContent(i, 0.);
   }
@@ -356,7 +356,7 @@ data6->plotOn(neg_sides_frame);
   h_sig_asym_dtf = h_sig_pos_dtf;
   h_sig_asym_dtf->SetName("h_sig_asym_dtf");
   h_sig_asym_dtf->SetTitle(";m(D*)/MeV; assymmetry");
-//  h_sig_asym_dtf->SetAxisRange(-0.2, 0., "Y");
+  h_sig_asym_dtf->SetAxisRange(-0.2, 0., "Y");
   printhists(h_sig_asym_dtf);
 
   h_Dst_asym_D0m->Write();
