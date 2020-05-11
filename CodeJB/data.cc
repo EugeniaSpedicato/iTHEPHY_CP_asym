@@ -312,11 +312,11 @@ data6->plotOn(neg_sides_frame);
   {
     func = (1./0.00583*pow((2009.91+i*0.02 - 2004.395), 0.7185)*exp(-0.0512*(2009.91+i*0.02 - 2004.395)) + 1./0.00583*pow((2009.9+i*0.02 - 2004.395), 0.7185)*exp(-0.0512*(2009.9+i*0.02 - 2004.395)) + 1./0.00583*pow((2009.92+i*0.02 - 2004.39)*exp(-0.0512*(2009.92+i*0.02 - 2004.395)), 0.7185))/3.;
     sig_bkg = h_sig_neg_dtf->GetBinContent(i);
-    (sig_bkg - int(func) >=0)? h_sig_neg_dtf->SetBinContent(i, sig_bkg - int(func)) : h_sig_neg_dtf->SetBinContent(i, 0.);
+    (sig_bkg - func >=0)? h_sig_neg_dtf->SetBinContent(i, sig_bkg - func) : h_sig_neg_dtf->SetBinContent(i, 0.);
 
     func = (1./0.00588*pow((2009.91+i*0.02 - 2004.411), 0.6805)*exp(-0.0466*(2009.91+i*0.02 - 2004.411)) + 1./0.00588*pow((2009.9+i*0.02 - 2004.411), 0.6805)*exp(-0.0466*(2009.9+i*0.02 - 2004.411)) + 1./0.00588*pow((2009.92+i*0.02 - 2004.411)*exp(-0.0466*(2009.92+i*0.02 - 2004.411)), 0.6805))/3.;
     sig_bkg = h_sig_pos_dtf->GetBinContent(i);
-    (sig_bkg - int(func) >=0)? h_sig_pos_dtf->SetBinContent(i, sig_bkg - int(func)) : h_sig_pos_dtf->SetBinContent(i, 0.);
+    (sig_bkg - func >=0)? h_sig_pos_dtf->SetBinContent(i, sig_bkg - func) : h_sig_pos_dtf->SetBinContent(i, 0.);
   }
 
   h_sig_neg_dtf->Write();
