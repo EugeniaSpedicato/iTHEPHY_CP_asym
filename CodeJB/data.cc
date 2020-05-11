@@ -20,8 +20,6 @@
 #include <Riostream.h>
 #include <thread>
 using namespace RooFit;
-const auto nThreads = thread::hardware_concurrency();
-ROOT::EnableImplicitMT(nThreads);
 
 void printhists(TH1F *h)
 {
@@ -35,6 +33,9 @@ void printhists(TH1F *h)
 
 void data(string dir, string sample)
 {
+
+  const auto nThreads = thread::hardware_concurrency();
+  ROOT::EnableImplicitMT(nThreads);
   uint64_t start_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
   string input_name = dir+"/"+sample+".root";
   TChain *ntp = new TChain();
