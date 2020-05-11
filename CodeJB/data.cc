@@ -165,9 +165,6 @@ void data(string dir, string sample)
 
   double Dst_asym = (nDst_pos-nDst_neg)/(nDst_pos+nDst_neg);
 
-  cout << "Number of reconstructed data -: " << nDst_neg << endl;
-  cout << "Number of reconstructed data +: " << nDst_pos << endl;
-  cout << "The total Dst assymmetry in data is: " << Dst_asym << endl;
 
   printhists(h_Dst_pos_D0m);
   printhists(h_Dst_neg_D0m);
@@ -286,9 +283,6 @@ data6->plotOn(neg_sides_frame);
   h_sig_neg_dtf->Sumw2();
   h_sig_neg_dtf->Sumw2();
 
-  int nSigPos = 0;
-  int nSigNeg = 0;
-
   for (int i = 0; i < nEvents; ++i)
   {
     if (i % (nEvents/10) == 0)
@@ -324,6 +318,13 @@ data6->plotOn(neg_sides_frame);
   printhists(h_sig_neg_dtf);
   printhists(h_sig_pos_dtf);
 
+  double nSigPos = h_sig_pos_dtf->ComputeIntegral();
+  double nSigNeg = h_neg_pos_dtf->ComputeIntegral();
+
+  double sig_asym = (nSigPos - nSigNeg)/(nSigPos + nSigNeg)
+
+
+
   h_sig_pos_dtf->Add(h_sig_neg_dtf,-1);
   h_sig_neg_dtf->Scale(2.);
   h_sig_neg_dtf->Add(h_sig_pos_dtf);
@@ -338,6 +339,14 @@ data6->plotOn(neg_sides_frame);
   h_Dst_asym_DTFm->Write();
   out_hist_fi->Write();
   out_hist_fi->Close();
+  
+  cout << "Number of reconstructed data -: " << nDst_neg << endl;
+  cout << "Number of reconstructed data +: " << nDst_pos << endl;
+  cout << "The total Dst assymmetry in data is: " << Dst_asym << endl;
+
+  cout << "Number of reconstructed signal -: " << nSigNeg << endl;
+  cout << "Number of reconstructed signal +: " << nSigPos << endl;
+  cout << "The total Dst assymmetry in signal is: " << sig_asym << endl;
 
   uint64_t end_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
   float elapsed = (end_time - start_time)*0.000001;
