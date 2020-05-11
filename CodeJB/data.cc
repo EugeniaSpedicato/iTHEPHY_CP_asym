@@ -16,7 +16,8 @@
 #include "RooWorkspace.h"
 #include "RooExtendPdf.h"
 using namespace RooFit;
-RooWorkspace w = ("w");
+const auto nThreads = thread::hardware_concurrency();
+ROOT::EnableImplicitMT(nthreads);
 
 void printhists(TH1F *h)
 {
