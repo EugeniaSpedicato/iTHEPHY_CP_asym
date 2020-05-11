@@ -303,9 +303,9 @@ data6->plotOn(neg_sides_frame);
   canvas2->SaveAs("output/data/plots/dtf_pos_fit.pdf");
 
 
-  TH1F *h_sig_pos_dtf = new TH1F("h_sig_pos_dtf", "h_sig_pos_dtf", 80, 2008., 2012.);
-  TH1F *h_sig_neg_dtf = new TH1F("h_sig_neg_dtf", "h_sig_neg_dtf", 80, 2008., 2012.);
-  TH1F *h_sig_asym_dtf = new TH1F("h_sig_asym_dtf", "h_sig_asym_dtf", 80, 2008., 2012.);
+  TH1F *h_sig_pos_dtf = new TH1F("h_sig_pos_dtf", "h_sig_pos_dtf", 160, 2008., 2012.);
+  TH1F *h_sig_neg_dtf = new TH1F("h_sig_neg_dtf", "h_sig_neg_dtf", 160, 2008., 2012.);
+  TH1F *h_sig_asym_dtf = new TH1F("h_sig_asym_dtf", "h_sig_asym_dtf", 160, 2008., 2012.);
 
   h_sig_pos_dtf->Sumw2();
   h_sig_neg_dtf->Sumw2();
