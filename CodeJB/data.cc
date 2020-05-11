@@ -71,6 +71,13 @@ void data(string dir, string sample)
   ntp->SetBranchStatus("P1_ID",1); ntp->SetBranchAddress("P1_ID", &(Pi_ID));
   ntp->SetBranchStatus("P2_ID",1); ntp->SetBranchAddress("P2_ID", &(K_ID));
 
+  RooRealVar *N = new RooRealVar("N", "N", 0.0058, 0., 0.01);
+  RooRealVar *a = new RooRealVar("a", "a", 2004.38, 2000., 2004.5);
+  RooRealVar *c = new RooRealVar("c", "c", 0.051, 0., 0.1);
+  RooRealVar *b = new RooRealVar("b", "b", 0.72, 0., 2.);
+  RooRealVar *mean = new RooRealVar("mean", "mean", 2010., 2008., 2012.);
+  RooRealVar *sigma = new RooRealVar("sigma", "sigma", 0.3, 0., 1.);
+  RooRealVar *rel_frac = new RooRealVar("rel_frac", "rel_frac", 0.5, 0., 1.);
   RooRealVar *sig_yield = new RooRealVar("sig_yield", "sig_yield", 50000., 0., 400000.);
   RooRealVar *bkg_yield = new RooRealVar("bkg_yield", "bkg_yield", 2000., 0., 20000.);
   RooRealVar *dtf = new RooRealVar("DTF_Mass", "DTF_mass", 2004.5, 2020.);
@@ -285,13 +292,6 @@ data6->plotOn(neg_sides_frame);
   neg_sides_frame->Draw();
   canvas2->SaveAs("output/data/plots/neg_sides.pdf");
 
-  RooRealVar *N = new RooRealVar("N", "N", 0.0058, 0., 0.01);
-  RooRealVar *a = new RooRealVar("a", "a", 2004.38, 2000., 2004.5);
-  RooRealVar *c = new RooRealVar("c", "c", 0.051, 0., 0.1);
-  RooRealVar *b = new RooRealVar("b", "b", 0.72, 0., 2.);
-  RooRealVar *mean = new RooRealVar("mean", "mean", 2010., 2008., 2012.);
-  RooRealVar *sigma = new RooRealVar("sigma", "sigma", 0.3, 0., 1.);
-  RooRealVar *rel_frac = new RooRealVar("rel_frac", "rel_frac", 0.5, 0., 1.);
   RooRealVar *sig_yield_neg = new RooRealVar("sig_yield_neg", "sig_yield_neg", 25000., 0., 200000.);
   RooRealVar *bkg_yield_neg = new RooRealVar("bkg_yield_neg", "bkg_yield_neg", 1000., 0., 10000.);
   RooRealVar *sig_yield_pos = new RooRealVar("sig_yield_pos", "sig_yield_pos", 25000., 0., 200000.);
