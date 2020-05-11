@@ -289,7 +289,7 @@ data6->plotOn(neg_sides_frame);
   neg_frame->Draw();
 
   RooDataHist *dataw_8b = new RooDataHist(data8->GetName(), data8->GetTitle(), data8, *data8->get(), 0, "bkg_yield_neg_sw");
-  dataw_qcd->plotOn(neg_frame3, DataError(RooAbsData::SumW2));
+  dataw_8b->plotOn(neg_frame3, DataError(RooAbsData::SumW2));
 
   canvas2->cd(3);
   neg_frame3->Draw();
