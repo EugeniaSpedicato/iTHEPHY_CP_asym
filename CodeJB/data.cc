@@ -298,7 +298,7 @@ data6->plotOn(neg_sides_frame);
 
 
   RooRealVar *dtf = new RooRealVar("DTF_Mass", "DTF_mass", 2004.5, 2020.);
-  RooDataSet *dataset = new RooDataSet("dataset", "dataset", *dtf, ntp);
+  RooDataSet *dataset = new RooDataSet("dataset", "dataset", ntp, RooArgSet(*dtf));
 
 
   TH1F *h_sig_pos_dtf = new TH1F("h_sig_pos_dtf", "h_sig_pos_dtf", 35, 2009.9, 2010.6);
