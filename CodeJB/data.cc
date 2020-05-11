@@ -15,6 +15,7 @@
 #include "RooClassFactory.h"
 #include "RooWorkspace.h"
 #include "RooExtendPdf.h"
+#include <thread>
 using namespace RooFit;
 const auto nThreads = thread::hardware_concurrency();
 ROOT::EnableImplicitMT(nthreads);
