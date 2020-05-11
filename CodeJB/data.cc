@@ -230,7 +230,6 @@ void data(string dir, string sample)
   RooPlot *pos_frame = dtf_pos->frame();
 
   TCanvas *canvas2 = new TCanvas();
-  canvas2->Divide(1,3);
 
 data->plotOn(neg_low_frame);
 data2->plotOn(neg_gr_frame);
@@ -272,27 +271,16 @@ data6->plotOn(neg_sides_frame);
   RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig_pos, *arg_pos),RooArgList(*sig_yield_pos, *bkg_yield_pos));
 
 
-  model_neg->fitTo(*data8, Extended());
+
+
+  model_neg->fitTo(*data8, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   data8->plotOn(neg_frame);
   model_neg->plotOn(neg_frame, RooFit::Components("arg_neg"), RooFit::FillColor(kRed), RooFit::LineStyle(kDashed),RooFit::DrawOption("F") );
   model_neg->plotOn(neg_frame);
   model_neg->paramOn(neg_frame, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)));
 
-  canvas2->cd(1);
   neg_frame->Draw();
 
-  RooStats::SPlot *sData = new RooStats::SPlot("sData", "An SPlot", *data8, model_neg, RooArgList(*sig_yield_neg, *bkg_yield_neg));
-  RooDataHist *dataw_8 = new RooDataHist(data8->GetName(), data8->GetTitle(), data8, *data8->get(), 0, "sig_yield_neg_sw");
-  dataw_8->plotOn(neg_frame2, DataError(RooAbsData::SumW2));
-
-  canvas2->cd(2);
-  neg_frame->Draw();
-
-  RooDataHist *dataw_8b = new RooDataHist(data8->GetName(), data8->GetTitle(), data8, *data8->get(), 0, "bkg_yield_neg_sw");
-  dataw_8b->plotOn(neg_frame3, DataError(RooAbsData::SumW2));
-
-  canvas2->cd(3);
-  neg_frame3->Draw();
   canvas2->SaveAs("output/data/plots/dtf_neg_fit.pdf");
 
 
@@ -306,6 +294,11 @@ data6->plotOn(neg_sides_frame);
 
   pos_frame->Draw();
   canvas2->SaveAs("output/data/plots/dtf_pos_fit.pdf");
+
+
+
+  RooRealVar *dtf = new RooRealVar("DTF_Mass", "DTF_mass", 2004.5, 2020.);
+  RooDataSet *dataset = new RooDataSet("dataset", "dataset", *dtf, ntp);
 
 
   TH1F *h_sig_pos_dtf = new TH1F("h_sig_pos_dtf", "h_sig_pos_dtf", 35, 2009.9, 2010.6);
