@@ -71,7 +71,42 @@ void data(string dir, string sample)
   ntp->SetBranchStatus("P1_ID",1); ntp->SetBranchAddress("P1_ID", &(Pi_ID));
   ntp->SetBranchStatus("P2_ID",1); ntp->SetBranchAddress("P2_ID", &(K_ID));
 
+  RooRealVar *sig_yield = new RooRealVar("sig_yield", "sig_yield", 50000., 0., 400000.);
+  RooRealVar *bkg_yield = new RooRealVar("bkg_yield", "bkg_yield", 2000., 0., 20000.);
+  RooRealVar *dtf = new RooRealVar("DTF_Mass", "DTF_mass", 2004.5, 2020.);
+  RooRealVar *dtf_sig = new RooRealVar("DTF_Mass", "DTF_mass", 2008.5, 2011.);
+  RooDataSet *dataset = new RooDataSet("dataset", "dataset", ntp, RooArgSet(*dtf));
 
+  RooBreitWigner *sig = new RooBreitWigner("sig", "sig", *dtf, *mean, *sigma);
+  RooAbsPdf *arg = RooClassFactory::makePdfInstance("arg", "1./N*pow(dtf-a,b)*exp(-c*(dtf-a))", RooArgSet(*dtf, *N, *a, *b, *c));
+  RooAddPdf *model = new RooAddPdf("model", "model", RooArgList(*sig, *arg),RooArgList(*sig_yield, *bkg_yield));
+
+  model->fitTo(*dataset, Extended());
+  RooStats::SPlot *sData = new RooStats::SPlot("sData", "An SPlot", *dataset, model, RooArgList(*sig_yield, *bkg_yield));
+
+  TCanvas *cdata = new TCanvas("sPlot", "sPlot demo", 400, 600); cdata->Divide(1, 3);
+
+  cdata->cd(1);
+  RooPlot *frame = dtf->frame();
+  data->plotOn(frame);
+  model->plotOn(frame, Name("FullModel"));
+  model->plotOn(frame, Components(*sig), LineStyle(kDashed), LineColor(kRed), Name("SigModel"));
+  model->plotOn(frame, Components(*arg), LineStyle(kDashed), LineColor(kGreen), Name("BkgModel"));
+  frame->Draw();
+
+  cdata->cd(2);
+  RooDataSet *dataw_s = new RooDataSet(dataset->GetName(), dataset->GetTitle(), dataset, *dataset->get(), 0, "sig_yield_sw");
+  RooPlot *frame2 = dtf_sig->frame();
+  dataw_s->plotOn(frame2, DataError(RooAbsData::SumW2));
+  frame2->Draw();
+
+  cdata->cd(3);
+  RooDataSet *dataw_b = new RooDataSet(dataset->GetName(), dataset->GetTitle(), dataset, *dataset->get(), 0, "bkg_yield_sw");
+  RooPlot *frame3 = dtf_sig->frame();
+  dataw_b->plotOn(frame3, DataError(RooAbsData::SumW2));
+  frame3->Draw();
+  cdata->SaveAs("output/data/plots/sPlot.pdf");
+/*
   TH1F *h_Dst_pos_D0m = new TH1F("h_Dst_pos_D0m", ";invariant D0 mass/MeV; Events", 92, 1842., 1888.);
   TH1F *h_Dst_neg_D0m = new TH1F("h_Dst_neg_D0m", ";invariant D0 mass/MeV; Events", 92, 1842., 1888.);
   TH1F *h_Dst_asym_D0m = new TH1F("h_Dst_asym_D0m", ";invariant D0 mass/MeV; assymmetry", 92, 1842., 1888.);
@@ -297,41 +332,6 @@ data6->plotOn(neg_sides_frame);
 
 
 
-  RooRealVar *sig_yield = new RooRealVar("sig_yield", "sig_yield", 50000., 0., 400000.);
-  RooRealVar *bkg_yield = new RooRealVar("bkg_yield", "bkg_yield", 2000., 0., 20000.);
-  RooRealVar *dtf = new RooRealVar("DTF_Mass", "DTF_mass", 2004.5, 2020.);
-  RooRealVar *dtf_sig = new RooRealVar("DTF_Mass", "DTF_mass", 2008.5, 2011.);
-  RooDataSet *dataset = new RooDataSet("dataset", "dataset", ntp, RooArgSet(*dtf));
-
-  RooBreitWigner *sig = new RooBreitWigner("sig", "sig", *dtf, *mean, *sigma);
-  RooAbsPdf *arg = RooClassFactory::makePdfInstance("arg", "1./N*pow(dtf-a,b)*exp(-c*(dtf-a))", RooArgSet(*dtf, *N, *a, *b, *c));
-  RooAddPdf *model = new RooAddPdf("model", "model", RooArgList(*sig, *arg),RooArgList(*sig_yield, *bkg_yield));
-
-  model->fitTo(*dataset, Extended());
-  RooStats::SPlot *sData = new RooStats::SPlot("sData", "An SPlot", *dataset, model, RooArgList(*sig_yield, *bkg_yield));
-
-  TCanvas *cdata = new TCanvas("sPlot", "sPlot demo", 400, 600); cdata->Divide(1, 3);
-
-  cdata->cd(1);
-  RooPlot *frame = dtf->frame();
-  data->plotOn(frame);
-  model->plotOn(frame, Name("FullModel"));
-  model->plotOn(frame, Components(*sig), LineStyle(kDashed), LineColor(kRed), Name("SigModel"));
-  model->plotOn(frame, Components(*arg), LineStyle(kDashed), LineColor(kGreen), Name("BkgModel"));
-  frame->Draw();
-
-  cdata->cd(2);
-  RooDataSet *dataw_s = new RooDataSet(dataset->GetName(), dataset->GetTitle(), dataset, *dataset->get(), 0, "sig_yield_sw");
-  RooPlot *frame2 = dtf_sig->frame();
-  dataw_s->plotOn(frame2, DataError(RooAbsData::SumW2));
-  frame2->Draw();
-
-  cdata->cd(3);
-  RooDataSet *dataw_b = new RooDataSet(dataset->GetName(), dataset->GetTitle(), dataset, *dataset->get(), 0, "bkg_yield_sw");
-  RooPlot *frame3 = dtf_sig->frame();
-  dataw_b->plotOn(frame3, DataError(RooAbsData::SumW2));
-  frame3->Draw();
-  cdata->SaveAs("output/data/plots/sPlot.pdf");
 
 
   TH1F *h_sig_pos_dtf = new TH1F("h_sig_pos_dtf", "h_sig_pos_dtf", 35, 2009.9, 2010.6);
@@ -405,7 +405,7 @@ data6->plotOn(neg_sides_frame);
 
   cout << "Number of reconstructed signal -: " << nSigNeg << endl;
   cout << "Number of reconstructed signal +: " << nSigPos << endl;
-  cout << "The total Dst assymmetry in signal is: " << sig_asym << endl;
+  cout << "The total Dst assymmetry in signal is: " << sig_asym << endl;*/
 
   uint64_t end_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
   float elapsed = (end_time - start_time)*0.000001;
