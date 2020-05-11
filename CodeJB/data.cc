@@ -33,9 +33,9 @@ void printhists(TH1F *h)
 
 void data(string dir, string sample)
 {
-  ROOT::EnableThreadSafety();
+  /*ROOT::EnableThreadSafety();
   const auto nThreads = thread::hardware_concurrency();
-  ROOT::EnableImplicitMT(nThreads);
+  ROOT::EnableImplicitMT(nThreads);*/
   uint64_t start_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
   string input_name = dir+"/"+sample+".root";
   TChain *ntp = new TChain();
