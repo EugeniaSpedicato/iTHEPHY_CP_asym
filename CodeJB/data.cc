@@ -321,7 +321,7 @@ data6->plotOn(neg_sides_frame);
   double nSigPos = h_sig_pos_dtf->ComputeIntegral();
   double nSigNeg = h_neg_pos_dtf->ComputeIntegral();
 
-  double sig_asym = (nSigPos - nSigNeg)/(nSigPos + nSigNeg)
+  double sig_asym = (nSigPos - nSigNeg)/(nSigPos + nSigNeg);
 
 
 
@@ -339,7 +339,7 @@ data6->plotOn(neg_sides_frame);
   h_Dst_asym_DTFm->Write();
   out_hist_fi->Write();
   out_hist_fi->Close();
-  
+
   cout << "Number of reconstructed data -: " << nDst_neg << endl;
   cout << "Number of reconstructed data +: " << nDst_pos << endl;
   cout << "The total Dst assymmetry in data is: " << Dst_asym << endl;
