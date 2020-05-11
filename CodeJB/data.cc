@@ -44,50 +44,14 @@ void data(string dir, string sample)
   int nEvents = ntp->GetEntries();
 
 
-  TFile *f = new TFile("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root");
-  TH1F *h_pT_Dst = (TH1F*)f->Get("h_pT_reco_Dst");
-  int nMCEvents = h_pT_Dst->GetEntries();
 
-  h_pT_Dst->Scale(double(nEvents)/nMCEvents);
 
   double nDst_pos = 0.; double nDst_neg = 0.;
   int Dst_ID, D0_ID, Pi_ID, K_ID;
   double D0_mass;
   double DTF_mass;
 
-/*  RooRealVar *y = new RooRealVar("Dst_DTF_PT", "Dstar pT/GeV", 2000.,11100.);
-  RooDataSet *datahist = new RooDataSet("data_pT", "Dstar pT data", ntp, RooArgSet(*y));
-  RooPlot *yframe = y->frame();
-  datahist->plotOn(yframe, RooFit::Binning(182));
-  yframe->Draw();
-  h_pT_Dst->Draw("same");
-  h_pT_Dst->Draw("same hist");
-  canvas2->SaveAs("output/data/plots/pT_MC_data.pdf");
 
-  RooRealVar *x = new RooRealVar("DTF_Mass", "DTF mass [MeV]", 2004., 2020.);
-  RooDataSet *dataset = new RooDataSet("data", "DTF_Mass data", ntp, RooArgSet(*x));
-  RooPlot *xframe = x->frame();
-  dataset->plotOn(xframe, RooFit::Binning(80));
-  xframe->Draw();
-  canvas2->SaveAs("output/data/plots/RooData.pdf");
-
-  RooRealVar *mean = new RooRealVar("mean", "mean", 2011., 2008., 2014.);
-  RooRealVar *sigma = new RooRealVar("sigma", "sigma", 1., 0., 3.);
-  RooRealVar *rel_frac = new RooRealVar("rel_frac", "Relative Fraction", 0.7, 0.0, 1.0);
-  RooBreitWigner *bw = new RooBreitWigner("BW", "BW", *x, *mean, *sigma);
-  RooUniform *bkg = new RooUniform("bkg", "bkg", *x);
-  RooAddPdf *model = new RooAddPdf("model", "model", RooArgList(*bw,*bkg), RooArgList(*rel_frac));
-  model->fitTo(*dataset, RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
-  RooPlot * xframe2 = x->frame();
-  dataset->plotOn(xframe2);
-  model->plotOn(xframe2);
-  model->plotOn(xframe2, RooFit::Components("bkg"), RooFit::LineColor(kAzure), RooFit::LineStyle(kDashed));
-  model->plotOn(xframe2);
-  model->paramOn(xframe2, RooFit::Label("Fit Results"), RooFit::Format("NEU", RooFit::AutoPrecision(1)), RooFit::Layout(0.5,0.9,0.8));
-  xframe2->Draw();
-  canvas2->SaveAs("output/data/plots/RooFit.pdf");
-
-*/
   ntp->SetBranchStatus("*",0);
   ntp->SetBranchStatus("D0_M",1); ntp->SetBranchAddress("D0_M", &(D0_mass));
   ntp->SetBranchStatus("DTF_Mass",1); ntp->SetBranchAddress("DTF_Mass", &(DTF_mass));
