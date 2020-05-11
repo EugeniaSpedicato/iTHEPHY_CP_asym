@@ -303,9 +303,9 @@ data6->plotOn(neg_sides_frame);
   canvas2->SaveAs("output/data/plots/dtf_pos_fit.pdf");
 
 
-  TH1F *h_sig_pos_dtf = new TH1F("h_sig_pos_dtf", "h_sig_pos_dtf", 150, 2009.5, 2011.);
-  TH1F *h_sig_neg_dtf = new TH1F("h_sig_neg_dtf", "h_sig_neg_dtf", 150, 2009.5, 2011.);
-  TH1F *h_sig_asym_dtf = new TH1F("h_sig_asym_dtf", "h_sig_asym_dtf", 150, 2009.5, 2011.);
+  TH1F *h_sig_pos_dtf = new TH1F("h_sig_pos_dtf", "h_sig_pos_dtf", 35, 2009.9, 2010.6);
+  TH1F *h_sig_neg_dtf = new TH1F("h_sig_neg_dtf", "h_sig_neg_dtf", 35, 2009.9, 2010.6);
+  TH1F *h_sig_asym_dtf = new TH1F("h_sig_asym_dtf", "h_sig_asym_dtf", 35, 2009.9, 2010.6);
 
   h_sig_pos_dtf->Sumw2();
   h_sig_neg_dtf->Sumw2();
@@ -335,11 +335,11 @@ data6->plotOn(neg_sides_frame);
   double func, sig_bkg;
   for(int i = 0; i < size; ++i)
   {
-    func = (1./0.005*pow((2009.505+i*0.01 - 2000.8), 1.52) + 1./0.005*pow((2009.5+i*0.01 - 2000.8), 1.52) + 1./0.005*pow((2009.51+i*0.01 - 2000.8), 1.52))/3.;
+    func = (1./0.005*pow((2009.91+i*0.02 - 2000.8), 1.52) + 1./0.005*pow((2009.9+i*0.02 - 2000.8), 1.52) + 1./0.005*pow((2009.92+i*0.02 - 2000.8), 1.52))/3.;
     sig_bkg = h_sig_neg_dtf->GetBinContent(i);
     (sig_bkg - int(func) >=0)? h_sig_neg_dtf->SetBinContent(i, sig_bkg - int(func)) : h_sig_neg_dtf->SetBinContent(i, 0.);
 
-    func = (1./0.005*pow((2009.505+i*0.01 - 2000.8), 1.52) + 1./0.005*pow((2009.5+i*0.01 - 2000.8), 1.52) + 1./0.005*pow((2009.51+i*0.01 - 2000.8), 1.52))/3.;
+    func = (1./0.005*pow((2009.91+i*0.02 - 2000.8), 1.52) + 1./0.005*pow((2009.9+i*0.02 - 2000.8), 1.52) + 1./0.005*pow((2009.92+i*0.02 - 2000.8), 1.52))/3.;
     sig_bkg = h_sig_pos_dtf->GetBinContent(i);
     (sig_bkg - int(func) >=0)? h_sig_pos_dtf->SetBinContent(i, sig_bkg - int(func)) : h_sig_pos_dtf->SetBinContent(i, 0.);
   }
