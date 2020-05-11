@@ -16,11 +16,10 @@
 #include "RooWorkspace.h"
 #include "RooExtendPdf.h"
 #include <thread>
-#include "TROOT.h"
+#include "TROOT.cxx"
 using namespace RooFit;
-using namespace ROOT;
 const auto nThreads = thread::hardware_concurrency();
-EnableImplicitMT(nthreads);
+ROOT::EnableImplicitMT(nthreads);
 
 void printhists(TH1F *h)
 {
