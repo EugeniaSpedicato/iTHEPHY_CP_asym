@@ -72,9 +72,9 @@ void data(string dir, string sample)
   ntp->SetBranchStatus("P2_ID",1); ntp->SetBranchAddress("P2_ID", &(K_ID));
 
   RooRealVar *N = new RooRealVar("N", "N", 0.0058, 0., 0.01);
-  RooRealVar *a = new RooRealVar("a", "a", 2004.38, 2000., 2004.5);
-  RooRealVar *c = new RooRealVar("c", "c", 0.051, 0., 0.1);
-  RooRealVar *b = new RooRealVar("b", "b", 0.72, 0., 2.);
+  RooRealVar *a = new RooRealVar("a", "a", 2004.5, 2000., 2004.5);
+  RooRealVar *c = new RooRealVar("c", "c", 0.16, 0., 0.1);
+  RooRealVar *b = new RooRealVar("b", "b", 1.13, 0., 2.);
   RooRealVar *mean = new RooRealVar("mean", "mean", 2010., 2008., 2012.);
   RooRealVar *sigma = new RooRealVar("sigma", "sigma", 0.3, 0., 1.);
   RooRealVar *rel_frac = new RooRealVar("rel_frac", "rel_frac", 0.5, 0., 1.);
