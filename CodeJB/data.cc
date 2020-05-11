@@ -15,11 +15,11 @@
 #include "RooClassFactory.h"
 #include "RooWorkspace.h"
 #include "RooExtendPdf.h"
-#include <thread>
-#include "TROOT.cxx"
+/*#include <thread>
+#include "TROOT.h"
 using namespace RooFit;
 const auto nThreads = thread::hardware_concurrency();
-ROOT::EnableImplicitMT(nthreads);
+ROOT::EnableImplicitMT(nthreads);*/
 
 void printhists(TH1F *h)
 {
