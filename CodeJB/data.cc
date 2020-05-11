@@ -18,8 +18,9 @@
 #include <thread>
 #include "TROOT.h"
 using namespace RooFit;
+using namespace ROOT;
 const auto nThreads = thread::hardware_concurrency();
-ROOT::EnableImplicitMT(nthreads);
+EnableImplicitMT(nthreads);
 
 void printhists(TH1F *h)
 {
