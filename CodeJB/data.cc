@@ -318,8 +318,8 @@ data6->plotOn(neg_sides_frame);
   printhists(h_sig_neg_dtf);
   printhists(h_sig_pos_dtf);
 
-  double nSigPos = h_sig_pos_dtf->ComputeIntegral();
-  double nSigNeg = h_sig_neg_dtf->ComputeIntegral();
+  double nSigPos = h_sig_pos_dtf->Integral();
+  double nSigNeg = h_sig_neg_dtf->Integral();
 
   double sig_asym = (nSigPos - nSigNeg)/(nSigPos + nSigNeg);
 
