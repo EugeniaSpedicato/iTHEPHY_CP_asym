@@ -99,6 +99,9 @@ void data(string dir, string sample)
   ofstream outfile("output/data/plots/data_neg.txt", ofstream::trunc);
   outfile << "#m, E\n ";
 
+  ofstream outfile2("output/data/plots/data_pos.txt", ofstream::trunc);
+  outfile2 << "#m, E\n ";
+
   for (int i = 0; i < nEvents; ++i)
   {
     if (i % (nEvents/10) == 0)
@@ -146,20 +149,25 @@ void data(string dir, string sample)
   int size = h_Dst_neg_DTFm_lw_side->GetNbinsX();
   for (int i = 0; i < size; ++i)
   {
-    outfile << 2004.5 + i * 0.02 << " " << h_Dst_neg_DTFm_lw_side->GetBinContent(i) << "\n";
+    outfile << 2004.51 + i * 0.02 << " " << h_Dst_neg_DTFm_lw_side->GetBinContent(i) << "\n";
+    outfile2 << 2004.51 + i * 0.02 << " " << h_Dst_pos_DTFm_lw_side->GetBinContent(i) << "\n";
   }
   size = h_Dst_neg_DTFm_gr_side->GetNbinsX();
   for (int i = 0; i < size; ++i)
   {
-    outfile << 2012.5 + i * 0.02 << " " << h_Dst_neg_DTFm_gr_side->GetBinContent(i) << "\n";
+    outfile << 2012.51 + i * 0.02 << " " << h_Dst_neg_DTFm_gr_side->GetBinContent(i) << "\n";
+    outfile2 << 2012.51 + i * 0.02 << " " << h_Dst_pos_DTFm_gr_side->GetBinContent(i) << "\n";
   }
   outfile.flush();
   outfile.close();
+  outfile2.flush();
+  outfile2.close();
+
   double Dst_asym = (nDst_pos-nDst_neg)/(nDst_pos+nDst_neg);
 
-  cout << "Number of reconstructed -: " << nDst_neg << endl;
-  cout << "Number of reconstructed +: " << nDst_pos << endl;
-  cout << "The total Dst assymmetry is: " << Dst_asym << endl;
+  cout << "Number of reconstructed data -: " << nDst_neg << endl;
+  cout << "Number of reconstructed data +: " << nDst_pos << endl;
+  cout << "The total Dst assymmetry in data is: " << Dst_asym << endl;
 
   printhists(h_Dst_pos_D0m);
   printhists(h_Dst_neg_D0m);
