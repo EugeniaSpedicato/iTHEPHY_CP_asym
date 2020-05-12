@@ -458,8 +458,8 @@ data6->plotOn(neg_sides_frame);
   RooDataSet *dataset1b = new RooDataSet("dataset1b", "dataset1b", ntp, RooArgList(*DTF_Mass_iso, *Dst_ID_neg));
   RooDataSet *dataset2b = new RooDataSet("dataset2b", "dataset2b", ntp, RooArgList(*DTF_Mass_iso, *Dst_ID_pos));
 
-  RooRealVar *N = new RooRealVar("N", "N", 0.0058, 0., 0.01);
-  RooRealVar *a = new RooRealVar("a", "a", 2004.39, 2000., 2005.);
+  RooRealVar *N = new RooRealVar("N", "N", 0.006, 0., 0.01);
+  RooRealVar *a = new RooRealVar("a", "a", 2004., 2000., 2010.);
   RooRealVar *c = new RooRealVar("c", "c", 0.05, 0., 0.5);
   RooRealVar *b = new RooRealVar("b", "b", 0.681, 0., 2.);
   RooRealVar *mean = new RooRealVar("mean", "mean", 2010., 2008., 2012.);
