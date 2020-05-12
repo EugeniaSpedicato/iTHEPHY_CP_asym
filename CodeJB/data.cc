@@ -134,7 +134,7 @@ void data(string dir, string sample)
     }
     ntp->GetEvent(i);
     //weightfile << i <<": Dst weight: " << sData->GetSWeight(i-1, "sig_yield") << " bkg weight: " << sData->GetSWeight(i-1, "bkg_yield") << "Total weight: " << sData->GetSWeight(i-1, "sig_yield") << "\n";
-    h_Dst_pT_data->Fill(Dst_pT, sData->GetSumOfEventSWeight(i));
+    h_Dst_pT_data->Fill(Dst_pT, sData->GetSumOfEventSWeight(i-1));
   }
   //weightfile.flush();
   //weightfile.close();
