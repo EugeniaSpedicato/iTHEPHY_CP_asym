@@ -483,10 +483,8 @@ data6->plotOn(neg_sides_frame);
   model_pos->fitTo(*dataset2, Extended(), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   cout << "debug4" << endl << endl << endl << endl;
   RooStats::SPlot *sData2 = new RooStats::SPlot("sData2", "An SPlot2", *dataset2, model_pos, RooArgList(*sig_yield_2, *bkg_yield_2));
-  cout << "debug5" << endl << endl << endl << endl;
 
   TFile f("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root");
-  cout << "debug6" << endl << endl << endl << endl;
 
   TH1F *h_Dst_pT_MC = (TH1F*)f.Get("h_pT_reco_Dst");
   double nMCEvents = h_Dst_pT_MC->GetEntries();
@@ -522,9 +520,11 @@ data6->plotOn(neg_sides_frame);
 
   TCanvas *c1;
   h_Dst_pT_MC->Draw();
-  //h_Dst_pT_MC->Draw("hist same");
-  cout << "debug7" << endl << endl << endl << endl;
+  cout << "debug5" << endl << endl << endl << endl;
+  h_Dst_pT_MC->Draw("hist same");
+  cout << "debug6" << endl << endl << endl << endl;
   h_Dst_pT_MC->Draw("same");
+  cout << "debug7" << endl << endl << endl << endl;
   h_Dst_pT_MC->Draw("hist same");
   cout << "debug8" << endl << endl << endl << endl;
   c1->SaveAs("output/data/plots/data_MC_comp.pdf");
