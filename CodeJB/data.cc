@@ -485,7 +485,7 @@ data6->plotOn(neg_sides_frame);
   RooStats::SPlot *sData2 = new RooStats::SPlot("sData2", "An SPlot2", *dataset2, model_pos, RooArgList(*sig_yield_2, *bkg_yield_2));
   cout << "debug5" << endl << endl << endl << endl;
 
-  TFile f("/home/smjoblan/iTHEPHY/iTHEPHY/CodeJB/output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root");
+  TFile f("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root");
   cout << "debug6" << endl << endl << endl << endl;
 
   TH1F *h_Dst_pT_MC = (TH1F*)f.Get("h_pT_reco_Dst");
