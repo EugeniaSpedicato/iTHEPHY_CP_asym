@@ -53,12 +53,6 @@ void data(string dir, string sample)
   ntp->AddFile(input_name.c_str(),-1,"ntp;26");
   int nEvents = ntp->GetEntries();
 
-  TFile f("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_UP_GEN.root");
-  TH1F *h_Dst_pT_MC = (TH1F*)f.Get("h_pT_reco_Dst");
-  h_Dst_pT_MC->Sumw2();
-  double nMCEvents = h_Dst_pT_MC->GetEntries();
-  h_Dst_pT_MC->Scale(1./nMCEvents);
-  h_Dst_pT_MC->SetLineColor(kAzure);
 
 
   double nDst_pos = 0.; double nDst_neg = 0.;
@@ -121,6 +115,12 @@ void data(string dir, string sample)
   frame3->Draw();
   cdata->SaveAs("output/data/plots/sPlot.pdf");
 
+/*  TFile f("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_UP_GEN.root");
+  TH1F *h_Dst_pT_MC = (TH1F*)f.Get("h_pT_reco_Dst");
+  h_Dst_pT_MC->Sumw2();
+  double nMCEvents = h_Dst_pT_MC->GetEntries();
+  h_Dst_pT_MC->Scale(1./nMCEvents);
+  h_Dst_pT_MC->SetLineColor(kAzure);
   TH1F *h_Dst_pT_data = new TH1F("h_Dst_pT_data", ";Dst pT/MeV; Event", 148, 2200., 9600.);
   h_Dst_pT_data->Sumw2();
 
@@ -138,7 +138,7 @@ void data(string dir, string sample)
   h_Dst_pT_MC->Draw("same");
   h_Dst_pT_MC->Draw("hist same");
   c1->SaveAs("output/data/plots/data_MC_comp.pdf");
-
+*/
 /*
   TH1F *h_Dst_pos_D0m = new TH1F("h_Dst_pos_D0m", ";invariant D0 mass/MeV; Events", 92, 1842., 1888.);
   TH1F *h_Dst_neg_D0m = new TH1F("h_Dst_neg_D0m", ";invariant D0 mass/MeV; Events", 92, 1842., 1888.);
