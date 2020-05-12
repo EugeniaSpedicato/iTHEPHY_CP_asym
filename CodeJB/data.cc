@@ -474,14 +474,20 @@ data6->plotOn(neg_sides_frame);
   RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig, *arg),RooArgList(*sig_yield, *bkg_yield));
   RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig, *arg),RooArgList(*sig_yield_2, *bkg_yield_2));
 
-
+  cout << "debug1" << endl << endl << endl << endl;
   model_neg->fitTo(*dataset1, Extended(), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+
+  cout << "debug2" << endl << endl << endl << endl;
   RooStats::SPlot *sData = new RooStats::SPlot("sData", "An SPlot", *dataset1, model_neg, RooArgList(*sig_yield, *bkg_yield));
+  cout << "debug3" << endl << endl << endl << endl;
   model_pos->fitTo(*dataset2, Extended(), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+  cout << "debug4" << endl << endl << endl << endl;
   RooStats::SPlot *sData2 = new RooStats::SPlot("sData2", "An SPlot2", *dataset2, model_pos, RooArgList(*sig_yield_2, *bkg_yield_2));
+  cout << "debug5" << endl << endl << endl << endl;
 
+  TFile f("/home/smjoblan/iTHEPHY/iTHEPHY/CodeJB/output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root");
+  cout << "debug6" << endl << endl << endl << endl;
 
-  TFile f("./output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root");
   TH1F *h_Dst_pT_MC = (TH1F*)f.Get("h_pT_reco_Dst");
   double nMCEvents = h_Dst_pT_MC->GetEntries();
   h_Dst_pT_MC->Scale(1./nMCEvents);
@@ -489,8 +495,15 @@ data6->plotOn(neg_sides_frame);
   TH1F *h_Dst_pT_data = new TH1F("h_Dst_pT_data", ";Dst pT/MeV; Event", 148, 2200., 9600.);
   h_Dst_pT_data->Sumw2();
   int i_pos = 0;
+
+  cout << "debug7" << endl << endl << endl << endl;
   for (int i = 0; i < nEvents; ++i)
   {
+    if (i % (nEvents/10) == 0)
+    {
+      std::cout << "=== Event " << i/(nEvents/10) * 10 << "%" << std::endl;
+    }
+    ntp->GetEvent(i);
     if(Dst_ID < 0)
     {
       h_Dst_pT_data->Fill(Dst_pT, sData->GetSumOfEventSWeight(i));
@@ -502,6 +515,7 @@ data6->plotOn(neg_sides_frame);
     }
   }
 
+  cout << "debug8" << endl << endl << endl << endl;
   double nDataEvents = h_Dst_pT_data->GetSumOfWeights();
   h_Dst_pT_data->Scale(1./nDataEvents);
   h_Dst_pT_data->SetLineColor(kRed);
