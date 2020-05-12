@@ -126,7 +126,7 @@ void data(string dir, string sample)
   //ofstream weightfile("output/data/weightfile.txt", ofstream::trunc);
   //weightfile << "nEvents: " << nEvents << "\n";
 
-  for (int i = 0; i < nEvents; ++i)
+  for (int i = 0; i < nEvents-1; ++i)
   {
     if (i % (nEvents/10) == 0)
     {
@@ -134,7 +134,7 @@ void data(string dir, string sample)
     }
     ntp->GetEvent(i);
     //weightfile << i <<": Dst weight: " << sData->GetSWeight(i-1, "sig_yield") << " bkg weight: " << sData->GetSWeight(i-1, "bkg_yield") << "Total weight: " << sData->GetSWeight(i-1, "sig_yield") << "\n";
-    h_Dst_pT_data->Fill(Dst_pT, sData->GetSumOfEventSWeight(i-1));
+    h_Dst_pT_data->Fill(Dst_pT, sData->GetSumOfEventSWeight(i));
   }
   //weightfile.flush();
   //weightfile.close();
