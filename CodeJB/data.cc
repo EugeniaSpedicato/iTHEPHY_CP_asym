@@ -81,7 +81,7 @@ void data(string dir, string sample)
   RooRealVar *sig_yield = new RooRealVar("sig_yield", "sig_yield", 50000., 0., 400000.);
   RooRealVar *bkg_yield = new RooRealVar("bkg_yield", "bkg_yield", 2000., 0., 20000.);
   RooRealVar *dtf = new RooRealVar("DTF_Mass", "DTF_Mass", 2004.5, 2020.);
-  RooRealVar *dtf_sig = new RooRealVar("DTF_Mass", "DTF_Mass", 2008.5, 2011.);
+  RooRealVar *dtf_iso = new RooRealVar("DTF_Mass", "DTF_Mass", 2012.5, 2020.);
   RooDataSet *dataset = new RooDataSet("dataset", "dataset", ntp, RooArgList(*dtf));
 
   RooBreitWigner *sig = new RooBreitWigner("sig", "sig", *dtf, *mean, *sigma);
@@ -103,13 +103,13 @@ void data(string dir, string sample)
 
   cdata->cd(2);
   RooDataSet *dataw_s = new RooDataSet(dataset->GetName(), dataset->GetTitle(), dataset, *dataset->get(), 0, "sig_yield_sw");
-  RooPlot *frame2 = dtf_sig->frame();
+  RooPlot *frame2 = dtf_iso->frame();
   dataw_s->plotOn(frame2, DataError(RooAbsData::SumW2));
   frame2->Draw();
 
   cdata->cd(3);
   RooDataSet *dataw_b = new RooDataSet(dataset->GetName(), dataset->GetTitle(), dataset, *dataset->get(), 0, "bkg_yield_sw");
-  RooPlot *frame3 = dtf_sig->frame();
+  RooPlot *frame3 = dtf_iso->frame();
   dataw_b->plotOn(frame3, DataError(RooAbsData::SumW2));
   frame3->Draw();
   cdata->SaveAs("output/data/plots/sPlot.pdf");
