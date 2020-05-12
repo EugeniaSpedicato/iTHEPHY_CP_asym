@@ -472,14 +472,9 @@ data6->plotOn(neg_sides_frame);
   RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig, *arg),RooArgList(*sig_yield, *bkg_yield));
   RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig, *arg),RooArgList(*sig_yield_2, *bkg_yield_2));
 
-  cout << "debug1" << endl << endl << endl << endl;
   model_neg->fitTo(*dataset1, Extended(), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
 
-  cout << "debug2" << endl << endl << endl << endl;
-  RooStats::SPlot *sData = new RooStats::SPlot("sData", "An SPlot", *dataset1, model_neg, RooArgList(*sig_yield, *bkg_yield));
-  cout << "debug3" << endl << endl << endl << endl;
   model_pos->fitTo(*dataset2, Extended(), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
-  cout << "debug4" << endl << endl << endl << endl;
   RooStats::SPlot *sData2 = new RooStats::SPlot("sData2", "An SPlot2", *dataset2, model_pos, RooArgList(*sig_yield_2, *bkg_yield_2));
 
   TFile f("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root");
@@ -518,13 +513,9 @@ data6->plotOn(neg_sides_frame);
 
   TCanvas *canvas2 = new TCanvas();
   h_Dst_pT_MC->Draw();
-  cout << "debug5" << endl << endl << endl << endl;
   h_Dst_pT_MC->Draw("hist same");
-  cout << "debug6" << endl << endl << endl << endl;
-  h_Dst_pT_MC->Draw("same");
-  cout << "debug7" << endl << endl << endl << endl;
-  h_Dst_pT_MC->Draw("hist same");
-  cout << "debug8" << endl << endl << endl << endl;
+  h_Dst_pT_data->Draw("same");
+  h_Dst_pT_data->Draw("hist same");
   canvas2->SaveAs("output/data/plots/MC_data_comp.pdf");
 
 
