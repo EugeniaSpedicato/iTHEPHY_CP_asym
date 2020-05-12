@@ -71,14 +71,14 @@ void data(string dir, string sample)
   ntp->SetBranchStatus("D0_ID",1); ntp->SetBranchAddress("D0_ID", &(D0_ID));
   ntp->SetBranchStatus("P1_ID",1); ntp->SetBranchAddress("P1_ID", &(Pi_ID));
   ntp->SetBranchStatus("P2_ID",1); ntp->SetBranchAddress("P2_ID", &(K_ID));
-
+/*
+  RooRealVar *rel_frac = new RooRealVar("rel_frac", "rel_frac", 0.5, 0., 1.);
   RooRealVar *N = new RooRealVar("N", "N", 0.0023, 0., 0.01);
   RooRealVar *a = new RooRealVar("a", "a", 2004., 2000., 2005.);
   RooRealVar *c = new RooRealVar("c", "c", 0.159, 0., 0.5);
   RooRealVar *b = new RooRealVar("b", "b", 1.125, 0., 2.);
   RooRealVar *mean = new RooRealVar("mean", "mean", 2010., 2008., 2012.);
   RooRealVar *sigma = new RooRealVar("sigma", "sigma", 0.3, 0., 1.);
-  RooRealVar *rel_frac = new RooRealVar("rel_frac", "rel_frac", 0.5, 0., 1.);
   RooRealVar *sig_yield = new RooRealVar("sig_yield", "sig_yield", 50000., 0., 400000.);
   RooRealVar *bkg_yield = new RooRealVar("bkg_yield", "bkg_yield", 2000., 0., 20000.);
   RooRealVar *dtf = new RooRealVar("DTF_Mass", "DTF_Mass", 2004.5, 2020.5);
@@ -147,7 +147,7 @@ void data(string dir, string sample)
   h_Dst_pT_MC->Draw("hist same");
   h_Dst_pT_MC->Draw("same");
   h_Dst_pT_MC->Draw("hist same");
-  c1->SaveAs("output/data/plots/data_MC_comp.pdf");
+  c1->SaveAs("output/data/plots/data_MC_comp.pdf");*/
 
 /*
   TH1F *h_Dst_pos_D0m = new TH1F("h_Dst_pos_D0m", ";invariant D0 mass/MeV; Events", 92, 1842., 1888.);
@@ -442,6 +442,84 @@ data6->plotOn(neg_sides_frame);
   cout << "Number of reconstructed signal -: " << nSigNeg << endl;
   cout << "Number of reconstructed signal +: " << nSigPos << endl;
   cout << "The total Dst assymmetry in signal is: " << sig_asym << endl;*/
+
+
+
+
+//other RooFit
+
+  RooRealVar *DTF_Mass = new RooRealVar("DTF_Mass", "DTF_Mass", 2004., 2021.);
+  RooRealVar *DTF_Mass_iso = new RooRealVar("DTF_Mass", "DTF_Mass_iso", 2012.5, 2021.);
+  RooRealVar *Dst_ID_neg = new RooRealVar("Dst_ID", "Dst_ID_neg", -420., -400.);
+  RooRealVar *Dst_ID_pos = new RooRealVar("Dst_ID", "Dst_ID_pos", 400., 420.);
+
+  RooDataSet *dataset1 = new RooDataSet("dataset1", "dataset1", ntp, RooArgList(*DTF_Mass, *Dst_ID_neg));
+  RooDataSet *dataset2 = new RooDataSet("dataset2", "dataset2", ntp, RooArgList(*DTF_Mass, *Dst_ID_pos));
+  RooDataSet *dataset1b = new RooDataSet("dataset1b", "dataset1b", ntp, RooArgList(*DTF_Mass_iso, *Dst_ID_neg));
+  RooDataSet *dataset2b = new RooDataSet("dataset2b", "dataset2b", ntp, RooArgList(*DTF_Mass_iso, *Dst_ID_pos));
+
+  RooRealVar *N = new RooRealVar("N", "N", 0.0058, 0., 0.01);
+  RooRealVar *a = new RooRealVar("a", "a", 2004.39, 2000., 2005.);
+  RooRealVar *c = new RooRealVar("c", "c", 0.05, 0., 0.5);
+  RooRealVar *b = new RooRealVar("b", "b", 0.681, 0., 2.);
+  RooRealVar *mean = new RooRealVar("mean", "mean", 2010., 2008., 2012.);
+  RooRealVar *sigma = new RooRealVar("sigma", "sigma", 0.3, 0., 1.);
+  RooRealVar *sig_yield = new RooRealVar("sig_yield", "sig_yield", 25000., 0., 200000.);
+  RooRealVar *bkg_yield = new RooRealVar("bkg_yield", "bkg_yield", 1000., 0., 10000.);
+  RooRealVar *sig_yield_2 = new RooRealVar("sig_yield_2", "sig_yield_2", 25000., 0., 200000.);
+  RooRealVar *bkg_yield_2 = new RooRealVar("bkg_yield_2", "bkg_yield_2", 1000., 0., 10000.);
+
+  RooBreitWigner *sig = new RooBreitWigner("sig", "sig", *DTF_Mass, *mean, *sigma);
+  RooAbsPdf *arg = RooClassFactory::makePdfInstance("arg", "1./N*pow(DTF_Mass-a,b)*exp(-c*(DTF_Mass-a))", RooArgSet(*DTF_Mass, *N, *a, *b, *c));
+  RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig, *arg),RooArgList(*sig_yield, *bkg_yield));
+  RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig, *arg),RooArgList(*sig_yield_2, *bkg_yield_2));
+
+
+  model_neg->fitTo(*dataset1, Extended(), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+  RooStats::SPlot *sData = new RooStats::SPlot("sData", "An SPlot", *dataset1, model_neg, RooArgList(*sig_yield, *bkg_yield));
+  model_pos->fitTo(*dataset2, Extended(), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+  RooStats::SPlot *sData2 = new RooStats::SPlot("sData2", "An SPlot2", *dataset2, model_pos, RooArgList(*sig_yield_2, *bkg_yield_2));
+
+
+  TFile f("./output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root");
+  TH1F *h_Dst_pT_MC = (TH1F*)f.Get("h_pT_reco_Dst");
+  double nMCEvents = h_Dst_pT_MC->GetEntries();
+  h_Dst_pT_MC->Scale(1./nMCEvents);
+  h_Dst_pT_MC->SetLineColor(kAzure);
+  TH1F *h_Dst_pT_data = new TH1F("h_Dst_pT_data", ";Dst pT/MeV; Event", 148, 2200., 9600.);
+  h_Dst_pT_data->Sumw2();
+
+  for (int i = 0; i < nEvents; ++i)
+  {
+    if(Dst_ID < 0)
+    {
+      h_Dst_pT_data->Fill(Dst_pT, sData->GetSumOfEventSWeight(i));
+    }
+    else h_Dst_pT_data->Fill(Dst_pT, sData2->GetSumOfEventSWeight(i));
+  }
+
+  double nDataEvents = h_Dst_pT_data->GetSumOfWeights();
+  h_Dst_pT_data->Scale(1./nDataEvents);
+  h_Dst_pT_data->SetLineColor(kRed);
+
+  TCanvas *c1;
+  h_Dst_pT_MC->Draw();
+  h_Dst_pT_MC->Draw("hist same");
+  h_Dst_pT_MC->Draw("same");
+  h_Dst_pT_MC->Draw("hist same");
+  c1->SaveAs("output/data/plots/data_MC_comp.pdf");
+
+
+
+
+
+
+
+
+
+
+
+
 
   uint64_t end_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
   float elapsed = (end_time - start_time)*0.000001;
