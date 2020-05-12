@@ -495,6 +495,7 @@ data6->plotOn(neg_sides_frame);
   TH1F *h_Dst_pT_data = new TH1F("h_Dst_pT_data", ";Dst pT/MeV; Event", 148, 2200., 9600.);
   h_Dst_pT_data->Sumw2();
   int i_pos = 0;
+  int i_neg = 0;
 
   cout << "debug7" << endl << endl << endl << endl;
   for (int i = 0; i < nEvents; ++i)
@@ -506,7 +507,8 @@ data6->plotOn(neg_sides_frame);
     ntp->GetEvent(i);
     if(Dst_ID < 0)
     {
-      h_Dst_pT_data->Fill(Dst_pT, sData->GetSumOfEventSWeight(i));
+      h_Dst_pT_data->Fill(Dst_pT, sData->GetSumOfEventSWeight(i_neg));
+      ++i_neg;
     }
     else
     {
