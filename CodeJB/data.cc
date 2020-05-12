@@ -81,8 +81,8 @@ void data(string dir, string sample)
   RooRealVar *rel_frac = new RooRealVar("rel_frac", "rel_frac", 0.5, 0., 1.);
   RooRealVar *sig_yield = new RooRealVar("sig_yield", "sig_yield", 50000., 0., 400000.);
   RooRealVar *bkg_yield = new RooRealVar("bkg_yield", "bkg_yield", 2000., 0., 20000.);
-  RooRealVar *dtf = new RooRealVar("DTF_Mass", "DTF_Mass", 2004.5, 2020.);
-  RooRealVar *dtf_iso = new RooRealVar("DTF_Mass", "DTF_Mass", 2012.5, 2020.);
+  RooRealVar *dtf = new RooRealVar("DTF_Mass", "DTF_Mass", 2004.5, 2020.5);
+  RooRealVar *dtf_iso = new RooRealVar("DTF_Mass", "DTF_Mass", 2012.5, 2020.5);
   RooDataSet *dataset = new RooDataSet("dataset", "dataset", ntp, RooArgList(*dtf));
 
   RooBreitWigner *sig = new RooBreitWigner("sig", "sig", *dtf, *mean, *sigma);
@@ -126,7 +126,7 @@ void data(string dir, string sample)
   //ofstream weightfile("output/data/weightfile.txt", ofstream::trunc);
   //weightfile << "nEvents: " << nEvents << "\n";
 
-  for (int i = nEvents-1; i > nEvents*0.89; --i)
+  for (int i = 0; i > nEvents; ++i)
   {
     if (i % (nEvents/10) == 0)
     {
