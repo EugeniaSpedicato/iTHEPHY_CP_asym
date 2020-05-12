@@ -126,7 +126,7 @@ void data(string dir, string sample)
   //ofstream weightfile("output/data/weightfile.txt", ofstream::trunc);
   //weightfile << "nEvents: " << nEvents << "\n";
 
-  for (int i = nEvents; i > nEvents*0.89; --i)
+  for (int i = nEvents-1; i > nEvents*0.89; --i)
   {
     if (i % (nEvents/10) == 0)
     {
