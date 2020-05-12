@@ -307,7 +307,6 @@ void data(string dir, string sample)
   RooPlot *neg_frame3 = dtf_neg->frame();
   RooPlot *pos_frame = dtf_pos->frame();
 
-  TCanvas *canvas2 = new TCanvas();
 
 data->plotOn(neg_low_frame);
 data2->plotOn(neg_gr_frame);
@@ -364,7 +363,6 @@ data6->plotOn(neg_sides_frame);
 
 
   pos_frame->Draw();
-  canvas2->SaveAs("output/data/plots/dtf_pos_fit.pdf");
 
 
 
@@ -518,7 +516,7 @@ data6->plotOn(neg_sides_frame);
   h_Dst_pT_data->Scale(1./nDataEvents);
   h_Dst_pT_data->SetLineColor(kRed);
 
-  TCanvas *c1;
+  TCanvas *canvas2 = new TCanvas();
   h_Dst_pT_MC->Draw();
   cout << "debug5" << endl << endl << endl << endl;
   h_Dst_pT_MC->Draw("hist same");
@@ -527,7 +525,8 @@ data6->plotOn(neg_sides_frame);
   cout << "debug7" << endl << endl << endl << endl;
   h_Dst_pT_MC->Draw("hist same");
   cout << "debug8" << endl << endl << endl << endl;
-  c1->SaveAs("output/data/plots/data_MC_comp.pdf");
+  canvas2->SaveAs("output/data/plots/MC_data_comp.pdf");
+
 
 
 
