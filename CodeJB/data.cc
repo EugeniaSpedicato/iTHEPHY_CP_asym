@@ -488,14 +488,18 @@ data6->plotOn(neg_sides_frame);
   h_Dst_pT_MC->SetLineColor(kAzure);
   TH1F *h_Dst_pT_data = new TH1F("h_Dst_pT_data", ";Dst pT/MeV; Event", 148, 2200., 9600.);
   h_Dst_pT_data->Sumw2();
-
+  int i_pos = 0;
   for (int i = 0; i < nEvents; ++i)
   {
     if(Dst_ID < 0)
     {
       h_Dst_pT_data->Fill(Dst_pT, sData->GetSumOfEventSWeight(i));
     }
-    else h_Dst_pT_data->Fill(Dst_pT, sData2->GetSumOfEventSWeight(i));
+    else
+    {
+      h_Dst_pT_data->Fill(Dst_pT, sData2->GetSumOfEventSWeight(i_pos));
+      ++i_pos;
+    }
   }
 
   double nDataEvents = h_Dst_pT_data->GetSumOfWeights();
