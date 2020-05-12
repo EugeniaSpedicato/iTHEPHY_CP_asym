@@ -123,8 +123,8 @@ void data(string dir, string sample)
   TH1F *h_Dst_pT_data = new TH1F("h_Dst_pT_data", ";Dst pT/MeV; Event", 148, 2200., 9600.);
   h_Dst_pT_data->Sumw2();
 
-  ofstream weightfile("output/data/weightfile.txt", ofstream::trunc);
-  weightfile << "nEvents: " << nEvents << "\n";
+  //ofstream weightfile("output/data/weightfile.txt", ofstream::trunc);
+  //weightfile << "nEvents: " << nEvents << "\n";
 
   for (int i = 0; i < nEvents; ++i)
   {
@@ -133,11 +133,11 @@ void data(string dir, string sample)
       std::cout << "=== Event " << i/(nEvents/10) * 10 << "%" << std::endl;
     }
     ntp->GetEvent(i);
-    weightfile << i <<": Dst weight: " << sData->GetSWeight(i, "sig_yield") << " bkg weight: " << sData->GetSWeight(i, "bkg_yield") << "Total weight: " << sData->GetSWeight(i, "sig_yield") << "\n";
-    h_Dst_pT_data->Fill(Dst_pT, sData->GetSumOfEventSWeight(i));
+    //weightfile << i <<": Dst weight: " << sData->GetSWeight(i-1, "sig_yield") << " bkg weight: " << sData->GetSWeight(i-1, "bkg_yield") << "Total weight: " << sData->GetSWeight(i-1, "sig_yield") << "\n";
+    h_Dst_pT_data->Fill(Dst_pT, sData->GetSumOfEventSWeight(i-1));
   }
-  weightfile.flush();
-  weightfile.close();
+  //weightfile.flush();
+  //weightfile.close();
   double nDataEvents = h_Dst_pT_data->GetSumOfWeights();
   h_Dst_pT_data->Scale(1./nDataEvents);
   h_Dst_pT_data->SetLineColor(kRed);
