@@ -53,18 +53,25 @@ void data(string dir, string sample)
   ntp->AddFile(input_name.c_str(),-1,"ntp;26");
   int nEvents = ntp->GetEntries();
 
-
+  TFile f("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_UP_GEN.root");
+  TH1F *h_Dst_pT_MC = (TH1F*)f.Get("h_pT_reco_Dst");
+  h_Dst_pT_MC->Sumw2();
+  double nMCEvents = h_Dst_pT_MC->GetEntries();
+  h_Dst_pT_MC->Scale(1./nMCEvents);
+  h_Dst_pT_MC->SetLineColor(kAzure);
 
 
   double nDst_pos = 0.; double nDst_neg = 0.;
   int Dst_ID, D0_ID, Pi_ID, K_ID;
   double D0_mass;
   double DTF_mass;
+  double Dst_pT;
 
 
   ntp->SetBranchStatus("*",0);
   ntp->SetBranchStatus("D0_M",1); ntp->SetBranchAddress("D0_M", &(D0_mass));
   ntp->SetBranchStatus("DTF_Mass",1); ntp->SetBranchAddress("DTF_Mass", &(DTF_mass));
+  ntp->SetBranchStatus("Dst_PT",1); ntp->SetBranchAddress("Dst_PT", &(Dst_pT));
 
   ntp->SetBranchStatus("Dst_ID",1); ntp->SetBranchAddress("Dst_ID", &(Dst_ID));
   ntp->SetBranchStatus("D0_ID",1); ntp->SetBranchAddress("D0_ID", &(D0_ID));
@@ -113,6 +120,25 @@ void data(string dir, string sample)
   dataw_b->plotOn(frame3, DataError(RooAbsData::SumW2));
   frame3->Draw();
   cdata->SaveAs("output/data/plots/sPlot.pdf");
+
+  TH1F *h_Dst_pT_data = new TH1F("h_Dst_pT_data", ";Dst pT/MeV; Event", 148, 2200., 9600.);
+  h_Dst_pT_data->Sumw2();
+
+  for (int i = 0; i < nEvents; ++i)
+  {
+      h_Dst_pT_data->Fill(Dst_pT, sData->GetSumOfEventSWeight(i));
+  }
+  double nDataEvents = h_Dst_pT_data->GetSumOfWeights();
+  h_Dst_pT_data->Scale(1./nDataEvents);
+  h_Dst_pT_data->SetLineColor(kRed);
+
+  TCanvas *c1;
+  h_Dst_pT_MC->Draw();
+  h_Dst_pT_MC->Draw("hist same");
+  h_Dst_pT_MC->Draw("same");
+  h_Dst_pT_MC->Draw("hist same");
+  c1->SaveAs("output/data/plots/data_MC_comp.pdf");
+
 /*
   TH1F *h_Dst_pos_D0m = new TH1F("h_Dst_pos_D0m", ";invariant D0 mass/MeV; Events", 92, 1842., 1888.);
   TH1F *h_Dst_neg_D0m = new TH1F("h_Dst_neg_D0m", ";invariant D0 mass/MeV; Events", 92, 1842., 1888.);
