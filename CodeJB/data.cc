@@ -117,12 +117,13 @@ void data(string dir, string sample)
 
   TFile f("./output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root");
   TH1F *h_Dst_pT_MC = (TH1F*)f.Get("h_pT_reco_Dst");
-  h_Dst_pT_MC->Sumw2();
   double nMCEvents = h_Dst_pT_MC->GetEntries();
   h_Dst_pT_MC->Scale(1./nMCEvents);
   h_Dst_pT_MC->SetLineColor(kAzure);
   TH1F *h_Dst_pT_data = new TH1F("h_Dst_pT_data", ";Dst pT/MeV; Event", 148, 2200., 9600.);
   h_Dst_pT_data->Sumw2();
+
+  ofstream weightfile("output/data/weightfile.txt", ofstream::trunc);
 
   for (int i = 0; i < nEvents; ++i)
   {
@@ -131,8 +132,11 @@ void data(string dir, string sample)
       std::cout << "=== Event " << i/(nEvents/10) * 10 << "%" << std::endl;
     }
     ntp->GetEvent(i);
+    weightfile << "Dst weight: " << sData->GetSWeight(i, "sig_yield") << " bkg weight: " << sData->GetSWeight(i, "bkg_yield") << "Total weight: " << sData->GetSWeight(i, "sig_yield") << "\n";
     h_Dst_pT_data->Fill(Dst_pT, sData->GetSumOfEventSWeight(i));
   }
+  weightfile.flush();
+  weightfile.close();
   double nDataEvents = h_Dst_pT_data->GetSumOfWeights();
   h_Dst_pT_data->Scale(1./nDataEvents);
   h_Dst_pT_data->SetLineColor(kRed);
