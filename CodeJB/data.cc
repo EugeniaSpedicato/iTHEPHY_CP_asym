@@ -115,7 +115,7 @@ void data(string dir, string sample)
   frame3->Draw();
   cdata->SaveAs("output/data/plots/sPlot.pdf");
 
-/*  TFile f("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_UP_GEN.root");
+/*  TFile f("./output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root");
   TH1F *h_Dst_pT_MC = (TH1F*)f.Get("h_pT_reco_Dst");
   h_Dst_pT_MC->Sumw2();
   double nMCEvents = h_Dst_pT_MC->GetEntries();
