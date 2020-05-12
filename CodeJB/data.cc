@@ -124,6 +124,7 @@ void data(string dir, string sample)
   h_Dst_pT_data->Sumw2();
 
   ofstream weightfile("output/data/weightfile.txt", ofstream::trunc);
+  weightfile << "nEvents: " << nEvents << "\n";
 
   for (int i = 0; i < nEvents; ++i)
   {
@@ -132,7 +133,7 @@ void data(string dir, string sample)
       std::cout << "=== Event " << i/(nEvents/10) * 10 << "%" << std::endl;
     }
     ntp->GetEvent(i);
-    weightfile << "Dst weight: " << sData->GetSWeight(i, "sig_yield") << " bkg weight: " << sData->GetSWeight(i, "bkg_yield") << "Total weight: " << sData->GetSWeight(i, "sig_yield") << "\n";
+    weightfile << i <<": Dst weight: " << sData->GetSWeight(i, "sig_yield") << " bkg weight: " << sData->GetSWeight(i, "bkg_yield") << "Total weight: " << sData->GetSWeight(i, "sig_yield") << "\n";
     h_Dst_pT_data->Fill(Dst_pT, sData->GetSumOfEventSWeight(i));
   }
   weightfile.flush();
