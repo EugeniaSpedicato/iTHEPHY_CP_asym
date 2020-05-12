@@ -115,7 +115,7 @@ void data(string dir, string sample)
   frame3->Draw();
   cdata->SaveAs("output/data/plots/sPlot.pdf");
 
-/*  TFile f("./output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root");
+  TFile f("./output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root");
   TH1F *h_Dst_pT_MC = (TH1F*)f.Get("h_pT_reco_Dst");
   h_Dst_pT_MC->Sumw2();
   double nMCEvents = h_Dst_pT_MC->GetEntries();
@@ -126,7 +126,12 @@ void data(string dir, string sample)
 
   for (int i = 0; i < nEvents; ++i)
   {
-      h_Dst_pT_data->Fill(Dst_pT, sData->GetSumOfEventSWeight(i));
+    if (i % (nEvents/10) == 0)
+    {
+      std::cout << "=== Event " << i/(nEvents/10) * 10 << "%" << std::endl;
+    }
+    ntp->GetEvent(i);
+    h_Dst_pT_data->Fill(Dst_pT, sData->GetSumOfEventSWeight(i));
   }
   double nDataEvents = h_Dst_pT_data->GetSumOfWeights();
   h_Dst_pT_data->Scale(1./nDataEvents);
@@ -138,7 +143,7 @@ void data(string dir, string sample)
   h_Dst_pT_MC->Draw("same");
   h_Dst_pT_MC->Draw("hist same");
   c1->SaveAs("output/data/plots/data_MC_comp.pdf");
-*/
+
 /*
   TH1F *h_Dst_pos_D0m = new TH1F("h_Dst_pos_D0m", ";invariant D0 mass/MeV; Events", 92, 1842., 1888.);
   TH1F *h_Dst_neg_D0m = new TH1F("h_Dst_neg_D0m", ";invariant D0 mass/MeV; Events", 92, 1842., 1888.);
