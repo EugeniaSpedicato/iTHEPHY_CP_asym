@@ -497,7 +497,6 @@ data6->plotOn(neg_sides_frame);
   int i_pos = 0;
   int i_neg = 0;
 
-  cout << "debug7" << endl << endl << endl << endl;
   for (int i = 0; i < nEvents; ++i)
   {
     if (i % (nEvents/10) == 0)
@@ -517,16 +516,17 @@ data6->plotOn(neg_sides_frame);
     }
   }
 
-  cout << "debug8" << endl << endl << endl << endl;
   double nDataEvents = h_Dst_pT_data->GetSumOfWeights();
   h_Dst_pT_data->Scale(1./nDataEvents);
   h_Dst_pT_data->SetLineColor(kRed);
 
   TCanvas *c1;
   h_Dst_pT_MC->Draw();
-  h_Dst_pT_MC->Draw("hist same");
+  //h_Dst_pT_MC->Draw("hist same");
+  cout << "debug7" << endl << endl << endl << endl;
   h_Dst_pT_MC->Draw("same");
   h_Dst_pT_MC->Draw("hist same");
+  cout << "debug8" << endl << endl << endl << endl;
   c1->SaveAs("output/data/plots/data_MC_comp.pdf");
 
 
