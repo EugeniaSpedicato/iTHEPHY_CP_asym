@@ -7,6 +7,5 @@ Warning in cling::IncrementalParser::CheckABICompatibility():
   Possible C++ standard library mismatch, compiled with __GLIBCXX__ '20181206'
   Extraction of runtime standard library version was: '20191114'
 Info in <TCanvas::Print>: pdf file output/data/plots/sPlot.pdf has been created
-Warning in <TH1F::Sumw2>: Sum of squares of weights structure already created
 terminate called after throwing an instance of 'std::length_error'
   what():  basic_string::_M_create
