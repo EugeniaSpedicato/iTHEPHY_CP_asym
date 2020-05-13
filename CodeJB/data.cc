@@ -471,7 +471,7 @@ data6->plotOn(neg_sides_frame);
 
   TH1F *h_Dst_pT_data = new TH1F("h_Dst_pT_data", ";Dst pT/MeV; Event", 148, 2200., 9600.);
   TH1F *h_Dst_pT_data_nw = new TH1F("h_Dst_pT_data_nw", ";Dst pT/MeV; Event", 148, 2200., 9600.);
-  TH3F *h_Dst_pT_data_3D = new TH1F("h_Dst_pT_dataD", "; #phi; #eta ;Dst pT/MeV", 70, -3.5, 3.5, 60, 2.5, 4.0, 148, 2200., 9600.);
+  TH3F *h_Dst_pT_data_3D = new TH3F("h_Dst_pT_dataD", "; #phi; #eta ;Dst pT/MeV", 70, -3.5, 3.5, 60, 2.5, 4.0, 148, 2200., 9600.);
 
   h_Dst_pT_data->Sumw2();
   h_Dst_pT_data_nw->Sumw2();
