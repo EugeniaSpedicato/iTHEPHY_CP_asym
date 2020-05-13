@@ -1,3 +1,4 @@
+#pragma
 #include "eff.h"
 #include <chrono>
 #include <fstream>
