@@ -1,34 +1,19 @@
 #include "eff.h"
 #include <chrono>
+#include <fstream>
 #include "RooBreitWigner.h"
 #include "RooDataSet.h"
 #include "RooDataHist.h"
 #include "RooPlot.h"
 #include "RooFit.h"
 #include "RooAddPdf.h"
-#include "RooUniform.h"
-#include "RooArgusBG.h"
-#include "RooGaussian.h"
-#include "RooPolynomial.h"
-#include <fstream>
 #include "RooClassFactory.h"
-#include "RooWorkspace.h"
 #include "RooExtendPdf.h"
-#include "TROOT.h"
-#include "TThread.h"
-#include <Riostream.h>
-#include <thread>
 #include "RooRealVar.h"
 #include "RooStats/SPlot.h"
-#include "RooRealVar.h"
 #include "RooProdPdf.h"
-#include "RooAddition.h"
-#include "RooProduct.h"
 #include "RooAbsPdf.h"
 #include "RooFitResult.h"
-#include "RooWorkspace.h"
-#include "RooConstVar.h"
-#include <iomanip>
 using namespace RooFit;
 
 void printhists(TH1F *h)
@@ -57,15 +42,15 @@ void data(string dir, string sample)
 
   double nDst_pos = 0.; double nDst_neg = 0.;
   int Dst_ID, D0_ID, Pi_ID, K_ID;
-  double D0_mass;
-  double DTF_mass;
-  double Dst_pT;
+  double D0_mass, DTF_mass, Dst_pT, Dst_phi, Dst_eta;
 
 
   ntp->SetBranchStatus("*",0);
   ntp->SetBranchStatus("D0_M",1); ntp->SetBranchAddress("D0_M", &(D0_mass));
   ntp->SetBranchStatus("DTF_Mass",1); ntp->SetBranchAddress("DTF_Mass", &(DTF_mass));
   ntp->SetBranchStatus("Dst_PT",1); ntp->SetBranchAddress("Dst_PT", &(Dst_pT));
+  ntp->SetBranchStatus("Dst_PHI",1); ntp->SetBranchAddress("Dst_PHI", &(Dst_phi));
+  ntp->SetBranchStatus("Dst_ETA",1); ntp->SetBranchAddress("Dst_ETA", &(Dst_eta));
 
   ntp->SetBranchStatus("Dst_ID",1); ntp->SetBranchAddress("Dst_ID", &(Dst_ID));
   ntp->SetBranchStatus("D0_ID",1); ntp->SetBranchAddress("D0_ID", &(D0_ID));
@@ -483,8 +468,14 @@ data6->plotOn(neg_sides_frame);
   double nMCEvents = h_Dst_pT_MC->GetEntries();
   h_Dst_pT_MC->Scale(1./nMCEvents);
   h_Dst_pT_MC->SetLineColor(kAzure);
+
   TH1F *h_Dst_pT_data = new TH1F("h_Dst_pT_data", ";Dst pT/MeV; Event", 148, 2200., 9600.);
+  TH1F *h_Dst_pT_data_nw = new TH1F("h_Dst_pT_data_nw", ";Dst pT/MeV; Event", 148, 2200., 9600.);
+  TH3F *h_Dst_pT_data_3D = new TH1F("h_Dst_pT_dataD", "; #phi; #eta ;Dst pT/MeV", 70, -3.5, 3.5, 60, 2.5, 4.0, 148, 2200., 9600.);
+
   h_Dst_pT_data->Sumw2();
+  h_Dst_pT_data_nw->Sumw2();
+
   int i_pos = 0;
   int i_neg = 0;
 
@@ -505,28 +496,27 @@ data6->plotOn(neg_sides_frame);
       h_Dst_pT_data->Fill(Dst_pT, sData2->GetSumOfEventSWeight(i_pos));
       ++i_pos;
     }
+    h_Dst_pT_data_nw->Fill(Dst_pT);
+    h_Dst_pT_data_3D->Fill(Dst_phi, Dst_eta, Dst_pT);
   }
 
   double nDataEvents = h_Dst_pT_data->GetSumOfWeights();
   h_Dst_pT_data->Scale(1./nDataEvents);
+  h_Dst_pT_data_nw->Scale(1./h_Dst_pT_data_nw->GetEntries());
   h_Dst_pT_data->SetLineColor(kRed);
+  h_Dst_pT_data_nw->SetLineColor(kBlack);
 
   TCanvas *canvas2 = new TCanvas();
   h_Dst_pT_MC->Draw();
   h_Dst_pT_MC->Draw("hist same");
   h_Dst_pT_data->Draw("same");
   h_Dst_pT_data->Draw("hist same");
+  h_Dst_pT_data_nw->Draw("same");
+  h_Dst_pT_data_nw->Draw("hist same");
   canvas2->SaveAs("output/data/plots/MC_data_comp.pdf");
 
-
-
-
-
-
-
-
-
-
+  h_Dst_pT_data_3D->Draw("LEGO");
+  canvas2->SaveAs("output/data/plots/3D_eta_phi_plane.pdf");
 
 
 
