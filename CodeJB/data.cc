@@ -36,10 +36,18 @@ void data(string dir, string sample, string pol)
   uint64_t start_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
   string input_name = dir+"/"+sample+".root";
   TChain *ntp = new TChain();
-  ntp->AddFile(input_name.c_str(),-1,"ntp;25");
-  ntp->AddFile(input_name.c_str(),-1,"ntp;26");
-  int nEvents = ntp->GetEntries();
   bool up = (pol == "UP")? true:false;
+  if(up)
+  {
+    ntp->AddFile(input_name.c_str(),-1,"ntp;25");
+    ntp->AddFile(input_name.c_str(),-1,"ntp;26");
+  }
+  else
+  {
+    ntp->AddFile(input_name.c_str(),-1,"ntp;37");
+    ntp->AddFile(input_name.c_str(),-1,"ntp;38");
+  }
+  int nEvents = ntp->GetEntries();
 
 
 

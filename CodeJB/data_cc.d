@@ -110,9 +110,6 @@
 ./data_cc.so: /home/smjoblan/builddir/include/TF1AbsComposition.h
 ./data_cc.so: /home/smjoblan/builddir/include/TMath.h
 ./data_cc.so: /home/smjoblan/builddir/include/Math/ParamFunctor.h
-./data_cc.so: /home/smjoblan/builddir/include/TH3F.h
-./data_cc.so: /home/smjoblan/builddir/include/TH3.h
-./data_cc.so: /home/smjoblan/builddir/include/TAtt3D.h
 ./data_cc.so: /home/smjoblan/builddir/include/RooBreitWigner.h
 ./data_cc.so: /home/smjoblan/builddir/include/RooAbsPdf.h
 ./data_cc.so: /home/smjoblan/builddir/include/RooAbsReal.h
