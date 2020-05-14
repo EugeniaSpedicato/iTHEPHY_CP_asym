@@ -6,5 +6,5 @@ Info in <TUnixSystem::ACLiC>: creating shared library /home/smjoblan/iTHEPHY/iTH
 Warning in cling::IncrementalParser::CheckABICompatibility():
   Possible C++ standard library mismatch, compiled with __GLIBCXX__ '20181206'
   Extraction of runtime standard library version was: '20191114'
-Info in <TCanvas::Print>: pdf file output/data/plots/MC_data_comp.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/eta_phi_plane.pdf has been created
+Info in <TCanvas::Print>: pdf file output/data/plots/down/MC_data_comp.pdf has been created
+Info in <TCanvas::Print>: pdf file output/data/plots/down/eta_phi_plane.pdf has been created
