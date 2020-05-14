@@ -18,17 +18,18 @@
 #include "RooFitResult.h"
 using namespace RooFit;
 
-void printhists(TH1F *h)
+void printhists(TH1F *h, bool up)
 {
   TCanvas *c = new TCanvas();
   h->Draw();
   h->Draw("hist same");
   string title_name = h->GetName();
-  string save_name = "output/data/plots/"+title_name+".pdf";
+  if(up) string save_name = "output/data/plots/up/"+title_name+".pdf";
+  else string save_name = "output/data/plots/down/"+title_name+".pdf";
   c->SaveAs(save_name.c_str());
 }
 
-void data(string dir, string sample)
+void data(string dir, string sample, bool up)
 {
   /*ROOT::EnableThreadSafety();
   const auto nThreads = thread::hardware_concurrency();
@@ -434,14 +435,14 @@ data6->plotOn(neg_sides_frame);
 //other RooFit
 
   RooRealVar *DTF_Mass = new RooRealVar("DTF_Mass", "DTF_Mass", 2004., 2021.);
-  RooRealVar *DTF_Mass_iso = new RooRealVar("DTF_Mass", "DTF_Mass_iso", 2012.5, 2021.);
+  //RooRealVar *DTF_Mass_iso = new RooRealVar("DTF_Mass", "DTF_Mass_iso", 2012.5, 2021.);
   RooRealVar *Dst_ID_neg = new RooRealVar("Dst_ID", "Dst_ID_neg", -420., -400.);
   RooRealVar *Dst_ID_pos = new RooRealVar("Dst_ID", "Dst_ID_pos", 400., 420.);
 
   RooDataSet *dataset1 = new RooDataSet("dataset1", "dataset1", ntp, RooArgList(*DTF_Mass, *Dst_ID_neg));
-  RooDataSet *dataset2 = new RooDataSet("dataset2", "dataset2", ntp, RooArgList(*DTF_Mass, *Dst_ID_pos));
+  RooDataSet *dataset2 = new RooDataSet("dataset2", "dataset2", ntp, RooArgList(*DTF_Mass, *Dst_ID_pos));/*
   RooDataSet *dataset1b = new RooDataSet("dataset1b", "dataset1b", ntp, RooArgList(*DTF_Mass_iso, *Dst_ID_neg));
-  RooDataSet *dataset2b = new RooDataSet("dataset2b", "dataset2b", ntp, RooArgList(*DTF_Mass_iso, *Dst_ID_pos));
+  RooDataSet *dataset2b = new RooDataSet("dataset2b", "dataset2b", ntp, RooArgList(*DTF_Mass_iso, *Dst_ID_pos));*/
 
   RooRealVar *N = new RooRealVar("N", "N", 0.006, 0., 0.01);
   RooRealVar *a = new RooRealVar("a", "a", 2004., 2000., 2010.);
@@ -464,7 +465,8 @@ data6->plotOn(neg_sides_frame);
   model_pos->fitTo(*dataset2, Extended(), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   RooStats::SPlot *sData2 = new RooStats::SPlot("sData2", "An SPlot2", *dataset2, model_pos, RooArgList(*sig_yield_2, *bkg_yield_2));
 
-  TFile f("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root");
+  if(up) TFile f("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root");
+  else TFile f("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Dw_GEN.root");
 
   TH1F *h_Dst_pT_MC = (TH1F*)f.Get("h_pT_reco_Dst");
   double nMCEvents = h_Dst_pT_MC->GetEntries();
@@ -473,7 +475,7 @@ data6->plotOn(neg_sides_frame);
 
   TH1F *h_Dst_pT_data = new TH1F("h_Dst_pT_data", ";Dst pT/MeV; Event", 148, 2200., 9600.);
   TH1F *h_Dst_pT_data_nw = new TH1F("h_Dst_pT_data_nw", ";Dst pT/MeV; Event", 148, 2200., 9600.);
-  TH3F *h_Dst_pT_data_3D = new TH3F("h_Dst_pT_dataD", "; #phi; #eta ;Dst pT/MeV", 70, -3.5, 3.5, 60, 2.5, 4.0, 148, 2200., 9600.);
+  TH2F *h_Dst_pT_data_3D = new TH3F("h_Dst_pT_dataD", "; #phi; #eta", 70, -3.5, 3.5, 30, 2.5, 4.0);
 
   h_Dst_pT_data->Sumw2();
   h_Dst_pT_data_nw->Sumw2();
@@ -499,7 +501,7 @@ data6->plotOn(neg_sides_frame);
       ++i_pos;
     }
     h_Dst_pT_data_nw->Fill(Dst_pT);
-    h_Dst_pT_data_3D->Fill(Dst_phi, Dst_eta, Dst_pT);
+    h_Dst_pT_data_3D->Fill(Dst_phi, Dst_eta);
   }
 
   double nDataEvents = h_Dst_pT_data->GetSumOfWeights();
@@ -517,8 +519,8 @@ data6->plotOn(neg_sides_frame);
   h_Dst_pT_data_nw->Draw("hist same");
   canvas2->SaveAs("output/data/plots/MC_data_comp.pdf");
 
-  h_Dst_pT_data_3D->Draw("LEGO");
-  canvas2->SaveAs("output/data/plots/3D_eta_phi_plane.pdf");
+  h_Dst_pT_data_3D->Draw("SURF FB");
+  canvas2->SaveAs("output/data/plots/eta_phi_plane.pdf");
 
 
 

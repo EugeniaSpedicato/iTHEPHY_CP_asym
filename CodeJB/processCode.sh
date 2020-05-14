@@ -4,4 +4,5 @@
 #root -l -b -q up_plus_down_dev.cc
 
 export dir='../../Data'
-root -l -b -q 'data.cc++("$dir", "D02Kmpip_15_Up")' 2> log/err.txt
+root -l -b -q 'data.cc++("$dir", "D02Kmpip_15_Up", true)' 2> log/err.txt
+root -l -b -q 'data.cc++("$dir", "D02Kmpip_15_Dw", false)' 2> log/err_2.txt
