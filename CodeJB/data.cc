@@ -480,8 +480,8 @@ data6->plotOn(neg_sides_frame);
   h_Dst_pT_MC->Scale(1./nMCEvents);
   h_Dst_pT_MC->SetLineColor(kAzure);
 
-  TH1F *h_Dst_pT_data = new TH1F("h_Dst_pT_data", ";Dst pT/MeV; Event", 148, 2200., 9600.);
-  TH1F *h_Dst_pT_data_nw = new TH1F("h_Dst_pT_data_nw", ";Dst pT/MeV; Event", 148, 2200., 9600.);
+  TH1F *h_Dst_pT_data = new TH1F("h_Dst_pT_data", ";Dst pT/MeV; Event", 180, 2000., 11000.);
+  TH1F *h_Dst_pT_data_nw = new TH1F("h_Dst_pT_data_nw", ";Dst pT/MeV; Event", 180, 2000., 11000.);
   TH2F *h_Dst_pT_data_3D = new TH2F("h_Dst_pT_dataD", "; #phi; #eta", 70, -3.5, 3.5, 30, 2.5, 4.0);
 
   h_Dst_pT_data->Sumw2();
@@ -524,11 +524,12 @@ data6->plotOn(neg_sides_frame);
   h_Dst_pT_data->Draw("hist same");
   h_Dst_pT_data_nw->Draw("same");
   h_Dst_pT_data_nw->Draw("hist same");
-  canvas2->SaveAs("output/data/plots/MC_data_comp.pdf");
+  if(up) canvas2->SaveAs("output/data/plots/up/MC_data_comp.pdf");
+  else canvas2->SaveAs("output/data/plots/down/MC_data_comp.pdf");
 
-  h_Dst_pT_data_3D->Draw("SURF FB");
-  canvas2->SaveAs("output/data/plots/eta_phi_plane.pdf");
-
+  h_Dst_pT_data_3D->Draw("SURF4 FB");
+  if(up) canvas2->SaveAs("output/data/plots/up/eta_phi_plane.pdf");
+  else canvas2->SaveAs("output/data/plots/down/eta_phi_plane.pdf");
 
 
 
