@@ -467,7 +467,7 @@ data6->plotOn(neg_sides_frame);
 
   TFile *f = (up)? new TFile("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root"): new TFile("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Dw_GEN.root");
 
-  TH1F *h_Dst_pT_MC = (TH1F*)f.Get("h_pT_reco_Dst");
+  TH1F *h_Dst_pT_MC = (TH1F*)f->Get("h_pT_reco_Dst");
   double nMCEvents = h_Dst_pT_MC->GetEntries();
   h_Dst_pT_MC->Scale(1./nMCEvents);
   h_Dst_pT_MC->SetLineColor(kAzure);
