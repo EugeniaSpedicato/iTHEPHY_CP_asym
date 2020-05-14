@@ -2,7 +2,7 @@
 #include "eff.h"
 #include <chrono>
 #include <fstream>
-#include "TH3F.h"
+#include "TH2F.h"
 #include "RooBreitWigner.h"
 #include "RooDataSet.h"
 #include "RooDataHist.h"
@@ -24,12 +24,11 @@ void printhists(TH1F *h, bool up)
   h->Draw();
   h->Draw("hist same");
   string title_name = h->GetName();
-  if(up) string save_name = "output/data/plots/up/"+title_name+".pdf";
-  else string save_name = "output/data/plots/down/"+title_name+".pdf";
+  string save_name = (up)?"output/data/plots/up/"+title_name+".pdf": "output/data/plots/down/"+title_name+".pdf";
   c->SaveAs(save_name.c_str());
 }
 
-void data(string dir, string sample, bool up)
+void data(string dir, string sample, string pol)
 {
   /*ROOT::EnableThreadSafety();
   const auto nThreads = thread::hardware_concurrency();
@@ -40,6 +39,7 @@ void data(string dir, string sample, bool up)
   ntp->AddFile(input_name.c_str(),-1,"ntp;25");
   ntp->AddFile(input_name.c_str(),-1,"ntp;26");
   int nEvents = ntp->GetEntries();
+  bool up = (pol == "UP")? true:false;
 
 
 
@@ -465,8 +465,7 @@ data6->plotOn(neg_sides_frame);
   model_pos->fitTo(*dataset2, Extended(), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   RooStats::SPlot *sData2 = new RooStats::SPlot("sData2", "An SPlot2", *dataset2, model_pos, RooArgList(*sig_yield_2, *bkg_yield_2));
 
-  if(up) TFile f("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root");
-  else TFile f("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Dw_GEN.root");
+  TFile *f = (up)? new TFile("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root"): new TFile("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Dw_GEN.root");
 
   TH1F *h_Dst_pT_MC = (TH1F*)f.Get("h_pT_reco_Dst");
   double nMCEvents = h_Dst_pT_MC->GetEntries();
@@ -475,7 +474,7 @@ data6->plotOn(neg_sides_frame);
 
   TH1F *h_Dst_pT_data = new TH1F("h_Dst_pT_data", ";Dst pT/MeV; Event", 148, 2200., 9600.);
   TH1F *h_Dst_pT_data_nw = new TH1F("h_Dst_pT_data_nw", ";Dst pT/MeV; Event", 148, 2200., 9600.);
-  TH2F *h_Dst_pT_data_3D = new TH3F("h_Dst_pT_dataD", "; #phi; #eta", 70, -3.5, 3.5, 30, 2.5, 4.0);
+  TH2F *h_Dst_pT_data_3D = new TH2F("h_Dst_pT_dataD", "; #phi; #eta", 70, -3.5, 3.5, 30, 2.5, 4.0);
 
   h_Dst_pT_data->Sumw2();
   h_Dst_pT_data_nw->Sumw2();
