@@ -18,7 +18,7 @@
 #include "RooFitResult.h"
 using namespace RooFit;
 
-void printdevhists(TH1F *h_pos, TH1F *h_neg, string polarisation, bool weighted)
+void printdevhists(TH1F *h_pos, TH1F *h_neg, string polarisation, string var, bool weighted)
 {
   TF1 func("0*x", "0*x", -5., 9600.);
   int nbins = h_pos->GetNbinsX();
@@ -38,8 +38,8 @@ void printdevhists(TH1F *h_pos, TH1F *h_neg, string polarisation, bool weighted)
   h_neg->Scale(2.);
   h_neg->Add(h_pos);
   h_pos->Divide(h_neg);
-  h_pos->SetAxisRange(-0.15, 0.15, "Y");
-  title_name = "h_Dst_DTF_asym";
+  h_pos->SetAxisRange(-0.2, 0.2, "Y");
+  title_name = "h_Dst_"+var+"_asym";
   h_pos->SetName(title_name.c_str());
   h_pos->Draw();
   h_pos->Draw("hist same");
@@ -141,16 +141,28 @@ void data(string dir, string sample, string pol)
   h_Dst_pT_MC->Scale(1./nMCEvents);
   h_Dst_pT_MC->SetLineColor(kAzure);
 
-  TH1F *h_Dst_DTF_pos = new TH1F("h_Dst_DTF_pos", ";DTF Mass/MeV; Event", 170, 2004., 2021.);
-  TH1F *h_Dst_DTF_neg = new TH1F("h_Dst_DTF_neg", ";DsTF Mass/MeV; Event", 170, 2004., 2021.);
+  TH1F *h_Dst_DTF_pos = new TH1F("h_Dst_DTF_pos", ";DTF Mass/MeV; Event", 34, 2004., 2021.);
+  TH1F *h_Dst_DTF_neg = new TH1F("h_Dst_DTF_neg", ";DsTF Mass/MeV; Event", 34, 2004., 2021.);
 
-  TH1F *h_Dst_DTF_pos_w = new TH1F("h_Dst_DTF_pos_w", ";DTF Mass/MeV; Event", 170, 2004., 2021.);
-  TH1F *h_Dst_DTF_neg_w = new TH1F("h_Dst_DTF_neg_w", ";DsTF Mass/MeV; Event", 170, 2004., 2021.);
+  TH1F *h_Dst_DTF_pos_w = new TH1F("h_Dst_DTF_pos_w", ";DTF Mass/MeV; Event", 34, 2004., 2021.);
+  TH1F *h_Dst_DTF_neg_w = new TH1F("h_Dst_DTF_neg_w", ";DsTF Mass/MeV; Event", 34, 2004., 2021.);
 
+  TH1F *h_Dst_pT_data = new TH1F("h_Dst_pT_data", ";Dst pT/MeV; Event", 180, 2000., 11000.);
   TH1F *h_Dst_pT_data = new TH1F("h_Dst_pT_data", ";Dst pT/MeV; Event", 180, 2000., 11000.);
   TH1F *h_Dst_pT_data_nw = new TH1F("h_Dst_pT_data_nw", ";Dst pT/MeV; Event", 180, 2000., 11000.);
   TH2F *h_Dst_eta_phi_plane = new TH2F("h_Dst_eta_phi_plane", "; #phi; #eta", 70, -3.5, 3.5, 30, 2.5, 4.0);
 
+
+  TH1F *h_phi_Dst_neg = new TH1F("h_phi_Dst_neg", ";#phi;Events", 70, -3.5, 3.5);
+  TH1F *h_phi_Dst_pos = new TH1F("h_phi_Dst_pos", ";#phi;Events", 70, -3.5, 3.5);
+
+  TH1F *h_phi_Dst_neg_w = new TH1F("h_phi_Dst_neg_w", ";#phi;Events", 70, -3.5, 3.5);
+  TH1F *h_phi_Dst_pos_w = new TH1F("h_phi_Dst_pos_w", ";#phi;Events", 70, -3.5, 3.5);
+
+  h_phi_Dst_neg->Sumw2();
+  h_phi_Dst_pos->Sumw2();
+  h_phi_Dst_neg_w->Sumw2();
+  h_phi_Dst_pos_w->Sumw2();
   h_Dst_DTF_pos_w->Sumw2();
   h_Dst_DTF_neg_w->Sumw2();
   h_Dst_DTF_pos->Sumw2();
@@ -173,6 +185,9 @@ void data(string dir, string sample, string pol)
       h_Dst_pT_data->Fill(Dst_pT, sData->GetSumOfEventSWeight(i_neg));
       h_Dst_DTF_neg_w->Fill(DTF_mass, sData->GetSumOfEventSWeight(i_neg));
       h_Dst_DTF_neg->Fill(DTF_mass);
+
+      h_phi_Dst_neg_w->Fill(Dst_phi, sData->GetSumOfEventSWeight(i_neg));
+      h_phi_Dst_neg->Fill(Dst_phi);
       ++i_neg;
     }
     else
@@ -180,6 +195,10 @@ void data(string dir, string sample, string pol)
       h_Dst_pT_data->Fill(Dst_pT, sData2->GetSumOfEventSWeight(i_pos));
       h_Dst_DTF_pos_w->Fill(DTF_mass, sData2->GetSumOfEventSWeight(i_pos));
       h_Dst_DTF_pos->Fill(DTF_mass);
+
+      h_phi_Dst_pos_w->Fill(Dst_phi, sData->GetSumOfEventSWeight(i_neg));
+      h_phi_Dst_pos->Fill(Dst_phi);
+
       ++i_pos;
     }
     h_Dst_pT_data_nw->Fill(Dst_pT);
@@ -210,12 +229,20 @@ void data(string dir, string sample, string pol)
   double nPosW = h_Dst_DTF_pos_w->GetSumOfWeights();
   double nNeg = h_Dst_DTF_neg->GetSumOfWeights();
   double nNegW = h_Dst_DTF_neg_w->GetSumOfWeights();
+  double asym = (nPos - nNeg)/(nPos + nNeg);
+  double asymW = (nPosW - nNegW)/(nPosW + nNegW);
+  double err = 2. * sqrt(nPos*nNeg/pow(nPos + nNeg, 3.));
+  double errW = 2. * sqrt(nPosW*nNegW/pow(nPosW + nNegW, 3.));
 
-  printdevhists(h_Dst_DTF_pos, h_Dst_DTF_neg, pol, false);
-  printdevhists(h_Dst_DTF_pos_w, h_Dst_DTF_neg_w, pol, true);
 
-  cout << "Total asymmetry before weighting: " << (nPos - nNeg)/(nPos + nNeg) << endl;
-  cout << "Total asymmetry after weighting: " << (nPosW - nNegW)/(nPosW + nNegW) << endl;
+  printdevhists(h_Dst_DTF_pos, h_Dst_DTF_neg, pol, "DTF", false);
+  printdevhists(h_Dst_DTF_pos_w, h_Dst_DTF_neg_w, pol, "DTF", true);
+
+  printdevhists(h_phi_Dst_pos, h_phi_Dst_neg, pol, "phi", false);
+  printdevhists(h_phi_Dst_pos_w, h_phi_Dst_neg_w, pol, "phi", true);
+
+  cout << "Total asymmetry before weighting: " << asym << " +/- " << err << endl;
+  cout << "Total asymmetry after weighting: " << asymW << " +/- " << errW << endl;
 
   uint64_t end_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
   float elapsed = (end_time - start_time)*0.000001;
