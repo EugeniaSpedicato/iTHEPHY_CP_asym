@@ -44,8 +44,8 @@ void printdevhists(TH1F *h_pos, TH1F *h_neg, string polarisation, bool weighted)
   h_pos->Draw();
   h_pos->Draw("hist same");
   func.Draw("same");
-  if(weighted) save_name = "output/data/plots/"+directory"/"+title_name+"_w.pdf";
-  else save_name = "output/data/plots/"+directory"/"+title_name+".pdf";
+  if(weighted) save_name = "output/data/plots/"+directory+"/"+title_name+"_w.pdf";
+  else save_name = "output/data/plots/"+directory+"/"+title_name+".pdf";
   c->SaveAs(save_name.c_str());
   h_pos->Write();
   }
@@ -184,7 +184,7 @@ void data(string dir, string sample, string pol)
       ++i_pos;
     }
     h_Dst_pT_data_nw->Fill(Dst_pT);
-    h_Dst_pT_data_3D->Fill(Dst_phi, Dst_eta);
+    h_Dst_eta_phi_plane->Fill(Dst_phi, Dst_eta);
   }
 
   double nDataEvents = h_Dst_pT_data->GetSumOfWeights();
@@ -203,7 +203,7 @@ void data(string dir, string sample, string pol)
   if(up) canvas2->SaveAs("output/data/plots/up/MC_data_comp.pdf");
   else canvas2->SaveAs("output/data/plots/down/MC_data_comp.pdf");
 
-  h_Dst_pT_data_3D->Draw("SURF4 FB");
+  h_Dst_eta_phi_plane->Draw("SURF4 FB");
   if(up) canvas2->SaveAs("output/data/plots/up/eta_phi_plane.pdf");
   else canvas2->SaveAs("output/data/plots/down/eta_phi_plane.pdf");
 
@@ -212,8 +212,8 @@ void data(string dir, string sample, string pol)
   double nNeg = h_Dst_DTF_neg->GetSumOfWeights();
   double nNegW = h_Dst_DTF_neg_w->GetSumOfWeights();
 
-  printdevhists(h_Dst_DTF_pos, h_Dst_DTF_neg, pol, false)
-  printdevhists(h_Dst_DTF_pos_w, h_Dst_DTF_neg_w, pol, true)
+  printdevhists(h_Dst_DTF_pos, h_Dst_DTF_neg, pol, false);
+  printdevhists(h_Dst_DTF_pos_w, h_Dst_DTF_neg_w, pol, true);
 
   cout << "Total asymmetry before weighting: " << (nPos - nNeg)/(nPos + nNeg) << endl;
   cout << "Total asymmetry after weighting: " << (nPosW - nNegW)/(nPosW + nNegW) << endl;
