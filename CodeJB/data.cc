@@ -48,7 +48,6 @@ void printdevhists(TH1F *h_pos, TH1F *h_neg, string polarisation, bool weighted)
   else save_name = "output/data/plots/"+directory+"/"+title_name+".pdf";
   c->SaveAs(save_name.c_str());
   h_pos->Write();
-  }
 }
 
 void printhists(TH1F *h, bool up)
