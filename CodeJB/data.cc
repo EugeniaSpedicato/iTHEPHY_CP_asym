@@ -148,7 +148,6 @@ void data(string dir, string sample, string pol)
   TH1F *h_Dst_DTF_neg_w = new TH1F("h_Dst_DTF_neg_w", ";DsTF Mass/MeV; Event", 34, 2004., 2021.);
 
   TH1F *h_Dst_pT_data = new TH1F("h_Dst_pT_data", ";Dst pT/MeV; Event", 180, 2000., 11000.);
-  TH1F *h_Dst_pT_data = new TH1F("h_Dst_pT_data", ";Dst pT/MeV; Event", 180, 2000., 11000.);
   TH1F *h_Dst_pT_data_nw = new TH1F("h_Dst_pT_data_nw", ";Dst pT/MeV; Event", 180, 2000., 11000.);
   TH2F *h_Dst_eta_phi_plane = new TH2F("h_Dst_eta_phi_plane", "; #phi; #eta", 70, -3.5, 3.5, 30, 2.5, 4.0);
 
