@@ -8,3 +8,11 @@ Warning in cling::IncrementalParser::CheckABICompatibility():
   Extraction of runtime standard library version was: '20191114'
 Info in <TCanvas::Print>: pdf file output/data/plots/up/MC_data_comp.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/up/eta_phi_plane.pdf has been created
+Warning in <TFile::Append>: Replacing existing TH1: h_Dst_DTF_pos (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_Dst_DTF_neg (Potential memory leak).
+Info in <TCanvas::Print>: pdf file output/data/plots/up/h_Dst_DTF_asym.pdf has been created
+Error in <TFile::WriteTObject>: Directory output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root is not writable
+Warning in <TFile::Append>: Replacing existing TH1: h_Dst_DTF_pos_w (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_Dst_DTF_neg_w (Potential memory leak).
+Info in <TCanvas::Print>: pdf file output/data/plots/up/h_Dst_DTF_asym_w.pdf has been created
+Error in <TFile::WriteTObject>: Directory output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root is not writable
