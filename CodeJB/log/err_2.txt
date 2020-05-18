@@ -8,9 +8,9 @@ Warning in cling::IncrementalParser::CheckABICompatibility():
   Extraction of runtime standard library version was: '20191114'
 Info in <TCanvas::Print>: pdf file output/data/plots/down/MC_data_comp.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/down/eta_phi_plane.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_DTF_asym.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_DTF__asymw.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_DTF_s_asymw.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_phi_asym.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_phi__asymw.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_phi_s_asymw.pdf has been created
+Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_asymDTF.pdf has been created
+Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_asymDTF_w.pdf has been created
+Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_asymDTF_sw.pdf has been created
+Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_asymphi.pdf has been created
+Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_asymphi_w.pdf has been created
+Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_asymphi_sw.pdf has been created
