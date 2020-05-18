@@ -9,6 +9,8 @@ Warning in cling::IncrementalParser::CheckABICompatibility():
 Info in <TCanvas::Print>: pdf file output/data/plots/up/MC_data_comp.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/up/eta_phi_plane.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/up/h_Dst_DTF_asym.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/up/h_Dst_DTF_asym_w.pdf has been created
+Info in <TCanvas::Print>: pdf file output/data/plots/up/h_Dst_DTF__asymw.pdf has been created
+Info in <TCanvas::Print>: pdf file output/data/plots/up/h_Dst_DTF_s_asymw.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/up/h_Dst_phi_asym.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/up/h_Dst_phi_asym_w.pdf has been created
+Info in <TCanvas::Print>: pdf file output/data/plots/up/h_Dst_phi__asymw.pdf has been created
+Info in <TCanvas::Print>: pdf file output/data/plots/up/h_Dst_phi_s_asymw.pdf has been created
