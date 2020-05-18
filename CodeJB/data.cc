@@ -209,7 +209,7 @@ void data(string dir, string sample, string pol)
       h_Dst_DTF_pos->Fill(DTF_mass);
 
       h_phi_Dst_pos_w->Fill(Dst_phi, sData2->GetSumOfEventSWeight(i_pos));
-      h_phi_Dst_pos_sw->Fill(Dst_phi, sData2->GetSumOfEventSWeight(i_pos, "sig_yield_2"));
+      h_phi_Dst_pos_sw->Fill(Dst_phi, sData2->GetSWeight(i_pos, "sig_yield_2"));
       h_phi_Dst_pos->Fill(Dst_phi);
       ++i_pos;
     }
