@@ -38,7 +38,6 @@ void printdevhists(TH1F *h_pos, TH1F *h_neg, string polarisation, string var, bo
   h_neg->Scale(2.);
   h_neg->Add(h_pos);
   h_pos->Divide(h_neg);
-  h_pos->SetAxisRange(-0.2, 0.2, "Y");
   title_name = "h_Dst_"+var+"_asym";
   h_pos->SetName(title_name.c_str());
   h_pos->Draw();
@@ -62,6 +61,7 @@ void printhists(TH1F *h, bool up)
 
 void data(string dir, string sample, string pol)
 {
+  gstyle->SetOptStat(0);
   /*ROOT::EnableThreadSafety();
   const auto nThreads = thread::hardware_concurrency();
   ROOT::EnableImplicitMT(nThreads);*/
@@ -233,12 +233,18 @@ void data(string dir, string sample, string pol)
   double err = 2. * sqrt(nPos*nNeg/pow(nPos + nNeg, 3.));
   double errW = 2. * sqrt(nPosW*nNegW/pow(nPosW + nNegW, 3.));
 
+  string output_hist_name;
+  output_hist_name = "output/histOut_"+sample+".root";
+  TFile *out_hist_fi = new TFile(output_hist_name.c_str(),"RECREATE");
 
   printdevhists(h_Dst_DTF_pos, h_Dst_DTF_neg, pol, "DTF", false);
   printdevhists(h_Dst_DTF_pos_w, h_Dst_DTF_neg_w, pol, "DTF", true);
 
   printdevhists(h_phi_Dst_pos, h_phi_Dst_neg, pol, "phi", false);
   printdevhists(h_phi_Dst_pos_w, h_phi_Dst_neg_w, pol, "phi", true);
+
+  out_hist_fi->Write();
+  out_hist_fi->Close();
 
   cout << "Total asymmetry before weighting: " << asym << " +/- " << err << endl;
   cout << "Total asymmetry after weighting: " << asymW << " +/- " << errW << endl;
