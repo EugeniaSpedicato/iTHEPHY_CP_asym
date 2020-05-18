@@ -43,7 +43,7 @@ void printdevhists(TH1F *h_pos, TH1F *h_neg, string polarisation, string var, bo
   h_pos->Draw();
   h_pos->Draw("hist same");
   func.Draw("same");
-  if(weighted) save_name = "output/data/plots/"+directory+"/"+title_name+"_w.pdf";
+  if(weighted) save_name = "output/data/plots/"+directory+"/"+title_name+"w.pdf";
   else save_name = "output/data/plots/"+directory+"/"+title_name+".pdf";
   c->SaveAs(save_name.c_str());
   h_pos->Write();
@@ -143,30 +143,38 @@ void data(string dir, string sample, string pol)
 
   TH1F *h_Dst_DTF_pos = new TH1F("h_Dst_DTF_pos", ";DTF Mass/MeV; Event", 34, 2004., 2021.);
   TH1F *h_Dst_DTF_neg = new TH1F("h_Dst_DTF_neg", ";DsTF Mass/MeV; Event", 34, 2004., 2021.);
-
   TH1F *h_Dst_DTF_pos_w = new TH1F("h_Dst_DTF_pos_w", ";DTF Mass/MeV; Event", 34, 2004., 2021.);
   TH1F *h_Dst_DTF_neg_w = new TH1F("h_Dst_DTF_neg_w", ";DsTF Mass/MeV; Event", 34, 2004., 2021.);
+  TH1F *h_Dst_DTF_pos_sw = new TH1F("h_Dst_DTF_pos_sw", ";DTF Mass/MeV; Event", 34, 2004., 2021.);
+  TH1F *h_Dst_DTF_neg_sw = new TH1F("h_Dst_DTF_neg_sw", ";DsTF Mass/MeV; Event", 34, 2004., 2021.);
 
   TH1F *h_Dst_pT_data = new TH1F("h_Dst_pT_data", ";Dst pT/MeV; Event", 180, 2000., 11000.);
+  TH1F *h_Dst_pT_data_sw = new TH1F("h_Dst_pT_data_sw", ";Dst pT/MeV; Event", 180, 2000., 11000.);
   TH1F *h_Dst_pT_data_nw = new TH1F("h_Dst_pT_data_nw", ";Dst pT/MeV; Event", 180, 2000., 11000.);
   TH2F *h_Dst_eta_phi_plane = new TH2F("h_Dst_eta_phi_plane", "; #phi; #eta", 70, -3.5, 3.5, 30, 2.5, 4.0);
 
 
   TH1F *h_phi_Dst_neg = new TH1F("h_phi_Dst_neg", ";#phi;Events", 70, -3.5, 3.5);
   TH1F *h_phi_Dst_pos = new TH1F("h_phi_Dst_pos", ";#phi;Events", 70, -3.5, 3.5);
-
   TH1F *h_phi_Dst_neg_w = new TH1F("h_phi_Dst_neg_w", ";#phi;Events", 70, -3.5, 3.5);
   TH1F *h_phi_Dst_pos_w = new TH1F("h_phi_Dst_pos_w", ";#phi;Events", 70, -3.5, 3.5);
+  TH1F *h_phi_Dst_neg_sw = new TH1F("h_phi_Dst_neg_sw", ";#phi;Events", 70, -3.5, 3.5);
+  TH1F *h_phi_Dst_pos_sw = new TH1F("h_phi_Dst_pos_sw", ";#phi;Events", 70, -3.5, 3.5);
 
   h_phi_Dst_neg->Sumw2();
   h_phi_Dst_pos->Sumw2();
   h_phi_Dst_neg_w->Sumw2();
   h_phi_Dst_pos_w->Sumw2();
+  h_phi_Dst_neg_sw->Sumw2();
+  h_phi_Dst_pos_sw->Sumw2();
   h_Dst_DTF_pos_w->Sumw2();
   h_Dst_DTF_neg_w->Sumw2();
+  h_Dst_DTF_pos_sw->Sumw2();
+  h_Dst_DTF_neg_sw->Sumw2();
   h_Dst_DTF_pos->Sumw2();
   h_Dst_DTF_neg->Sumw2();
   h_Dst_pT_data->Sumw2();
+  h_Dst_pT_data_sw->Sumw2();
   h_Dst_pT_data_nw->Sumw2();
 
   int i_pos = 0;
@@ -182,22 +190,27 @@ void data(string dir, string sample, string pol)
     if(Dst_ID < 0)
     {
       h_Dst_pT_data->Fill(Dst_pT, sData->GetSumOfEventSWeight(i_neg));
+      h_Dst_pT_data_sw->Fill(Dst_pT, sData->GetSWeight(i_neg, "sig_yield"));
       h_Dst_DTF_neg_w->Fill(DTF_mass, sData->GetSumOfEventSWeight(i_neg));
+      h_Dst_DTF_neg_sw->Fill(DTF_mass, sData->GetSWeight(i_neg, "sig_yield"));
       h_Dst_DTF_neg->Fill(DTF_mass);
 
       h_phi_Dst_neg_w->Fill(Dst_phi, sData->GetSumOfEventSWeight(i_neg));
+      h_phi_Dst_neg_sw->Fill(Dst_phi, sData->GetSWeight(i_neg, "sig_yield"));
       h_phi_Dst_neg->Fill(Dst_phi);
       ++i_neg;
     }
     else
     {
       h_Dst_pT_data->Fill(Dst_pT, sData2->GetSumOfEventSWeight(i_pos));
+      h_Dst_pT_data_sw->Fill(Dst_pT, sData2->GetSWeight(i_pos, "sig_yield_2"));
       h_Dst_DTF_pos_w->Fill(DTF_mass, sData2->GetSumOfEventSWeight(i_pos));
+      h_Dst_DTF_pos_sw->Fill(DTF_mass, sData2->GetSWeight(i_pos, "sig_yield_2"));
       h_Dst_DTF_pos->Fill(DTF_mass);
 
-      h_phi_Dst_pos_w->Fill(Dst_phi, sData->GetSumOfEventSWeight(i_neg));
+      h_phi_Dst_pos_w->Fill(Dst_phi, sData2->GetSumOfEventSWeight(i_pos));
+      h_phi_Dst_pos_sw->Fill(Dst_phi, sData2->GetSumOfEventSWeight(i_pos, "sig_yield_2"));
       h_phi_Dst_pos->Fill(Dst_phi);
-
       ++i_pos;
     }
     h_Dst_pT_data_nw->Fill(Dst_pT);
@@ -207,8 +220,10 @@ void data(string dir, string sample, string pol)
   double nDataEvents = h_Dst_pT_data->GetSumOfWeights();
   h_Dst_pT_data->Scale(1./nDataEvents);
   h_Dst_pT_data_nw->Scale(1./h_Dst_pT_data_nw->GetEntries());
+  h_Dst_pT_data_sw->Scale(1./h_Dst_pT_data_sw->GetEntries());
   h_Dst_pT_data->SetLineColor(kRed);
   h_Dst_pT_data_nw->SetLineColor(kBlack);
+  h_Dst_pT_data_nw->SetLineColor(kPink);
 
   TCanvas *canvas2 = new TCanvas();
   h_Dst_pT_MC->Draw();
@@ -217,6 +232,8 @@ void data(string dir, string sample, string pol)
   h_Dst_pT_data->Draw("hist same");
   h_Dst_pT_data_nw->Draw("same");
   h_Dst_pT_data_nw->Draw("hist same");
+  h_Dst_pT_data_sw->Draw("same");
+  h_Dst_pT_data_sw->Draw("hist same");
   if(up) canvas2->SaveAs("output/data/plots/up/MC_data_comp.pdf");
   else canvas2->SaveAs("output/data/plots/down/MC_data_comp.pdf");
 
@@ -226,12 +243,16 @@ void data(string dir, string sample, string pol)
 
   double nPos = h_Dst_DTF_pos->GetSumOfWeights();
   double nPosW = h_Dst_DTF_pos_w->GetSumOfWeights();
+  double nPosSW = h_Dst_DTF_pos_sw->GetSumOfWeights();
   double nNeg = h_Dst_DTF_neg->GetSumOfWeights();
   double nNegW = h_Dst_DTF_neg_w->GetSumOfWeights();
+  double nNegSW = h_Dst_DTF_neg_sw->GetSumOfWeights();
   double asym = (nPos - nNeg)/(nPos + nNeg);
   double asymW = (nPosW - nNegW)/(nPosW + nNegW);
+  double asymSW = (nPosSW - nNegSW)/(nPosSW + nNegSW);
   double err = 2./pow(nPos + nNeg, 2.)*sqrt((pow(nPos,3.)+pow(nNeg, 3.))/(nPos * nNeg));
   double errW = 2./pow(nPosW + nNegW, 2.)*sqrt((pow(nPosW,3.)+pow(nNegW, 3.))/(nPosW * nNegW));
+  double errSW = 2./pow(nPosSW + nNegSW, 2.)*sqrt((pow(nPosSW,3.)+pow(nNegSW, 3.))/(nPosSW * nNegSW));
 
 
   string output_hist_name;
@@ -239,16 +260,19 @@ void data(string dir, string sample, string pol)
   TFile *out_hist_fi = new TFile(output_hist_name.c_str(),"RECREATE");
 
   printdevhists(h_Dst_DTF_pos, h_Dst_DTF_neg, pol, "DTF", false);
-  printdevhists(h_Dst_DTF_pos_w, h_Dst_DTF_neg_w, pol, "DTF", true);
+  printdevhists(h_Dst_DTF_pos_w, h_Dst_DTF_neg_w, pol, "DTF_", true);
+  printdevhists(h_Dst_DTF_pos_sw, h_Dst_DTF_neg_sw, pol, "DTF_s", true);
 
   printdevhists(h_phi_Dst_pos, h_phi_Dst_neg, pol, "phi", false);
-  printdevhists(h_phi_Dst_pos_w, h_phi_Dst_neg_w, pol, "phi", true);
+  printdevhists(h_phi_Dst_pos_w, h_phi_Dst_neg_w, pol, "phi_", true);
+  printdevhists(h_phi_Dst_pos_sw, h_phi_Dst_neg_sw, pol, "phi_s", true);
 
   out_hist_fi->Write();
   out_hist_fi->Close();
 
   cout << "Total asymmetry before weighting: " << asym << " +/- " << err << endl;
   cout << "Total asymmetry after weighting: " << asymW << " +/- " << errW << endl;
+  cout << "Total asymmetry after signal weighting: " << asymSW << " +/- " << errSW << endl;
 
   uint64_t end_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
   float elapsed = (end_time - start_time)*0.000001;
