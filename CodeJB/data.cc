@@ -38,7 +38,7 @@ void printdevhists(TH1F *h_pos, TH1F *h_neg, string polarisation, string var, bo
   h_neg->Scale(2.);
   h_neg->Add(h_pos);
   h_pos->Divide(h_neg);
-  title_name = "h_Dst_"+var+"_asym";
+  title_name = "h_Dst_asym"+var;
   h_pos->SetName(title_name.c_str());
   h_pos->Draw();
   h_pos->Draw("hist same");
@@ -151,7 +151,8 @@ void data(string dir, string sample, string pol)
   TH1F *h_Dst_pT_data = new TH1F("h_Dst_pT_data", ";Dst pT/MeV; Event", 180, 2000., 11000.);
   TH1F *h_Dst_pT_data_sw = new TH1F("h_Dst_pT_data_sw", ";Dst pT/MeV; Event", 180, 2000., 11000.);
   TH1F *h_Dst_pT_data_nw = new TH1F("h_Dst_pT_data_nw", ";Dst pT/MeV; Event", 180, 2000., 11000.);
-  TH2F *h_Dst_eta_phi_plane = new TH2F("h_Dst_eta_phi_plane", "; #phi; #eta", 70, -3.5, 3.5, 30, 2.5, 4.0);
+  TH2F *h_Dst_eta_phi_plane_pos = new TH2F("h_Dst_eta_phi_plane_pos", "; #phi; #eta", 70, -3.5, 3.5, 30, 2.5, 4.0);
+  TH2F *h_Dst_eta_phi_plane_neg = new TH2F("h_Dst_eta_phi_plane_neg", "; #phi; #eta", 70, -3.5, 3.5, 30, 2.5, 4.0);
 
 
   TH1F *h_phi_Dst_neg = new TH1F("h_phi_Dst_neg", ";#phi;Events", 70, -3.5, 3.5);
@@ -198,6 +199,7 @@ void data(string dir, string sample, string pol)
       h_phi_Dst_neg_w->Fill(Dst_phi, sData->GetSumOfEventSWeight(i_neg));
       h_phi_Dst_neg_sw->Fill(Dst_phi, sData->GetSWeight(i_neg, "sig_yield"));
       h_phi_Dst_neg->Fill(Dst_phi);
+      h_Dst_eta_phi_plane_neg->Fill(Dst_phi, Dst_eta, sData->GetSWeight(i_neg, "sig_yield"));
       ++i_neg;
     }
     else
@@ -211,10 +213,10 @@ void data(string dir, string sample, string pol)
       h_phi_Dst_pos_w->Fill(Dst_phi, sData2->GetSumOfEventSWeight(i_pos));
       h_phi_Dst_pos_sw->Fill(Dst_phi, sData2->GetSWeight(i_pos, "sig_yield_2"));
       h_phi_Dst_pos->Fill(Dst_phi);
+      h_Dst_eta_phi_plane_pos->Fill(Dst_phi, Dst_eta, sData2->GetSWeight(i_pos, "sig_yield_2"));
       ++i_pos;
     }
     h_Dst_pT_data_nw->Fill(Dst_pT);
-    h_Dst_eta_phi_plane->Fill(Dst_phi, Dst_eta);
   }
 
   double nDataEvents = h_Dst_pT_data->GetSumOfWeights();
@@ -237,7 +239,12 @@ void data(string dir, string sample, string pol)
   if(up) canvas2->SaveAs("output/data/plots/up/MC_data_comp.pdf");
   else canvas2->SaveAs("output/data/plots/down/MC_data_comp.pdf");
 
-  h_Dst_eta_phi_plane->Draw("SURF4 FB");
+
+  h_Dst_eta_phi_plane_pos->Add(h_Dst_eta_phi_plane_neg, -1.);
+  h_Dst_eta_phi_plane_neg->Scale(2.);
+  h_Dst_eta_phi_plane_neg->Add(h_Dst_eta_phi_plane_pos);
+  h_Dst_eta_phi_plane_pos->Divide(h_Dst_eta_phi_plane_neg);
+  h_Dst_eta_phi_plane_pos->Draw("SURF4 FB");
   if(up) canvas2->SaveAs("output/data/plots/up/eta_phi_plane.pdf");
   else canvas2->SaveAs("output/data/plots/down/eta_phi_plane.pdf");
 
@@ -267,6 +274,7 @@ void data(string dir, string sample, string pol)
   printdevhists(h_phi_Dst_pos_w, h_phi_Dst_neg_w, pol, "phi_", true);
   printdevhists(h_phi_Dst_pos_sw, h_phi_Dst_neg_sw, pol, "phi_s", true);
 
+  h_Dst_eta_phi_plane_pos->Write();
   out_hist_fi->Write();
   out_hist_fi->Close();
 
