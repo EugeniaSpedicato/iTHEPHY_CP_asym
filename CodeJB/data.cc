@@ -220,10 +220,10 @@ void data(string dir, string sample, string pol)
   double nDataEvents = h_Dst_pT_data->GetSumOfWeights();
   h_Dst_pT_data->Scale(1./nDataEvents);
   h_Dst_pT_data_nw->Scale(1./h_Dst_pT_data_nw->GetEntries());
-  h_Dst_pT_data_sw->Scale(1./h_Dst_pT_data_sw->GetEntries());
+  h_Dst_pT_data_sw->Scale(1./h_Dst_pT_data_sw->GetSumOfWeights());
   h_Dst_pT_data->SetLineColor(kRed);
   h_Dst_pT_data_nw->SetLineColor(kBlack);
-  h_Dst_pT_data_nw->SetLineColor(kPink);
+  h_Dst_pT_data_sw->SetLineColor(kPink);
 
   TCanvas *canvas2 = new TCanvas();
   h_Dst_pT_MC->Draw();
