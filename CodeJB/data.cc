@@ -61,7 +61,7 @@ void printhists(TH1F *h, bool up)
 
 void data(string dir, string sample, string pol)
 {
-  gstyle->SetOptStat(0);
+  gStyle->SetOptStat(0);
   /*ROOT::EnableThreadSafety();
   const auto nThreads = thread::hardware_concurrency();
   ROOT::EnableImplicitMT(nThreads);*/
@@ -230,8 +230,9 @@ void data(string dir, string sample, string pol)
   double nNegW = h_Dst_DTF_neg_w->GetSumOfWeights();
   double asym = (nPos - nNeg)/(nPos + nNeg);
   double asymW = (nPosW - nNegW)/(nPosW + nNegW);
-  double err = 2. * sqrt(nPos*nNeg/pow(nPos + nNeg, 3.));
-  double errW = 2. * sqrt(nPosW*nNegW/pow(nPosW + nNegW, 3.));
+  double err = 2./pow(nPos + nNeg, 2.)*sqrt((pow(nPos,3.)+pow(nNeg, 3.))/(nPos * nNeg));
+  double errW = 2./pow(nPosW + nNegW, 2.)*sqrt((pow(nPosW,3.)+pow(nNegW, 3.))/(nPosW * nNegW));
+
 
   string output_hist_name;
   output_hist_name = "output/histOut_"+sample+".root";
