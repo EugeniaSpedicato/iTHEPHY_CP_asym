@@ -1,2 +1,1465 @@
 
 Processing data.cc++("$dir", "D02Kmpip_15_Dw", "DOWN")...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+[#1] INFO:Eval -- RooAbsReal::attachToTree(Dst_ID) TTree Int_t branch Dst_ID will be converted to double precision
+[#1] INFO:Eval -- RooTreeDataStore::loadValues(dataset1) Ignored 1943203 out of range events
+[#1] INFO:Eval -- RooAbsReal::attachToTree(Dst_ID) TTree Int_t branch Dst_ID will be converted to double precision
+[#1] INFO:Eval -- RooTreeDataStore::loadValues(dataset2) Ignored 1943470 out of range events
+[#0] ERROR:InputArguments -- RooAbsPdf::createNLL(model_neg) ERROR: unrecognized command: PrintLevel
+[#0] ERROR:InputArguments -- RooAbsPdf::createNLL(model_neg) ERROR: unrecognized command: PrintEvalErrors
+ **********
+ **   13 **MIGRAD        4000           1
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Eval -- RooAbsTestStatistic::initMPMode: started 4 remote server process.
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-2.0298e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2005.02, b=0.681, bkg_yield=10000, c=0.05, mean=2010, sig_yield=250000, sigma=0.3
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2005.02, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.53, N=N=0.006, a=a=2005.02, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.27, N=N=0.006, a=a=2005.02, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.8, N=N=0.006, a=a=2005.02, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.13, N=N=0.006, a=a=2005.02, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N=N=0.006, a=a=2005.02, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.66, N=N=0.006, a=a=2005.02, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.93, N=N=0.006, a=a=2005.02, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.07, N=N=0.006, a=a=2005.02, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.2, N=N=0.006, a=a=2005.02, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.33, N=N=0.006, a=a=2005.02, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.46, N=N=0.006, a=a=2005.02, b=b=0.681, c=c=0.05
+    ... (remaining 3615 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-2.02905e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004.1, b=0.681, bkg_yield=10000, c=0.05, mean=2010, sig_yield=250000, sigma=0.3
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004.1, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.07, N=N=0.006, a=a=2004.1, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004.1, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.07, N=N=0.006, a=a=2004.1, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004.1, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.07, N=N=0.006, a=a=2004.1, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004.1, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.07, N=N=0.006, a=a=2004.1, b=b=0.681, c=c=0.05
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-2.02905e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004.01, b=0.681, bkg_yield=10000, c=0.05, mean=2010, sig_yield=250000, sigma=0.3
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004.01, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004.01, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004.01, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004.01, b=b=0.681, c=c=0.05
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=0.681, bkg_yield=10000, c=0.05, mean=2010, sig_yield=250000, sigma=0.3
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=0.681, bkg_yield=10000, c=0.05, mean=2010, sig_yield=250000, sigma=0.3
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=0.681, bkg_yield=10000, c=0.05, mean=2010, sig_yield=250000, sigma=0.3
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=0.681, bkg_yield=10000, c=0.05, mean=2010, sig_yield=250000, sigma=0.3
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=0.681, bkg_yield=10000, c=0.05, mean=2010, sig_yield=250000, sigma=0.3
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=0.681, bkg_yield=10000, c=0.05, mean=2010, sig_yield=250000, sigma=0.3
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=0.681, bkg_yield=10000, c=0.05, mean=2010, sig_yield=250000, sigma=0.3
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=0.681, bkg_yield=10000, c=0.05, mean=2010, sig_yield=250000, sigma=0.3
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=0.681, bkg_yield=10000, c=0.05, mean=2010, sig_yield=250000, sigma=0.3
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=0.681, bkg_yield=10000, c=0.05, mean=2010, sig_yield=250000, sigma=0.3
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=0.681, bkg_yield=10000, c=0.05, mean=2010, sig_yield=250000, sigma=0.3
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=0.681, bkg_yield=10000, c=0.05, mean=2010, sig_yield=250000, sigma=0.3
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=0.681, bkg_yield=10000, c=0.05, mean=2010, sig_yield=250000, sigma=0.3
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=0.681, bkg_yield=10000, c=0.05, mean=2010, sig_yield=250000, sigma=0.3
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=0.681, bkg_yield=10000, c=0.05, mean=2010, sig_yield=250000, sigma=0.3
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=0.681, bkg_yield=10000, c=0.05, mean=2010, sig_yield=250000, sigma=0.3
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=0.681, bkg_yield=10000, c=0.05, mean=2010, sig_yield=250000, sigma=0.3
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=0.681, bkg_yield=10000, c=0.05, mean=2010, sig_yield=250000, sigma=0.3
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.681, c=c=0.05
+
+ FCN=-2.0298e+07 FROM MIGRAD    STATUS=INITIATE      447 CALLS         448 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  N            6.00000e-03   1.00000e-03   0.00000e+00   0.00000e+00
+   2  a            2.00400e+03   1.00000e+00   0.00000e+00   9.31588e+12
+   3  b            6.81000e-01   3.40500e-01   0.00000e+00  -1.42933e+05
+   4  bkg_yield    1.00000e+04   5.00000e+03   0.00000e+00  -1.58846e+06
+   5  c            5.00000e-02   2.50000e-02   0.00000e+00   6.12659e+04
+   6  mean         2.01000e+03   4.00000e-01   0.00000e+00  -8.54304e+06
+   7  sig_yield    2.50000e+05   1.00000e+05   0.00000e+00  -2.52281e+06
+   8  sigma        3.00000e-01   1.00000e-01   0.00000e+00  -1.20566e+06
+                               ERR DEF= 0.5
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=2.1022, bkg_yield=118926, c=0.0178218, mean=2010.4, sig_yield=488399, sigma=0.435797
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.1022, c=c=0.0178218
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.1022, c=c=0.0178218
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.1022, c=c=0.0178218
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.1022, c=c=0.0178218
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=0.609375, bkg_yield=414004, c=0.0207726, mean=2010.44, sig_yield=958108, sigma=0.647545
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.609375, c=c=0.0207726
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.609375, c=c=0.0207726
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.609375, c=c=0.0207726
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.609375, c=c=0.0207726
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=1.084, bkg_yield=432414, c=0.0219982, mean=2010.27, sig_yield=974320, sigma=0.634914
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.084, c=c=0.0219982
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.084, c=c=0.0219982
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.084, c=c=0.0219982
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.084, c=c=0.0219982
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=1.084, bkg_yield=432414, c=0.0219982, mean=2010.27, sig_yield=974320, sigma=0.634914
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.084, c=c=0.0219982
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.084, c=c=0.0219982
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.084, c=c=0.0219982
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.084, c=c=0.0219982
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=0.581688, bkg_yield=442618, c=0.0340382, mean=2010.25, sig_yield=983952, sigma=0.617642
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.581688, c=c=0.0340382
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.581688, c=c=0.0340382
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.581688, c=c=0.0340382
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=0.581688, c=c=0.0340382
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=1.48251, bkg_yield=452412, c=0.0583413, mean=2010.27, sig_yield=998555, sigma=0.42472
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.48251, c=c=0.0583413
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.48251, c=c=0.0583413
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.48251, c=c=0.0583413
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.48251, c=c=0.0583413
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=1.48251, bkg_yield=452412, c=0.0583413, mean=2010.27, sig_yield=998555, sigma=0.42472
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.48251, c=c=0.0583413
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.48251, c=c=0.0583413
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.48251, c=c=0.0583413
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.48251, c=c=0.0583413
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=1.547, bkg_yield=453645, c=0.0640867, mean=2010.27, sig_yield=999236, sigma=0.403401
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.547, c=c=0.0640867
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.547, c=c=0.0640867
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.547, c=c=0.0640867
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.547, c=c=0.0640867
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=1.34993, bkg_yield=452357, c=0.0983751, mean=2010.27, sig_yield=999895, sigma=0.336626
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.34993, c=c=0.0983751
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.34993, c=c=0.0983751
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.34993, c=c=0.0983751
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.34993, c=c=0.0983751
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=1.34993, bkg_yield=452357, c=0.0983751, mean=2010.27, sig_yield=999895, sigma=0.336626
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.34993, c=c=0.0983751
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.34993, c=c=0.0983751
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.34993, c=c=0.0983751
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.34993, c=c=0.0983751
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=1.28928, bkg_yield=456252, c=0.147058, mean=2010.27, sig_yield=999968, sigma=0.378809
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.28928, c=c=0.147058
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.28928, c=c=0.147058
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.28928, c=c=0.147058
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.28928, c=c=0.147058
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=1.4796, bkg_yield=456614, c=0.161065, mean=2010.27, sig_yield=999957, sigma=0.381377
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.4796, c=c=0.161065
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.4796, c=c=0.161065
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.4796, c=c=0.161065
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.4796, c=c=0.161065
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=1.4796, bkg_yield=456614, c=0.161065, mean=2010.27, sig_yield=999957, sigma=0.381377
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.4796, c=c=0.161065
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.4796, c=c=0.161065
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.4796, c=c=0.161065
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.4796, c=c=0.161065
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=1.48804, bkg_yield=456634, c=0.161705, mean=2010.27, sig_yield=999957, sigma=0.381474
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.48804, c=c=0.161705
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.48804, c=c=0.161705
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.48804, c=c=0.161705
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.48804, c=c=0.161705
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=2.0028, bkg_yield=459582, c=0.227382, mean=2010.27, sig_yield=1e+06, sigma=0.372541
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.0028, c=c=0.227382
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.0028, c=c=0.227382
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.0028, c=c=0.227382
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.0028, c=c=0.227382
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=2.0028, bkg_yield=459582, c=0.227382, mean=2010.27, sig_yield=1e+06, sigma=0.372541
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.0028, c=c=0.227382
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.0028, c=c=0.227382
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.0028, c=c=0.227382
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.0028, c=c=0.227382
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=2.07485, bkg_yield=461238, c=0.238126, mean=2010.27, sig_yield=999999, sigma=0.38311
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.07485, c=c=0.238126
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.07485, c=c=0.238126
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.07485, c=c=0.238126
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.07485, c=c=0.238126
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=1.97155, bkg_yield=463467, c=0.235788, mean=2010.27, sig_yield=1e+06, sigma=0.379988
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.97155, c=c=0.235788
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.97155, c=c=0.235788
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.97155, c=c=0.235788
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.97155, c=c=0.235788
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=1.97155, bkg_yield=463467, c=0.235788, mean=2010.27, sig_yield=1e+06, sigma=0.379988
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.97155, c=c=0.235788
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.97155, c=c=0.235788
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.97155, c=c=0.235788
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=1.97155, c=c=0.235788
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=2.03221, bkg_yield=466707, c=0.241858, mean=2010.27, sig_yield=999988, sigma=0.374843
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.03221, c=c=0.241858
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.03221, c=c=0.241858
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.03221, c=c=0.241858
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.03221, c=c=0.241858
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=2.12772, bkg_yield=469765, c=0.258325, mean=2010.27, sig_yield=999977, sigma=0.374313
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.12772, c=c=0.258325
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.12772, c=c=0.258325
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.12772, c=c=0.258325
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.12772, c=c=0.258325
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=2.12772, bkg_yield=469765, c=0.258325, mean=2010.27, sig_yield=999977, sigma=0.374313
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.12772, c=c=0.258325
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.12772, c=c=0.258325
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.12772, c=c=0.258325
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.12772, c=c=0.258325
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=2.14131, bkg_yield=470692, c=0.260682, mean=2010.27, sig_yield=999977, sigma=0.374648
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.14131, c=c=0.260682
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.14131, c=c=0.260682
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.14131, c=c=0.260682
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.14131, c=c=0.260682
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=2.20139, bkg_yield=484777, c=0.271816, mean=2010.27, sig_yield=999990, sigma=0.379715
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.20139, c=c=0.271816
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.20139, c=c=0.271816
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.20139, c=c=0.271816
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.20139, c=c=0.271816
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=2.20139, bkg_yield=484777, c=0.271816, mean=2010.27, sig_yield=999990, sigma=0.379715
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.20139, c=c=0.271816
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.20139, c=c=0.271816
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.20139, c=c=0.271816
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.20139, c=c=0.271816
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=2.2377, bkg_yield=497910, c=0.278347, mean=2010.27, sig_yield=999999, sigma=0.379174
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.2377, c=c=0.278347
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.2377, c=c=0.278347
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.2377, c=c=0.278347
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.2377, c=c=0.278347
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=2.11631, bkg_yield=498120, c=0.258088, mean=2010.27, sig_yield=999999, sigma=0.37105
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.11631, c=c=0.258088
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.11631, c=c=0.258088
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.11631, c=c=0.258088
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.11631, c=c=0.258088
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=2.11631, bkg_yield=498120, c=0.258088, mean=2010.27, sig_yield=999999, sigma=0.37105
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.11631, c=c=0.258088
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.11631, c=c=0.258088
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.11631, c=c=0.258088
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.11631, c=c=0.258088
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=2.11018, bkg_yield=498323, c=0.25711, mean=2010.27, sig_yield=999999, sigma=0.370706
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.11018, c=c=0.25711
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.11018, c=c=0.25711
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.11018, c=c=0.25711
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.11018, c=c=0.25711
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=2.10134, bkg_yield=498374, c=0.25622, mean=2010.27, sig_yield=1e+06, sigma=0.371998
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.10134, c=c=0.25622
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.10134, c=c=0.25622
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.10134, c=c=0.25622
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.10134, c=c=0.25622
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=2.10134, bkg_yield=498374, c=0.25622, mean=2010.27, sig_yield=1e+06, sigma=0.371998
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.10134, c=c=0.25622
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.10134, c=c=0.25622
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.10134, c=c=0.25622
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.10134, c=c=0.25622
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=2.0954, bkg_yield=498407, c=0.255604, mean=2010.27, sig_yield=1e+06, sigma=0.37275
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.0954, c=c=0.255604
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.0954, c=c=0.255604
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.0954, c=c=0.255604
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.0954, c=c=0.255604
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=2.09623, bkg_yield=498428, c=0.2558, mean=2010.27, sig_yield=1e+06, sigma=0.372745
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.09623, c=c=0.2558
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.09623, c=c=0.2558
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.09623, c=c=0.2558
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.09623, c=c=0.2558
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=2.09623, bkg_yield=498428, c=0.2558, mean=2010.27, sig_yield=1e+06, sigma=0.372745
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.09623, c=c=0.2558
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.09623, c=c=0.2558
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.09623, c=c=0.2558
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.09623, c=c=0.2558
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.85091e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004, b=2.09614, bkg_yield=498429, c=0.2558, mean=2010.27, sig_yield=1e+06, sigma=0.372737
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.09614, c=c=0.2558
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.09614, c=c=0.2558
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.09614, c=c=0.2558
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004, b=b=2.09614, c=c=0.2558
+
+ MINUIT WARNING IN MIGRAD  
+ ============== Negative diagonal element 2 in Error Matrix
+ MINUIT WARNING IN MIGRAD  
+ ============== Negative diagonal element 4 in Error Matrix
+ MINUIT WARNING IN MIGRAD  
+ ============== 1.00001 added to diagonal of error matrix
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.62072e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004.86, b=2.65343, bkg_yield=375612, c=0.0186621, mean=2011.06, sig_yield=992362, sigma=0.202257
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004.86, b=b=2.65343, c=c=0.0186621
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.53, N=N=0.006, a=a=2004.86, b=b=2.65343, c=c=0.0186621
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.85, N=N=0.006, a=a=2004.86, b=b=2.65343, c=c=0.0186621
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.57, N=N=0.006, a=a=2004.86, b=b=2.65343, c=c=0.0186621
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.8, N=N=0.006, a=a=2004.86, b=b=2.65343, c=c=0.0186621
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.67, N=N=0.006, a=a=2004.86, b=b=2.65343, c=c=0.0186621
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.58, N=N=0.006, a=a=2004.86, b=b=2.65343, c=c=0.0186621
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.68, N=N=0.006, a=a=2004.86, b=b=2.65343, c=c=0.0186621
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.6, N=N=0.006, a=a=2004.86, b=b=2.65343, c=c=0.0186621
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.63, N=N=0.006, a=a=2004.86, b=b=2.65343, c=c=0.0186621
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.63, N=N=0.006, a=a=2004.86, b=b=2.65343, c=c=0.0186621
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.74, N=N=0.006, a=a=2004.86, b=b=2.65343, c=c=0.0186621
+    ... (remaining 2109 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.62072e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2005.3, b=3.36641, bkg_yield=56788.3, c=0.00905875, mean=2008.59, sig_yield=994824, sigma=0.984986
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2005.3, b=b=3.36641, c=c=0.00905875
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.06, N=N=0.006, a=a=2005.3, b=b=3.36641, c=c=0.00905875
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.53, N=N=0.006, a=a=2005.3, b=b=3.36641, c=c=0.00905875
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.85, N=N=0.006, a=a=2005.3, b=b=3.36641, c=c=0.00905875
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.05, N=N=0.006, a=a=2005.3, b=b=3.36641, c=c=0.00905875
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.22, N=N=0.006, a=a=2005.3, b=b=3.36641, c=c=0.00905875
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.57, N=N=0.006, a=a=2005.3, b=b=3.36641, c=c=0.00905875
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.94, N=N=0.006, a=a=2005.3, b=b=3.36641, c=c=0.00905875
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.11, N=N=0.006, a=a=2005.3, b=b=3.36641, c=c=0.00905875
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.8, N=N=0.006, a=a=2005.3, b=b=3.36641, c=c=0.00905875
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.67, N=N=0.006, a=a=2005.3, b=b=3.36641, c=c=0.00905875
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.28, N=N=0.006, a=a=2005.3, b=b=3.36641, c=c=0.00905875
+    ... (remaining 6293 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.62072e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2005.45, b=7.86177, bkg_yield=162238, c=0.247146, mean=2008.24, sig_yield=80884.4, sigma=0.23808
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2005.45, b=b=7.86177, c=c=0.247146
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.06, N=N=0.006, a=a=2005.45, b=b=7.86177, c=c=0.247146
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.53, N=N=0.006, a=a=2005.45, b=b=7.86177, c=c=0.247146
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.85, N=N=0.006, a=a=2005.45, b=b=7.86177, c=c=0.247146
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.05, N=N=0.006, a=a=2005.45, b=b=7.86177, c=c=0.247146
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.39, N=N=0.006, a=a=2005.45, b=b=7.86177, c=c=0.247146
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.22, N=N=0.006, a=a=2005.45, b=b=7.86177, c=c=0.247146
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.41, N=N=0.006, a=a=2005.45, b=b=7.86177, c=c=0.247146
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.44, N=N=0.006, a=a=2005.45, b=b=7.86177, c=c=0.247146
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.57, N=N=0.006, a=a=2005.45, b=b=7.86177, c=c=0.247146
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.94, N=N=0.006, a=a=2005.45, b=b=7.86177, c=c=0.247146
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.11, N=N=0.006, a=a=2005.45, b=b=7.86177, c=c=0.247146
+    ... (remaining 8104 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.62072e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004.28, b=3.80248, bkg_yield=368196, c=0.106004, mean=2009.12, sig_yield=992006, sigma=0.168469
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004.28, b=b=3.80248, c=c=0.106004
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004.28, b=b=3.80248, c=c=0.106004
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004.28, b=b=3.80248, c=c=0.106004
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004.28, b=b=3.80248, c=c=0.106004
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.58145e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2005.8, b=4.45837, bkg_yield=6025.97, c=0.130961, mean=2008.65, sig_yield=476733, sigma=0.10323
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.07, N=N=0.006, a=a=2005.8, b=b=4.45837, c=c=0.130961
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.96, N=N=0.006, a=a=2005.8, b=b=4.45837, c=c=0.130961
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.48, N=N=0.006, a=a=2005.8, b=b=4.45837, c=c=0.130961
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.35, N=N=0.006, a=a=2005.8, b=b=4.45837, c=c=0.130961
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.4, N=N=0.006, a=a=2005.8, b=b=4.45837, c=c=0.130961
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.89, N=N=0.006, a=a=2005.8, b=b=4.45837, c=c=0.130961
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.2, N=N=0.006, a=a=2005.8, b=b=4.45837, c=c=0.130961
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.52, N=N=0.006, a=a=2005.8, b=b=4.45837, c=c=0.130961
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.75, N=N=0.006, a=a=2005.8, b=b=4.45837, c=c=0.130961
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.79, N=N=0.006, a=a=2005.8, b=b=4.45837, c=c=0.130961
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.01, N=N=0.006, a=a=2005.8, b=b=4.45837, c=c=0.130961
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.17, N=N=0.006, a=a=2005.8, b=b=4.45837, c=c=0.130961
+    ... (remaining 8182 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.58145e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2008.39, b=9.00622, bkg_yield=22850, c=0.481595, mean=2010.33, sig_yield=238610, sigma=0.990962
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.75, N=N=0.006, a=a=2008.39, b=b=9.00622, c=c=0.481595
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.09, N=N=0.006, a=a=2008.39, b=b=9.00622, c=c=0.481595
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.05, N=N=0.006, a=a=2008.39, b=b=9.00622, c=c=0.481595
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.65, N=N=0.006, a=a=2008.39, b=b=9.00622, c=c=0.481595
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.87, N=N=0.006, a=a=2008.39, b=b=9.00622, c=c=0.481595
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.68, N=N=0.006, a=a=2008.39, b=b=9.00622, c=c=0.481595
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.93, N=N=0.006, a=a=2008.39, b=b=9.00622, c=c=0.481595
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.24, N=N=0.006, a=a=2008.39, b=b=9.00622, c=c=0.481595
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.51, N=N=0.006, a=a=2008.39, b=b=9.00622, c=c=0.481595
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.81, N=N=0.006, a=a=2008.39, b=b=9.00622, c=c=0.481595
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.69, N=N=0.006, a=a=2008.39, b=b=9.00622, c=c=0.481595
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.6, N=N=0.006, a=a=2008.39, b=b=9.00622, c=c=0.481595
+    ... (remaining 8182 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.58145e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2006.38, b=7.83448, bkg_yield=378007, c=0.441847, mean=2008.05, sig_yield=351.415, sigma=0.385202
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.22, N=N=0.006, a=a=2006.38, b=b=7.83448, c=c=0.441847
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.39, N=N=0.006, a=a=2006.38, b=b=7.83448, c=c=0.441847
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.25, N=N=0.006, a=a=2006.38, b=b=7.83448, c=c=0.441847
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.37, N=N=0.006, a=a=2006.38, b=b=7.83448, c=c=0.441847
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.89, N=N=0.006, a=a=2006.38, b=b=7.83448, c=c=0.441847
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.04, N=N=0.006, a=a=2006.38, b=b=7.83448, c=c=0.441847
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.81, N=N=0.006, a=a=2006.38, b=b=7.83448, c=c=0.441847
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.04, N=N=0.006, a=a=2006.38, b=b=7.83448, c=c=0.441847
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.06, N=N=0.006, a=a=2006.38, b=b=7.83448, c=c=0.441847
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.12, N=N=0.006, a=a=2006.38, b=b=7.83448, c=c=0.441847
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.09, N=N=0.006, a=a=2006.38, b=b=7.83448, c=c=0.441847
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.42, N=N=0.006, a=a=2006.38, b=b=7.83448, c=c=0.441847
+    ... (remaining 8182 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.58145e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2009.98, b=0.477416, bkg_yield=492205, c=0.489161, mean=2010.25, sig_yield=391165, sigma=0.0869142
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.73, N=N=0.006, a=a=2009.98, b=b=0.477416, c=c=0.489161
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.92, N=N=0.006, a=a=2009.98, b=b=0.477416, c=c=0.489161
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.06, N=N=0.006, a=a=2009.98, b=b=0.477416, c=c=0.489161
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.91, N=N=0.006, a=a=2009.98, b=b=0.477416, c=c=0.489161
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.7, N=N=0.006, a=a=2009.98, b=b=0.477416, c=c=0.489161
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.43, N=N=0.006, a=a=2009.98, b=b=0.477416, c=c=0.489161
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.77, N=N=0.006, a=a=2009.98, b=b=0.477416, c=c=0.489161
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.81, N=N=0.006, a=a=2009.98, b=b=0.477416, c=c=0.489161
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.92, N=N=0.006, a=a=2009.98, b=b=0.477416, c=c=0.489161
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.71, N=N=0.006, a=a=2009.98, b=b=0.477416, c=c=0.489161
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.86, N=N=0.006, a=a=2009.98, b=b=0.477416, c=c=0.489161
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.76, N=N=0.006, a=a=2009.98, b=b=0.477416, c=c=0.489161
+    ... (remaining 8182 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.58145e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004.31, b=2.00431, bkg_yield=278863, c=0.269625, mean=2010.27, sig_yield=929202, sigma=0.353464
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004.31, b=b=2.00431, c=c=0.269625
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004.31, b=b=2.00431, c=c=0.269625
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004.31, b=b=2.00431, c=c=0.269625
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004.31, b=b=2.00431, c=c=0.269625
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.58145e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2008.33, b=0.165968, bkg_yield=256822, c=0.499357, mean=2010.26, sig_yield=7798.94, sigma=0.164845
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.22, N=N=0.006, a=a=2008.33, b=b=0.165968, c=c=0.499357
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.18, N=N=0.006, a=a=2008.33, b=b=0.165968, c=c=0.499357
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.82, N=N=0.006, a=a=2008.33, b=b=0.165968, c=c=0.499357
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.81, N=N=0.006, a=a=2008.33, b=b=0.165968, c=c=0.499357
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.79, N=N=0.006, a=a=2008.33, b=b=0.165968, c=c=0.499357
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.81, N=N=0.006, a=a=2008.33, b=b=0.165968, c=c=0.499357
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.35, N=N=0.006, a=a=2008.33, b=b=0.165968, c=c=0.499357
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.39, N=N=0.006, a=a=2008.33, b=b=0.165968, c=c=0.499357
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.37, N=N=0.006, a=a=2008.33, b=b=0.165968, c=c=0.499357
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.49, N=N=0.006, a=a=2008.33, b=b=0.165968, c=c=0.499357
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.89, N=N=0.006, a=a=2008.33, b=b=0.165968, c=c=0.499357
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.97, N=N=0.006, a=a=2008.33, b=b=0.165968, c=c=0.499357
+    ... (remaining 8182 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.58145e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004.54, b=1.96719, bkg_yield=389918, c=0.272533, mean=2010.27, sig_yield=419384, sigma=0.359024
+PID2608/RooRealMPFE::nll_model_neg_dataset1_7f5c80608c70_MPFE3[ arg=nll_model_neg_dataset1_GOF3 vars=(N,a,b,bkg_yield,c,mean,sig_yield,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006, a=a=2004.54, b=b=1.96719, c=c=0.272533
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.53, N=N=0.006, a=a=2004.54, b=b=1.96719, c=c=0.272533
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.27, N=N=0.006, a=a=2004.54, b=b=1.96719, c=c=0.272533
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.13, N=N=0.006, a=a=2004.54, b=b=1.96719, c=c=0.272533
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N=N=0.006, a=a=2004.54, b=b=1.96719, c=c=0.272533
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.53, N=N=0.006, a=a=2004.54, b=b=1.96719, c=c=0.272533
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.54, N=N=0.006, a=a=2004.54, b=b=1.96719, c=c=0.272533
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.51, N=N=0.006, a=a=2004.54, b=b=1.96719, c=c=0.272533
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.52, N=N=0.006, a=a=2004.54, b=b=1.96719, c=c=0.272533
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.52, N=N=0.006, a=a=2004.54, b=b=1.96719, c=c=0.272533
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.51, N=N=0.006, a=a=2004.54, b=b=1.96719, c=c=0.272533
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.52, N=N=0.006, a=a=2004.54, b=b=1.96719, c=c=0.272533
+    ... (remaining 174 messages suppressed)
+
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ MACHINE ACCURACY LIMITS FURTHER IMPROVEMENT.
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ FCN=-2.33511e+07 FROM MIGRAD    STATUS=CONVERGED    1408 CALLS        1409 TOTAL
+                     EDM=0.00292055    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   0.0 per cent
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  N            6.00000e-03   7.63469e-03  -0.00000e+00   0.00000e+00
+   2  a            2.00316e+03   4.87810e-02  -0.00000e+00   1.79445e+01
+   3  b            2.94573e+00   4.98865e-02   0.00000e+00   1.41707e+01
+   4  bkg_yield    5.00000e+05   4.48954e+01  -0.00000e+00** at limit **
+   5  c            3.18845e-01   3.44979e-03   0.00000e+00  -1.76733e+00
+   6  mean         2.01027e+03   2.47011e-04  -0.00000e+00   1.17900e+02
+   7  sig_yield    1.00000e+06   1.09297e+00   0.00000e+00** at limit **
+   8  sigma        3.71861e-01   4.46598e-04  -0.00000e+00   4.35144e+00
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  8    ERR DEF=0.5
+  3.600e-05  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
+  0.000e+00  2.380e-03 -2.353e-03  1.896e-03 -1.535e-04  6.323e-07 -6.597e-05 -3.130e-07 
+  0.000e+00 -2.353e-03  2.489e-03 -2.825e-03  1.691e-04 -7.156e-07  5.110e-05  1.978e-07 
+  0.000e+00  1.896e-03 -2.825e-03  2.630e+00 -2.553e-04  1.251e-06 -3.419e-03  1.424e-05 
+  0.000e+00 -1.535e-04  1.691e-04 -2.553e-04  1.190e-05 -4.596e-08  1.890e-06 -1.059e-08 
+  0.000e+00  6.323e-07 -7.156e-07  1.251e-06 -4.596e-08  6.101e-08  5.392e-07 -1.559e-09 
+  0.000e+00 -6.597e-05  5.110e-05 -3.419e-03  1.890e-06  5.392e-07  3.825e-03  7.502e-07 
+  0.000e+00 -3.130e-07  1.978e-07  1.424e-05 -1.059e-08 -1.559e-09  7.502e-07  1.995e-07 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6      7      8
+        1  0.00000   1.000  0.000  0.000  0.000  0.000  0.000  0.000  0.000
+        2  0.98772   0.000  1.000 -0.967  0.024 -0.912  0.052 -0.022 -0.014
+        3  0.99750   0.000 -0.967  1.000 -0.035  0.983 -0.058  0.017  0.009
+        4  0.08201   0.000  0.024 -0.035  1.000 -0.046  0.003 -0.034  0.020
+        5  0.99359   0.000 -0.912  0.983 -0.046  1.000 -0.054  0.009 -0.007
+        6  0.08496   0.000  0.052 -0.058  0.003 -0.054  1.000  0.035 -0.014
+        7  0.07323   0.000 -0.022  0.017 -0.034  0.009  0.035  1.000  0.027
+        8  0.11402   0.000 -0.014  0.009  0.020 -0.007 -0.014  0.027  1.000
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Minization --  The following expressions have been identified as constant and will be precalculated and cached: (sig,arg)
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(model_neg) Calculating sum-of-weights-squared correction matrix for covariance matrix
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: deactivating const optimization
+[#1] INFO:InputArguments -- Printing Yields
+RooArgList:: = (sig_yield,bkg_yield)
+[#1] INFO:InputArguments -- yield in pdf: sig_yield 1e+06
+[#1] INFO:InputArguments -- yield in pdf: bkg_yield 500000
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Eval -- Checking Likelihood normalization:  
+[#1] INFO:Eval -- Yield of specie  Sum of Row in Matrix   Norm
+[#1] INFO:Eval -- 1e+06 642469 1.43894
+[#1] INFO:Eval -- 500000 570356 1.00907
+[#1] INFO:Eval -- Calculating sWeight
+[#0] ERROR:InputArguments -- RooAbsPdf::createNLL(model_pos) ERROR: unrecognized command: PrintLevel
+[#0] ERROR:InputArguments -- RooAbsPdf::createNLL(model_pos) ERROR: unrecognized command: PrintEvalErrors
+ **********
+ **   13 **MIGRAD        4000           1
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Eval -- RooAbsTestStatistic::initMPMode: started 4 remote server process.
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
+ FCN=-2.09978e+07 FROM MIGRAD    STATUS=INITIATE      433 CALLS         434 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  N            6.00000e-03   7.63469e-03   0.00000e+00   0.00000e+00
+   2  a            2.00316e+03   4.87810e-02   0.00000e+00  -7.59761e+04
+   3  b            2.94573e+00   4.98865e-02   0.00000e+00  -2.15643e+05
+   4  bkg_yield_2   1.00000e+04   5.00000e+03   0.00000e+00  -1.39601e+06
+   5  c            3.18845e-01   3.44979e-03   0.00000e+00   1.10271e+05
+   6  mean         2.01027e+03   2.47011e-04   0.00000e+00  -1.98600e+05
+   7  sig_yield_2   2.50000e+05   1.00000e+05   0.00000e+00  -2.56997e+06
+   8  sigma        3.71861e-01   4.46598e-04   0.00000e+00  -3.22432e+05
+                               ERR DEF= 0.5
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-2.02845e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2008.56, b=7.25611, bkg_yield_2=488655, c=0.0503402, mean=2010.28, sig_yield_2=803718, sigma=0.526952
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.33, N=N=0.006 +/- 0.00763469, a=a=2008.56 +/- 0.048781, b=b=7.25611 +/- 0.0498865, c=c=0.0503402 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.45, N=N=0.006 +/- 0.00763469, a=a=2008.56 +/- 0.048781, b=b=7.25611 +/- 0.0498865, c=c=0.0503402 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.43, N=N=0.006 +/- 0.00763469, a=a=2008.56 +/- 0.048781, b=b=7.25611 +/- 0.0498865, c=c=0.0503402 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.97, N=N=0.006 +/- 0.00763469, a=a=2008.56 +/- 0.048781, b=b=7.25611 +/- 0.0498865, c=c=0.0503402 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.5, N=N=0.006 +/- 0.00763469, a=a=2008.56 +/- 0.048781, b=b=7.25611 +/- 0.0498865, c=c=0.0503402 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.88, N=N=0.006 +/- 0.00763469, a=a=2008.56 +/- 0.048781, b=b=7.25611 +/- 0.0498865, c=c=0.0503402 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.69, N=N=0.006 +/- 0.00763469, a=a=2008.56 +/- 0.048781, b=b=7.25611 +/- 0.0498865, c=c=0.0503402 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.89, N=N=0.006 +/- 0.00763469, a=a=2008.56 +/- 0.048781, b=b=7.25611 +/- 0.0498865, c=c=0.0503402 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.61, N=N=0.006 +/- 0.00763469, a=a=2008.56 +/- 0.048781, b=b=7.25611 +/- 0.0498865, c=c=0.0503402 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.22, N=N=0.006 +/- 0.00763469, a=a=2008.56 +/- 0.048781, b=b=7.25611 +/- 0.0498865, c=c=0.0503402 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.5, N=N=0.006 +/- 0.00763469, a=a=2008.56 +/- 0.048781, b=b=7.25611 +/- 0.0498865, c=c=0.0503402 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.12, N=N=0.006 +/- 0.00763469, a=a=2008.56 +/- 0.048781, b=b=7.25611 +/- 0.0498865, c=c=0.0503402 +/- 0.00344979
+    ... (remaining 8182 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-2.02845e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2008.89, b=6.50964, bkg_yield_2=490958, c=0.00468612, mean=2010.28, sig_yield_2=712891, sigma=0.49862
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.24, N=N=0.006 +/- 0.00763469, a=a=2008.89 +/- 0.048781, b=b=6.50964 +/- 0.0498865, c=c=0.00468612 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.05, N=N=0.006 +/- 0.00763469, a=a=2008.89 +/- 0.048781, b=b=6.50964 +/- 0.0498865, c=c=0.00468612 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.87, N=N=0.006 +/- 0.00763469, a=a=2008.89 +/- 0.048781, b=b=6.50964 +/- 0.0498865, c=c=0.00468612 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.31, N=N=0.006 +/- 0.00763469, a=a=2008.89 +/- 0.048781, b=b=6.50964 +/- 0.0498865, c=c=0.00468612 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.74, N=N=0.006 +/- 0.00763469, a=a=2008.89 +/- 0.048781, b=b=6.50964 +/- 0.0498865, c=c=0.00468612 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.23, N=N=0.006 +/- 0.00763469, a=a=2008.89 +/- 0.048781, b=b=6.50964 +/- 0.0498865, c=c=0.00468612 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.98, N=N=0.006 +/- 0.00763469, a=a=2008.89 +/- 0.048781, b=b=6.50964 +/- 0.0498865, c=c=0.00468612 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.63, N=N=0.006 +/- 0.00763469, a=a=2008.89 +/- 0.048781, b=b=6.50964 +/- 0.0498865, c=c=0.00468612 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.72, N=N=0.006 +/- 0.00763469, a=a=2008.89 +/- 0.048781, b=b=6.50964 +/- 0.0498865, c=c=0.00468612 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.59, N=N=0.006 +/- 0.00763469, a=a=2008.89 +/- 0.048781, b=b=6.50964 +/- 0.0498865, c=c=0.00468612 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.36, N=N=0.006 +/- 0.00763469, a=a=2008.89 +/- 0.048781, b=b=6.50964 +/- 0.0498865, c=c=0.00468612 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.82, N=N=0.006 +/- 0.00763469, a=a=2008.89 +/- 0.048781, b=b=6.50964 +/- 0.0498865, c=c=0.00468612 +/- 0.00344979
+    ... (remaining 8182 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-2.02845e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2005.81, b=6.12043, bkg_yield_2=462362, c=0.000127959, mean=2010.27, sig_yield_2=663593, sigma=0.48445
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.41, N=N=0.006 +/- 0.00763469, a=a=2005.81 +/- 0.048781, b=b=6.12043 +/- 0.0498865, c=c=0.000127959 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.86, N=N=0.006 +/- 0.00763469, a=a=2005.81 +/- 0.048781, b=b=6.12043 +/- 0.0498865, c=c=0.000127959 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.05, N=N=0.006 +/- 0.00763469, a=a=2005.81 +/- 0.048781, b=b=6.12043 +/- 0.0498865, c=c=0.000127959 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.8, N=N=0.006 +/- 0.00763469, a=a=2005.81 +/- 0.048781, b=b=6.12043 +/- 0.0498865, c=c=0.000127959 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.2, N=N=0.006 +/- 0.00763469, a=a=2005.81 +/- 0.048781, b=b=6.12043 +/- 0.0498865, c=c=0.000127959 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.55, N=N=0.006 +/- 0.00763469, a=a=2005.81 +/- 0.048781, b=b=6.12043 +/- 0.0498865, c=c=0.000127959 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.09, N=N=0.006 +/- 0.00763469, a=a=2005.81 +/- 0.048781, b=b=6.12043 +/- 0.0498865, c=c=0.000127959 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.23, N=N=0.006 +/- 0.00763469, a=a=2005.81 +/- 0.048781, b=b=6.12043 +/- 0.0498865, c=c=0.000127959 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.68, N=N=0.006 +/- 0.00763469, a=a=2005.81 +/- 0.048781, b=b=6.12043 +/- 0.0498865, c=c=0.000127959 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.87, N=N=0.006 +/- 0.00763469, a=a=2005.81 +/- 0.048781, b=b=6.12043 +/- 0.0498865, c=c=0.000127959 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.3, N=N=0.006 +/- 0.00763469, a=a=2005.81 +/- 0.048781, b=b=6.12043 +/- 0.0498865, c=c=0.000127959 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.34, N=N=0.006 +/- 0.00763469, a=a=2005.81 +/- 0.048781, b=b=6.12043 +/- 0.0498865, c=c=0.000127959 +/- 0.00344979
+    ... (remaining 8182 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-2.02845e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2008.95, b=4.29028, bkg_yield_2=408242, c=0.0369041, mean=2010.27, sig_yield_2=670564, sigma=0.465862
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.99, N=N=0.006 +/- 0.00763469, a=a=2008.95 +/- 0.048781, b=b=4.29028 +/- 0.0498865, c=c=0.0369041 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.97, N=N=0.006 +/- 0.00763469, a=a=2008.95 +/- 0.048781, b=b=4.29028 +/- 0.0498865, c=c=0.0369041 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.98, N=N=0.006 +/- 0.00763469, a=a=2008.95 +/- 0.048781, b=b=4.29028 +/- 0.0498865, c=c=0.0369041 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.18, N=N=0.006 +/- 0.00763469, a=a=2008.95 +/- 0.048781, b=b=4.29028 +/- 0.0498865, c=c=0.0369041 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.92, N=N=0.006 +/- 0.00763469, a=a=2008.95 +/- 0.048781, b=b=4.29028 +/- 0.0498865, c=c=0.0369041 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.87, N=N=0.006 +/- 0.00763469, a=a=2008.95 +/- 0.048781, b=b=4.29028 +/- 0.0498865, c=c=0.0369041 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.02, N=N=0.006 +/- 0.00763469, a=a=2008.95 +/- 0.048781, b=b=4.29028 +/- 0.0498865, c=c=0.0369041 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.89, N=N=0.006 +/- 0.00763469, a=a=2008.95 +/- 0.048781, b=b=4.29028 +/- 0.0498865, c=c=0.0369041 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.31, N=N=0.006 +/- 0.00763469, a=a=2008.95 +/- 0.048781, b=b=4.29028 +/- 0.0498865, c=c=0.0369041 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.66, N=N=0.006 +/- 0.00763469, a=a=2008.95 +/- 0.048781, b=b=4.29028 +/- 0.0498865, c=c=0.0369041 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.52, N=N=0.006 +/- 0.00763469, a=a=2008.95 +/- 0.048781, b=b=4.29028 +/- 0.0498865, c=c=0.0369041 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.52, N=N=0.006 +/- 0.00763469, a=a=2008.95 +/- 0.048781, b=b=4.29028 +/- 0.0498865, c=c=0.0369041 +/- 0.00344979
+    ... (remaining 8182 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-2.02845e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2008.88, b=5.11475, bkg_yield_2=413027, c=0.0180413, mean=2010.27, sig_yield_2=637408, sigma=0.468408
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.44, N=N=0.006 +/- 0.00763469, a=a=2008.88 +/- 0.048781, b=b=5.11475 +/- 0.0498865, c=c=0.0180413 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.64, N=N=0.006 +/- 0.00763469, a=a=2008.88 +/- 0.048781, b=b=5.11475 +/- 0.0498865, c=c=0.0180413 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008, N=N=0.006 +/- 0.00763469, a=a=2008.88 +/- 0.048781, b=b=5.11475 +/- 0.0498865, c=c=0.0180413 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.68, N=N=0.006 +/- 0.00763469, a=a=2008.88 +/- 0.048781, b=b=5.11475 +/- 0.0498865, c=c=0.0180413 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008, N=N=0.006 +/- 0.00763469, a=a=2008.88 +/- 0.048781, b=b=5.11475 +/- 0.0498865, c=c=0.0180413 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.04, N=N=0.006 +/- 0.00763469, a=a=2008.88 +/- 0.048781, b=b=5.11475 +/- 0.0498865, c=c=0.0180413 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.85, N=N=0.006 +/- 0.00763469, a=a=2008.88 +/- 0.048781, b=b=5.11475 +/- 0.0498865, c=c=0.0180413 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.32, N=N=0.006 +/- 0.00763469, a=a=2008.88 +/- 0.048781, b=b=5.11475 +/- 0.0498865, c=c=0.0180413 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.21, N=N=0.006 +/- 0.00763469, a=a=2008.88 +/- 0.048781, b=b=5.11475 +/- 0.0498865, c=c=0.0180413 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.34, N=N=0.006 +/- 0.00763469, a=a=2008.88 +/- 0.048781, b=b=5.11475 +/- 0.0498865, c=c=0.0180413 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.11, N=N=0.006 +/- 0.00763469, a=a=2008.88 +/- 0.048781, b=b=5.11475 +/- 0.0498865, c=c=0.0180413 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.92, N=N=0.006 +/- 0.00763469, a=a=2008.88 +/- 0.048781, b=b=5.11475 +/- 0.0498865, c=c=0.0180413 +/- 0.00344979
+    ... (remaining 8182 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-2.02845e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2008.76, b=2.49179, bkg_yield_2=398339, c=0.136148, mean=2010.27, sig_yield_2=735058, sigma=0.458675
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.58, N=N=0.006 +/- 0.00763469, a=a=2008.76 +/- 0.048781, b=b=2.49179 +/- 0.0498865, c=c=0.136148 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.7, N=N=0.006 +/- 0.00763469, a=a=2008.76 +/- 0.048781, b=b=2.49179 +/- 0.0498865, c=c=0.136148 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.37, N=N=0.006 +/- 0.00763469, a=a=2008.76 +/- 0.048781, b=b=2.49179 +/- 0.0498865, c=c=0.136148 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.53, N=N=0.006 +/- 0.00763469, a=a=2008.76 +/- 0.048781, b=b=2.49179 +/- 0.0498865, c=c=0.136148 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.92, N=N=0.006 +/- 0.00763469, a=a=2008.76 +/- 0.048781, b=b=2.49179 +/- 0.0498865, c=c=0.136148 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.34, N=N=0.006 +/- 0.00763469, a=a=2008.76 +/- 0.048781, b=b=2.49179 +/- 0.0498865, c=c=0.136148 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.5, N=N=0.006 +/- 0.00763469, a=a=2008.76 +/- 0.048781, b=b=2.49179 +/- 0.0498865, c=c=0.136148 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.18, N=N=0.006 +/- 0.00763469, a=a=2008.76 +/- 0.048781, b=b=2.49179 +/- 0.0498865, c=c=0.136148 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.05, N=N=0.006 +/- 0.00763469, a=a=2008.76 +/- 0.048781, b=b=2.49179 +/- 0.0498865, c=c=0.136148 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.67, N=N=0.006 +/- 0.00763469, a=a=2008.76 +/- 0.048781, b=b=2.49179 +/- 0.0498865, c=c=0.136148 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.4, N=N=0.006 +/- 0.00763469, a=a=2008.76 +/- 0.048781, b=b=2.49179 +/- 0.0498865, c=c=0.136148 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.03, N=N=0.006 +/- 0.00763469, a=a=2008.76 +/- 0.048781, b=b=2.49179 +/- 0.0498865, c=c=0.136148 +/- 0.00344979
+    ... (remaining 8182 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-2.02845e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2008.8, b=3.7098, bkg_yield_2=405503, c=0.0670236, mean=2010.27, sig_yield_2=689190, sigma=0.463393
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.97, N=N=0.006 +/- 0.00763469, a=a=2008.8 +/- 0.048781, b=b=3.7098 +/- 0.0498865, c=c=0.0670236 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.47, N=N=0.006 +/- 0.00763469, a=a=2008.8 +/- 0.048781, b=b=3.7098 +/- 0.0498865, c=c=0.0670236 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.34, N=N=0.006 +/- 0.00763469, a=a=2008.8 +/- 0.048781, b=b=3.7098 +/- 0.0498865, c=c=0.0670236 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.26, N=N=0.006 +/- 0.00763469, a=a=2008.8 +/- 0.048781, b=b=3.7098 +/- 0.0498865, c=c=0.0670236 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.99, N=N=0.006 +/- 0.00763469, a=a=2008.8 +/- 0.048781, b=b=3.7098 +/- 0.0498865, c=c=0.0670236 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.56, N=N=0.006 +/- 0.00763469, a=a=2008.8 +/- 0.048781, b=b=3.7098 +/- 0.0498865, c=c=0.0670236 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.98, N=N=0.006 +/- 0.00763469, a=a=2008.8 +/- 0.048781, b=b=3.7098 +/- 0.0498865, c=c=0.0670236 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.19, N=N=0.006 +/- 0.00763469, a=a=2008.8 +/- 0.048781, b=b=3.7098 +/- 0.0498865, c=c=0.0670236 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.03, N=N=0.006 +/- 0.00763469, a=a=2008.8 +/- 0.048781, b=b=3.7098 +/- 0.0498865, c=c=0.0670236 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.2, N=N=0.006 +/- 0.00763469, a=a=2008.8 +/- 0.048781, b=b=3.7098 +/- 0.0498865, c=c=0.0670236 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.72, N=N=0.006 +/- 0.00763469, a=a=2008.8 +/- 0.048781, b=b=3.7098 +/- 0.0498865, c=c=0.0670236 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.65, N=N=0.006 +/- 0.00763469, a=a=2008.8 +/- 0.048781, b=b=3.7098 +/- 0.0498865, c=c=0.0670236 +/- 0.00344979
+    ... (remaining 8182 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-2.02845e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2009.96, b=4.65689, bkg_yield_2=410585, c=0.0301798, mean=2010.27, sig_yield_2=654593, sigma=0.466825
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.69, N=N=0.006 +/- 0.00763469, a=a=2009.96 +/- 0.048781, b=b=4.65689 +/- 0.0498865, c=c=0.0301798 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.12, N=N=0.006 +/- 0.00763469, a=a=2009.96 +/- 0.048781, b=b=4.65689 +/- 0.0498865, c=c=0.0301798 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.13, N=N=0.006 +/- 0.00763469, a=a=2009.96 +/- 0.048781, b=b=4.65689 +/- 0.0498865, c=c=0.0301798 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.09, N=N=0.006 +/- 0.00763469, a=a=2009.96 +/- 0.048781, b=b=4.65689 +/- 0.0498865, c=c=0.0301798 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.78, N=N=0.006 +/- 0.00763469, a=a=2009.96 +/- 0.048781, b=b=4.65689 +/- 0.0498865, c=c=0.0301798 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.83, N=N=0.006 +/- 0.00763469, a=a=2009.96 +/- 0.048781, b=b=4.65689 +/- 0.0498865, c=c=0.0301798 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.83, N=N=0.006 +/- 0.00763469, a=a=2009.96 +/- 0.048781, b=b=4.65689 +/- 0.0498865, c=c=0.0301798 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.06, N=N=0.006 +/- 0.00763469, a=a=2009.96 +/- 0.048781, b=b=4.65689 +/- 0.0498865, c=c=0.0301798 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.25, N=N=0.006 +/- 0.00763469, a=a=2009.96 +/- 0.048781, b=b=4.65689 +/- 0.0498865, c=c=0.0301798 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.63, N=N=0.006 +/- 0.00763469, a=a=2009.96 +/- 0.048781, b=b=4.65689 +/- 0.0498865, c=c=0.0301798 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.5, N=N=0.006 +/- 0.00763469, a=a=2009.96 +/- 0.048781, b=b=4.65689 +/- 0.0498865, c=c=0.0301798 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.25, N=N=0.006 +/- 0.00763469, a=a=2009.96 +/- 0.048781, b=b=4.65689 +/- 0.0498865, c=c=0.0301798 +/- 0.00344979
+    ... (remaining 8182 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-2.02845e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2007.82, b=2.79928, bkg_yield_2=404114, c=0.176483, mean=2010.27, sig_yield_2=711495, sigma=0.455561
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.26, N=N=0.006 +/- 0.00763469, a=a=2007.82 +/- 0.048781, b=b=2.79928 +/- 0.0498865, c=c=0.176483 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.56, N=N=0.006 +/- 0.00763469, a=a=2007.82 +/- 0.048781, b=b=2.79928 +/- 0.0498865, c=c=0.176483 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.11, N=N=0.006 +/- 0.00763469, a=a=2007.82 +/- 0.048781, b=b=2.79928 +/- 0.0498865, c=c=0.176483 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.92, N=N=0.006 +/- 0.00763469, a=a=2007.82 +/- 0.048781, b=b=2.79928 +/- 0.0498865, c=c=0.176483 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.65, N=N=0.006 +/- 0.00763469, a=a=2007.82 +/- 0.048781, b=b=2.79928 +/- 0.0498865, c=c=0.176483 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.3, N=N=0.006 +/- 0.00763469, a=a=2007.82 +/- 0.048781, b=b=2.79928 +/- 0.0498865, c=c=0.176483 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.47, N=N=0.006 +/- 0.00763469, a=a=2007.82 +/- 0.048781, b=b=2.79928 +/- 0.0498865, c=c=0.176483 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.22, N=N=0.006 +/- 0.00763469, a=a=2007.82 +/- 0.048781, b=b=2.79928 +/- 0.0498865, c=c=0.176483 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.45, N=N=0.006 +/- 0.00763469, a=a=2007.82 +/- 0.048781, b=b=2.79928 +/- 0.0498865, c=c=0.176483 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.48, N=N=0.006 +/- 0.00763469, a=a=2007.82 +/- 0.048781, b=b=2.79928 +/- 0.0498865, c=c=0.176483 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.52, N=N=0.006 +/- 0.00763469, a=a=2007.82 +/- 0.048781, b=b=2.79928 +/- 0.0498865, c=c=0.176483 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.94, N=N=0.006 +/- 0.00763469, a=a=2007.82 +/- 0.048781, b=b=2.79928 +/- 0.0498865, c=c=0.176483 +/- 0.00344979
+    ... (remaining 8182 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-2.02845e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2007.16, b=3.294, bkg_yield_2=423727, c=0.139432, mean=2010.27, sig_yield_2=849802, sigma=0.354352
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.09, N=N=0.006 +/- 0.00763469, a=a=2007.16 +/- 0.048781, b=b=3.294 +/- 0.0498865, c=c=0.139432 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.48, N=N=0.006 +/- 0.00763469, a=a=2007.16 +/- 0.048781, b=b=3.294 +/- 0.0498865, c=c=0.139432 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.65, N=N=0.006 +/- 0.00763469, a=a=2007.16 +/- 0.048781, b=b=3.294 +/- 0.0498865, c=c=0.139432 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.65, N=N=0.006 +/- 0.00763469, a=a=2007.16 +/- 0.048781, b=b=3.294 +/- 0.0498865, c=c=0.139432 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.97, N=N=0.006 +/- 0.00763469, a=a=2007.16 +/- 0.048781, b=b=3.294 +/- 0.0498865, c=c=0.139432 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.03, N=N=0.006 +/- 0.00763469, a=a=2007.16 +/- 0.048781, b=b=3.294 +/- 0.0498865, c=c=0.139432 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.86, N=N=0.006 +/- 0.00763469, a=a=2007.16 +/- 0.048781, b=b=3.294 +/- 0.0498865, c=c=0.139432 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.97, N=N=0.006 +/- 0.00763469, a=a=2007.16 +/- 0.048781, b=b=3.294 +/- 0.0498865, c=c=0.139432 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.97, N=N=0.006 +/- 0.00763469, a=a=2007.16 +/- 0.048781, b=b=3.294 +/- 0.0498865, c=c=0.139432 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.11, N=N=0.006 +/- 0.00763469, a=a=2007.16 +/- 0.048781, b=b=3.294 +/- 0.0498865, c=c=0.139432 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.54, N=N=0.006 +/- 0.00763469, a=a=2007.16 +/- 0.048781, b=b=3.294 +/- 0.0498865, c=c=0.139432 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.05, N=N=0.006 +/- 0.00763469, a=a=2007.16 +/- 0.048781, b=b=3.294 +/- 0.0498865, c=c=0.139432 +/- 0.00344979
+    ... (remaining 8182 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-2.02845e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2009.96, b=2.9315, bkg_yield_2=413811, c=0.171215, mean=2010.27, sig_yield_2=787094, sigma=0.403911
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.63, N=N=0.006 +/- 0.00763469, a=a=2009.96 +/- 0.048781, b=b=2.9315 +/- 0.0498865, c=c=0.171215 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.5, N=N=0.006 +/- 0.00763469, a=a=2009.96 +/- 0.048781, b=b=2.9315 +/- 0.0498865, c=c=0.171215 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.25, N=N=0.006 +/- 0.00763469, a=a=2009.96 +/- 0.048781, b=b=2.9315 +/- 0.0498865, c=c=0.171215 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.85, N=N=0.006 +/- 0.00763469, a=a=2009.96 +/- 0.048781, b=b=2.9315 +/- 0.0498865, c=c=0.171215 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.41, N=N=0.006 +/- 0.00763469, a=a=2009.96 +/- 0.048781, b=b=2.9315 +/- 0.0498865, c=c=0.171215 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.45, N=N=0.006 +/- 0.00763469, a=a=2009.96 +/- 0.048781, b=b=2.9315 +/- 0.0498865, c=c=0.171215 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.8, N=N=0.006 +/- 0.00763469, a=a=2009.96 +/- 0.048781, b=b=2.9315 +/- 0.0498865, c=c=0.171215 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.86, N=N=0.006 +/- 0.00763469, a=a=2009.96 +/- 0.048781, b=b=2.9315 +/- 0.0498865, c=c=0.171215 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.88, N=N=0.006 +/- 0.00763469, a=a=2009.96 +/- 0.048781, b=b=2.9315 +/- 0.0498865, c=c=0.171215 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.51, N=N=0.006 +/- 0.00763469, a=a=2009.96 +/- 0.048781, b=b=2.9315 +/- 0.0498865, c=c=0.171215 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.73, N=N=0.006 +/- 0.00763469, a=a=2009.96 +/- 0.048781, b=b=2.9315 +/- 0.0498865, c=c=0.171215 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.57, N=N=0.006 +/- 0.00763469, a=a=2009.96 +/- 0.048781, b=b=2.9315 +/- 0.0498865, c=c=0.171215 +/- 0.00344979
+    ... (remaining 8182 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-2.02845e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2005.94, b=2.89003, bkg_yield_2=412624, c=0.175028, mean=2010.27, sig_yield_2=779254, sigma=0.409763
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.2, N=N=0.006 +/- 0.00763469, a=a=2005.94 +/- 0.048781, b=b=2.89003 +/- 0.0498865, c=c=0.175028 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.81, N=N=0.006 +/- 0.00763469, a=a=2005.94 +/- 0.048781, b=b=2.89003 +/- 0.0498865, c=c=0.175028 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.34, N=N=0.006 +/- 0.00763469, a=a=2005.94 +/- 0.048781, b=b=2.89003 +/- 0.0498865, c=c=0.175028 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.67, N=N=0.006 +/- 0.00763469, a=a=2005.94 +/- 0.048781, b=b=2.89003 +/- 0.0498865, c=c=0.175028 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.57, N=N=0.006 +/- 0.00763469, a=a=2005.94 +/- 0.048781, b=b=2.89003 +/- 0.0498865, c=c=0.175028 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.55, N=N=0.006 +/- 0.00763469, a=a=2005.94 +/- 0.048781, b=b=2.89003 +/- 0.0498865, c=c=0.175028 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.82, N=N=0.006 +/- 0.00763469, a=a=2005.94 +/- 0.048781, b=b=2.89003 +/- 0.0498865, c=c=0.175028 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.73, N=N=0.006 +/- 0.00763469, a=a=2005.94 +/- 0.048781, b=b=2.89003 +/- 0.0498865, c=c=0.175028 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.84, N=N=0.006 +/- 0.00763469, a=a=2005.94 +/- 0.048781, b=b=2.89003 +/- 0.0498865, c=c=0.175028 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.7, N=N=0.006 +/- 0.00763469, a=a=2005.94 +/- 0.048781, b=b=2.89003 +/- 0.0498865, c=c=0.175028 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.54, N=N=0.006 +/- 0.00763469, a=a=2005.94 +/- 0.048781, b=b=2.89003 +/- 0.0498865, c=c=0.175028 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.36, N=N=0.006 +/- 0.00763469, a=a=2005.94 +/- 0.048781, b=b=2.89003 +/- 0.0498865, c=c=0.175028 +/- 0.00344979
+    ... (remaining 8182 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-2.02845e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2007.68, b=2.86936, bkg_yield_2=412028, c=0.176942, mean=2010.27, sig_yield_2=775295, sigma=0.412694
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.37, N=N=0.006 +/- 0.00763469, a=a=2007.68 +/- 0.048781, b=b=2.86936 +/- 0.0498865, c=c=0.176942 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.34, N=N=0.006 +/- 0.00763469, a=a=2007.68 +/- 0.048781, b=b=2.86936 +/- 0.0498865, c=c=0.176942 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.16, N=N=0.006 +/- 0.00763469, a=a=2007.68 +/- 0.048781, b=b=2.86936 +/- 0.0498865, c=c=0.176942 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.45, N=N=0.006 +/- 0.00763469, a=a=2007.68 +/- 0.048781, b=b=2.86936 +/- 0.0498865, c=c=0.176942 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.76, N=N=0.006 +/- 0.00763469, a=a=2007.68 +/- 0.048781, b=b=2.86936 +/- 0.0498865, c=c=0.176942 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.47, N=N=0.006 +/- 0.00763469, a=a=2007.68 +/- 0.048781, b=b=2.86936 +/- 0.0498865, c=c=0.176942 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.31, N=N=0.006 +/- 0.00763469, a=a=2007.68 +/- 0.048781, b=b=2.86936 +/- 0.0498865, c=c=0.176942 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.56, N=N=0.006 +/- 0.00763469, a=a=2007.68 +/- 0.048781, b=b=2.86936 +/- 0.0498865, c=c=0.176942 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.66, N=N=0.006 +/- 0.00763469, a=a=2007.68 +/- 0.048781, b=b=2.86936 +/- 0.0498865, c=c=0.176942 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.12, N=N=0.006 +/- 0.00763469, a=a=2007.68 +/- 0.048781, b=b=2.86936 +/- 0.0498865, c=c=0.176942 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.85, N=N=0.006 +/- 0.00763469, a=a=2007.68 +/- 0.048781, b=b=2.86936 +/- 0.0498865, c=c=0.176942 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.4, N=N=0.006 +/- 0.00763469, a=a=2007.68 +/- 0.048781, b=b=2.86936 +/- 0.0498865, c=c=0.176942 +/- 0.00344979
+    ... (remaining 8182 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-2.02845e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2005.35, b=2.46759, bkg_yield_2=419526, c=0.312886, mean=2010.27, sig_yield_2=814841, sigma=0.391431
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006 +/- 0.00763469, a=a=2005.35 +/- 0.048781, b=b=2.46759 +/- 0.0498865, c=c=0.312886 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.06, N=N=0.006 +/- 0.00763469, a=a=2005.35 +/- 0.048781, b=b=2.46759 +/- 0.0498865, c=c=0.312886 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.53, N=N=0.006 +/- 0.00763469, a=a=2005.35 +/- 0.048781, b=b=2.46759 +/- 0.0498865, c=c=0.312886 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.27, N=N=0.006 +/- 0.00763469, a=a=2005.35 +/- 0.048781, b=b=2.46759 +/- 0.0498865, c=c=0.312886 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.8, N=N=0.006 +/- 0.00763469, a=a=2005.35 +/- 0.048781, b=b=2.46759 +/- 0.0498865, c=c=0.312886 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.33, N=N=0.006 +/- 0.00763469, a=a=2005.35 +/- 0.048781, b=b=2.46759 +/- 0.0498865, c=c=0.312886 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.13, N=N=0.006 +/- 0.00763469, a=a=2005.35 +/- 0.048781, b=b=2.46759 +/- 0.0498865, c=c=0.312886 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N=N=0.006 +/- 0.00763469, a=a=2005.35 +/- 0.048781, b=b=2.46759 +/- 0.0498865, c=c=0.312886 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.66, N=N=0.006 +/- 0.00763469, a=a=2005.35 +/- 0.048781, b=b=2.46759 +/- 0.0498865, c=c=0.312886 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.93, N=N=0.006 +/- 0.00763469, a=a=2005.35 +/- 0.048781, b=b=2.46759 +/- 0.0498865, c=c=0.312886 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.2, N=N=0.006 +/- 0.00763469, a=a=2005.35 +/- 0.048781, b=b=2.46759 +/- 0.0498865, c=c=0.312886 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.75, N=N=0.006 +/- 0.00763469, a=a=2005.35 +/- 0.048781, b=b=2.46759 +/- 0.0498865, c=c=0.312886 +/- 0.00344979
+    ... (remaining 7115 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-2.02845e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2007.42, b=2.7134, bkg_yield_2=414856, c=0.229259, mean=2010.27, sig_yield_2=789898, sigma=0.405603
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.82, N=N=0.006 +/- 0.00763469, a=a=2007.42 +/- 0.048781, b=b=2.7134 +/- 0.0498865, c=c=0.229259 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.16, N=N=0.006 +/- 0.00763469, a=a=2007.42 +/- 0.048781, b=b=2.7134 +/- 0.0498865, c=c=0.229259 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.96, N=N=0.006 +/- 0.00763469, a=a=2007.42 +/- 0.048781, b=b=2.7134 +/- 0.0498865, c=c=0.229259 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.77, N=N=0.006 +/- 0.00763469, a=a=2007.42 +/- 0.048781, b=b=2.7134 +/- 0.0498865, c=c=0.229259 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.32, N=N=0.006 +/- 0.00763469, a=a=2007.42 +/- 0.048781, b=b=2.7134 +/- 0.0498865, c=c=0.229259 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.13, N=N=0.006 +/- 0.00763469, a=a=2007.42 +/- 0.048781, b=b=2.7134 +/- 0.0498865, c=c=0.229259 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.15, N=N=0.006 +/- 0.00763469, a=a=2007.42 +/- 0.048781, b=b=2.7134 +/- 0.0498865, c=c=0.229259 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.95, N=N=0.006 +/- 0.00763469, a=a=2007.42 +/- 0.048781, b=b=2.7134 +/- 0.0498865, c=c=0.229259 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.85, N=N=0.006 +/- 0.00763469, a=a=2007.42 +/- 0.048781, b=b=2.7134 +/- 0.0498865, c=c=0.229259 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.6, N=N=0.006 +/- 0.00763469, a=a=2007.42 +/- 0.048781, b=b=2.7134 +/- 0.0498865, c=c=0.229259 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.59, N=N=0.006 +/- 0.00763469, a=a=2007.42 +/- 0.048781, b=b=2.7134 +/- 0.0498865, c=c=0.229259 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.41, N=N=0.006 +/- 0.00763469, a=a=2007.42 +/- 0.048781, b=b=2.7134 +/- 0.0498865, c=c=0.229259 +/- 0.00344979
+    ... (remaining 8182 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-2.02845e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2009.04, b=3.12607, bkg_yield_2=417067, c=0.172498, mean=2010.27, sig_yield_2=799028, sigma=0.399344
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.31, N=N=0.006 +/- 0.00763469, a=a=2009.04 +/- 0.048781, b=b=3.12607 +/- 0.0498865, c=c=0.172498 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.15, N=N=0.006 +/- 0.00763469, a=a=2009.04 +/- 0.048781, b=b=3.12607 +/- 0.0498865, c=c=0.172498 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.62, N=N=0.006 +/- 0.00763469, a=a=2009.04 +/- 0.048781, b=b=3.12607 +/- 0.0498865, c=c=0.172498 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.41, N=N=0.006 +/- 0.00763469, a=a=2009.04 +/- 0.048781, b=b=3.12607 +/- 0.0498865, c=c=0.172498 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.59, N=N=0.006 +/- 0.00763469, a=a=2009.04 +/- 0.048781, b=b=3.12607 +/- 0.0498865, c=c=0.172498 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.97, N=N=0.006 +/- 0.00763469, a=a=2009.04 +/- 0.048781, b=b=3.12607 +/- 0.0498865, c=c=0.172498 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.22, N=N=0.006 +/- 0.00763469, a=a=2009.04 +/- 0.048781, b=b=3.12607 +/- 0.0498865, c=c=0.172498 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.31, N=N=0.006 +/- 0.00763469, a=a=2009.04 +/- 0.048781, b=b=3.12607 +/- 0.0498865, c=c=0.172498 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.51, N=N=0.006 +/- 0.00763469, a=a=2009.04 +/- 0.048781, b=b=3.12607 +/- 0.0498865, c=c=0.172498 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.26, N=N=0.006 +/- 0.00763469, a=a=2009.04 +/- 0.048781, b=b=3.12607 +/- 0.0498865, c=c=0.172498 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.55, N=N=0.006 +/- 0.00763469, a=a=2009.04 +/- 0.048781, b=b=3.12607 +/- 0.0498865, c=c=0.172498 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.88, N=N=0.006 +/- 0.00763469, a=a=2009.04 +/- 0.048781, b=b=3.12607 +/- 0.0498865, c=c=0.172498 +/- 0.00344979
+    ... (remaining 8182 messages suppressed)
+
+ MINUIT WARNING IN MIGRAD  
+ ============== Negative diagonal element 2 in Error Matrix
+ MINUIT WARNING IN MIGRAD  
+ ============== 1.00056 added to diagonal of error matrix
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-2.02845e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2008.62, b=0.215682, bkg_yield_2=175868, c=0.387793, mean=2008.43, sig_yield_2=970367, sigma=0.904772
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.63, N=N=0.006 +/- 0.00763469, a=a=2008.62 +/- 0.048781, b=b=0.215682 +/- 0.0498865, c=c=0.387793 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.48, N=N=0.006 +/- 0.00763469, a=a=2008.62 +/- 0.048781, b=b=0.215682 +/- 0.0498865, c=c=0.387793 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.65, N=N=0.006 +/- 0.00763469, a=a=2008.62 +/- 0.048781, b=b=0.215682 +/- 0.0498865, c=c=0.387793 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.92, N=N=0.006 +/- 0.00763469, a=a=2008.62 +/- 0.048781, b=b=0.215682 +/- 0.0498865, c=c=0.387793 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.56, N=N=0.006 +/- 0.00763469, a=a=2008.62 +/- 0.048781, b=b=0.215682 +/- 0.0498865, c=c=0.387793 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.8, N=N=0.006 +/- 0.00763469, a=a=2008.62 +/- 0.048781, b=b=0.215682 +/- 0.0498865, c=c=0.387793 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.77, N=N=0.006 +/- 0.00763469, a=a=2008.62 +/- 0.048781, b=b=0.215682 +/- 0.0498865, c=c=0.387793 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.58, N=N=0.006 +/- 0.00763469, a=a=2008.62 +/- 0.048781, b=b=0.215682 +/- 0.0498865, c=c=0.387793 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.93, N=N=0.006 +/- 0.00763469, a=a=2008.62 +/- 0.048781, b=b=0.215682 +/- 0.0498865, c=c=0.387793 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.54, N=N=0.006 +/- 0.00763469, a=a=2008.62 +/- 0.048781, b=b=0.215682 +/- 0.0498865, c=c=0.387793 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.28, N=N=0.006 +/- 0.00763469, a=a=2008.62 +/- 0.048781, b=b=0.215682 +/- 0.0498865, c=c=0.387793 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.61, N=N=0.006 +/- 0.00763469, a=a=2008.62 +/- 0.048781, b=b=0.215682 +/- 0.0498865, c=c=0.387793 +/- 0.00344979
+    ... (remaining 8182 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-2.02845e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2005.84, b=3.2564, bkg_yield_2=3836.68, c=0.483246, mean=2008.73, sig_yield_2=489955, sigma=0.850233
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.64, N=N=0.006 +/- 0.00763469, a=a=2005.84 +/- 0.048781, b=b=3.2564 +/- 0.0498865, c=c=0.483246 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.96, N=N=0.006 +/- 0.00763469, a=a=2005.84 +/- 0.048781, b=b=3.2564 +/- 0.0498865, c=c=0.483246 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.16, N=N=0.006 +/- 0.00763469, a=a=2005.84 +/- 0.048781, b=b=3.2564 +/- 0.0498865, c=c=0.483246 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.05, N=N=0.006 +/- 0.00763469, a=a=2005.84 +/- 0.048781, b=b=3.2564 +/- 0.0498865, c=c=0.483246 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.11, N=N=0.006 +/- 0.00763469, a=a=2005.84 +/- 0.048781, b=b=3.2564 +/- 0.0498865, c=c=0.483246 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.35, N=N=0.006 +/- 0.00763469, a=a=2005.84 +/- 0.048781, b=b=3.2564 +/- 0.0498865, c=c=0.483246 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.48, N=N=0.006 +/- 0.00763469, a=a=2005.84 +/- 0.048781, b=b=3.2564 +/- 0.0498865, c=c=0.483246 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.69, N=N=0.006 +/- 0.00763469, a=a=2005.84 +/- 0.048781, b=b=3.2564 +/- 0.0498865, c=c=0.483246 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.77, N=N=0.006 +/- 0.00763469, a=a=2005.84 +/- 0.048781, b=b=3.2564 +/- 0.0498865, c=c=0.483246 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.8, N=N=0.006 +/- 0.00763469, a=a=2005.84 +/- 0.048781, b=b=3.2564 +/- 0.0498865, c=c=0.483246 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.53, N=N=0.006 +/- 0.00763469, a=a=2005.84 +/- 0.048781, b=b=3.2564 +/- 0.0498865, c=c=0.483246 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.3, N=N=0.006 +/- 0.00763469, a=a=2005.84 +/- 0.048781, b=b=3.2564 +/- 0.0498865, c=c=0.483246 +/- 0.00344979
+    ... (remaining 8182 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-2.02845e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2005.76, b=3.05918, bkg_yield_2=94210.7, c=0.499568, mean=2011.09, sig_yield_2=200495, sigma=0.467531
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.55, N=N=0.006 +/- 0.00763469, a=a=2005.76 +/- 0.048781, b=b=3.05918 +/- 0.0498865, c=c=0.499568 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.92, N=N=0.006 +/- 0.00763469, a=a=2005.76 +/- 0.048781, b=b=3.05918 +/- 0.0498865, c=c=0.499568 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.61, N=N=0.006 +/- 0.00763469, a=a=2005.76 +/- 0.048781, b=b=3.05918 +/- 0.0498865, c=c=0.499568 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.67, N=N=0.006 +/- 0.00763469, a=a=2005.76 +/- 0.048781, b=b=3.05918 +/- 0.0498865, c=c=0.499568 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.37, N=N=0.006 +/- 0.00763469, a=a=2005.76 +/- 0.048781, b=b=3.05918 +/- 0.0498865, c=c=0.499568 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.82, N=N=0.006 +/- 0.00763469, a=a=2005.76 +/- 0.048781, b=b=3.05918 +/- 0.0498865, c=c=0.499568 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.08, N=N=0.006 +/- 0.00763469, a=a=2005.76 +/- 0.048781, b=b=3.05918 +/- 0.0498865, c=c=0.499568 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.12, N=N=0.006 +/- 0.00763469, a=a=2005.76 +/- 0.048781, b=b=3.05918 +/- 0.0498865, c=c=0.499568 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.6, N=N=0.006 +/- 0.00763469, a=a=2005.76 +/- 0.048781, b=b=3.05918 +/- 0.0498865, c=c=0.499568 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.23, N=N=0.006 +/- 0.00763469, a=a=2005.76 +/- 0.048781, b=b=3.05918 +/- 0.0498865, c=c=0.499568 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.47, N=N=0.006 +/- 0.00763469, a=a=2005.76 +/- 0.048781, b=b=3.05918 +/- 0.0498865, c=c=0.499568 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.69, N=N=0.006 +/- 0.00763469, a=a=2005.76 +/- 0.048781, b=b=3.05918 +/- 0.0498865, c=c=0.499568 +/- 0.00344979
+    ... (remaining 8182 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-2.02845e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2009.76, b=1.43268, bkg_yield_2=326605, c=0.498856, mean=2011.73, sig_yield_2=907526, sigma=0.979048
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.22, N=N=0.006 +/- 0.00763469, a=a=2009.76 +/- 0.048781, b=b=1.43268 +/- 0.0498865, c=c=0.498856 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.58, N=N=0.006 +/- 0.00763469, a=a=2009.76 +/- 0.048781, b=b=1.43268 +/- 0.0498865, c=c=0.498856 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.93, N=N=0.006 +/- 0.00763469, a=a=2009.76 +/- 0.048781, b=b=1.43268 +/- 0.0498865, c=c=0.498856 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.69, N=N=0.006 +/- 0.00763469, a=a=2009.76 +/- 0.048781, b=b=1.43268 +/- 0.0498865, c=c=0.498856 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.59, N=N=0.006 +/- 0.00763469, a=a=2009.76 +/- 0.048781, b=b=1.43268 +/- 0.0498865, c=c=0.498856 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.25, N=N=0.006 +/- 0.00763469, a=a=2009.76 +/- 0.048781, b=b=1.43268 +/- 0.0498865, c=c=0.498856 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.18, N=N=0.006 +/- 0.00763469, a=a=2009.76 +/- 0.048781, b=b=1.43268 +/- 0.0498865, c=c=0.498856 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.63, N=N=0.006 +/- 0.00763469, a=a=2009.76 +/- 0.048781, b=b=1.43268 +/- 0.0498865, c=c=0.498856 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007, N=N=0.006 +/- 0.00763469, a=a=2009.76 +/- 0.048781, b=b=1.43268 +/- 0.0498865, c=c=0.498856 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.76, N=N=0.006 +/- 0.00763469, a=a=2009.76 +/- 0.048781, b=b=1.43268 +/- 0.0498865, c=c=0.498856 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.24, N=N=0.006 +/- 0.00763469, a=a=2009.76 +/- 0.048781, b=b=1.43268 +/- 0.0498865, c=c=0.498856 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.66, N=N=0.006 +/- 0.00763469, a=a=2009.76 +/- 0.048781, b=b=1.43268 +/- 0.0498865, c=c=0.498856 +/- 0.00344979
+    ... (remaining 8182 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-2.02845e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2006.92, b=4.10265, bkg_yield_2=2131.31, c=0.00371963, mean=2009.43, sig_yield_2=723660, sigma=0.344052
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.7, N=N=0.006 +/- 0.00763469, a=a=2006.92 +/- 0.048781, b=b=4.10265 +/- 0.0498865, c=c=0.00371963 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.58, N=N=0.006 +/- 0.00763469, a=a=2006.92 +/- 0.048781, b=b=4.10265 +/- 0.0498865, c=c=0.00371963 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.3, N=N=0.006 +/- 0.00763469, a=a=2006.92 +/- 0.048781, b=b=4.10265 +/- 0.0498865, c=c=0.00371963 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.06, N=N=0.006 +/- 0.00763469, a=a=2006.92 +/- 0.048781, b=b=4.10265 +/- 0.0498865, c=c=0.00371963 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.24, N=N=0.006 +/- 0.00763469, a=a=2006.92 +/- 0.048781, b=b=4.10265 +/- 0.0498865, c=c=0.00371963 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.73, N=N=0.006 +/- 0.00763469, a=a=2006.92 +/- 0.048781, b=b=4.10265 +/- 0.0498865, c=c=0.00371963 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.94, N=N=0.006 +/- 0.00763469, a=a=2006.92 +/- 0.048781, b=b=4.10265 +/- 0.0498865, c=c=0.00371963 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.71, N=N=0.006 +/- 0.00763469, a=a=2006.92 +/- 0.048781, b=b=4.10265 +/- 0.0498865, c=c=0.00371963 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.95, N=N=0.006 +/- 0.00763469, a=a=2006.92 +/- 0.048781, b=b=4.10265 +/- 0.0498865, c=c=0.00371963 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.92, N=N=0.006 +/- 0.00763469, a=a=2006.92 +/- 0.048781, b=b=4.10265 +/- 0.0498865, c=c=0.00371963 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.72, N=N=0.006 +/- 0.00763469, a=a=2006.92 +/- 0.048781, b=b=4.10265 +/- 0.0498865, c=c=0.00371963 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.81, N=N=0.006 +/- 0.00763469, a=a=2006.92 +/- 0.048781, b=b=4.10265 +/- 0.0498865, c=c=0.00371963 +/- 0.00344979
+    ... (remaining 8182 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-2.02845e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004.8, b=1.07813, bkg_yield_2=66275.3, c=0.197721, mean=2008.01, sig_yield_2=693146, sigma=0.00672786
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006 +/- 0.00763469, a=a=2004.8 +/- 0.048781, b=b=1.07813 +/- 0.0498865, c=c=0.197721 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.53, N=N=0.006 +/- 0.00763469, a=a=2004.8 +/- 0.048781, b=b=1.07813 +/- 0.0498865, c=c=0.197721 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.27, N=N=0.006 +/- 0.00763469, a=a=2004.8 +/- 0.048781, b=b=1.07813 +/- 0.0498865, c=c=0.197721 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.8, N=N=0.006 +/- 0.00763469, a=a=2004.8 +/- 0.048781, b=b=1.07813 +/- 0.0498865, c=c=0.197721 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.13, N=N=0.006 +/- 0.00763469, a=a=2004.8 +/- 0.048781, b=b=1.07813 +/- 0.0498865, c=c=0.197721 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N=N=0.006 +/- 0.00763469, a=a=2004.8 +/- 0.048781, b=b=1.07813 +/- 0.0498865, c=c=0.197721 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.66, N=N=0.006 +/- 0.00763469, a=a=2004.8 +/- 0.048781, b=b=1.07813 +/- 0.0498865, c=c=0.197721 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.07, N=N=0.006 +/- 0.00763469, a=a=2004.8 +/- 0.048781, b=b=1.07813 +/- 0.0498865, c=c=0.197721 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.2, N=N=0.006 +/- 0.00763469, a=a=2004.8 +/- 0.048781, b=b=1.07813 +/- 0.0498865, c=c=0.197721 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.33, N=N=0.006 +/- 0.00763469, a=a=2004.8 +/- 0.048781, b=b=1.07813 +/- 0.0498865, c=c=0.197721 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.46, N=N=0.006 +/- 0.00763469, a=a=2004.8 +/- 0.048781, b=b=1.07813 +/- 0.0498865, c=c=0.197721 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.6, N=N=0.006 +/- 0.00763469, a=a=2004.8 +/- 0.048781, b=b=1.07813 +/- 0.0498865, c=c=0.197721 +/- 0.00344979
+    ... (remaining 1838 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-2.02845e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2006.27, b=5.65065, bkg_yield_2=155601, c=0.382126, mean=2008.25, sig_yield_2=159817, sigma=0.0357983
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.47, N=N=0.006 +/- 0.00763469, a=a=2006.27 +/- 0.048781, b=b=5.65065 +/- 0.0498865, c=c=0.382126 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.36, N=N=0.006 +/- 0.00763469, a=a=2006.27 +/- 0.048781, b=b=5.65065 +/- 0.0498865, c=c=0.382126 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.67, N=N=0.006 +/- 0.00763469, a=a=2006.27 +/- 0.048781, b=b=5.65065 +/- 0.0498865, c=c=0.382126 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.46, N=N=0.006 +/- 0.00763469, a=a=2006.27 +/- 0.048781, b=b=5.65065 +/- 0.0498865, c=c=0.382126 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.79, N=N=0.006 +/- 0.00763469, a=a=2006.27 +/- 0.048781, b=b=5.65065 +/- 0.0498865, c=c=0.382126 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.92, N=N=0.006 +/- 0.00763469, a=a=2006.27 +/- 0.048781, b=b=5.65065 +/- 0.0498865, c=c=0.382126 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.99, N=N=0.006 +/- 0.00763469, a=a=2006.27 +/- 0.048781, b=b=5.65065 +/- 0.0498865, c=c=0.382126 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.83, N=N=0.006 +/- 0.00763469, a=a=2006.27 +/- 0.048781, b=b=5.65065 +/- 0.0498865, c=c=0.382126 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.2, N=N=0.006 +/- 0.00763469, a=a=2006.27 +/- 0.048781, b=b=5.65065 +/- 0.0498865, c=c=0.382126 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.04, N=N=0.006 +/- 0.00763469, a=a=2006.27 +/- 0.048781, b=b=5.65065 +/- 0.0498865, c=c=0.382126 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.5, N=N=0.006 +/- 0.00763469, a=a=2006.27 +/- 0.048781, b=b=5.65065 +/- 0.0498865, c=c=0.382126 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.11, N=N=0.006 +/- 0.00763469, a=a=2006.27 +/- 0.048781, b=b=5.65065 +/- 0.0498865, c=c=0.382126 +/- 0.00344979
+    ... (remaining 8182 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-2.02845e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2009.67, b=8.03189, bkg_yield_2=291643, c=0.0477032, mean=2011.38, sig_yield_2=985481, sigma=0.10307
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.15, N=N=0.006 +/- 0.00763469, a=a=2009.67 +/- 0.048781, b=b=8.03189 +/- 0.0498865, c=c=0.0477032 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.09, N=N=0.006 +/- 0.00763469, a=a=2009.67 +/- 0.048781, b=b=8.03189 +/- 0.0498865, c=c=0.0477032 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.27, N=N=0.006 +/- 0.00763469, a=a=2009.67 +/- 0.048781, b=b=8.03189 +/- 0.0498865, c=c=0.0477032 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.86, N=N=0.006 +/- 0.00763469, a=a=2009.67 +/- 0.048781, b=b=8.03189 +/- 0.0498865, c=c=0.0477032 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.89, N=N=0.006 +/- 0.00763469, a=a=2009.67 +/- 0.048781, b=b=8.03189 +/- 0.0498865, c=c=0.0477032 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.99, N=N=0.006 +/- 0.00763469, a=a=2009.67 +/- 0.048781, b=b=8.03189 +/- 0.0498865, c=c=0.0477032 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.41, N=N=0.006 +/- 0.00763469, a=a=2009.67 +/- 0.048781, b=b=8.03189 +/- 0.0498865, c=c=0.0477032 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.37, N=N=0.006 +/- 0.00763469, a=a=2009.67 +/- 0.048781, b=b=8.03189 +/- 0.0498865, c=c=0.0477032 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.43, N=N=0.006 +/- 0.00763469, a=a=2009.67 +/- 0.048781, b=b=8.03189 +/- 0.0498865, c=c=0.0477032 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.7, N=N=0.006 +/- 0.00763469, a=a=2009.67 +/- 0.048781, b=b=8.03189 +/- 0.0498865, c=c=0.0477032 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.48, N=N=0.006 +/- 0.00763469, a=a=2009.67 +/- 0.048781, b=b=8.03189 +/- 0.0498865, c=c=0.0477032 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.62, N=N=0.006 +/- 0.00763469, a=a=2009.67 +/- 0.048781, b=b=8.03189 +/- 0.0498865, c=c=0.0477032 +/- 0.00344979
+    ... (remaining 8182 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-2.01412e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2010, b=7.85075, bkg_yield_2=424388, c=0.350147, mean=2008.06, sig_yield_2=832297, sigma=0.87581
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.07, N=N=0.006 +/- 0.00763469, a=a=2010 +/- 0.048781, b=b=7.85075 +/- 0.0498865, c=c=0.350147 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.94, N=N=0.006 +/- 0.00763469, a=a=2010 +/- 0.048781, b=b=7.85075 +/- 0.0498865, c=c=0.350147 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.78, N=N=0.006 +/- 0.00763469, a=a=2010 +/- 0.048781, b=b=7.85075 +/- 0.0498865, c=c=0.350147 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.96, N=N=0.006 +/- 0.00763469, a=a=2010 +/- 0.048781, b=b=7.85075 +/- 0.0498865, c=c=0.350147 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.86, N=N=0.006 +/- 0.00763469, a=a=2010 +/- 0.048781, b=b=7.85075 +/- 0.0498865, c=c=0.350147 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.38, N=N=0.006 +/- 0.00763469, a=a=2010 +/- 0.048781, b=b=7.85075 +/- 0.0498865, c=c=0.350147 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.96, N=N=0.006 +/- 0.00763469, a=a=2010 +/- 0.048781, b=b=7.85075 +/- 0.0498865, c=c=0.350147 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.99, N=N=0.006 +/- 0.00763469, a=a=2010 +/- 0.048781, b=b=7.85075 +/- 0.0498865, c=c=0.350147 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.08, N=N=0.006 +/- 0.00763469, a=a=2010 +/- 0.048781, b=b=7.85075 +/- 0.0498865, c=c=0.350147 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.11, N=N=0.006 +/- 0.00763469, a=a=2010 +/- 0.048781, b=b=7.85075 +/- 0.0498865, c=c=0.350147 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.88, N=N=0.006 +/- 0.00763469, a=a=2010 +/- 0.048781, b=b=7.85075 +/- 0.0498865, c=c=0.350147 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.04, N=N=0.006 +/- 0.00763469, a=a=2010 +/- 0.048781, b=b=7.85075 +/- 0.0498865, c=c=0.350147 +/- 0.00344979
+    ... (remaining 8182 messages suppressed)
+
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ MINUIT WARNING IN HESSE
+ ============== Second derivative enters zero, param 1
+ MINUIT WARNING IN HESSE
+ ============== Second derivative zero for parameter1
+  MNHESS FAILS AND WILL RETURN DIAGONAL MATRIX. 
+ FCN=-2.31649e+07 FROM HESSE     STATUS=FAILED          3 CALLS         635 TOTAL
+                     EDM=1.30701e+06    STRATEGY= 1  ERROR MATRIX UNCERTAINTY 100.0 per cent
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  N            6.00000e-03   7.77054e-03  -0.00000e+00   0.00000e+00
+   2  a            2.00003e+03   2.28398e+00  -0.00000e+00  -6.46499e+02
+   3  b            2.83836e+00   4.36047e-03   0.00000e+00   1.21595e+04
+   4  bkg_yield_2   4.12251e+05   6.02154e+02   0.00000e+00  -3.15668e+04
+   5  c            1.86788e-01   3.79246e-04  -0.00000e+00  -2.56262e+04
+   6  mean         2.01027e+03   2.53189e-04   0.00000e+00  -3.70623e+03
+   7  sig_yield_2   7.75650e+05   5.26783e+02   0.00000e+00  -3.69419e+05
+   8  sigma        4.13238e-01   5.06999e-04   0.00000e+00   7.63261e+04
+                               ERR DEF= 0.5
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.9458e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2005.14, b=2.8059, bkg_yield_2=446896, c=0.196498, mean=2010.27, sig_yield_2=908856, sigma=0.388102
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006 +/- 0.00763469, a=a=2005.14 +/- 0.048781, b=b=2.8059 +/- 0.0498865, c=c=0.196498 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.06, N=N=0.006 +/- 0.00763469, a=a=2005.14 +/- 0.048781, b=b=2.8059 +/- 0.0498865, c=c=0.196498 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.53, N=N=0.006 +/- 0.00763469, a=a=2005.14 +/- 0.048781, b=b=2.8059 +/- 0.0498865, c=c=0.196498 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.27, N=N=0.006 +/- 0.00763469, a=a=2005.14 +/- 0.048781, b=b=2.8059 +/- 0.0498865, c=c=0.196498 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.8, N=N=0.006 +/- 0.00763469, a=a=2005.14 +/- 0.048781, b=b=2.8059 +/- 0.0498865, c=c=0.196498 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.75, N=N=0.006 +/- 0.00763469, a=a=2005.14 +/- 0.048781, b=b=2.8059 +/- 0.0498865, c=c=0.196498 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.54, N=N=0.006 +/- 0.00763469, a=a=2005.14 +/- 0.048781, b=b=2.8059 +/- 0.0498865, c=c=0.196498 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.66, N=N=0.006 +/- 0.00763469, a=a=2005.14 +/- 0.048781, b=b=2.8059 +/- 0.0498865, c=c=0.196498 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.93, N=N=0.006 +/- 0.00763469, a=a=2005.14 +/- 0.048781, b=b=2.8059 +/- 0.0498865, c=c=0.196498 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.62, N=N=0.006 +/- 0.00763469, a=a=2005.14 +/- 0.048781, b=b=2.8059 +/- 0.0498865, c=c=0.196498 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.89, N=N=0.006 +/- 0.00763469, a=a=2005.14 +/- 0.048781, b=b=2.8059 +/- 0.0498865, c=c=0.196498 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.83, N=N=0.006 +/- 0.00763469, a=a=2005.14 +/- 0.048781, b=b=2.8059 +/- 0.0498865, c=c=0.196498 +/- 0.00344979
+    ... (remaining 4684 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.9458e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2008.62, b=2.53595, bkg_yield_2=377868, c=0.280518, mean=2010.27, sig_yield_2=85602.4, sigma=0.193484
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.56, N=N=0.006 +/- 0.00763469, a=a=2008.62 +/- 0.048781, b=b=2.53595 +/- 0.0498865, c=c=0.280518 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.8, N=N=0.006 +/- 0.00763469, a=a=2008.62 +/- 0.048781, b=b=2.53595 +/- 0.0498865, c=c=0.280518 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.77, N=N=0.006 +/- 0.00763469, a=a=2008.62 +/- 0.048781, b=b=2.53595 +/- 0.0498865, c=c=0.280518 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.58, N=N=0.006 +/- 0.00763469, a=a=2008.62 +/- 0.048781, b=b=2.53595 +/- 0.0498865, c=c=0.280518 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.93, N=N=0.006 +/- 0.00763469, a=a=2008.62 +/- 0.048781, b=b=2.53595 +/- 0.0498865, c=c=0.280518 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.54, N=N=0.006 +/- 0.00763469, a=a=2008.62 +/- 0.048781, b=b=2.53595 +/- 0.0498865, c=c=0.280518 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.28, N=N=0.006 +/- 0.00763469, a=a=2008.62 +/- 0.048781, b=b=2.53595 +/- 0.0498865, c=c=0.280518 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.61, N=N=0.006 +/- 0.00763469, a=a=2008.62 +/- 0.048781, b=b=2.53595 +/- 0.0498865, c=c=0.280518 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.47, N=N=0.006 +/- 0.00763469, a=a=2008.62 +/- 0.048781, b=b=2.53595 +/- 0.0498865, c=c=0.280518 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.05, N=N=0.006 +/- 0.00763469, a=a=2008.62 +/- 0.048781, b=b=2.53595 +/- 0.0498865, c=c=0.280518 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.92, N=N=0.006 +/- 0.00763469, a=a=2008.62 +/- 0.048781, b=b=2.53595 +/- 0.0498865, c=c=0.280518 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.99, N=N=0.006 +/- 0.00763469, a=a=2008.62 +/- 0.048781, b=b=2.53595 +/- 0.0498865, c=c=0.280518 +/- 0.00344979
+    ... (remaining 8182 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.9458e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2009.33, b=2.76317, bkg_yield_2=467123, c=0.205786, mean=2010.27, sig_yield_2=971241, sigma=0.373117
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.06, N=N=0.006 +/- 0.00763469, a=a=2009.33 +/- 0.048781, b=b=2.76317 +/- 0.0498865, c=c=0.205786 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.16, N=N=0.006 +/- 0.00763469, a=a=2009.33 +/- 0.048781, b=b=2.76317 +/- 0.0498865, c=c=0.205786 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.04, N=N=0.006 +/- 0.00763469, a=a=2009.33 +/- 0.048781, b=b=2.76317 +/- 0.0498865, c=c=0.205786 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.22, N=N=0.006 +/- 0.00763469, a=a=2009.33 +/- 0.048781, b=b=2.76317 +/- 0.0498865, c=c=0.205786 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.08, N=N=0.006 +/- 0.00763469, a=a=2009.33 +/- 0.048781, b=b=2.76317 +/- 0.0498865, c=c=0.205786 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.33, N=N=0.006 +/- 0.00763469, a=a=2009.33 +/- 0.048781, b=b=2.76317 +/- 0.0498865, c=c=0.205786 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.18, N=N=0.006 +/- 0.00763469, a=a=2009.33 +/- 0.048781, b=b=2.76317 +/- 0.0498865, c=c=0.205786 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.26, N=N=0.006 +/- 0.00763469, a=a=2009.33 +/- 0.048781, b=b=2.76317 +/- 0.0498865, c=c=0.205786 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.78, N=N=0.006 +/- 0.00763469, a=a=2009.33 +/- 0.048781, b=b=2.76317 +/- 0.0498865, c=c=0.205786 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.16, N=N=0.006 +/- 0.00763469, a=a=2009.33 +/- 0.048781, b=b=2.76317 +/- 0.0498865, c=c=0.205786 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.63, N=N=0.006 +/- 0.00763469, a=a=2009.33 +/- 0.048781, b=b=2.76317 +/- 0.0498865, c=c=0.205786 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.67, N=N=0.006 +/- 0.00763469, a=a=2009.33 +/- 0.048781, b=b=2.76317 +/- 0.0498865, c=c=0.205786 +/- 0.00344979
+    ... (remaining 8182 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.9458e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2009.98, b=2.76097, bkg_yield_2=477805, c=0.208921, mean=2010.27, sig_yield_2=993040, sigma=0.359495
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.51, N=N=0.006 +/- 0.00763469, a=a=2009.98 +/- 0.048781, b=b=2.76097 +/- 0.0498865, c=c=0.208921 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.94, N=N=0.006 +/- 0.00763469, a=a=2009.98 +/- 0.048781, b=b=2.76097 +/- 0.0498865, c=c=0.208921 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.56, N=N=0.006 +/- 0.00763469, a=a=2009.98 +/- 0.048781, b=b=2.76097 +/- 0.0498865, c=c=0.208921 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.95, N=N=0.006 +/- 0.00763469, a=a=2009.98 +/- 0.048781, b=b=2.76097 +/- 0.0498865, c=c=0.208921 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.95, N=N=0.006 +/- 0.00763469, a=a=2009.98 +/- 0.048781, b=b=2.76097 +/- 0.0498865, c=c=0.208921 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.35, N=N=0.006 +/- 0.00763469, a=a=2009.98 +/- 0.048781, b=b=2.76097 +/- 0.0498865, c=c=0.208921 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.35, N=N=0.006 +/- 0.00763469, a=a=2009.98 +/- 0.048781, b=b=2.76097 +/- 0.0498865, c=c=0.208921 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.86, N=N=0.006 +/- 0.00763469, a=a=2009.98 +/- 0.048781, b=b=2.76097 +/- 0.0498865, c=c=0.208921 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.95, N=N=0.006 +/- 0.00763469, a=a=2009.98 +/- 0.048781, b=b=2.76097 +/- 0.0498865, c=c=0.208921 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.92, N=N=0.006 +/- 0.00763469, a=a=2009.98 +/- 0.048781, b=b=2.76097 +/- 0.0498865, c=c=0.208921 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.88, N=N=0.006 +/- 0.00763469, a=a=2009.98 +/- 0.048781, b=b=2.76097 +/- 0.0498865, c=c=0.208921 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.95, N=N=0.006 +/- 0.00763469, a=a=2009.98 +/- 0.048781, b=b=2.76097 +/- 0.0498865, c=c=0.208921 +/- 0.00344979
+    ... (remaining 8182 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.9458e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2010, b=2.76, bkg_yield_2=481906, c=0.210314, mean=2010.27, sig_yield_2=997981, sigma=0.353484
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.8, N=N=0.006 +/- 0.00763469, a=a=2010 +/- 0.048781, b=b=2.76 +/- 0.0498865, c=c=0.210314 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.87, N=N=0.006 +/- 0.00763469, a=a=2010 +/- 0.048781, b=b=2.76 +/- 0.0498865, c=c=0.210314 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.96, N=N=0.006 +/- 0.00763469, a=a=2010 +/- 0.048781, b=b=2.76 +/- 0.0498865, c=c=0.210314 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.7, N=N=0.006 +/- 0.00763469, a=a=2010 +/- 0.048781, b=b=2.76 +/- 0.0498865, c=c=0.210314 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.63, N=N=0.006 +/- 0.00763469, a=a=2010 +/- 0.048781, b=b=2.76 +/- 0.0498865, c=c=0.210314 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.61, N=N=0.006 +/- 0.00763469, a=a=2010 +/- 0.048781, b=b=2.76 +/- 0.0498865, c=c=0.210314 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.47, N=N=0.006 +/- 0.00763469, a=a=2010 +/- 0.048781, b=b=2.76 +/- 0.0498865, c=c=0.210314 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.76, N=N=0.006 +/- 0.00763469, a=a=2010 +/- 0.048781, b=b=2.76 +/- 0.0498865, c=c=0.210314 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.2, N=N=0.006 +/- 0.00763469, a=a=2010 +/- 0.048781, b=b=2.76 +/- 0.0498865, c=c=0.210314 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.32, N=N=0.006 +/- 0.00763469, a=a=2010 +/- 0.048781, b=b=2.76 +/- 0.0498865, c=c=0.210314 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.43, N=N=0.006 +/- 0.00763469, a=a=2010 +/- 0.048781, b=b=2.76 +/- 0.0498865, c=c=0.210314 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.83, N=N=0.006 +/- 0.00763469, a=a=2010 +/- 0.048781, b=b=2.76 +/- 0.0498865, c=c=0.210314 +/- 0.00344979
+    ... (remaining 8182 messages suppressed)
+
+[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
+Returning maximum FCN so far (-1.9458e+07) to force MIGRAD to back out of this region. Error log follows
+Parameter values: N=0.006, a=2004.1, b=2.39257, bkg_yield_2=483125, c=0.268994, mean=2010.27, sig_yield_2=999980, sigma=0.381016
+PID2612/RooRealMPFE::nll_model_pos_dataset2_7f5c80258560_MPFE3[ arg=nll_model_pos_dataset2_GOF3 vars=(N,a,b,bkg_yield_2,c,mean,sig_yield_2,sigma) ]
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006 +/- 0.00763469, a=a=2004.1 +/- 0.048781, b=b=2.39257 +/- 0.0498865, c=c=0.268994 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006 +/- 0.00763469, a=a=2004.1 +/- 0.048781, b=b=2.39257 +/- 0.0498865, c=c=0.268994 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006 +/- 0.00763469, a=a=2004.1 +/- 0.048781, b=b=2.39257 +/- 0.0498865, c=c=0.268994 +/- 0.00344979
+     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004, N=N=0.006 +/- 0.00763469, a=a=2004.1 +/- 0.048781, b=b=2.39257 +/- 0.0498865, c=c=0.268994 +/- 0.00344979
+
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ MACHINE ACCURACY LIMITS FURTHER IMPROVEMENT.
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ FCN=-2.33311e+07 FROM MIGRAD    STATUS=CONVERGED     927 CALLS         928 TOTAL
+                     EDM=0.24981    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   0.0 per cent
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  N            6.00000e-03   7.77054e-03  -0.00000e+00   0.00000e+00
+   2  a            2.00299e+03   4.53976e-02  -0.00000e+00   2.69278e+02
+   3  b            3.12432e+00   5.03360e-02   0.00000e+00   3.71168e+02
+   4  bkg_yield_2   5.00000e+05   3.23916e+01  -0.00000e+00  -4.01563e+00
+   5  c            3.28761e-01   3.48799e-03   0.00000e+00  -1.39610e+02
+   6  mean         2.01027e+03   2.52954e-04  -0.00000e+00  -1.03939e+02
+   7  sig_yield_2   1.00000e+06   1.05184e+00   0.00000e+00** at limit **
+   8  sigma        3.73899e-01   4.46308e-04   0.00000e+00  -2.58905e+02
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  8    ERR DEF=0.5
+  1.166e-04  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
+  0.000e+00  2.061e-03 -2.220e-03  2.052e-02 -1.467e-04  5.232e-07 -2.968e-03 -1.330e-06 
+  0.000e+00 -2.220e-03  2.534e-03 -1.694e-02  1.729e-04 -5.963e-07  2.928e-03  1.259e-06 
+  0.000e+00  2.052e-02 -1.694e-02  2.131e+01 -1.120e-03 -9.099e-06  8.363e-02  7.217e-05 
+  0.000e+00 -1.467e-04  1.729e-04 -1.120e-03  1.217e-05 -3.853e-08  1.933e-04  5.421e-08 
+  0.000e+00  5.232e-07 -5.963e-07 -9.099e-06 -3.853e-08  6.399e-08 -4.305e-07 -7.789e-10 
+  0.000e+00 -2.968e-03  2.928e-03  8.363e-02  1.933e-04 -4.305e-07  1.645e-01 -1.666e-07 
+  0.000e+00 -1.330e-06  1.259e-06  7.217e-05  5.421e-08 -7.789e-10 -1.666e-07  1.992e-07 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6      7      8
+        1  0.00000   1.000  0.000  0.000  0.000  0.000  0.000  0.000  0.000
+        2  0.98795   0.000  1.000 -0.972  0.098 -0.927  0.046 -0.161 -0.066
+        3  0.99745   0.000 -0.972  1.000 -0.073  0.985 -0.047  0.143  0.056
+        4  0.19145   0.000  0.098 -0.073  1.000 -0.070 -0.008  0.045  0.035
+        5  0.99352   0.000 -0.927  0.985 -0.070  1.000 -0.044  0.137  0.035
+        6  0.05218   0.000  0.046 -0.047 -0.008 -0.044  1.000 -0.004 -0.007
+        7  0.19611   0.000 -0.161  0.143  0.045  0.137 -0.004  1.000 -0.001
+        8  0.14762   0.000 -0.066  0.056  0.035  0.035 -0.007 -0.001  1.000
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Minization --  The following expressions have been identified as constant and will be precalculated and cached: (sig,arg)
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(model_pos) Calculating sum-of-weights-squared correction matrix for covariance matrix
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: deactivating const optimization
+[#1] INFO:InputArguments -- Printing Yields
+RooArgList:: = (sig_yield_2,bkg_yield_2)
+[#1] INFO:InputArguments -- yield in pdf: sig_yield_2 1e+06
+[#1] INFO:InputArguments -- yield in pdf: bkg_yield_2 500000
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Eval -- Checking Likelihood normalization:  
+[#1] INFO:Eval -- Yield of specie  Sum of Row in Matrix   Norm
+[#1] INFO:Eval -- 1e+06 644557 1.43649
+[#1] INFO:Eval -- 500000 566492 1.01343
+[#1] INFO:Eval -- Calculating sWeight
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_neg) directly selected PDF components: (arg)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_neg) indirectly selected PDF components: ()
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+=== Event 0%
+=== Event 10%
+=== Event 20%
+=== Event 30%
+=== Event 40%
+=== Event 50%
+=== Event 60%
+=== Event 70%
+=== Event 80%
+=== Event 90%
+=== Event 100%
+[#1] INFO:Plotting -- RooPlot::updateFitRangeNorm: New event count of 1.94347e+06 will supercede previous event count of 1 for normalization of PDF projections
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_neg) directly selected PDF components: (arg)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_neg) indirectly selected PDF components: ()
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+Total asymmetry before weighting: -6.86963e-05 +/- 2.61014e-10
+Total asymmetry after weighting: 2.71143e-06 +/- 3.84898e-10
+Total asymmetry after signal weighting: -6.04382e-06 +/- 7.07109e-10
+computation time/s: 321.975
+computation time/min: 5.36625
