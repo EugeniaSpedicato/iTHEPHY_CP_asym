@@ -170,10 +170,10 @@ void data(string dir, string sample, string pol)
   RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig_pos, *arg_pos),RooArgList(*sig_yield_2, *bkg_yield_2));
 
   ROOT::EnableThreadSafety();
-  RooAbsReal* nll_neg = model_neg->createChi2(*dataset1, Extended(), NumCPU(nThreads,1), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+  RooAbsReal* nll_neg = model_neg->createNLL(*dataset1, Extended(), NumCPU(nThreads,2), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1), Offset(kTrue));
   RooMinuit(*nll_neg).migrad();
   RooStats::SPlot *sData = new RooStats::SPlot("sData", "An SPlot", *dataset1, model_neg, RooArgList(*sig_yield, *bkg_yield));
-  RooAbsReal* nll_pos = model_pos->createChi2(*dataset2, Extended(), NumCPU(nThreads,1), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+  RooAbsReal* nll_pos = model_pos->createNLL(*dataset2, Extended(), NumCPU(nThreads,2), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1), Offset(kTrue));
   RooMinuit(*nll_pos).migrad();
   //model_pos->fitTo(*dataset2, Extended(), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   RooStats::SPlot *sData2 = new RooStats::SPlot("sData2", "An SPlot2", *dataset2, model_pos, RooArgList(*sig_yield_2, *bkg_yield_2));
