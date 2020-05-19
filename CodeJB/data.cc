@@ -123,8 +123,7 @@ void data(string dir, string sample, string pol)
   RooRealVar *sigma = new RooRealVar("sigma", "sigma", 0.3, 0., 1.);
   RooRealVar *sig_yield = new RooRealVar("sig_yield", "sig_yield", 800000., 0., 1500000.);
   RooRealVar *bkg_yield = new RooRealVar("bkg_yield", "bkg_yield", 300000., 0., 500000.);
-  if(up)RooRealVar *sig_yield_2 = new RooRealVar("sig_yield_2", "sig_yield_2", 800000., 0., 1500000.);
-  else RooRealVar *sig_yield_2 = new RooRealVar("sig_yield_2", "sig_yield_2", 1000000., 0., 2000000.);
+  RooRealVar *sig_yield_2 = (up)? new RooRealVar("sig_yield_2", "sig_yield_2", 800000., 0., 1500000.): new RooRealVar("sig_yield_2", "sig_yield_2", 1000000., 0., 2000000.);
   RooRealVar *bkg_yield_2 = new RooRealVar("bkg_yield_2", "bkg_yield_2", 300000., 0., 500000.);
 
   RooBreitWigner *sig = new RooBreitWigner("sig", "sig", *DTF_Mass, *mean, *sigma);
