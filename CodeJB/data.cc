@@ -270,6 +270,8 @@ void data(string dir, string sample, string pol)
   dataset1->plotOn(frame);
   model_neg->plotOn(frame);
   model_neg->plotOn(frame, Components("arg"), FillColor(kRed), DrawOption("F"));
+  model_neg->paramOn(frame, Layout(0.1, 0.4, 0.9), Format("NEU", AutoPrecision(1)));
+  frame->Draw();
   if(up) canvas2->SaveAs("output/data/plots/up/model_data.pdf");
   else canvas2->SaveAs("output/data/plots/down/model_data.pdf");
 
