@@ -116,14 +116,14 @@ void data(string dir, string sample, string pol)
   RooDataSet *dataset2b = new RooDataSet("dataset2b", "dataset2b", ntp, RooArgList(*DTF_Mass_iso, *Dst_ID_pos));*/
 
   RooRealVar *N = new RooRealVar("N", "N", 0.006, 0., 0.01);
-  RooRealVar *a = new RooRealVar("a", "a", 2004., 2000., 2010.);
+  RooRealVar *a = new RooRealVar("a", "a", 2004., 1998., 2010.);
   RooRealVar *c = new RooRealVar("c", "c", 0.05, 0., 0.5);
-  RooRealVar *b = new RooRealVar("b", "b", 0.681, 0., 10.);
+  RooRealVar *b = new RooRealVar("b", "b", 0.681, 0., 2.);
   RooRealVar *mean = new RooRealVar("mean", "mean", 2010., 2008., 2012.);
   RooRealVar *sigma = new RooRealVar("sigma", "sigma", 0.3, 0., 1.);
-  RooRealVar *sig_yield = new RooRealVar("sig_yield", "sig_yield", 250000., 0., 1000000.);
+  RooRealVar *sig_yield = new RooRealVar("sig_yield", "sig_yield", 250000., 0., 1500000.);
   RooRealVar *bkg_yield = new RooRealVar("bkg_yield", "bkg_yield", 10000., 0., 500000.);
-  RooRealVar *sig_yield_2 = new RooRealVar("sig_yield_2", "sig_yield_2", 250000., 0., 1000000.);
+  RooRealVar *sig_yield_2 = new RooRealVar("sig_yield_2", "sig_yield_2", 250000., 0., 1500000.);
   RooRealVar *bkg_yield_2 = new RooRealVar("bkg_yield_2", "bkg_yield_2", 10000., 0., 500000.);
 
   RooBreitWigner *sig = new RooBreitWigner("sig", "sig", *DTF_Mass, *mean, *sigma);
@@ -131,10 +131,10 @@ void data(string dir, string sample, string pol)
   RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig, *arg),RooArgList(*sig_yield, *bkg_yield));
   RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig, *arg),RooArgList(*sig_yield_2, *bkg_yield_2));
 
-  RooAbsReal* nll_neg = model_neg->createNLL(*dataset1, Extended(), NumCPU(4), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+  RooAbsReal* nll_neg = model_neg->createNLL(*dataset1, Extended(), NumCPU(8), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   RooMinuit(*nll_neg).migrad();
   RooStats::SPlot *sData = new RooStats::SPlot("sData", "An SPlot", *dataset1, model_neg, RooArgList(*sig_yield, *bkg_yield));
-  RooAbsReal* nll_pos = model_pos->createNLL(*dataset2, Extended(), NumCPU(4), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+  RooAbsReal* nll_pos = model_pos->createNLL(*dataset2, Extended(), NumCPU(8), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   RooMinuit(*nll_pos).migrad();
   //model_pos->fitTo(*dataset2, Extended(), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   RooStats::SPlot *sData2 = new RooStats::SPlot("sData2", "An SPlot2", *dataset2, model_pos, RooArgList(*sig_yield_2, *bkg_yield_2));
