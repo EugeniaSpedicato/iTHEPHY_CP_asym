@@ -1,17 +1,40 @@
 Info in <TUnixSystem::ACLiC>: creating shared library /home/smjoblan/iTHEPHY/iTHEPHY/CodeJB/./data_cc.so
-Info in <TUnixSystem::ACLiC>: creating shared library /home/smjoblan/iTHEPHY/iTHEPHY/CodeJB/RooArgPdf_cxx.so
-Info in <TCanvas::Print>: pdf file output/data/plots/down/model.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/down/model_data.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/down/MC_data_comp.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/down/eta_phi_plane.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_asymDTF.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_asymDTF_w.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_asymDTF_sw.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_asymphi.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_asymphi_w.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_asymphi_sw.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_asymD0m.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_asymD0m_w.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_asymD0m_sw.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_asympT_w.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_asympT_sw.pdf has been created
+In file included from input_line_11:6:
+././data.cc:134:32: error: no matching constructor for initialization of 'RooStats::SPlot'
+  RooStats::SPlot *sData = new RooStats::SPlot("sData", "An SPlot", *dataset1, nll_neg, RooArgList(*sig_yield, *bkg_yield));
+                               ^               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/smjoblan/sources/build/include/RooStats/SPlot.h:41:5: note: candidate constructor not viable: cannot convert from base class pointer 'RooAbsReal *' to derived class pointer 'RooAbsPdf *' for 4th argument
+    SPlot(const char* name, const char* title,RooDataSet& data, RooAbsPdf* pdf,
+    ^
+/home/smjoblan/sources/build/include/RooStats/SPlot.h:40:5: note: candidate constructor not viable: requires 3 arguments, but 5 were provided
+    SPlot(const char* name, const char* title, const RooDataSet &data);
+    ^
+/home/smjoblan/sources/build/include/RooStats/SPlot.h:39:5: note: candidate constructor not viable: requires 2 arguments, but 5 were provided
+    SPlot(const char* name, const char* title);
+    ^
+/home/smjoblan/sources/build/include/RooStats/SPlot.h:38:5: note: candidate constructor not viable: requires single argument 'other', but 5 arguments were provided
+    SPlot(const SPlot &other);
+    ^
+/home/smjoblan/sources/build/include/RooStats/SPlot.h:37:5: note: candidate constructor not viable: requires 0 arguments, but 5 were provided
+    SPlot();
+    ^
+In file included from input_line_11:6:
+././data.cc:137:33: error: no matching constructor for initialization of 'RooStats::SPlot'
+  RooStats::SPlot *sData2 = new RooStats::SPlot("sData2", "An SPlot2", *dataset2, nll_pos, RooArgList(*sig_yield_2, *bkg_yield_2));
+                                ^               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/smjoblan/sources/build/include/RooStats/SPlot.h:41:5: note: candidate constructor not viable: cannot convert from base class pointer 'RooAbsReal *' to derived class pointer 'RooAbsPdf *' for 4th argument
+    SPlot(const char* name, const char* title,RooDataSet& data, RooAbsPdf* pdf,
+    ^
+/home/smjoblan/sources/build/include/RooStats/SPlot.h:40:5: note: candidate constructor not viable: requires 3 arguments, but 5 were provided
+    SPlot(const char* name, const char* title, const RooDataSet &data);
+    ^
+/home/smjoblan/sources/build/include/RooStats/SPlot.h:39:5: note: candidate constructor not viable: requires 2 arguments, but 5 were provided
+    SPlot(const char* name, const char* title);
+    ^
+/home/smjoblan/sources/build/include/RooStats/SPlot.h:38:5: note: candidate constructor not viable: requires single argument 'other', but 5 arguments were provided
+    SPlot(const SPlot &other);
+    ^
+/home/smjoblan/sources/build/include/RooStats/SPlot.h:37:5: note: candidate constructor not viable: requires 0 arguments, but 5 were provided
+    SPlot();
+    ^
+Error in <ACLiC>: Dictionary generation failed!
