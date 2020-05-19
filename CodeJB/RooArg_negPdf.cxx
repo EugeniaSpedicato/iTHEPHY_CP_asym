@@ -17,13 +17,13 @@
 ClassImp(RooArg_negPdf); 
 
  RooArg_negPdf::RooArg_negPdf(const char *name, const char *title, 
-                        RooAbsReal& _dtf_neg,
+                        RooAbsReal& _DTF_Mass,
                         RooAbsReal& _N,
                         RooAbsReal& _a,
                         RooAbsReal& _b,
                         RooAbsReal& _c) :
    RooAbsPdf(name,title), 
-   dtf_neg("dtf_neg","dtf_neg",this,_dtf_neg),
+   DTF_Mass("DTF_Mass","DTF_Mass",this,_DTF_Mass),
    N("N","N",this,_N),
    a("a","a",this,_a),
    b("b","b",this,_b),
@@ -34,7 +34,7 @@ ClassImp(RooArg_negPdf);
 
  RooArg_negPdf::RooArg_negPdf(const RooArg_negPdf& other, const char* name) :  
    RooAbsPdf(other,name), 
-   dtf_neg("dtf_neg",this,other.dtf_neg),
+   DTF_Mass("DTF_Mass",this,other.DTF_Mass),
    N("N",this,other.N),
    a("a",this,other.a),
    b("b",this,other.b),
@@ -47,7 +47,7 @@ ClassImp(RooArg_negPdf);
  Double_t RooArg_negPdf::evaluate() const 
  { 
    // ENTER EXPRESSION IN TERMS OF VARIABLE ARGUMENTS HERE 
-   return 1./N*pow(dtf_neg-a,b)*exp(-c*(dtf_neg-a)) ; 
+   return 1./N*pow(DTF_Mass-a,b)*exp(-c*(DTF_Mass-a)) ; 
  } 
 
 

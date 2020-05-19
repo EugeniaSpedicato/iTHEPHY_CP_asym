@@ -17,7 +17,7 @@ class RooArg_posPdf : public RooAbsPdf {
 public:
   RooArg_posPdf() {} ; 
   RooArg_posPdf(const char *name, const char *title,
-	      RooAbsReal& _dtf_pos,
+	      RooAbsReal& _DTF_Mass,
 	      RooAbsReal& _N,
 	      RooAbsReal& _a,
 	      RooAbsReal& _b,
@@ -28,7 +28,7 @@ public:
 
 protected:
 
-  RooRealProxy dtf_pos ;
+  RooRealProxy DTF_Mass ;
   RooRealProxy N ;
   RooRealProxy a ;
   RooRealProxy b ;

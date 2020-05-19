@@ -116,36 +116,58 @@ void data(string dir, string sample, string pol)
   RooDataSet *dataset1b = new RooDataSet("dataset1b", "dataset1b", ntp, RooArgList(*DTF_Mass_iso, *Dst_ID_neg));
   RooDataSet *dataset2b = new RooDataSet("dataset2b", "dataset2b", ntp, RooArgList(*DTF_Mass_iso, *Dst_ID_pos));*/
 
-  RooRealVar *N;
-  RooRealVar *a;
-  RooRealVar *c;
-  RooRealVar *b;
+  RooRealVar *N1;
+  RooRealVar *a1;
+  RooRealVar *c1;
+  RooRealVar *b1;
+  RooRealVar *N2;
+  RooRealVar *a2;
+  RooRealVar *c2;
+  RooRealVar *b2;
   
   if(up)
   {
-	N = new RooRealVar("N", "N", 0.005, 0.000001, 0.01);
-	a = new RooRealVar("a", "a", 2004., 2000. , 2010.);
-	c = new RooRealVar("c", "c", 0.05, 0., 0.3);
-	b = new RooRealVar("b", "b", 0.681, 0.3, 2.);  
+	N1 = new RooRealVar("N", "N1", 0.005, 0.000001, 0.01);
+	a1 = new RooRealVar("a", "a1", 2004., 2000. , 2010.);
+	c1 = new RooRealVar("c", "c1", 0.05, 0., 0.3);
+	b1 = new RooRealVar("b", "b1", 0.681, 0.3, 2.);  
   }
   else
   {
-	N = new RooRealVar("N", "N", 0.005, 0., 0.03);
-	a = new RooRealVar("a", "a", 2004., 2000. , 2008.);
-	c = new RooRealVar("c", "c", 0.05, 0., 0.5);
-	b = new RooRealVar("b", "b", 0.681, 0., 2.);
+	N1 = new RooRealVar("N", "N1", 0.005, 0., 0.03);
+	a1 = new RooRealVar("a", "a1", 2004., 2000. , 2008.);
+	c1 = new RooRealVar("c", "c1", 0.05, 0., 0.5);
+	b1 = new RooRealVar("b", "b1", 0.681, 0., 2.);
+  }
+  if(up)
+  {
+	N2 = new RooRealVar("N", "N2", 0.005, 0.000001, 0.01);
+	a2 = new RooRealVar("a", "a2", 2004., 2000. , 2010.);
+	c2 = new RooRealVar("c", "c2", 0.05, 0., 0.3);
+	b2 = new RooRealVar("b", "b2", 0.681, 0.3, 2.);  
+  }
+  else
+  {
+	N2 = new RooRealVar("N", "N2", 0.005, 0., 0.03);
+	a2 = new RooRealVar("a", "a2", 2004., 2000. , 2008.);
+	c2 = new RooRealVar("c", "c2", 0.05, 0., 0.5);
+	b2 = new RooRealVar("b", "b2", 0.681, 0., 2.);
   }
   RooRealVar *mean = new RooRealVar("mean", "mean", 2010., 2008., 2012.);
   RooRealVar *sigma = new RooRealVar("sigma", "sigma", 0.31, 0., 1.);
-  RooRealVar *sig_yield = (up)? new RooRealVar("sig_yield", "sig_yield_2", 800000., 500000., 1500000.): new RooRealVar("sig_yield", "sig_yield", 1000000., 500000., 2000000.);
-  RooRealVar *bkg_yield = new RooRealVar("bkg_yield", "bkg_yield", 300000., 100000., 500000.);
-  RooRealVar *sig_yield_2 = (up)? new RooRealVar("sig_yield_2", "sig_yield_2", 800000., 500000., 1500000.): new RooRealVar("sig_yield_2", "sig_yield_2", 1000000., 500000., 2000000.);
-  RooRealVar *bkg_yield_2 = new RooRealVar("bkg_yield_2", "bkg_yield_2", 300000., 100000., 500000.);
+  RooRealVar *mean2 = new RooRealVar("mean2", "mean2", 2010., 2008., 2012.);
+  RooRealVar *sigma2 = new RooRealVar("sigma2", "sigma2", 0.31, 0., 1.);
+  RooRealVar *sig_yield = (up)? new RooRealVar("sig_yield", "sig_yield_2", 1000000., 700000., 1250000.): new RooRealVar("sig_yield", "sig_yield", 1400000., 1000000., 1650000.);
+  RooRealVar *bkg_yield = new RooRealVar("bkg_yield", "bkg_yield", 280000., 100000., 350000.);
+  RooRealVar *sig_yield_2 = (up)? new RooRealVar("sig_yield_2", "sig_yield_2", 1000000., 700000., 1250000.): new RooRealVar("sig_yield_2", "sig_yield_2", 1400000., 1000000., 1650000.);
+  RooRealVar *bkg_yield_2 = new RooRealVar("bkg_yield_2", "bkg_yield_2", 280000., 100000., 350000.);
 
-  RooBreitWigner *sig = new RooBreitWigner("sig", "sig", *DTF_Mass, *mean, *sigma);
-  RooAbsPdf *arg = RooClassFactory::makePdfInstance("arg", "1./N*pow(DTF_Mass-a,b)*exp(-c*(DTF_Mass-a))", RooArgSet(*DTF_Mass, *N, *a, *b, *c));
-  RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig, *arg),RooArgList(*sig_yield, *bkg_yield));
-  RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig, *arg),RooArgList(*sig_yield_2, *bkg_yield_2));
+  RooBreitWigner *sig_neg = new RooBreitWigner("sig_neg", "sig_neg", *DTF_Mass, *mean, *sigma);
+  RooBreitWigner *sig_pos = new RooBreitWigner("sig_pos", "sig_pos", *DTF_Mass, *mean2, *sigma2);
+  RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("arg_neg", "1./N*pow(DTF_Mass-a,b)*exp(-c*(DTF_Mass-a))", RooArgSet(*DTF_Mass, *N1, *a1, *b1, *c1));
+  RooAbsPdf *arg_pos = RooClassFactory::makePdfInstance("arg_pos", "1./N*pow(DTF_Mass-a,b)*exp(-c*(DTF_Mass-a))", RooArgSet(*DTF_Mass, *N2, *a2, *b2, *c2));
+  RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig_neg, *arg_neg),RooArgList(*sig_yield, *bkg_yield));
+  RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig_pos, *arg_pos),RooArgList(*sig_yield_2, *bkg_yield_2));
 
   ROOT::EnableThreadSafety();
   RooAbsReal* nll_neg = model_neg->createNLL(*dataset1, Extended(), NumCPU(nThreads), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
@@ -283,7 +305,7 @@ void data(string dir, string sample, string pol)
   RooPlot *frame = DTF_Mass->frame();
   RooPlot *frame2 = DTF_Mass->frame();
   model_neg->plotOn(frame);
-  model_neg->plotOn(frame, Components("arg"), FillStyle(2), FillColor(kRed), DrawOption("F"));
+  model_neg->plotOn(frame, Components("arg_neg"), FillStyle(2), FillColor(kRed), DrawOption("F"));
   
   frame->Draw();
   if(up) canvas2->SaveAs("output/data/plots/up/model.pdf");
@@ -292,14 +314,14 @@ void data(string dir, string sample, string pol)
  
   dataset1->plotOn(frame);
   model_neg->plotOn(frame);
-  model_neg->plotOn(frame, Components("arg"), FillStyle(2), FillColor(kRed), DrawOption("F"));
-  model_neg->paramOn(frame, Layout(0.475, 1., 0.9), Format("NEU", AutoPrecision(1)));
+  model_neg->plotOn(frame, Components("arg_neg"), FillColor(kRed), DrawOption("F"));
+  model_neg->paramOn(frame, Layout(0.45, 1., 0.9), Format("NEU", AutoPrecision(1)));
   frame->Draw();
   if(up) canvas2->SaveAs("output/data/plots/up/model_data.pdf");
   else canvas2->SaveAs("output/data/plots/down/model_data.pdf");
   
   model_pos->plotOn(frame2);
-  model_pos->plotOn(frame2, Components("arg"), FillStyle(2), FillColor(kRed), DrawOption("F"));
+  model_pos->plotOn(frame2, Components("arg_pos"), FillStyle(2), FillColor(kRed), DrawOption("F"));
 
   frame2->Draw();
   if(up) canvas2->SaveAs("output/data/plots/up/model_pos.pdf");
@@ -308,8 +330,8 @@ void data(string dir, string sample, string pol)
   
   dataset2->plotOn(frame2);
   model_pos->plotOn(frame2);
-  model_pos->plotOn(frame2, Components("arg"), FillStyle(2), FillColor(kRed), DrawOption("F"));
-  model_pos->paramOn(frame2, Layout(0.475, 1., 0.9), Format("NEU", AutoPrecision(1)));
+  model_pos->plotOn(frame2, Components("arg_pos"), FillStyle(2), FillColor(kRed), DrawOption("F"));
+  model_pos->paramOn(frame2, Layout(0.45, 1., 0.9), Format("NEU", AutoPrecision(1)));
   frame2->Draw();
   if(up) canvas2->SaveAs("output/data/plots/up/model_data_pos.pdf");
   else canvas2->SaveAs("output/data/plots/down/model_data_pos.pdf");

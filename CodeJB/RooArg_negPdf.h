@@ -17,7 +17,7 @@ class RooArg_negPdf : public RooAbsPdf {
 public:
   RooArg_negPdf() {} ; 
   RooArg_negPdf(const char *name, const char *title,
-	      RooAbsReal& _dtf_neg,
+	      RooAbsReal& _DTF_Mass,
 	      RooAbsReal& _N,
 	      RooAbsReal& _a,
 	      RooAbsReal& _b,
@@ -28,7 +28,7 @@ public:
 
 protected:
 
-  RooRealProxy dtf_neg ;
+  RooRealProxy DTF_Mass ;
   RooRealProxy N ;
   RooRealProxy a ;
   RooRealProxy b ;
