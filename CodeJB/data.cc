@@ -16,6 +16,7 @@
 #include "RooProdPdf.h"
 #include "RooAbsPdf.h"
 #include "RooFitResult.h"
+#include "RooMinuit.h"
 using namespace RooFit;
 
 void printdevhists(TH1F *h_pos, TH1F *h_neg, string polarisation, string var, bool weighted)

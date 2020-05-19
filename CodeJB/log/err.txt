@@ -1,9 +1,2 @@
 Info in <TUnixSystem::ACLiC>: creating shared library /home/smjoblan/iTHEPHY/iTHEPHY/CodeJB/./data_cc.so
-In file included from input_line_11:6:
-././data.cc:134:3: error: use of undeclared identifier 'RooMinuit'
-  RooMinuit(*nll_neg).migrad();
-  ^
-././data.cc:137:3: error: use of undeclared identifier 'RooMinuit'
-  RooMinuit(*nll_pos).migrad();
-  ^
 Error in <ACLiC>: Dictionary generation failed!

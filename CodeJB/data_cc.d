@@ -188,5 +188,7 @@
 ./data_cc.so: /home/smjoblan/sources/build/include/RooHist.h
 ./data_cc.so: /home/smjoblan/sources/build/include/TGraphAsymmErrors.h
 ./data_cc.so: /home/smjoblan/sources/build/include/RooProdPdf.h
+./data_cc.so: /home/smjoblan/sources/build/include/RooMinuit.h
+./data_cc.so: /home/smjoblan/sources/build/include/TStopwatch.h
 ./data_cc.so: /home/smjoblan/sources/build/include/RVersion.h /home/smjoblan/sources/build/include/RConfig.h /home/smjoblan/sources/build/include/TClass.h /home/smjoblan/sources/build/include/TDictAttributeMap.h /home/smjoblan/sources/build/include/TInterpreter.h /home/smjoblan/sources/build/include/TROOT.h /home/smjoblan/sources/build/include/TBuffer.h /home/smjoblan/sources/build/include/TMemberInspector.h /home/smjoblan/sources/build/include/TError.h /home/smjoblan/sources/build/include/RtypesImp.h /home/smjoblan/sources/build/include/TIsAProxy.h /home/smjoblan/sources/build/include/TFileMergeInfo.h /home/smjoblan/sources/build/include/TCollectionProxyInfo.h /home/smjoblan/sources/build/bin/rootcling
 data_cc__ROOTBUILDVERSION= 6.20/04
