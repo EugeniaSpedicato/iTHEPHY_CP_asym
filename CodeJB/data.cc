@@ -298,7 +298,7 @@ void data(string dir, string sample, string pol)
   if(up) canvas2->SaveAs("output/data/plots/up/model_data.pdf");
   else canvas2->SaveAs("output/data/plots/down/model_data.pdf");
   
-  model_pos->plotOn(frame)2;
+  model_pos->plotOn(frame2);
   model_pos->plotOn(frame2, Components("arg"), FillStyle(2), FillColor(kRed), DrawOption("F"));
 
   frame2->Draw();
