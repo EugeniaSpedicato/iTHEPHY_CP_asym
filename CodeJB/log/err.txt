@@ -1,17 +1,15 @@
 Info in <TUnixSystem::ACLiC>: creating shared library /home/smjoblan/iTHEPHY/iTHEPHY/CodeJB/./data_cc.so
-Info in <TUnixSystem::ACLiC>: creating shared library /home/smjoblan/iTHEPHY/iTHEPHY/CodeJB/RooArgPdf_cxx.so
-Info in <TCanvas::Print>: pdf file output/data/plots/up/model.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/up/model_data.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/up/MC_data_comp.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/up/eta_phi_plane.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/up/h_Dst_asymDTF.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/up/h_Dst_asymDTF_w.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/up/h_Dst_asymDTF_sw.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/up/h_Dst_asymphi.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/up/h_Dst_asymphi_w.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/up/h_Dst_asymphi_sw.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/up/h_Dst_asymD0m.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/up/h_Dst_asymD0m_w.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/up/h_Dst_asymD0m_sw.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/up/h_Dst_asympT_w.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/up/h_Dst_asympT_sw.pdf has been created
+In file included from input_line_11:6:
+././data.cc:133:101: error: use of undeclared identifier 'sig_yield_2'
+  RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig, *arg),RooArgList(*sig_yield_2, *bkg_yield_2));
+                                                                                                    ^
+././data.cc:135:76: error: use of undeclared identifier 'nThreads'
+  RooAbsReal* nll_neg = model_neg->createNLL(*dataset1, Extended(), NumCPU(nThreads), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+                                                                           ^
+././data.cc:138:76: error: use of undeclared identifier 'nThreads'
+  RooAbsReal* nll_pos = model_pos->createNLL(*dataset2, Extended(), NumCPU(nThreads), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+                                                                           ^
+././data.cc:141:106: error: use of undeclared identifier 'sig_yield_2'
+  RooStats::SPlot *sData2 = new RooStats::SPlot("sData2", "An SPlot2", *dataset2, model_pos, RooArgList(*sig_yield_2, *bkg_yield_2));
+                                                                                                         ^
+Error in <ACLiC>: Dictionary generation failed!
