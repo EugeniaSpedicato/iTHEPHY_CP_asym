@@ -116,16 +116,16 @@ void data(string dir, string sample, string pol)
   RooDataSet *dataset1b = new RooDataSet("dataset1b", "dataset1b", ntp, RooArgList(*DTF_Mass_iso, *Dst_ID_neg));
   RooDataSet *dataset2b = new RooDataSet("dataset2b", "dataset2b", ntp, RooArgList(*DTF_Mass_iso, *Dst_ID_pos));*/
 
-  RooRealVar *N = new RooRealVar("N", "N", 0.006, 0., 0.01);
-  RooRealVar *a = new RooRealVar("a", "a", 2004., 1998., 2010.);
+  RooRealVar *N = new RooRealVar("N", "N", 0.005, 0., 0.03);
+  RooRealVar *a = new RooRealVar("a", "a", 2004., 2000. , 2008.);
   RooRealVar *c = new RooRealVar("c", "c", 0.05, 0., 0.5);
-  RooRealVar *b = new RooRealVar("b", "b", 0.681, 0., 1.5);
+  RooRealVar *b = new RooRealVar("b", "b", 0.681, 0., 2.);
   RooRealVar *mean = new RooRealVar("mean", "mean", 2010., 2008., 2012.);
-  RooRealVar *sigma = new RooRealVar("sigma", "sigma", 0.3, 0., 1.);
-  RooRealVar *sig_yield = new RooRealVar("sig_yield", "sig_yield", 800000., 0., 1500000.);
-  RooRealVar *bkg_yield = new RooRealVar("bkg_yield", "bkg_yield", 300000., 0., 500000.);
-  RooRealVar *sig_yield_2 = (up)? new RooRealVar("sig_yield_2", "sig_yield_2", 800000., 0., 1500000.): new RooRealVar("sig_yield_2", "sig_yield_2", 1000000., 0., 2000000.);
-  RooRealVar *bkg_yield_2 = new RooRealVar("bkg_yield_2", "bkg_yield_2", 300000., 0., 500000.);
+  RooRealVar *sigma = new RooRealVar("sigma", "sigma", 0.31, 0., 1.);
+  RooRealVar *sig_yield = (up)? new RooRealVar("sig_yield", "sig_yield_2", 800000., 500000., 1500000.): new RooRealVar("sig_yield", "sig_yield", 1000000., 500000., 2000000.);
+  RooRealVar *bkg_yield = new RooRealVar("bkg_yield", "bkg_yield", 300000., 100000., 500000.);
+  RooRealVar *sig_yield_2 = (up)? new RooRealVar("sig_yield_2", "sig_yield_2", 800000., 500000., 1500000.): new RooRealVar("sig_yield_2", "sig_yield_2", 1000000., 500000., 2000000.);
+  RooRealVar *bkg_yield_2 = new RooRealVar("bkg_yield_2", "bkg_yield_2", 300000., 100000., 500000.);
 
   RooBreitWigner *sig = new RooBreitWigner("sig", "sig", *DTF_Mass, *mean, *sigma);
   RooAbsPdf *arg = RooClassFactory::makePdfInstance("arg", "1./N*pow(DTF_Mass-a,b)*exp(-c*(DTF_Mass-a))", RooArgSet(*DTF_Mass, *N, *a, *b, *c));
