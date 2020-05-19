@@ -127,45 +127,45 @@ void data(string dir, string sample, string pol)
   
   if(up)
   {
-	N1 = new RooRealVar("N", "N1", 0.005, 0.000001, 0.01);
-	a1 = new RooRealVar("a", "a1", 2004., 2000. , 2010.);
-	c1 = new RooRealVar("c", "c1", 0.05, 0., 0.3);
-	b1 = new RooRealVar("b", "b1", 0.681, 0.3, 2.);  
+	N1 = new RooRealVar("N1", "N1", 0.005, 0.000001, 0.01);
+	a1 = new RooRealVar("a1", "a1", 2004., 2000. , 2010.);
+	c1 = new RooRealVar("c1", "c1", 0.05, 0., 0.3);
+	b1 = new RooRealVar("b1", "b1", 0.681, 0.3, 2.);  
   }
   else
   {
-	N1 = new RooRealVar("N", "N1", 0.005, 0., 0.03);
-	a1 = new RooRealVar("a", "a1", 2004., 2000. , 2008.);
-	c1 = new RooRealVar("c", "c1", 0.05, 0., 0.5);
-	b1 = new RooRealVar("b", "b1", 0.681, 0., 2.);
+	N1 = new RooRealVar("N1", "N1", 0.005, 0., 0.03);
+	a1 = new RooRealVar("a1", "a1", 2004., 2000. , 2008.);
+	c1 = new RooRealVar("c1", "c1", 0.05, 0., 0.5);
+	b1 = new RooRealVar("b1", "b1", 0.681, 0., 2.);
   }
   if(up)
   {
-	N2 = new RooRealVar("N", "N2", 0.005, 0.000001, 0.01);
-	a2 = new RooRealVar("a", "a2", 2004., 2000. , 2010.);
-	c2 = new RooRealVar("c", "c2", 0.05, 0., 0.3);
-	b2 = new RooRealVar("b", "b2", 0.681, 0.3, 2.);  
+	N2 = new RooRealVar("N2", "N2", 0.005, 0.000001, 0.01);
+	a2 = new RooRealVar("a2", "a2", 2004., 2000. , 2010.);
+	c2 = new RooRealVar("c2", "c2", 0.05, 0., 0.3);
+	b2 = new RooRealVar("b2", "b2", 0.681, 0.3, 1.8);  
   }
   else
   {
-	N2 = new RooRealVar("N", "N2", 0.005, 0., 0.03);
-	a2 = new RooRealVar("a", "a2", 2004., 2000. , 2008.);
-	c2 = new RooRealVar("c", "c2", 0.05, 0., 0.5);
-	b2 = new RooRealVar("b", "b2", 0.681, 0., 2.);
+	N2 = new RooRealVar("N2", "N2", 0.005, 0., 0.03);
+	a2 = new RooRealVar("a2", "a2", 2004., 2000. , 2008.);
+	c2 = new RooRealVar("c2", "c2", 0.05, 0., 0.5);
+	b2 = new RooRealVar("b2", "b2", 0.681, 0., 2.);
   }
   RooRealVar *mean = new RooRealVar("mean", "mean", 2010., 2008., 2012.);
   RooRealVar *sigma = new RooRealVar("sigma", "sigma", 0.31, 0., 1.);
   RooRealVar *mean2 = new RooRealVar("mean2", "mean2", 2010., 2008., 2012.);
   RooRealVar *sigma2 = new RooRealVar("sigma2", "sigma2", 0.31, 0., 1.);
   RooRealVar *sig_yield = (up)? new RooRealVar("sig_yield", "sig_yield_2", 1000000., 700000., 1250000.): new RooRealVar("sig_yield", "sig_yield", 1400000., 1000000., 1650000.);
-  RooRealVar *bkg_yield = new RooRealVar("bkg_yield", "bkg_yield", 280000., 100000., 350000.);
+  RooRealVar *bkg_yield = new RooRealVar("bkg_yield", "bkg_yield", 280000., 100000., 450000.);
   RooRealVar *sig_yield_2 = (up)? new RooRealVar("sig_yield_2", "sig_yield_2", 1000000., 700000., 1250000.): new RooRealVar("sig_yield_2", "sig_yield_2", 1400000., 1000000., 1650000.);
-  RooRealVar *bkg_yield_2 = new RooRealVar("bkg_yield_2", "bkg_yield_2", 280000., 100000., 350000.);
+  RooRealVar *bkg_yield_2 = new RooRealVar("bkg_yield_2", "bkg_yield_2", 280000., 100000., 450000.);
 
   RooBreitWigner *sig_neg = new RooBreitWigner("sig_neg", "sig_neg", *DTF_Mass, *mean, *sigma);
   RooBreitWigner *sig_pos = new RooBreitWigner("sig_pos", "sig_pos", *DTF_Mass, *mean2, *sigma2);
-  RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("arg_neg", "1./N*pow(DTF_Mass-a,b)*exp(-c*(DTF_Mass-a))", RooArgSet(*DTF_Mass, *N1, *a1, *b1, *c1));
-  RooAbsPdf *arg_pos = RooClassFactory::makePdfInstance("arg_pos", "1./N*pow(DTF_Mass-a,b)*exp(-c*(DTF_Mass-a))", RooArgSet(*DTF_Mass, *N2, *a2, *b2, *c2));
+  RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("arg_neg", "1./N1*pow(DTF_Mass-a1,b1)*exp(-c1*(DTF_Mass-a1))", RooArgSet(*DTF_Mass, *N1, *a1, *b1, *c1));
+  RooAbsPdf *arg_pos = RooClassFactory::makePdfInstance("arg_pos", "1./N2*pow(DTF_Mass-a2,b2)*exp(-c2*(DTF_Mass-a2))", RooArgSet(*DTF_Mass, *N2, *a2, *b2, *c2));
   RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig_neg, *arg_neg),RooArgList(*sig_yield, *bkg_yield));
   RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig_pos, *arg_pos),RooArgList(*sig_yield_2, *bkg_yield_2));
 

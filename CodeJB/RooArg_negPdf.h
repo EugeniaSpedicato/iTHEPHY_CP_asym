@@ -18,10 +18,10 @@ public:
   RooArg_negPdf() {} ; 
   RooArg_negPdf(const char *name, const char *title,
 	      RooAbsReal& _DTF_Mass,
-	      RooAbsReal& _N,
-	      RooAbsReal& _a,
-	      RooAbsReal& _b,
-	      RooAbsReal& _c);
+	      RooAbsReal& _N1,
+	      RooAbsReal& _a1,
+	      RooAbsReal& _b1,
+	      RooAbsReal& _c1);
   RooArg_negPdf(const RooArg_negPdf& other, const char* name=0) ;
   virtual TObject* clone(const char* newname) const { return new RooArg_negPdf(*this,newname); }
   inline virtual ~RooArg_negPdf() { }
@@ -29,10 +29,10 @@ public:
 protected:
 
   RooRealProxy DTF_Mass ;
-  RooRealProxy N ;
-  RooRealProxy a ;
-  RooRealProxy b ;
-  RooRealProxy c ;
+  RooRealProxy N1 ;
+  RooRealProxy a1 ;
+  RooRealProxy b1 ;
+  RooRealProxy c1 ;
   
   Double_t evaluate() const ;
 

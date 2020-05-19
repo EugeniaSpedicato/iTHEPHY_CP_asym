@@ -18,10 +18,10 @@ public:
   RooArg_posPdf() {} ; 
   RooArg_posPdf(const char *name, const char *title,
 	      RooAbsReal& _DTF_Mass,
-	      RooAbsReal& _N,
-	      RooAbsReal& _a,
-	      RooAbsReal& _b,
-	      RooAbsReal& _c);
+	      RooAbsReal& _N2,
+	      RooAbsReal& _a2,
+	      RooAbsReal& _b2,
+	      RooAbsReal& _c2);
   RooArg_posPdf(const RooArg_posPdf& other, const char* name=0) ;
   virtual TObject* clone(const char* newname) const { return new RooArg_posPdf(*this,newname); }
   inline virtual ~RooArg_posPdf() { }
@@ -29,10 +29,10 @@ public:
 protected:
 
   RooRealProxy DTF_Mass ;
-  RooRealProxy N ;
-  RooRealProxy a ;
-  RooRealProxy b ;
-  RooRealProxy c ;
+  RooRealProxy N2 ;
+  RooRealProxy a2 ;
+  RooRealProxy b2 ;
+  RooRealProxy c2 ;
   
   Double_t evaluate() const ;
 
