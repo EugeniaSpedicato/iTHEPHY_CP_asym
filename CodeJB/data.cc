@@ -126,7 +126,7 @@ void data(string dir, string sample, string pol)
 	N = new RooRealVar("N", "N", 0.005, 0.000001, 0.01);
 	a = new RooRealVar("a", "a", 2004., 2000. , 2010.);
 	c = new RooRealVar("c", "c", 0.05, 0., 0.3);
-	b = new RooRealVar("b", "b", 0.681, 0., 1.5);  
+	b = new RooRealVar("b", "b", 0.681, 0.3, 2.);  
   }
   else
   {
@@ -155,10 +155,6 @@ void data(string dir, string sample, string pol)
   RooMinuit(*nll_pos).migrad();
   //model_pos->fitTo(*dataset2, Extended(), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   RooStats::SPlot *sData2 = new RooStats::SPlot("sData2", "An SPlot2", *dataset2, model_pos, RooArgList(*sig_yield_2, *bkg_yield_2));
-
-  RooPlot *frame = DTF_Mass->frame();
-  model_neg->plotOn(frame);
-  model_neg->plotOn(frame, Components("arg"), FillColor(kRed), DrawOption("F"));
 
   TFile *f = (up)? new TFile("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root"): new TFile("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Dw_GEN.root");
 
@@ -284,17 +280,39 @@ void data(string dir, string sample, string pol)
   h_Dst_pT_data_sw->SetLineColor(kGreen);
 
   TCanvas *canvas2 = new TCanvas();
+  RooPlot *frame = DTF_Mass->frame();
+  RooPlot *frame2 = DTF_Mass->frame();
+  model_neg->plotOn(frame);
+  model_neg->plotOn(frame, Components("arg"), FillStyle(2), FillColor(kRed), DrawOption("F"));
+  
   frame->Draw();
   if(up) canvas2->SaveAs("output/data/plots/up/model.pdf");
   else canvas2->SaveAs("output/data/plots/down/model.pdf");
   
+ 
   dataset1->plotOn(frame);
   model_neg->plotOn(frame);
-  model_neg->plotOn(frame, Components("arg"), FillColor(kRed), DrawOption("F"));
-  model_neg->paramOn(frame, Layout(0.6, 1., 0.9), Format("NEU", AutoPrecision(1)));
+  model_neg->plotOn(frame, Components("arg"), FillStyle(2), FillColor(kRed), DrawOption("F"));
+  model_neg->paramOn(frame, Layout(0.475, 1., 0.9), Format("NEU", AutoPrecision(1)));
   frame->Draw();
   if(up) canvas2->SaveAs("output/data/plots/up/model_data.pdf");
   else canvas2->SaveAs("output/data/plots/down/model_data.pdf");
+  
+  model_pos->plotOn(frame)2;
+  model_pos->plotOn(frame2, Components("arg"), FillStyle(2), FillColor(kRed), DrawOption("F"));
+
+  frame2->Draw();
+  if(up) canvas2->SaveAs("output/data/plots/up/model_pos.pdf");
+  else canvas2->SaveAs("output/data/plots/down/model_pos.pdf");
+ 
+  
+  dataset2->plotOn(frame2);
+  model_pos->plotOn(frame2);
+  model_pos->plotOn(frame2, Components("arg"), FillStyle(2), FillColor(kRed), DrawOption("F"));
+  model_pos->paramOn(frame2, Layout(0.475, 1., 0.9), Format("NEU", AutoPrecision(1)));
+  frame2->Draw();
+  if(up) canvas2->SaveAs("output/data/plots/up/model_data_pos.pdf");
+  else canvas2->SaveAs("output/data/plots/down/model_data_pos.pdf");
 
   
   h_Dst_pT_MC->Draw();
