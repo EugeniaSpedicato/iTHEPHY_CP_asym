@@ -134,8 +134,8 @@ void data(string dir, string sample, string pol)
   }
   else
   {
-	N1 = new RooRealVar("N1", "N1", 0.005, 0., 0.03);
-	a1 = new RooRealVar("a1", "a1", 2004., 2000. , 2008.);
+	N1 = new RooRealVar("N1", "N1", 0.002, 0., 0.01);
+	a1 = new RooRealVar("a1", "a1", 2003.9, 2002. , 2008.);
 	c1 = new RooRealVar("c1", "c1", 0.05, 0., 0.5);
 	b1 = new RooRealVar("b1", "b1", 0.681, 0., 2.);
   }
