@@ -64,8 +64,8 @@ void printhists(TH1F *h, bool up)
 void data(string dir, string sample, string pol)
 {
   gStyle->SetOptStat(0);
-  /*ROOT::EnableThreadSafety();
   const auto nThreads = thread::hardware_concurrency();
+  /*ROOT::EnableThreadSafety();
   ROOT::EnableImplicitMT(nThreads);*/
   uint64_t start_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
   string input_name = dir+"/"+sample+".root";
