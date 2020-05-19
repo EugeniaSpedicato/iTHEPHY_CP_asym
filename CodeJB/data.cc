@@ -116,10 +116,25 @@ void data(string dir, string sample, string pol)
   RooDataSet *dataset1b = new RooDataSet("dataset1b", "dataset1b", ntp, RooArgList(*DTF_Mass_iso, *Dst_ID_neg));
   RooDataSet *dataset2b = new RooDataSet("dataset2b", "dataset2b", ntp, RooArgList(*DTF_Mass_iso, *Dst_ID_pos));*/
 
-  RooRealVar *N = new RooRealVar("N", "N", 0.005, 0., 0.03);
-  RooRealVar *a = new RooRealVar("a", "a", 2004., 2000. , 2008.);
-  RooRealVar *c = new RooRealVar("c", "c", 0.05, 0., 0.5);
-  RooRealVar *b = new RooRealVar("b", "b", 0.681, 0., 2.);
+  RooRealVar *N;
+  RooRealVar *a;
+  RooRealVar *c;
+  RooRealVar *b;
+  
+  if(up)
+  {
+	N = new RooRealVar("N", "N", 0.005, 0.000001, 0.01);
+	a = new RooRealVar("a", "a", 2004., 2000. , 2010.);
+	c = new RooRealVar("c", "c", 0.05, 0., 0.3);
+	b = new RooRealVar("b", "b", 0.681, 0., 1.5);  
+  }
+  else
+  {
+	N = new RooRealVar("N", "N", 0.005, 0., 0.03);
+	a = new RooRealVar("a", "a", 2004., 2000. , 2008.);
+	c = new RooRealVar("c", "c", 0.05, 0., 0.5);
+	b = new RooRealVar("b", "b", 0.681, 0., 2.);
+  }
   RooRealVar *mean = new RooRealVar("mean", "mean", 2010., 2008., 2012.);
   RooRealVar *sigma = new RooRealVar("sigma", "sigma", 0.31, 0., 1.);
   RooRealVar *sig_yield = (up)? new RooRealVar("sig_yield", "sig_yield_2", 800000., 500000., 1500000.): new RooRealVar("sig_yield", "sig_yield", 1000000., 500000., 2000000.);
@@ -275,7 +290,7 @@ void data(string dir, string sample, string pol)
   dataset1->plotOn(frame);
   model_neg->plotOn(frame);
   model_neg->plotOn(frame, Components("arg"), FillColor(kRed), DrawOption("F"));
-  model_neg->paramOn(frame, Layout(0.6, 0.8, 0.9), Format("NEU", AutoPrecision(1)));
+  model_neg->paramOn(frame, Layout(0.6, 1., 0.9), Format("NEU", AutoPrecision(1)));
   frame->Draw();
   if(up) canvas2->SaveAs("output/data/plots/up/model_data.pdf");
   else canvas2->SaveAs("output/data/plots/down/model_data.pdf");
