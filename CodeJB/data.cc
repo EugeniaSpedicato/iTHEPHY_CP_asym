@@ -133,6 +133,10 @@ void data(string dir, string sample, string pol)
   RooStats::SPlot *sData = new RooStats::SPlot("sData", "An SPlot", *dataset1, model_neg, RooArgList(*sig_yield, *bkg_yield));
   model_pos->fitTo(*dataset2, Extended(), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   RooStats::SPlot *sData2 = new RooStats::SPlot("sData2", "An SPlot2", *dataset2, model_pos, RooArgList(*sig_yield_2, *bkg_yield_2));
+  
+  RooPlot frame = dataset1->frame();
+  model_neg->plotOn(frame);
+  model_neg->plotOn(frame, Components("arg"), FillColor(kRed), DrawOption("F"));
 
   TFile *f = (up)? new TFile("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root"): new TFile("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Dw_GEN.root");
 
@@ -239,9 +243,9 @@ void data(string dir, string sample, string pol)
       h_phi_Dst_pos_sw->Fill(Dst_phi, sData2->GetSWeight(i_pos, "sig_yield_2"));
       h_phi_Dst_pos->Fill(Dst_phi);
       
-      h_D0_M_neg_w->Fill(D0_mass, sData2->GetSumOfEventSWeight(i_pos));
-      h_D0_M_neg_sw->Fill(D0_mass, sData2->GetSWeight(i_pos, "sig_yield_2"));
-      h_D0_M_neg->Fill(D0_mass);
+      h_D0_M_pos_w->Fill(D0_mass, sData2->GetSumOfEventSWeight(i_pos));
+      h_D0_M_pos_sw->Fill(D0_mass, sData2->GetSWeight(i_pos, "sig_yield_2"));
+      h_D0_M_pos->Fill(D0_mass);
       
       h_Dst_eta_phi_plane_pos->Fill(Dst_phi, Dst_eta, sData2->GetSWeight(i_pos, "sig_yield_2"));
       ++i_pos;
@@ -258,6 +262,10 @@ void data(string dir, string sample, string pol)
   h_Dst_pT_data_sw->SetLineColor(kGreen);
 
   TCanvas *canvas2 = new TCanvas();
+  frame->Draw();
+  if(up) canvas2->SaveAs("output/data/plots/up/model.pdf");
+  else canvas2->SaveAs("output/data/plots/down/model.pdf");
+  
   h_Dst_pT_MC->Draw();
   h_Dst_pT_MC->Draw("hist same");
   h_Dst_pT_data->Draw("same");
@@ -303,6 +311,10 @@ void data(string dir, string sample, string pol)
   printdevhists(h_phi_Dst_pos, h_phi_Dst_neg, pol, "phi", false);
   printdevhists(h_phi_Dst_pos_w, h_phi_Dst_neg_w, pol, "phi_", true);
   printdevhists(h_phi_Dst_pos_sw, h_phi_Dst_neg_sw, pol, "phi_s", true);
+  
+  printdevhists(h_D0_M_pos, h_D0_neg, pol, "D0m", false);
+  printdevhists(h_D0_M_pos_w, h_D0_M_neg_w, pol, "D0m_", true);
+  printdevhists(h_D0_M_pos_sw, h_D0_M_neg_sw, pol, "D0m_s", true);
   
   printdevhists(h_Dst_pT_data_pos_w, h_Dst_pT_data_neg_w, pol, "pT_", true);
   printdevhists(h_Dst_pT_data_pos_sw, h_Dst_pT_data_neg_sw, pol, "pT_s", true);

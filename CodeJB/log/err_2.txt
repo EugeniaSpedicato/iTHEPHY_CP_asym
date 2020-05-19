@@ -1,12 +1,39 @@
 Info in <TUnixSystem::ACLiC>: creating shared library /home/smjoblan/iTHEPHY/iTHEPHY/CodeJB/./data_cc.so
-Info in <TUnixSystem::ACLiC>: creating shared library /home/smjoblan/iTHEPHY/iTHEPHY/CodeJB/RooArgPdf_cxx.so
-Info in <TCanvas::Print>: pdf file output/data/plots/down/MC_data_comp.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/down/eta_phi_plane.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_asymDTF.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_asymDTF_w.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_asymDTF_sw.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_asymphi.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_asymphi_w.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_asymphi_sw.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_asympT_w.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/down/h_Dst_asympT_sw.pdf has been created
+In file included from input_line_11:6:
+././data.cc:137:29: error: no member named 'frame' in 'RooDataSet'
+  RooPlot frame = dataset1->frame();
+                  ~~~~~~~~  ^
+././data.cc:138:14: error: no matching member function for call to 'plotOn'
+  model_neg->plotOn(frame);
+  ~~~~~~~~~~~^~~~~~
+/home/smjoblan/sources/build/include/RooAbsPdf.h:118:20: note: candidate function not viable: no known conversion from 'RooPlot' to 'RooPlot *' for 1st argument; take the address of the argument with &
+  virtual RooPlot* plotOn(RooPlot* frame, 
+                   ^
+/home/smjoblan/sources/build/include/RooAbsPdf.h:127:20: note: candidate function not viable: requires 2 arguments, but 1 was provided
+  virtual RooPlot* plotOn(RooPlot* frame, RooLinkedList& cmdList) const ;
+                   ^
+/home/smjoblan/sources/build/include/RooAbsPdf.h:295:20: note: candidate function not viable: requires 2 arguments, but 1 was provided
+  virtual RooPlot *plotOn(RooPlot *frame, PlotOpt o) const;  
+                   ^
+In file included from input_line_11:6:
+././data.cc:139:14: error: no matching member function for call to 'plotOn'
+  model_neg->plotOn(frame, Components("arg"), FillColor(kRed), DrawOption("F"));
+  ~~~~~~~~~~~^~~~~~
+/home/smjoblan/sources/build/include/RooAbsPdf.h:118:20: note: candidate function not viable: no known conversion from 'RooPlot' to 'RooPlot *' for 1st argument; take the address of the argument with &
+  virtual RooPlot* plotOn(RooPlot* frame, 
+                   ^
+/home/smjoblan/sources/build/include/RooAbsPdf.h:127:20: note: candidate function not viable: requires 2 arguments, but 4 were provided
+  virtual RooPlot* plotOn(RooPlot* frame, RooLinkedList& cmdList) const ;
+                   ^
+/home/smjoblan/sources/build/include/RooAbsPdf.h:295:20: note: candidate function not viable: requires 2 arguments, but 4 were provided
+  virtual RooPlot *plotOn(RooPlot *frame, PlotOpt o) const;  
+                   ^
+In file included from input_line_11:6:
+././data.cc:265:8: error: member reference type 'RooPlot' is not a pointer; did you mean to use '.'?
+  frame->Draw();
+  ~~~~~^~
+       .
+././data.cc:315:29: error: use of undeclared identifier 'h_D0_neg'
+  printdevhists(h_D0_M_pos, h_D0_neg, pol, "D0m", false);
+                            ^
+Error in <ACLiC>: Dictionary generation failed!
