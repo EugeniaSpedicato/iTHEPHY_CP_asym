@@ -131,8 +131,10 @@ void data(string dir, string sample, string pol)
   RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig, *arg),RooArgList(*sig_yield_2, *bkg_yield_2));
 
   RooAbsReal* nll_neg = model_neg->createNLL(*dataset1, Extended(), NumCPU(4), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+  RooMinuit(*nll_neg).migrad();
   RooStats::SPlot *sData = new RooStats::SPlot("sData", "An SPlot", *dataset1, model_neg, RooArgList(*sig_yield, *bkg_yield));
   RooAbsReal* nll_pos = model_pos->createNLL(*dataset2, Extended(), NumCPU(4), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+  RooMinuit(*nll_pos).migrad();
   //model_pos->fitTo(*dataset2, Extended(), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   RooStats::SPlot *sData2 = new RooStats::SPlot("sData2", "An SPlot2", *dataset2, model_pos, RooArgList(*sig_yield_2, *bkg_yield_2));
   
@@ -271,7 +273,7 @@ void data(string dir, string sample, string pol)
   dataset1->plotOn(frame);
   model_neg->plotOn(frame);
   model_neg->plotOn(frame, Components("arg"), FillColor(kRed), DrawOption("F"));
-  model_neg->paramOn(frame, Layout(0.1, 0.4, 0.9), Format("NEU", AutoPrecision(1)));
+  model_neg->paramOn(frame, Layout(0.6, 0.8, 0.9), Format("NEU", AutoPrecision(1)));
   frame->Draw();
   if(up) canvas2->SaveAs("output/data/plots/up/model_data.pdf");
   else canvas2->SaveAs("output/data/plots/down/model_data.pdf");
