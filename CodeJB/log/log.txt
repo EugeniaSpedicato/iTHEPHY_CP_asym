@@ -1365,5 +1365,5 @@ RooArgList:: = (sig_yield_2,bkg_yield_2)
 Total asymmetry before weighting: -0.0211162 +/- 4.66805e-10
 Total asymmetry after weighting: -0.0211154 +/- 4.66806e-10
 Total asymmetry after signal weighting: -0.0210585 +/- 7.12639e-10
-computation time/s: 114.728
-computation time/min: 1.91214
+computation time/s: 112.832
+computation time/min: 1.88054
