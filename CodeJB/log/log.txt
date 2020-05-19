@@ -1,2 +1,78 @@
 
 Processing data.cc++("$dir", "D02Kmpip_15_Up", "UP")...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+[#1] INFO:Eval -- RooAbsReal::attachToTree(Dst_ID) TTree Int_t branch Dst_ID will be converted to double precision
+[#1] INFO:Eval -- RooTreeDataStore::loadValues(dataset1) Ignored 1291880 out of range events
+[#1] INFO:Eval -- RooAbsReal::attachToTree(Dst_ID) TTree Int_t branch Dst_ID will be converted to double precision
+[#1] INFO:Eval -- RooTreeDataStore::loadValues(dataset2) Ignored 1347616 out of range events
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig,arg)
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: deactivating const optimization
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Minization --  The following expressions have been identified as constant and will be precalculated and cached: (sig,arg)
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(model_neg) Calculating sum-of-weights-squared correction matrix for covariance matrix
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: deactivating const optimization
+[#1] INFO:InputArguments -- Printing Yields
+RooArgList:: = (sig_yield,bkg_yield)
+[#1] INFO:InputArguments -- yield in pdf: sig_yield 200000
+[#1] INFO:InputArguments -- yield in pdf: bkg_yield 10000
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Eval -- Checking Likelihood normalization:  
+[#1] INFO:Eval -- Yield of specie  Sum of Row in Matrix   Norm
+[#1] INFO:Eval -- 200000 33943.4 6.07604
+[#1] INFO:Eval -- 10000 283.861 13.2407
+[#1] INFO:Eval -- Calculating sWeight
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig,arg)
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: deactivating const optimization
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Minization --  The following expressions have been identified as constant and will be precalculated and cached: (sig,arg)
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(model_pos) Calculating sum-of-weights-squared correction matrix for covariance matrix
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: deactivating const optimization
+[#1] INFO:InputArguments -- Printing Yields
+RooArgList:: = (sig_yield_2,bkg_yield_2)
+[#1] INFO:InputArguments -- yield in pdf: sig_yield_2 200000
+[#1] INFO:InputArguments -- yield in pdf: bkg_yield_2 10000
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Eval -- Checking Likelihood normalization:  
+[#1] INFO:Eval -- Yield of specie  Sum of Row in Matrix   Norm
+[#1] INFO:Eval -- 200000 35378.8 5.82835
+[#1] INFO:Eval -- 10000 301.089 12.621
+[#1] INFO:Eval -- Calculating sWeight
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_neg) directly selected PDF components: (arg)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_neg) indirectly selected PDF components: ()
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+=== Event 0%
+=== Event 10%
+=== Event 20%
+=== Event 30%
+=== Event 40%
+=== Event 50%
+=== Event 60%
+=== Event 70%
+=== Event 80%
+=== Event 90%
+=== Event 100%
+[#1] INFO:Plotting -- RooPlot::updateFitRangeNorm: New event count of 1.34762e+06 will supercede previous event count of 1 for normalization of PDF projections
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_neg) directly selected PDF components: (arg)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_neg) indirectly selected PDF components: ()
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+Total asymmetry before weighting: -0.0211162 +/- 4.66805e-10
+Total asymmetry after weighting: 1.16768e-05 +/- 7.34771e-09
+Total asymmetry after signal weighting: -1.34443e-05 +/- 7.90571e-09
+computation time/s: 393.622
+computation time/min: 6.56037

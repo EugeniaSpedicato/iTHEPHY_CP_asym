@@ -134,7 +134,7 @@ void data(string dir, string sample, string pol)
   model_pos->fitTo(*dataset2, Extended(), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   RooStats::SPlot *sData2 = new RooStats::SPlot("sData2", "An SPlot2", *dataset2, model_pos, RooArgList(*sig_yield_2, *bkg_yield_2));
   
-  RooPlot frame = dataset1->frame();
+  RooPlot *frame = DTF_Mass->frame();
   model_neg->plotOn(frame);
   model_neg->plotOn(frame, Components("arg"), FillColor(kRed), DrawOption("F"));
 
@@ -266,6 +266,13 @@ void data(string dir, string sample, string pol)
   if(up) canvas2->SaveAs("output/data/plots/up/model.pdf");
   else canvas2->SaveAs("output/data/plots/down/model.pdf");
   
+  dataset1->plotOn(frame);
+  model_neg->plotOn(frame);
+  model_neg->plotOn(frame, Components("arg"), FillColor(kRed), DrawOption("F"));
+  if(up) canvas2->SaveAs("output/data/plots/up/model_data.pdf");
+  else canvas2->SaveAs("output/data/plots/down/model_data.pdf");
+
+  
   h_Dst_pT_MC->Draw();
   h_Dst_pT_MC->Draw("hist same");
   h_Dst_pT_data->Draw("same");
@@ -312,7 +319,7 @@ void data(string dir, string sample, string pol)
   printdevhists(h_phi_Dst_pos_w, h_phi_Dst_neg_w, pol, "phi_", true);
   printdevhists(h_phi_Dst_pos_sw, h_phi_Dst_neg_sw, pol, "phi_s", true);
   
-  printdevhists(h_D0_M_pos, h_D0_neg, pol, "D0m", false);
+  printdevhists(h_D0_M_pos, h_D0_M_neg, pol, "D0m", false);
   printdevhists(h_D0_M_pos_w, h_D0_M_neg_w, pol, "D0m_", true);
   printdevhists(h_D0_M_pos_sw, h_D0_M_neg_sw, pol, "D0m_s", true);
   
