@@ -148,6 +148,11 @@ void data(string dir, string sample, string pol)
   TH1F *h_Dst_DTF_pos_sw = new TH1F("h_Dst_DTF_pos_sw", ";DTF Mass/MeV; Event", 34, 2004., 2021.);
   TH1F *h_Dst_DTF_neg_sw = new TH1F("h_Dst_DTF_neg_sw", ";DsTF Mass/MeV; Event", 34, 2004., 2021.);
 
+  TH1F *h_Dst_pT_data_neg_w = new TH1F("h_Dst_pT_data_neg_w", ";Dst pT/MeV; Event", 180, 2000., 11000.);
+  TH1F *h_Dst_pT_data_pos_w = new TH1F("h_Dst_pT_data_pos_w", ";Dst pT/MeV; Event", 180, 2000., 11000.);
+  TH1F *h_Dst_pT_data_neg_sw = new TH1F("h_Dst_pT_data_neg_sw", ";Dst pT/MeV; Event", 180, 2000., 11000.);
+  TH1F *h_Dst_pT_data_pos_sw = new TH1F("h_Dst_pT_data_pos_sw", ";Dst pT/MeV; Event", 180, 2000., 11000.);
+ 
   TH1F *h_Dst_pT_data = new TH1F("h_Dst_pT_data", ";Dst pT/MeV; Event", 180, 2000., 11000.);
   TH1F *h_Dst_pT_data_sw = new TH1F("h_Dst_pT_data_sw", ";Dst pT/MeV; Event", 180, 2000., 11000.);
   TH1F *h_Dst_pT_data_nw = new TH1F("h_Dst_pT_data_nw", ";Dst pT/MeV; Event", 180, 2000., 11000.);
@@ -161,6 +166,13 @@ void data(string dir, string sample, string pol)
   TH1F *h_phi_Dst_pos_w = new TH1F("h_phi_Dst_pos_w", ";#phi;Events", 70, -3.5, 3.5);
   TH1F *h_phi_Dst_neg_sw = new TH1F("h_phi_Dst_neg_sw", ";#phi;Events", 70, -3.5, 3.5);
   TH1F *h_phi_Dst_pos_sw = new TH1F("h_phi_Dst_pos_sw", ";#phi;Events", 70, -3.5, 3.5);
+
+  TH1F *h_D0_M_pos = new TH1F("h_D0_M_pos",";D0 mass/MeV", 96, 1840., 1888.);
+  TH1F *h_D0_M_neg = new TH1F("h_D0_M_neg",";D0 mass/MeV", 96, 1840., 1888.);
+  TH1F *h_D0_M_pos_w = new TH1F("h_D0_M_pos_w",";D0 mass/MeV", 96, 1840., 1888.);
+  TH1F *h_D0_M_neg_w = new TH1F("h_D0_M_neg_w",";D0 mass/MeV", 96, 1840., 1888.);
+  TH1F *h_D0_M_pos_sw = new TH1F("h_D0_M_pos_sw",";D0 mass/MeV", 96, 1840., 1888.);
+  TH1F *h_D0_M_neg_sw = new TH1F("h_D0_M_neg_sw",";D0 mass/MeV", 96, 1840., 1888.);
 
   h_phi_Dst_neg->Sumw2();
   h_phi_Dst_pos->Sumw2();
@@ -192,6 +204,10 @@ void data(string dir, string sample, string pol)
     {
       h_Dst_pT_data->Fill(Dst_pT, sData->GetSumOfEventSWeight(i_neg));
       h_Dst_pT_data_sw->Fill(Dst_pT, sData->GetSWeight(i_neg, "sig_yield"));
+      
+      h_Dst_pT_data_neg_w->Fill(Dst_pT, sData->GetSumOfEventSWeight(i_neg));
+      h_Dst_pT_data_neg_sw->Fill(Dst_pT, sData->GetSWeight(i_neg, "sig_yield"));
+      
       h_Dst_DTF_neg_w->Fill(DTF_mass, sData->GetSumOfEventSWeight(i_neg));
       h_Dst_DTF_neg_sw->Fill(DTF_mass, sData->GetSWeight(i_neg, "sig_yield"));
       h_Dst_DTF_neg->Fill(DTF_mass);
@@ -199,6 +215,11 @@ void data(string dir, string sample, string pol)
       h_phi_Dst_neg_w->Fill(Dst_phi, sData->GetSumOfEventSWeight(i_neg));
       h_phi_Dst_neg_sw->Fill(Dst_phi, sData->GetSWeight(i_neg, "sig_yield"));
       h_phi_Dst_neg->Fill(Dst_phi);
+      
+      h_D0_M_neg_w->Fill(D0_mass, sData->GetSumOfEventSWeight(i_neg));
+      h_D0_M_neg_sw->Fill(D0_mass, sData->GetSWeight(i_neg, "sig_yield"));
+      h_D0_M_neg->Fill(D0_mass);
+      
       h_Dst_eta_phi_plane_neg->Fill(Dst_phi, Dst_eta, sData->GetSWeight(i_neg, "sig_yield"));
       ++i_neg;
     }
@@ -206,6 +227,10 @@ void data(string dir, string sample, string pol)
     {
       h_Dst_pT_data->Fill(Dst_pT, sData2->GetSumOfEventSWeight(i_pos));
       h_Dst_pT_data_sw->Fill(Dst_pT, sData2->GetSWeight(i_pos, "sig_yield_2"));
+      
+      h_Dst_pT_data_pos_w->Fill(Dst_pT, sData2->GetSumOfEventSWeight(i_pos));
+      h_Dst_pT_data_pos_sw->Fill(Dst_pT, sData2->GetSWeight(i_pos, "sig_yield_2"));
+      
       h_Dst_DTF_pos_w->Fill(DTF_mass, sData2->GetSumOfEventSWeight(i_pos));
       h_Dst_DTF_pos_sw->Fill(DTF_mass, sData2->GetSWeight(i_pos, "sig_yield_2"));
       h_Dst_DTF_pos->Fill(DTF_mass);
@@ -213,6 +238,11 @@ void data(string dir, string sample, string pol)
       h_phi_Dst_pos_w->Fill(Dst_phi, sData2->GetSumOfEventSWeight(i_pos));
       h_phi_Dst_pos_sw->Fill(Dst_phi, sData2->GetSWeight(i_pos, "sig_yield_2"));
       h_phi_Dst_pos->Fill(Dst_phi);
+      
+      h_D0_M_neg_w->Fill(D0_mass, sData2->GetSumOfEventSWeight(i_pos));
+      h_D0_M_neg_sw->Fill(D0_mass, sData2->GetSWeight(i_pos, "sig_yield_2"));
+      h_D0_M_neg->Fill(D0_mass);
+      
       h_Dst_eta_phi_plane_pos->Fill(Dst_phi, Dst_eta, sData2->GetSWeight(i_pos, "sig_yield_2"));
       ++i_pos;
     }
@@ -225,7 +255,7 @@ void data(string dir, string sample, string pol)
   h_Dst_pT_data_sw->Scale(1./h_Dst_pT_data_sw->GetSumOfWeights());
   h_Dst_pT_data->SetLineColor(kRed);
   h_Dst_pT_data_nw->SetLineColor(kBlack);
-  h_Dst_pT_data_sw->SetLineColor(kPink);
+  h_Dst_pT_data_sw->SetLineColor(kGreen);
 
   TCanvas *canvas2 = new TCanvas();
   h_Dst_pT_MC->Draw();
@@ -249,11 +279,11 @@ void data(string dir, string sample, string pol)
   else canvas2->SaveAs("output/data/plots/down/eta_phi_plane.pdf");
 
   double nPos = h_Dst_DTF_pos->GetSumOfWeights();
-  double nPosW = h_Dst_DTF_pos_w->GetSumOfWeights();
-  double nPosSW = h_Dst_DTF_pos_sw->GetSumOfWeights();
+  double nPosW = h_Dst_pT_data_pos_w->GetSumOfWeights();
+  double nPosSW = h_Dst_pT_data_pos_sw->GetSumOfWeights();
   double nNeg = h_Dst_DTF_neg->GetSumOfWeights();
-  double nNegW = h_Dst_DTF_neg_w->GetSumOfWeights();
-  double nNegSW = h_Dst_DTF_neg_sw->GetSumOfWeights();
+  double nNegW = h_Dst_pT_data_neg_w->GetSumOfWeights();
+  double nNegSW = h_Dst_pT_data_neg_sw->GetSumOfWeights();
   double asym = (nPos - nNeg)/(nPos + nNeg);
   double asymW = (nPosW - nNegW)/(nPosW + nNegW);
   double asymSW = (nPosSW - nNegSW)/(nPosSW + nNegSW);
@@ -273,6 +303,9 @@ void data(string dir, string sample, string pol)
   printdevhists(h_phi_Dst_pos, h_phi_Dst_neg, pol, "phi", false);
   printdevhists(h_phi_Dst_pos_w, h_phi_Dst_neg_w, pol, "phi_", true);
   printdevhists(h_phi_Dst_pos_sw, h_phi_Dst_neg_sw, pol, "phi_s", true);
+  
+  printdevhists(h_Dst_pT_data_pos_w, h_Dst_pT_data_neg_w, pol, "pT_", true);
+  printdevhists(h_Dst_pT_data_pos_sw, h_Dst_pT_data_neg_sw, pol, "pT_s", true);
 
   h_Dst_eta_phi_plane_pos->Write();
   out_hist_fi->Write();

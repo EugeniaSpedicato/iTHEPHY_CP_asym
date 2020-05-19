@@ -63,7 +63,7 @@ RooArgList:: = (sig_yield_2,bkg_yield_2)
 === Event 90%
 === Event 100%
 Total asymmetry before weighting: -0.0211162 +/- 4.66805e-10
-Total asymmetry after weighting: -8.7594e-06 +/- 7.32996e-09
-Total asymmetry after signal weighting: 0.000371382 +/- 7.94223e-09
-computation time/s: 587.335
-computation time/min: 9.78891
+Total asymmetry after weighting: 1.16768e-05 +/- 7.34771e-09
+Total asymmetry after signal weighting: -1.34443e-05 +/- 7.90571e-09
+computation time/s: 726.297
+computation time/min: 12.1049
