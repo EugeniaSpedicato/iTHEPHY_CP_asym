@@ -40,6 +40,7 @@ void printdevhists(TH1F *h_pos, TH1F *h_neg, string polarisation, string var, bo
   h_pos->Divide(h_neg);
   title_name = "h_Dst_asym"+var;
   h_pos->SetName(title_name.c_str());
+  h_pos->SetRangeUser(-0.1, 0.1, "Y");
   h_pos->Draw();
   h_pos->Draw("hist same");
   func.Draw("same");
@@ -152,10 +153,10 @@ void data(string dir, string sample, string pol)
   TH1F *h_Dst_DTF_pos_sw = new TH1F("h_Dst_DTF_pos_sw", ";DTF Mass/MeV; Event", 34, 2004., 2021.);
   TH1F *h_Dst_DTF_neg_sw = new TH1F("h_Dst_DTF_neg_sw", ";DsTF Mass/MeV; Event", 34, 2004., 2021.);
 
-  TH1F *h_Dst_pT_data_neg_w = new TH1F("h_Dst_pT_data_neg_w", ";Dst pT/MeV; Event", 180, 2000., 11000.);
-  TH1F *h_Dst_pT_data_pos_w = new TH1F("h_Dst_pT_data_pos_w", ";Dst pT/MeV; Event", 180, 2000., 11000.);
-  TH1F *h_Dst_pT_data_neg_sw = new TH1F("h_Dst_pT_data_neg_sw", ";Dst pT/MeV; Event", 180, 2000., 11000.);
-  TH1F *h_Dst_pT_data_pos_sw = new TH1F("h_Dst_pT_data_pos_sw", ";Dst pT/MeV; Event", 180, 2000., 11000.);
+  TH1F *h_Dst_pT_data_neg_w = new TH1F("h_Dst_pT_data_neg_w", ";Dst pT/MeV; Event", 45, 2000., 11000.);
+  TH1F *h_Dst_pT_data_pos_w = new TH1F("h_Dst_pT_data_pos_w", ";Dst pT/MeV; Event", 45, 2000., 11000.);
+  TH1F *h_Dst_pT_data_neg_sw = new TH1F("h_Dst_pT_data_neg_sw", ";Dst pT/MeV; Event", 45, 2000., 11000.);
+  TH1F *h_Dst_pT_data_pos_sw = new TH1F("h_Dst_pT_data_pos_sw", ";Dst pT/MeV; Event", 45, 2000., 11000.);
  
   TH1F *h_Dst_pT_data = new TH1F("h_Dst_pT_data", ";Dst pT/MeV; Event", 180, 2000., 11000.);
   TH1F *h_Dst_pT_data_sw = new TH1F("h_Dst_pT_data_sw", ";Dst pT/MeV; Event", 180, 2000., 11000.);
