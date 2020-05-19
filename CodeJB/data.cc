@@ -117,13 +117,13 @@ void data(string dir, string sample, string pol)
   RooRealVar *N = new RooRealVar("N", "N", 0.006, 0., 0.01);
   RooRealVar *a = new RooRealVar("a", "a", 2004., 2000., 2010.);
   RooRealVar *c = new RooRealVar("c", "c", 0.05, 0., 0.5);
-  RooRealVar *b = new RooRealVar("b", "b", 0.681, 0., 2.);
+  RooRealVar *b = new RooRealVar("b", "b", 0.681, 0., 4.);
   RooRealVar *mean = new RooRealVar("mean", "mean", 2010., 2008., 2012.);
   RooRealVar *sigma = new RooRealVar("sigma", "sigma", 0.3, 0., 1.);
-  RooRealVar *sig_yield = new RooRealVar("sig_yield", "sig_yield", 25000., 0., 200000.);
-  RooRealVar *bkg_yield = new RooRealVar("bkg_yield", "bkg_yield", 1000., 0., 10000.);
-  RooRealVar *sig_yield_2 = new RooRealVar("sig_yield_2", "sig_yield_2", 25000., 0., 200000.);
-  RooRealVar *bkg_yield_2 = new RooRealVar("bkg_yield_2", "bkg_yield_2", 1000., 0., 10000.);
+  RooRealVar *sig_yield = new RooRealVar("sig_yield", "sig_yield", 250000., 0., 400000.);
+  RooRealVar *bkg_yield = new RooRealVar("bkg_yield", "bkg_yield", 10000., 0., 50000.);
+  RooRealVar *sig_yield_2 = new RooRealVar("sig_yield_2", "sig_yield_2", 250000., 0., 400000.);
+  RooRealVar *bkg_yield_2 = new RooRealVar("bkg_yield_2", "bkg_yield_2", 10000., 0., 50000.);
 
   RooBreitWigner *sig = new RooBreitWigner("sig", "sig", *DTF_Mass, *mean, *sigma);
   RooAbsPdf *arg = RooClassFactory::makePdfInstance("arg", "1./N*pow(DTF_Mass-a,b)*exp(-c*(DTF_Mass-a))", RooArgSet(*DTF_Mass, *N, *a, *b, *c));
