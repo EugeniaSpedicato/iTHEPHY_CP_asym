@@ -155,7 +155,7 @@ void data(string dir, string sample, string pol)
   RooMinuit(*nll_pos).migrad();
   //model_pos->fitTo(*dataset2, Extended(), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   RooStats::SPlot *sData2 = new RooStats::SPlot("sData2", "An SPlot2", *dataset2, model_pos, RooArgList(*sig_yield_2, *bkg_yield_2));
-  ROOT::DisableThreadSafety();
+
   RooPlot *frame = DTF_Mass->frame();
   model_neg->plotOn(frame);
   model_neg->plotOn(frame, Components("arg"), FillColor(kRed), DrawOption("F"));
