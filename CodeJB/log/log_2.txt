@@ -29,57 +29,21 @@ Processing data.cc++("$dir", "D02Kmpip_15_Dw", "DOWN")...
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_neg,arg_neg)
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_tiny_GOF3) first = 242934 last = 323912 Likelihood offset now set to 142010
-[#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_neg,arg_neg)
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_tiny_GOF5) first = 404890 last = 485868 Likelihood offset now set to 142292
-[#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_neg,arg_neg)
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_tiny_GOF2) first = 161956 last = 242934 Likelihood offset now set to 142751
-[#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_neg,arg_neg)
-[#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_neg,arg_neg)
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_tiny_GOF4) first = 323912 last = 404890 Likelihood offset now set to 141861
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_tiny_GOF6) first = 485868 last = 566846 Likelihood offset now set to 143098
-[#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_neg,arg_neg)
-[#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_neg,arg_neg)
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_tiny_GOF0) first = 0 last = 80978 Likelihood offset now set to 142347
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_tiny_GOF7) first = 566846 last = 647824 Likelihood offset now set to -7.46412e+06
-[#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_neg,arg_neg)
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_tiny_GOF1) first = 80978 last = 161956 Likelihood offset now set to 142665
-[#1] INFO:Minization -- RooMinimizer::optimizeConst: deactivating const optimization
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:Eval -- RooAbsTestStatistic::initMPMode: started 8 remote server process.
-[#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_neg,arg_neg)
 [#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_neg,arg_neg)
 [#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_neg,arg_neg)
 [#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_neg,arg_neg)
 [#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_neg,arg_neg)
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF3) first = 728801 last = 971735 Likelihood offset now set to 425463
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF0) first = 0 last = 242933 Likelihood offset now set to 426980
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF2) first = 485867 last = 728801 Likelihood offset now set to 428148
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF5) first = 1214668 last = 1457602 Likelihood offset now set to 428193
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF1) first = 242933 last = 485867 Likelihood offset now set to 427656
 [#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_neg,arg_neg)
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF7) first = 1700536 last = 1943470 Likelihood offset now set to -2.57527e+07
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF4) first = 971735 last = 1214668 Likelihood offset now set to 426831
 [#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_neg,arg_neg)
-[#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_neg,arg_neg)
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF3) first = 728801 last = 971735 Likelihood offset now set to 344382
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF6) first = 1457602 last = 1700536 Likelihood offset now set to 347166
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF7) first = 1700536 last = 1943470 Likelihood offset now set to -2.5591e+07
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF0) first = 0 last = 242933 Likelihood offset now set to 346487
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF2) first = 485867 last = 728801 Likelihood offset now set to 347584
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF5) first = 1214668 last = 1457602 Likelihood offset now set to 348047
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF4) first = 971735 last = 1214668 Likelihood offset now set to 346302
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF1) first = 242933 last = 485867 Likelihood offset now set to 347431
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF6) first = 1457602 last = 1700536 Likelihood offset now set to 427782
 [#1] INFO:Minization -- RooMinimizer::optimizeConst: deactivating const optimization
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
@@ -89,15 +53,15 @@ Processing data.cc++("$dir", "D02Kmpip_15_Dw", "DOWN")...
 [#1] INFO:Minization -- RooMinimizer::optimizeConst: deactivating const optimization
 [#1] INFO:InputArguments -- Printing Yields
 RooArgList:: = (sig_yield,bkg_yield)
-[#1] INFO:InputArguments -- yield in pdf: sig_yield 1.58954e+06
-[#1] INFO:InputArguments -- yield in pdf: bkg_yield 353932
+[#1] INFO:InputArguments -- yield in pdf: sig_yield 1.58054e+06
+[#1] INFO:InputArguments -- yield in pdf: bkg_yield 362932
 [#0] WARNING:InputArguments -- Minimum Range for sig_yield must be 0.  [#0] WARNING:InputArguments -- Setting min range to 0
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#0] WARNING:InputArguments -- Minimum Range for bkg_yield must be 0.  [#0] WARNING:InputArguments -- Setting min range to 0
 [#1] INFO:Eval -- Checking Likelihood normalization:  
 [#1] INFO:Eval -- Yield of specie  Sum of Row in Matrix   Norm
-[#1] INFO:Eval -- 1.58954e+06 1.58954e+06 1
-[#1] INFO:Eval -- 353932 353932 1
+[#1] INFO:Eval -- 1.58054e+06 1.58054e+06 1
+[#1] INFO:Eval -- 362932 362932 1
 [#1] INFO:Eval -- Calculating sWeight
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:Eval -- RooAbsTestStatistic::initMPMode: started 8 remote server process.
@@ -119,57 +83,21 @@ RooArgList:: = (sig_yield,bkg_yield)
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_pos,arg_pos)
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_tiny_GOF2) first = 161933 last = 242900 Likelihood offset now set to 143935
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF7) first = 1700302 last = 1943203 Likelihood offset now set to -2.57445e+07
 [#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_pos,arg_pos)
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_tiny_GOF7) first = 566768 last = 647735 Likelihood offset now set to -7.46174e+06
-[#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_pos,arg_pos)
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_tiny_GOF5) first = 404834 last = 485801 Likelihood offset now set to 143406
-[#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_pos,arg_pos)
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_tiny_GOF0) first = 0 last = 80966 Likelihood offset now set to 143218
-[#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_pos,arg_pos)
-[#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_pos,arg_pos)
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_tiny_GOF4) first = 323867 last = 404834 Likelihood offset now set to 143282
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_tiny_GOF3) first = 242900 last = 323867 Likelihood offset now set to 143003
-[#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_pos,arg_pos)
-[#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_pos,arg_pos)
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_tiny_GOF1) first = 80966 last = 161933 Likelihood offset now set to 143359
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_tiny_GOF6) first = 485801 last = 566768 Likelihood offset now set to 143915
-[#1] INFO:Minization -- RooMinimizer::optimizeConst: deactivating const optimization
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:Eval -- RooAbsTestStatistic::initMPMode: started 8 remote server process.
-[#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF5) first = 1214501 last = 1457402 Likelihood offset now set to 430079
 [#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_pos,arg_pos)
 [#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_pos,arg_pos)
 [#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_pos,arg_pos)
 [#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_pos,arg_pos)
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF0) first = 0 last = 242900 Likelihood offset now set to 430166
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF3) first = 728701 last = 971601 Likelihood offset now set to 430289
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF2) first = 485800 last = 728701 Likelihood offset now set to 430669
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF4) first = 971601 last = 1214501 Likelihood offset now set to 430120
 [#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_pos,arg_pos)
 [#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_pos,arg_pos)
-[#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_pos,arg_pos)
-[#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_pos,arg_pos)
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF6) first = 1457402 last = 1700302 Likelihood offset now set to 349852
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF4) first = 971601 last = 1214501 Likelihood offset now set to 348668
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF7) first = 1700302 last = 1943203 Likelihood offset now set to -2.55833e+07
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF0) first = 0 last = 242900 Likelihood offset now set to 348842
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF3) first = 728701 last = 971601 Likelihood offset now set to 348953
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF5) first = 1214501 last = 1457402 Likelihood offset now set to 348313
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF2) first = 485800 last = 728701 Likelihood offset now set to 349689
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF1) first = 242900 last = 485800 Likelihood offset now set to 348448
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF1) first = 242900 last = 485800 Likelihood offset now set to 430163
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF6) first = 1457402 last = 1700302 Likelihood offset now set to 430739
 [#1] INFO:Minization -- RooMinimizer::optimizeConst: deactivating const optimization
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
@@ -179,15 +107,15 @@ RooArgList:: = (sig_yield,bkg_yield)
 [#1] INFO:Minization -- RooMinimizer::optimizeConst: deactivating const optimization
 [#1] INFO:InputArguments -- Printing Yields
 RooArgList:: = (sig_yield_2,bkg_yield_2)
-[#1] INFO:InputArguments -- yield in pdf: sig_yield_2 1.58595e+06
-[#1] INFO:InputArguments -- yield in pdf: bkg_yield_2 357254
+[#1] INFO:InputArguments -- yield in pdf: sig_yield_2 1.57663e+06
+[#1] INFO:InputArguments -- yield in pdf: bkg_yield_2 366586
 [#0] WARNING:InputArguments -- Minimum Range for sig_yield_2 must be 0.  [#0] WARNING:InputArguments -- Setting min range to 0
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#0] WARNING:InputArguments -- Minimum Range for bkg_yield_2 must be 0.  [#0] WARNING:InputArguments -- Setting min range to 0
 [#1] INFO:Eval -- Checking Likelihood normalization:  
 [#1] INFO:Eval -- Yield of specie  Sum of Row in Matrix   Norm
-[#1] INFO:Eval -- 1.58595e+06 1.58595e+06 1
-[#1] INFO:Eval -- 357254 357254 1
+[#1] INFO:Eval -- 1.57663e+06 1.57663e+06 0.999998
+[#1] INFO:Eval -- 366586 366601 0.999972
 [#1] INFO:Eval -- Calculating sWeight
 === Event 0%
 === Event 10%
@@ -219,7 +147,7 @@ RooArgList:: = (sig_yield_2,bkg_yield_2)
 [#1] INFO:Plotting -- RooAbsPdf::plotOn(model_pos) indirectly selected PDF components: ()
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 Total asymmetry before weighting: -6.86963e-05 +/- 2.61014e-10
-Total asymmetry after weighting: -6.86963e-05 +/- 2.61014e-10
-Total asymmetry after signal weighting: -0.00114729 +/- 3.53444e-10
-computation time/s: 292.824
-computation time/min: 4.88041
+Total asymmetry after weighting: -6.86277e-05 +/- 2.61013e-10
+Total asymmetry after signal weighting: -0.00120709 +/- 3.5654e-10
+computation time/s: 373.663
+computation time/min: 6.22772
