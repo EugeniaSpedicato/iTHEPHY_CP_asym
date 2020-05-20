@@ -129,7 +129,7 @@ void data(string dir, string sample, string pol)
   if(up)
   {
 	//N1 = new RooRealVar("N1", "N1", 200., 100., 10000.);
-	a1 = new RooRealVar("a1", "a1", 2004., 2000. , 2010.);
+	a1 = new RooRealVar("a1", "a1", 2003.9, 2000. , 2010.);
 	c1 = new RooRealVar("c1", "c1", 0.05, 0., 0.5);
 	b1 = new RooRealVar("b1", "b1", 0.9, 0.3, 2.);  
   }
@@ -143,14 +143,14 @@ void data(string dir, string sample, string pol)
   if(up)
   {
 	//N2 = new RooRealVar("N2", "N2", 200., 100., 10000.);
-	a2 = new RooRealVar("a2", "a2", 2004., 2000. , 2010.);
+	a2 = new RooRealVar("a2", "a2", 2003.9, 2000. , 2010.);
 	c2 = new RooRealVar("c2", "c2", 0.05, 0., 0.3);
 	b2 = new RooRealVar("b2", "b2", 0.9, 0.3, 2.);  
   }
   else
   {
 	//N2 = new RooRealVar("N2", "N2", 500., 100., 10000.);
-	a2 = new RooRealVar("a2", "a2", 2004., 2000. , 2008.);
+	a2 = new RooRealVar("a2", "a2", 2003.9, 2000. , 2008.);
 	c2 = new RooRealVar("c2", "c2", 0.05, 0., 0.5);
 	b2 = new RooRealVar("b2", "b2", 0.9, 0., 2.);
   }
@@ -171,13 +171,13 @@ void data(string dir, string sample, string pol)
   RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig_pos, *arg_pos),RooArgList(*sig_yield_2, *bkg_yield_2));
 
   ROOT::EnableThreadSafety();
-  //RooAbsReal* nll_neg = model_neg->createNLL(*dataset1, Extended(), NumCPU(nThreads), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1), Offset(true));
-  //RooMinuit(*nll_neg).migrad();
-  model_neg->fitTo(*dataset1, Extended(), NumCPU(nThreads), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+  RooAbsReal* nll_neg = model_neg->createNLL(*dataset1, Extended(), NumCPU(nThreads), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1), Offset(true));
+  RooMinuit(*nll_neg).migrad();
+  //model_neg->fitTo(*dataset1, Extended(), NumCPU(nThreads), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   RooStats::SPlot *sData = new RooStats::SPlot("sData", "An SPlot", *dataset1, model_neg, RooArgList(*sig_yield, *bkg_yield));
-  //RooAbsReal* nll_pos = model_pos->createNLL(*dataset2, Extended(), NumCPU(nThreads), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1), Offset(true));
-  //RooMinuit(*nll_pos).migrad();
-  model_pos->fitTo(*dataset2, Extended(), NumCPU(nThreads), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
+  RooAbsReal* nll_pos = model_pos->createNLL(*dataset2, Extended(), NumCPU(nThreads), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1), Offset(true));
+  RooMinuit(*nll_pos).migrad();
+  //model_pos->fitTo(*dataset2, Extended(), NumCPU(nThreads), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   RooStats::SPlot *sData2 = new RooStats::SPlot("sData2", "An SPlot2", *dataset2, model_pos, RooArgList(*sig_yield_2, *bkg_yield_2));
 
   TFile *f = (up)? new TFile("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root"): new TFile("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Dw_GEN.root");
