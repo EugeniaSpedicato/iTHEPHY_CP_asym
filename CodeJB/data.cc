@@ -117,39 +117,39 @@ void data(string dir, string sample, string pol)
   RooDataSet *dataset1b = new RooDataSet("dataset1b", "dataset1b", ntp, RooArgList(*DTF_Mass_iso, *Dst_ID_neg));
   RooDataSet *dataset2b = new RooDataSet("dataset2b", "dataset2b", ntp, RooArgList(*DTF_Mass_iso, *Dst_ID_pos));*/
 
-  RooRealVar *N1;
+  //RooRealVar *N1;
   RooRealVar *a1;
   RooRealVar *c1;
   RooRealVar *b1;
-  RooRealVar *N2;
+  //RooRealVar *N2;
   RooRealVar *a2;
   RooRealVar *c2;
   RooRealVar *b2;
   
   if(up)
   {
-	N1 = new RooRealVar("N1", "N1", 200., 100., 10000.);
+	//N1 = new RooRealVar("N1", "N1", 200., 100., 10000.);
 	a1 = new RooRealVar("a1", "a1", 2004., 2000. , 2010.);
 	c1 = new RooRealVar("c1", "c1", 0.05, 0., 0.3);
 	b1 = new RooRealVar("b1", "b1", 0.681, 0.3, 5.);  
   }
   else
   {
-	N1 = new RooRealVar("N1", "N1", 500., 100., 10000.);
+	//N1 = new RooRealVar("N1", "N1", 500., 100., 10000.);
 	a1 = new RooRealVar("a1", "a1", 2003.9, 2002. , 2008.);
 	c1 = new RooRealVar("c1", "c1", 0.05, 0., 0.5);
 	b1 = new RooRealVar("b1", "b1", 0.681, 0., 5.);
   }
   if(up)
   {
-	N2 = new RooRealVar("N2", "N2", 200., 100., 10000.);
+	//N2 = new RooRealVar("N2", "N2", 200., 100., 10000.);
 	a2 = new RooRealVar("a2", "a2", 2004., 2000. , 2010.);
 	c2 = new RooRealVar("c2", "c2", 0.05, 0., 0.3);
 	b2 = new RooRealVar("b2", "b2", 0.681, 0.3, 5.);  
   }
   else
   {
-	N2 = new RooRealVar("N2", "N2", 500., 100., 10000.);
+	//N2 = new RooRealVar("N2", "N2", 500., 100., 10000.);
 	a2 = new RooRealVar("a2", "a2", 2004., 2000. , 2008.);
 	c2 = new RooRealVar("c2", "c2", 0.05, 0., 0.5);
 	b2 = new RooRealVar("b2", "b2", 0.681, 0., 5.);
@@ -165,8 +165,8 @@ void data(string dir, string sample, string pol)
 
   RooBreitWigner *sig_neg = new RooBreitWigner("sig_neg", "sig_neg", *DTF_Mass, *mean, *sigma);
   RooBreitWigner *sig_pos = new RooBreitWigner("sig_pos", "sig_pos", *DTF_Mass, *mean2, *sigma2);
-  RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("arg_neg", "N1*pow(DTF_Mass-a1,b1)*exp(-c1*(DTF_Mass-a1))", RooArgSet(*DTF_Mass, *N1, *a1, *b1, *c1));
-  RooAbsPdf *arg_pos = RooClassFactory::makePdfInstance("arg_pos", "N2*pow(DTF_Mass-a2,b2)*exp(-c2*(DTF_Mass-a2))", RooArgSet(*DTF_Mass, *N2, *a2, *b2, *c2));
+  RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("arg_neg", "pow(DTF_Mass-a1,b1)*exp(-c1*(DTF_Mass-a1))", RooArgSet(*DTF_Mass, *a1, *b1, *c1));
+  RooAbsPdf *arg_pos = RooClassFactory::makePdfInstance("arg_pos", "pow(DTF_Mass-a2,b2)*exp(-c2*(DTF_Mass-a2))", RooArgSet(*DTF_Mass, *a2, *b2, *c2));
   RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig_neg, *arg_neg),RooArgList(*sig_yield, *bkg_yield));
   RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig_pos, *arg_pos),RooArgList(*sig_yield_2, *bkg_yield_2));
 

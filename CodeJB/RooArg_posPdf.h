@@ -18,7 +18,6 @@ public:
   RooArg_posPdf() {} ; 
   RooArg_posPdf(const char *name, const char *title,
 	      RooAbsReal& _DTF_Mass,
-	      RooAbsReal& _N2,
 	      RooAbsReal& _a2,
 	      RooAbsReal& _b2,
 	      RooAbsReal& _c2);
@@ -29,7 +28,6 @@ public:
 protected:
 
   RooRealProxy DTF_Mass ;
-  RooRealProxy N2 ;
   RooRealProxy a2 ;
   RooRealProxy b2 ;
   RooRealProxy c2 ;

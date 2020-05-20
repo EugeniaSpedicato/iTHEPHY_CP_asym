@@ -46,13 +46,13 @@ Processing data.cc++("$dir", "D02Kmpip_15_Up", "UP")...
 [#1] INFO:Minization -- RooMinimizer::optimizeConst: deactivating const optimization
 [#1] INFO:InputArguments -- Printing Yields
 RooArgList:: = (sig_yield,bkg_yield)
-[#1] INFO:InputArguments -- yield in pdf: sig_yield 1.09218e+06
-[#1] INFO:InputArguments -- yield in pdf: bkg_yield 255438
+[#1] INFO:InputArguments -- yield in pdf: sig_yield 1.09506e+06
+[#1] INFO:InputArguments -- yield in pdf: bkg_yield 252572
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:Eval -- Checking Likelihood normalization:  
 [#1] INFO:Eval -- Yield of specie  Sum of Row in Matrix   Norm
-[#1] INFO:Eval -- 1.09218e+06 1.09218e+06 1
-[#1] INFO:Eval -- 255438 255439 0.999997
+[#1] INFO:Eval -- 1.09506e+06 1.09508e+06 0.999984
+[#1] INFO:Eval -- 252572 252574 0.999989
 [#1] INFO:Eval -- Calculating sWeight
 [#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
@@ -91,13 +91,13 @@ RooArgList:: = (sig_yield,bkg_yield)
 [#1] INFO:Minization -- RooMinimizer::optimizeConst: deactivating const optimization
 [#1] INFO:InputArguments -- Printing Yields
 RooArgList:: = (sig_yield_2,bkg_yield_2)
-[#1] INFO:InputArguments -- yield in pdf: sig_yield_2 1.04683e+06
-[#1] INFO:InputArguments -- yield in pdf: bkg_yield_2 245061
+[#1] INFO:InputArguments -- yield in pdf: sig_yield_2 1.04945e+06
+[#1] INFO:InputArguments -- yield in pdf: bkg_yield_2 242435
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:Eval -- Checking Likelihood normalization:  
 [#1] INFO:Eval -- Yield of specie  Sum of Row in Matrix   Norm
-[#1] INFO:Eval -- 1.04683e+06 1.04683e+06 0.999995
-[#1] INFO:Eval -- 245061 245063 0.999993
+[#1] INFO:Eval -- 1.04945e+06 1.04946e+06 0.999992
+[#1] INFO:Eval -- 242435 242435 0.999999
 [#1] INFO:Eval -- Calculating sWeight
 === Event 0%
 === Event 10%
@@ -128,8 +128,8 @@ RooArgList:: = (sig_yield_2,bkg_yield_2)
 [#1] INFO:Plotting -- RooAbsPdf::plotOn(model_pos) directly selected PDF components: (arg_pos)
 [#1] INFO:Plotting -- RooAbsPdf::plotOn(model_pos) indirectly selected PDF components: ()
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-Total asymmetry before weighting: -0.0211162 +/- 0.000683588
-Total asymmetry after weighting: -0.0211154 +/- 9.46729e-08
-Total asymmetry after signal weighting: -0.0211871 +/- 1.16823e-07
-computation time/s: 235.013
-computation time/min: 3.91689
+Total asymmetry before weighting: -0.0211162 +/- 0.000682713
+Total asymmetry after weighting: -0.0211155 +/- 9.46729e-08
+Total asymmetry after signal weighting: -0.0212333 +/- 1.16524e-07
+computation time/s: 208.026
+computation time/min: 3.4671
