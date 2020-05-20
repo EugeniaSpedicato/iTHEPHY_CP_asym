@@ -136,9 +136,9 @@ void data(string dir, string sample, string pol)
   else
   {
 	//N1 = new RooRealVar("N1", "N1", 500., 100., 10000.);
-	a1 = new RooRealVar("a1", "a1", 2003.9, 1995. , 2008.);
+	a1 = new RooRealVar("a1", "a1", 2003.9, 2003. , 2006.);
 	c1 = new RooRealVar("c1", "c1", 0.05, 0., 0.5);
-	b1 = new RooRealVar("b1", "b1", 1.3, 0., 8.);
+	b1 = new RooRealVar("b1", "b1", 1.3, 0., 6.5);
   }
   if(up)
   {
@@ -150,9 +150,9 @@ void data(string dir, string sample, string pol)
   else
   {
 	//N2 = new RooRealVar("N2", "N2", 500., 100., 10000.);
-	a2 = new RooRealVar("a2", "a2", 2003.9, 1995. , 2008.);
+	a2 = new RooRealVar("a2", "a2", 2003.9, 2003. , 2006.);
 	c2 = new RooRealVar("c2", "c2", 0.05, 0., 0.5);
-	b2 = new RooRealVar("b2", "b2", 1.3, 0., 8.);
+	b2 = new RooRealVar("b2", "b2", 1.3, 0., 6.5);
   }
   RooRealVar *mean = new RooRealVar("mean", "mean", 2010., 2008., 2012.);
   RooRealVar *sigma = new RooRealVar("sigma", "sigma", 0.31, 0., 1.);
