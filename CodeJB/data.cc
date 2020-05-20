@@ -128,40 +128,40 @@ void data(string dir, string sample, string pol)
   
   if(up)
   {
-	N1 = new RooRealVar("N1", "N1", 200., 100., 5000.);
+	N1 = new RooRealVar("N1", "N1", 200., 100., 10000.);
 	a1 = new RooRealVar("a1", "a1", 2004., 2000. , 2010.);
 	c1 = new RooRealVar("c1", "c1", 0.05, 0., 0.3);
-	b1 = new RooRealVar("b1", "b1", 0.681, 0.3, 2.);  
+	b1 = new RooRealVar("b1", "b1", 0.681, 0.3, 2.5);  
   }
   else
   {
-	N1 = new RooRealVar("N1", "N1", 500., 100., 5000.);
+	N1 = new RooRealVar("N1", "N1", 500., 100., 10000.);
 	a1 = new RooRealVar("a1", "a1", 2003.9, 2002. , 2008.);
 	c1 = new RooRealVar("c1", "c1", 0.05, 0., 0.5);
-	b1 = new RooRealVar("b1", "b1", 0.681, 0., 2.);
+	b1 = new RooRealVar("b1", "b1", 0.681, 0., 3.);
   }
   if(up)
   {
-	N2 = new RooRealVar("N2", "N2", 200., 100., 5000.);
+	N2 = new RooRealVar("N2", "N2", 200., 100., 10000.);
 	a2 = new RooRealVar("a2", "a2", 2004., 2000. , 2010.);
 	c2 = new RooRealVar("c2", "c2", 0.05, 0., 0.3);
-	b2 = new RooRealVar("b2", "b2", 0.681, 0.3, 1.8);  
+	b2 = new RooRealVar("b2", "b2", 0.681, 0.3, 2.5);  
   }
   else
   {
-	N2 = new RooRealVar("N2", "N2", 500., 100., 5000.);
+	N2 = new RooRealVar("N2", "N2", 500., 100., 10000.);
 	a2 = new RooRealVar("a2", "a2", 2004., 2000. , 2008.);
 	c2 = new RooRealVar("c2", "c2", 0.05, 0., 0.5);
-	b2 = new RooRealVar("b2", "b2", 0.681, 0., 2.);
+	b2 = new RooRealVar("b2", "b2", 0.681, 0., 3.);
   }
   RooRealVar *mean = new RooRealVar("mean", "mean", 2010., 2008., 2012.);
   RooRealVar *sigma = new RooRealVar("sigma", "sigma", 0.31, 0., 1.);
   RooRealVar *mean2 = new RooRealVar("mean2", "mean2", 2010., 2008., 2012.);
   RooRealVar *sigma2 = new RooRealVar("sigma2", "sigma2", 0.31, 0., 1.);
-  RooRealVar *sig_yield = (up)? new RooRealVar("sig_yield", "sig_yield_2", 1000000., 700000., 1250000.): new RooRealVar("sig_yield", "sig_yield", 1400000., 1000000., 1650000.);
-  RooRealVar *bkg_yield = new RooRealVar("bkg_yield", "bkg_yield", 280000., 100000., 450000.);
-  RooRealVar *sig_yield_2 = (up)? new RooRealVar("sig_yield_2", "sig_yield_2", 1000000., 700000., 1250000.): new RooRealVar("sig_yield_2", "sig_yield_2", 1400000., 1000000., 1650000.);
-  RooRealVar *bkg_yield_2 = new RooRealVar("bkg_yield_2", "bkg_yield_2", 280000., 100000., 450000.);
+  RooRealVar *sig_yield = (up)? new RooRealVar("sig_yield", "sig_yield_2", 1000000., 0., 1250000.): new RooRealVar("sig_yield", "sig_yield", 1400000., 0., 1650000.);
+  RooRealVar *bkg_yield = new RooRealVar("bkg_yield", "bkg_yield", 280000., 0., 450000.);
+  RooRealVar *sig_yield_2 = (up)? new RooRealVar("sig_yield_2", "sig_yield_2", 1000000., 0., 1250000.): new RooRealVar("sig_yield_2", "sig_yield_2", 1400000., 0., 1650000.);
+  RooRealVar *bkg_yield_2 = new RooRealVar("bkg_yield_2", "bkg_yield_2", 280000., 0., 450000.);
 
   RooBreitWigner *sig_neg = new RooBreitWigner("sig_neg", "sig_neg", *DTF_Mass, *mean, *sigma);
   RooBreitWigner *sig_pos = new RooBreitWigner("sig_pos", "sig_pos", *DTF_Mass, *mean2, *sigma2);
@@ -173,11 +173,11 @@ void data(string dir, string sample, string pol)
   ROOT::EnableThreadSafety();
   //RooAbsReal* nll_neg = model_neg->createNLL(*dataset1, Extended(), NumCPU(nThreads), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1), Offset(true));
   //RooMinuit(*nll_neg).migrad();
-  model_neg->fitTo(*dataset1, Extended(), NumCPU(nThreads), Minos(true), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1), SumW2Error(true), PrefitDataFraction(0.35));
+  model_neg->fitTo(*dataset1, Extended(), NumCPU(nThreads), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1), SumW2Error(true), PrefitDataFraction(0.35));
   RooStats::SPlot *sData = new RooStats::SPlot("sData", "An SPlot", *dataset1, model_neg, RooArgList(*sig_yield, *bkg_yield));
   //RooAbsReal* nll_pos = model_pos->createNLL(*dataset2, Extended(), NumCPU(nThreads), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1), Offset(true));
   //RooMinuit(*nll_pos).migrad();
-  model_pos->fitTo(*dataset2, Extended(), NumCPU(nThreads), Minos(true), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1), SumW2Error(true), PrefitDataFraction(0.35));
+  model_pos->fitTo(*dataset2, Extended(), NumCPU(nThreads), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1), SumW2Error(true), PrefitDataFraction(0.35));
   RooStats::SPlot *sData2 = new RooStats::SPlot("sData2", "An SPlot2", *dataset2, model_pos, RooArgList(*sig_yield_2, *bkg_yield_2));
 
   TFile *f = (up)? new TFile("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root"): new TFile("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Dw_GEN.root");

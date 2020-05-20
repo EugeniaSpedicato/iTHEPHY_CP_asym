@@ -9,7 +9,6 @@ Processing data.cc++("$dir", "D02Kmpip_15_Dw", "DOWN")...
 [#1] INFO:Eval -- RooTreeDataStore::loadValues(dataset1) Ignored 1943203 out of range events
 [#1] INFO:Eval -- RooAbsReal::attachToTree(Dst_ID) TTree Int_t branch Dst_ID will be converted to double precision
 [#1] INFO:Eval -- RooTreeDataStore::loadValues(dataset2) Ignored 1943470 out of range events
-[#0] WARNING:InputArguments -- RooAbsPdf::fitTo(model_neg) WARNING: sum-of-weights correction does not apply to MINOS errors
 [#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:Eval -- RooAbsTestStatistic::initMPMode: started 8 remote server process.
@@ -67,17 +66,6 @@ Processing data.cc++("$dir", "D02Kmpip_15_Dw", "DOWN")...
 [#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_neg,arg_neg)
 [#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_neg,arg_neg)
 [#1] INFO:Fitting -- RooAbsPdf::fitTo(model_neg) Calculating sum-of-weights-squared correction matrix for covariance matrix
- FUNCTION MUST BE MINIMIZED BEFORE CALLING MINOs     
- NEW MINIMUM FOUND.  GO BACK TO MINIMIZATION STEP.
- =================================================
-                                                  V
-                                                  V
-                                                  V
-                                               VVVVVVV
-                                                VVVVV
-                                                 VVV
-                                                  V
-
 [#1] INFO:Minization -- RooMinimizer::optimizeConst: deactivating const optimization
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
@@ -87,17 +75,14 @@ Processing data.cc++("$dir", "D02Kmpip_15_Dw", "DOWN")...
 [#1] INFO:Minization -- RooMinimizer::optimizeConst: deactivating const optimization
 [#1] INFO:InputArguments -- Printing Yields
 RooArgList:: = (sig_yield,bkg_yield)
-[#1] INFO:InputArguments -- yield in pdf: sig_yield 1.57103e+06
-[#1] INFO:InputArguments -- yield in pdf: bkg_yield 372440
-[#0] WARNING:InputArguments -- Minimum Range for sig_yield must be 0.  [#0] WARNING:InputArguments -- Setting min range to 0
+[#1] INFO:InputArguments -- yield in pdf: sig_yield 1.58218e+06
+[#1] INFO:InputArguments -- yield in pdf: bkg_yield 361287
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#0] WARNING:InputArguments -- Minimum Range for bkg_yield must be 0.  [#0] WARNING:InputArguments -- Setting min range to 0
 [#1] INFO:Eval -- Checking Likelihood normalization:  
 [#1] INFO:Eval -- Yield of specie  Sum of Row in Matrix   Norm
-[#1] INFO:Eval -- 1.57103e+06 1.57103e+06 1
-[#1] INFO:Eval -- 372440 372439 1
+[#1] INFO:Eval -- 1.58218e+06 1.58218e+06 1
+[#1] INFO:Eval -- 361287 361286 1
 [#1] INFO:Eval -- Calculating sWeight
-[#0] WARNING:InputArguments -- RooAbsPdf::fitTo(model_pos) WARNING: sum-of-weights correction does not apply to MINOS errors
 [#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:Eval -- RooAbsTestStatistic::initMPMode: started 8 remote server process.
@@ -155,30 +140,6 @@ RooArgList:: = (sig_yield,bkg_yield)
 [#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_pos,arg_pos)
 [#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (sig_pos,arg_pos)
 [#1] INFO:Fitting -- RooAbsPdf::fitTo(model_pos) Calculating sum-of-weights-squared correction matrix for covariance matrix
- FUNCTION MUST BE MINIMIZED BEFORE CALLING MINOs     
- NEW MINIMUM FOUND.  GO BACK TO MINIMIZATION STEP.
- =================================================
-                                                  V
-                                                  V
-                                                  V
-                                               VVVVVVV
-                                                VVVVV
-                                                 VVV
-                                                  V
-
- FUNCTION MUST BE MINIMIZED BEFORE CALLING MINOs     
- FUNCTION MUST BE MINIMIZED BEFORE CALLING MINOs     
- FUNCTION MUST BE MINIMIZED BEFORE CALLING MINOs     
- NEW MINIMUM FOUND.  GO BACK TO MINIMIZATION STEP.
- =================================================
-                                                  V
-                                                  V
-                                                  V
-                                               VVVVVVV
-                                                VVVVV
-                                                 VVV
-                                                  V
-
 [#1] INFO:Minization -- RooMinimizer::optimizeConst: deactivating const optimization
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
@@ -188,15 +149,13 @@ RooArgList:: = (sig_yield,bkg_yield)
 [#1] INFO:Minization -- RooMinimizer::optimizeConst: deactivating const optimization
 [#1] INFO:InputArguments -- Printing Yields
 RooArgList:: = (sig_yield_2,bkg_yield_2)
-[#1] INFO:InputArguments -- yield in pdf: sig_yield_2 1.60448e+06
-[#1] INFO:InputArguments -- yield in pdf: bkg_yield_2 338726
-[#0] WARNING:InputArguments -- Minimum Range for sig_yield_2 must be 0.  [#0] WARNING:InputArguments -- Setting min range to 0
+[#1] INFO:InputArguments -- yield in pdf: sig_yield_2 1.5769e+06
+[#1] INFO:InputArguments -- yield in pdf: bkg_yield_2 366300
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#0] WARNING:InputArguments -- Minimum Range for bkg_yield_2 must be 0.  [#0] WARNING:InputArguments -- Setting min range to 0
 [#1] INFO:Eval -- Checking Likelihood normalization:  
 [#1] INFO:Eval -- Yield of specie  Sum of Row in Matrix   Norm
-[#1] INFO:Eval -- 1.60448e+06 1.60448e+06 1
-[#1] INFO:Eval -- 338726 338726 1
+[#1] INFO:Eval -- 1.5769e+06 1.5769e+06 1
+[#1] INFO:Eval -- 366300 366300 1
 [#1] INFO:Eval -- Calculating sWeight
 === Event 0%
 === Event 10%
@@ -227,8 +186,8 @@ RooArgList:: = (sig_yield_2,bkg_yield_2)
 [#1] INFO:Plotting -- RooAbsPdf::plotOn(model_pos) directly selected PDF components: (arg_pos)
 [#1] INFO:Plotting -- RooAbsPdf::plotOn(model_pos) indirectly selected PDF components: ()
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-Total asymmetry before weighting: -6.86963e-05 +/- 0.000561135
-Total asymmetry after weighting: -6.86963e-05 +/- 6.43224e-08
-Total asymmetry after signal weighting: 0.0105234 +/- 7.8718e-08
-computation time/s: 905.691
-computation time/min: 15.0948
+Total asymmetry before weighting: -6.86963e-05 +/- 0.000562621
+Total asymmetry after weighting: -6.8738e-05 +/- 6.43224e-08
+Total asymmetry after signal weighting: -0.0016975 +/- 7.91356e-08
+computation time/s: 458.723
+computation time/min: 7.64538
