@@ -47,7 +47,7 @@ ClassImp(RooArg_posPdf);
  Double_t RooArg_posPdf::evaluate() const 
  { 
    // ENTER EXPRESSION IN TERMS OF VARIABLE ARGUMENTS HERE 
-   return 1./N2*pow(DTF_Mass-a2,b2)*exp(-c2*(DTF_Mass-a2)) ; 
+   return N2*pow(DTF_Mass-a2,b2)*exp(-c2*(DTF_Mass-a2)) ; 
  } 
 
 

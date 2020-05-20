@@ -47,7 +47,7 @@ ClassImp(RooArg_negPdf);
  Double_t RooArg_negPdf::evaluate() const 
  { 
    // ENTER EXPRESSION IN TERMS OF VARIABLE ARGUMENTS HERE 
-   return 1./N1*pow(DTF_Mass-a1,b1)*exp(-c1*(DTF_Mass-a1)) ; 
+   return N1*pow(DTF_Mass-a1,b1)*exp(-c1*(DTF_Mass-a1)) ; 
  } 
 
 
