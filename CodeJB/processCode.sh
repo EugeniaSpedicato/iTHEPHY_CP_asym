@@ -5,4 +5,5 @@
 
 export dir='../../Data'
 #root -l -b -q 'data.cc++("$dir", "D02Kmpip_15_Up", "UP")' > log/log.txt 2> log/err.txt
-root -l -b -q 'data.cc++("$dir", "D02Kmpip_15_Dw", "DOWN")' > log/log_2.txt 2> log/err_2.txt
+root -l -b -q 'data.cc++("$dir", "D02Kmpip_15_Dw", "DOWN")'
+# > log/log_2.txt 2> log/err_2.txt
