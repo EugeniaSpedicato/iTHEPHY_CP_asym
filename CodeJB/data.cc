@@ -84,8 +84,6 @@ void data(string dir, string sample, string pol)
     ntp->AddFile(input_name.c_str(),-1,"ntp;38");
   }
   int nEvents = ntp->GetEntries();
-  //ofstream outfile("output/data_neg.txt",ofstream::trunc);
-  //ofstream outfile2("output/data_pos.txt",ofstream::trunc);
 
 
   double nDst_pos = 0.; double nDst_neg = 0.;
@@ -129,7 +127,7 @@ void data(string dir, string sample, string pol)
   
   if(up)
   {
-	//N1 = new RooRealVar("N1", "N1", 200., 100., 10000.);
+	N1 = new RooRealVar("N1", "N1", 200., 100., 10000.);
 	a1 = new RooRealVar("a1", "a1", 2003.9, 2000. , 2010.);
 	c1 = new RooRealVar("c1", "c1", 0.05, 0., 0.5);
 	b1 = new RooRealVar("b1", "b1", 1.3, 0.3, 4.5);  
@@ -137,13 +135,13 @@ void data(string dir, string sample, string pol)
   else
   {
 	N1 = new RooRealVar("N1", "N1", 2122.54, 100., 3000.);
-	a1 = new RooRealVar("a1", "a1", 2004.3, 2000. , 2006.);
-	c1 = new RooRealVar("c1", "c1", 0.053, 0., 0.5);
-	b1 = new RooRealVar("b1", "b1", 0.72, 0., 2.);
+	a1 = new RooRealVar("a1", "a1", 2003.9, 2002. , 2006.);
+	c1 = new RooRealVar("c1", "c1", 0.05, 0., 1.2);
+	b1 = new RooRealVar("b1", "b1", 1.3, 0., 6.5);
   }
   if(up)
   {
-	//N2 = new RooRealVar("N2", "N2", 200., 100., 10000.);
+	N2 = new RooRealVar("N2", "N2", 200., 100., 10000.);
 	a2 = new RooRealVar("a2", "a2", 2003.9, 2000. , 2010.);
 	c2 = new RooRealVar("c2", "c2", 0.05, 0., 0.5);
 	b2 = new RooRealVar("b2", "b2", 1.3, 0.3, 5.5);  
@@ -151,9 +149,9 @@ void data(string dir, string sample, string pol)
   else
   {
 	N2 = new RooRealVar("N2", "N2", 1648.80, 100., 2500.);
-	a2 = new RooRealVar("a2", "a2", 2004.4, 2000. , 2006.);
-	c2 = new RooRealVar("c2", "c2", 0.09, 0., 0.3);
-	b2 = new RooRealVar("b2", "b2", 1.01, 0., 2);
+	a2 = new RooRealVar("a2", "a2", 2003.9, 2002. , 2006.);
+	c2 = new RooRealVar("c2", "c2", 0.05, 0., 1.2);
+	b2 = new RooRealVar("b2", "b2", 1.3, 0., 6.5);
   }
   RooRealVar *mean = new RooRealVar("mean", "mean", 2010., 2008., 2012.);
   RooRealVar *sigma = new RooRealVar("sigma", "sigma", 0.31, 0., 1.);
@@ -166,27 +164,25 @@ void data(string dir, string sample, string pol)
 
   RooBreitWigner *sig_neg = new RooBreitWigner("sig_neg", "sig_neg", *DTF_Mass, *mean, *sigma);
   RooBreitWigner *sig_pos = new RooBreitWigner("sig_pos", "sig_pos", *DTF_Mass, *mean2, *sigma2);
-  /*if(up)
-  {
-	RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("arg_neg", "pow(DTF_Mass-a1,b1)*exp(-c1*(DTF_Mass-a1))", RooArgSet(*DTF_Mass, *a1, *b1, *c1));
-    RooAbsPdf *arg_pos = RooClassFactory::makePdfInstance("arg_pos", "pow(DTF_Mass-a2,b2)*exp(-c2*(DTF_Mass-a2))", RooArgSet(*DTF_Mass, *a2, *b2, *c2));
-    RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig_neg, *arg_neg),RooArgList(*sig_yield, *bkg_yield));
-	RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig_pos, *arg_pos),RooArgList(*sig_yield_2, *bkg_yield_2));
-  }
-  else
-  {*/
-	RooAbsPdf *arg_neg_d = RooClassFactory::makePdfInstance("arg_neg", "N1*pow(DTF_Mass-a1,b1)*exp(-c1*(DTF_Mass-a1))", RooArgSet(*DTF_Mass, *N1, *a1, *b1, *c1));
-    RooAbsPdf *arg_pos_d = RooClassFactory::makePdfInstance("arg_pos", "N2*pow(DTF_Mass-a2,b2)*exp(-c2*(DTF_Mass-a2))", RooArgSet(*DTF_Mass, *N2, *a2, *b2, *c2));
-	RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig_neg, *arg_neg_d),RooArgList(*sig_yield, *bkg_yield));
-	RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig_pos, *arg_pos_d),RooArgList(*sig_yield_2, *bkg_yield_2));
-  //}
+
+  //RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("arg_neg", "N1*pow(DTF_Mass-a1,b1)*exp(-c1*(DTF_Mass-a1))", RooArgSet(*DTF_Mass, *N1, *a1, *b1, *c1));
+  //RooAbsPdf *arg_pos = RooClassFactory::makePdfInstance("arg_pos", "N2*pow(DTF_Mass-a2,b2)*exp(-c2*(DTF_Mass-a2))", RooArgSet(*DTF_Mass, *N2, *a2, *b2, *c2));
+  RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("arg_neg", "pow(DTF_Mass-a1,b1)*exp(-c1*(DTF_Mass-a1))", RooArgSet(*DTF_Mass, *a1, *b1, *c1));
+  RooAbsPdf *arg_pos = RooClassFactory::makePdfInstance("arg_pos", "pow(DTF_Mass-a2,b2)*exp(-c2*(DTF_Mass-a2))", RooArgSet(*DTF_Mass, *a2, *b2, *c2));
+  RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig_neg, *arg_neg),RooArgList(*sig_yield, *bkg_yield));
+  RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig_pos, *arg_pos),RooArgList(*sig_yield_2, *bkg_yield_2));
+  
   ROOT::EnableThreadSafety();
   RooAbsReal* nll_neg = model_neg->createNLL(*dataset1, Extended(), NumCPU(nThreads), Offset(true));
-  RooMinuit(*nll_neg).fit("s l");
+  RooMinuit(*nll_neg).hesse();  
+  RooMinuit(*nll_neg).migrad();
+  RooMinuit(*nll_neg).minos();
   //model_neg->fitTo(*dataset1, Extended(), NumCPU(nThreads), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   RooStats::SPlot *sData = new RooStats::SPlot("sData", "An SPlot", *dataset1, model_neg, RooArgList(*sig_yield, *bkg_yield));
   RooAbsReal* nll_pos = model_pos->createNLL(*dataset2, Extended(), NumCPU(nThreads), Offset(true));
-  RooMinuit(*nll_pos).fit("s l");
+  RooMinuit(*nll_pos).hesse();
+  RooMinuit(*nll_pos).migrad();
+  RooMinuit(*nll_pos).minos();
   //model_pos->fitTo(*dataset2, Extended(), NumCPU(nThreads), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   RooStats::SPlot *sData2 = new RooStats::SPlot("sData2", "An SPlot2", *dataset2, model_pos, RooArgList(*sig_yield_2, *bkg_yield_2));
 
@@ -304,21 +300,7 @@ void data(string dir, string sample, string pol)
     }
     h_Dst_pT_data_nw->Fill(Dst_pT);
   }
-/*
-  int size = h_Dst_DTF_neg->GetNbinsX();
-  for(int i = 0; i < size; ++i)
-  {
-	outfile << h_Dst_DTF_neg->GetBinLowEdge(i) << " " << h_Dst_DTF_neg->GetBinContent(i) << "\n";
-  }
-  size = h_Dst_DTF_pos->GetNbinsX();
-  for(int i = 0; i < size; ++i)
-  {
-	outfile2 << h_Dst_DTF_pos->GetBinLowEdge(i) << " " << h_Dst_DTF_pos->GetBinContent(i) << "\n";
-  }
-  outfile.flush();
-  outfile2.flush();
-  outfile.close();
-  outfile2.close();*/
+
 
   double nDataEvents = h_Dst_pT_data->GetSumOfWeights();
   h_Dst_pT_data->Scale(1./nDataEvents);

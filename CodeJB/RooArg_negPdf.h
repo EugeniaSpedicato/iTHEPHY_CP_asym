@@ -18,7 +18,6 @@ public:
   RooArg_negPdf() {} ; 
   RooArg_negPdf(const char *name, const char *title,
 	      RooAbsReal& _DTF_Mass,
-	      RooAbsReal& _N1,
 	      RooAbsReal& _a1,
 	      RooAbsReal& _b1,
 	      RooAbsReal& _c1);
@@ -29,7 +28,6 @@ public:
 protected:
 
   RooRealProxy DTF_Mass ;
-  RooRealProxy N1 ;
   RooRealProxy a1 ;
   RooRealProxy b1 ;
   RooRealProxy c1 ;
