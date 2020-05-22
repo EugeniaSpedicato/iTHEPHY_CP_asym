@@ -106,7 +106,7 @@ void data(string dir, string sample, string pol)
 
 //other RooFit
 
-  RooRealVar *DTF_Mass = new RooRealVar("DTF_Mass", "DTF_Mass", 2004., 2021.);
+  RooRealVar *DTF_Mass = new RooRealVar("DTF_Mass", "DTF_Mass", 2004.47, 2020.11);
   //RooRealVar *DTF_Mass_iso = new RooRealVar("DTF_Mass", "DTF_Mass_iso", 2012.5, 2021.);
   RooRealVar *Dst_ID_neg = new RooRealVar("Dst_ID", "Dst_ID_neg", -420., -400.);
   RooRealVar *Dst_ID_pos = new RooRealVar("Dst_ID", "Dst_ID_pos", 400., 420.);
@@ -135,7 +135,7 @@ void data(string dir, string sample, string pol)
   else
   {
 	N1 = new RooRealVar("N1", "N1", 2122.54, 100., 3000.);
-	a1 = new RooRealVar("a1", "a1", 2003.9, 2002. , 2006.);
+	a1 = new RooRealVar("a1", "a1", 2003.9, 2000. , 2004.47);
 	c1 = new RooRealVar("c1", "c1", 0.05, 0., 1.2);
 	b1 = new RooRealVar("b1", "b1", 1.3, 0., 6.5);
   }
@@ -149,7 +149,7 @@ void data(string dir, string sample, string pol)
   else
   {
 	N2 = new RooRealVar("N2", "N2", 1648.80, 100., 2500.);
-	a2 = new RooRealVar("a2", "a2", 2003.9, 2002. , 2006.);
+	a2 = new RooRealVar("a2", "a2", 2003.9, 2000. , 2004.47);
 	c2 = new RooRealVar("c2", "c2", 0.05, 0., 1.2);
 	b2 = new RooRealVar("b2", "b2", 1.3, 0., 6.5);
   }
