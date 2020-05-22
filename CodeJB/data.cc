@@ -165,16 +165,20 @@ void data(string dir, string sample, string pol)
 
   RooBreitWigner *sig_neg = new RooBreitWigner("sig_neg", "sig_neg", *DTF_Mass, *mean, *sigma);
   RooBreitWigner *sig_pos = new RooBreitWigner("sig_pos", "sig_pos", *DTF_Mass, *mean2, *sigma2);
-  RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("arg_neg", "pow(DTF_Mass-a1,b1)*exp(-c1*(DTF_Mass-a1))", RooArgSet(*DTF_Mass, *a1, *b1, *c1));
-  RooAbsPdf *arg_pos = RooClassFactory::makePdfInstance("arg_pos", "pow(DTF_Mass-a2,b2)*exp(-c2*(DTF_Mass-a2))", RooArgSet(*DTF_Mass, *a2, *b2, *c2));
-  if(up!)
+  /*if(up)
   {
-	*arg_neg = RooClassFactory::makePdfInstance("arg_neg", "N1*pow(DTF_Mass-a1,b1)*exp(-c1*(DTF_Mass-a1))", RooArgSet(*DTF_Mass, *N1, *a1, *b1, *c1));
-    *arg_pos = RooClassFactory::makePdfInstance("arg_pos", "N2*pow(DTF_Mass-a2,b2)*exp(-c2*(DTF_Mass-a2))", RooArgSet(*DTF_Mass, *N2, *a2, *b2, *c2));
+	RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("arg_neg", "pow(DTF_Mass-a1,b1)*exp(-c1*(DTF_Mass-a1))", RooArgSet(*DTF_Mass, *a1, *b1, *c1));
+    RooAbsPdf *arg_pos = RooClassFactory::makePdfInstance("arg_pos", "pow(DTF_Mass-a2,b2)*exp(-c2*(DTF_Mass-a2))", RooArgSet(*DTF_Mass, *a2, *b2, *c2));
+    RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig_neg, *arg_neg),RooArgList(*sig_yield, *bkg_yield));
+	RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig_pos, *arg_pos),RooArgList(*sig_yield_2, *bkg_yield_2));
   }
-  RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig_neg, *arg_neg),RooArgList(*sig_yield, *bkg_yield));
-  RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig_pos, *arg_pos),RooArgList(*sig_yield_2, *bkg_yield_2));
-
+  else
+  {*/
+	RooAbsPdf *arg_neg_d = RooClassFactory::makePdfInstance("arg_neg", "N1*pow(DTF_Mass-a1,b1)*exp(-c1*(DTF_Mass-a1))", RooArgSet(*DTF_Mass, *N1, *a1, *b1, *c1));
+    RooAbsPdf *arg_pos_d = RooClassFactory::makePdfInstance("arg_pos", "N2*pow(DTF_Mass-a2,b2)*exp(-c2*(DTF_Mass-a2))", RooArgSet(*DTF_Mass, *N2, *a2, *b2, *c2));
+	RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig_neg, *arg_neg_d),RooArgList(*sig_yield, *bkg_yield));
+	RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig_pos, *arg_pos_d),RooArgList(*sig_yield_2, *bkg_yield_2));
+  //}
   ROOT::EnableThreadSafety();
   RooAbsReal* nll_neg = model_neg->createNLL(*dataset1, Extended(), NumCPU(nThreads), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1), Offset(true));
   RooMinuit(*nll_neg).migrad();
