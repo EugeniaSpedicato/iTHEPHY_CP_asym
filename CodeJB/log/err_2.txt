@@ -1,2 +1,0 @@
-Info in <TUnixSystem::ACLiC>: creating shared library /home/smjoblan/iTHEPHY/iTHEPHY/CodeJB/./data_cc.so
-Error in <ACLiC>: Dictionary generation failed!

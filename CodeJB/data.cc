@@ -106,10 +106,13 @@ void data(string dir, string sample, string pol)
 
 //other RooFit
 
-  RooRealVar *DTF_Mass = new RooRealVar("DTF_Mass", "DTF_Mass", 2004.47, 2020.11);
+  RooRealVar *DTF_Mass = new RooRealVar("DTF_Mass", "DTF_Mass", 2004.45, 2020.11);
   //RooRealVar *DTF_Mass_iso = new RooRealVar("DTF_Mass", "DTF_Mass_iso", 2012.5, 2021.);
   RooRealVar *Dst_ID_neg = new RooRealVar("Dst_ID", "Dst_ID_neg", -420., -400.);
   RooRealVar *Dst_ID_pos = new RooRealVar("Dst_ID", "Dst_ID_pos", 400., 420.);
+  
+  DTF_Mass->setRange("left", 2004.45, 2009.8);
+  DTF_Mass->setRange("right", 2010.7, 2020.11);
 
   RooDataSet *dataset1 = new RooDataSet("dataset1", "dataset1", ntp, RooArgList(*DTF_Mass, *Dst_ID_neg));
   RooDataSet *dataset2 = new RooDataSet("dataset2", "dataset2", ntp, RooArgList(*DTF_Mass, *Dst_ID_pos));/*
@@ -128,28 +131,28 @@ void data(string dir, string sample, string pol)
   if(up)
   {
 	N1 = new RooRealVar("N1", "N1", 200., 100., 10000.);
-	a1 = new RooRealVar("a1", "a1", 2003.9, 2000. , 2010.);
+	a1 = new RooRealVar("a1", "a1", 2003.9, 1900. , 2010.);
 	b1 = new RooRealVar("b1", "b1", 1.3, 0.3, 4.5); 
 	c1 = new RooRealVar("c1", "c1", 0.05, 0., 0.5); 
   }
   else
   {
 	N1 = new RooRealVar("N1", "N1", 2122.54, 1800., 2500.);
-	a1 = new RooRealVar("a1", "a1", 2004.1, 2004., 2004.47);
+	a1 = new RooRealVar("a1", "a1", 2004.1, 2003.5, 2004.45);
 	b1 = new RooRealVar("b1", "b1", 0.72, 0.4, 1.5);	
 	c1 = new RooRealVar("c1", "c1", 0.053, 0.00001, 0.2);
   }
   if(up)
   {
 	N2 = new RooRealVar("N2", "N2", 200., 100., 10000.);
-	a2 = new RooRealVar("a2", "a2", 2003.9, 2000. , 2010.);
+	a2 = new RooRealVar("a2", "a2", 2003.9, 1900. , 2010);
 	b2 = new RooRealVar("b2", "b2", 1.3, 0.3, 5.5);  
 	c2 = new RooRealVar("c2", "c2", 0.05, 0., 0.5);
   }
   else
   {
 	N2 = new RooRealVar("N2", "N2", 1648.80, 1500., 2000.);
-	a2 = new RooRealVar("a2", "a2", 2004.1, 2004. , 2004.47);
+	a2 = new RooRealVar("a2", "a2", 2004.1, 2003.5 , 2004.45);
 	b2 = new RooRealVar("b2", "b2", 1.01, 0.4, 1.5);
 	c2 = new RooRealVar("c2", "c2", 0.09, 0.00001, 0.2);
   }
@@ -157,30 +160,30 @@ void data(string dir, string sample, string pol)
   RooRealVar *sigma = new RooRealVar("sigma", "sigma", 0.31, 0., 1.);
   RooRealVar *mean2 = new RooRealVar("mean2", "mean2", 2010., 2008., 2012.);
   RooRealVar *sigma2 = new RooRealVar("sigma2", "sigma2", 0.31, 0., 1.);
-  RooRealVar *sig_yield = (up)? new RooRealVar("sig_yield", "sig_yield_2", 1000000., 0., 1250000.): new RooRealVar("sig_yield", "sig_yield", 1400000., 0., 1650000.);
-  RooRealVar *bkg_yield = new RooRealVar("bkg_yield", "bkg_yield", 280000., 0., 450000.);
-  RooRealVar *sig_yield_2 = (up)? new RooRealVar("sig_yield_2", "sig_yield_2", 1000000., 0., 1250000.): new RooRealVar("sig_yield_2", "sig_yield_2", 1400000., 0., 1650000.);
-  RooRealVar *bkg_yield_2 = new RooRealVar("bkg_yield_2", "bkg_yield_2", 280000., 0., 450000.);
+  RooRealVar *sig_yield = (up)? new RooRealVar("sig_yield", "sig_yield_2", 1000000., 0., 1250000.): new RooRealVar("sig_yield", "sig_yield", 1400000., 0., 2500000.);
+  RooRealVar *bkg_yield = new RooRealVar("bkg_yield", "bkg_yield", 280000., 0., 700000.);
+  RooRealVar *sig_yield_2 = (up)? new RooRealVar("sig_yield_2", "sig_yield_2", 1000000., 0., 1250000.): new RooRealVar("sig_yield_2", "sig_yield_2", 1400000., 0., 2500000.);
+  RooRealVar *bkg_yield_2 = new RooRealVar("bkg_yield_2", "bkg_yield_2", 280000., 0., 700000.);
 
   RooBreitWigner *sig_neg = new RooBreitWigner("sig_neg", "sig_neg", *DTF_Mass, *mean, *sigma);
   RooBreitWigner *sig_pos = new RooBreitWigner("sig_pos", "sig_pos", *DTF_Mass, *mean2, *sigma2);
 
-  RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("arg_neg", "N1*pow(DTF_Mass-a1,b1)*exp(-c1*(DTF_Mass-a1))", RooArgSet(*DTF_Mass, *N1, *a1, *b1, *c1));
-  RooAbsPdf *arg_pos = RooClassFactory::makePdfInstance("arg_pos", "N2*pow(DTF_Mass-a2,b2)*exp(-c2*(DTF_Mass-a2))", RooArgSet(*DTF_Mass, *N2, *a2, *b2, *c2));
+  RooAbsPdf *arg_neg = (up)? RooClassFactory::makePdfInstance("arg_neg", "pow(DTF_Mass-a1,b1)*exp(-c1*(DTF_Mass-a1))", RooArgSet(*DTF_Mass, *a1, *b1, *c1)) : RooClassFactory::makePdfInstance("arg_neg", "N1*pow(DTF_Mass-a1,b1)*exp(-c1*(DTF_Mass-a1))", RooArgSet(*DTF_Mass, *N1, *a1, *b1, *c1));
+  RooAbsPdf *arg_pos = (up)? RooClassFactory::makePdfInstance("arg_pos", "pow(DTF_Mass-a2,b2)*exp(-c2*(DTF_Mass-a2))", RooArgSet(*DTF_Mass, *a2, *b2, *c2)) : RooClassFactory::makePdfInstance("arg_pos", "N2*pow(DTF_Mass-a2,b2)*exp(-c2*(DTF_Mass-a2))", RooArgSet(*DTF_Mass, *N2, *a2, *b2, *c2));
   //RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("arg_neg", "pow(DTF_Mass-a1,b1)*exp(-c1*(DTF_Mass-a1))", RooArgSet(*DTF_Mass, *a1, *b1, *c1));
   //RooAbsPdf *arg_pos = RooClassFactory::makePdfInstance("arg_pos", "pow(DTF_Mass-a2,b2)*exp(-c2*(DTF_Mass-a2))", RooArgSet(*DTF_Mass, *a2, *b2, *c2));
   RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig_neg, *arg_neg),RooArgList(*sig_yield, *bkg_yield));
   RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig_pos, *arg_pos),RooArgList(*sig_yield_2, *bkg_yield_2));
   
   ROOT::EnableThreadSafety();
-  RooAbsReal* nll_neg = model_neg->createNLL(*dataset1, Extended(), NumCPU(nThreads), Range(2009,2020.11), Offset(true));
+  RooAbsReal* nll_neg = (up)? model_neg->createNLL(*dataset1, Extended(), NumCPU(nThreads), Offset(true)) : model_neg->createNLL(*dataset1, Extended(), NumCPU(nThreads), Range("left,right"), Offset(true));
   RooMinuit(*nll_neg).hesse();  
   RooMinuit(*nll_neg).migrad();
   RooMinuit(*nll_neg).improve();
   RooMinuit(*nll_neg).minos();
   //model_neg->fitTo(*dataset1, Extended(), NumCPU(nThreads), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   RooStats::SPlot *sData = new RooStats::SPlot("sData", "An SPlot", *dataset1, model_neg, RooArgList(*sig_yield, *bkg_yield));
-  RooAbsReal* nll_pos = model_pos->createNLL(*dataset2, Extended(), NumCPU(nThreads), Range(2009.,2020.11), Offset(true));
+  RooAbsReal* nll_pos = (up)? model_pos->createNLL(*dataset2, Extended(), NumCPU(nThreads), Offset(true)) : model_pos->createNLL(*dataset2, Extended(), NumCPU(nThreads), Range("left,right"), Offset(true));
   RooMinuit(*nll_pos).hesse();
   RooMinuit(*nll_pos).migrad();
   RooMinuit(*nll_pos).improve();
@@ -195,12 +198,12 @@ void data(string dir, string sample, string pol)
   h_Dst_pT_MC->Scale(1./nMCEvents);
   h_Dst_pT_MC->SetLineColor(kAzure);
 
-  TH1F *h_Dst_DTF_pos = new TH1F("h_Dst_DTF_pos", ";DTF Mass/MeV; Event", 34, 2004., 2021.);
-  TH1F *h_Dst_DTF_neg = new TH1F("h_Dst_DTF_neg", ";DsTF Mass/MeV; Event", 34, 2004., 2021.);
-  TH1F *h_Dst_DTF_pos_w = new TH1F("h_Dst_DTF_pos_w", ";DTF Mass/MeV; Event", 34, 2004., 2021.);
-  TH1F *h_Dst_DTF_neg_w = new TH1F("h_Dst_DTF_neg_w", ";DsTF Mass/MeV; Event", 34, 2004., 2021.);
-  TH1F *h_Dst_DTF_pos_sw = new TH1F("h_Dst_DTF_pos_sw", ";DTF Mass/MeV; Event", 34, 2004., 2021.);
-  TH1F *h_Dst_DTF_neg_sw = new TH1F("h_Dst_DTF_neg_sw", ";DsTF Mass/MeV; Event", 34, 2004., 2021.);
+  TH1F *h_Dst_DTF_pos = new TH1F("h_Dst_DTF_pos", ";DTF Mass/MeV; Event", 34, 2004.47, 2020.11);
+  TH1F *h_Dst_DTF_neg = new TH1F("h_Dst_DTF_neg", ";DsTF Mass/MeV; Event", 34, 2004.47, 2020.11);
+  TH1F *h_Dst_DTF_pos_w = new TH1F("h_Dst_DTF_pos_w", ";DTF Mass/MeV; Event", 34, 2004.47, 2020.11);
+  TH1F *h_Dst_DTF_neg_w = new TH1F("h_Dst_DTF_neg_w", ";DsTF Mass/MeV; Event", 34, 2004.47, 2020.11);
+  TH1F *h_Dst_DTF_pos_sw = new TH1F("h_Dst_DTF_pos_sw", ";DTF Mass/MeV; Event", 34, 2004.47, 2020.11);
+  TH1F *h_Dst_DTF_neg_sw = new TH1F("h_Dst_DTF_neg_sw", ";DsTF Mass/MeV; Event", 34, 2004.47, 2020.11);
 
   TH1F *h_Dst_pT_data_neg_w = new TH1F("h_Dst_pT_data_neg_w", ";Dst pT/MeV; Event", 45, 2000., 11000.);
   TH1F *h_Dst_pT_data_pos_w = new TH1F("h_Dst_pT_data_pos_w", ";Dst pT/MeV; Event", 45, 2000., 11000.);
@@ -316,7 +319,7 @@ void data(string dir, string sample, string pol)
   RooPlot *frame = DTF_Mass->frame();
   RooPlot *frame2 = DTF_Mass->frame();
   model_neg->plotOn(frame);
-  model_neg->plotOn(frame, Components("arg_neg"), FillStyle(2), FillColor(kRed), DrawOption("F"));
+  model_neg->plotOn(frame, Components("arg_neg"), FillColor(kRed), FillStyle(1001), DrawOption("F"));
   
   frame->Draw();
   if(up) canvas2->SaveAs("output/data/plots/up/model.pdf");
@@ -324,15 +327,15 @@ void data(string dir, string sample, string pol)
   
  
   dataset1->plotOn(frame);
-  model_neg->plotOn(frame);
-  model_neg->plotOn(frame, Components("arg_neg"), FillColor(kRed), DrawOption("F"));
+  model_neg->plotOn(frame, Range(2004.47, 2020.11));
+  model_neg->plotOn(frame, Components("arg_neg"), FillStyle(1001), FillColor(kRed), DrawOption("F"));
   model_neg->paramOn(frame, Layout(0.45, 1., 0.9), Format("NEU", AutoPrecision(1)));
   frame->Draw();
   if(up) canvas2->SaveAs("output/data/plots/up/model_data.pdf");
   else canvas2->SaveAs("output/data/plots/down/model_data.pdf");
   
-  model_pos->plotOn(frame2);
-  model_pos->plotOn(frame2, Components("arg_pos"), FillStyle(2), FillColor(kRed), DrawOption("F"));
+  model_pos->plotOn(frame2, Range(2004.47, 2020.11));
+  model_pos->plotOn(frame2, Components("arg_pos"), FillColor(kRed), FillStyle(1001), DrawOption("F"));
 
   frame2->Draw();
   if(up) canvas2->SaveAs("output/data/plots/up/model_pos.pdf");
@@ -341,7 +344,7 @@ void data(string dir, string sample, string pol)
   
   dataset2->plotOn(frame2);
   model_pos->plotOn(frame2);
-  model_pos->plotOn(frame2, Components("arg_pos"), FillStyle(2), FillColor(kRed), DrawOption("F"));
+  model_pos->plotOn(frame2, Components("arg_pos"), FillColor(kRed), FillStyle(1001), DrawOption("F"));
   model_pos->paramOn(frame2, Layout(0.45, 1., 0.9), Format("NEU", AutoPrecision(1)));
   frame2->Draw();
   if(up) canvas2->SaveAs("output/data/plots/up/model_data_pos.pdf");
