@@ -111,7 +111,7 @@
 ./data_cc.so: /home/smjoblan/sources/build/include/TMath.h
 ./data_cc.so: /home/smjoblan/sources/build/include/TError.h
 ./data_cc.so: /home/smjoblan/sources/build/include/Math/ParamFunctor.h
-./data_cc.so: /home/smjoblan/sources/build/include/RooBreitWigner.h
+./data_cc.so: /home/smjoblan/sources/build/include/RooGaussian.h
 ./data_cc.so: /home/smjoblan/sources/build/include/RooAbsPdf.h
 ./data_cc.so: /home/smjoblan/sources/build/include/RooAbsReal.h
 ./data_cc.so: /home/smjoblan/sources/build/include/RooAbsArg.h
@@ -151,12 +151,13 @@
 ./data_cc.so: /home/smjoblan/sources/build/include/RooNumber.h
 ./data_cc.so: /home/smjoblan/sources/build/include/RooAbsLValue.h
 ./data_cc.so: /home/smjoblan/sources/build/include/RooAbsBinning.h
+./data_cc.so: /home/smjoblan/sources/build/include/RooTrace.h
+./data_cc.so: /home/smjoblan/sources/build/include/RooBreitWigner.h
 ./data_cc.so: /home/smjoblan/sources/build/include/RooDataSet.h
 ./data_cc.so: /home/smjoblan/sources/build/include/RooAbsData.h
 ./data_cc.so: /home/smjoblan/sources/build/include/RooFormulaVar.h
 ./data_cc.so: /home/smjoblan/sources/build/include/RooFormula.h
 ./data_cc.so: /home/smjoblan/sources/build/include/RooListProxy.h
-./data_cc.so: /home/smjoblan/sources/build/include/RooTrace.h
 ./data_cc.so: /home/smjoblan/sources/build/include/TMatrixDSym.h
 ./data_cc.so: /home/smjoblan/sources/build/include/TMatrixTSym.h
 ./data_cc.so: /home/smjoblan/sources/build/include/TMatrixTBase.h

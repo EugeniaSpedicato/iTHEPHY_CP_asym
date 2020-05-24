@@ -4,6 +4,7 @@
 #include <fstream>
 #include <thread>
 #include "TH2F.h"
+#include "RooGaussian.h"
 #include "RooBreitWigner.h"
 #include "RooDataSet.h"
 #include "RooDataHist.h"
@@ -23,7 +24,7 @@ using namespace RooFit;
 
 void printdevhists(TH1F *h_pos, TH1F *h_neg, string polarisation, string var, bool weighted)
 {
-  TF1 func("0*x", "0*x", -5., 9600.);
+  TF1 func("0*x", "0*x", -5., 11000.);
   int nbins = h_pos->GetNbinsX();
   double min = h_pos->GetXaxis()->GetBinLowEdge(1);
   double max = h_pos->GetXaxis()->GetBinLowEdge(nbins) + h_pos->GetXaxis()->GetBinWidth(nbins);
@@ -47,8 +48,7 @@ void printdevhists(TH1F *h_pos, TH1F *h_neg, string polarisation, string var, bo
   h_pos->Draw();
   h_pos->Draw("hist same");
   func.Draw("same");
-  if(weighted) save_name = "output/data/plots/"+directory+"/"+title_name+"w.pdf";
-  else save_name = "output/data/plots/"+directory+"/"+title_name+".pdf";
+  save_name = "output/data/plots/"+directory+"/"+title_name+".pdf";
   c->SaveAs(save_name.c_str());
   h_pos->Write();
 }
@@ -106,13 +106,13 @@ void data(string dir, string sample, string pol)
 
 //other RooFit
 
-  RooRealVar *DTF_Mass = new RooRealVar("DTF_Mass", "DTF_Mass", 2004.45, 2020.11);
+  RooRealVar *DTF_Mass = new RooRealVar("DTF_Mass", "DTF_Mass", 2004.47, 2020.11);
   //RooRealVar *DTF_Mass_iso = new RooRealVar("DTF_Mass", "DTF_Mass_iso", 2012.5, 2021.);
   RooRealVar *Dst_ID_neg = new RooRealVar("Dst_ID", "Dst_ID_neg", -420., -400.);
   RooRealVar *Dst_ID_pos = new RooRealVar("Dst_ID", "Dst_ID_pos", 400., 420.);
-  
-  DTF_Mass->setRange("left", 2004.45, 2009.8);
-  DTF_Mass->setRange("right", 2010.7, 2020.11);
+
+  DTF_Mass->setRange("left", 2004.47, 2009.8);
+  DTF_Mass->setRange("right", 2010.5, 2020.11);
 
   RooDataSet *dataset1 = new RooDataSet("dataset1", "dataset1", ntp, RooArgList(*DTF_Mass, *Dst_ID_neg));
   RooDataSet *dataset2 = new RooDataSet("dataset2", "dataset2", ntp, RooArgList(*DTF_Mass, *Dst_ID_pos));/*
@@ -127,66 +127,77 @@ void data(string dir, string sample, string pol)
   RooRealVar *a2;
   RooRealVar *c2;
   RooRealVar *b2;
-  
+
   if(up)
   {
 	N1 = new RooRealVar("N1", "N1", 200., 100., 10000.);
-	a1 = new RooRealVar("a1", "a1", 2003.9, 1900. , 2010.);
-	b1 = new RooRealVar("b1", "b1", 1.3, 0.3, 4.5); 
-	c1 = new RooRealVar("c1", "c1", 0.05, 0., 0.5); 
+	a1 = new RooRealVar("a1", "a1", 2003.9, 2000. , 2004.47);
+	b1 = new RooRealVar("b1", "b1", 1.3, 0.3, 4.5);
+	c1 = new RooRealVar("c1", "c1", 0.05, 0., 0.5);
   }
   else
   {
 	N1 = new RooRealVar("N1", "N1", 2122.54, 1800., 2500.);
-	a1 = new RooRealVar("a1", "a1", 2004.1, 2003.5, 2004.45);
-	b1 = new RooRealVar("b1", "b1", 0.72, 0.4, 1.5);	
+	a1 = new RooRealVar("a1", "a1", 2003.9, 2000., 2004.47);
+	b1 = new RooRealVar("b1", "b1", 1.3, 0.3, 4.5);
 	c1 = new RooRealVar("c1", "c1", 0.053, 0.00001, 0.2);
   }
   if(up)
   {
 	N2 = new RooRealVar("N2", "N2", 200., 100., 10000.);
-	a2 = new RooRealVar("a2", "a2", 2003.9, 1900. , 2010);
-	b2 = new RooRealVar("b2", "b2", 1.3, 0.3, 5.5);  
+	a2 = new RooRealVar("a2", "a2", 2003.9, 2000. , 2004.47);
+	b2 = new RooRealVar("b2", "b2", 1.3, 0.3, 5.5);
 	c2 = new RooRealVar("c2", "c2", 0.05, 0., 0.5);
   }
   else
   {
 	N2 = new RooRealVar("N2", "N2", 1648.80, 1500., 2000.);
-	a2 = new RooRealVar("a2", "a2", 2004.1, 2003.5 , 2004.45);
-	b2 = new RooRealVar("b2", "b2", 1.01, 0.4, 1.5);
+	a2 = new RooRealVar("a2", "a2", 2003.9, 2000. , 2004.47);
+	b2 = new RooRealVar("b2", "b2", 1.3, 0.3, 5.5);
 	c2 = new RooRealVar("c2", "c2", 0.09, 0.00001, 0.2);
   }
   RooRealVar *mean = new RooRealVar("mean", "mean", 2010., 2008., 2012.);
-  RooRealVar *sigma = new RooRealVar("sigma", "sigma", 0.31, 0., 1.);
+  RooRealVar *sigma = new RooRealVar("sigma", "sigma", 0.31, 0.1, 1.);
   RooRealVar *mean2 = new RooRealVar("mean2", "mean2", 2010., 2008., 2012.);
-  RooRealVar *sigma2 = new RooRealVar("sigma2", "sigma2", 0.31, 0., 1.);
-  RooRealVar *sig_yield = (up)? new RooRealVar("sig_yield", "sig_yield_2", 1000000., 0., 1250000.): new RooRealVar("sig_yield", "sig_yield", 1400000., 0., 2500000.);
+  RooRealVar *sigma2 = new RooRealVar("sigma2", "sigma2", 0.31, 0.1, 1.);
+  RooRealVar *sig_yield = (up)? new RooRealVar("sig_yield", "sig_yield_2", 1000000., 0., 1250000.): new RooRealVar("sig_yield", "sig_yield", 1000000., 0., 1600000.);
   RooRealVar *bkg_yield = new RooRealVar("bkg_yield", "bkg_yield", 280000., 0., 700000.);
-  RooRealVar *sig_yield_2 = (up)? new RooRealVar("sig_yield_2", "sig_yield_2", 1000000., 0., 1250000.): new RooRealVar("sig_yield_2", "sig_yield_2", 1400000., 0., 2500000.);
+  RooRealVar *sig_yield_2 = (up)? new RooRealVar("sig_yield_2", "sig_yield_2", 1000000., 0., 1250000.): new RooRealVar("sig_yield_2", "sig_yield_2", 1000000., 0., 1600000.);
   RooRealVar *bkg_yield_2 = new RooRealVar("bkg_yield_2", "bkg_yield_2", 280000., 0., 700000.);
 
   RooBreitWigner *sig_neg = new RooBreitWigner("sig_neg", "sig_neg", *DTF_Mass, *mean, *sigma);
   RooBreitWigner *sig_pos = new RooBreitWigner("sig_pos", "sig_pos", *DTF_Mass, *mean2, *sigma2);
 
-  RooAbsPdf *arg_neg = (up)? RooClassFactory::makePdfInstance("arg_neg", "pow(DTF_Mass-a1,b1)*exp(-c1*(DTF_Mass-a1))", RooArgSet(*DTF_Mass, *a1, *b1, *c1)) : RooClassFactory::makePdfInstance("arg_neg", "N1*pow(DTF_Mass-a1,b1)*exp(-c1*(DTF_Mass-a1))", RooArgSet(*DTF_Mass, *N1, *a1, *b1, *c1));
-  RooAbsPdf *arg_pos = (up)? RooClassFactory::makePdfInstance("arg_pos", "pow(DTF_Mass-a2,b2)*exp(-c2*(DTF_Mass-a2))", RooArgSet(*DTF_Mass, *a2, *b2, *c2)) : RooClassFactory::makePdfInstance("arg_pos", "N2*pow(DTF_Mass-a2,b2)*exp(-c2*(DTF_Mass-a2))", RooArgSet(*DTF_Mass, *N2, *a2, *b2, *c2));
+//  RooGaussian *sig_neg = new RooGaussian("sig_neg", "sig_neg", *DTF_Mass, *mean, *sigma);
+//  RooGaussian *sig_pos = new RooGaussian("sig_pos", "sig_pos", *DTF_Mass, *mean2, *sigma2);
+
+  //RooAbsPdf *arg_neg = (up)? RooClassFactory::makePdfInstance("arg_neg", "pow(DTF_Mass-a1,b1)*exp(-c1*(DTF_Mass-a1))", RooArgSet(*DTF_Mass, *a1, *b1, *c1))
+  //RooAbsPdf *arg_neg =  RooClassFactory::makePdfInstance("arg_neg", "N1*pow(DTF_Mass-a1,b1)*exp(-c1*(DTF_Mass-a1))", RooArgSet(*DTF_Mass, *N1, *a1, *b1, *c1));
+  RooAbsPdf *arg_neg =  RooClassFactory::makePdfInstance("arg_neg", "pow(DTF_Mass-a1,b1)", RooArgSet(*DTF_Mass, *a1, *b1));
+  //RooAbsPdf *arg_pos = (up)? RooClassFactory::makePdfInstance("arg_pos", "pow(DTF_Mass-a2,b2)*exp(-c2*(DTF_Mass-a2))", RooArgSet(*DTF_Mass, *a2, *b2, *c2))
+  //RooAbsPdf *arg_pos =  RooClassFactory::makePdfInstance("arg_pos", "N2*pow(DTF_Mass-a2,b2)*exp(-c2*(DTF_Mass-a2))", RooArgSet(*DTF_Mass, *N2, *a2, *b2, *c2));
+  RooAbsPdf *arg_pos =  RooClassFactory::makePdfInstance("arg_pos", "pow(DTF_Mass-a2,b2)", RooArgSet(*DTF_Mass, *a2, *b2));
   //RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("arg_neg", "pow(DTF_Mass-a1,b1)*exp(-c1*(DTF_Mass-a1))", RooArgSet(*DTF_Mass, *a1, *b1, *c1));
   //RooAbsPdf *arg_pos = RooClassFactory::makePdfInstance("arg_pos", "pow(DTF_Mass-a2,b2)*exp(-c2*(DTF_Mass-a2))", RooArgSet(*DTF_Mass, *a2, *b2, *c2));
   RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig_neg, *arg_neg),RooArgList(*sig_yield, *bkg_yield));
   RooAddPdf *model_pos = new RooAddPdf("model_pos", "model_pos", RooArgList(*sig_pos, *arg_pos),RooArgList(*sig_yield_2, *bkg_yield_2));
-  
+
   ROOT::EnableThreadSafety();
-  RooAbsReal* nll_neg = (up)? model_neg->createNLL(*dataset1, Extended(), NumCPU(nThreads), Offset(true)) : model_neg->createNLL(*dataset1, Extended(), NumCPU(nThreads), Range("left,right"), Offset(true));
-  RooMinuit(*nll_neg).hesse();  
+  RooAbsReal* nll_neg = (up)? model_neg->createNLL(*dataset1, Extended(), NumCPU(nThreads), Offset(true)) : model_neg->createNLL(*dataset1, Extended(), NumCPU(nThreads), SumCoefRange("left,right"));
+  RooMinuit(*nll_neg).hesse();
   RooMinuit(*nll_neg).migrad();
   RooMinuit(*nll_neg).improve();
+  RooMinuit(*nll_neg).hesse();
+  RooMinuit(*nll_neg).optimizeConst(true);
   RooMinuit(*nll_neg).minos();
   //model_neg->fitTo(*dataset1, Extended(), NumCPU(nThreads), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   RooStats::SPlot *sData = new RooStats::SPlot("sData", "An SPlot", *dataset1, model_neg, RooArgList(*sig_yield, *bkg_yield));
-  RooAbsReal* nll_pos = (up)? model_pos->createNLL(*dataset2, Extended(), NumCPU(nThreads), Offset(true)) : model_pos->createNLL(*dataset2, Extended(), NumCPU(nThreads), Range("left,right"), Offset(true));
+  RooAbsReal* nll_pos = (up)? model_pos->createNLL(*dataset2, Extended(), NumCPU(nThreads), Offset(true)) : model_pos->createNLL(*dataset2, Extended(), NumCPU(nThreads), SumCoefRange("left,right"));
   RooMinuit(*nll_pos).hesse();
   RooMinuit(*nll_pos).migrad();
   RooMinuit(*nll_pos).improve();
+  RooMinuit(*nll_pos).hesse();
+  RooMinuit(*nll_pos).optimizeConst(true);
   RooMinuit(*nll_pos).minos();
   //model_pos->fitTo(*dataset2, Extended(), NumCPU(nThreads), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   RooStats::SPlot *sData2 = new RooStats::SPlot("sData2", "An SPlot2", *dataset2, model_pos, RooArgList(*sig_yield_2, *bkg_yield_2));
@@ -198,47 +209,41 @@ void data(string dir, string sample, string pol)
   h_Dst_pT_MC->Scale(1./nMCEvents);
   h_Dst_pT_MC->SetLineColor(kAzure);
 
-  TH1F *h_Dst_DTF_pos = new TH1F("h_Dst_DTF_pos", ";DTF Mass/MeV; Event", 34, 2004.47, 2020.11);
-  TH1F *h_Dst_DTF_neg = new TH1F("h_Dst_DTF_neg", ";DsTF Mass/MeV; Event", 34, 2004.47, 2020.11);
-  TH1F *h_Dst_DTF_pos_w = new TH1F("h_Dst_DTF_pos_w", ";DTF Mass/MeV; Event", 34, 2004.47, 2020.11);
-  TH1F *h_Dst_DTF_neg_w = new TH1F("h_Dst_DTF_neg_w", ";DsTF Mass/MeV; Event", 34, 2004.47, 2020.11);
-  TH1F *h_Dst_DTF_pos_sw = new TH1F("h_Dst_DTF_pos_sw", ";DTF Mass/MeV; Event", 34, 2004.47, 2020.11);
-  TH1F *h_Dst_DTF_neg_sw = new TH1F("h_Dst_DTF_neg_sw", ";DsTF Mass/MeV; Event", 34, 2004.47, 2020.11);
+  TH1F *h_Dst_DTF_pos = new TH1F("h_Dst_DTF_pos", ";DTF Mass/MeV; Event", 30, 2005., 2020.);
+  TH1F *h_Dst_DTF_neg = new TH1F("h_Dst_DTF_neg", ";DsTF Mass/MeV; Event", 30, 2005., 2020.);
+  TH1F *h_Dst_DTF_pos_sw = new TH1F("h_Dst_DTF_pos_sw", ";DTF Mass/MeV; Event", 30, 2005., 2020.);
+  TH1F *h_Dst_DTF_neg_sw = new TH1F("h_Dst_DTF_neg_sw", ";DsTF Mass/MeV; Event", 30, 2005., 2020.);
 
-  TH1F *h_Dst_pT_data_neg_w = new TH1F("h_Dst_pT_data_neg_w", ";Dst pT/MeV; Event", 45, 2000., 11000.);
-  TH1F *h_Dst_pT_data_pos_w = new TH1F("h_Dst_pT_data_pos_w", ";Dst pT/MeV; Event", 45, 2000., 11000.);
-  TH1F *h_Dst_pT_data_neg_sw = new TH1F("h_Dst_pT_data_neg_sw", ";Dst pT/MeV; Event", 45, 2000., 11000.);
-  TH1F *h_Dst_pT_data_pos_sw = new TH1F("h_Dst_pT_data_pos_sw", ";Dst pT/MeV; Event", 45, 2000., 11000.);
- 
+  TH1F *h_Dst_pT_data_neg = new TH1F("h_Dst_pT_data_neg", ";Dst pT/MeV; Event", 22, 2000., 10800.);
+  TH1F *h_Dst_pT_data_pos = new TH1F("h_Dst_pT_data_pos", ";Dst pT/MeV; Event", 22, 2000., 10800.);
+  TH1F *h_Dst_pT_data_neg_sw = new TH1F("h_Dst_pT_data_neg_sw", ";Dst pT/MeV; Event", 22, 2000., 10800.);
+  TH1F *h_Dst_pT_data_pos_sw = new TH1F("h_Dst_pT_data_pos_sw", ";Dst pT/MeV; Event", 22, 2000., 10800.);
+
   TH1F *h_Dst_pT_data = new TH1F("h_Dst_pT_data", ";Dst pT/MeV; Event", 180, 2000., 11000.);
   TH1F *h_Dst_pT_data_sw = new TH1F("h_Dst_pT_data_sw", ";Dst pT/MeV; Event", 180, 2000., 11000.);
   TH1F *h_Dst_pT_data_nw = new TH1F("h_Dst_pT_data_nw", ";Dst pT/MeV; Event", 180, 2000., 11000.);
-  TH2F *h_Dst_eta_phi_plane_pos = new TH2F("h_Dst_eta_phi_plane_pos", "; #phi; #eta", 70, -3.5, 3.5, 30, 2.5, 4.0);
-  TH2F *h_Dst_eta_phi_plane_neg = new TH2F("h_Dst_eta_phi_plane_neg", "; #phi; #eta", 70, -3.5, 3.5, 30, 2.5, 4.0);
+  TH2F *h_Dst_eta_phi_plane_pos = new TH2F("h_Dst_eta_phi_plane_pos", "; #phi; #eta", 35, -3.5, 3.5, 30, 2.5, 4.0);
+  TH2F *h_Dst_eta_phi_plane_neg = new TH2F("h_Dst_eta_phi_plane_neg", "; #phi; #eta", 35, -3.5, 3.5, 30, 2.5, 4.0);
 
 
-  TH1F *h_phi_Dst_neg = new TH1F("h_phi_Dst_neg", ";#phi;Events", 70, -3.5, 3.5);
-  TH1F *h_phi_Dst_pos = new TH1F("h_phi_Dst_pos", ";#phi;Events", 70, -3.5, 3.5);
-  TH1F *h_phi_Dst_neg_w = new TH1F("h_phi_Dst_neg_w", ";#phi;Events", 70, -3.5, 3.5);
-  TH1F *h_phi_Dst_pos_w = new TH1F("h_phi_Dst_pos_w", ";#phi;Events", 70, -3.5, 3.5);
-  TH1F *h_phi_Dst_neg_sw = new TH1F("h_phi_Dst_neg_sw", ";#phi;Events", 70, -3.5, 3.5);
-  TH1F *h_phi_Dst_pos_sw = new TH1F("h_phi_Dst_pos_sw", ";#phi;Events", 70, -3.5, 3.5);
+  TH1F *h_phi_Dst_neg = new TH1F("h_phi_Dst_neg", ";#phi;Events", 35, -3.5, 3.5);
+  TH1F *h_phi_Dst_pos = new TH1F("h_phi_Dst_pos", ";#phi;Events", 35, -3.5, 3.5);
+  TH1F *h_phi_Dst_neg_sw = new TH1F("h_phi_Dst_neg_sw", ";#phi;Events", 35, -3.5, 3.5);
+  TH1F *h_phi_Dst_pos_sw = new TH1F("h_phi_Dst_pos_sw", ";#phi;Events", 35, -3.5, 3.5);
 
-  TH1F *h_D0_M_pos = new TH1F("h_D0_M_pos",";D0 mass/MeV", 96, 1840., 1888.);
-  TH1F *h_D0_M_neg = new TH1F("h_D0_M_neg",";D0 mass/MeV", 96, 1840., 1888.);
-  TH1F *h_D0_M_pos_w = new TH1F("h_D0_M_pos_w",";D0 mass/MeV", 96, 1840., 1888.);
-  TH1F *h_D0_M_neg_w = new TH1F("h_D0_M_neg_w",";D0 mass/MeV", 96, 1840., 1888.);
-  TH1F *h_D0_M_pos_sw = new TH1F("h_D0_M_pos_sw",";D0 mass/MeV", 96, 1840., 1888.);
-  TH1F *h_D0_M_neg_sw = new TH1F("h_D0_M_neg_sw",";D0 mass/MeV", 96, 1840., 1888.);
+  TH1F *h_D0_M_pos = new TH1F("h_D0_M_pos",";D0 mass/MeV", 48, 1840., 1888.);
+  TH1F *h_D0_M_neg = new TH1F("h_D0_M_neg",";D0 mass/MeV", 48, 1840., 1888.);
+  TH1F *h_D0_M_pos_sw = new TH1F("h_D0_M_pos_sw",";D0 mass/MeV", 48, 1840., 1888.);
+  TH1F *h_D0_M_neg_sw = new TH1F("h_D0_M_neg_sw",";D0 mass/MeV", 48, 1840., 1888.);
 
+  h_D0_M_pos->Sumw2();
+  h_D0_M_neg->Sumw2();
+  h_D0_M_pos_sw->Sumw2();
+  h_D0_M_neg_sw->Sumw2();
   h_phi_Dst_neg->Sumw2();
   h_phi_Dst_pos->Sumw2();
-  h_phi_Dst_neg_w->Sumw2();
-  h_phi_Dst_pos_w->Sumw2();
   h_phi_Dst_neg_sw->Sumw2();
   h_phi_Dst_pos_sw->Sumw2();
-  h_Dst_DTF_pos_w->Sumw2();
-  h_Dst_DTF_neg_w->Sumw2();
   h_Dst_DTF_pos_sw->Sumw2();
   h_Dst_DTF_neg_sw->Sumw2();
   h_Dst_DTF_pos->Sumw2();
@@ -246,6 +251,11 @@ void data(string dir, string sample, string pol)
   h_Dst_pT_data->Sumw2();
   h_Dst_pT_data_sw->Sumw2();
   h_Dst_pT_data_nw->Sumw2();
+  
+  h_Dst_pT_data_neg->Sumw2();
+  h_Dst_pT_data_neg_sw->Sumw2();
+  h_Dst_pT_data_pos->Sumw2();
+  h_Dst_pT_data_pos_sw->Sumw2();
 
   int i_pos = 0;
   int i_neg = 0;
@@ -261,22 +271,19 @@ void data(string dir, string sample, string pol)
     {
       h_Dst_pT_data->Fill(Dst_pT, sData->GetSumOfEventSWeight(i_neg));
       h_Dst_pT_data_sw->Fill(Dst_pT, sData->GetSWeight(i_neg, "sig_yield"));
-      
-      h_Dst_pT_data_neg_w->Fill(Dst_pT, sData->GetSumOfEventSWeight(i_neg));
+
+      h_Dst_pT_data_neg->Fill(Dst_pT);
       h_Dst_pT_data_neg_sw->Fill(Dst_pT, sData->GetSWeight(i_neg, "sig_yield"));
-      
-      h_Dst_DTF_neg_w->Fill(DTF_mass, sData->GetSumOfEventSWeight(i_neg));
+
       h_Dst_DTF_neg_sw->Fill(DTF_mass, sData->GetSWeight(i_neg, "sig_yield"));
       h_Dst_DTF_neg->Fill(DTF_mass);
 
-      h_phi_Dst_neg_w->Fill(Dst_phi, sData->GetSumOfEventSWeight(i_neg));
       h_phi_Dst_neg_sw->Fill(Dst_phi, sData->GetSWeight(i_neg, "sig_yield"));
       h_phi_Dst_neg->Fill(Dst_phi);
-      
-      h_D0_M_neg_w->Fill(D0_mass, sData->GetSumOfEventSWeight(i_neg));
+
       h_D0_M_neg_sw->Fill(D0_mass, sData->GetSWeight(i_neg, "sig_yield"));
       h_D0_M_neg->Fill(D0_mass);
-      
+
       h_Dst_eta_phi_plane_neg->Fill(Dst_phi, Dst_eta, sData->GetSWeight(i_neg, "sig_yield"));
       ++i_neg;
     }
@@ -284,22 +291,19 @@ void data(string dir, string sample, string pol)
     {
       h_Dst_pT_data->Fill(Dst_pT, sData2->GetSumOfEventSWeight(i_pos));
       h_Dst_pT_data_sw->Fill(Dst_pT, sData2->GetSWeight(i_pos, "sig_yield_2"));
-      
-      h_Dst_pT_data_pos_w->Fill(Dst_pT, sData2->GetSumOfEventSWeight(i_pos));
+
+      h_Dst_pT_data_pos->Fill(Dst_pT);
       h_Dst_pT_data_pos_sw->Fill(Dst_pT, sData2->GetSWeight(i_pos, "sig_yield_2"));
-      
-      h_Dst_DTF_pos_w->Fill(DTF_mass, sData2->GetSumOfEventSWeight(i_pos));
+
       h_Dst_DTF_pos_sw->Fill(DTF_mass, sData2->GetSWeight(i_pos, "sig_yield_2"));
       h_Dst_DTF_pos->Fill(DTF_mass);
 
-      h_phi_Dst_pos_w->Fill(Dst_phi, sData2->GetSumOfEventSWeight(i_pos));
       h_phi_Dst_pos_sw->Fill(Dst_phi, sData2->GetSWeight(i_pos, "sig_yield_2"));
       h_phi_Dst_pos->Fill(Dst_phi);
-      
-      h_D0_M_pos_w->Fill(D0_mass, sData2->GetSumOfEventSWeight(i_pos));
+
       h_D0_M_pos_sw->Fill(D0_mass, sData2->GetSWeight(i_pos, "sig_yield_2"));
       h_D0_M_pos->Fill(D0_mass);
-      
+
       h_Dst_eta_phi_plane_pos->Fill(Dst_phi, Dst_eta, sData2->GetSWeight(i_pos, "sig_yield_2"));
       ++i_pos;
     }
@@ -318,39 +322,40 @@ void data(string dir, string sample, string pol)
   TCanvas *canvas2 = new TCanvas();
   RooPlot *frame = DTF_Mass->frame();
   RooPlot *frame2 = DTF_Mass->frame();
-  model_neg->plotOn(frame);
-  model_neg->plotOn(frame, Components("arg_neg"), FillColor(kRed), FillStyle(1001), DrawOption("F"));
+  model_neg->plotOn(frame, Range(2004.47, 2020.11));
+  model_neg->plotOn(frame, Range(2004.47, 2020.11), RooFit::Components("arg_neg"), RooFit::FillColor(kRed), RooFit::LineStyle(kDashed),RooFit::DrawOption("f"));
   
+
   frame->Draw();
   if(up) canvas2->SaveAs("output/data/plots/up/model.pdf");
   else canvas2->SaveAs("output/data/plots/down/model.pdf");
-  
- 
+
+
   dataset1->plotOn(frame);
   model_neg->plotOn(frame, Range(2004.47, 2020.11));
-  model_neg->plotOn(frame, Components("arg_neg"), FillStyle(1001), FillColor(kRed), DrawOption("F"));
+  model_neg->plotOn(frame, Range(2004.47, 2020.11), RooFit::Components("arg_neg"), RooFit::FillColor(kRed), RooFit::LineStyle(kDashed),RooFit::DrawOption("f") );
   model_neg->paramOn(frame, Layout(0.45, 1., 0.9), Format("NEU", AutoPrecision(1)));
   frame->Draw();
   if(up) canvas2->SaveAs("output/data/plots/up/model_data.pdf");
   else canvas2->SaveAs("output/data/plots/down/model_data.pdf");
-  
+
   model_pos->plotOn(frame2, Range(2004.47, 2020.11));
-  model_pos->plotOn(frame2, Components("arg_pos"), FillColor(kRed), FillStyle(1001), DrawOption("F"));
+  model_pos->plotOn(frame2, Range(2004.47, 2020.11), RooFit::Components("arg_neg"), RooFit::FillColor(kRed), RooFit::LineStyle(kDashed),RooFit::DrawOption("f") );
 
   frame2->Draw();
   if(up) canvas2->SaveAs("output/data/plots/up/model_pos.pdf");
   else canvas2->SaveAs("output/data/plots/down/model_pos.pdf");
- 
-  
+
+
   dataset2->plotOn(frame2);
-  model_pos->plotOn(frame2);
-  model_pos->plotOn(frame2, Components("arg_pos"), FillColor(kRed), FillStyle(1001), DrawOption("F"));
+  model_pos->plotOn(frame2, Range(2004.47, 2020.11));
+  model_pos->plotOn(frame2, Range(2004.47, 2020.11), RooFit::Components("arg_neg"), RooFit::FillColor(kRed), RooFit::LineStyle(kDashed),RooFit::DrawOption("f") );
   model_pos->paramOn(frame2, Layout(0.45, 1., 0.9), Format("NEU", AutoPrecision(1)));
   frame2->Draw();
   if(up) canvas2->SaveAs("output/data/plots/up/model_data_pos.pdf");
   else canvas2->SaveAs("output/data/plots/down/model_data_pos.pdf");
 
-  
+
   h_Dst_pT_MC->Draw();
   h_Dst_pT_MC->Draw("hist same");
   h_Dst_pT_data->Draw("same");
@@ -372,16 +377,12 @@ void data(string dir, string sample, string pol)
   else canvas2->SaveAs("output/data/plots/down/eta_phi_plane.pdf");
 
   double nPos = h_Dst_DTF_pos->GetSumOfWeights();
-  double nPosW = h_Dst_pT_data_pos_w->GetSumOfWeights();
   double nPosSW = h_Dst_pT_data_pos_sw->GetSumOfWeights();
   double nNeg = h_Dst_DTF_neg->GetSumOfWeights();
-  double nNegW = h_Dst_pT_data_neg_w->GetSumOfWeights();
   double nNegSW = h_Dst_pT_data_neg_sw->GetSumOfWeights();
   double asym = (nPos - nNeg)/(nPos + nNeg);
-  double asymW = (nPosW - nNegW)/(nPosW + nNegW);
   double asymSW = (nPosSW - nNegSW)/(nPosSW + nNegSW);
   double err = nPos * nNeg / pow(nPos + nNeg, 3.); err = 2 * sqrt(err);
-  double errW = nPosW * nNegW / pow(nPosW + nNegW, 3.); err = 2 * sqrt(errW);
   double errSW = nPosSW * nNegSW / pow(nPosSW + nNegSW, 3.); err = 2 * sqrt(errSW);
 
 
@@ -390,26 +391,22 @@ void data(string dir, string sample, string pol)
   TFile *out_hist_fi = new TFile(output_hist_name.c_str(),"RECREATE");
 
   printdevhists(h_Dst_DTF_pos, h_Dst_DTF_neg, pol, "DTF", false);
-  printdevhists(h_Dst_DTF_pos_w, h_Dst_DTF_neg_w, pol, "DTF_", true);
-  printdevhists(h_Dst_DTF_pos_sw, h_Dst_DTF_neg_sw, pol, "DTF_s", true);
+  printdevhists(h_Dst_DTF_pos_sw, h_Dst_DTF_neg_sw, pol, "DTF_sw", true);
 
   printdevhists(h_phi_Dst_pos, h_phi_Dst_neg, pol, "phi", false);
-  printdevhists(h_phi_Dst_pos_w, h_phi_Dst_neg_w, pol, "phi_", true);
-  printdevhists(h_phi_Dst_pos_sw, h_phi_Dst_neg_sw, pol, "phi_s", true);
-  
+  printdevhists(h_phi_Dst_pos_sw, h_phi_Dst_neg_sw, pol, "phi_sw", true);
+
   printdevhists(h_D0_M_pos, h_D0_M_neg, pol, "D0m", false);
-  printdevhists(h_D0_M_pos_w, h_D0_M_neg_w, pol, "D0m_", true);
-  printdevhists(h_D0_M_pos_sw, h_D0_M_neg_sw, pol, "D0m_s", true);
-  
-  printdevhists(h_Dst_pT_data_pos_w, h_Dst_pT_data_neg_w, pol, "pT_", true);
-  printdevhists(h_Dst_pT_data_pos_sw, h_Dst_pT_data_neg_sw, pol, "pT_s", true);
+  printdevhists(h_D0_M_pos_sw, h_D0_M_neg_sw, pol, "D0m_sw", true);
+
+  printdevhists(h_Dst_pT_data_pos, h_Dst_pT_data_neg, pol, "pT", true);
+  printdevhists(h_Dst_pT_data_pos_sw, h_Dst_pT_data_neg_sw, pol, "pT_sw", true);
 
   h_Dst_eta_phi_plane_pos->Write();
   out_hist_fi->Write();
   out_hist_fi->Close();
 
   cout << "Total asymmetry before weighting: " << asym << " +/- " << err << endl;
-  cout << "Total asymmetry after weighting: " << asymW << " +/- " << errW << endl;
   cout << "Total asymmetry after signal weighting: " << asymSW << " +/- " << errSW << endl;
 
   uint64_t end_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
