@@ -185,29 +185,29 @@ void hist_fill(vector<TH1F*> v_hist, vector<TH1F*> v_hist_reco, vector<TH1F*> v_
   int size = v_hist.size();
   for(int i = 0; i < size; ++i)
   {
-    v_hist.at(i)->Fill(v_var.at(i), weight_tot);
+    v_hist.at(i)->Fill(v_var.at(i));
   }
-  if(ID > 0)// && n_pos) < 3000000)
+  if(ID > 0)
   {
     n_pos += weight_tot;
     for(int i = 0; i < size; ++i)
     {
-      v_hist_pos.at(i)->Fill(v_var.at(i), weight_tot);
+      v_hist_pos.at(i)->Fill(v_var.at(i));
     }
   }
-  else if(ID < 0)// & n_neg < 3000000)
+  else if(ID < 0)
   {
     n_neg += weight_tot;
     for(int i = 0; i < size; ++i)
     {
-      v_hist_neg.at(i)->Fill(v_var.at(i), weight_tot);
+      v_hist_neg.at(i)->Fill(v_var.at(i));
     }
   }
   if(is_reco == 1)
   {
     for(int i = 0; i < size; ++i)
     {
-      v_hist_reco.at(i)->Fill(v_var.at(i), weight_tot);
+      v_hist_reco.at(i)->Fill(v_var.at(i));
     }
     n_reco += weight_tot;
     if(ID > 0)
@@ -215,7 +215,7 @@ void hist_fill(vector<TH1F*> v_hist, vector<TH1F*> v_hist_reco, vector<TH1F*> v_
       n_reco_pos += weight_tot;
       for(int i = 0; i < size; ++i)
       {
-        v_hist_reco_pos.at(i)->Fill(v_var.at(i), weight_tot);
+        v_hist_reco_pos.at(i)->Fill(v_var.at(i));
       }
     }
     else
@@ -223,7 +223,7 @@ void hist_fill(vector<TH1F*> v_hist, vector<TH1F*> v_hist_reco, vector<TH1F*> v_
       n_reco_neg += weight_tot;
       for(int i = 0; i < size; ++i)
       {
-        v_hist_reco_neg.at(i)->Fill(v_var.at(i), weight_tot);
+        v_hist_reco_neg.at(i)->Fill(v_var.at(i));
       }
     }
   }
