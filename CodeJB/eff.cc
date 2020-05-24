@@ -123,7 +123,6 @@ void printdevhists(vector<TH1F*> v_get_hist_pos, vector<TH1F*> v_get_hist_neg, s
     title_name = v_hist_pos.at(i)->GetName();
     new_title = title_name+"_dev";
     v_hist_pos.at(i)->SetName(new_title.c_str());
-    v_hist_pos.at(i)->SetTitle(new_title.c_str());
     v_hist_pos.at(i)->Draw();
     func.Draw("same");
     save_name = "output/"+directory+"/deviation/"+new_title+".pdf";
@@ -560,7 +559,7 @@ void eff(string dir, string sample, string polarisation)
   sumhisterr(v_D0_hist_reco, v_D0_hist_reco_pos, v_D0_hist_reco_neg);
   sumhisterr(v_Dst_hist_reco, v_Dst_hist_reco_pos, v_Dst_hist_reco_neg);
 
-  //gStyle->SetOptStat(0);
+  gStyle->SetOptStat(0);
 /*
   double x_sig, y_sig, z_sig;
   double x_N, y_N, z_N;
