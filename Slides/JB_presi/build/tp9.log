@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.23)  25 MAY 2020 00:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.23)  25 MAY 2020 01:45
 entering extended mode
 **./tp9.tex
 (tp9.tex
@@ -951,7 +951,7 @@ Package caption Info: Hyperref support is turned off
 \c@subfigure=\count339
 \c@subtable=\count340
 )
-No file tp9.aux.
+(C:\Users\Jonah\Desktop\Projekte\iTHEPHY\Slides\JB_presi\build\tp9.aux)
 \openout1 = `tp9.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
@@ -968,6 +968,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
 LaTeX Font Info:    ... okay on input line 20.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
 LaTeX Font Info:    ... okay on input line 20.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1043,6 +1044,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 20.
 LaTeX Info: Redefining \pageref on input line 20.
 LaTeX Info: Redefining \nameref on input line 20.
+
+(C:\Users\Jonah\Desktop\Projekte\iTHEPHY\Slides\JB_presi\build\tp9.out)
+(C:\Users\Jonah\Desktop\Projekte\iTHEPHY\Slides\JB_presi\build\tp9.out)
 \@outlinefile=\write5
 \openout5 = `tp9.out'.
 
@@ -1204,8 +1208,9 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-No file tp9.nav.
+(C:\Users\Jonah\Desktop\Projekte\iTHEPHY\Slides\JB_presi\build\tp9.nav)
 LaTeX Font Info:    Try loading font information for U+msa on input line 20.
+
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -1472,25 +1477,25 @@ Overfull \hbox (8.5167pt too wide) detected at line 145
 [7
 
 ]
-<up_pdf/combined/h_pt_reco_Dst.pdf, id=210, 569.12625pt x 385.44pt>
+<up_pdf/combined/h_pt_reco_Dst.pdf, id=212, 569.12625pt x 385.44pt>
 File: up_pdf/combined/h_pt_reco_Dst.pdf Graphic file (type pdf)
 <use up_pdf/combined/h_pt_reco_Dst.pdf>
 Package pdftex.def Info: up_pdf/combined/h_pt_reco_Dst.pdf  used on input line 
 161.
 (pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
-<up_pdf/combined/h_phi_reco_Dst.pdf, id=211, 569.12625pt x 385.44pt>
+<up_pdf/combined/h_phi_reco_Dst.pdf, id=213, 569.12625pt x 385.44pt>
 File: up_pdf/combined/h_phi_reco_Dst.pdf Graphic file (type pdf)
 <use up_pdf/combined/h_phi_reco_Dst.pdf>
 Package pdftex.def Info: up_pdf/combined/h_phi_reco_Dst.pdf  used on input line
  161.
 (pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
-<up_pdf/combined/h_theta_reco_Dst.pdf, id=212, 569.12625pt x 385.44pt>
+<up_pdf/combined/h_theta_reco_Dst.pdf, id=214, 569.12625pt x 385.44pt>
 File: up_pdf/combined/h_theta_reco_Dst.pdf Graphic file (type pdf)
 <use up_pdf/combined/h_theta_reco_Dst.pdf>
 Package pdftex.def Info: up_pdf/combined/h_theta_reco_Dst.pdf  used on input li
 ne 161.
 (pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
-<up_pdf/combined/h_eta_reco_Dst.pdf, id=213, 569.12625pt x 385.44pt>
+<up_pdf/combined/h_eta_reco_Dst.pdf, id=215, 569.12625pt x 385.44pt>
 File: up_pdf/combined/h_eta_reco_Dst.pdf Graphic file (type pdf)
 <use up_pdf/combined/h_eta_reco_Dst.pdf>
 Package pdftex.def Info: up_pdf/combined/h_eta_reco_Dst.pdf  used on input line
@@ -1502,25 +1507,25 @@ Package pdftex.def Info: up_pdf/combined/h_eta_reco_Dst.pdf  used on input line
 mbined/h_phi_reco_Dst.pdf, page is rotated 90 degrees> <./up_pdf/combined/h_the
 ta_reco_Dst.pdf, page is rotated 90 degrees> <./up_pdf/combined/h_eta_reco_Dst.
 pdf, page is rotated 90 degrees>]
-<down_pdf/combined/h_pt_reco_Dst.pdf, id=413, 569.12625pt x 385.44pt>
+<down_pdf/combined/h_pt_reco_Dst.pdf, id=415, 569.12625pt x 385.44pt>
 File: down_pdf/combined/h_pt_reco_Dst.pdf Graphic file (type pdf)
 <use down_pdf/combined/h_pt_reco_Dst.pdf>
 Package pdftex.def Info: down_pdf/combined/h_pt_reco_Dst.pdf  used on input lin
 e 177.
 (pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
-<down_pdf/combined/h_phi_reco_Dst.pdf, id=414, 569.12625pt x 385.44pt>
+<down_pdf/combined/h_phi_reco_Dst.pdf, id=416, 569.12625pt x 385.44pt>
 File: down_pdf/combined/h_phi_reco_Dst.pdf Graphic file (type pdf)
 <use down_pdf/combined/h_phi_reco_Dst.pdf>
 Package pdftex.def Info: down_pdf/combined/h_phi_reco_Dst.pdf  used on input li
 ne 177.
 (pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
-<down_pdf/combined/h_theta_reco_Dst.pdf, id=415, 569.12625pt x 385.44pt>
+<down_pdf/combined/h_theta_reco_Dst.pdf, id=417, 569.12625pt x 385.44pt>
 File: down_pdf/combined/h_theta_reco_Dst.pdf Graphic file (type pdf)
 <use down_pdf/combined/h_theta_reco_Dst.pdf>
 Package pdftex.def Info: down_pdf/combined/h_theta_reco_Dst.pdf  used on input 
 line 177.
 (pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
-<down_pdf/combined/h_eta_reco_Dst.pdf, id=416, 569.12625pt x 385.44pt>
+<down_pdf/combined/h_eta_reco_Dst.pdf, id=418, 569.12625pt x 385.44pt>
 File: down_pdf/combined/h_eta_reco_Dst.pdf Graphic file (type pdf)
 <use down_pdf/combined/h_eta_reco_Dst.pdf>
 Package pdftex.def Info: down_pdf/combined/h_eta_reco_Dst.pdf  used on input li
@@ -1545,26 +1550,26 @@ ne 182.
  [10
 
 ]
-<up_pdf/deviation/h_pt_reco_Dst_pos_dev.pdf, id=642, 569.12625pt x 385.44pt>
+<up_pdf/deviation/h_pt_reco_Dst_pos_dev.pdf, id=644, 569.12625pt x 385.44pt>
 File: up_pdf/deviation/h_pt_reco_Dst_pos_dev.pdf Graphic file (type pdf)
 <use up_pdf/deviation/h_pt_reco_Dst_pos_dev.pdf>
 Package pdftex.def Info: up_pdf/deviation/h_pt_reco_Dst_pos_dev.pdf  used on in
 put line 198.
 (pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
-<up_pdf/deviation/h_phi_reco_Dst_pos_dev.pdf, id=643, 569.12625pt x 385.44pt>
+<up_pdf/deviation/h_phi_reco_Dst_pos_dev.pdf, id=645, 569.12625pt x 385.44pt>
 File: up_pdf/deviation/h_phi_reco_Dst_pos_dev.pdf Graphic file (type pdf)
 <use up_pdf/deviation/h_phi_reco_Dst_pos_dev.pdf>
 Package pdftex.def Info: up_pdf/deviation/h_phi_reco_Dst_pos_dev.pdf  used on i
 nput line 198.
 (pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
-<up_pdf/deviation/h_theta_reco_Dst_pos_dev.pdf, id=644, 569.12625pt x 385.44pt>
+<up_pdf/deviation/h_theta_reco_Dst_pos_dev.pdf, id=646, 569.12625pt x 385.44pt>
 
 File: up_pdf/deviation/h_theta_reco_Dst_pos_dev.pdf Graphic file (type pdf)
 <use up_pdf/deviation/h_theta_reco_Dst_pos_dev.pdf>
 Package pdftex.def Info: up_pdf/deviation/h_theta_reco_Dst_pos_dev.pdf  used on
  input line 198.
 (pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
-<up_pdf/deviation/h_eta_reco_Dst_pos_dev.pdf, id=645, 569.12625pt x 385.44pt>
+<up_pdf/deviation/h_eta_reco_Dst_pos_dev.pdf, id=647, 569.12625pt x 385.44pt>
 File: up_pdf/deviation/h_eta_reco_Dst_pos_dev.pdf Graphic file (type pdf)
 <use up_pdf/deviation/h_eta_reco_Dst_pos_dev.pdf>
 Package pdftex.def Info: up_pdf/deviation/h_eta_reco_Dst_pos_dev.pdf  used on i
@@ -1576,27 +1581,27 @@ nput line 198.
 up_pdf/deviation/h_phi_reco_Dst_pos_dev.pdf, page is rotated 90 degrees> <./up_
 pdf/deviation/h_theta_reco_Dst_pos_dev.pdf, page is rotated 90 degrees> <./up_p
 df/deviation/h_eta_reco_Dst_pos_dev.pdf, page is rotated 90 degrees>]
-<down_pdf/deviation/h_pt_reco_Dst_pos_dev.pdf, id=844, 569.12625pt x 385.44pt>
+<down_pdf/deviation/h_pt_reco_Dst_pos_dev.pdf, id=846, 569.12625pt x 385.44pt>
 File: down_pdf/deviation/h_pt_reco_Dst_pos_dev.pdf Graphic file (type pdf)
 <use down_pdf/deviation/h_pt_reco_Dst_pos_dev.pdf>
 Package pdftex.def Info: down_pdf/deviation/h_pt_reco_Dst_pos_dev.pdf  used on 
 input line 214.
 (pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
-<down_pdf/deviation/h_phi_reco_Dst_pos_dev.pdf, id=845, 569.12625pt x 385.44pt>
+<down_pdf/deviation/h_phi_reco_Dst_pos_dev.pdf, id=847, 569.12625pt x 385.44pt>
 
 File: down_pdf/deviation/h_phi_reco_Dst_pos_dev.pdf Graphic file (type pdf)
 <use down_pdf/deviation/h_phi_reco_Dst_pos_dev.pdf>
 Package pdftex.def Info: down_pdf/deviation/h_phi_reco_Dst_pos_dev.pdf  used on
  input line 214.
 (pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
-<down_pdf/deviation/h_theta_reco_Dst_pos_dev.pdf, id=846, 569.12625pt x 385.44p
+<down_pdf/deviation/h_theta_reco_Dst_pos_dev.pdf, id=848, 569.12625pt x 385.44p
 t>
 File: down_pdf/deviation/h_theta_reco_Dst_pos_dev.pdf Graphic file (type pdf)
 <use down_pdf/deviation/h_theta_reco_Dst_pos_dev.pdf>
 Package pdftex.def Info: down_pdf/deviation/h_theta_reco_Dst_pos_dev.pdf  used 
 on input line 214.
 (pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
-<down_pdf/deviation/h_eta_reco_Dst_pos_dev.pdf, id=847, 569.12625pt x 385.44pt>
+<down_pdf/deviation/h_eta_reco_Dst_pos_dev.pdf, id=849, 569.12625pt x 385.44pt>
 
 File: down_pdf/deviation/h_eta_reco_Dst_pos_dev.pdf Graphic file (type pdf)
 <use down_pdf/deviation/h_eta_reco_Dst_pos_dev.pdf>
@@ -1622,22 +1627,22 @@ Package pdftex.def Info: down_pdf/deviation/h_phi_reco_Dst_pos_dev.pdf  used on
  [13
 
 ]
-<up_plus_down_pdf/pT_4.pdf, id=1073, 569.12625pt x 385.44pt>
+<up_plus_down_pdf/pT_4.pdf, id=1074, 569.12625pt x 385.44pt>
 File: up_plus_down_pdf/pT_4.pdf Graphic file (type pdf)
 <use up_plus_down_pdf/pT_4.pdf>
 Package pdftex.def Info: up_plus_down_pdf/pT_4.pdf  used on input line 241.
 (pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
-<up_plus_down_pdf/phi_4.pdf, id=1074, 569.12625pt x 385.44pt>
+<up_plus_down_pdf/phi_4.pdf, id=1075, 569.12625pt x 385.44pt>
 File: up_plus_down_pdf/phi_4.pdf Graphic file (type pdf)
 <use up_plus_down_pdf/phi_4.pdf>
 Package pdftex.def Info: up_plus_down_pdf/phi_4.pdf  used on input line 241.
 (pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
-<up_plus_down_pdf/theta_4.pdf, id=1075, 569.12625pt x 385.44pt>
+<up_plus_down_pdf/theta_4.pdf, id=1076, 569.12625pt x 385.44pt>
 File: up_plus_down_pdf/theta_4.pdf Graphic file (type pdf)
 <use up_plus_down_pdf/theta_4.pdf>
 Package pdftex.def Info: up_plus_down_pdf/theta_4.pdf  used on input line 241.
 (pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
-<up_plus_down_pdf/eta_4.pdf, id=1076, 569.12625pt x 385.44pt>
+<up_plus_down_pdf/eta_4.pdf, id=1077, 569.12625pt x 385.44pt>
 File: up_plus_down_pdf/eta_4.pdf Graphic file (type pdf)
 <use up_plus_down_pdf/eta_4.pdf>
 Package pdftex.def Info: up_plus_down_pdf/eta_4.pdf  used on input line 241.
@@ -1663,21 +1668,14 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 242.
 (C:\Users\Jonah\Desktop\Projekte\iTHEPHY\Slides\JB_presi\build\tp9.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 242.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 242.
-
-
-Package rerunfilecheck Warning: File `tp9.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `tp9.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `tp9.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 30720 strings out of 492902
- 612053 string characters out of 3133550
- 678234 words of memory out of 3000000
- 34122 multiletter control sequences out of 15000+200000
+ 30761 strings out of 492902
+ 612860 string characters out of 3133550
+ 678390 words of memory out of 3000000
+ 34155 multiletter control sequences out of 15000+200000
  545709 words of font info for 75 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,15n,70p,790b,729s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1696,7 +1694,7 @@ ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files
 .9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/
 type1/public/amsfonts/cm/cmtt10.pfb>
 Output written on C:\Users\Jonah\Desktop\Projekte\iTHEPHY\Slides\JB_presi\build
-\tp9.pdf (14 pages, 533379 bytes).
+\tp9.pdf (14 pages, 586480 bytes).
 PDF statistics:
  1329 PDF objects out of 1440 (max. 8388607)
  29 named destinations out of 1000 (max. 500000)
