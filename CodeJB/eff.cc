@@ -180,7 +180,7 @@ vector<double> deviation_err(vector<double> v_eff_pos, vector<double> v_err_pos,
 
 }
 
-void hist_fill(vector<TH1F*> v_hist, vector<TH1F*> v_hist_reco, vector<TH1F*> v_hist_pos, vector<TH1F*> v_hist_reco_pos, vector<TH1F*> v_hist_neg, vector<TH1F*> v_hist_reco_neg, vector<double> v_var, int is_reco, double &n_reco, double &n_pos, double &n_reco_pos, double &n_neg, double &n_reco_neg, int ID, double weight_tot)
+void hist_fill(vector<TH1F*> v_hist, vector<TH1F*> v_hist_reco, vector<TH1F*> v_hist_pos, vector<TH1F*> v_hist_reco_pos, vector<TH1F*> v_hist_neg, vector<TH1F*> v_hist_reco_neg, vector<double> v_var, int is_reco, double &n_reco, double &n_pos, double &n_reco_pos, double &n_neg, double &n_reco_neg, int ID)
 {
   int size = v_hist.size();
   for(int i = 0; i < size; ++i)
@@ -189,7 +189,7 @@ void hist_fill(vector<TH1F*> v_hist, vector<TH1F*> v_hist_reco, vector<TH1F*> v_
   }
   if(ID > 0)
   {
-    n_pos += weight_tot;
+    n_pos += 1.;
     for(int i = 0; i < size; ++i)
     {
       v_hist_pos.at(i)->Fill(v_var.at(i));
@@ -197,7 +197,7 @@ void hist_fill(vector<TH1F*> v_hist, vector<TH1F*> v_hist_reco, vector<TH1F*> v_
   }
   else if(ID < 0)
   {
-    n_neg += weight_tot;
+    n_neg += 1.;
     for(int i = 0; i < size; ++i)
     {
       v_hist_neg.at(i)->Fill(v_var.at(i));
@@ -209,10 +209,10 @@ void hist_fill(vector<TH1F*> v_hist, vector<TH1F*> v_hist_reco, vector<TH1F*> v_
     {
       v_hist_reco.at(i)->Fill(v_var.at(i));
     }
-    n_reco += weight_tot;
+    n_reco += 1.;
     if(ID > 0)
     {
-      n_reco_pos += weight_tot;
+      n_reco_pos += 1.;
       for(int i = 0; i < size; ++i)
       {
         v_hist_reco_pos.at(i)->Fill(v_var.at(i));
@@ -220,7 +220,7 @@ void hist_fill(vector<TH1F*> v_hist, vector<TH1F*> v_hist_reco, vector<TH1F*> v_
     }
     else
     {
-      n_reco_neg += weight_tot;
+      n_reco_neg += 1.;
       for(int i = 0; i < size; ++i)
       {
         v_hist_reco_neg.at(i)->Fill(v_var.at(i));
@@ -686,15 +686,13 @@ void eff(string dir, string sample, string polarisation)
     (isPi_reco == 1 && isK_reco == 1)? isD0_reco = 1 : isD0_reco = 0;
     (isSPi_reco == 1 && isD0_reco == 1)? isDst_reco = 1 : isDst_reco = 0;
 
-    hist_fill(v_Pi_hist, v_Pi_hist_reco, v_Pi_hist_pos, v_Pi_hist_reco_pos, v_Pi_hist_neg, v_Pi_hist_reco_neg, v_Pi_var, isPi_reco, nPi_reco, nPi_pos, nPi_reco_pos, nPi_neg, nPi_reco_neg, Pi_ID,weight_tot);
-    hist_fill(v_K_hist, v_K_hist_reco, v_K_hist_pos, v_K_hist_reco_pos, v_K_hist_neg, v_K_hist_reco_neg, v_K_var, isK_reco, nK_reco, nK_pos, nK_reco_pos, nK_neg, nK_reco_neg, K_ID, weight_tot);
-    hist_fill(v_D0_hist, v_D0_hist_reco, v_D0_hist_pos, v_D0_hist_reco_pos, v_D0_hist_neg, v_D0_hist_reco_neg, v_D0_var, isD0_reco, nD0_reco, nD0_pos, nD0_reco_pos, nD0_neg, nD0_reco_neg, D0_ID, weight_tot);
+    hist_fill(v_Pi_hist, v_Pi_hist_reco, v_Pi_hist_pos, v_Pi_hist_reco_pos, v_Pi_hist_neg, v_Pi_hist_reco_neg, v_Pi_var, isPi_reco, nPi_reco, nPi_pos, nPi_reco_pos, nPi_neg, nPi_reco_neg, Pi_ID);
+    hist_fill(v_K_hist, v_K_hist_reco, v_K_hist_pos, v_K_hist_reco_pos, v_K_hist_neg, v_K_hist_reco_neg, v_K_var, isK_reco, nK_reco, nK_pos, nK_reco_pos, nK_neg, nK_reco_neg, K_ID);
+    hist_fill(v_D0_hist, v_D0_hist_reco, v_D0_hist_pos, v_D0_hist_reco_pos, v_D0_hist_neg, v_D0_hist_reco_neg, v_D0_var, isD0_reco, nD0_reco, nD0_pos, nD0_reco_pos, nD0_neg, nD0_reco_neg, D0_ID);
 
-    //if((abs(SPi_phi) > 0.35 && abs(SPi_phi) < 2.65) && (SPi_pT < 750. && SPi_eta > 2.5))
-    //{
-      hist_fill(v_SPi_hist, v_SPi_hist_reco, v_SPi_hist_pos, v_SPi_hist_reco_pos, v_SPi_hist_neg, v_SPi_hist_reco_neg, v_SPi_var, isSPi_reco, nSPi_reco, nSPi_pos, nSPi_reco_pos, nSPi_neg, nSPi_reco_neg, SPi_ID, weight_tot);
-      hist_fill(v_Dst_hist, v_Dst_hist_reco, v_Dst_hist_pos, v_Dst_hist_reco_pos, v_Dst_hist_neg, v_Dst_hist_reco_neg, v_Dst_var, isDst_reco, nDst_reco, nDst_pos, nDst_reco_pos, nDst_neg, nDst_reco_neg, Dst_ID, weight_tot);
-    //}
+    hist_fill(v_SPi_hist, v_SPi_hist_reco, v_SPi_hist_pos, v_SPi_hist_reco_pos, v_SPi_hist_neg, v_SPi_hist_reco_neg, v_SPi_var, isSPi_reco, nSPi_reco, nSPi_pos, nSPi_reco_pos, nSPi_neg, nSPi_reco_neg, SPi_ID);
+    hist_fill(v_Dst_hist, v_Dst_hist_reco, v_Dst_hist_pos, v_Dst_hist_reco_pos, v_Dst_hist_neg, v_Dst_hist_reco_neg, v_Dst_var, isDst_reco, nDst_reco, nDst_pos, nDst_reco_pos, nDst_neg, nDst_reco_neg, Dst_ID);
+
 
     v_Pi_var.clear();
     v_K_var.clear();
