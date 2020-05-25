@@ -727,25 +727,7 @@ void eff(string dir, string sample, string polarisation)
   printdevhists(v_D0_hist_reco_pos, v_D0_hist_reco_neg, polarisation);
   printdevhists(v_Dst_hist_reco_pos, v_Dst_hist_reco_neg, polarisation);
 
-  hist_divide(v_Pi_hist,v_Pi_hist_reco);
-  hist_divide(v_K_hist,v_K_hist_reco);
-  hist_divide(v_SPi_hist,v_SPi_hist_reco);
-  hist_divide(v_D0_hist,v_D0_hist_reco);
-  hist_divide(v_Dst_hist,v_Dst_hist_reco);
-
-  hist_divide(v_Pi_hist_pos,v_Pi_hist_reco_pos);
-  hist_divide(v_K_hist_pos,v_K_hist_reco_pos);
-  hist_divide(v_SPi_hist_pos,v_SPi_hist_reco_pos);
-  hist_divide(v_D0_hist_pos,v_D0_hist_reco_pos);
-  hist_divide(v_Dst_hist_pos,v_Dst_hist_reco_pos);
-
-  hist_divide(v_Pi_hist_neg,v_Pi_hist_reco_neg);
-  hist_divide(v_K_hist_neg,v_K_hist_reco_neg);
-  hist_divide(v_SPi_hist_neg,v_SPi_hist_reco_neg);
-  hist_divide(v_D0_hist_neg,v_D0_hist_reco_neg);
-  hist_divide(v_Dst_hist_neg,v_Dst_hist_reco_neg);
-
-
+  
   h_pT_reco_Pi->Write();
   h_pT_reco_K->Write();
   h_pT_reco_SPi->Write();
@@ -822,6 +804,27 @@ void eff(string dir, string sample, string polarisation)
   h_eta_reco_SPi_neg->Write();
   h_eta_reco_D0_neg->Write();
   h_eta_reco_Dst_neg->Write();
+
+  
+  hist_divide(v_Pi_hist,v_Pi_hist_reco);
+  hist_divide(v_K_hist,v_K_hist_reco);
+  hist_divide(v_SPi_hist,v_SPi_hist_reco);
+  hist_divide(v_D0_hist,v_D0_hist_reco);
+  hist_divide(v_Dst_hist,v_Dst_hist_reco);
+
+  hist_divide(v_Pi_hist_pos,v_Pi_hist_reco_pos);
+  hist_divide(v_K_hist_pos,v_K_hist_reco_pos);
+  hist_divide(v_SPi_hist_pos,v_SPi_hist_reco_pos);
+  hist_divide(v_D0_hist_pos,v_D0_hist_reco_pos);
+  hist_divide(v_Dst_hist_pos,v_Dst_hist_reco_pos);
+
+  hist_divide(v_Pi_hist_neg,v_Pi_hist_reco_neg);
+  hist_divide(v_K_hist_neg,v_K_hist_reco_neg);
+  hist_divide(v_SPi_hist_neg,v_SPi_hist_reco_neg);
+  hist_divide(v_D0_hist_neg,v_D0_hist_reco_neg);
+  hist_divide(v_Dst_hist_neg,v_Dst_hist_reco_neg);
+
+
 
 
 
