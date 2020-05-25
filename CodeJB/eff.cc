@@ -1,5 +1,6 @@
 #include "eff.h"
 #include <chrono>
+#include "TROOT.h"
 
 void setcolors(vector<TH1F*> v_hist, vector<TH1F*> v_hist_pos, vector<TH1F*> v_hist_neg)
 {
@@ -237,7 +238,6 @@ void hist_divide(vector<TH1F*> v_hist, vector<TH1F*> v_hist_reco)
 void eff(string dir, string sample, string polarisation)
 {
   uint64_t start_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
-
   string input_name = dir+"/"+sample+".root";
   TChain *ntp = new TChain("ntp");
   ntp->Add(input_name.c_str());
