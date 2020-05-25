@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.23)  25 MAY 2020 18:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.23)  25 MAY 2020 19:16
 entering extended mode
 **./tp9.tex
 (tp9.tex
@@ -1535,32 +1535,42 @@ Package pdftex.def Info: down_pdf/deviation/h_phi_reco_Dst_pos_dev.pdf  used on
  [8
 
 ]
-<up_plus_down_pdf/pT_4.pdf, id=428, 569.12625pt x 385.44pt>
-File: up_plus_down_pdf/pT_4.pdf Graphic file (type pdf)
-<use up_plus_down_pdf/pT_4.pdf>
-Package pdftex.def Info: up_plus_down_pdf/pT_4.pdf  used on input line 163.
+<up_down_pdf/deviation/h_pT_reco_Dst_pos_dev.pdf, id=428, 569.12625pt x 385.44p
+t>
+File: up_down_pdf/deviation/h_pT_reco_Dst_pos_dev.pdf Graphic file (type pdf)
+<use up_down_pdf/deviation/h_pT_reco_Dst_pos_dev.pdf>
+Package pdftex.def Info: up_down_pdf/deviation/h_pT_reco_Dst_pos_dev.pdf  used 
+on input line 163.
 (pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
-<up_plus_down_pdf/phi_4.pdf, id=429, 569.12625pt x 385.44pt>
-File: up_plus_down_pdf/phi_4.pdf Graphic file (type pdf)
-<use up_plus_down_pdf/phi_4.pdf>
-Package pdftex.def Info: up_plus_down_pdf/phi_4.pdf  used on input line 163.
+<up_down_pdf/deviation/h_phi_reco_Dst_pos_dev.pdf, id=429, 569.12625pt x 385.44
+pt>
+File: up_down_pdf/deviation/h_phi_reco_Dst_pos_dev.pdf Graphic file (type pdf)
+<use up_down_pdf/deviation/h_phi_reco_Dst_pos_dev.pdf>
+Package pdftex.def Info: up_down_pdf/deviation/h_phi_reco_Dst_pos_dev.pdf  used
+ on input line 163.
 (pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
-<up_plus_down_pdf/theta_4.pdf, id=430, 569.12625pt x 385.44pt>
-File: up_plus_down_pdf/theta_4.pdf Graphic file (type pdf)
-<use up_plus_down_pdf/theta_4.pdf>
-Package pdftex.def Info: up_plus_down_pdf/theta_4.pdf  used on input line 163.
+<up_down_pdf/deviation/h_theta_reco_Dst_pos_dev.pdf, id=430, 569.12625pt x 385.
+44pt>
+File: up_down_pdf/deviation/h_theta_reco_Dst_pos_dev.pdf Graphic file (type pdf
+)
+<use up_down_pdf/deviation/h_theta_reco_Dst_pos_dev.pdf>
+Package pdftex.def Info: up_down_pdf/deviation/h_theta_reco_Dst_pos_dev.pdf  us
+ed on input line 163.
 (pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
-<up_plus_down_pdf/eta_4.pdf, id=431, 569.12625pt x 385.44pt>
-File: up_plus_down_pdf/eta_4.pdf Graphic file (type pdf)
-<use up_plus_down_pdf/eta_4.pdf>
-Package pdftex.def Info: up_plus_down_pdf/eta_4.pdf  used on input line 163.
+<up_down_pdf/deviation/h_eta_reco_Dst_pos_dev.pdf, id=431, 569.12625pt x 385.44
+pt>
+File: up_down_pdf/deviation/h_eta_reco_Dst_pos_dev.pdf Graphic file (type pdf)
+<use up_down_pdf/deviation/h_eta_reco_Dst_pos_dev.pdf>
+Package pdftex.def Info: up_down_pdf/deviation/h_eta_reco_Dst_pos_dev.pdf  used
+ on input line 163.
 (pdftex.def)             Requested size: 124.4507pt x 84.2795pt.
  [9
 
- <./up_plus_down_pdf/pT_4.pdf, page is rotated 90 degrees> <./up_plus_down_pdf/
-phi_4.pdf, page is rotated 90 degrees> <./up_plus_down_pdf/theta_4.pdf, page is
- rotated 90 degrees> <./up_plus_down_pdf/eta_4.pdf, page is rotated 90 degrees>
-]
+ <./up_down_pdf/deviation/h_pT_reco_Dst_pos_dev.pdf, page is rotated 90 degrees
+> <./up_down_pdf/deviation/h_phi_reco_Dst_pos_dev.pdf, page is rotated 90 degre
+es> <./up_down_pdf/deviation/h_theta_reco_Dst_pos_dev.pdf, page is rotated 90 d
+egrees> <./up_down_pdf/deviation/h_eta_reco_Dst_pos_dev.pdf, page is rotated 90
+ degrees>]
 \tf@nav=\write6
 \openout6 = `tp9.nav'.
 
@@ -1580,8 +1590,8 @@ Package rerunfilecheck Info: File `tp9.out' has not changed.
 (rerunfilecheck)             Checksum: CF1550E89164325B90D6ADAF65146855;75.
  ) 
 Here is how much of TeX's memory you used:
- 36353 strings out of 492902
- 761591 string characters out of 3133550
+ 36352 strings out of 492902
+ 761994 string characters out of 3133550
  835341 words of memory out of 3000000
  39639 multiletter control sequences out of 15000+200000
  545709 words of font info for 75 fonts, out of 3000000 for 9000
@@ -1601,7 +1611,7 @@ ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2
 .9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
 Output written on C:\Users\Jonah\Desktop\Projekte\iTHEPHY\Slides\JB_presi\build
-\tp9.pdf (9 pages, 405074 bytes).
+\tp9.pdf (9 pages, 404586 bytes).
 PDF statistics:
  681 PDF objects out of 1000 (max. 8388607)
  20 named destinations out of 1000 (max. 500000)
