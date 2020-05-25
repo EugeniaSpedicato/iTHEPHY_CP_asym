@@ -92,13 +92,13 @@ void printdevhists(vector<TH1F*> v_get_hist_pos, vector<TH1F*> v_get_hist_neg, s
   nbins = v_get_hist_pos.at(i)->GetNbinsX();
   min = v_get_hist_pos.at(i)->GetXaxis()->GetBinLowEdge(1);
   max = v_get_hist_pos.at(i)->GetXaxis()->GetBinLowEdge(nbins) + v_get_hist_pos.at(i)->GetXaxis()->GetBinWidth(nbins);
-  TH1F *h_temp_pos = new TH1F(v_get_hist_pos.at(i)->GetName(),v_get_hist_pos.at(i)->GetName(), nbins, min, max);
+  TH1F *h_temp_pos = new TH1F(v_get_hist_pos.at(i)->GetName(),v_get_hist_pos.at(i)->GetTitle(), nbins, min, max);
   h_temp_pos->Add(v_get_hist_pos.at(i));
   v_hist_pos.push_back(h_temp_pos);
   nbins = v_get_hist_neg.at(i)->GetNbinsX();
   min = v_get_hist_neg.at(i)->GetXaxis()->GetBinLowEdge(1);
   max = v_get_hist_neg.at(i)->GetXaxis()->GetBinLowEdge(nbins) + v_get_hist_neg.at(i)->GetXaxis()->GetBinWidth(nbins);
-  TH1F *h_temp_neg = new TH1F(v_get_hist_neg.at(i)->GetName(),v_get_hist_neg.at(i)->GetName(), nbins, min, max);
+  TH1F *h_temp_neg = new TH1F(v_get_hist_neg.at(i)->GetName(),v_get_hist_neg.at(i)->GetTitle(), nbins, min, max);
   h_temp_neg->Add(v_get_hist_neg.at(i));
   v_hist_neg.push_back(h_temp_neg);
   }
