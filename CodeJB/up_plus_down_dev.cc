@@ -1,5 +1,5 @@
 #include "eff.h"
-
+/*
 void up_plus_down_dev()
 {
   TFile f_up("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root");
@@ -14,13 +14,13 @@ void up_plus_down_dev()
   vector <TH1F*> v_h_up_theta_pos = {(TH1F*)f_up.Get("h_theta_reco_Pi_pos_dev"), (TH1F*)f_up.Get("h_theta_reco_K_pos_dev"), (TH1F*)f_up.Get("h_theta_reco_SPi_pos_dev"), (TH1F*)f_up.Get("h_theta_reco_D0_pos_dev"), (TH1F*)f_up.Get("h_theta_reco_Dst_pos_dev")};
 
 
-  vector <TH1F*> v_h_dw_eta_pos = {(TH1F*)f_up.Get("h_eta_reco_Pi_pos_dev"), (TH1F*)f_up.Get("h_eta_reco_K_pos_dev"), (TH1F*)f_up.Get("h_eta_reco_SPi_pos_dev"), (TH1F*)f_up.Get("h_eta_reco_D0_pos_dev"), (TH1F*)f_up.Get("h_eta_reco_Dst_pos_dev")};
+  vector <TH1F*> v_h_dw_eta_pos = {(TH1F*)f_dw.Get("h_eta_reco_Pi_pos_dev"), (TH1F*)f_up.Get("h_eta_reco_K_pos_dev"), (TH1F*)f_up.Get("h_eta_reco_SPi_pos_dev"), (TH1F*)f_up.Get("h_eta_reco_D0_pos_dev"), (TH1F*)f_up.Get("h_eta_reco_Dst_pos_dev")};
 
-  vector <TH1F*> v_h_dw_pT_pos = {(TH1F*)f_up.Get("h_pT_reco_Pi_pos_dev"), (TH1F*)f_up.Get("h_pT_reco_K_pos_dev"), (TH1F*)f_up.Get("h_pT_reco_SPi_pos_dev"), (TH1F*)f_up.Get("h_pT_reco_D0_pos_dev"), (TH1F*)f_up.Get("h_pT_reco_Dst_pos_dev")};
+  vector <TH1F*> v_h_dw_pT_pos = {(TH1F*)f_dw.Get("h_pT_reco_Pi_pos_dev"), (TH1F*)f_up.Get("h_pT_reco_K_pos_dev"), (TH1F*)f_up.Get("h_pT_reco_SPi_pos_dev"), (TH1F*)f_up.Get("h_pT_reco_D0_pos_dev"), (TH1F*)f_up.Get("h_pT_reco_Dst_pos_dev")};
 
-  vector <TH1F*> v_h_dw_phi_pos = {(TH1F*)f_up.Get("h_phi_reco_Pi_pos_dev"), (TH1F*)f_up.Get("h_phi_reco_K_pos_dev"), (TH1F*)f_up.Get("h_phi_reco_SPi_pos_dev"), (TH1F*)f_up.Get("h_phi_reco_D0_pos_dev"), (TH1F*)f_up.Get("h_phi_reco_Dst_pos_dev")};
+  vector <TH1F*> v_h_dw_phi_pos = {(TH1F*)f_dw.Get("h_phi_reco_Pi_pos_dev"), (TH1F*)f_up.Get("h_phi_reco_K_pos_dev"), (TH1F*)f_up.Get("h_phi_reco_SPi_pos_dev"), (TH1F*)f_up.Get("h_phi_reco_D0_pos_dev"), (TH1F*)f_up.Get("h_phi_reco_Dst_pos_dev")};
 
-  vector <TH1F*> v_h_dw_theta_pos = {(TH1F*)f_up.Get("h_theta_reco_Pi_pos_dev"), (TH1F*)f_up.Get("h_theta_reco_K_pos_dev"), (TH1F*)f_up.Get("h_theta_reco_SPi_pos_dev"), (TH1F*)f_up.Get("h_theta_reco_D0_pos_dev"), (TH1F*)f_up.Get("h_theta_reco_Dst_pos_dev")};
+  vector <TH1F*> v_h_dw_theta_pos = {(TH1F*)f_dw.Get("h_theta_reco_Pi_pos_dev"), (TH1F*)f_up.Get("h_theta_reco_K_pos_dev"), (TH1F*)f_up.Get("h_theta_reco_SPi_pos_dev"), (TH1F*)f_up.Get("h_theta_reco_D0_pos_dev"), (TH1F*)f_up.Get("h_theta_reco_Dst_pos_dev")};
  
   int size = v_h_dw_eta_pos.size();
   string save_name;
@@ -51,9 +51,7 @@ void up_plus_down_dev()
     c->SaveAs(save_name.c_str());
   }
 }
-
-/*
- *#include "eff.h"
+*/
 void printdevhists(vector<TH1F*> v_get_hist_pos, vector<TH1F*> v_get_hist_neg, string var)
 {
   TF1 func("0*x", "0*x", -5., 11000.);
@@ -110,22 +108,22 @@ void up_plus_down_dev()
   vector <TH1F*> v_h_up_theta_pos = {(TH1F*)f_up.Get("h_theta_reco_Pi_pos"), (TH1F*)f_up.Get("h_theta_reco_K_pos"), (TH1F*)f_up.Get("h_theta_reco_SPi_pos"), (TH1F*)f_up.Get("h_theta_reco_D0_pos"), (TH1F*)f_up.Get("h_theta_reco_Dst_pos")};
 
 
-  vector <TH1F*> v_h_up_eta_neg = {(TH1F*)f_dw.Get("h_eta_reco_Pi_neg"), (TH1F*)f_dw.Get("h_eta_reco_K_neg"), (TH1F*)f_dw.Get("h_eta_reco_SPi_neg"), (TH1F*)f_dw.Get("h_eta_reco_D0_neg"), (TH1F*)f_dw.Get("h_eta_reco_Dst_neg")};
+  vector <TH1F*> v_h_up_eta_neg = {(TH1F*)f_up.Get("h_eta_reco_Pi_neg"), (TH1F*)f_up.Get("h_eta_reco_K_neg"), (TH1F*)f_up.Get("h_eta_reco_SPi_neg"), (TH1F*)f_up.Get("h_eta_reco_D0_neg"), (TH1F*)f_up.Get("h_eta_reco_Dst_neg")};
 
-  vector <TH1F*> v_h_up_pT_neg = {(TH1F*)f_dw.Get("h_pT_reco_Pi_neg"), (TH1F*)f_dw.Get("h_pT_reco_K_neg"), (TH1F*)f_dw.Get("h_pT_reco_SPi_neg"), (TH1F*)f_dw.Get("h_pT_reco_D0_neg"), (TH1F*)f_dw.Get("h_pT_reco_Dst_neg")};
+  vector <TH1F*> v_h_up_pT_neg = {(TH1F*)f_up.Get("h_pT_reco_Pi_neg"), (TH1F*)f_up.Get("h_pT_reco_K_neg"), (TH1F*)f_up.Get("h_pT_reco_SPi_neg"), (TH1F*)f_up.Get("h_pT_reco_D0_neg"), (TH1F*)f_up.Get("h_pT_reco_Dst_neg")};
 
-  vector <TH1F*> v_h_up_phi_neg = {(TH1F*)f_dw.Get("h_phi_reco_Pi_neg"), (TH1F*)f_dw.Get("h_phi_reco_K_neg"), (TH1F*)f_dw.Get("h_phi_reco_SPi_neg"), (TH1F*)f_dw.Get("h_phi_reco_D0_neg"), (TH1F*)f_dw.Get("h_phi_reco_Dst_neg")};
+  vector <TH1F*> v_h_up_phi_neg = {(TH1F*)f_up.Get("h_phi_reco_Pi_neg"), (TH1F*)f_up.Get("h_phi_reco_K_neg"), (TH1F*)f_up.Get("h_phi_reco_SPi_neg"), (TH1F*)f_up.Get("h_phi_reco_D0_neg"), (TH1F*)f_up.Get("h_phi_reco_Dst_neg")};
 
-  vector <TH1F*> v_h_up_theta_neg = {(TH1F*)f_dw.Get("h_theta_reco_Pi_neg"), (TH1F*)f_dw.Get("h_theta_reco_K_neg"), (TH1F*)f_dw.Get("h_theta_reco_SPi_neg"), (TH1F*)f_dw.Get("h_theta_reco_D0_neg"), (TH1F*)f_dw.Get("h_theta_reco_Dst_neg")};
+  vector <TH1F*> v_h_up_theta_neg = {(TH1F*)f_up.Get("h_theta_reco_Pi_neg"), (TH1F*)f_up.Get("h_theta_reco_K_neg"), (TH1F*)f_up.Get("h_theta_reco_SPi_neg"), (TH1F*)f_up.Get("h_theta_reco_D0_neg"), (TH1F*)f_up.Get("h_theta_reco_Dst_neg")};
   
 
-  vector <TH1F*> v_h_dw_eta_pos = {(TH1F*)f_up.Get("h_eta_reco_Pi_pos"), (TH1F*)f_up.Get("h_eta_reco_K_pos"), (TH1F*)f_up.Get("h_eta_reco_SPi_pos"), (TH1F*)f_up.Get("h_eta_reco_D0_pos"), (TH1F*)f_up.Get("h_eta_reco_Dst_pos")};
+  vector <TH1F*> v_h_dw_eta_pos = {(TH1F*)f_dw.Get("h_eta_reco_Pi_pos"), (TH1F*)f_dw.Get("h_eta_reco_K_pos"), (TH1F*)f_dw.Get("h_eta_reco_SPi_pos"), (TH1F*)f_dw.Get("h_eta_reco_D0_pos"), (TH1F*)f_dw.Get("h_eta_reco_Dst_pos")};
 
-  vector <TH1F*> v_h_dw_pT_pos = {(TH1F*)f_up.Get("h_pT_reco_Pi_pos"), (TH1F*)f_up.Get("h_pT_reco_K_pos"), (TH1F*)f_up.Get("h_pT_reco_SPi_pos"), (TH1F*)f_up.Get("h_pT_reco_D0_pos"), (TH1F*)f_up.Get("h_pT_reco_Dst_pos")};
+  vector <TH1F*> v_h_dw_pT_pos = {(TH1F*)f_dw.Get("h_pT_reco_Pi_pos"), (TH1F*)f_dw.Get("h_pT_reco_K_pos"), (TH1F*)f_dw.Get("h_pT_reco_SPi_pos"), (TH1F*)f_dw.Get("h_pT_reco_D0_pos"), (TH1F*)f_dw.Get("h_pT_reco_Dst_pos")};
 
-  vector <TH1F*> v_h_dw_phi_pos = {(TH1F*)f_up.Get("h_phi_reco_Pi_pos"), (TH1F*)f_up.Get("h_phi_reco_K_pos"), (TH1F*)f_up.Get("h_phi_reco_SPi_pos"), (TH1F*)f_up.Get("h_phi_reco_D0_pos"), (TH1F*)f_up.Get("h_phi_reco_Dst_pos")};
+  vector <TH1F*> v_h_dw_phi_pos = {(TH1F*)f_dw.Get("h_phi_reco_Pi_pos"), (TH1F*)f_dw.Get("h_phi_reco_K_pos"), (TH1F*)f_dw.Get("h_phi_reco_SPi_pos"), (TH1F*)f_dw.Get("h_phi_reco_D0_pos"), (TH1F*)f_dw.Get("h_phi_reco_Dst_pos")};
 
-  vector <TH1F*> v_h_dw_theta_pos = {(TH1F*)f_up.Get("h_theta_reco_Pi_pos"), (TH1F*)f_up.Get("h_theta_reco_K_pos"), (TH1F*)f_up.Get("h_theta_reco_SPi_pos"), (TH1F*)f_up.Get("h_theta_reco_D0_pos"), (TH1F*)f_up.Get("h_theta_reco_Dst_pos")};
+  vector <TH1F*> v_h_dw_theta_pos = {(TH1F*)f_dw.Get("h_theta_reco_Pi_pos"), (TH1F*)f_dw.Get("h_theta_reco_K_pos"), (TH1F*)f_dw.Get("h_theta_reco_SPi_pos"), (TH1F*)f_dw.Get("h_theta_reco_D0_pos"), (TH1F*)f_dw.Get("h_theta_reco_Dst_pos")};
  
 
   vector <TH1F*> v_h_dw_eta_neg = {(TH1F*)f_dw.Get("h_eta_reco_Pi_neg"), (TH1F*)f_dw.Get("h_eta_reco_K_neg"), (TH1F*)f_dw.Get("h_eta_reco_SPi_neg"), (TH1F*)f_dw.Get("h_eta_reco_D0_neg"), (TH1F*)f_dw.Get("h_eta_reco_Dst_neg")};
@@ -156,5 +154,3 @@ void up_plus_down_dev()
   printdevhists(v_h_up_pT_pos,v_h_up_pT_neg, "pT");
   printdevhists(v_h_up_theta_pos,v_h_up_theta_neg, "theta");
 }
-
- */
