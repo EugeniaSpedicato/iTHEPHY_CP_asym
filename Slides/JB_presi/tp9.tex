@@ -9,6 +9,14 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{subcaption}
+\usepackage[compat=1.0.0]{tikz-feynman}
+\tikzfeynmanset{
+  my dot/.style={
+    /tikzfeynman/dot,
+    /tikz/minimum size=3pt,
+  },
+}
+
 \author{Eugenia Spedicato, Lina Maria Ortiz Parra, Jonah Blank}
 \title{Detector induced assymetry in CP violation measurements}
 %\setbeamercovered{transparent}
@@ -23,29 +31,24 @@
 \titlepage
 \end{frame}
 
-%\begin{frame}
-%\tableofcontents
-%\end{frame}
-
-\begin{frame}{Comments - efficiencies}
+\begin{frame}
+\tableofcontents
+\end{frame}
+\section*{Efficiency measurements in GEN-level MC}
+\begin{frame}{MC truth information}
+\[
+D^* \rightarrow D_0(K\pi)\pi
+\]
 \begin{itemize}
-\item very small errors in $D=\frac{\epsilon_+ - \epsilon_-}{\epsilon_+ + \epsilon_-}$\\
-$\rightarrow$ $D=0$ out of $5\sigma$-range
-\item $D$ is much smaller in for the $UP$-polarity
-\item smaller error for $UP$ due to higher statistics
-\item no difference in the efficiencies between $UP$ and $DOWN$ within scope of the error
-\item in the MC: $\epsilon_{D^*}=0$(\texttt{Dst\char`_reconstructed} always 0)\\
-in our computation: $\epsilon_{D^*}=\epsilon_{\pi,s}\cdot\epsilon_{D^0}$
+\item using MC samples \texttt{minisample\char`_Dst2D0pi\char`_D02Kpi\char`_2016\char`_Up\char`_GEN},\\
+\texttt{minisample\char`_Dst2D0pi\char`_D02Kpi\char`_2016\char`_Dw\char`_GEN} for different magnet polarities
+\item comparing truth level to detector simulation\\
+$\rightarrow$ final state detector efficiency
 \end{itemize}
 \end{frame}
-\begin{frame}{Comments - plots}
-\begin{itemize}
-\item structure of $\epsilon(\phi)$ probably due to rectangular detector shape
-\item peak in $\epsilon_{D^*}(\theta)$ within scope of error
-\end{itemize}
-\end{frame}
-\begin{frame}{Total: Efficiencies}
+\begin{frame}{Efficiencies: Total, + and -}
 \begin{table}
+\caption{Total reconstruction efficiencies}
 \resizebox{\textwidth}{!}{
 	\begin{tabular}{cS[table-format=2.2]@{${}\pm{}$}S[table-format=1.2]S[table-format=2.2]@{${}\pm{}$}S[table-format=1.2]S[table-format=2.2]@{${}\pm{}$}S[table-format=1.2]S[table-format=2.2]@{${}\pm{}$}S[table-format=1.2]S[table-format=2.2]@{${}\pm{}$}S[table-format=1.2]}
 		\toprule
@@ -55,76 +58,36 @@ in our computation: $\epsilon_{D^*}=\epsilon_{\pi,s}\cdot\epsilon_{D^0}$
 		$DOWN$ & 86.68 & 0.01 & 84.67 & 0.01 & 76.66 & 0.02 & 73.39 & 0.02 & 56.35 & 0.02\\
 		\bottomrule
 	\end{tabular}}
-\end{table}
-\end{frame}
-\begin{frame}{Charge +: Efficiencies}
-\begin{table}
+\caption{$D^{*+}$ reconstruction efficiencies}
 \resizebox{\textwidth}{!}{
-%	\caption{Reconstruction efficiencies for different polarities}
 	\begin{tabular}{cS[table-format=2.2]@{${}\pm{}$}S[table-format=1.2]S[table-format=2.2]@{${}\pm{}$}S[table-format=1.2]S[table-format=2.2]@{${}\pm{}$}S[table-format=1.2]S[table-format=2.2]@{${}\pm{}$}S[table-format=1.2]S[table-format=2.2]@{${}\pm{}$}S[table-format=1.2]}
 		\toprule
-		{Polarity} & \multicolumn{2}{c}{$\epsilon_{\pi} $} & \multicolumn{2}{c}{$\epsilon_{K} $} & \multicolumn{2}{c}{$ \epsilon_{\pi,s} $} & \multicolumn{2}{c}{$\epsilon_{D^0} $} & \multicolumn{2}{c}{$\epsilon_{D^*} $} \\
+		{Polarity} & \multicolumn{2}{c}{$\epsilon_{\pi^+} $} & \multicolumn{2}{c}{$\epsilon_{K^-} $} & \multicolumn{2}{c}{$ \epsilon_{\pi^+,s} $} & \multicolumn{2}{c}{$\epsilon_{D_0} $} & \multicolumn{2}{c}{$\epsilon_{D^{*+}} $} \\
 		\midrule
 		$UP$ & 86.66 & 0.02 & 85.02 & 0.02 & 76.37 & 0.02 & 73.01 & 0.03 & 55.86 & 0.03 \\
 		$DOWN$ & 86.70 & 0.02 & 85.07 & 0.02 & 76.98 & 0.02 & 73.06 & 0.03 & 56.33 & 0.03 \\
 		\bottomrule
 	\end{tabular}}
-\resizebox{\textwidth}{!}{
-%	\caption{UP Polarity - reconstructed vs. total number of events}
-	\begin{tabular}{cS[table-format=6.0]S[table-format=6.0]S[table-format=6.0]S[table-format=6.0]S[table-format=6.0]}
-		\toprule
-		{UP} & {$\pi $} & {$K $} & {$ soft\, \pi $} & {$D^0 $} & {$D^* $} \\
-		\midrule
-		$N_\text{reco}$ & 2669990 & 2620280 & 2352910 & 2249370 & 1720940 \\
-		$N_\text{tot}$ & 3081050 & 3082060 & 3081050 & 3081050 & 3081050 \\
-		\bottomrule
-	\end{tabular}}
-\resizebox{\textwidth}{!}{
-%	\caption{DOWN Polarity - reconstructed vs. total number of events}
-	\begin{tabular}{cS[table-format=6.0]S[table-format=6.0]S[table-format=6.0]S[table-format=6.0]S[table-format=6.0]}
-		\toprule
-		{DOWN} & {$\pi $} & {$K $} & {$ soft\, \pi $} & {$D^0 $} & {$D^* $} \\
-		\midrule
-		$N_\text{reco}$ & 2674000 & 2626350 & 2374360 & 2253370 & 1737460 \\
-		$N_\text{tot}$ & 3084220 & 3087370 & 3084220 & 3084220 & 3084220 \\
-		\bottomrule
-	\end{tabular}}
-\end{table}
-\end{frame}
-\begin{frame}{Charge -: Efficiencies}
-\begin{table}
-%\caption{Reconstruction efficiencies for different polarities}
+\caption{$D^{*-}$ reconstruction efficiencies}
 \resizebox{\textwidth}{!}{
 	\begin{tabular}{cS[table-format=2.2]@{${}\pm{}$}S[table-format=1.2]S[table-format=2.2]@{${}\pm{}$}S[table-format=1.2]S[table-format=2.2]@{${}\pm{}$}S[table-format=1.2]S[table-format=2.2]@{${}\pm{}$}S[table-format=1.2]S[table-format=2.2]@{${}\pm{}$}S[table-format=1.2]}
 		\toprule
-		{Polarity} & \multicolumn{2}{c}{$\epsilon_{\pi} $} & \multicolumn{2}{c}{$\epsilon_{K} $} & \multicolumn{2}{c}{$ \epsilon_{\pi,s} $} & \multicolumn{2}{c}{$\epsilon_{D^0} $} & \multicolumn{2}{c}{$\epsilon_{D^*} $} \\
+		{Polarity} & \multicolumn{2}{c}{$\epsilon_{\pi^-} $} & \multicolumn{2}{c}{$\epsilon_{K^+} $} & \multicolumn{2}{c}{$ \epsilon_{\pi^-,s} $} & \multicolumn{2}{c}{$\epsilon_{\bar{D}_0} $} & \multicolumn{2}{c}{$\epsilon_{D^{*-}} $} \\
 		\midrule
 		$UP$ & 86.65 & 0.02 & 84.25 & 0.02 & 76.93 & 0.02 & 73.67 & 0.03 & 56.76 & 0.03 \\
 		$DOWN$ & 86.66 & 0.02 & 84.27 & 0.02 & 76.34 & 0.02 & 73.72 & 0.03 & 56.36 & 0.02 \\
 		\bottomrule
 	\end{tabular}}
-%\caption{UP Polarity - reconstructed vs. total number of events}
-\resizebox{\textwidth}{!}{
-	\begin{tabular}{cS[table-format=6.0]S[table-format=6.0]S[table-format=6.0]S[table-format=6.0]S[table-format=6.0]}
-		\toprule
-		{UP} & {$\pi $} & {$K $} & {$ soft\, \pi $} & {$D^0 $} & {$D^* $} \\
-		\midrule
-		$N_\text{reco}$ & 2670540 & 2595820 & 2371060 & 2270520 & 1749450 \\
-		$N_\text{tot}$ & 3082060 & 3081050 & 3082060 & 3082060 & 3082060 \\
-		\bottomrule
-	\end{tabular}}
-%	\caption{DOWN Polarity - reconstructed vs. total number of events}
-\resizebox{\textwidth}{!}{
-	\begin{tabular}{cS[table-format=6.0]S[table-format=6.0]S[table-format=6.0]S[table-format=6.0]S[table-format=6.0]}
-		\toprule
-		{DOWN} & {$\pi $} & {$K $} & {$ soft\, \pi $} & {$D^0 $} & {$D^* $} \\
-		\midrule
-		$N_\text{reco}$ & 2675660 & 2598950 & 2356980 & 2276140 & 1740180 \\
-		$N_\text{tot}$ & 3087370 & 3084220 & 3087370 & 3087370 & 3087370 \\
-		\bottomrule
-	\end{tabular}}
 \end{table}
 \end{frame}
+%\begin{frame}{Efficiencies}
+%\begin{itemize}
+%\item $A_{CP}$ is much smaller in for the $UP$-polarity
+%\item in MC: $\epsilon_{D^*}=\epsilon_{\pi,s}\cdot\epsilon_{D^0}$
+%\item structure of $\epsilon(\phi)$ probably due to rectangular detector shape
+%\item peak in $\epsilon_{D^*}(\theta)$ within scope of error
+%\end{itemize}
+%\end{frame}
 \begin{frame}{Asymmetry}
 \begin{table}
 	\caption{The asymmetry $\frac{N_+ - N_-}{N_+ + N_-}/10^{-3}$}
@@ -139,8 +102,9 @@ in our computation: $\epsilon_{D^*}=\epsilon_{\pi,s}\cdot\epsilon_{D^0}$
 	\end{tabular}}
 \end{table}
 \begin{itemize}
-\item interesting: $D_{soft\,\pi} \& D_{D^0}$ cancel partially in $DOWN$,\\
+\item $D_{soft\,\pi} \& D_{D^0}$ cancel partially in $DOWN$,\\
 but add up in $UP$
+\item $|A_{CP,D^*}|$ much bigger for the $UP$-polarity
 \end{itemize}
 \end{frame}
 \begin{frame}{Comparison of different charges with $UP$ polarity - $D^*$}
@@ -159,69 +123,12 @@ but add up in $UP$
 \end{subfigure}
 \end{figure}
 \end{frame}
-\begin{frame}{Comparison of different charges with $DOWN$ polarity - $D^*$}
-\begin{figure}
-\begin{subfigure}{0.45\textwidth}
-\includegraphics[width=0.9\textwidth]{down_pdf/combined/h_pt_reco_Dst.pdf}
-\end{subfigure}
-\begin{subfigure}{0.45\textwidth}
-\includegraphics[width=0.9\textwidth]{down_pdf/combined/h_phi_reco_Dst.pdf}
-\end{subfigure}
-\begin{subfigure}{0.45\textwidth}
-\includegraphics[width=0.9\textwidth]{down_pdf/combined/h_theta_reco_Dst.pdf}
-\end{subfigure}
-\begin{subfigure}{0.45\textwidth}
-\includegraphics[width=0.9\textwidth]{down_pdf/combined/h_eta_reco_Dst.pdf}
-\end{subfigure}
-\end{figure}
-\end{frame}
 \begin{frame}{Comparison - $D^* \phi$}
 \centering
 \includegraphics[width=0.48\textwidth]{up_pdf/combined/h_phi_reco_Dst.pdf}
 \includegraphics[width=0.48\textwidth]{down_pdf/combined/h_phi_reco_Dst.pdf}
-\end{frame}
-\begin{frame}{$D^*$ asymmetry dependencies - $UP$ polarity}
-\begin{figure}
-\begin{subfigure}{0.45\textwidth}
-\includegraphics[width=0.9\textwidth]{up_pdf/deviation/h_pt_reco_Dst_pos_dev.pdf}
-\end{subfigure}
-\begin{subfigure}{0.45\textwidth}
-\includegraphics[width=0.9\textwidth]{up_pdf/deviation/h_phi_reco_Dst_pos_dev.pdf}
-\end{subfigure}
-\begin{subfigure}{0.45\textwidth}
-\includegraphics[width=0.9\textwidth]{up_pdf/deviation/h_theta_reco_Dst_pos_dev.pdf}
-\end{subfigure}
-\begin{subfigure}{0.45\textwidth}
-\includegraphics[width=0.9\textwidth]{up_pdf/deviation/h_eta_reco_Dst_pos_dev.pdf}
-\end{subfigure}
-\end{figure}
-\end{frame}
-\begin{frame}{$D^*$ asymmetry dependencies - $DOWN$ polarity}
-\begin{figure}
-\begin{subfigure}{0.45\textwidth}
-\includegraphics[width=0.9\textwidth]{down_pdf/deviation/h_pt_reco_Dst_pos_dev.pdf}
-\end{subfigure}
-\begin{subfigure}{0.45\textwidth}
-\includegraphics[width=0.9\textwidth]{down_pdf/deviation/h_phi_reco_Dst_pos_dev.pdf}
-\end{subfigure}
-\begin{subfigure}{0.45\textwidth}
-\includegraphics[width=0.9\textwidth]{down_pdf/deviation/h_theta_reco_Dst_pos_dev.pdf}
-\end{subfigure}
-\begin{subfigure}{0.45\textwidth}
-\includegraphics[width=0.9\textwidth]{down_pdf/deviation/h_eta_reco_Dst_pos_dev.pdf}
-\end{subfigure}
-\end{figure}
-\end{frame}
-\begin{frame}{$D^*$ asymmetry - $\phi$}
-\centering
 \includegraphics[width=0.48\textwidth]{up_pdf/deviation/h_phi_reco_Dst_pos_dev.pdf}
 \includegraphics[width=0.48\textwidth]{down_pdf/deviation/h_phi_reco_Dst_pos_dev.pdf}
-\begin{itemize}
-\item left $UP$, right $DOWN$
-\item clear dependency in $\phi$, inverted $UP\leftrightarrow DOWN$
-\item doesn't seem to have dependency on other topological variables\\
-$\rightarrow$ form of the detector is biggest source of induced CPV
-\end{itemize}
 \end{frame}
 \begin{frame}{$D^*$ asymmetry UP+DOWN}
 \begin{figure}
