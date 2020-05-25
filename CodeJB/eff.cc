@@ -47,8 +47,7 @@ void sethists(vector<TH1F*> v_hist, vector<TH1F*> v_hist_pos, vector<TH1F*> v_hi
 void printhists(vector<TH1F*> v_hist, vector<TH1F*> v_hist_pos, vector<TH1F*> v_hist_neg, string polarisation)
 {
   int size = v_hist_pos.size();
-  bool up_down = (polarisation == "UP")? true : false;
-  string directory = (up_down == true)? "up_pdf" : "down_pdf";
+  string directory = polarisation+"_pdf";
   TCanvas *c = new TCanvas();
   string title_name;
   string save_name;
@@ -102,8 +101,7 @@ void printdevhists(vector<TH1F*> v_get_hist_pos, vector<TH1F*> v_get_hist_neg, s
   h_temp_neg->Add(v_get_hist_neg.at(i));
   v_hist_neg.push_back(h_temp_neg);
   }
-  bool up_down = (polarisation == "UP")? true : false;
-  string directory = (up_down == true)? "up_pdf" : "down_pdf";
+  string directory = polarisation+"_pdf";
   TCanvas *c = new TCanvas();
   string title_name;
   string new_title;

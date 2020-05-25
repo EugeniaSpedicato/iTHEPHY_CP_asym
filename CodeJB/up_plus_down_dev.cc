@@ -26,7 +26,7 @@ void up_plus_down_dev()
   string save_name;
   TCanvas *c = new TCanvas();
   gStyle->SetOptStat(0);
-  TF1 func("0*x", "0*x", -5., 9600.);
+  TF1 func("0*x", "0*x", -5., 11000.);
   for (int i =0; i < size;++i)
   {
     v_h_up_eta_pos.at(i)->Add(v_h_dw_eta_pos.at(i));

@@ -122,7 +122,7 @@ Info in <TCanvas::Print>: pdf file output/up_pdf/single/tot/h_eta_reco_Dst.pdf h
 Info in <TCanvas::Print>: pdf file output/up_pdf/single/pos/h_eta_reco_Dst_pos.pdf has been created
 Info in <TCanvas::Print>: pdf file output/up_pdf/single/neg/h_eta_reco_Dst_neg.pdf has been created
 Info in <TCanvas::Print>: pdf file output/up_pdf/combined/h_eta_reco_Dst.pdf has been created
-Info in <TCanvas::Print>: pdf file output/up_pdf/test/h_phi_test_SPi.pdf has been created
-Info in <TCanvas::Print>: pdf file output/up_pdf/test/h_phi_test_SPi_pos.pdf has been created
-Info in <TCanvas::Print>: pdf file output/up_pdf/test/h_phi_test_SPi_neg.pdf has been created
-Info in <TCanvas::Print>: pdf file output/up_pdf/test/h_phi_test_SPi_combined.pdf has been created
+Info in <TCanvas::Print>: pdf file output/down_pdf/test/h_phi_test_SPi.pdf has been created
+Info in <TCanvas::Print>: pdf file output/down_pdf/test/h_phi_test_SPi_pos.pdf has been created
+Info in <TCanvas::Print>: pdf file output/down_pdf/test/h_phi_test_SPi_neg.pdf has been created
+Info in <TCanvas::Print>: pdf file output/down_pdf/test/h_phi_test_SPi_combined.pdf has been created
