@@ -80,7 +80,7 @@ void printhists(vector<TH1F*> v_hist, vector<TH1F*> v_hist_pos, vector<TH1F*> v_
 }
 void printdevhists(vector<TH1F*> v_get_hist_pos, vector<TH1F*> v_get_hist_neg, string polarisation)
 {
-  TF1 func("0*x", "0*x", -5., 9600.);
+  TF1 func("0*x", "0*x", -5., 11000.);
   int size = v_get_hist_pos.size();
   vector<TH1F*> v_hist_pos;
   vector<TH1F*> v_hist_neg;
@@ -109,8 +109,6 @@ void printdevhists(vector<TH1F*> v_get_hist_pos, vector<TH1F*> v_get_hist_neg, s
   string save_name;
   for (int i = 0; i < size; ++i)
   {
-    //v_hist_pos.at(i)->Sumw2();
-    //v_hist_neg.at(i)->Sumw2();
     v_hist_pos.at(i)->Add(v_hist_neg.at(i),-1);
     v_hist_neg.at(i)->Scale(2.);
     v_hist_neg.at(i)->Add(v_hist_pos.at(i));
