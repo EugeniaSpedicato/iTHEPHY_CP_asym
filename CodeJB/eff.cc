@@ -112,11 +112,11 @@ void printdevhists(vector<TH1F*> v_get_hist_pos, vector<TH1F*> v_get_hist_neg, s
     v_hist_neg.at(i)->Scale(2.);
     v_hist_neg.at(i)->Add(v_hist_pos.at(i));
     v_hist_pos.at(i)->Divide(v_hist_neg.at(i));
-    if ( size > 4 && i >= 4 )
+    /*if ( size > 4 && i >= 4 )
     {
       v_hist_pos.at(i)->SetAxisRange(-0.02, 0.02, "Y");
     }
-    else v_hist_pos.at(i)->SetAxisRange(-0.15, 0.15, "Y");
+    else v_hist_pos.at(i)->SetAxisRange(-0.15, 0.15, "Y");*/
     title_name = v_hist_pos.at(i)->GetName();
     new_title = title_name+"_dev";
     v_hist_pos.at(i)->SetName(new_title.c_str());
