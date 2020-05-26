@@ -1,358 +1,583 @@
 
-Processing data.cc++("$dir", "D02Kmpip_15_Up", "UP")...
+Processing data.cc++("$dir", "D02Kmpip_15_Up", "up")...
 
 [1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
                 Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
                 All rights reserved, please read http://roofit.sourceforge.net/license.txt
 
-[#1] INFO:Eval -- RooRealVar::setRange(DTF_Mass) new range named 'left' created with bounds [2004.4,2009.8]
-[#1] INFO:Eval -- RooRealVar::setRange(DTF_Mass) new range named 'right' created with bounds [2010.7,2020.11]
+[#1] INFO:Eval -- RooRealVar::setRange(DTF_Mass) new range named 'left' created with bounds [2004.47,2009.8]
+[#1] INFO:Eval -- RooRealVar::setRange(DTF_Mass) new range named 'right' created with bounds [2010.5,2020.11]
 [#1] INFO:Eval -- RooAbsReal::attachToTree(Dst_ID) TTree Int_t branch Dst_ID will be converted to double precision
 [#1] INFO:Eval -- RooTreeDataStore::loadValues(dataset1) Ignored 1291880 out of range events
 [#1] INFO:Eval -- RooAbsReal::attachToTree(Dst_ID) TTree Int_t branch Dst_ID will be converted to double precision
 [#1] INFO:Eval -- RooTreeDataStore::loadValues(dataset2) Ignored 1347616 out of range events
-[#1] INFO:Fitting -- RooAbsOptTestStatistic::ctor(nll_model_neg_dataset1_left) constructing test statistic for sub-range named left
-[#1] INFO:Eval -- RooRealVar::setRange(DTF_Mass) new range named 'NormalizationRangeForleft' created with bounds [2004.4,2020.11]
-[#1] INFO:Eval -- RooRealVar::setRange(DTF_Mass) new range named 'fit_nll_model_neg_dataset1_left' created with bounds [2004.4,2009.8]
-[#1] INFO:Fitting -- RooAbsOptTestStatistic::ctor(nll_model_neg_dataset1_left) fixing interpretation of coefficients of any RooAddPdf to full domain of observables 
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass|NormalizationRangeForleft]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:Eval -- RooAbsTestStatistic::initMPMode: started 8 remote server process.
-[#1] INFO:Fitting -- RooAbsOptTestStatistic::ctor(nll_model_neg_dataset1_right) constructing test statistic for sub-range named right
-[#1] INFO:Eval -- RooRealVar::setRange(DTF_Mass) new range named 'NormalizationRangeForright' created with bounds [2004.4,2020.11]
-[#1] INFO:Eval -- RooRealVar::setRange(DTF_Mass) new range named 'fit_nll_model_neg_dataset1_right' created with bounds [2010.7,2020.11]
-[#1] INFO:Fitting -- RooAbsOptTestStatistic::ctor(nll_model_neg_dataset1_right) fixing interpretation of coefficients of any RooAddPdf to full domain of observables 
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass|NormalizationRangeForright]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:Eval -- RooAbsTestStatistic::initMPMode: started 8 remote server process.
-[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_model_neg_dataset1) Summation contains a RooNLLVar, using its error level
  **********
- **   13 **HESSE        4000
+ **   13 **HESSE        3000
  **********
  FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass|NormalizationRangeForleft]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass|NormalizationRangeForleft]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass|NormalizationRangeForleft]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass|NormalizationRangeForleft]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass|NormalizationRangeForleft]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass|NormalizationRangeForleft]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass|NormalizationRangeForleft]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass|NormalizationRangeForleft]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_left_GOF1) first = 18920 last = 37841 Likelihood offset now set to 21702
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_left_GOF6) first = 113523 last = 132443 Likelihood offset now set to 21437.1
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_left_GOF4) first = 75682 last = 94602 Likelihood offset now set to 21773.9
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_left_GOF5) first = 94602 last = 113523 Likelihood offset now set to 21758.3
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_left_GOF3) first = 56761 last = 75682 Likelihood offset now set to 21439
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_left_GOF7) first = 132443 last = 151364 Likelihood offset now set to -1.61272e+06
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_left_GOF2) first = 37841 last = 56761 Likelihood offset now set to 21505.1
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_left_GOF0) first = 0 last = 18920 Likelihood offset now set to 21619
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass|NormalizationRangeForright]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass|NormalizationRangeForright]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass|NormalizationRangeForright]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass|NormalizationRangeForright]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass|NormalizationRangeForright]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass|NormalizationRangeForright]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass|NormalizationRangeForright]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass|NormalizationRangeForright]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_right_GOF0) first = 0 last = 42597 Likelihood offset now set to 87871.2
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_right_GOF2) first = 85195 last = 127793 Likelihood offset now set to 87781.8
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_right_GOF3) first = 127793 last = 170391 Likelihood offset now set to 88015.5
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_right_GOF1) first = 42597 last = 85195 Likelihood offset now set to 87919.7
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_right_GOF6) first = 255586 last = 298184 Likelihood offset now set to 87812.1
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_right_GOF7) first = 298184 last = 340782 Likelihood offset now set to -3.9088e+06
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_right_GOF4) first = 170391 last = 212988 Likelihood offset now set to 87935
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_right_GOF5) first = 212988 last = 255586 Likelihood offset now set to 87875.6
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF2) first = 336904 last = 505356 Likelihood offset now set to 293887
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF3) first = 505356 last = 673808 Likelihood offset now set to 294554
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF1) first = 168452 last = 336904 Likelihood offset now set to 295595
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF6) first = 1010712 last = 1179164 Likelihood offset now set to 294024
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF5) first = 842260 last = 1010712 Likelihood offset now set to 295640
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF4) first = 673808 last = 842260 Likelihood offset now set to 294173
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF7) first = 1179164 last = 1347616 Likelihood offset now set to -1.73757e+07
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF0) first = 0 last = 168452 Likelihood offset now set to 294147
  MINUIT WARNING IN HESSE   
  ============== Negative diagonal element 1 in Error Matrix
  MINUIT WARNING IN HESSE   
- ============== 1 added to diagonal of error matrix
+ ============== 2232.43 added to diagonal of error matrix
  EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
-        -1.0576e+00 -1.1790e-01  8.2474e-02  4.3482e-01  9.8115e-01  1.0000e+00  2.4959e+00  4.1812e+00
+        -6.6123e+01  8.8407e-02  4.0854e-01  1.1385e+00  1.8950e+00  6.8593e+01
  MINUIT WARNING IN HESSE   
- ============== MATRIX FORCED POS-DEF BY ADDING 1.061810 TO DIAGONAL.
- FCN=5.09317e-11 FROM HESSE     STATUS=NOT POSDEF     79 CALLS          80 TOTAL
-                     EDM=50543.4    STRATEGY= 1      ERR MATRIX NOT POS-DEF
+ ============== MATRIX FORCED POS-DEF BY ADDING 66.191657 TO DIAGONAL.
+ FCN=1.74623e-10 FROM HESSE     STATUS=NOT POSDEF     52 CALLS          53 TOTAL
+                     EDM=3.81476e+08    STRATEGY= 1      ERR MATRIX NOT POS-DEF
   EXT PARAMETER                APPROXIMATE     INTERNAL      INTERNAL  
   NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
-   1  N1           2.00000e+02   1.12937e+03   5.00000e-01  -1.36945e+00
-   2  a1           2.00390e+03   1.28828e-02   2.06722e-03  -2.21814e-01
-   3  b1           1.30000e+00   4.31553e-03   2.39777e-03  -5.51317e-01
-   4  bkg_yield    2.80000e+05   4.82490e+02   2.05758e-03  -2.01358e-01
-   5  c1           5.00000e-02   6.50855e-04   1.72186e-03  -9.27295e-01
-   6  mean         2.01000e+03   1.96958e-03   2.01358e-03   0.00000e+00
-   7  sig_yield    1.00000e+06   3.76521e+04   2.57889e-03   6.43501e-01
-   8  sigma        3.10000e-01   1.12638e-02   2.18871e-03  -3.89796e-01
+   1  a1           2.00390e+03   4.13707e+00   1.97382e-03   8.40485e-01
+   2  b1           1.30000e+00   1.46865e-02   2.39777e-03  -5.51317e-01
+   3  bkg_yield    2.80000e+05   5.94963e+02   2.05758e-03  -2.01358e-01
+   4  mean         2.01000e+03   6.78157e-05   2.01358e-03   0.00000e+00
+   5  sig_yield    1.00000e+06   4.17697e+02   2.57889e-03   6.43501e-01
+   6  sigma        3.10000e-01   1.93174e-04   2.41688e-03  -5.62536e-01
                                ERR DEF= 0.5
- EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  8    ERR DEF=0.5
-  4.753e+05  7.132e-09 -1.568e-09  1.985e-03  2.152e-09 -2.709e-08 -5.269e-01  1.570e-07 
-  7.132e-09  1.660e-04 -1.479e-05 -7.027e-02  1.344e-06 -1.478e-06 -2.889e+01  9.162e-06 
- -1.568e-09 -1.479e-05  1.862e-05 -2.214e-01  1.027e-06  4.403e-07  7.918e+00 -1.896e-06 
-  1.985e-03 -7.027e-02 -2.214e-01  2.328e+05  8.346e-02 -2.868e-01 -5.296e+06  1.438e+00 
-  2.152e-09  1.344e-06  1.027e-06  8.346e-02  4.236e-07 -3.213e-07 -5.970e+00  1.638e-06 
- -2.709e-08 -1.478e-06  4.403e-07 -2.868e-01 -3.213e-07  3.879e-06  7.304e+01 -2.168e-05 
- -5.269e-01 -2.889e+01  7.918e+00 -5.296e+06 -5.970e+00  7.304e+01  1.420e+09 -4.231e+02 
-  1.570e-07  9.162e-06 -1.896e-06  1.438e+00  1.638e-06 -2.168e-05 -4.231e+02  1.269e-04 
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  1.627e+01 -5.916e-02 -2.380e+03  1.413e-04  1.617e+03  7.560e-04 
+ -5.916e-02  2.157e-04  8.656e+00 -5.137e-07 -5.880e+00 -2.749e-06 
+ -2.380e+03  8.656e+00  3.540e+05 -2.068e-02 -2.366e+05 -1.106e-01 
+  1.413e-04 -5.137e-07 -2.068e-02  4.599e-09  1.405e-02  6.531e-09 
+  1.617e+03 -5.880e+00 -2.366e+05  1.405e-02  1.745e+05  7.515e-02 
+  7.560e-04 -2.749e-06 -1.106e-01  6.531e-09  7.515e-02  3.732e-08 
 ERR MATRIX NOT POS-DEF
  PARAMETER  CORRELATION COEFFICIENTS  
-       NO.  GLOBAL      1      2      3      4      5      6      7      8
-        1  0.00000   1.000  0.000 -0.000  0.000  0.000 -0.000 -0.000  0.000
-        2  0.43264   0.000  1.000 -0.266 -0.011  0.160 -0.058 -0.059  0.063
-        3  0.58297  -0.000 -0.266  1.000 -0.106  0.366  0.052  0.049 -0.039
-        4  0.47313   0.000 -0.011 -0.106  1.000  0.266 -0.302 -0.291  0.265
-        5  0.62209   0.000  0.160  0.366  0.266  1.000 -0.251 -0.243  0.223
-        6  0.98500  -0.000 -0.058  0.052 -0.302 -0.251  1.000  0.984 -0.977
-        7  0.99813  -0.000 -0.059  0.049 -0.291 -0.243  0.984  1.000 -0.997
-        8  0.99742   0.000  0.063 -0.039  0.265  0.223 -0.977 -0.997  1.000
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.99898   1.000 -0.999 -0.992  0.516  0.960  0.970
+        2  0.99875  -0.999  1.000  0.991 -0.516 -0.959 -0.969
+        3  0.99193  -0.992  0.991  1.000 -0.513 -0.952 -0.963
+        4  0.51661   0.516 -0.516 -0.513  1.000  0.496  0.499
+        5  0.95975   0.960 -0.959 -0.952  0.496  1.000  0.931
+        6  0.97033   0.970 -0.969 -0.963  0.499  0.931  1.000
  ERR MATRIX NOT POS-DEF
-[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_model_neg_dataset1) Summation contains a RooNLLVar, using its error level
  **********
- **   13 **MIGRAD        4000           1
+ **   13 **MIGRAD        3000           1
  **********
  FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
  START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
- FCN=-6.54836e-11 FROM MIGRAD    STATUS=INITIATE       52 CALLS          53 TOTAL
+ FCN=-7379.2 FROM MIGRAD    STATUS=INITIATE       49 CALLS          50 TOTAL
                      EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
   EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
   NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
-   1  N1           2.38674e+02   1.12937e+03   3.59148e-02   2.53237e-11
-   2  a1           2.00390e+03   1.28828e-02   0.00000e+00   9.72926e+03
-   3  b1           1.30000e+00   4.31553e-03   0.00000e+00   1.55057e+04
-   4  bkg_yield    2.80000e+05   4.82490e+02   0.00000e+00  -4.55812e+03
-   5  c1           5.00000e-02   6.50855e-04   0.00000e+00  -1.13382e+04
-   6  mean         2.01000e+03   1.96958e-03   0.00000e+00  -9.78997e+05
-   7  sig_yield    1.00000e+06   3.76521e+04   0.00000e+00   2.37405e+04
-   8  sigma        3.10000e-01   1.12638e-02   0.00000e+00   2.94467e+04
+   1  a1           2.00075e+03   4.13707e+00  -1.56884e+00   1.28274e+03
+   2  b1           1.30000e+00   1.46865e-02   0.00000e+00   1.73061e+04
+   3  bkg_yield    2.80000e+05   5.94963e+02   0.00000e+00  -2.41714e+04
+   4  mean         2.01000e+03   6.78157e-05   0.00000e+00  -5.57002e+06
+   5  sig_yield    1.00000e+06   4.17697e+02   0.00000e+00  -2.39401e+04
+   6  sigma        3.10000e-01   1.93174e-04   0.00000e+00  -5.05705e+05
                                ERR DEF= 0.5
-[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
-Returning maximum FCN so far (24841.6) to force MIGRAD to back out of this region. Error log follows
-Parameter values: N1=1979.61, a1=2004.4, b1=0.808546, bkg_yield=276485, c1=0.0233936, mean=2010.28, sig_yield=1.24912e+06, sigma=0.280118
-PID2439/RooRealMPFE::nll_model_neg_dataset1_right_7f42877f9c90_MPFE7[ arg=nll_model_neg_dataset1_right_GOF7 vars=(N1,a1,b1,bkg_yield,c1,mean,sig_yield,sigma) ]
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1979.61, a1=a1=2004.4, b1=b1=0.808546, c1=c1=0.0233936
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1979.61, a1=a1=2004.4, b1=b1=0.808546, c1=c1=0.0233936
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1979.61, a1=a1=2004.4, b1=b1=0.808546, c1=c1=0.0233936
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1979.61, a1=a1=2004.4, b1=b1=0.808546, c1=c1=0.0233936
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1979.61, a1=a1=2004.4, b1=b1=0.808546, c1=c1=0.0233936
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1979.61, a1=a1=2004.4, b1=b1=0.808546, c1=c1=0.0233936
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1979.61, a1=a1=2004.4, b1=b1=0.808546, c1=c1=0.0233936
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1979.61, a1=a1=2004.4, b1=b1=0.808546, c1=c1=0.0233936
-PID2431/RooRealMPFE::nll_model_neg_dataset1_left_7fffe6e83560_MPFE7[ arg=nll_model_neg_dataset1_left_GOF7 vars=(N1,a1,b1,bkg_yield,c1,mean,sig_yield,sigma) ]
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1979.61, a1=a1=2004.4, b1=b1=0.808546, c1=c1=0.0233936
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1979.61, a1=a1=2004.4, b1=b1=0.808546, c1=c1=0.0233936
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1979.61, a1=a1=2004.4, b1=b1=0.808546, c1=c1=0.0233936
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1979.61, a1=a1=2004.4, b1=b1=0.808546, c1=c1=0.0233936
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1979.61, a1=a1=2004.4, b1=b1=0.808546, c1=c1=0.0233936
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1979.61, a1=a1=2004.4, b1=b1=0.808546, c1=c1=0.0233936
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1979.61, a1=a1=2004.4, b1=b1=0.808546, c1=c1=0.0233936
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1979.61, a1=a1=2004.4, b1=b1=0.808546, c1=c1=0.0233936
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1979.61, a1=a1=2004.4, b1=b1=0.808546, c1=c1=0.0233936
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1979.61, a1=a1=2004.4, b1=b1=0.808546, c1=c1=0.0233936
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1979.61, a1=a1=2004.4, b1=b1=0.808546, c1=c1=0.0233936
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1979.61, a1=a1=2004.4, b1=b1=0.808546, c1=c1=0.0233936
-    ... (remaining 1038 messages suppressed)
-
-[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
-Returning maximum FCN so far (24841.6) to force MIGRAD to back out of this region. Error log follows
-Parameter values: N1=1776.35, a1=2004.4, b1=0.808589, bkg_yield=276485, c1=0.0233962, mean=2010.28, sig_yield=1.24912e+06, sigma=0.280118
-PID2439/RooRealMPFE::nll_model_neg_dataset1_right_7f42877f9c90_MPFE7[ arg=nll_model_neg_dataset1_right_GOF7 vars=(N1,a1,b1,bkg_yield,c1,mean,sig_yield,sigma) ]
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1776.35, a1=a1=2004.4, b1=b1=0.808589, c1=c1=0.0233962
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1776.35, a1=a1=2004.4, b1=b1=0.808589, c1=c1=0.0233962
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1776.35, a1=a1=2004.4, b1=b1=0.808589, c1=c1=0.0233962
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1776.35, a1=a1=2004.4, b1=b1=0.808589, c1=c1=0.0233962
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1776.35, a1=a1=2004.4, b1=b1=0.808589, c1=c1=0.0233962
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1776.35, a1=a1=2004.4, b1=b1=0.808589, c1=c1=0.0233962
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1776.35, a1=a1=2004.4, b1=b1=0.808589, c1=c1=0.0233962
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1776.35, a1=a1=2004.4, b1=b1=0.808589, c1=c1=0.0233962
-PID2431/RooRealMPFE::nll_model_neg_dataset1_left_7fffe6e83560_MPFE7[ arg=nll_model_neg_dataset1_left_GOF7 vars=(N1,a1,b1,bkg_yield,c1,mean,sig_yield,sigma) ]
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1776.35, a1=a1=2004.4, b1=b1=0.808589, c1=c1=0.0233962
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1776.35, a1=a1=2004.4, b1=b1=0.808589, c1=c1=0.0233962
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1776.35, a1=a1=2004.4, b1=b1=0.808589, c1=c1=0.0233962
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1776.35, a1=a1=2004.4, b1=b1=0.808589, c1=c1=0.0233962
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1776.35, a1=a1=2004.4, b1=b1=0.808589, c1=c1=0.0233962
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1776.35, a1=a1=2004.4, b1=b1=0.808589, c1=c1=0.0233962
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1776.35, a1=a1=2004.4, b1=b1=0.808589, c1=c1=0.0233962
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1776.35, a1=a1=2004.4, b1=b1=0.808589, c1=c1=0.0233962
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1776.35, a1=a1=2004.4, b1=b1=0.808589, c1=c1=0.0233962
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1776.35, a1=a1=2004.4, b1=b1=0.808589, c1=c1=0.0233962
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1776.35, a1=a1=2004.4, b1=b1=0.808589, c1=c1=0.0233962
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1776.35, a1=a1=2004.4, b1=b1=0.808589, c1=c1=0.0233962
-    ... (remaining 1038 messages suppressed)
-
-[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
-Returning maximum FCN so far (24841.6) to force MIGRAD to back out of this region. Error log follows
-Parameter values: N1=1582.46, a1=2004.4, b1=0.808632, bkg_yield=276485, c1=0.0233988, mean=2010.28, sig_yield=1.24912e+06, sigma=0.280118
-PID2439/RooRealMPFE::nll_model_neg_dataset1_right_7f42877f9c90_MPFE7[ arg=nll_model_neg_dataset1_right_GOF7 vars=(N1,a1,b1,bkg_yield,c1,mean,sig_yield,sigma) ]
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1582.46, a1=a1=2004.4, b1=b1=0.808632, c1=c1=0.0233988
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1582.46, a1=a1=2004.4, b1=b1=0.808632, c1=c1=0.0233988
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1582.46, a1=a1=2004.4, b1=b1=0.808632, c1=c1=0.0233988
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1582.46, a1=a1=2004.4, b1=b1=0.808632, c1=c1=0.0233988
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1582.46, a1=a1=2004.4, b1=b1=0.808632, c1=c1=0.0233988
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1582.46, a1=a1=2004.4, b1=b1=0.808632, c1=c1=0.0233988
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1582.46, a1=a1=2004.4, b1=b1=0.808632, c1=c1=0.0233988
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1582.46, a1=a1=2004.4, b1=b1=0.808632, c1=c1=0.0233988
-PID2431/RooRealMPFE::nll_model_neg_dataset1_left_7fffe6e83560_MPFE7[ arg=nll_model_neg_dataset1_left_GOF7 vars=(N1,a1,b1,bkg_yield,c1,mean,sig_yield,sigma) ]
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1582.46, a1=a1=2004.4, b1=b1=0.808632, c1=c1=0.0233988
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1582.46, a1=a1=2004.4, b1=b1=0.808632, c1=c1=0.0233988
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1582.46, a1=a1=2004.4, b1=b1=0.808632, c1=c1=0.0233988
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1582.46, a1=a1=2004.4, b1=b1=0.808632, c1=c1=0.0233988
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1582.46, a1=a1=2004.4, b1=b1=0.808632, c1=c1=0.0233988
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1582.46, a1=a1=2004.4, b1=b1=0.808632, c1=c1=0.0233988
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1582.46, a1=a1=2004.4, b1=b1=0.808632, c1=c1=0.0233988
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1582.46, a1=a1=2004.4, b1=b1=0.808632, c1=c1=0.0233988
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1582.46, a1=a1=2004.4, b1=b1=0.808632, c1=c1=0.0233988
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1582.46, a1=a1=2004.4, b1=b1=0.808632, c1=c1=0.0233988
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1582.46, a1=a1=2004.4, b1=b1=0.808632, c1=c1=0.0233988
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=1582.46, a1=a1=2004.4, b1=b1=0.808632, c1=c1=0.0233988
-    ... (remaining 1038 messages suppressed)
-
- MINUIT WARNING IN MIGRAD  
- ============== Negative diagonal element 2 in Error Matrix
- MINUIT WARNING IN MIGRAD  
- ============== Negative diagonal element 3 in Error Matrix
- MINUIT WARNING IN MIGRAD  
- ============== Negative diagonal element 5 in Error Matrix
- MINUIT WARNING IN MIGRAD  
- ============== 1.01723 added to diagonal of error matrix
-[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
-Returning maximum FCN so far (1.45047e+06) to force MIGRAD to back out of this region. Error log follows
-Parameter values: N1=7527.77, a1=2007.98, b1=0.82507, bkg_yield=181791, c1=0.0302314, mean=2008.49, sig_yield=5607.44, sigma=0.785498
-PID2439/RooRealMPFE::nll_model_neg_dataset1_right_7f42877f9c90_MPFE7[ arg=nll_model_neg_dataset1_right_GOF7 vars=(N1,a1,b1,bkg_yield,c1,mean,sig_yield,sigma) ]
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=7527.77, a1=a1=2007.98, b1=b1=0.82507, c1=c1=0.0302314
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.36, N1=N1=7527.77, a1=a1=2007.98, b1=b1=0.82507, c1=c1=0.0302314
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.38, N1=N1=7527.77, a1=a1=2007.98, b1=b1=0.82507, c1=c1=0.0302314
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.35, N1=N1=7527.77, a1=a1=2007.98, b1=b1=0.82507, c1=c1=0.0302314
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.89, N1=N1=7527.77, a1=a1=2007.98, b1=b1=0.82507, c1=c1=0.0302314
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.87, N1=N1=7527.77, a1=a1=2007.98, b1=b1=0.82507, c1=c1=0.0302314
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.85, N1=N1=7527.77, a1=a1=2007.98, b1=b1=0.82507, c1=c1=0.0302314
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.84, N1=N1=7527.77, a1=a1=2007.98, b1=b1=0.82507, c1=c1=0.0302314
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.65, N1=N1=7527.77, a1=a1=2007.98, b1=b1=0.82507, c1=c1=0.0302314
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.14, N1=N1=7527.77, a1=a1=2007.98, b1=b1=0.82507, c1=c1=0.0302314
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.63, N1=N1=7527.77, a1=a1=2007.98, b1=b1=0.82507, c1=c1=0.0302314
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.12, N1=N1=7527.77, a1=a1=2007.98, b1=b1=0.82507, c1=c1=0.0302314
-    ... (remaining 926 messages suppressed)
-PID2431/RooRealMPFE::nll_model_neg_dataset1_left_7fffe6e83560_MPFE7[ arg=nll_model_neg_dataset1_left_GOF7 vars=(N1,a1,b1,bkg_yield,c1,mean,sig_yield,sigma) ]
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.67, N1=N1=7527.77, a1=a1=2007.98, b1=b1=0.82507, c1=c1=0.0302314
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.77, N1=N1=7527.77, a1=a1=2007.98, b1=b1=0.82507, c1=c1=0.0302314
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.97, N1=N1=7527.77, a1=a1=2007.98, b1=b1=0.82507, c1=c1=0.0302314
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.86, N1=N1=7527.77, a1=a1=2007.98, b1=b1=0.82507, c1=c1=0.0302314
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.25, N1=N1=7527.77, a1=a1=2007.98, b1=b1=0.82507, c1=c1=0.0302314
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.46, N1=N1=7527.77, a1=a1=2007.98, b1=b1=0.82507, c1=c1=0.0302314
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.08, N1=N1=7527.77, a1=a1=2007.98, b1=b1=0.82507, c1=c1=0.0302314
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.83, N1=N1=7527.77, a1=a1=2007.98, b1=b1=0.82507, c1=c1=0.0302314
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.74, N1=N1=7527.77, a1=a1=2007.98, b1=b1=0.82507, c1=c1=0.0302314
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.73, N1=N1=7527.77, a1=a1=2007.98, b1=b1=0.82507, c1=c1=0.0302314
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.46, N1=N1=7527.77, a1=a1=2007.98, b1=b1=0.82507, c1=c1=0.0302314
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.57, N1=N1=7527.77, a1=a1=2007.98, b1=b1=0.82507, c1=c1=0.0302314
-    ... (remaining 16374 messages suppressed)
-
-[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
-Returning maximum FCN so far (1.45047e+06) to force MIGRAD to back out of this region. Error log follows
-Parameter values: N1=2941.3, a1=2009.78, b1=3.78086, bkg_yield=29524.6, c1=0.0148707, mean=2008.42, sig_yield=1.2235e+06, sigma=0.750948
-PID2439/RooRealMPFE::nll_model_neg_dataset1_right_7f42877f9c90_MPFE7[ arg=nll_model_neg_dataset1_right_GOF7 vars=(N1,a1,b1,bkg_yield,c1,mean,sig_yield,sigma) ]
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=2941.3, a1=a1=2009.78, b1=b1=3.78086, c1=c1=0.0148707
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.33, N1=N1=2941.3, a1=a1=2009.78, b1=b1=3.78086, c1=c1=0.0148707
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.36, N1=N1=2941.3, a1=a1=2009.78, b1=b1=3.78086, c1=c1=0.0148707
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.38, N1=N1=2941.3, a1=a1=2009.78, b1=b1=3.78086, c1=c1=0.0148707
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.35, N1=N1=2941.3, a1=a1=2009.78, b1=b1=3.78086, c1=c1=0.0148707
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.31, N1=N1=2941.3, a1=a1=2009.78, b1=b1=3.78086, c1=c1=0.0148707
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.89, N1=N1=2941.3, a1=a1=2009.78, b1=b1=3.78086, c1=c1=0.0148707
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.87, N1=N1=2941.3, a1=a1=2009.78, b1=b1=3.78086, c1=c1=0.0148707
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.85, N1=N1=2941.3, a1=a1=2009.78, b1=b1=3.78086, c1=c1=0.0148707
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.84, N1=N1=2941.3, a1=a1=2009.78, b1=b1=3.78086, c1=c1=0.0148707
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.82, N1=N1=2941.3, a1=a1=2009.78, b1=b1=3.78086, c1=c1=0.0148707
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=2941.3, a1=a1=2009.78, b1=b1=3.78086, c1=c1=0.0148707
-    ... (remaining 78 messages suppressed)
-PID2431/RooRealMPFE::nll_model_neg_dataset1_left_7fffe6e83560_MPFE7[ arg=nll_model_neg_dataset1_left_GOF7 vars=(N1,a1,b1,bkg_yield,c1,mean,sig_yield,sigma) ]
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.73, N1=N1=2941.3, a1=a1=2009.78, b1=b1=3.78086, c1=c1=0.0148707
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.01, N1=N1=2941.3, a1=a1=2009.78, b1=b1=3.78086, c1=c1=0.0148707
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.17, N1=N1=2941.3, a1=a1=2009.78, b1=b1=3.78086, c1=c1=0.0148707
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.56, N1=N1=2941.3, a1=a1=2009.78, b1=b1=3.78086, c1=c1=0.0148707
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.75, N1=N1=2941.3, a1=a1=2009.78, b1=b1=3.78086, c1=c1=0.0148707
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.96, N1=N1=2941.3, a1=a1=2009.78, b1=b1=3.78086, c1=c1=0.0148707
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.47, N1=N1=2941.3, a1=a1=2009.78, b1=b1=3.78086, c1=c1=0.0148707
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.34, N1=N1=2941.3, a1=a1=2009.78, b1=b1=3.78086, c1=c1=0.0148707
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.93, N1=N1=2941.3, a1=a1=2009.78, b1=b1=3.78086, c1=c1=0.0148707
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.66, N1=N1=2941.3, a1=a1=2009.78, b1=b1=3.78086, c1=c1=0.0148707
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.27, N1=N1=2941.3, a1=a1=2009.78, b1=b1=3.78086, c1=c1=0.0148707
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.7, N1=N1=2941.3, a1=a1=2009.78, b1=b1=3.78086, c1=c1=0.0148707
-    ... (remaining 16374 messages suppressed)
-
-[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
-Returning maximum FCN so far (1.53985e+06) to force MIGRAD to back out of this region. Error log follows
-Parameter values: N1=8644.6, a1=2009.57, b1=2.20489, bkg_yield=68288.1, c1=0.0081915, mean=2010.38, sig_yield=10135.4, sigma=0.000158868
-PID2439/RooRealMPFE::nll_model_neg_dataset1_right_7f42877f9c90_MPFE7[ arg=nll_model_neg_dataset1_right_GOF7 vars=(N1,a1,b1,bkg_yield,c1,mean,sig_yield,sigma) ]
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=8644.6, a1=a1=2009.57, b1=b1=2.20489, c1=c1=0.0081915
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.33, N1=N1=8644.6, a1=a1=2009.57, b1=b1=2.20489, c1=c1=0.0081915
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.36, N1=N1=8644.6, a1=a1=2009.57, b1=b1=2.20489, c1=c1=0.0081915
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.38, N1=N1=8644.6, a1=a1=2009.57, b1=b1=2.20489, c1=c1=0.0081915
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.35, N1=N1=8644.6, a1=a1=2009.57, b1=b1=2.20489, c1=c1=0.0081915
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.31, N1=N1=8644.6, a1=a1=2009.57, b1=b1=2.20489, c1=c1=0.0081915
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.89, N1=N1=8644.6, a1=a1=2009.57, b1=b1=2.20489, c1=c1=0.0081915
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.87, N1=N1=8644.6, a1=a1=2009.57, b1=b1=2.20489, c1=c1=0.0081915
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.85, N1=N1=8644.6, a1=a1=2009.57, b1=b1=2.20489, c1=c1=0.0081915
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.84, N1=N1=8644.6, a1=a1=2009.57, b1=b1=2.20489, c1=c1=0.0081915
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.82, N1=N1=8644.6, a1=a1=2009.57, b1=b1=2.20489, c1=c1=0.0081915
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.65, N1=N1=8644.6, a1=a1=2009.57, b1=b1=2.20489, c1=c1=0.0081915
-    ... (remaining 166 messages suppressed)
-PID2431/RooRealMPFE::nll_model_neg_dataset1_left_7fffe6e83560_MPFE7[ arg=nll_model_neg_dataset1_left_GOF7 vars=(N1,a1,b1,bkg_yield,c1,mean,sig_yield,sigma) ]
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.4, N1=N1=8644.6, a1=a1=2009.57, b1=b1=2.20489, c1=c1=0.0081915
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.29, N1=N1=8644.6, a1=a1=2009.57, b1=b1=2.20489, c1=c1=0.0081915
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.58, N1=N1=8644.6, a1=a1=2009.57, b1=b1=2.20489, c1=c1=0.0081915
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.23, N1=N1=8644.6, a1=a1=2009.57, b1=b1=2.20489, c1=c1=0.0081915
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.61, N1=N1=8644.6, a1=a1=2009.57, b1=b1=2.20489, c1=c1=0.0081915
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.93, N1=N1=8644.6, a1=a1=2009.57, b1=b1=2.20489, c1=c1=0.0081915
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.79, N1=N1=8644.6, a1=a1=2009.57, b1=b1=2.20489, c1=c1=0.0081915
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.88, N1=N1=8644.6, a1=a1=2009.57, b1=b1=2.20489, c1=c1=0.0081915
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.37, N1=N1=8644.6, a1=a1=2009.57, b1=b1=2.20489, c1=c1=0.0081915
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.31, N1=N1=8644.6, a1=a1=2009.57, b1=b1=2.20489, c1=c1=0.0081915
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.42, N1=N1=8644.6, a1=a1=2009.57, b1=b1=2.20489, c1=c1=0.0081915
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.05, N1=N1=8644.6, a1=a1=2009.57, b1=b1=2.20489, c1=c1=0.0081915
-    ... (remaining 16374 messages suppressed)
-
-[#0] WARNING:Minization -- RooMinuitGlue: Minimized function has error status.
-Returning maximum FCN so far (1.53985e+06) to force MIGRAD to back out of this region. Error log follows
-Parameter values: N1=163.688, a1=2009.74, b1=3.76754, bkg_yield=108464, c1=0.00256261, mean=2008.23, sig_yield=1.23656e+06, sigma=0.178719
-PID2439/RooRealMPFE::nll_model_neg_dataset1_right_7f42877f9c90_MPFE7[ arg=nll_model_neg_dataset1_right_GOF7 vars=(N1,a1,b1,bkg_yield,c1,mean,sig_yield,sigma) ]
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=163.688, a1=a1=2009.74, b1=b1=3.76754, c1=c1=0.00256261
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.33, N1=N1=163.688, a1=a1=2009.74, b1=b1=3.76754, c1=c1=0.00256261
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.36, N1=N1=163.688, a1=a1=2009.74, b1=b1=3.76754, c1=c1=0.00256261
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.38, N1=N1=163.688, a1=a1=2009.74, b1=b1=3.76754, c1=c1=0.00256261
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.35, N1=N1=163.688, a1=a1=2009.74, b1=b1=3.76754, c1=c1=0.00256261
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.31, N1=N1=163.688, a1=a1=2009.74, b1=b1=3.76754, c1=c1=0.00256261
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.89, N1=N1=163.688, a1=a1=2009.74, b1=b1=3.76754, c1=c1=0.00256261
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.87, N1=N1=163.688, a1=a1=2009.74, b1=b1=3.76754, c1=c1=0.00256261
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2006.85, N1=N1=163.688, a1=a1=2009.74, b1=b1=3.76754, c1=c1=0.00256261
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.84, N1=N1=163.688, a1=a1=2009.74, b1=b1=3.76754, c1=c1=0.00256261
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.82, N1=N1=163.688, a1=a1=2009.74, b1=b1=3.76754, c1=c1=0.00256261
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2004.4, N1=N1=163.688, a1=a1=2009.74, b1=b1=3.76754, c1=c1=0.00256261
-    ... (remaining 78 messages suppressed)
-PID2431/RooRealMPFE::nll_model_neg_dataset1_left_7fffe6e83560_MPFE7[ arg=nll_model_neg_dataset1_left_GOF7 vars=(N1,a1,b1,bkg_yield,c1,mean,sig_yield,sigma) ]
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2005.62, N1=N1=163.688, a1=a1=2009.74, b1=b1=3.76754, c1=c1=0.00256261
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.56, N1=N1=163.688, a1=a1=2009.74, b1=b1=3.76754, c1=c1=0.00256261
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.69, N1=N1=163.688, a1=a1=2009.74, b1=b1=3.76754, c1=c1=0.00256261
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.19, N1=N1=163.688, a1=a1=2009.74, b1=b1=3.76754, c1=c1=0.00256261
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.26, N1=N1=163.688, a1=a1=2009.74, b1=b1=3.76754, c1=c1=0.00256261
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2007.73, N1=N1=163.688, a1=a1=2009.74, b1=b1=3.76754, c1=c1=0.00256261
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.22, N1=N1=163.688, a1=a1=2009.74, b1=b1=3.76754, c1=c1=0.00256261
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.66, N1=N1=163.688, a1=a1=2009.74, b1=b1=3.76754, c1=c1=0.00256261
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.46, N1=N1=163.688, a1=a1=2009.74, b1=b1=3.76754, c1=c1=0.00256261
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.69, N1=N1=163.688, a1=a1=2009.74, b1=b1=3.76754, c1=c1=0.00256261
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2008.99, N1=N1=163.688, a1=a1=2009.74, b1=b1=3.76754, c1=c1=0.00256261
-     p.d.f value is Not-a-Number (-nan), forcing value to zero @ DTF_Mass=DTF_Mass=2009.46, N1=N1=163.688, a1=a1=2009.74, b1=b1=3.76754, c1=c1=0.00256261
-    ... (remaining 16374 messages suppressed)
-
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=-477584 FROM MIGRAD    STATUS=CONVERGED     265 CALLS         266 TOTAL
+                     EDM=7.70045e-06    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a1           2.00236e+03   1.38148e-01   8.89856e-03   6.84410e-03
+   2  b1           1.21462e+00   2.34019e-02   1.84673e-03   9.59981e-02
+   3  bkg_yield    2.41662e+05   6.85136e+02   8.31519e-04  -1.08074e-01
+   4  mean         2.01027e+03   3.00678e-04   7.23890e-05   5.69644e+00
+   5  sig_yield    1.10596e+06   1.15474e+03   1.29799e-03   5.98926e-01
+   6  sigma        4.28039e-01   6.31403e-04   6.48673e-04  -1.45329e+00
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  1.911e-02 -3.057e-03  2.237e+01 -7.001e-07 -2.235e+01 -1.109e-05 
+ -3.057e-03  5.477e-04 -5.798e+00  7.357e-08  5.792e+00  3.089e-06 
+  2.237e+01 -5.798e+00  4.694e+05 -1.383e-03 -2.275e+05 -1.339e-01 
+ -7.001e-07  7.357e-08 -1.383e-03  9.041e-08  1.383e-03  8.613e-10 
+ -2.235e+01  5.792e+00 -2.275e+05  1.383e-03  1.333e+06  1.338e-01 
+ -1.109e-05  3.089e-06 -1.339e-01  8.613e-10  1.338e-01  3.987e-07 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.95355   1.000 -0.945  0.236 -0.017 -0.140 -0.127
+        2  0.95803  -0.945  1.000 -0.362  0.010  0.214  0.209
+        3  0.53253   0.236 -0.362  1.000 -0.007 -0.288 -0.310
+        4  0.02702  -0.017  0.010 -0.007  1.000  0.004  0.005
+        5  0.34094  -0.140  0.214 -0.288  0.004  1.000  0.184
+        6  0.36107  -0.127  0.209 -0.310  0.005  0.184  1.000
+ **********
+ **   13 **IMPROVE        3000
+ **********
+ FUNCTION MUST BE MINIMIZED BEFORE CALLING IMProve   
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 5.00e-05
+ FCN=-477584 FROM MIGRAD    STATUS=INITIATE       16 CALLS          17 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a1           2.00236e+03   1.38148e-01   6.19418e-02   5.45329e-02
+   2  b1           1.21462e+00   2.34019e-02   1.35011e-02   8.09779e-02
+   3  bkg_yield    2.41662e+05   6.85136e+02   2.05864e-03  -1.79672e-01
+   4  mean         2.01027e+03   3.00678e-04   1.51749e-04   5.68052e+00
+   5  sig_yield    1.10596e+06   1.15474e+03   2.89314e-03   4.14159e-01
+   6  sigma        4.28039e-01   6.31403e-04   1.45768e-03  -1.54887e+00
+                               ERR DEF= 0.5
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=-477584 FROM MIGRAD    STATUS=CONVERGED      80 CALLS          81 TOTAL
+                     EDM=2.19867e-06    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a1           2.00236e+03   1.38156e-01   8.90391e-03  -4.93817e-02
+   2  b1           1.21462e+00   2.34029e-02   1.84699e-03  -1.66174e-01
+   3  bkg_yield    2.41662e+05   6.85137e+02   8.31520e-04  -6.07412e-02
+   4  mean         2.01027e+03   3.00679e-04   7.23898e-05   1.27465e+00
+   5  sig_yield    1.10595e+06   1.15473e+03   1.29791e-03   3.05114e-01
+   6  sigma        4.28040e-01   6.31405e-04   6.48692e-04  -1.10682e-01
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  1.911e-02 -3.058e-03  2.238e+01 -7.002e-07 -2.235e+01 -1.110e-05 
+ -3.058e-03  5.477e-04 -5.798e+00  7.359e-08  5.792e+00  3.089e-06 
+  2.238e+01 -5.798e+00  4.694e+05 -1.383e-03 -2.275e+05 -1.339e-01 
+ -7.002e-07  7.359e-08 -1.383e-03  9.041e-08  1.383e-03  8.612e-10 
+ -2.235e+01  5.792e+00 -2.275e+05  1.383e-03  1.333e+06  1.338e-01 
+ -1.110e-05  3.089e-06 -1.339e-01  8.612e-10  1.338e-01  3.987e-07 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.95356   1.000 -0.945  0.236 -0.017 -0.140 -0.127
+        2  0.95803  -0.945  1.000 -0.362  0.010  0.214  0.209
+        3  0.53253   0.236 -0.362  1.000 -0.007 -0.288 -0.310
+        4  0.02702  -0.017  0.010 -0.007  1.000  0.004  0.005
+        5  0.34094  -0.140  0.214 -0.288  0.004  1.000  0.184
+        6  0.36107  -0.127  0.209 -0.310  0.005  0.184  1.000
+START ATTEMPT NO. 1 TO FIND NEW MINIMUM
+ IMPROVE HAS RETURNED TO REGION OF ORIGINAL MINIMUM
+ **********
+ **   13 **HESSE        3000
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -1.0793e-02  5.3006e-01  9.9900e-01  1.0711e+00  1.1839e+00  2.2268e+00
+ MINUIT WARNING IN HESSE   
+ ============== MATRIX FORCED POS-DEF BY ADDING 0.013020 TO DIAGONAL.
+ FCN=-477584 FROM HESSE     STATUS=NOT POSDEF     60 CALLS          61 TOTAL
+                     EDM=1.82413e-05    STRATEGY= 1      ERR MATRIX NOT POS-DEF
+  EXT PARAMETER                APPROXIMATE     INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  a1           2.00236e+03   6.07977e-01   2.84927e-01   5.40635e-02
+   2  b1           1.21462e+00   1.02361e-01   5.91036e-02  -5.99787e-01
+   3  bkg_yield    2.41662e+05   9.64980e+02   2.09981e-02  -3.14707e-01
+   4  mean         2.01027e+03   2.99889e-04   1.51749e-05   1.36420e-01
+   5  sig_yield    1.10595e+06   1.32297e+03   2.95099e-02   8.78102e-01
+   6  sigma        4.28040e-01   7.03562e-04   1.48683e-02  -2.74456e-01
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  3.792e-01 -6.289e-02  4.327e+02 -1.646e-05 -4.207e+02 -2.032e-04 
+ -6.289e-02  1.049e-02 -7.399e+01  2.693e-06  7.194e+01  3.501e-05 
+  4.327e+02 -7.399e+01  9.312e+05 -1.928e-02 -6.726e+05 -3.491e-01 
+ -1.646e-05  2.693e-06 -1.928e-02  8.993e-08  1.876e-02  9.198e-09 
+ -4.207e+02  7.194e+01 -6.726e+05  1.876e-02  1.750e+06  3.402e-01 
+ -2.032e-04  3.501e-05 -3.491e-01  9.198e-09  3.402e-01  4.950e-07 
+ERR MATRIX NOT POS-DEF
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.99770   1.000 -0.997  0.728 -0.089 -0.516 -0.469
+        2  0.99787  -0.997  1.000 -0.749  0.088  0.531  0.486
+        3  0.80219   0.728 -0.749  1.000 -0.067 -0.527 -0.514
+        4  0.09148  -0.089  0.088 -0.067  1.000  0.047  0.044
+        5  0.57936  -0.516  0.531 -0.527  0.047  1.000  0.366
+        6  0.55554  -0.469  0.486 -0.514  0.044  0.366  1.000
+ ERR MATRIX NOT POS-DEF
+[#1] INFO:Minization -- RooMinuit::optimizeConst: activating const optimization
+ **********
+ **   13 **MINOS        3000
+ **********
+ FUNCTION MUST BE MINIMIZED BEFORE CALLING MINOs     
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 5.00e-05
+ FCN=-477584 FROM MIGRAD    STATUS=INITIATE       20 CALLS          21 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a1           2.00236e+03   6.07977e-01   2.75944e-01  -1.70230e-03
+   2  b1           1.21462e+00   1.02361e-01   5.91328e-02  -2.01271e-01
+   3  bkg_yield    2.41662e+05   9.64980e+02   2.89949e-03  -1.11995e-01
+   4  mean         2.01027e+03   2.99889e-04   1.51351e-04   1.25873e+00
+   5  sig_yield    1.10595e+06   1.32297e+03   3.31463e-03   6.25112e-02
+   6  sigma        4.28040e-01   7.03562e-04   1.62426e-03  -2.29403e-01
+                               ERR DEF= 0.5
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=-477584 FROM MIGRAD    STATUS=CONVERGED      84 CALLS          85 TOTAL
+                     EDM=1.56897e-06    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a1           2.00236e+03   1.38154e-01   8.90400e-03  -1.48100e-02
+   2  b1           1.21462e+00   2.34027e-02   1.84699e-03   1.12327e-02
+   3  bkg_yield    2.41662e+05   6.85137e+02   8.31520e-04   1.74929e-01
+   4  mean         2.01027e+03   3.00679e-04   7.23899e-05   3.53184e-01
+   5  sig_yield    1.10595e+06   1.15473e+03   1.29790e-03   2.22490e-01
+   6  sigma        4.28040e-01   6.31406e-04   6.48694e-04   2.80498e-02
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  1.911e-02 -3.058e-03  2.237e+01 -7.002e-07 -2.235e+01 -1.110e-05 
+ -3.058e-03  5.477e-04 -5.798e+00  7.358e-08  5.792e+00  3.089e-06 
+  2.237e+01 -5.798e+00  4.694e+05 -1.383e-03 -2.275e+05 -1.339e-01 
+ -7.002e-07  7.358e-08 -1.383e-03  9.041e-08  1.383e-03  8.611e-10 
+ -2.235e+01  5.792e+00 -2.275e+05  1.383e-03  1.333e+06  1.338e-01 
+ -1.110e-05  3.089e-06 -1.339e-01  8.611e-10  1.338e-01  3.987e-07 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.95356   1.000 -0.945  0.236 -0.017 -0.140 -0.127
+        2  0.95803  -0.945  1.000 -0.362  0.010  0.214  0.209
+        3  0.53253   0.236 -0.362  1.000 -0.007 -0.288 -0.310
+        4  0.02702  -0.017  0.010 -0.007  1.000  0.004  0.005
+        5  0.34094  -0.140  0.214 -0.288  0.004  1.000  0.184
+        6  0.36107  -0.127  0.209 -0.310  0.005  0.184  1.000
+ FCN=-477584 FROM MINOS     STATUS=SUCCESSFUL    656 CALLS         741 TOTAL
+                     EDM=1.56897e-06    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                  PARABOLIC         MINOS ERRORS        
+  NO.   NAME      VALUE            ERROR      NEGATIVE      POSITIVE   
+   1  a1           2.00236e+03   1.38154e-01  -1.37426e-01   1.31777e-01
+   2  b1           1.21462e+00   2.34027e-02  -2.24606e-02   2.31221e-02
+   3  bkg_yield    2.41662e+05   6.85137e+02  -6.83181e+02   6.84369e+02
+   4  mean         2.01027e+03   3.00679e-04  -3.00696e-04   3.00655e-04
+   5  sig_yield    1.10595e+06   1.15473e+03  -1.15454e+03   1.15357e+03
+   6  sigma        4.28040e-01   6.31406e-04  -6.30734e-04   6.31385e-04
+                               ERR DEF= 0.5
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Minization --  The following expressions have been identified as constant and will be precalculated and cached: (sig_neg,arg_neg)
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(model_neg) Calculating sum-of-weights-squared correction matrix for covariance matrix
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: deactivating const optimization
+[#1] INFO:InputArguments -- Printing Yields
+RooArgList:: = (sig_yield,bkg_yield)
+[#1] INFO:InputArguments -- yield in pdf: sig_yield 1.10595e+06
+[#1] INFO:InputArguments -- yield in pdf: bkg_yield 241662
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Eval -- Checking Likelihood normalization:  
+[#1] INFO:Eval -- Yield of specie  Sum of Row in Matrix   Norm
+[#1] INFO:Eval -- 1.10595e+06 1.10595e+06 1
+[#1] INFO:Eval -- 241662 241662 1
+[#1] INFO:Eval -- Calculating sWeight
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Eval -- RooAbsTestStatistic::initMPMode: started 8 remote server process.
+ **********
+ **   13 **HESSE        3000
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF2) first = 322970 last = 484455 Likelihood offset now set to 282328
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF1) first = 161485 last = 322970 Likelihood offset now set to 281639
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF3) first = 484455 last = 645940 Likelihood offset now set to 281893
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF4) first = 645940 last = 807425 Likelihood offset now set to 282850
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF5) first = 807425 last = 968910 Likelihood offset now set to 281767
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF6) first = 968910 last = 1130395 Likelihood offset now set to 282233
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF0) first = 0 last = 161485 Likelihood offset now set to 282975
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF7) first = 1130395 last = 1291880 Likelihood offset now set to -1.66051e+07
+ MINUIT WARNING IN HESSE   
+ ============== Negative diagonal element 1 in Error Matrix
+ MINUIT WARNING IN HESSE   
+ ============== 2291.21 added to diagonal of error matrix
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -6.3880e+01  1.0101e-01  4.0914e-01  1.1447e+00  1.8733e+00  6.6352e+01
+ MINUIT WARNING IN HESSE   
+ ============== MATRIX FORCED POS-DEF BY ADDING 63.946102 TO DIAGONAL.
+ FCN=1.74623e-10 FROM HESSE     STATUS=NOT POSDEF     52 CALLS          53 TOTAL
+                     EDM=3.85494e+08    STRATEGY= 1      ERR MATRIX NOT POS-DEF
+  EXT PARAMETER                APPROXIMATE     INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  a2           2.00390e+03   4.12123e+00   1.97382e-03   8.40485e-01
+   2  b2           1.30000e+00   1.49747e-02   2.51695e-03  -6.62874e-01
+   3  bkg_yield    2.80000e+05   6.26852e+02   2.05758e-03  -2.01358e-01
+   4  mean2        2.01000e+03   6.85653e-05   2.01358e-03   0.00000e+00
+   5  sig_yield_2   1.00000e+06   4.69886e+02   2.57889e-03   6.43501e-01
+   6  sigma2       3.10000e-01   2.05879e-04   2.41688e-03  -5.62536e-01
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  1.682e+01 -6.134e-02 -2.551e+03  1.408e-04  1.857e+03  8.205e-04 
+ -6.134e-02  2.242e-04  9.302e+00 -5.132e-07 -6.771e+00 -2.992e-06 
+ -2.551e+03  9.302e+00  3.929e+05 -2.136e-02 -2.816e+05 -1.244e-01 
+  1.408e-04 -5.132e-07 -2.136e-02  4.701e-09  1.555e-02  6.830e-09 
+  1.857e+03 -6.771e+00 -2.816e+05  1.555e-02  2.208e+05  9.059e-02 
+  8.205e-04 -2.992e-06 -1.244e-01  6.830e-09  9.059e-02  4.239e-08 
+ERR MATRIX NOT POS-DEF
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.99898   1.000 -0.999 -0.992  0.501  0.964  0.972
+        2  0.99873  -0.999  1.000  0.991 -0.500 -0.962 -0.970
+        3  0.99222  -0.992  0.991  1.000 -0.497 -0.956 -0.964
+        4  0.50070   0.501 -0.500 -0.497  1.000  0.483  0.484
+        5  0.96361   0.964 -0.962 -0.956  0.483  1.000  0.936
+        6  0.97175   0.972 -0.970 -0.964  0.484  0.936  1.000
+ ERR MATRIX NOT POS-DEF
+ **********
+ **   13 **MIGRAD        3000           1
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
+ FCN=-7389.54 FROM MIGRAD    STATUS=INITIATE       49 CALLS          50 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a2           2.00075e+03   4.12123e+00  -1.56884e+00   1.33978e+03
+   2  b2           1.30000e+00   1.49747e-02   0.00000e+00   1.99345e+04
+   3  bkg_yield    2.80000e+05   6.26852e+02   0.00000e+00  -8.82999e+03
+   4  mean2        2.01000e+03   6.85653e-05   0.00000e+00  -5.28707e+06
+   5  sig_yield_2   1.00000e+06   4.69886e+02   0.00000e+00  -2.33517e+03
+   6  sigma2       3.10000e-01   2.05879e-04   0.00000e+00  -4.81403e+05
+                               ERR DEF= 0.5
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=-449023 FROM MIGRAD    STATUS=CONVERGED     247 CALLS         248 TOTAL
+                     EDM=4.39829e-05    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a2           2.00217e+03   1.52088e-01   9.15261e-03   8.89060e-02
+   2  b2           1.22540e+00   2.50977e-02   1.61421e-03   6.54479e-01
+   3  bkg_yield    2.31449e+05   6.71853e+02   7.98513e-04  -2.03077e+00
+   4  mean2        2.01027e+03   3.08793e-04   7.20755e-05   1.51905e+01
+   5  sig_yield_2   1.06043e+06   1.13143e+03   1.09704e-03  -2.98833e-01
+   6  sigma2       4.30628e-01   6.49508e-04   6.45681e-04   1.81587e-01
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  2.317e-02 -3.626e-03  2.456e+01 -8.159e-07 -2.454e+01 -1.282e-05 
+ -3.626e-03  6.299e-04 -6.079e+00  8.614e-08  6.075e+00  3.396e-06 
+  2.456e+01 -6.079e+00  4.514e+05 -1.389e-03 -2.198e+05 -1.358e-01 
+ -8.159e-07  8.614e-08 -1.389e-03  9.535e-08  1.388e-03  7.147e-10 
+ -2.454e+01  6.075e+00 -2.198e+05  1.388e-03  1.280e+06  1.357e-01 
+ -1.282e-05  3.396e-06 -1.358e-01  7.147e-10  1.357e-01  4.219e-07 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.95706   1.000 -0.949  0.240 -0.017 -0.143 -0.130
+        2  0.96104  -0.949  1.000 -0.361  0.011  0.214  0.208
+        3  0.53341   0.240 -0.361  1.000 -0.007 -0.289 -0.311
+        4  0.02731  -0.017  0.011 -0.007  1.000  0.004  0.004
+        5  0.34210  -0.143  0.214 -0.289  0.004  1.000  0.185
+        6  0.36206  -0.130  0.208 -0.311  0.004  0.185  1.000
+ **********
+ **   13 **IMPROVE        3000
+ **********
+ FUNCTION MUST BE MINIMIZED BEFORE CALLING IMProve   
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 5.00e-05
+ FCN=-449023 FROM MIGRAD    STATUS=INITIATE       16 CALLS          17 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a2           2.00217e+03   1.52088e-01   6.81296e-02   1.41190e-01
+   2  b2           1.22540e+00   2.50977e-02   1.26199e-02   6.48197e-01
+   3  bkg_yield    2.31449e+05   6.71853e+02   2.04018e-03  -2.09480e+00
+   4  mean2        2.01027e+03   3.08793e-04   1.55824e-04   1.51770e+01
+   5  sig_yield_2   1.06043e+06   1.13143e+03   2.52350e-03  -4.49175e-01
+   6  sigma2       4.30628e-01   6.49508e-04   1.49698e-03   9.14065e-02
+                               ERR DEF= 0.5
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=-449023 FROM MIGRAD    STATUS=CONVERGED      92 CALLS          93 TOTAL
+                     EDM=1.41807e-05    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a2           2.00217e+03   1.52105e-01   9.13956e-03  -2.24180e-02
+   2  b2           1.22539e+00   2.50995e-02   1.61396e-03   1.49275e-01
+   3  bkg_yield    2.31452e+05   6.71858e+02   7.98520e-04   2.33060e-01
+   4  mean2        2.01027e+03   3.08793e-04   7.20761e-05  -2.40467e+00
+   5  sig_yield_2   1.06043e+06   1.13144e+03   1.09723e-03   4.27062e-01
+   6  sigma2       4.30627e-01   6.49507e-04   6.45690e-04   4.45131e-01
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  2.317e-02 -3.627e-03  2.457e+01 -8.160e-07 -2.455e+01 -1.282e-05 
+ -3.627e-03  6.300e-04 -6.080e+00  8.616e-08  6.075e+00  3.396e-06 
+  2.457e+01 -6.080e+00  4.514e+05 -1.389e-03 -2.198e+05 -1.358e-01 
+ -8.160e-07  8.616e-08 -1.389e-03  9.535e-08  1.388e-03  7.141e-10 
+ -2.455e+01  6.075e+00 -2.198e+05  1.388e-03  1.280e+06  1.357e-01 
+ -1.282e-05  3.396e-06 -1.358e-01  7.141e-10  1.357e-01  4.219e-07 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.95706   1.000 -0.949  0.240 -0.017 -0.143 -0.130
+        2  0.96105  -0.949  1.000 -0.361  0.011  0.214  0.208
+        3  0.53341   0.240 -0.361  1.000 -0.007 -0.289 -0.311
+        4  0.02731  -0.017  0.011 -0.007  1.000  0.004  0.004
+        5  0.34210  -0.143  0.214 -0.289  0.004  1.000  0.185
+        6  0.36206  -0.130  0.208 -0.311  0.004  0.185  1.000
+START ATTEMPT NO. 1 TO FIND NEW MINIMUM
+ IMPROVE HAS RETURNED TO REGION OF ORIGINAL MINIMUM
+ **********
+ **   13 **HESSE        3000
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -3.2751e-02  5.2825e-01  9.9902e-01  1.0720e+00  1.1859e+00  2.2475e+00
+ MINUIT WARNING IN HESSE   
+ ============== MATRIX FORCED POS-DEF BY ADDING 0.034999 TO DIAGONAL.
+ FCN=-449023 FROM HESSE     STATUS=NOT POSDEF     60 CALLS          61 TOTAL
+                     EDM=0.000212958    STRATEGY= 1      ERR MATRIX NOT POS-DEF
+  EXT PARAMETER                APPROXIMATE     INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  a2           2.00217e+03   6.41498e-01   2.92463e-01  -2.89530e-02
+   2  b2           1.22539e+00   1.05138e-01   5.16464e-02  -6.99821e-01
+   3  bkg_yield    2.31452e+05   8.76740e+02   2.08099e-02  -3.45544e-01
+   4  mean2        2.01027e+03   3.04755e-04   1.55824e-05   1.35443e-01
+   5  sig_yield_2   1.06043e+06   1.24200e+03   2.57398e-02   7.70768e-01
+   6  sigma2       4.30627e-01   6.92858e-04   1.52692e-02  -2.68487e-01
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  4.234e-01 -6.826e-02  3.923e+02 -1.815e-05 -3.812e+02 -1.877e-04 
+ -6.826e-02  1.106e-02 -6.535e+01  2.887e-06  6.351e+01  3.156e-05 
+  3.923e+02 -6.535e+01  7.687e+05 -1.727e-02 -5.276e+05 -2.850e-01 
+ -1.815e-05  2.887e-06 -1.727e-02  9.288e-08  1.680e-02  8.244e-09 
+ -3.812e+02  6.351e+01 -5.276e+05  1.680e-02  1.543e+06  2.778e-01 
+ -1.877e-04  3.156e-05 -2.850e-01  8.244e-09  2.778e-01  4.801e-07 
+ERR MATRIX NOT POS-DEF
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.99774   1.000 -0.997  0.688 -0.092 -0.472 -0.416
+        2  0.99789  -0.997  1.000 -0.709  0.090  0.486  0.433
+        3  0.77075   0.688 -0.709  1.000 -0.065 -0.485 -0.469
+        4  0.09371  -0.092  0.090 -0.065  1.000  0.044  0.039
+        5  0.54055  -0.472  0.486 -0.485  0.044  1.000  0.323
+        6  0.51212  -0.416  0.433 -0.469  0.039  0.323  1.000
+ ERR MATRIX NOT POS-DEF
+[#1] INFO:Minization -- RooMinuit::optimizeConst: activating const optimization
+ **********
+ **   13 **MINOS        3000
+ **********
+ FUNCTION MUST BE MINIMIZED BEFORE CALLING MINOs     
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 5.00e-05
+ FCN=-449023 FROM MIGRAD    STATUS=INITIATE       20 CALLS          21 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a2           2.00217e+03   6.41498e-01   2.91255e-01   2.98642e-02
+   2  b2           1.22539e+00   1.05138e-01   5.29403e-02   1.34472e-01
+   3  bkg_yield    2.31452e+05   8.76740e+02   2.66234e-03   1.86053e-01
+   4  mean2        2.01027e+03   3.04755e-04   1.53786e-04  -2.41775e+00
+   5  sig_yield_2   1.06043e+06   1.24200e+03   2.77011e-03   2.45847e-01
+   6  sigma2       4.30627e-01   6.92858e-04   1.59690e-03   3.42461e-01
+                               ERR DEF= 0.5
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=-449023 FROM MIGRAD    STATUS=CONVERGED      84 CALLS          85 TOTAL
+                     EDM=1.35169e-05    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a2           2.00217e+03   1.52109e-01   9.13949e-03  -5.17021e-02
+   2  b2           1.22539e+00   2.51000e-02   1.61395e-03  -1.46813e-02
+   3  bkg_yield    2.31452e+05   6.71858e+02   7.98522e-04  -4.96984e-02
+   4  mean2        2.01027e+03   3.08793e-04   7.20760e-05  -1.07437e+00
+   5  sig_yield_2   1.06043e+06   1.13144e+03   1.09723e-03   3.12082e-01
+   6  sigma2       4.30627e-01   6.49507e-04   6.45689e-04   3.01536e-01
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  2.317e-02 -3.627e-03  2.457e+01 -8.161e-07 -2.455e+01 -1.282e-05 
+ -3.627e-03  6.300e-04 -6.080e+00  8.616e-08  6.075e+00  3.396e-06 
+  2.457e+01 -6.080e+00  4.514e+05 -1.389e-03 -2.198e+05 -1.358e-01 
+ -8.161e-07  8.616e-08 -1.389e-03  9.535e-08  1.388e-03  7.141e-10 
+ -2.455e+01  6.075e+00 -2.198e+05  1.388e-03  1.280e+06  1.357e-01 
+ -1.282e-05  3.396e-06 -1.358e-01  7.141e-10  1.357e-01  4.219e-07 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.95706   1.000 -0.949  0.240 -0.017 -0.143 -0.130
+        2  0.96105  -0.949  1.000 -0.361  0.011  0.214  0.208
+        3  0.53341   0.240 -0.361  1.000 -0.007 -0.289 -0.311
+        4  0.02731  -0.017  0.011 -0.007  1.000  0.004  0.004
+        5  0.34210  -0.143  0.214 -0.289  0.004  1.000  0.185
+        6  0.36206  -0.130  0.208 -0.311  0.004  0.185  1.000
+ FCN=-449023 FROM MINOS     STATUS=SUCCESSFUL    680 CALLS         765 TOTAL
+                     EDM=1.35169e-05    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                  PARABOLIC         MINOS ERRORS        
+  NO.   NAME      VALUE            ERROR      NEGATIVE      POSITIVE   
+   1  a2           2.00217e+03   1.52109e-01  -1.49818e-01   1.44069e-01
+   2  b2           1.22539e+00   2.51000e-02  -2.39165e-02   2.45552e-02
+   3  bkg_yield    2.31452e+05   6.71858e+02  -6.68744e+02   6.71385e+02
+   4  mean2        2.01027e+03   3.08793e-04  -3.08757e-04   3.08825e-04
+   5  sig_yield_2   1.06043e+06   1.13144e+03  -1.13165e+03   1.12930e+03
+   6  sigma2       4.30627e-01   6.49507e-04  -6.49203e-04   6.48826e-04
+                               ERR DEF= 0.5
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Minization --  The following expressions have been identified as constant and will be precalculated and cached: (sig_pos,arg_pos)
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(model_pos) Calculating sum-of-weights-squared correction matrix for covariance matrix
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: deactivating const optimization
+[#1] INFO:InputArguments -- Printing Yields
+RooArgList:: = (sig_yield_2,bkg_yield)
+[#1] INFO:InputArguments -- yield in pdf: sig_yield_2 1.06043e+06
+[#1] INFO:InputArguments -- yield in pdf: bkg_yield 231452
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Eval -- Checking Likelihood normalization:  
+[#1] INFO:Eval -- Yield of specie  Sum of Row in Matrix   Norm
+[#1] INFO:Eval -- 1.06043e+06 1.06043e+06 1
+[#1] INFO:Eval -- 231452 231452 1
+[#1] INFO:Eval -- Calculating sWeight
+=== Event 0%
+=== Event 10%
+=== Event 20%
+=== Event 30%
+=== Event 40%
+=== Event 50%
+=== Event 60%
+=== Event 70%
+=== Event 80%
+=== Event 90%
+=== Event 100%
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Eval -- RooRealVar::setRange(DTF_Mass) new range named 'plotRange' created with bounds [2004.47,2020.11]
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(model_neg_Int[DTF_Mass|plotRange]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_neg) only plotting range [2004.47,2020.11], curve is normalized to data in given range
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_neg) directly selected PDF components: (arg_neg)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_neg) indirectly selected PDF components: ()
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(model_neg_Int[DTF_Mass|plotRange]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Plotting -- RooPlot::updateFitRangeNorm: New event count of 1.34762e+06 will supercede previous event count of 1 for normalization of PDF projections
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_neg) only plotting range [2004.47,2020.11], curve is normalized to data in given range
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(model_neg_Int[DTF_Mass|plotRange]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_neg) only plotting range [2004.47,2020.11], curve is normalized to data in given range
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_neg) directly selected PDF components: (arg_neg)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_neg) indirectly selected PDF components: ()
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(model_neg_Int[DTF_Mass|plotRange]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(model_pos_Int[DTF_Mass|plotRange]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_pos) only plotting range [2004.47,2020.11], curve is normalized to data in given range
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_pos) directly selected PDF components: (arg_pos)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_pos) indirectly selected PDF components: ()
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(model_pos_Int[DTF_Mass|plotRange]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Plotting -- RooPlot::updateFitRangeNorm: New event count of 1.29188e+06 will supercede previous event count of 1 for normalization of PDF projections
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_pos) only plotting range [2004.47,2020.11], curve is normalized to data in given range
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(model_pos_Int[DTF_Mass|plotRange]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_pos) only plotting range [2004.47,2020.11], curve is normalized to data in given range
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_pos) directly selected PDF components: (arg_pos)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_pos) indirectly selected PDF components: ()
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(model_pos_Int[DTF_Mass|plotRange]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+Total asymmetry before weighting: -0.0211372 +/- 0.000679247
+Total asymmetry after signal weighting: -0.0210059 +/- 1.15344e-07
+computation time/s: 169.872
+computation time/min: 2.8312

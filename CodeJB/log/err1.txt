@@ -1,7 +1,4 @@
 Info in <TUnixSystem::ACLiC>: creating shared library /home/smjoblan/iTHEPHY/iTHEPHY/CodeJB/./eff_cc.so
-Warning in cling::IncrementalParser::CheckABICompatibility():
-  Possible C++ standard library mismatch, compiled with __GLIBCXX__ '20181206'
-  Extraction of runtime standard library version was: '20191114'
 Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_pT_reco_Pi_pos_dev.pdf has been created
 Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_phi_reco_Pi_pos_dev.pdf has been created
 Info in <TCanvas::Print>: pdf file output/down_pdf/deviation/h_theta_reco_Pi_pos_dev.pdf has been created

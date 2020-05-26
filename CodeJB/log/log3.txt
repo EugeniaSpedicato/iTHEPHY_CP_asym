@@ -1,0 +1,34 @@
+
+Processing eff.cc++("$dir", "all", "up_down")...
+Total: 
+Reconstructed number of pions: 0, eff.: -nan +/- -nan
+Reconstructed number of Kaons: 0, eff.: -nan +/- -nan
+Reconstructed number of soft pions: 0, eff.: -nan +/- -nan
+Reconstructed number of D0: 0, eff.: -nan +/- -nan
+Reconstructed number of D*: 0, eff.: -nan +/- -nan
+Charge: +
+Reconstructed number of pions: 0 of 0 , eff.: -nan +/- -nan
+Reconstructed number of Kaons: 0 of 0  eff.: -nan +/- -nan
+Reconstructed number of soft pions: 0 of 0 , eff.: -nan +/- -nan
+Reconstructed number of D0: 0 of 0 , eff.: -nan +/- -nan
+Reconstructed number of D*: 0 of 0 , eff.: -nan +/- -nan
+Charge: -
+Reconstructed number of pions: 0 of 0 , eff.: -nan +/- -nan
+Reconstructed number of Kaons: 0 of 0 , eff.: -nan +/- -nan
+Reconstructed number of soft pions: 0 of 0 , eff.: -nan +/- -nan
+Reconstructed number of D0: 0 of 0 , eff.: -nan +/- -nan
+Reconstructed number of D*: 0 of 0 , eff.: -nan +/- -nan
+Deviation via efficiencies:
+Pions: -nan +/- -nan , in sigmas: nan
+Kaons: -nan +/- -nan , in sigmas: nan
+soft Pions: -nan +/- -nan , in sigmas: nan
+D0: -nan +/- -nan , in sigmas: nan
+Dst: -nan +/- -nan , in sigmas: nan
+Deviation via total numbers:
+Pions: -nan +/- -nan , in sigmas: nan
+Kaons: -nan +/- -nan , in sigmas: nan
+soft Pions: -nan +/- -nan , in sigmas: nan
+D0: -nan +/- -nan , in sigmas: nan
+Dst: -nan +/- -nan , in sigmas: nan
+computation time/s: 0.402847
+computation time/min: 0.00671412

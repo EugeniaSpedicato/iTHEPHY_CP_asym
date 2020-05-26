@@ -1,0 +1,734 @@
+
+Processing data.cc++("$dir", "all_data_test", "up_down")...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+[#1] INFO:Eval -- RooRealVar::setRange(DTF_Mass) new range named 'left' created with bounds [2004.47,2009.8]
+[#1] INFO:Eval -- RooRealVar::setRange(DTF_Mass) new range named 'right' created with bounds [2010.5,2020.11]
+[#1] INFO:Eval -- RooAbsReal::attachToTree(Dst_ID) TTree Int_t branch Dst_ID will be converted to double precision
+[#1] INFO:Eval -- RooTreeDataStore::loadValues(dataset1) Ignored 2611639 out of range events
+[#1] INFO:Eval -- RooAbsReal::attachToTree(Dst_ID) TTree Int_t branch Dst_ID will be converted to double precision
+[#1] INFO:Eval -- RooTreeDataStore::loadValues(dataset2) Ignored 2667353 out of range events
+ **********
+ **   13 **HESSE        3000
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Eval -- RooAbsTestStatistic::initMPMode: started 8 remote server process.
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+ MINUIT WARNING IN HESSE   
+ ============== Negative diagonal element 1 in Error Matrix
+ MINUIT WARNING IN HESSE   
+ ============== 14185.2 added to diagonal of error matrix
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -6.8771e+01  7.5627e-02  2.2935e-01  1.1949e+00  1.9227e+00  7.1348e+01
+ MINUIT WARNING IN HESSE   
+ ============== MATRIX FORCED POS-DEF BY ADDING 68.842150 TO DIAGONAL.
+ FCN=-3.17379e+07 FROM HESSE     STATUS=NOT POSDEF     52 CALLS          53 TOTAL
+                     EDM=7.82336e+09    STRATEGY= 1      ERR MATRIX NOT POS-DEF
+  EXT PARAMETER                APPROXIMATE     INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  a1           2.00390e+03   4.15242e+00   5.00000e-01   8.40485e-01
+   2  b1           1.30000e+00   7.30946e-03   2.33898e-01  -5.51317e-01
+   3  bkg_yield    6.00000e+05   9.82684e+02   1.47220e-01  -2.01358e-01
+   4  mean         2.01000e+03   7.38429e-05   2.01358e-02   0.00000e+00
+   5  sig_yield    1.00000e+06   5.28463e+02   7.32016e-02  -3.15556e-01
+   6  sigma        3.10000e-01   1.85336e-04   9.32976e-02  -5.62536e-01
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  1.565e+01 -2.887e-02 -3.866e+03  2.410e-04  2.055e+03  7.207e-04 
+ -2.887e-02  5.343e-05  7.133e+00 -4.445e-07 -3.792e+00 -1.330e-06 
+ -3.866e+03  7.133e+00  9.657e+05 -5.954e-02 -5.078e+05 -1.781e-01 
+  2.410e-04 -4.445e-07 -5.954e-02  5.453e-09  3.165e-02  1.108e-08 
+  2.055e+03 -3.792e+00 -5.078e+05  3.165e-02  2.793e+05  9.465e-02 
+  7.207e-04 -1.330e-06 -1.781e-01  1.108e-08  9.465e-02  3.435e-08 
+ERR MATRIX NOT POS-DEF
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.99898   1.000 -0.999 -0.995  0.825  0.983  0.983
+        2  0.99852  -0.999  1.000  0.993 -0.824 -0.982 -0.981
+        3  0.99450  -0.995  0.993  1.000 -0.821 -0.978 -0.978
+        4  0.82494   0.825 -0.824 -0.821  1.000  0.811  0.810
+        5  0.98311   0.983 -0.982 -0.978  0.811  1.000  0.966
+        6  0.98298   0.983 -0.981 -0.978  0.810  0.966  1.000
+ ERR MATRIX NOT POS-DEF
+ **********
+ **   13 **MIGRAD        3000           1
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
+ FCN=-3.17805e+07 FROM MIGRAD    STATUS=INITIATE       45 CALLS          46 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a1           2.00000e+03   4.15242e+00  -2.38504e+00   2.78441e+02
+   2  b1           1.30000e+00   7.30946e-03   0.00000e+00   9.78852e+04
+   3  bkg_yield    6.00000e+05   9.82684e+02   0.00000e+00  -1.78243e+05
+   4  mean         2.01000e+03   7.38429e-05   0.00000e+00  -1.04671e+07
+   5  sig_yield    1.00000e+06   5.28463e+02   0.00000e+00  -1.27065e+06
+   6  sigma        3.10000e-01   1.85336e-04   0.00000e+00  -8.37108e+05
+                               ERR DEF= 0.5
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ MACHINE ACCURACY LIMITS FURTHER IMPROVEMENT.
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -2.1421e+00  5.0686e-01  9.9911e-01  1.0726e+00  1.1871e+00  4.3764e+00
+ MINUIT WARNING IN HESSE   
+ ============== MATRIX FORCED POS-DEF BY ADDING 2.146440 TO DIAGONAL.
+ FCN=-3.30794e+07 FROM HESSE     STATUS=NOT POSDEF     44 CALLS         321 TOTAL
+                     EDM=1627.39    STRATEGY= 1      ERR MATRIX NOT POS-DEF
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a1           2.00003e+03   3.02215e+00   5.00000e-01  -3.71397e+01
+   2  b1           1.54803e+00   5.96408e-02   1.21243e-02   5.21629e+01
+   3  bkg_yield    4.75851e+05   1.92024e+03   4.63065e-03   4.11495e+02
+   4  mean         2.01027e+03   1.26301e-04   4.27890e-04   2.47806e+03
+   5  sig_yield    2.19162e+06   1.79019e+03   4.86373e-03  -9.29784e+01
+   6  sigma        4.28152e-01   5.47626e-04   3.83450e-03   1.20489e+02
+                               ERR DEF= 0.5
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ MIGRAD TERMINATED WITHOUT CONVERGENCE.
+ FCN=-3.30796e+07 FROM MIGRAD    STATUS=FAILED        569 CALLS         570 TOTAL
+                     EDM=0.0414667    STRATEGY= 1      ERR MATRIX APPROXIMATE
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a1           2.00228e+03   1.21804e-01   5.33672e-02  -2.58892e+00
+   2  b1           1.21530e+00   2.03210e-02   1.09437e-02   5.21518e+00
+   3  bkg_yield    4.78719e+05   9.79341e+02   4.63632e-03  -3.69610e-01
+   4  mean         2.01027e+03   2.13510e-04   4.27728e-04   1.75681e+02
+   5  sig_yield    2.18864e+06   1.63309e+03   4.86090e-03   1.75442e+00
+   6  sigma        4.27336e-01   4.49846e-04   3.83167e-03   4.96157e+00
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  1.485e-02 -2.386e-03  3.500e+01 -5.301e-07 -3.488e+01 -8.762e-06 
+ -2.386e-03  4.130e-04 -7.837e+00  6.568e-08  7.811e+00  2.067e-06 
+  3.500e+01 -7.837e+00  9.591e+05 -1.784e-03 -4.787e+05 -1.407e-01 
+ -5.301e-07  6.568e-08 -1.784e-03  4.559e-08  1.782e-03  5.843e-10 
+ -3.488e+01  7.811e+00 -4.787e+05  1.782e-03  2.667e+06  1.404e-01 
+ -8.762e-06  2.067e-06 -1.407e-01  5.843e-10  1.404e-01  2.024e-07 
+ERR MATRIX APPROXIMATE
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.96917   1.000 -0.963  0.293 -0.020 -0.175 -0.160
+        2  0.97197  -0.963  1.000 -0.394  0.015  0.235  0.226
+        3  0.55257   0.293 -0.394  1.000 -0.009 -0.299 -0.319
+        4  0.02940  -0.020  0.015 -0.009  1.000  0.005  0.006
+        5  0.35429  -0.175  0.235 -0.299  0.005  1.000  0.191
+        6  0.37121  -0.160  0.226 -0.319  0.006  0.191  1.000
+ ERR MATRIX APPROXIMATE
+ **********
+ **   13 **IMPROVE        3000
+ **********
+ FUNCTION MUST BE MINIMIZED BEFORE CALLING IMProve   
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 5.00e-05
+ FCN=-3.30796e+07 FROM MIGRAD    STATUS=INITIATE       20 CALLS          21 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a1           2.00228e+03   1.21804e-01   5.45375e-02   1.10641e+00
+   2  b1           1.21530e+00   2.03210e-02   1.17203e-02   4.13065e+00
+   3  bkg_yield    4.78719e+05   9.79341e+02   1.40062e-03  -3.79476e+00
+   4  mean         2.01027e+03   2.13510e-04   1.07743e-04   1.74640e+02
+   5  sig_yield    2.18864e+06   1.63309e+03   1.30882e-03  -5.78087e+00
+   6  sigma        4.27336e-01   4.49846e-04   1.03900e-03  -7.91563e-01
+                               ERR DEF= 0.5
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=-3.30796e+07 FROM HESSE     STATUS=OK             50 CALLS          82 TOTAL
+                     EDM=0.0210604    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a1           2.00228e+03   1.22759e-01   5.45375e-02  -2.58867e+00
+   2  b1           1.21530e+00   2.04818e-02   1.17203e-02   5.21496e+00
+   3  bkg_yield    4.78719e+05   9.80463e+02   4.63633e-03  -3.69620e-01
+   4  mean         2.01027e+03   2.13511e-04   4.27728e-04   1.75681e+02
+   5  sig_yield    2.18864e+06   1.63376e+03   4.86092e-03   1.75442e+00
+   6  sigma        4.27336e-01   4.50015e-04   3.83167e-03   4.96157e+00
+                               ERR DEF= 0.5
+ MINUIT WARNING IN MIGRAD  
+ ============== Negative diagonal element 1 in Error Matrix
+ MINUIT WARNING IN MIGRAD  
+ ============== 1.00005 added to diagonal of error matrix
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ MIGRAD TERMINATED WITHOUT CONVERGENCE.
+ FCN=-3.30796e+07 FROM MIGRAD    STATUS=FAILED        141 CALLS         142 TOTAL
+                     EDM=650.784    STRATEGY= 1  ERROR MATRIX UNCERTAINTY 100.0 per cent
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a1           2.00230e+03   1.45137e+00  -0.00000e+00   3.24338e+00
+   2  b1           1.21271e+00   1.12530e+00   0.00000e+00  -2.06195e+00
+   3  bkg_yield    4.78763e+05   4.54260e+05   0.00000e+00  -4.61282e+00
+   4  mean         2.01027e+03   2.76415e-03   0.00000e+00  -1.50163e+00
+   5  sig_yield    2.18859e+06   8.10629e+05   0.00000e+00  -6.27221e+00
+   6  sigma        4.27324e-01   2.81270e-01   0.00000e+00  -3.21341e+00
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  2.496e+00  3.673e-05 -7.990e-01 -3.440e-04  1.071e+01  2.082e-06 
+  3.673e-05  1.500e+00 -1.948e+00 -1.321e-03  1.575e+00  6.876e-07 
+ -7.990e-01 -1.948e+00  2.445e+11  1.350e+02 -4.813e+05 -1.516e-01 
+ -3.440e-04 -1.321e-03  1.350e+02  7.641e-06  1.605e+03  5.303e-04 
+  1.071e+01  1.575e+00 -4.813e+05  1.605e+03  7.785e+11 -3.257e-01 
+  2.082e-06  6.876e-07 -1.516e-01  5.303e-04 -3.257e-01  9.373e-02 
+ERR MATRIX APPROXIMATE
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.71418   1.000  0.000 -0.000 -0.079  0.000  0.000
+        2  0.98098   0.000  1.000 -0.000 -0.390  0.000  0.000
+        3  0.78788  -0.000 -0.000  1.000  0.099 -0.000 -0.000
+        4  0.99701  -0.079 -0.390  0.099  1.000  0.658  0.627
+        5  0.99319   0.000  0.000 -0.000  0.658  1.000 -0.000
+        6  0.99249   0.000  0.000 -0.000  0.627 -0.000  1.000
+ ERR MATRIX APPROXIMATE
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+START ATTEMPT NO. 1 TO FIND NEW MINIMUM
+ START SIMPLEX MINIMIZATION.    CONVERGENCE WHEN EDM .LT. 0.05
+ FCN=-3.30796e+07 FROM SIMPLEX   STATUS=PROGRESS       15 CALLS         360 TOTAL
+                     EDM=202.23    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a1           2.00248e+03   1.20266e-01   2.16492e-01  -2.19702e+07
+   2  b1           1.17194e+00   2.00967e-02   1.19003e-02  -1.32564e+08
+   3  bkg_yield    4.83693e+05   9.78912e+02   5.57307e-03  -7.40561e+08
+   4  mean         2.01027e+03   2.13508e-04   1.07745e-04  -8.63371e+07
+   5  sig_yield    2.18817e+06   1.63281e+03   5.21718e-03   1.20294e+08
+   6  sigma        4.27172e-01   4.49777e-04   1.03896e-03  -1.93990e+08
+                               ERR DEF= 0.5
+ SIMPLEX MINIMIZATION HAS CONVERGED.
+ FCN=-3.30796e+07 FROM SIMPLEX   STATUS=PROGRESS      137 CALLS         482 TOTAL
+                     EDM=0.0518071    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a1           2.00232e+03   1.20266e-01   7.43913e-03  -2.19702e+07
+   2  b1           1.20895e+00   2.00967e-02   1.72081e-03  -1.32564e+08
+   3  bkg_yield    4.78787e+05   9.78912e+02   3.23125e-04  -7.40561e+08
+   4  mean         2.01027e+03   2.13508e-04   4.66132e-05  -8.63371e+07
+   5  sig_yield    2.18850e+06   1.63281e+03   4.49198e-04   1.20294e+08
+   6  sigma        4.27295e-01   4.49777e-04   1.78852e-04  -1.93990e+08
+                               ERR DEF= 0.5
+ IMPROVE HAS RETURNED TO REGION OF ORIGINAL MINIMUM
+ **********
+ **   13 **HESSE        3000
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -2.3331e-02  5.0841e-01  9.9901e-01  1.0726e+00  1.1854e+00  2.2579e+00
+ MINUIT WARNING IN HESSE   
+ ============== MATRIX FORCED POS-DEF BY ADDING 0.025589 TO DIAGONAL.
+ FCN=-3.30796e+07 FROM HESSE     STATUS=NOT POSDEF     60 CALLS          61 TOTAL
+                     EDM=6.86541e-05    STRATEGY= 1      ERR MATRIX NOT POS-DEF
+  EXT PARAMETER                APPROXIMATE     INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  a1           2.00230e+03   4.45944e-01   5.00000e-01   2.79168e-02
+   2  b1           1.21271e+00   7.23963e-02   1.18349e-01  -6.00891e-01
+   3  bkg_yield    4.78763e+05   1.21546e+03   1.42798e-02  -3.70037e-01
+   4  mean         2.01027e+03   2.12070e-04   1.07742e-05   1.35553e-01
+   5  sig_yield    2.18859e+06   1.76527e+03   1.33473e-02   5.34457e-01
+   6  sigma        4.27324e-01   4.69891e-04   1.05963e-02  -2.76109e-01
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  2.016e-01 -3.242e-02  3.515e+02 -1.049e-05 -3.457e+02 -7.530e-05 
+ -3.242e-02  5.244e-03 -5.880e+01  1.668e-06  5.785e+01  1.279e-05 
+  3.515e+02 -5.880e+01  1.477e+06 -1.868e-02 -9.912e+05 -2.492e-01 
+ -1.049e-05  1.668e-06 -1.868e-02  4.497e-08  1.838e-02  4.011e-09 
+ -3.457e+02  5.785e+01 -9.912e+05  1.838e-02  3.116e+06  2.458e-01 
+ -7.530e-05  1.279e-05 -2.492e-01  4.011e-09  2.458e-01  2.208e-07 
+ERR MATRIX NOT POS-DEF
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.99772   1.000 -0.997  0.644 -0.110 -0.436 -0.357
+        2  0.99786  -0.997  1.000 -0.668  0.109  0.453  0.376
+        3  0.74848   0.644 -0.668  1.000 -0.072 -0.462 -0.436
+        4  0.11194  -0.110  0.109 -0.072  1.000  0.049  0.040
+        5  0.51989  -0.436  0.453 -0.462  0.049  1.000  0.296
+        6  0.47911  -0.357  0.376 -0.436  0.040  0.296  1.000
+ ERR MATRIX NOT POS-DEF
+[#1] INFO:Minization -- RooMinuit::optimizeConst: activating const optimization
+ **********
+ **   13 **MINOS        3000
+ **********
+ FUNCTION MUST BE MINIMIZED BEFORE CALLING MINOs     
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 5.00e-05
+ FCN=-3.30796e+07 FROM MIGRAD    STATUS=INITIATE       24 CALLS          25 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a1           2.00230e+03   4.45944e-01   2.00959e-01   3.26813e+00
+   2  b1           1.21271e+00   7.23963e-02   4.18251e-02  -2.06312e+00
+   3  bkg_yield    4.78763e+05   1.21546e+03   1.73827e-03  -4.61282e+00
+   4  mean         2.01027e+03   2.12070e-04   1.07017e-04  -1.50163e+00
+   5  sig_yield    2.18859e+06   1.76527e+03   1.41472e-03  -6.27225e+00
+   6  sigma        4.27324e-01   4.69891e-04   1.08531e-03  -3.21342e+00
+                               ERR DEF= 0.5
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=-3.30796e+07 FROM HESSE     STATUS=OK             52 CALLS          88 TOTAL
+                     EDM=1.09921e-05    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a1           2.00230e+03   1.20355e-01   5.34027e-02  -2.52833e-01
+   2  b1           1.21271e+00   2.01114e-02   1.09428e-02  -1.12095e+00
+   3  bkg_yield    4.78763e+05   9.78973e+02   4.63650e-03  -1.18760e+00
+   4  mean         2.01027e+03   2.13508e-04   4.27725e-04  -4.19038e-01
+   5  sig_yield    2.18859e+06   1.63285e+03   4.86080e-03   1.26275e+00
+   6  sigma        4.27324e-01   4.49785e-04   3.83163e-03   2.53955e+00
+                               ERR DEF= 0.5
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -8.7106e-01  6.6946e-01  8.2035e-01  1.0000e+00  1.2276e+00  3.1537e+00
+ MINUIT WARNING IN MIGRAD  
+ ============== MATRIX FORCED POS-DEF BY ADDING 0.874212 TO DIAGONAL.
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ MACHINE ACCURACY LIMITS FURTHER IMPROVEMENT.
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ MIGRAD TERMINATED WITHOUT CONVERGENCE.
+ FCN=-3.30796e+07 FROM MIGRAD    STATUS=FAILED        202 CALLS         203 TOTAL
+                     EDM=5.84345e-05    STRATEGY= 1      ERR MATRIX APPROXIMATE
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a1           2.00230e+03   1.20235e-01   5.32119e-02   1.38016e-01
+   2  b1           1.21268e+00   2.00924e-02   1.09359e-02  -1.08283e-02
+   3  bkg_yield    4.78764e+05   9.78905e+02   4.63650e-03   1.90021e-02
+   4  mean         2.01027e+03   2.13507e-04   4.27725e-04  -5.06243e-02
+   5  sig_yield    2.18859e+06   1.63280e+03   4.86077e-03  -2.93694e-01
+   6  sigma        4.27322e-01   4.49774e-04   3.83161e-03  -3.86835e-02
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  1.447e-02 -2.327e-03  3.433e+01 -5.170e-07 -3.421e+01 -8.595e-06 
+ -2.327e-03  4.037e-04 -7.732e+00  6.365e-08  7.706e+00  2.041e-06 
+  3.433e+01 -7.732e+00  9.583e+05 -1.758e-03 -4.778e+05 -1.405e-01 
+ -5.170e-07  6.365e-08 -1.758e-03  4.559e-08  1.756e-03  5.762e-10 
+ -3.421e+01  7.706e+00 -4.778e+05  1.756e-03  2.666e+06  1.402e-01 
+ -8.595e-06  2.041e-06 -1.405e-01  5.762e-10  1.402e-01  2.023e-07 
+ERR MATRIX APPROXIMATE
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.96855   1.000 -0.963  0.292 -0.020 -0.174 -0.159
+        2  0.97142  -0.963  1.000 -0.393  0.015  0.235  0.226
+        3  0.55193   0.292 -0.393  1.000 -0.008 -0.299 -0.319
+        4  0.02925  -0.020  0.015 -0.008  1.000  0.005  0.006
+        5  0.35387  -0.174  0.235 -0.299  0.005  1.000  0.191
+        6  0.37089  -0.159  0.226 -0.319  0.006  0.191  1.000
+ ERR MATRIX APPROXIMATE
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -2.5342e-03  8.8859e-01  1.0024e+00  1.4431e+00  1.6684e+00
+ MINUIT WARNING IN MIGRAD  
+ ============== MATRIX FORCED POS-DEF BY ADDING 0.004203 TO DIAGONAL.
+ MINUIT WARNING IN MIGRAD  
+ ============== Negative diagonal element 1 in Error Matrix
+ MINUIT WARNING IN MIGRAD  
+ ============== 1 added to diagonal of error matrix
+ MIGRAD FAILS WITH STRATEGY=0.   WILL TRY WITH STRATEGY=1.
+ MINUIT WARNING IN MIGRAD  
+ ============== Negative diagonal element 1 in Error Matrix
+ MINUIT WARNING IN MIGRAD  
+ ============== 1.00012 added to diagonal of error matrix
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -8.0976e-02  8.4430e-01  9.9844e-01  1.0566e+00  2.1817e+00
+ MINUIT WARNING IN MIGRAD  
+ ============== MATRIX FORCED POS-DEF BY ADDING 0.083158 TO DIAGONAL.
+ FCN=-3.30796e+07 FROM MINOS     STATUS=SUCCESSFUL    995 CALLS        1248 TOTAL
+                     EDM=4.48123e-09    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                  PARABOLIC         MINOS ERRORS        
+  NO.   NAME      VALUE            ERROR      NEGATIVE      POSITIVE   
+   1  a1           2.00230e+03   1.00891e-01  -9.94486e-02   9.62831e-02
+   2  b1           1.21268e+00   1.68776e-02  -1.61972e-02   1.65716e-02
+   3  bkg_yield    4.78764e+05   9.62921e+02  -9.60749e+02   9.61807e+02
+   4  mean         2.01027e+03   2.13493e-04  -2.13489e-04   2.13492e-04
+   5  sig_yield    2.18859e+06   1.62379e+03  -1.62261e+03   1.62323e+03
+   6  sigma        4.27322e-01   4.47645e-04  -4.47203e-04   4.47678e-04
+                               ERR DEF= 0.5
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Minization --  The following expressions have been identified as constant and will be precalculated and cached: (sig_neg,arg_neg)
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(model_neg) Calculating sum-of-weights-squared correction matrix for covariance matrix
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: deactivating const optimization
+[#1] INFO:InputArguments -- Printing Yields
+RooArgList:: = (sig_yield,bkg_yield)
+[#1] INFO:InputArguments -- yield in pdf: sig_yield 2.18859e+06
+[#1] INFO:InputArguments -- yield in pdf: bkg_yield 478764
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Eval -- Checking Likelihood normalization:  
+[#1] INFO:Eval -- Yield of specie  Sum of Row in Matrix   Norm
+[#1] INFO:Eval -- 2.18859e+06 2.18859e+06 1
+[#1] INFO:Eval -- 478764 478764 1
+[#1] INFO:Eval -- Calculating sWeight
+ **********
+ **   13 **HESSE        3000
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Eval -- RooAbsTestStatistic::initMPMode: started 8 remote server process.
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+ MINUIT WARNING IN HESSE   
+ ============== Negative diagonal element 1 in Error Matrix
+ MINUIT WARNING IN HESSE   
+ ============== 6087.01 added to diagonal of error matrix
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -4.3335e+01  1.2435e-01  3.2587e-01  1.1215e+00  1.8585e+00  4.5905e+01
+ MINUIT WARNING IN HESSE   
+ ============== MATRIX FORCED POS-DEF BY ADDING 43.381113 TO DIAGONAL.
+ FCN=-3.14066e+07 FROM HESSE     STATUS=NOT POSDEF     58 CALLS          59 TOTAL
+                     EDM=2.7769e+09    STRATEGY= 1      ERR MATRIX NOT POS-DEF
+  EXT PARAMETER                APPROXIMATE     INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  a2           2.00390e+03   3.76186e+00   5.00000e-01   8.40485e-01
+   2  b2           1.30000e+00   1.00390e-02   2.54901e-01  -6.62874e-01
+   3  bkg_yield_2   6.00000e+05   1.75467e+03   1.57917e-01  -2.01358e-01
+   4  mean2        2.01000e+03   6.37903e-05   2.01358e-02   0.00000e+00
+   5  sig_yield_2   2.00000e+06   1.21565e+03   1.33521e-01   3.89051e-01
+   6  sigma2       3.10000e-01   2.73864e-04   9.00058e-02  -5.62536e-01
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  2.438e+01 -4.947e-02 -8.636e+03  1.901e-04  5.907e+03  1.337e-03 
+ -4.947e-02  1.008e-04  1.752e+01 -3.857e-07 -1.198e+01 -2.712e-06 
+ -8.636e+03  1.752e+01  3.079e+06 -6.737e-02 -2.093e+06 -4.735e-01 
+  1.901e-04 -3.857e-07 -6.737e-02  4.069e-09  4.608e-02  1.038e-08 
+  5.907e+03 -1.198e+01 -2.093e+06  4.608e-02  1.478e+06  3.238e-01 
+  1.337e-03 -2.712e-06 -4.735e-01  1.038e-08  3.238e-01  7.500e-08 
+ERR MATRIX NOT POS-DEF
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.99897   1.000 -0.998 -0.997  0.604  0.984  0.988
+        2  0.99800  -0.998  1.000  0.995 -0.602 -0.982 -0.986
+        3  0.99682  -0.997  0.995  1.000 -0.602 -0.981 -0.985
+        4  0.60385   0.604 -0.602 -0.602  1.000  0.594  0.594
+        5  0.98408   0.984 -0.982 -0.981  0.594  1.000  0.973
+        6  0.98844   0.988 -0.986 -0.985  0.594  0.973  1.000
+ ERR MATRIX NOT POS-DEF
+ **********
+ **   13 **MIGRAD        3000           1
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
+ FCN=-3.14244e+07 FROM MIGRAD    STATUS=INITIATE       41 CALLS          42 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a2           2.00003e+03   3.76186e+00  -2.25000e+00   4.37660e+02
+   2  b2           1.30000e+00   1.00390e-02   0.00000e+00   3.53831e+04
+   3  bkg_yield_2   6.00000e+05   1.75467e+03   0.00000e+00   3.42453e+03
+   4  mean2        2.01000e+03   6.37903e-05   0.00000e+00  -1.06790e+07
+   5  sig_yield_2   2.00000e+06   1.21565e+03   0.00000e+00  -9.69145e+03
+   6  sigma2       3.10000e-01   2.73864e-04   0.00000e+00  -9.58271e+05
+                               ERR DEF= 0.5
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ MACHINE ACCURACY LIMITS FURTHER IMPROVEMENT.
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=-3.23205e+07 FROM HESSE     STATUS=OK             48 CALLS         337 TOTAL
+                     EDM=0.0167772    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a2           2.00211e+03   1.35135e-01   5.48736e-02   2.87844e+00
+   2  b2           1.23663e+00   2.21852e-02   9.61631e-03   3.15368e+01
+   3  bkg_yield_2   4.70129e+05   9.73901e+02   4.56502e-03   1.03295e+01
+   4  mean2        2.01027e+03   2.16649e-04   4.29008e-04   3.61755e+01
+   5  sig_yield_2   2.14153e+06   1.61801e+03   4.65405e-03   9.08125e+00
+   6  sigma2       4.29166e-01   4.57699e-04   3.84426e-03  -2.09287e+00
+                               ERR DEF= 0.5
+ MINUIT WARNING IN MIGRAD  
+ ============== Negative diagonal element 1 in Error Matrix
+ MINUIT WARNING IN MIGRAD  
+ ============== Negative diagonal element 2 in Error Matrix
+ MINUIT WARNING IN MIGRAD  
+ ============== 1.00058 added to diagonal of error matrix
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ MIGRAD TERMINATED WITHOUT CONVERGENCE.
+ FCN=-3.23205e+07 FROM MIGRAD    STATUS=FAILED        453 CALLS         454 TOTAL
+                     EDM=12.508    STRATEGY= 1  ERROR MATRIX UNCERTAINTY  39.0 per cent
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a2           2.00212e+03   1.43369e+00  -0.00000e+00   3.75905e+00
+   2  b2           1.23439e+00   5.14004e-01   0.00000e+00  -2.00409e-01
+   3  bkg_yield_2   4.70177e+05   3.85027e+05   0.00000e+00  -3.29709e+00
+   4  mean2        2.01027e+03   1.24244e-03  -0.00000e+00  -4.84173e+00
+   5  sig_yield_2   2.14146e+06   9.13342e+04   0.00000e+00  -6.91868e+00
+   6  sigma2       4.29151e-01   1.32880e-01  -0.00000e+00  -5.61311e+00
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  2.424e+00 -3.404e-01 -3.647e+04  1.492e-03 -1.719e+04  1.209e-02 
+ -3.404e-01  2.703e-01 -1.870e+05  1.491e-04 -4.037e+04  6.189e-02 
+ -3.647e+04 -1.870e+05  1.665e+11 -3.322e+02  3.722e+10 -5.510e+04 
+  1.492e-03  1.491e-04 -3.322e+02  1.544e-06 -7.959e+01  1.100e-04 
+ -1.719e+04 -4.037e+04  3.722e+10 -7.959e+01  8.356e+09 -1.232e+04 
+  1.209e-02  6.189e-02 -5.510e+04  1.100e-04 -1.232e+04  1.824e-02 
+ERR MATRIX APPROXIMATE
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.99978   1.000 -0.421 -0.057  0.771 -0.121  0.057
+        2  0.99995  -0.421  1.000 -0.882  0.231 -0.850  0.882
+        3  0.99999  -0.057 -0.882  1.000 -0.655  0.998 -1.000
+        4  0.98470   0.771  0.231 -0.655  1.000 -0.701  0.655
+        5  0.99985  -0.121 -0.850  0.998 -0.701  1.000 -0.998
+        6  0.99999   0.057  0.882 -1.000  0.655 -0.998  1.000
+ ERR MATRIX APPROXIMATE
+ **********
+ **   13 **IMPROVE        3000
+ **********
+ FUNCTION MUST BE MINIMIZED BEFORE CALLING IMProve   
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 5.00e-05
+ FCN=-3.23205e+07 FROM MIGRAD    STATUS=INITIATE       32 CALLS          33 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a2           2.00212e+03   1.43369e+00   6.98243e-01   3.91645e+00
+   2  b2           1.23439e+00   5.14004e-01   2.67661e-01  -2.00689e-01
+   3  bkg_yield_2   4.70177e+05   3.85027e+05   6.15195e-01  -3.96043e+00
+   4  mean2        2.01027e+03   1.24244e-03   6.26995e-04  -4.84172e+00
+   5  sig_yield_2   2.14146e+06   9.13342e+04   7.17784e-02  -6.91848e+00
+   6  sigma2       4.29151e-01   1.32880e-01   3.12884e-01  -5.61240e+00
+                               ERR DEF= 0.5
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=-3.23205e+07 FROM HESSE     STATUS=OK             52 CALLS          96 TOTAL
+                     EDM=5.82558e-05    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a2           2.00212e+03   1.34959e-01   5.58781e-02  -1.27036e-01
+   2  b2           1.23439e+00   2.21672e-02   9.61489e-03   2.82495e-01
+   3  bkg_yield_2   4.70177e+05   9.74135e+02   5.00000e-03   2.03773e-02
+   4  mean2        2.01027e+03   2.16647e-04   4.29005e-04  -3.86245e+00
+   5  sig_yield_2   2.14146e+06   1.61811e+03   4.65381e-03   1.86202e-01
+   6  sigma2       4.29151e-01   4.57708e-04   3.84397e-03   1.90433e-02
+                               ERR DEF= 0.5
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -4.1405e-02  5.9420e-01  8.2858e-01  1.0000e+00  1.3199e+00  2.2987e+00
+ MINUIT WARNING IN MIGRAD  
+ ============== MATRIX FORCED POS-DEF BY ADDING 0.043704 TO DIAGONAL.
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ MACHINE ACCURACY LIMITS FURTHER IMPROVEMENT.
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=-3.23205e+07 FROM MIGRAD    STATUS=CONVERGED     188 CALLS         189 TOTAL
+                     EDM=2.78593e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a2           2.00212e+03   1.34103e-01   5.47626e-02  -1.18459e-02
+   2  b2           1.23425e+00   2.20302e-02   9.61139e-03  -1.10774e-01
+   3  bkg_yield_2   4.70179e+05   9.73656e+02   4.56519e-03  -7.41967e-02
+   4  mean2        2.01027e+03   2.16647e-04   4.29004e-04  -1.63382e+00
+   5  sig_yield_2   2.14146e+06   1.61782e+03   4.65383e-03   1.12447e-01
+   6  sigma2       4.29150e-01   4.57648e-04   3.84421e-03   6.65747e-02
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  1.801e-02 -2.860e-03  3.954e+01 -6.404e-07 -3.940e+01 -1.017e-05 
+ -2.860e-03  4.854e-04 -8.519e+00  8.172e-08  8.492e+00  2.301e-06 
+  3.954e+01 -8.519e+00  9.480e+05 -1.986e-03 -4.762e+05 -1.436e-01 
+ -6.404e-07  8.172e-08 -1.986e-03  4.694e-08  1.984e-03  6.041e-10 
+ -3.940e+01  8.492e+00 -4.762e+05  1.984e-03  2.617e+06  1.433e-01 
+ -1.017e-05  2.301e-06 -1.436e-01  6.041e-10  1.433e-01  2.094e-07 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.97269   1.000 -0.968  0.303 -0.022 -0.182 -0.166
+        2  0.97508  -0.968  1.000 -0.397  0.017  0.238  0.228
+        3  0.55616   0.303 -0.397  1.000 -0.009 -0.302 -0.322
+        4  0.03044  -0.022  0.017 -0.009  1.000  0.006  0.006
+        5  0.35754  -0.182  0.238 -0.302  0.006  1.000  0.194
+        6  0.37384  -0.166  0.228 -0.322  0.006  0.194  1.000
+START ATTEMPT NO. 1 TO FIND NEW MINIMUM
+ IMPROVE HAS RETURNED TO REGION OF ORIGINAL MINIMUM
+ **********
+ **   13 **HESSE        3000
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -4.8435e-02  5.0594e-01  9.9903e-01  1.0731e+00  1.1862e+00  2.2841e+00
+ MINUIT WARNING IN HESSE   
+ ============== MATRIX FORCED POS-DEF BY ADDING 0.050719 TO DIAGONAL.
+ FCN=-3.23205e+07 FROM HESSE     STATUS=NOT POSDEF     60 CALLS          61 TOTAL
+                     EDM=0.000373999    STRATEGY= 1      ERR MATRIX NOT POS-DEF
+  EXT PARAMETER                APPROXIMATE     INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  a2           2.00212e+03   4.59816e-01   5.00000e-01  -5.01588e-02
+   2  b2           1.23425e+00   7.36943e-02   1.12569e-01  -6.95375e-01
+   3  bkg_yield_2   4.70179e+05   1.13607e+03   1.42723e-02  -3.82343e-01
+   4  mean2        2.01027e+03   2.12703e-04   1.09330e-05   1.35801e-01
+   5  sig_yield_2   2.14146e+06   1.68812e+03   1.29475e-02   4.97089e-01
+   6  sigma2       4.29150e-01   4.63020e-04   1.07690e-02  -2.71893e-01
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  2.145e-01 -3.404e-02  3.185e+02 -1.132e-05 -3.116e+02 -6.790e-05 
+ -3.404e-02  5.433e-03 -5.272e+01  1.778e-06  5.159e+01  1.143e-05 
+  3.185e+02 -5.272e+01  1.291e+06 -1.724e-02 -8.195e+05 -2.121e-01 
+ -1.132e-05  1.778e-06 -1.724e-02  4.524e-08  1.688e-02  3.648e-09 
+ -3.116e+02  5.159e+01 -8.195e+05  1.688e-02  2.850e+06  2.082e-01 
+ -6.790e-05  1.143e-05 -2.121e-01  3.648e-09  2.082e-01  2.144e-07 
+ERR MATRIX NOT POS-DEF
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.99776   1.000 -0.997  0.605 -0.115 -0.399 -0.317
+        2  0.99788  -0.997  1.000 -0.630  0.113  0.415  0.335
+        3  0.71914   0.605 -0.630  1.000 -0.071 -0.427 -0.403
+        4  0.11651  -0.115  0.113 -0.071  1.000  0.047  0.037
+        5  0.48750  -0.399  0.415 -0.427  0.047  1.000  0.266
+        6  0.44742  -0.317  0.335 -0.403  0.037  0.266  1.000
+ ERR MATRIX NOT POS-DEF
+[#1] INFO:Minization -- RooMinuit::optimizeConst: activating const optimization
+ **********
+ **   13 **MINOS        3000
+ **********
+ FUNCTION MUST BE MINIMIZED BEFORE CALLING MINOs     
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 5.00e-05
+ FCN=-3.23205e+07 FROM MIGRAD    STATUS=INITIATE       24 CALLS          25 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a2           2.00212e+03   4.59816e-01   2.07490e-01   3.89543e+00
+   2  b2           1.23425e+00   7.36943e-02   3.69411e-02  -5.94043e-01
+   3  bkg_yield_2   4.70179e+05   1.13607e+03   1.63264e-03  -3.39273e+00
+   4  mean2        2.01027e+03   2.12703e-04   1.07340e-04  -2.61330e+00
+   5  sig_yield_2   2.14146e+06   1.68812e+03   1.32452e-03  -6.99226e+00
+   6  sigma2       4.29150e-01   4.63020e-04   1.06817e-03  -5.56562e+00
+                               ERR DEF= 0.5
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=-3.23205e+07 FROM HESSE     STATUS=OK             52 CALLS          88 TOTAL
+                     EDM=1.40354e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a2           2.00212e+03   1.34223e-01   5.49337e-02  -1.18082e-02
+   2  b2           1.23425e+00   2.20497e-02   9.61749e-03  -1.10766e-01
+   3  bkg_yield_2   4.70179e+05   9.73738e+02   4.56519e-03  -7.42171e-02
+   4  mean2        2.01027e+03   2.16647e-04   4.29004e-04  -1.63382e+00
+   5  sig_yield_2   2.14146e+06   1.61787e+03   4.65383e-03   1.12467e-01
+   6  sigma2       4.29150e-01   4.57659e-04   3.84422e-03   6.65868e-02
+                               ERR DEF= 0.5
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -1.5325e+00  6.1540e-01  8.2743e-01  1.0001e+00  1.2987e+00  3.7909e+00
+ MINUIT WARNING IN MIGRAD  
+ ============== MATRIX FORCED POS-DEF BY ADDING 1.536254 TO DIAGONAL.
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ MACHINE ACCURACY LIMITS FURTHER IMPROVEMENT.
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=-3.23205e+07 FROM MIGRAD    STATUS=CONVERGED     165 CALLS         166 TOTAL
+                     EDM=8.05238e-08    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a2           2.00212e+03   1.12995e-01   2.19735e-02  -1.55761e-02
+   2  b2           1.23425e+00   1.85837e-02   3.84700e-03  -8.96099e-02
+   3  bkg_yield_2   4.70179e+05   9.57936e+02   1.82608e-03  -5.67390e-02
+   4  mean2        2.01027e+03   2.16630e-04   1.71602e-04  -1.36224e+00
+   5  sig_yield_2   2.14146e+06   1.60880e+03   1.86153e-03   1.03162e-01
+   6  sigma2       4.29150e-01   4.55472e-04   1.53769e-03   6.26863e-02
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  1.278e-02 -2.005e-03  2.709e+01 -4.499e-07 -2.705e+01 -6.961e-06 
+ -2.005e-03  3.454e-04 -6.477e+00  5.034e-08  6.469e+00  1.775e-06 
+  2.709e+01 -6.477e+00  9.176e+05 -1.500e-03 -4.469e+05 -1.359e-01 
+ -4.499e-07  5.034e-08 -1.500e-03  4.693e-08  1.500e-03  3.907e-10 
+ -2.705e+01  6.469e+00 -4.469e+05  1.500e-03  2.588e+06  1.358e-01 
+ -6.961e-06  1.775e-06 -1.359e-01  3.907e-10  1.358e-01  2.075e-07 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.96131   1.000 -0.954  0.250 -0.018 -0.149 -0.135
+        2  0.96480  -0.954  1.000 -0.364  0.013  0.216  0.210
+        3  0.53522   0.250 -0.364  1.000 -0.007 -0.290 -0.311
+        4  0.02783  -0.018  0.013 -0.007  1.000  0.004  0.004
+        5  0.34354  -0.149  0.216 -0.290  0.004  1.000  0.185
+        6  0.36266  -0.135  0.210 -0.311  0.004  0.185  1.000
+ FCN=-3.23205e+07 FROM MINOS     STATUS=SUCCESSFUL    664 CALLS         830 TOTAL
+                     EDM=8.05238e-08    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                  PARABOLIC         MINOS ERRORS        
+  NO.   NAME      VALUE            ERROR      NEGATIVE      POSITIVE   
+   1  a2           2.00212e+03   1.12995e-01  -1.04894e-01   1.01594e-01
+   2  b2           1.23425e+00   1.85837e-02  -1.67900e-02   1.71491e-02
+   3  bkg_yield_2   4.70179e+05   9.57936e+02  -9.49454e+02   9.51858e+02
+   4  mean2        2.01027e+03   2.16630e-04  -2.16592e-04   2.16653e-04
+   5  sig_yield_2   2.14146e+06   1.60880e+03  -1.60493e+03   1.60450e+03
+   6  sigma2       4.29150e-01   4.55472e-04  -4.54361e-04   4.54599e-04
+                               ERR DEF= 0.5
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Minization --  The following expressions have been identified as constant and will be precalculated and cached: (sig_pos,arg_pos)
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(model_pos) Calculating sum-of-weights-squared correction matrix for covariance matrix
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: deactivating const optimization
+[#1] INFO:InputArguments -- Printing Yields
+RooArgList:: = (sig_yield_2,bkg_yield_2)
+[#1] INFO:InputArguments -- yield in pdf: sig_yield_2 2.14146e+06
+[#1] INFO:InputArguments -- yield in pdf: bkg_yield_2 470179
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Eval -- Checking Likelihood normalization:  
+[#1] INFO:Eval -- Yield of specie  Sum of Row in Matrix   Norm
+[#1] INFO:Eval -- 2.14146e+06 2.14146e+06 1
+[#1] INFO:Eval -- 470179 470179 1
+[#1] INFO:Eval -- Calculating sWeight
+=== Event 0%
+=== Event 10%
+=== Event 20%
+=== Event 30%
+=== Event 40%
+=== Event 50%
+=== Event 60%
+=== Event 70%
+=== Event 80%
+=== Event 90%
+=== Event 100%
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Eval -- RooRealVar::setRange(DTF_Mass) new range named 'plotRange' created with bounds [2004.47,2020.11]
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(model_neg_Int[DTF_Mass|plotRange]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_neg) only plotting range [2004.47,2020.11], curve is normalized to data in given range
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_neg) directly selected PDF components: (arg_neg)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_neg) indirectly selected PDF components: ()
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(model_neg_Int[DTF_Mass|plotRange]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Plotting -- RooPlot::updateFitRangeNorm: New event count of 2.66735e+06 will supercede previous event count of 1 for normalization of PDF projections
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_neg) only plotting range [2004.47,2020.11], curve is normalized to data in given range
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(model_neg_Int[DTF_Mass|plotRange]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_neg) only plotting range [2004.47,2020.11], curve is normalized to data in given range
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_neg) directly selected PDF components: (arg_neg)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_neg) indirectly selected PDF components: ()
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(model_neg_Int[DTF_Mass|plotRange]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(model_pos_Int[DTF_Mass|plotRange]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_pos) only plotting range [2004.47,2020.11], curve is normalized to data in given range
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_pos) directly selected PDF components: (arg_pos)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_pos) indirectly selected PDF components: ()
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(model_pos_Int[DTF_Mass|plotRange]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Plotting -- RooPlot::updateFitRangeNorm: New event count of 2.61164e+06 will supercede previous event count of 1 for normalization of PDF projections
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_pos) only plotting range [2004.47,2020.11], curve is normalized to data in given range
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(model_pos_Int[DTF_Mass|plotRange]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_pos) only plotting range [2004.47,2020.11], curve is normalized to data in given range
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_pos) directly selected PDF components: (arg_pos)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model_pos) indirectly selected PDF components: ()
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(model_pos_Int[DTF_Mass|plotRange]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
+Total asymmetry before weighting: -0.0105812 +/- 0.000480594
+Total asymmetry after signal weighting: -0.0109024 +/- 5.77428e-08
+computation time/s: 464.442
+computation time/min: 7.74071

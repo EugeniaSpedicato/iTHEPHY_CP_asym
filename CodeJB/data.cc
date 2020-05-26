@@ -42,9 +42,7 @@ void printdevhists(TH1F *h_pos, TH1F *h_neg, string polarisation, string var, bo
   h_pos->Divide(h_neg);
   title_name = "h_Dst_asym"+var;
   h_pos->SetName(title_name.c_str());
-  h_pos->SetAxisRange(-0.1, 0.1, "Y");
   h_pos->Draw();
-  h_pos->Draw("hist same");
   func.Draw("same");
   save_name = "output/data/plots/"+polarisation+"/"+title_name+".pdf";
   c->SaveAs(save_name.c_str());
@@ -70,22 +68,22 @@ void data(string dir, string sample, string polarisation)
   uint64_t start_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
   string input_name = dir+"/"+sample+".root";
   TChain *ntp = new TChain();
-  if(pol == "up")
+  if(polarisation == "up")
   {
     ntp->AddFile(input_name.c_str(),-1,"ntp;25");
     ntp->AddFile(input_name.c_str(),-1,"ntp;26");
   }
-  else if (pol == "down")
+  else if (polarisation == "down")
   {
     ntp->AddFile(input_name.c_str(),-1,"ntp;37");
     ntp->AddFile(input_name.c_str(),-1,"ntp;38");
   }
-  else if (pol == "up_down")
+  else if (polarisation == "up_down")
   {
-    ntp->AddFile(input_name.c_str(),-1,"up_tree_1");
-    ntp->AddFile(input_name.c_str(),-1,"up_tree_2");
-    ntp->AddFile(input_name.c_str(),-1,"dw_tree_1");
-    ntp->AddFile(input_name.c_str(),-1,"dw_tree_2");
+    ntp->AddFile(input_name.c_str(),-1,"up_tree_1;2");
+    ntp->AddFile(input_name.c_str(),-1,"up_tree_2;2");
+    ntp->AddFile(input_name.c_str(),-1,"dw_tree_1;2");
+    ntp->AddFile(input_name.c_str(),-1,"dw_tree_2;2");
   }
   int nEvents = ntp->GetEntries();
 
@@ -164,11 +162,26 @@ void data(string dir, string sample, string polarisation)
   RooRealVar *sigma = new RooRealVar("sigma", "sigma", 0.31, 0.1, 1.);
   RooRealVar *mean2 = new RooRealVar("mean2", "mean2", 2010., 2008., 2012.);
   RooRealVar *sigma2 = new RooRealVar("sigma2", "sigma2", 0.31, 0.1, 1.);
-  RooRealVar *sig_yield = (polarisation=="up")? new RooRealVar("sig_yield", "sig_yield_2", 1000000., 0., 1250000.): new RooRealVar("sig_yield", "sig_yield", 1000000., 0., 1600000.);
-  RooRealVar *bkg_yield = new RooRealVar("bkg_yield", "bkg_yield", 280000., 0., 700000.);
-  RooRealVar *sig_yield_2 = (polarisation=="up")? new RooRealVar("sig_yield_2", "sig_yield_2", 1000000., 0., 1250000.): new RooRealVar("sig_yield_2", "sig_yield_2", 1000000., 0., 1600000.);
-  RooRealVar *bkg_yield_2 = new RooRealVar("bkg_yield_2", "bkg_yield_2", 280000., 0., 700000.);
-
+  
+  RooRealVar *sig_yield;
+  RooRealVar *bkg_yield_2;
+  RooRealVar *sig_yield_2;
+  RooRealVar *bkg_yield;
+  
+  if(polarisation=="up") sig_yield = new RooRealVar("sig_yield", "sig_yield_2", 1000000., 0., 1250000.);
+  else if(polarisation=="down") sig_yield = new RooRealVar("sig_yield", "sig_yield", 1000000., 0., 1600000.);
+  else sig_yield = new RooRealVar("sig_yield", "sig_yield", 1000000., 0., 2900000.);
+  
+  if(polarisation!="up_down") bkg_yield = new RooRealVar("bkg_yield", "bkg_yield", 280000., 0., 700000.);
+  else bkg_yield = new RooRealVar("bkg_yield", "bkg_yield", 600000., 0., 1500000.);
+  
+  if(polarisation=="up") sig_yield_2 = new RooRealVar("sig_yield_2", "sig_yield_2", 1000000., 0., 1250000.);
+  else if(polarisation=="down") sig_yield_2 = new RooRealVar("sig_yield_2", "sig_yield_2", 1000000., 0., 1600000.);
+  else sig_yield_2 = new RooRealVar("sig_yield_2", "sig_yield_2", 2000000., 0., 2900000.);
+  
+  if(polarisation!="up_down") bkg_yield_2 = new RooRealVar("bkg_yield", "bkg_yield", 280000., 0., 700000.);
+  else bkg_yield_2 = new RooRealVar("bkg_yield_2", "bkg_yield_2", 600000., 0., 1500000.);
+  
   RooBreitWigner *sig_neg = new RooBreitWigner("sig_neg", "sig_neg", *DTF_Mass, *mean, *sigma);
   RooBreitWigner *sig_pos = new RooBreitWigner("sig_pos", "sig_pos", *DTF_Mass, *mean2, *sigma2);
 
@@ -206,7 +219,10 @@ void data(string dir, string sample, string polarisation)
   //model_pos->fitTo(*dataset2, Extended(), NumCPU(nThreads), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   RooStats::SPlot *sData2 = new RooStats::SPlot("sData2", "An SPlot2", *dataset2, model_pos, RooArgList(*sig_yield_2, *bkg_yield_2));
 
-  TFile *f = (polarisation=="up")? new TFile("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root"): new TFile("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Dw_GEN.root");
+  TFile *f;
+  if(polarisation=="up")f = new TFile("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root");
+  else if(polarisation=="up") f = new TFile("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Dw_GEN.root");
+  else f = new TFile("output/histOut_all.root");
 
   TH1F *h_Dst_pT_MC = (TH1F*)f->Get("h_pT_Dst");
   double nMCEvents = h_Dst_pT_MC->GetEntries();
@@ -331,7 +347,7 @@ void data(string dir, string sample, string polarisation)
   
 
   frame->Draw();
-  canvas2->SaveAs("output/data/plots/"+polarisation+"/model.pdf");
+  canvas2->SaveAs(("output/data/plots/"+polarisation+"/model.pdf").c_str());
 
 
   dataset1->plotOn(frame);
@@ -339,32 +355,28 @@ void data(string dir, string sample, string polarisation)
   model_neg->plotOn(frame, Range(2004.47, 2020.11), RooFit::Components("arg_neg"), RooFit::FillColor(kRed), RooFit::LineStyle(kDashed),RooFit::DrawOption("f") );
   model_neg->paramOn(frame, Layout(0.45, 1., 0.9), Format("NEU", AutoPrecision(1)));
   frame->Draw();
-  canvas2->SaveAs("output/data/plots/"+polarisation+"/model_data.pdf");
+  canvas2->SaveAs(("output/data/plots/"+polarisation+"/model_data.pdf").c_str());
   
   model_pos->plotOn(frame2, Range(2004.47, 2020.11));
-  model_pos->plotOn(frame2, Range(2004.47, 2020.11), RooFit::Components("arg_neg"), RooFit::FillColor(kRed), RooFit::LineStyle(kDashed),RooFit::DrawOption("f") );
+  model_pos->plotOn(frame2, Range(2004.47, 2020.11), RooFit::Components("arg_pos"), RooFit::FillColor(kRed), RooFit::LineStyle(kDashed),RooFit::DrawOption("f") );
 
   frame2->Draw();
-  canvas2->SaveAs("output/data/plots/"+polarisation+"/model_pos.pdf");
+  canvas2->SaveAs(("output/data/plots/"+polarisation+"/model_pos.pdf").c_str());
   
 
   dataset2->plotOn(frame2);
   model_pos->plotOn(frame2, Range(2004.47, 2020.11));
-  model_pos->plotOn(frame2, Range(2004.47, 2020.11), RooFit::Components("arg_neg"), RooFit::FillColor(kRed), RooFit::LineStyle(kDashed),RooFit::DrawOption("f") );
+  model_pos->plotOn(frame2, Range(2004.47, 2020.11), RooFit::Components("arg_pos"), RooFit::FillColor(kRed), RooFit::LineStyle(kDashed),RooFit::DrawOption("f") );
   model_pos->paramOn(frame2, Layout(0.45, 1., 0.9), Format("NEU", AutoPrecision(1)));
   frame2->Draw();
-  canvas2->SaveAs("output/data/plots/"+polarisation+"/model_data_pos.pdf");
+  canvas2->SaveAs(("output/data/plots/"+polarisation+"/model_data_pos.pdf").c_str());
   
 
   h_Dst_pT_MC->Draw();
-  h_Dst_pT_MC->Draw("hist same");
   h_Dst_pT_data->Draw("same");
-  h_Dst_pT_data->Draw("hist same");
   h_Dst_pT_data_nw->Draw("same");
-  h_Dst_pT_data_nw->Draw("hist same");
   h_Dst_pT_data_sw->Draw("same");
-  h_Dst_pT_data_sw->Draw("hist same");
-  canvas2->SaveAs("output/data/plots/"+polarisation+"/MC_data_comp.pdf");
+  canvas2->SaveAs(("output/data/plots/"+polarisation+"/MC_data_comp.pdf").c_str());
   
 
   h_Dst_eta_phi_plane_pos->Add(h_Dst_eta_phi_plane_neg, -1.);
@@ -372,7 +384,7 @@ void data(string dir, string sample, string polarisation)
   h_Dst_eta_phi_plane_neg->Add(h_Dst_eta_phi_plane_pos);
   h_Dst_eta_phi_plane_pos->Divide(h_Dst_eta_phi_plane_neg);
   h_Dst_eta_phi_plane_pos->Draw("SURF4 FB");
-  canvas2->SaveAs("output/data/plots/"+polarisation+"/eta_phi_plane.pdf");
+  canvas2->SaveAs(("output/data/plots/"+polarisation+"/eta_phi_plane.pdf").c_str());
   
   double nPos = h_Dst_DTF_pos->GetSumOfWeights();
   double nPosSW = h_Dst_pT_data_pos_sw->GetSumOfWeights();
@@ -388,17 +400,17 @@ void data(string dir, string sample, string polarisation)
   output_hist_name = "output/histOut_"+sample+".root";
   TFile *out_hist_fi = new TFile(output_hist_name.c_str(),"RECREATE");
 
-  printdevhists(h_Dst_DTF_pos, h_Dst_DTF_neg, pol, "DTF", false);
-  printdevhists(h_Dst_DTF_pos_sw, h_Dst_DTF_neg_sw, pol, "DTF_sw", true);
+  printdevhists(h_Dst_DTF_pos, h_Dst_DTF_neg, polarisation, "DTF", false);
+  printdevhists(h_Dst_DTF_pos_sw, h_Dst_DTF_neg_sw, polarisation, "DTF_sw", true);
 
-  printdevhists(h_phi_Dst_pos, h_phi_Dst_neg, pol, "phi", false);
-  printdevhists(h_phi_Dst_pos_sw, h_phi_Dst_neg_sw, pol, "phi_sw", true);
+  printdevhists(h_phi_Dst_pos, h_phi_Dst_neg, polarisation, "phi", false);
+  printdevhists(h_phi_Dst_pos_sw, h_phi_Dst_neg_sw, polarisation, "phi_sw", true);
 
-  printdevhists(h_D0_M_pos, h_D0_M_neg, pol, "D0m", false);
-  printdevhists(h_D0_M_pos_sw, h_D0_M_neg_sw, pol, "D0m_sw", true);
+  printdevhists(h_D0_M_pos, h_D0_M_neg, polarisation, "D0m", false);
+  printdevhists(h_D0_M_pos_sw, h_D0_M_neg_sw, polarisation, "D0m_sw", true);
 
-  printdevhists(h_Dst_pT_data_pos, h_Dst_pT_data_neg, pol, "pT", true);
-  printdevhists(h_Dst_pT_data_pos_sw, h_Dst_pT_data_neg_sw, pol, "pT_sw", true);
+  printdevhists(h_Dst_pT_data_pos, h_Dst_pT_data_neg, polarisation, "pT", true);
+  printdevhists(h_Dst_pT_data_pos_sw, h_Dst_pT_data_neg_sw, polarisation, "pT_sw", true);
 
   h_Dst_eta_phi_plane_pos->Write();
   out_hist_fi->Write();
