@@ -40,5 +40,5 @@ Kaons: 0.00496572 +/- 0.000309468 , in sigmas: 16.046
 soft Pions: -8.11184e-05 +/- 0.000325209 , in sigmas: 0.249435
 D0: -0.00485381 +/- 0.000332418 , in sigmas: 14.6015
 Dst: -0.00449393 +/- 0.000379372 , in sigmas: 11.8457
-computation time/s: 104.344
-computation time/min: 1.73906
+computation time/s: 109.523
+computation time/min: 1.82538

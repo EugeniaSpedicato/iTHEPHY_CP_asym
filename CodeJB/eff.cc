@@ -1,6 +1,7 @@
 #include "eff.h"
 #include <chrono>
 #include "TROOT.h"
+//#include "omp.h"
 
 void setcolors(vector<TH1F*> v_hist, vector<TH1F*> v_hist_pos, vector<TH1F*> v_hist_neg)
 {
@@ -112,11 +113,6 @@ void printdevhists(vector<TH1F*> v_get_hist_pos, vector<TH1F*> v_get_hist_neg, s
     v_hist_neg.at(i)->Scale(2.);
     v_hist_neg.at(i)->Add(v_hist_pos.at(i));
     v_hist_pos.at(i)->Divide(v_hist_neg.at(i));
-    /*if ( size > 4 && i >= 4 )
-    {
-      v_hist_pos.at(i)->SetAxisRange(-0.02, 0.02, "Y");
-    }
-    else v_hist_pos.at(i)->SetAxisRange(-0.15, 0.15, "Y");*/
     title_name = v_hist_pos.at(i)->GetName();
     new_title = title_name+"_dev";
     v_hist_pos.at(i)->SetName(new_title.c_str());
@@ -125,6 +121,28 @@ void printdevhists(vector<TH1F*> v_get_hist_pos, vector<TH1F*> v_get_hist_neg, s
     save_name = "output/"+directory+"/deviation/"+new_title+".pdf";
     c->SaveAs(save_name.c_str());
     v_hist_pos.at(i)->Write();
+    if(title_name == "h_pT_reco_Dst_dev")
+    {
+	  v_hist_pos.at(i)->SetName("h_pT_reco_Dst_dev_weighted");
+	  TFile *f;
+	  if(polarisation == "up") f = new TFile("output/histOut_D02Kmpip_15_Up.root");
+	  else if(polarisation == "down") f = new TFile("output/histOut_D02Kmpip_15_Dw.root");
+	  else f = new TFile("output/histOut_all_data_test.root");
+	  TH1F *h_weight = (TH1F*)f->Get("h_Dst_pT_data_sw");
+	  v_hist_pos.at(i)->Multiply(h_weight);
+	  v_hist_pos.at(i)->Draw();
+	  func.Draw("same");
+      save_name = "output/"+directory+"/deviation/h_pT_reco_Dst_dev_weighted.pdf";
+      c->SaveAs(save_name.c_str());
+      v_hist_pos.at(i)->Write();
+      double err =0;
+      //#pragma omp parallel for schedule(dynamic,2)
+      for (int i = 0; i<180;++i)
+      {
+		err += sqrt(v_hist_pos.at(i)->GetBinError(i));
+	  }
+      cout << "weighted asymmetry: " << v_hist_pos.at(i)->GetSumOfWeights() << "+/-" << err << endl;
+	}
   }
 }
 
@@ -239,7 +257,8 @@ void eff(string dir, string sample, string polarisation)
   string input_name = dir+"/"+sample+".root";
   TChain *ntp = new TChain("ntp");
   ntp->Add(input_name.c_str());
-
+	
+	
   TCanvas *c_test = new TCanvas();
 
   string saving;
@@ -898,7 +917,7 @@ void eff(string dir, string sample, string polarisation)
   double plus_err = 0.;
   double min_err = 0.;
   int size = h_phi_SPi->GetNbinsX();
-
+  //su#pragma omp parallel for schedule(dynamic,2)
   for(int i = 0; i < size/2; ++i)
   {
     phi_min = h_phi_reco_SPi->GetBinContent(i);
@@ -967,7 +986,7 @@ void eff(string dir, string sample, string polarisation)
   h_phi_test_SPi_neg->Draw("hist same");
   saving = "output/"+directory+"/test/h_phi_test_SPi_combined.pdf";
   c_test->Print(saving.c_str());
-
+  
 
 
   uint64_t end_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
