@@ -1,6 +1,7 @@
 Info in <TUnixSystem::ACLiC>: creating shared library /home/smjoblan/iTHEPHY/iTHEPHY/CodeJB/./data_cc.so
 Info in <TUnixSystem::ACLiC>: creating shared library /home/smjoblan/iTHEPHY/iTHEPHY/CodeJB/RooArg_negPdf_cxx.so
 Info in <TUnixSystem::ACLiC>: creating shared library /home/smjoblan/iTHEPHY/iTHEPHY/CodeJB/RooArg_posPdf_cxx.so
+Info in <TCanvas::Print>: pdf file output/data/plots/up_down/MC_data_comp.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/up_down/model.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/up_down/model_data.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/up_down/model_pos.pdf has been created

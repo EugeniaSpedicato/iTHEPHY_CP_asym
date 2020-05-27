@@ -132,32 +132,47 @@ void data(string dir, string sample, string polarisation)
 
   if(polarisation == "up")
   {
-	N1 = new RooRealVar("N1", "N1", 200., 100., 10000.);
+	N1 = new RooRealVar("N1", "N1", 1000., 400., 2500.);
 	a1 = new RooRealVar("a1", "a1", 2003.9, 2000. , 2004.47);
 	b1 = new RooRealVar("b1", "b1", 1.3, 0.3, 4.5);
 	c1 = new RooRealVar("c1", "c1", 0.05, 0., 0.5);
   }
-  else
+  else if(polarisation == "down")
   {
-	N1 = new RooRealVar("N1", "N1", 2122.54, 1800., 2500.);
+	N1 = new RooRealVar("N1", "N1", 2122.54, 1800., 4000.);
 	a1 = new RooRealVar("a1", "a1", 2003.9, 2000., 2004.47);
 	b1 = new RooRealVar("b1", "b1", 1.3, 0.3, 4.5);
 	c1 = new RooRealVar("c1", "c1", 0.053, 0.00001, 0.2);
   }
+  else
+  {
+	N1 = new RooRealVar("N1", "N1", 2500., 200., 7000.);
+	a1 = new RooRealVar("a1", "a1", 2003.9, 2000., 2004.47);
+	b1 = new RooRealVar("b1", "b1", 1.25, 0.4, 4.3);
+	c1 = new RooRealVar("c1", "c1", 0.1, 0.00001, 0.5);
+  }
   if(polarisation == "up")
   {
-	N2 = new RooRealVar("N2", "N2", 200., 100., 10000.);
+	N2 = new RooRealVar("N2", "N2", 1000., 400., 2500.);
 	a2 = new RooRealVar("a2", "a2", 2003.9, 2000. , 2004.47);
 	b2 = new RooRealVar("b2", "b2", 1.3, 0.3, 5.5);
 	c2 = new RooRealVar("c2", "c2", 0.05, 0., 0.5);
   }
-  else
+  else if(polarisation == "down")
   {
-	N2 = new RooRealVar("N2", "N2", 1648.80, 1500., 2000.);
+	N2 = new RooRealVar("N2", "N2", 1648.80, 1500., 4000.);
 	a2 = new RooRealVar("a2", "a2", 2003.9, 2000. , 2004.47);
 	b2 = new RooRealVar("b2", "b2", 1.3, 0.3, 5.5);
-	c2 = new RooRealVar("c2", "c2", 0.09, 0.00001, 0.2);
+	c2 = new RooRealVar("c2", "c2", 0.09, 0.00001, 0.5);
   }
+  else
+  {
+	N2 = new RooRealVar("N2", "N2", 1800., 200., 6000.);
+	a2 = new RooRealVar("a2", "a2", 2003.9, 2000. , 2004.47);
+	b2 = new RooRealVar("b2", "b2", 1.32, 0.3, 5.5);
+	c2 = new RooRealVar("c2", "c2", 0.1, 0.00001, 0.5);
+  }
+  
   RooRealVar *mean = new RooRealVar("mean", "mean", 2010., 2008., 2012.);
   RooRealVar *sigma = new RooRealVar("sigma", "sigma", 0.31, 0.1, 1.);
   RooRealVar *mean2 = new RooRealVar("mean2", "mean2", 2010., 2008., 2012.);
@@ -179,7 +194,7 @@ void data(string dir, string sample, string polarisation)
   else if(polarisation=="down") sig_yield_2 = new RooRealVar("sig_yield_2", "sig_yield_2", 1000000., 0., 1600000.);
   else sig_yield_2 = new RooRealVar("sig_yield_2", "sig_yield_2", 2000000., 0., 2900000.);
   
-  if(polarisation!="up_down") bkg_yield_2 = new RooRealVar("bkg_yield", "bkg_yield", 280000., 0., 700000.);
+  if(polarisation!="up_down") bkg_yield_2 = new RooRealVar("bkg_yield_2", "bkg_yield_2", 280000., 0., 700000.);
   else bkg_yield_2 = new RooRealVar("bkg_yield_2", "bkg_yield_2", 600000., 0., 1500000.);
   
   RooBreitWigner *sig_neg = new RooBreitWigner("sig_neg", "sig_neg", *DTF_Mass, *mean, *sigma);
@@ -190,10 +205,10 @@ void data(string dir, string sample, string polarisation)
 
   //RooAbsPdf *arg_neg = (up)? RooClassFactory::makePdfInstance("arg_neg", "pow(DTF_Mass-a1,b1)*exp(-c1*(DTF_Mass-a1))", RooArgSet(*DTF_Mass, *a1, *b1, *c1))
   //RooAbsPdf *arg_neg =  RooClassFactory::makePdfInstance("arg_neg", "N1*pow(DTF_Mass-a1,b1)*exp(-c1*(DTF_Mass-a1))", RooArgSet(*DTF_Mass, *N1, *a1, *b1, *c1));
-  RooAbsPdf *arg_neg =  RooClassFactory::makePdfInstance("arg_neg", "pow(DTF_Mass-a1,b1)", RooArgSet(*DTF_Mass, *a1, *b1));
+  RooAbsPdf *arg_neg =  RooClassFactory::makePdfInstance("arg_neg", "N1*pow(DTF_Mass-a1,b1)", RooArgSet(*DTF_Mass, *N1, *a1, *b1));
   //RooAbsPdf *arg_pos = (up)? RooClassFactory::makePdfInstance("arg_pos", "pow(DTF_Mass-a2,b2)*exp(-c2*(DTF_Mass-a2))", RooArgSet(*DTF_Mass, *a2, *b2, *c2))
   //RooAbsPdf *arg_pos =  RooClassFactory::makePdfInstance("arg_pos", "N2*pow(DTF_Mass-a2,b2)*exp(-c2*(DTF_Mass-a2))", RooArgSet(*DTF_Mass, *N2, *a2, *b2, *c2));
-  RooAbsPdf *arg_pos =  RooClassFactory::makePdfInstance("arg_pos", "pow(DTF_Mass-a2,b2)", RooArgSet(*DTF_Mass, *a2, *b2));
+  RooAbsPdf *arg_pos =  RooClassFactory::makePdfInstance("arg_pos", "N2*pow(DTF_Mass-a2,b2)", RooArgSet(*DTF_Mass, *N2, *a2, *b2));
   //RooAbsPdf *arg_neg = RooClassFactory::makePdfInstance("arg_neg", "pow(DTF_Mass-a1,b1)*exp(-c1*(DTF_Mass-a1))", RooArgSet(*DTF_Mass, *a1, *b1, *c1));
   //RooAbsPdf *arg_pos = RooClassFactory::makePdfInstance("arg_pos", "pow(DTF_Mass-a2,b2)*exp(-c2*(DTF_Mass-a2))", RooArgSet(*DTF_Mass, *a2, *b2, *c2));
   RooAddPdf *model_neg = new RooAddPdf("model_neg", "model_neg", RooArgList(*sig_neg, *arg_neg),RooArgList(*sig_yield, *bkg_yield));
@@ -331,15 +346,20 @@ void data(string dir, string sample, string polarisation)
   }
 
 
-  double nDataEvents = h_Dst_pT_data->GetSumOfWeights();
-  h_Dst_pT_data->Scale(1./nDataEvents);
-  h_Dst_pT_data_nw->Scale(1./h_Dst_pT_data_nw->GetEntries());
   h_Dst_pT_data_sw->Scale(1./h_Dst_pT_data_sw->GetSumOfWeights());
-  h_Dst_pT_data->SetLineColor(kRed);
-  h_Dst_pT_data_nw->SetLineColor(kBlack);
-  h_Dst_pT_data_sw->SetLineColor(kGreen);
-
+  h_Dst_pT_data_sw->SetMarkerColor(kBlack);
+  h_Dst_pT_data_sw->SetMarkerStyle(8);
+  h_Dst_pT_data_sw->SetMarkerSize(0.1);
+  
+  
   TCanvas *canvas2 = new TCanvas();
+  
+  h_Dst_pT_MC->Draw("hist");
+  h_Dst_pT_data_sw->Draw("same");
+  canvas2->SaveAs(("output/data/plots/"+polarisation+"/MC_data_comp.pdf").c_str());
+  h_Dst_pT_data_sw->Divide(h_Dst_pT_MC);
+  
+  
   RooPlot *frame = DTF_Mass->frame();
   RooPlot *frame2 = DTF_Mass->frame();
   model_neg->plotOn(frame, Range(2004.47, 2020.11));
@@ -350,9 +370,9 @@ void data(string dir, string sample, string polarisation)
   canvas2->SaveAs(("output/data/plots/"+polarisation+"/model.pdf").c_str());
 
 
-  dataset1->plotOn(frame);
+  dataset1->plotOn(frame,DataError(RooAbsData::SumW2));
   model_neg->plotOn(frame, Range(2004.47, 2020.11));
-  model_neg->plotOn(frame, Range(2004.47, 2020.11), RooFit::Components("arg_neg"), RooFit::FillColor(kRed), RooFit::LineStyle(kDashed),RooFit::DrawOption("f") );
+  //model_neg->plotOn(frame, Range(2004.47, 2020.11), RooFit::Components("arg_neg"), RooFit::FillColor(kRed), RooFit::LineStyle(kDashed),RooFit::DrawOption("f") );
   model_neg->paramOn(frame, Layout(0.45, 1., 0.9), Format("NEU", AutoPrecision(1)));
   frame->Draw();
   canvas2->SaveAs(("output/data/plots/"+polarisation+"/model_data.pdf").c_str());
@@ -364,9 +384,9 @@ void data(string dir, string sample, string polarisation)
   canvas2->SaveAs(("output/data/plots/"+polarisation+"/model_pos.pdf").c_str());
   
 
-  dataset2->plotOn(frame2);
+  dataset2->plotOn(frame2,DataError(RooAbsData::SumW2));
   model_pos->plotOn(frame2, Range(2004.47, 2020.11));
-  model_pos->plotOn(frame2, Range(2004.47, 2020.11), RooFit::Components("arg_pos"), RooFit::FillColor(kRed), RooFit::LineStyle(kDashed),RooFit::DrawOption("f") );
+  //model_pos->plotOn(frame2, Range(2004.47, 2020.11), RooFit::Components("arg_pos"), RooFit::FillColor(kRed), RooFit::LineStyle(kDashed),RooFit::DrawOption("f") );
   model_pos->paramOn(frame2, Layout(0.45, 1., 0.9), Format("NEU", AutoPrecision(1)));
   frame2->Draw();
   canvas2->SaveAs(("output/data/plots/"+polarisation+"/model_data_pos.pdf").c_str());
@@ -413,6 +433,7 @@ void data(string dir, string sample, string polarisation)
   printdevhists(h_Dst_pT_data_pos_sw, h_Dst_pT_data_neg_sw, polarisation, "pT_sw", true);
 
   h_Dst_eta_phi_plane_pos->Write();
+  h_Dst_pT_data_sw->Write();
   out_hist_fi->Write();
   out_hist_fi->Close();
 
