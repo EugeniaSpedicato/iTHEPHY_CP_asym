@@ -12,7 +12,7 @@ Processing data.cc++("$dir", "all_data_test", "up_down")...
 [#1] INFO:Eval -- RooAbsReal::attachToTree(Dst_ID) TTree Int_t branch Dst_ID will be converted to double precision
 [#1] INFO:Eval -- RooTreeDataStore::loadValues(dataset2) Ignored 2667353 out of range events
  **********
- **   13 **HESSE        3500
+ **   13 **HESSE        3000
  **********
  FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
@@ -25,303 +25,303 @@ Processing data.cc++("$dir", "all_data_test", "up_down")...
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
- MINUIT WARNING IN HESSE
- ============== Second derivative zero for parameter1
-  MNHESS FAILS AND WILL RETURN DIAGONAL MATRIX. 
- FCN=-3.17443e+07 FROM HESSE     STATUS=FAILED          7 CALLS           8 TOTAL
-                     EDM= unknown      STRATEGY= 1  ERROR MATRIX UNCERTAINTY 100.0 per cent
+ MINUIT WARNING IN HESSE   
+ ============== Negative diagonal element 1 in Error Matrix
+ MINUIT WARNING IN HESSE   
+ ============== 12010.1 added to diagonal of error matrix
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -7.1153e+01  1.0491e-01  2.6264e-01  1.1988e+00  1.9283e+00  7.3658e+01
+ MINUIT WARNING IN HESSE   
+ ============== MATRIX FORCED POS-DEF BY ADDING 71.226784 TO DIAGONAL.
+ FCN=-3.17443e+07 FROM HESSE     STATUS=NOT POSDEF     52 CALLS          53 TOTAL
+                     EDM=6.6912e+09    STRATEGY= 1      ERR MATRIX NOT POS-DEF
   EXT PARAMETER                APPROXIMATE     INTERNAL      INTERNAL  
   NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
-   1  N1           1.06945e+03   1.45555e+03   2.13571e-01  -3.29457e-01
-   2  a1           2.00390e+03   2.92385e-01   1.97382e-01   8.40485e-01
-   3  b1           1.25000e+00   3.95995e-01   2.48490e-01  -5.99346e-01
-   4  bkg_yield    6.00000e+05   1.50136e+05   2.05758e-01  -2.01358e-01
-   5  mean         2.01000e+03   4.00000e-01   2.01358e-01   0.00000e+00
-   6  sig_yield    1.00000e+06   2.90722e+05   2.12508e-01  -3.15556e-01
-   7  sigma        3.10000e-01   9.11071e-02   2.41688e-01  -5.62536e-01
+   1  a1           2.00390e+03   4.16288e+00   5.00000e-01   8.40485e-01
+   2  b1           1.25000e+00   6.83780e-03   2.36966e-01  -5.99346e-01
+   3  bkg_yield    6.00000e+05   8.81981e+02   1.46839e-01  -2.01358e-01
+   4  mean         2.01000e+03   6.77699e-05   2.01358e-02   0.00000e+00
+   5  sig_yield    1.00000e+06   4.79810e+02   7.33626e-02  -3.15556e-01
+   6  sigma        3.10000e-01   1.68235e-04   9.34887e-02  -5.62536e-01
                                ERR DEF= 0.5
- EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  7    ERR DEF=0.5
-  4.721e+05  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
-  0.000e+00  8.661e-02  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
-  0.000e+00  0.000e+00  1.601e-01  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
-  0.000e+00  0.000e+00  0.000e+00  2.286e+10  0.000e+00  0.000e+00  0.000e+00 
-  0.000e+00  0.000e+00  0.000e+00  0.000e+00  1.622e-01  0.000e+00  0.000e+00 
-  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  8.580e+10  0.000e+00 
-  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  8.464e-03 
-ERR MATRIX APPROXIMATE
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  1.515e+01 -2.658e-02 -3.410e+03  2.097e-04  1.830e+03  6.416e-04 
+ -2.658e-02  4.676e-05  5.983e+00 -3.678e-07 -3.211e+00 -1.126e-06 
+ -3.410e+03  5.983e+00  7.779e+05 -4.720e-02 -4.120e+05 -1.444e-01 
+  2.097e-04 -3.678e-07 -4.720e-02  4.593e-09  2.533e-02  8.863e-09 
+  1.830e+03 -3.211e+00 -4.120e+05  2.533e-02  2.302e+05  7.752e-02 
+  6.416e-04 -1.126e-06 -1.444e-01  8.863e-09  7.752e-02  2.830e-08 
+ERR MATRIX NOT POS-DEF
  PARAMETER  CORRELATION COEFFICIENTS  
-       NO.  GLOBAL      1      2      3      4      5      6      7
-        1  0.00000   1.000  0.000  0.000  0.000  0.000  0.000  0.000
-        2  0.00000   0.000  1.000  0.000  0.000  0.000  0.000  0.000
-        3  0.00000   0.000  0.000  1.000  0.000  0.000  0.000  0.000
-        4  0.00000   0.000  0.000  0.000  1.000  0.000  0.000  0.000
-        5  0.00000   0.000  0.000  0.000  0.000  1.000  0.000  0.000
-        6  0.00000   0.000  0.000  0.000  0.000  0.000  1.000  0.000
-        7  0.00000   0.000  0.000  0.000  0.000  0.000  0.000  1.000
- ERR MATRIX APPROXIMATE
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.99898   1.000 -0.999 -0.993  0.795  0.980  0.980
+        2  0.99862  -0.999  1.000  0.992 -0.794 -0.979 -0.978
+        3  0.99341  -0.993  0.992  1.000 -0.790 -0.974 -0.973
+        4  0.79483   0.795 -0.794 -0.790  1.000  0.779  0.777
+        5  0.98006   0.980 -0.979 -0.974  0.779  1.000  0.960
+        6  0.97989   0.980 -0.978 -0.973  0.777  0.960  1.000
+ ERR MATRIX NOT POS-DEF
  **********
- **   13 **MIGRAD        3500           1
+ **   13 **MIGRAD        3000           1
  **********
  FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
  START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
- FCN=-3.17443e+07 FROM MIGRAD    STATUS=INITIATE      355 CALLS         356 TOTAL
+ FCN=-3.1783e+07 FROM MIGRAD    STATUS=INITIATE       41 CALLS          42 TOTAL
                      EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
   EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
   NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
-   1  N1           1.06945e+03   1.45555e+03   0.00000e+00   0.00000e+00
-   2  a1           2.00390e+03   2.92385e-01   0.00000e+00   3.20051e+04
-   3  b1           1.25000e+00   3.95995e-01   0.00000e+00   2.03829e+05
-   4  bkg_yield    6.00000e+05   1.50136e+05   0.00000e+00  -1.36640e+05
-   5  mean         2.01000e+03   4.00000e-01   0.00000e+00  -1.05373e+07
-   6  sig_yield    1.00000e+06   2.90722e+05   0.00000e+00  -1.31747e+06
-   7  sigma        3.10000e-01   9.11071e-02   0.00000e+00  -8.71824e+05
+   1  a1           2.00003e+03   4.16288e+00  -2.25000e+00   1.51552e+03
+   2  b1           1.25000e+00   6.83780e-03   0.00000e+00   8.35707e+04
+   3  bkg_yield    6.00000e+05   8.81981e+02   0.00000e+00  -1.81822e+05
+   4  mean         2.01000e+03   6.77699e-05   0.00000e+00  -1.04575e+07
+   5  sig_yield    1.00000e+06   4.79810e+02   0.00000e+00  -1.26662e+06
+   6  sigma        3.10000e-01   1.68235e-04   0.00000e+00  -8.34281e+05
                                ERR DEF= 0.5
  MIGRAD FAILS TO FIND IMPROVEMENT
  MACHINE ACCURACY LIMITS FURTHER IMPROVEMENT.
  MIGRAD MINIMIZATION HAS CONVERGED.
- FCN=-3.30796e+07 FROM MIGRAD    STATUS=CONVERGED     738 CALLS         739 TOTAL
-                     EDM=0.00446743    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   0.0 per cent
-  EXT PARAMETER                                   STEP         FIRST   
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -1.7096e+00  5.0751e-01  9.9912e-01  1.0726e+00  1.1871e+00  3.9432e+00
+ MINUIT WARNING IN HESSE   
+ ============== MATRIX FORCED POS-DEF BY ADDING 1.713493 TO DIAGONAL.
+ FCN=-3.30794e+07 FROM HESSE     STATUS=NOT POSDEF     48 CALLS         242 TOTAL
+                     EDM=1683.95    STRATEGY= 1      ERR MATRIX NOT POS-DEF
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
   NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
-   1  N1           1.06945e+03   1.91077e+03   0.00000e+00   0.00000e+00
-   2  a1           2.00229e+03   9.61498e-02  -0.00000e+00   2.31625e+00
-   3  b1           1.21445e+00   1.62272e-02   0.00000e+00   3.30014e+00
-   4  bkg_yield    4.78702e+05   9.57847e+02   0.00000e+00  -1.54411e+01
-   5  mean         2.01027e+03   2.08406e-04   0.00000e+00  -2.72682e+02
-   6  sig_yield    2.18868e+06   1.41353e+03  -0.00000e+00   1.08254e+01
-   7  sigma        4.27357e-01   4.05107e-04  -0.00000e+00   4.74695e+01
+   1  a1           2.00005e+03   2.72190e+00   5.00000e-01  -4.88665e+01
+   2  b1           1.54493e+00   6.29209e-02   1.31065e-02  -3.87950e+01
+   3  bkg_yield    4.75481e+05   1.90077e+03   4.62335e-03   7.43110e+00
+   4  mean         2.01027e+03   1.35135e-04   4.27874e-04   5.85600e+02
+   5  sig_yield    2.19189e+06   1.82184e+03   4.86967e-03   1.02915e+01
+   6  sigma        4.28164e-01   5.56902e-04   3.83392e-03   7.06866e+01
                                ERR DEF= 0.5
- EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  7    ERR DEF=0.5
-  5.156e+06  9.579e-11 -1.310e-10  2.047e-05 -6.754e-12 -6.083e-05 -7.214e-12 
-  9.579e-11  9.251e-03 -1.474e-03  1.843e+01 -4.893e-07 -2.093e+01 -1.196e-06 
- -1.310e-10 -1.474e-03  2.633e-04 -5.170e+00  6.950e-08  5.198e+00  9.796e-07 
-  2.047e-05  1.843e+01 -5.170e+00  9.175e+05 -3.032e-03 -4.625e+05 -1.068e-01 
- -6.754e-12 -4.893e-07  6.950e-08 -3.032e-03  4.343e-08  1.594e-02 -3.331e-09 
- -6.083e-05 -2.093e+01  5.198e+00 -4.625e+05  1.594e-02  1.998e+06  1.957e-01 
- -7.214e-12 -1.196e-06  9.796e-07 -1.068e-01 -3.331e-09  1.957e-01  1.641e-07 
+ MINUIT WARNING IN MIGRAD  
+ ============== Negative diagonal element 1 in Error Matrix
+ MINUIT WARNING IN MIGRAD  
+ ============== Negative diagonal element 2 in Error Matrix
+ MINUIT WARNING IN MIGRAD  
+ ============== 1.01019 added to diagonal of error matrix
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ MACHINE ACCURACY LIMITS FURTHER IMPROVEMENT.
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ MIGRAD TERMINATED WITHOUT CONVERGENCE.
+ FCN=-3.30796e+07 FROM MIGRAD    STATUS=FAILED        474 CALLS         475 TOTAL
+                     EDM=0.00743922    STRATEGY= 1      ERR MATRIX APPROXIMATE
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a1           2.00229e+03   8.94579e-02   5.35277e-02   1.00848e+00
+   2  b1           1.21366e+00   1.50418e-02   1.19704e-02  -8.81493e-01
+   3  bkg_yield    4.78691e+05   9.61408e+02   4.63663e-03  -4.55492e+01
+   4  mean         2.01027e+03   2.13489e-04   4.27722e-04   2.01846e+02
+   5  sig_yield    2.18864e+06   1.62251e+03   4.86094e-03   4.33073e+00
+   6  sigma        4.27340e-01   4.47580e-04   3.83155e-03   1.40366e+01
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  8.007e-03  1.255e-03 -1.949e+01  2.758e-07  1.942e+01  4.981e-06 
+  1.255e-03  2.263e-04 -5.268e+00  2.373e-08  5.251e+00  1.441e-06 
+ -1.949e+01 -5.268e+00  9.243e+05 -1.202e-03 -4.441e+05 -1.323e-01 
+  2.758e-07  2.373e-08 -1.202e-03  4.558e-08  1.203e-03  4.422e-10 
+  1.942e+01  5.251e+00 -4.441e+05  1.203e-03  2.633e+06  1.320e-01 
+  4.981e-06  1.441e-06 -1.323e-01  4.422e-10  1.320e-01  2.003e-07 
+ERR MATRIX APPROXIMATE
  PARAMETER  CORRELATION COEFFICIENTS  
-       NO.  GLOBAL      1      2      3      4      5      6      7
-        1  0.00000   1.000  0.000 -0.000  0.000 -0.000 -0.000 -0.000
-        2  0.95563   0.000  1.000 -0.944  0.200 -0.024 -0.154 -0.031
-        3  0.95921  -0.000 -0.944  1.000 -0.333  0.021  0.227  0.149
-        4  0.52860   0.000  0.200 -0.333  1.000 -0.015 -0.342 -0.275
-        5  0.08364  -0.000 -0.024  0.021 -0.015  1.000  0.054 -0.039
-        6  0.44443  -0.000 -0.154  0.227 -0.342  0.054  1.000  0.342
-        7  0.45528  -0.000 -0.031  0.149 -0.275 -0.039  0.342  1.000
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.94226   1.000  0.932 -0.227  0.014  0.134  0.124
+        2  0.94833   0.932  1.000 -0.364  0.007  0.215  0.214
+        3  0.52842  -0.227 -0.364  1.000 -0.006 -0.285 -0.307
+        4  0.02567   0.014  0.007 -0.006  1.000  0.003  0.005
+        5  0.33775   0.134  0.215 -0.285  0.003  1.000  0.182
+        6  0.35919   0.124  0.214 -0.307  0.005  0.182  1.000
+ ERR MATRIX APPROXIMATE
  **********
- **   13 **IMPROVE        3500
+ **   13 **IMPROVE        3000
  **********
  FUNCTION MUST BE MINIMIZED BEFORE CALLING IMProve   
  FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
  START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 5.00e-05
- FCN=-3.30796e+07 FROM MIGRAD    STATUS=INITIATE      347 CALLS         348 TOTAL
+ FCN=-3.30796e+07 FROM MIGRAD    STATUS=INITIATE       20 CALLS          21 TOTAL
                      EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
   EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
   NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
-   1  N1           1.06945e+03   1.91077e+03   0.00000e+00   0.00000e+00
-   2  a1           2.00229e+03   9.61498e-02   0.00000e+00   2.31627e+00
-   3  b1           1.21445e+00   1.62272e-02   0.00000e+00   3.30014e+00
-   4  bkg_yield    4.78702e+05   9.57847e+02   0.00000e+00  -1.54411e+01
-   5  mean         2.01027e+03   2.08406e-04   0.00000e+00  -2.72682e+02
-   6  sig_yield    2.18868e+06   1.41353e+03   0.00000e+00   1.08254e+01
-   7  sigma        4.27357e-01   4.05107e-04   0.00000e+00   4.74695e+01
+   1  a1           2.00229e+03   8.94579e-02   4.00498e-02   9.73959e-01
+   2  b1           1.21366e+00   1.50418e-02   9.49236e-03  -9.73963e-01
+   3  bkg_yield    4.78691e+05   9.61408e+02   1.37500e-03  -4.89741e+01
+   4  mean         2.01027e+03   2.13489e-04   1.07733e-04   2.00805e+02
+   5  sig_yield    2.18864e+06   1.62251e+03   1.30034e-03  -3.20458e+00
+   6  sigma        4.27340e-01   4.47580e-04   1.03377e-03   8.28341e+00
                                ERR DEF= 0.5
  MIGRAD FAILS TO FIND IMPROVEMENT
  MACHINE ACCURACY LIMITS FURTHER IMPROVEMENT.
  MIGRAD MINIMIZATION HAS CONVERGED.
  MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
- MINUIT WARNING IN HESSE
- ============== Second derivative enters zero, param 1
- MINUIT WARNING IN HESSE
- ============== Second derivative zero for parameter1
-  MNHESS FAILS AND WILL RETURN DIAGONAL MATRIX. 
- FCN=-3.30796e+07 FROM HESSE     STATUS=FAILED          3 CALLS         392 TOTAL
-                     EDM=0.000523422    STRATEGY= 1  ERROR MATRIX UNCERTAINTY 100.0 per cent
-  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=-3.30796e+07 FROM HESSE     STATUS=OK             52 CALLS         131 TOTAL
+                     EDM=0.00319486    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
   NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
-   1  N1           1.06945e+03   3.65901e+03  -0.00000e+00   0.00000e+00
-   2  a1           2.00229e+03   2.99984e-02  -0.00000e+00   9.44893e-01
-   3  b1           1.21444e+00   4.77519e-03   0.00000e+00  -7.16589e-01
-   4  bkg_yield    4.78731e+05   8.16263e+02   0.00000e+00  -6.24349e+00
-   5  mean         2.01027e+03   2.13417e-04  -0.00000e+00   3.86500e+01
-   6  sig_yield    2.18864e+06   1.52718e+03  -0.00000e+00   4.13197e+00
-   7  sigma        4.27333e-01   4.17703e-04  -0.00000e+00   3.05231e-01
+   1  a1           2.00229e+03   1.21885e-01   5.32678e-02  -8.58831e-01
+   2  b1           1.21367e+00   2.03601e-02   1.19615e-02   1.72502e+00
+   3  bkg_yield    4.78742e+05   9.80547e+02   4.63643e-03   2.30326e+00
+   4  mean         2.01027e+03   2.13510e-04   4.27729e-04  -8.55029e+00
+   5  sig_yield    2.18864e+06   1.63383e+03   4.86101e-03   1.62528e+01
+   6  sigma        4.27335e-01   4.50037e-04   3.83170e-03   1.67240e+01
                                ERR DEF= 0.5
+ MINUIT WARNING IN MIGRAD  
+ ============== Negative diagonal element 1 in Error Matrix
+ MINUIT WARNING IN MIGRAD  
+ ============== 1.00015 added to diagonal of error matrix
  MIGRAD FAILS TO FIND IMPROVEMENT
  MACHINE ACCURACY LIMITS FURTHER IMPROVEMENT.
  MIGRAD MINIMIZATION HAS CONVERGED.
  MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
- MINUIT WARNING IN HESSE
- ============== Second derivative zero for parameter1
-  MNHESS FAILS AND WILL RETURN DIAGONAL MATRIX. 
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
  MIGRAD TERMINATED WITHOUT CONVERGENCE.
- FCN=-3.30796e+07 FROM MIGRAD    STATUS=FAILED        402 CALLS         403 TOTAL
-                     EDM=0.000523422    STRATEGY= 1  ERROR MATRIX UNCERTAINTY 100.0 per cent
+ FCN=-3.30796e+07 FROM MIGRAD    STATUS=FAILED        222 CALLS         223 TOTAL
+                     EDM=5.81134e-05    STRATEGY= 1      ERR MATRIX APPROXIMATE
   EXT PARAMETER                APPROXIMATE        STEP         FIRST   
   NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
-   1  N1           1.06945e+03   3.65901e+03  -0.00000e+00   0.00000e+00
-   2  a1           2.00229e+03   2.99984e-02  -0.00000e+00   9.44893e-01
-   3  b1           1.21444e+00   4.77519e-03   0.00000e+00  -7.16589e-01
-   4  bkg_yield    4.78731e+05   8.16263e+02   0.00000e+00  -6.24349e+00
-   5  mean         2.01027e+03   2.13417e-04  -0.00000e+00   3.86500e+01
-   6  sig_yield    2.18864e+06   1.52718e+03  -0.00000e+00   4.13197e+00
-   7  sigma        4.27333e-01   4.17703e-04  -0.00000e+00   3.05231e-01
+   1  a1           2.00230e+03   1.21353e-01   5.31977e-02  -1.22918e-01
+   2  b1           1.21273e+00   2.02821e-02   1.19582e-02  -3.98370e-01
+   3  bkg_yield    4.78762e+05   9.80403e+02   4.63650e-03   3.01020e-01
+   4  mean         2.01027e+03   2.13508e-04   4.27726e-04  -2.62309e+00
+   5  sig_yield    2.18860e+06   1.63370e+03   4.86084e-03   4.06888e+00
+   6  sigma        4.27325e-01   4.50005e-04   3.83164e-03   4.20781e+00
                                ERR DEF= 0.5
- EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  7    ERR DEF=0.5
-  7.302e+06  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
-  0.000e+00  9.000e-04  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
-  0.000e+00  0.000e+00  2.280e-05  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
-  0.000e+00  0.000e+00  0.000e+00  6.663e+05  0.000e+00  0.000e+00  0.000e+00 
-  0.000e+00  0.000e+00  0.000e+00  0.000e+00  4.555e-08  0.000e+00  0.000e+00 
-  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  2.332e+06  0.000e+00 
-  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  1.745e-07 
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  1.474e-02 -2.373e-03  3.522e+01 -5.244e-07 -3.510e+01 -8.830e-06 
+ -2.373e-03  4.114e-04 -7.881e+00  6.490e-08  7.855e+00  2.081e-06 
+  3.522e+01 -7.881e+00  9.612e+05 -1.782e-03 -4.808e+05 -1.413e-01 
+ -5.244e-07  6.490e-08 -1.782e-03  4.559e-08  1.781e-03  5.827e-10 
+ -3.510e+01  7.855e+00 -4.808e+05  1.781e-03  2.669e+06  1.410e-01 
+ -8.830e-06  2.081e-06 -1.413e-01  5.827e-10  1.410e-01  2.025e-07 
 ERR MATRIX APPROXIMATE
  PARAMETER  CORRELATION COEFFICIENTS  
-       NO.  GLOBAL      1      2      3      4      5      6      7
-        1  0.00000   1.000  0.000  0.000  0.000  0.000  0.000  0.000
-        2  0.00000   0.000  1.000  0.000  0.000  0.000  0.000  0.000
-        3  0.00000   0.000  0.000  1.000  0.000  0.000  0.000  0.000
-        4  0.00000   0.000  0.000  0.000  1.000  0.000  0.000  0.000
-        5  0.00000   0.000  0.000  0.000  0.000  1.000  0.000  0.000
-        6  0.00000   0.000  0.000  0.000  0.000  0.000  1.000  0.000
-        7  0.00000   0.000  0.000  0.000  0.000  0.000  0.000  1.000
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.96913   1.000 -0.963  0.296 -0.020 -0.177 -0.162
+        2  0.97196  -0.963  1.000 -0.396  0.015  0.237  0.228
+        3  0.55385   0.296 -0.396  1.000 -0.009 -0.300 -0.320
+        4  0.02932  -0.020  0.015 -0.009  1.000  0.005  0.006
+        5  0.35522  -0.177  0.237 -0.300  0.005  1.000  0.192
+        6  0.37206  -0.162  0.228 -0.320  0.006  0.192  1.000
  ERR MATRIX APPROXIMATE
- MINUIT WARNING IN HESSE
- ============== Second derivative zero for parameter1
-  MNHESS FAILS AND WILL RETURN DIAGONAL MATRIX. 
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
 START ATTEMPT NO. 1 TO FIND NEW MINIMUM
- COVARIANCE MATRIX WAS NOT POSITIVE-DEFINITE
  IMPROVE HAS RETURNED TO REGION OF ORIGINAL MINIMUM
  **********
- **   13 **HESSE        3500
+ **   13 **HESSE        3000
  **********
  FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
- MINUIT WARNING IN HESSE
- ============== Second derivative zero for parameter1
-  MNHESS FAILS AND WILL RETURN DIAGONAL MATRIX. 
- FCN=-3.30796e+07 FROM HESSE     STATUS=FAILED          5 CALLS           6 TOTAL
-                     EDM= unknown      STRATEGY= 1  ERROR MATRIX UNCERTAINTY 100.0 per cent
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -3.3364e-02  5.1411e-01  9.9902e-01  1.0727e+00  1.1857e+00  2.2618e+00
+ MINUIT WARNING IN HESSE   
+ ============== MATRIX FORCED POS-DEF BY ADDING 0.035626 TO DIAGONAL.
+ FCN=-3.30796e+07 FROM HESSE     STATUS=NOT POSDEF     60 CALLS          61 TOTAL
+                     EDM=5.43842e-05    STRATEGY= 1      ERR MATRIX NOT POS-DEF
   EXT PARAMETER                APPROXIMATE     INTERNAL      INTERNAL  
   NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
-   1  N1           2.82945e+02   1.82524e+03   9.33668e-01  -8.39457e-01
-   2  a1           2.00229e+03   2.99984e-02   1.34261e-02   2.30982e-02
-   3  b1           1.21444e+00   4.77520e-03   3.01228e-03  -6.21600e-01
-   4  bkg_yield    4.78731e+05   8.16263e+02   1.16738e-03  -3.70082e-01
-   5  mean         2.01027e+03   2.13417e-04   1.07697e-04   1.35554e-01
-   6  sig_yield    2.18864e+06   1.52718e+03   1.22394e-03   5.34496e-01
-   7  sigma        4.27333e-01   4.17703e-04   9.64765e-04  -2.76088e-01
+   1  a1           2.00230e+03   4.43172e-01   4.50393e-01   2.78885e-02
+   2  b1           1.21273e+00   7.22642e-02   1.06292e-01  -6.22680e-01
+   3  bkg_yield    4.78762e+05   1.22592e+03   1.40310e-02  -3.70038e-01
+   4  mean         2.01027e+03   2.10867e-04   1.07734e-05   1.35553e-01
+   5  sig_yield    2.18860e+06   1.76654e+03   1.32693e-02   5.34462e-01
+   6  sigma        4.27325e-01   4.70362e-04   1.05431e-02  -2.76107e-01
                                ERR DEF= 0.5
- EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  7    ERR DEF=0.5
-  4.495e+06  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
-  0.000e+00  9.000e-04  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
-  0.000e+00  0.000e+00  2.280e-05  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
-  0.000e+00  0.000e+00  0.000e+00  6.663e+05  0.000e+00  0.000e+00  0.000e+00 
-  0.000e+00  0.000e+00  0.000e+00  0.000e+00  4.555e-08  0.000e+00  0.000e+00 
-  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  2.332e+06  0.000e+00 
-  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  1.745e-07 
-ERR MATRIX APPROXIMATE
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  1.990e-01 -3.216e-02  3.614e+02 -9.647e-06 -3.548e+02 -7.908e-05 
+ -3.216e-02  5.226e-03 -6.057e+01  1.540e-06  5.948e+01  1.342e-05 
+  3.614e+02 -6.057e+01  1.503e+06 -1.791e-02 -1.018e+06 -2.569e-01 
+ -9.647e-06  1.540e-06 -1.791e-02  4.447e-08  1.760e-02  3.928e-09 
+ -3.548e+02  5.948e+01 -1.018e+06  1.760e-02  3.121e+06  2.529e-01 
+ -7.908e-05  1.342e-05 -2.569e-01  3.928e-09  2.529e-01  2.212e-07 
+ERR MATRIX NOT POS-DEF
  PARAMETER  CORRELATION COEFFICIENTS  
-       NO.  GLOBAL      1      2      3      4      5      6      7
-        1  0.00000   1.000  0.000  0.000  0.000  0.000  0.000  0.000
-        2  0.00000   0.000  1.000  0.000  0.000  0.000  0.000  0.000
-        3  0.00000   0.000  0.000  1.000  0.000  0.000  0.000  0.000
-        4  0.00000   0.000  0.000  0.000  1.000  0.000  0.000  0.000
-        5  0.00000   0.000  0.000  0.000  0.000  1.000  0.000  0.000
-        6  0.00000   0.000  0.000  0.000  0.000  0.000  1.000  0.000
-        7  0.00000   0.000  0.000  0.000  0.000  0.000  0.000  1.000
- ERR MATRIX APPROXIMATE
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.99774   1.000 -0.997  0.661 -0.103 -0.450 -0.377
+        2  0.99788  -0.997  1.000 -0.684  0.101  0.466  0.395
+        3  0.75623   0.661 -0.684  1.000 -0.069 -0.470 -0.446
+        4  0.10447  -0.103  0.101 -0.069  1.000  0.047  0.040
+        5  0.52763  -0.450  0.466 -0.470  0.047  1.000  0.304
+        6  0.48840  -0.377  0.395 -0.446  0.040  0.304  1.000
+ ERR MATRIX NOT POS-DEF
 [#1] INFO:Minization -- RooMinuit::optimizeConst: activating const optimization
  **********
- **   13 **MINOS        3500
+ **   13 **MINOS        3000
  **********
  FUNCTION MUST BE MINIMIZED BEFORE CALLING MINOs     
  FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
  START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 5.00e-05
- FCN=-3.30796e+07 FROM MIGRAD    STATUS=INITIATE      351 CALLS         352 TOTAL
+ FCN=-3.30796e+07 FROM MIGRAD    STATUS=INITIATE       24 CALLS          25 TOTAL
                      EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
   EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
   NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
-   1  N1           2.82945e+02   1.82524e+03   0.00000e+00   0.00000e+00
-   2  a1           2.00229e+03   2.99984e-02   0.00000e+00   9.44870e-01
-   3  b1           1.21444e+00   4.77520e-03   0.00000e+00  -7.16585e-01
-   4  bkg_yield    4.78731e+05   8.16263e+02   0.00000e+00  -6.24357e+00
-   5  mean         2.01027e+03   2.13417e-04   0.00000e+00   3.86500e+01
-   6  sig_yield    2.18864e+06   1.52718e+03   0.00000e+00   4.13218e+00
-   7  sigma        4.27333e-01   4.17703e-04   0.00000e+00   3.05373e-01
+   1  a1           2.00230e+03   4.43172e-01   1.99692e-01   3.39778e+00
+   2  b1           1.21273e+00   7.22642e-02   4.56612e-02  -5.41435e-01
+   3  bkg_yield    4.78762e+05   1.22592e+03   1.75324e-03  -3.12419e+00
+   4  mean         2.01027e+03   2.10867e-04   1.06410e-04  -3.70553e+00
+   5  sig_yield    2.18860e+06   1.76654e+03   1.41574e-03  -3.46618e+00
+   6  sigma        4.27325e-01   4.70362e-04   1.08640e-03  -1.54518e+00
                                ERR DEF= 0.5
  MIGRAD FAILS TO FIND IMPROVEMENT
- MINUIT WARNING IN HESSE
- ============== Second derivative zero for parameter1
-  MNHESS FAILS AND WILL RETURN DIAGONAL MATRIX. 
- FCN=-3.30796e+07 FROM HESSE     STATUS=FAILED          3 CALLS         363 TOTAL
-                     EDM=0.000523414    STRATEGY= 1  ERROR MATRIX UNCERTAINTY 100.0 per cent
-  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=-3.30796e+07 FROM HESSE     STATUS=OK             52 CALLS          88 TOTAL
+                     EDM=2.90571e-05    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
   NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
-   1  N1           2.82945e+02   1.52484e+03  -0.00000e+00   0.00000e+00
-   2  a1           2.00229e+03   2.99984e-02  -0.00000e+00   9.44870e-01
-   3  b1           1.21444e+00   4.77519e-03   0.00000e+00  -7.16585e-01
-   4  bkg_yield    4.78731e+05   8.16263e+02   0.00000e+00  -6.24357e+00
-   5  mean         2.01027e+03   2.13417e-04  -0.00000e+00   3.86500e+01
-   6  sig_yield    2.18864e+06   1.52718e+03  -0.00000e+00   4.13218e+00
-   7  sigma        4.27333e-01   4.17703e-04  -0.00000e+00   3.05373e-01
+   1  a1           2.00230e+03   1.21453e-01   5.34004e-02  -1.22875e-01
+   2  b1           1.21273e+00   2.02987e-02   1.19678e-02  -3.98370e-01
+   3  bkg_yield    4.78762e+05   9.80475e+02   4.63650e-03   3.01020e-01
+   4  mean         2.01027e+03   2.13508e-04   4.27725e-04  -2.62309e+00
+   5  sig_yield    2.18860e+06   1.63375e+03   4.86083e-03   4.06888e+00
+   6  sigma        4.27325e-01   4.50014e-04   3.83163e-03   4.20781e+00
                                ERR DEF= 0.5
+ MINUIT WARNING IN MIGRAD  
+ ============== Negative diagonal element 1 in Error Matrix
+ MINUIT WARNING IN MIGRAD  
+ ============== 1 added to diagonal of error matrix
  MIGRAD FAILS TO FIND IMPROVEMENT
  MACHINE ACCURACY LIMITS FURTHER IMPROVEMENT.
  MIGRAD MINIMIZATION HAS CONVERGED.
  MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
- MINUIT WARNING IN HESSE
- ============== Second derivative zero for parameter1
-  MNHESS FAILS AND WILL RETURN DIAGONAL MATRIX. 
- MIGRAD TERMINATED WITHOUT CONVERGENCE.
- FCN=-3.30796e+07 FROM MIGRAD    STATUS=FAILED        373 CALLS         374 TOTAL
-                     EDM=0.000523414    STRATEGY= 1  ERROR MATRIX UNCERTAINTY 100.0 per cent
-  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=-3.30796e+07 FROM MIGRAD    STATUS=CONVERGED     179 CALLS         180 TOTAL
+                     EDM=8.44808e-08    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
   NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
-   1  N1           2.82945e+02   1.52484e+03  -0.00000e+00   0.00000e+00
-   2  a1           2.00229e+03   2.99984e-02  -0.00000e+00   9.44870e-01
-   3  b1           1.21444e+00   4.77519e-03   0.00000e+00  -7.16585e-01
-   4  bkg_yield    4.78731e+05   8.16263e+02   0.00000e+00  -6.24357e+00
-   5  mean         2.01027e+03   2.13417e-04  -0.00000e+00   3.86500e+01
-   6  sig_yield    2.18864e+06   1.52718e+03  -0.00000e+00   4.13218e+00
-   7  sigma        4.27333e-01   4.17703e-04  -0.00000e+00   3.05373e-01
+   1  a1           2.00230e+03   1.21328e-01   5.31994e-02  -6.91410e-03
+   2  b1           1.21268e+00   2.02785e-02   1.19582e-02  -5.14522e-02
+   3  bkg_yield    4.78764e+05   9.80399e+02   4.63651e-03  -9.98311e-03
+   4  mean         2.01027e+03   2.13508e-04   4.27725e-04  -8.87286e-02
+   5  sig_yield    2.18859e+06   1.63369e+03   4.86078e-03   3.56662e-02
+   6  sigma        4.27322e-01   4.50001e-04   3.83162e-03   3.32145e-02
                                ERR DEF= 0.5
- EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  7    ERR DEF=0.5
-  5.571e+05  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
-  0.000e+00  9.000e-04  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
-  0.000e+00  0.000e+00  2.280e-05  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
-  0.000e+00  0.000e+00  0.000e+00  6.663e+05  0.000e+00  0.000e+00  0.000e+00 
-  0.000e+00  0.000e+00  0.000e+00  0.000e+00  4.555e-08  0.000e+00  0.000e+00 
-  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  2.332e+06  0.000e+00 
-  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  1.745e-07 
-ERR MATRIX APPROXIMATE
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  1.473e-02 -2.372e-03  3.521e+01 -5.242e-07 -3.509e+01 -8.828e-06 
+ -2.372e-03  4.112e-04 -7.880e+00  6.487e-08  7.854e+00  2.080e-06 
+  3.521e+01 -7.880e+00  9.612e+05 -1.782e-03 -4.807e+05 -1.413e-01 
+ -5.242e-07  6.487e-08 -1.782e-03  4.559e-08  1.780e-03  5.826e-10 
+ -3.509e+01  7.854e+00 -4.807e+05  1.780e-03  2.669e+06  1.410e-01 
+ -8.828e-06  2.080e-06 -1.413e-01  5.826e-10  1.410e-01  2.025e-07 
  PARAMETER  CORRELATION COEFFICIENTS  
-       NO.  GLOBAL      1      2      3      4      5      6      7
-        1  0.00000   1.000  0.000  0.000  0.000  0.000  0.000  0.000
-        2  0.00000   0.000  1.000  0.000  0.000  0.000  0.000  0.000
-        3  0.00000   0.000  0.000  1.000  0.000  0.000  0.000  0.000
-        4  0.00000   0.000  0.000  0.000  1.000  0.000  0.000  0.000
-        5  0.00000   0.000  0.000  0.000  0.000  1.000  0.000  0.000
-        6  0.00000   0.000  0.000  0.000  0.000  0.000  1.000  0.000
-        7  0.00000   0.000  0.000  0.000  0.000  0.000  0.000  1.000
- ERR MATRIX APPROXIMATE
- MINUIT WARNING IN HESSE
- ============== Second derivative zero for parameter1
-  MNHESS FAILS AND WILL RETURN DIAGONAL MATRIX. 
-    THE POSITIVE MINOS ERROR OF PARAMETER   1, N1 EXCEEDS ITS LIMIT.
-    THE NEGATIVE MINOS ERROR OF PARAMETER   1, N1 EXCEEDS ITS LIMIT.
- MINUIT WARNING IN MIGRAD  
- ============== VARIABLE1 IS AT ITS LOWER ALLOWED LIMIT.
- FCN=-3.30796e+07 FROM MINOS     STATUS=PROBLEMS     2474 CALLS        2851 TOTAL
-                     EDM=0.000523414    STRATEGY= 1  ERROR MATRIX UNCERTAINTY 100.0 per cent
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.96912   1.000 -0.963  0.296 -0.020 -0.177 -0.162
+        2  0.97195  -0.963  1.000 -0.396  0.015  0.237  0.228
+        3  0.55385   0.296 -0.396  1.000 -0.009 -0.300 -0.320
+        4  0.02932  -0.020  0.015 -0.009  1.000  0.005  0.006
+        5  0.35521  -0.177  0.237 -0.300  0.005  1.000  0.192
+        6  0.37206  -0.162  0.228 -0.320  0.006  0.192  1.000
+ FCN=-3.30796e+07 FROM MINOS     STATUS=SUCCESSFUL    836 CALLS        1016 TOTAL
+                     EDM=8.44808e-08    STRATEGY= 1      ERROR MATRIX ACCURATE 
   EXT PARAMETER                  PARABOLIC         MINOS ERRORS        
   NO.   NAME      VALUE            ERROR      NEGATIVE      POSITIVE   
-   1  N1           2.82945e+02   1.47663e+03   at limit      at limit   
-   2  a1           2.00229e+03   2.99984e-02  -8.91407e-02   1.07994e-01
-   3  b1           1.21444e+00   4.77519e-03  -1.80670e-02   1.49060e-02
-   4  bkg_yield    4.78731e+05   8.16263e+02  -9.26545e+02   9.89840e+02
-   5  mean         2.01027e+03   2.13417e-04  -2.14480e-04   2.12510e-04
-   6  sig_yield    2.18864e+06   1.52718e+03  -1.66812e+03   1.58074e+03
-   7  sigma        4.27333e-01   4.17703e-04  -4.55314e-04   4.39813e-04
+   1  a1           2.00230e+03   1.21328e-01  -9.95041e-02   9.63588e-02
+   2  b1           1.21268e+00   2.02785e-02  -1.61972e-02   1.65519e-02
+   3  bkg_yield    4.78764e+05   9.80399e+02  -9.50317e+02   9.61693e+02
+   4  mean         2.01027e+03   2.13508e-04  -2.13489e-04   2.13483e-04
+   5  sig_yield    2.18859e+06   1.63369e+03  -1.61686e+03   1.61741e+03
+   6  sigma        4.27322e-01   4.50001e-04  -4.47216e-04   4.46258e-04
                                ERR DEF= 0.5
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
@@ -331,16 +331,16 @@ ERR MATRIX APPROXIMATE
 [#1] INFO:Minization -- RooMinimizer::optimizeConst: deactivating const optimization
 [#1] INFO:InputArguments -- Printing Yields
 RooArgList:: = (sig_yield,bkg_yield)
-[#1] INFO:InputArguments -- yield in pdf: sig_yield 2.18863e+06
-[#1] INFO:InputArguments -- yield in pdf: bkg_yield 478740
+[#1] INFO:InputArguments -- yield in pdf: sig_yield 2.18859e+06
+[#1] INFO:InputArguments -- yield in pdf: bkg_yield 478764
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:Eval -- Checking Likelihood normalization:  
 [#1] INFO:Eval -- Yield of specie  Sum of Row in Matrix   Norm
-[#1] INFO:Eval -- 2.18863e+06 2.18864e+06 0.999994
-[#1] INFO:Eval -- 478740 478744 0.999993
+[#1] INFO:Eval -- 2.18859e+06 2.18859e+06 1
+[#1] INFO:Eval -- 478764 478764 1
 [#1] INFO:Eval -- Calculating sWeight
  **********
- **   13 **HESSE        3500
+ **   13 **HESSE        3000
  **********
  FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
@@ -353,311 +353,285 @@ RooArgList:: = (sig_yield,bkg_yield)
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
- MINUIT WARNING IN HESSE
- ============== Second derivative zero for parameter1
-  MNHESS FAILS AND WILL RETURN DIAGONAL MATRIX. 
- FCN=-3.14054e+07 FROM HESSE     STATUS=FAILED          7 CALLS           8 TOTAL
-                     EDM= unknown      STRATEGY= 1  ERROR MATRIX UNCERTAINTY 100.0 per cent
+ MINUIT WARNING IN HESSE   
+ ============== Negative diagonal element 1 in Error Matrix
+ MINUIT WARNING IN HESSE   
+ ============== 6625.6 added to diagonal of error matrix
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -4.2713e+01  1.2819e-01  3.1849e-01  1.1202e+00  1.8568e+00  4.5289e+01
+ MINUIT WARNING IN HESSE   
+ ============== MATRIX FORCED POS-DEF BY ADDING 42.758161 TO DIAGONAL.
+ FCN=-3.14054e+07 FROM HESSE     STATUS=NOT POSDEF     58 CALLS          59 TOTAL
+                     EDM=2.95681e+09    STRATEGY= 1      ERR MATRIX NOT POS-DEF
   EXT PARAMETER                APPROXIMATE     INTERNAL      INTERNAL  
   NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
-   1  N2           6.99932e+02   1.13348e+03   2.27209e-01  -4.64836e-01
-   2  a2           2.00390e+03   2.92385e-01   1.97382e-01   8.40485e-01
-   3  b2           1.32000e+00   5.20441e-01   2.54796e-01  -6.53152e-01
-   4  bkg_yield_2   6.00000e+05   1.50136e+05   2.05758e-01  -2.01358e-01
-   5  mean2        2.01000e+03   4.00000e-01   2.01358e-01   0.00000e+00
-   6  sig_yield_2   2.00000e+06   2.91212e+05   2.18798e-01   3.89051e-01
-   7  sigma2       3.10000e-01   9.11071e-02   2.41688e-01  -5.62536e-01
+   1  a2           2.00390e+03   3.74180e+00   5.00000e-01   8.40485e-01
+   2  b2           1.32000e+00   1.00200e-02   2.58847e-01  -6.53152e-01
+   3  bkg_yield_2   6.00000e+05   1.82055e+03   1.58024e-01  -2.01358e-01
+   4  mean2        2.01000e+03   6.58354e-05   2.01358e-02   0.00000e+00
+   5  sig_yield_2   2.00000e+06   1.25556e+03   1.33398e-01   3.89051e-01
+   6  sigma2       3.10000e-01   2.82976e-04   8.99488e-02  -5.62536e-01
                                ERR DEF= 0.5
- EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  7    ERR DEF=0.5
-  3.469e+05  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
-  0.000e+00  8.661e-02  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
-  0.000e+00  0.000e+00  2.768e-01  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
-  0.000e+00  0.000e+00  0.000e+00  2.286e+10  0.000e+00  0.000e+00  0.000e+00 
-  0.000e+00  0.000e+00  0.000e+00  0.000e+00  1.622e-01  0.000e+00  0.000e+00 
-  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  8.617e+10  0.000e+00 
-  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  8.464e-03 
-ERR MATRIX APPROXIMATE
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  2.471e+01 -4.971e-02 -9.024e+03  2.058e-04  6.148e+03  1.391e-03 
+ -4.971e-02  1.004e-04  1.815e+01 -4.138e-07 -1.236e+01 -2.798e-06 
+ -9.024e+03  1.815e+01  3.314e+06 -7.515e-02 -2.245e+06 -5.080e-01 
+  2.058e-04 -4.138e-07 -7.515e-02  4.334e-09  5.120e-02  1.154e-08 
+  6.148e+03 -1.236e+01 -2.245e+06  5.120e-02  1.576e+06  3.461e-01 
+  1.391e-03 -2.798e-06 -5.080e-01  1.154e-08  3.461e-01  8.008e-08 
+ERR MATRIX NOT POS-DEF
  PARAMETER  CORRELATION COEFFICIENTS  
-       NO.  GLOBAL      1      2      3      4      5      6      7
-        1  0.00000   1.000  0.000  0.000  0.000  0.000  0.000  0.000
-        2  0.00000   0.000  1.000  0.000  0.000  0.000  0.000  0.000
-        3  0.00000   0.000  0.000  1.000  0.000  0.000  0.000  0.000
-        4  0.00000   0.000  0.000  0.000  1.000  0.000  0.000  0.000
-        5  0.00000   0.000  0.000  0.000  0.000  1.000  0.000  0.000
-        6  0.00000   0.000  0.000  0.000  0.000  0.000  1.000  0.000
-        7  0.00000   0.000  0.000  0.000  0.000  0.000  0.000  1.000
- ERR MATRIX APPROXIMATE
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.99897   1.000 -0.998 -0.997  0.629  0.985  0.989
+        2  0.99788  -0.998  1.000  0.995 -0.627 -0.983 -0.987
+        3  0.99700  -0.997  0.995  1.000 -0.627 -0.982 -0.986
+        4  0.62892   0.629 -0.627 -0.627  1.000  0.619  0.620
+        5  0.98490   0.985 -0.983 -0.982  0.619  1.000  0.974
+        6  0.98904   0.989 -0.987 -0.986  0.620  0.974  1.000
+ ERR MATRIX NOT POS-DEF
  **********
- **   13 **MIGRAD        3500           1
+ **   13 **MIGRAD        3000           1
  **********
  FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
  START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
- FCN=-3.14054e+07 FROM MIGRAD    STATUS=INITIATE      359 CALLS         360 TOTAL
+ FCN=-3.1424e+07 FROM MIGRAD    STATUS=INITIATE       41 CALLS          42 TOTAL
                      EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
   EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
   NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
-   1  N2           6.99932e+02   1.13348e+03   0.00000e+00   0.00000e+00
-   2  a2           2.00390e+03   2.92385e-01   0.00000e+00   1.67950e+04
-   3  b2           1.32000e+00   5.20441e-01   0.00000e+00   1.25466e+05
-   4  bkg_yield_2   6.00000e+05   1.50136e+05   0.00000e+00   4.34366e+04
-   5  mean2        2.01000e+03   4.00000e-01   0.00000e+00  -1.07198e+07
-   6  sig_yield_2   2.00000e+06   2.91212e+05   0.00000e+00  -3.16070e+04
-   7  sigma2       3.10000e-01   9.11071e-02   0.00000e+00  -9.93911e+05
+   1  a2           2.00003e+03   3.74180e+00  -2.25000e+00   4.87168e+02
+   2  b2           1.32000e+00   1.00200e-02   0.00000e+00   3.75921e+04
+   3  bkg_yield_2   6.00000e+05   1.82055e+03   0.00000e+00   4.55311e+03
+   4  mean2        2.01000e+03   6.58354e-05   0.00000e+00  -1.06811e+07
+   5  sig_yield_2   2.00000e+06   1.25556e+03   0.00000e+00  -1.03096e+04
+   6  sigma2       3.10000e-01   2.82976e-04   0.00000e+00  -9.59233e+05
                                ERR DEF= 0.5
  MIGRAD FAILS TO FIND IMPROVEMENT
  MACHINE ACCURACY LIMITS FURTHER IMPROVEMENT.
  MIGRAD MINIMIZATION HAS CONVERGED.
- FCN=-3.23205e+07 FROM MIGRAD    STATUS=CONVERGED     628 CALLS         629 TOTAL
-                     EDM=0.00157165    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   0.0 per cent
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=-3.23205e+07 FROM HESSE     STATUS=OK             50 CALLS         343 TOTAL
+                     EDM=0.0207428    STRATEGY= 1      ERROR MATRIX ACCURATE 
   EXT PARAMETER                                   STEP         FIRST   
   NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
-   1  N2           6.99932e+02   1.36973e+03   0.00000e+00   0.00000e+00
-   2  a2           2.00211e+03   8.21555e-02   0.00000e+00  -2.82892e+00
-   3  b2           1.23655e+00   1.33906e-02   0.00000e+00   9.78196e+00
-   4  bkg_yield_2   4.70144e+05   9.31793e+02  -0.00000e+00   3.14247e+00
-   5  mean2        2.01027e+03   2.13443e-04   0.00000e+00  -2.88111e+02
-   6  sig_yield_2   2.14151e+06   1.55286e+03   0.00000e+00  -2.24901e+00
-   7  sigma2       4.29164e-01   4.44797e-04  -0.00000e+00   1.61954e+00
+   1  a2           2.00211e+03   1.36020e-01   5.50206e-02  -2.52221e+00
+   2  b2           1.23655e+00   2.23121e-02   9.61956e-03   3.24294e+00
+   3  bkg_yield_2   4.70182e+05   9.74392e+02   4.56496e-03   4.87463e+01
+   4  mean2        2.01027e+03   2.16651e-04   4.29006e-04   2.15337e+02
+   5  sig_yield_2   2.14157e+06   1.61835e+03   4.65385e-03   5.01370e+01
+   6  sigma2       4.29170e-01   4.57766e-04   3.84423e-03   3.03491e+01
                                ERR DEF= 0.5
- EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  7    ERR DEF=0.5
-  2.650e+06  3.818e-08  6.148e-09  2.158e-05  2.697e-11 -1.120e-05 -5.441e-11 
-  3.818e-08  6.753e-03  1.005e-03 -1.143e+01  2.250e-06  1.097e+01  2.542e-06 
-  6.148e-09  1.005e-03  1.793e-04 -3.861e+00  3.358e-07  3.767e+00  1.025e-06 
-  2.158e-05 -1.143e+01 -3.861e+00  8.682e+05 -6.416e-03 -3.594e+05 -1.215e-01 
-  2.697e-11  2.250e-06  3.358e-07 -6.416e-03  4.556e-08  8.693e-03  1.030e-09 
- -1.120e-05  1.097e+01  3.767e+00 -3.594e+05  8.693e-03  2.411e+06  1.261e-01 
- -5.441e-11  2.542e-06  1.025e-06 -1.215e-01  1.030e-09  1.261e-01  1.978e-07 
+ MINUIT WARNING IN MIGRAD  
+ ============== Negative diagonal element 1 in Error Matrix
+ MINUIT WARNING IN MIGRAD  
+ ============== Negative diagonal element 2 in Error Matrix
+ MINUIT WARNING IN MIGRAD  
+ ============== 1.00067 added to diagonal of error matrix
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ MIGRAD TERMINATED WITHOUT CONVERGENCE.
+ FCN=-3.23205e+07 FROM MIGRAD    STATUS=FAILED        418 CALLS         419 TOTAL
+                     EDM=41.051    STRATEGY= 1  ERROR MATRIX UNCERTAINTY  54.5 per cent
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a2           2.00212e+03   1.44989e+00  -0.00000e+00   3.35080e+00
+   2  b2           1.23443e+00   1.28809e+00   0.00000e+00  -2.42253e+00
+   3  bkg_yield_2   4.70173e+05   1.96868e+05  -0.00000e+00  -4.63635e+00
+   4  mean2        2.01027e+03   1.46242e-03  -0.00000e+00  -3.65912e-01
+   5  sig_yield_2   2.14147e+06   8.00116e+05   0.00000e+00  -2.08238e+00
+   6  sigma2       4.29154e-01   2.73571e-01   0.00000e+00   1.15104e+00
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  2.490e+00 -4.931e-03 -1.267e+04  1.440e-05 -7.143e+03  2.248e-03 
+ -4.931e-03  1.960e+00 -8.312e+04 -1.605e-03 -4.691e+04  1.473e-02 
+ -1.267e+04 -8.312e+04  3.984e+10 -2.748e+01 -1.143e+11  3.588e+04 
+  1.440e-05 -1.605e-03 -2.748e+01  2.139e-06  7.883e+02  5.509e-05 
+ -7.143e+03 -4.691e+04 -1.143e+11  7.883e+02  7.482e+11  2.025e+04 
+  2.248e-03  1.473e-02  3.588e+04  5.509e-05  2.025e+04  8.765e-02 
+ERR MATRIX APPROXIMATE
  PARAMETER  CORRELATION COEFFICIENTS  
-       NO.  GLOBAL      1      2      3      4      5      6      7
-        1  0.00000   1.000  0.000  0.000  0.000  0.000 -0.000 -0.000
-        2  0.92701   0.000  1.000  0.913 -0.149  0.128  0.086  0.070
-        3  0.93358   0.000  0.913  1.000 -0.309  0.118  0.181  0.172
-        4  0.49693   0.000 -0.149 -0.309  1.000 -0.032 -0.248 -0.293
-        5  0.12982   0.000  0.128  0.118 -0.032  1.000  0.026  0.011
-        6  0.31514  -0.000  0.086  0.181 -0.248  0.026  1.000  0.183
-        7  0.34557  -0.000  0.070  0.172 -0.293  0.011  0.183  1.000
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.99570   1.000 -0.002 -0.040  0.006 -0.005  0.005
+        2  0.99992  -0.002  1.000 -0.297 -0.784 -0.039  0.036
+        3  0.99999  -0.040 -0.297  1.000 -0.094 -0.662  0.607
+        4  0.98898   0.006 -0.784 -0.094  1.000  0.623  0.127
+        5  0.99998  -0.005 -0.039 -0.662  0.623  1.000  0.079
+        6  0.99998   0.005  0.036  0.607  0.127  0.079  1.000
+ ERR MATRIX APPROXIMATE
  **********
- **   13 **IMPROVE        3500
+ **   13 **IMPROVE        3000
  **********
  FUNCTION MUST BE MINIMIZED BEFORE CALLING IMProve   
  FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
  START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 5.00e-05
- FCN=-3.23205e+07 FROM MIGRAD    STATUS=INITIATE      351 CALLS         352 TOTAL
+ FCN=-3.23205e+07 FROM MIGRAD    STATUS=INITIATE       32 CALLS          33 TOTAL
                      EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
   EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
   NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
-   1  N2           6.99932e+02   1.36973e+03   0.00000e+00   0.00000e+00
-   2  a2           2.00211e+03   8.21555e-02   0.00000e+00   2.83259e+00
-   3  b2           1.23655e+00   1.33906e-02   0.00000e+00   9.78192e+00
-   4  bkg_yield_2   4.70144e+05   9.31793e+02   0.00000e+00   3.14246e+00
-   5  mean2        2.01027e+03   2.13443e-04   0.00000e+00  -2.88111e+02
-   6  sig_yield_2   2.14151e+06   1.55286e+03   0.00000e+00  -2.24905e+00
-   7  sigma2       4.29164e-01   4.44797e-04   0.00000e+00   1.61960e+00
+   1  a2           2.00212e+03   1.44989e+00   7.07803e-01   3.50800e+00
+   2  b2           1.23443e+00   1.28809e+00   7.11572e-01  -2.42363e+00
+   3  bkg_yield_2   4.70173e+05   1.96868e+05   2.88969e-01  -4.63625e+00
+   4  mean2        2.01027e+03   1.46242e-03   7.38007e-04  -3.65915e-01
+   5  sig_yield_2   2.14147e+06   8.00116e+05   8.21920e-01  -3.18023e+00
+   6  sigma2       4.29154e-01   2.73571e-01   7.07388e-01  -2.75093e+00
                                ERR DEF= 0.5
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=-3.23205e+07 FROM HESSE     STATUS=OK             52 CALLS          96 TOTAL
+                     EDM=0.000157254    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  a2           2.00212e+03   1.35026e-01   5.58828e-02  -5.36590e-01
+   2  b2           1.23443e+00   2.21764e-02   9.62313e-03  -1.93979e+00
+   3  bkg_yield_2   4.70173e+05   9.74099e+02   4.56513e-03  -1.31781e+00
+   4  mean2        2.01027e+03   2.16648e-04   4.29006e-04   6.13600e-01
+   5  sig_yield_2   2.14147e+06   1.61806e+03   5.00000e-03   5.02072e+00
+   6  sigma2       4.29154e-01   4.57667e-04   5.00000e-03   6.77699e+00
+                               ERR DEF= 0.5
+ MINUIT WARNING IN MIGRAD  
+ ============== Negative diagonal element 1 in Error Matrix
+ MINUIT WARNING IN MIGRAD  
+ ============== 1.00006 added to diagonal of error matrix
  MIGRAD FAILS TO FIND IMPROVEMENT
  MACHINE ACCURACY LIMITS FURTHER IMPROVEMENT.
  MIGRAD MINIMIZATION HAS CONVERGED.
  MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
- MINUIT WARNING IN HESSE
- ============== Second derivative enters zero, param 1
- MINUIT WARNING IN HESSE
- ============== Second derivative zero for parameter1
-  MNHESS FAILS AND WILL RETURN DIAGONAL MATRIX. 
- FCN=-3.23205e+07 FROM HESSE     STATUS=FAILED          3 CALLS         401 TOTAL
-                     EDM=0.00243066    STRATEGY= 1  ERROR MATRIX UNCERTAINTY 100.0 per cent
-  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=-3.23205e+07 FROM MIGRAD    STATUS=CONVERGED     187 CALLS         188 TOTAL
+                     EDM=6.78817e-06    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
   NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
-   1  N2           6.99932e+02   2.90155e+03  -0.00000e+00   0.00000e+00
-   2  a2           2.00211e+03   3.12255e-02  -0.00000e+00   1.77644e+00
-   3  b2           1.23652e+00   4.89510e-03   0.00000e+00   3.84466e+00
-   4  bkg_yield_2   4.70144e+05   8.09144e+02   0.00000e+00  -8.70453e-01
-   5  mean2        2.01027e+03   2.16548e-04   0.00000e+00  -2.04591e+02
-   6  sig_yield_2   2.14151e+06   1.51089e+03  -0.00000e+00  -2.96482e-01
-   7  sigma2       4.29163e-01   4.24474e-04  -0.00000e+00   2.82059e+00
+   1  a2           2.00212e+03   1.34118e-01   5.47609e-02  -1.15884e-01
+   2  b2           1.23426e+00   2.20324e-02   9.61134e-03  -6.61937e-01
+   3  bkg_yield_2   4.70178e+05   9.73661e+02   4.56519e-03  -3.47564e-01
+   4  mean2        2.01027e+03   2.16647e-04   4.29004e-04  -8.02145e-02
+   5  sig_yield_2   2.14146e+06   1.61783e+03   4.65384e-03   1.18794e+00
+   6  sigma2       4.29151e-01   4.57649e-04   3.84422e-03   1.59798e+00
                                ERR DEF= 0.5
- MIGRAD FAILS TO FIND IMPROVEMENT
- MACHINE ACCURACY LIMITS FURTHER IMPROVEMENT.
- MIGRAD MINIMIZATION HAS CONVERGED.
- MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
- MINUIT WARNING IN HESSE
- ============== Second derivative zero for parameter1
-  MNHESS FAILS AND WILL RETURN DIAGONAL MATRIX. 
- MIGRAD TERMINATED WITHOUT CONVERGENCE.
- FCN=-3.23205e+07 FROM MIGRAD    STATUS=FAILED        414 CALLS         415 TOTAL
-                     EDM=0.00243066    STRATEGY= 1  ERROR MATRIX UNCERTAINTY 100.0 per cent
-  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
-  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
-   1  N2           6.99932e+02   2.90155e+03  -0.00000e+00   0.00000e+00
-   2  a2           2.00211e+03   3.12255e-02  -0.00000e+00   1.77644e+00
-   3  b2           1.23652e+00   4.89510e-03  -0.00000e+00   3.84466e+00
-   4  bkg_yield_2   4.70144e+05   8.09144e+02   0.00000e+00  -8.70453e-01
-   5  mean2        2.01027e+03   2.16548e-04   0.00000e+00  -2.04591e+02
-   6  sig_yield_2   2.14151e+06   1.51089e+03   0.00000e+00  -2.96482e-01
-   7  sigma2       4.29163e-01   4.24474e-04  -0.00000e+00   2.82059e+00
-                               ERR DEF= 0.5
- EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  7    ERR DEF=0.5
-  3.752e+06  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
-  0.000e+00  9.751e-04  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
-  0.000e+00  0.000e+00  2.396e-05  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
-  0.000e+00  0.000e+00  0.000e+00  6.547e+05  0.000e+00  0.000e+00  0.000e+00 
-  0.000e+00  0.000e+00  0.000e+00  0.000e+00  4.689e-08  0.000e+00  0.000e+00 
-  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  2.283e+06  0.000e+00 
-  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  1.802e-07 
-ERR MATRIX APPROXIMATE
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  1.801e-02 -2.861e-03  3.954e+01 -6.405e-07 -3.941e+01 -1.017e-05 
+ -2.861e-03  4.854e-04 -8.520e+00  8.175e-08  8.493e+00  2.301e-06 
+  3.954e+01 -8.520e+00  9.480e+05 -1.986e-03 -4.763e+05 -1.436e-01 
+ -6.405e-07  8.175e-08 -1.986e-03  4.694e-08  1.984e-03  6.042e-10 
+ -3.941e+01  8.493e+00 -4.763e+05  1.984e-03  2.617e+06  1.433e-01 
+ -1.017e-05  2.301e-06 -1.436e-01  6.042e-10  1.433e-01  2.094e-07 
  PARAMETER  CORRELATION COEFFICIENTS  
-       NO.  GLOBAL      1      2      3      4      5      6      7
-        1  0.00000   1.000  0.000  0.000  0.000  0.000  0.000  0.000
-        2  0.00000   0.000  1.000  0.000  0.000  0.000  0.000  0.000
-        3  0.00000   0.000  0.000  1.000  0.000  0.000  0.000  0.000
-        4  0.00000   0.000  0.000  0.000  1.000  0.000  0.000  0.000
-        5  0.00000   0.000  0.000  0.000  0.000  1.000  0.000  0.000
-        6  0.00000   0.000  0.000  0.000  0.000  0.000  1.000  0.000
-        7  0.00000   0.000  0.000  0.000  0.000  0.000  0.000  1.000
- ERR MATRIX APPROXIMATE
- MINUIT WARNING IN HESSE
- ============== Second derivative zero for parameter1
-  MNHESS FAILS AND WILL RETURN DIAGONAL MATRIX. 
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.97270   1.000 -0.968  0.303 -0.022 -0.182 -0.166
+        2  0.97508  -0.968  1.000 -0.397  0.017  0.238  0.228
+        3  0.55616   0.303 -0.397  1.000 -0.009 -0.302 -0.322
+        4  0.03045  -0.022  0.017 -0.009  1.000  0.006  0.006
+        5  0.35755  -0.182  0.238 -0.302  0.006  1.000  0.194
+        6  0.37385  -0.166  0.228 -0.322  0.006  0.194  1.000
 START ATTEMPT NO. 1 TO FIND NEW MINIMUM
- COVARIANCE MATRIX WAS NOT POSITIVE-DEFINITE
  IMPROVE HAS RETURNED TO REGION OF ORIGINAL MINIMUM
  **********
- **   13 **HESSE        3500
+ **   13 **HESSE        3000
  **********
  FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
- MINUIT WARNING IN HESSE
- ============== Second derivative zero for parameter1
-  MNHESS FAILS AND WILL RETURN DIAGONAL MATRIX. 
- FCN=-3.23205e+07 FROM HESSE     STATUS=FAILED          5 CALLS           6 TOTAL
-                     EDM= unknown      STRATEGY= 1  ERROR MATRIX UNCERTAINTY 100.0 per cent
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -4.8450e-02  5.0594e-01  9.9903e-01  1.0731e+00  1.1862e+00  2.2841e+00
+ MINUIT WARNING IN HESSE   
+ ============== MATRIX FORCED POS-DEF BY ADDING 0.050734 TO DIAGONAL.
+ FCN=-3.23205e+07 FROM HESSE     STATUS=NOT POSDEF     60 CALLS          61 TOTAL
+                     EDM=0.000221533    STRATEGY= 1      ERR MATRIX NOT POS-DEF
   EXT PARAMETER                APPROXIMATE     INTERNAL      INTERNAL  
   NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
-   1  N2           2.10708e+02   1.42335e+03   9.13734e-01  -9.74836e-01
-   2  a2           2.00211e+03   3.12255e-02   1.39939e-02  -5.64606e-02
-   3  b2           1.23652e+00   4.89511e-03   2.44975e-03  -6.94236e-01
-   4  bkg_yield_2   4.70144e+05   8.09144e+02   1.16285e-03  -3.82393e-01
-   5  mean2        2.01027e+03   2.16548e-04   1.09280e-04   1.35799e-01
-   6  sig_yield_2   2.14151e+06   1.51090e+03   1.18549e-03   4.97127e-01
-   7  sigma2       4.29163e-01   4.24474e-04   9.79242e-04  -2.71863e-01
+   1  a2           2.00212e+03   4.59824e-01   5.00000e-01  -5.01977e-02
+   2  b2           1.23426e+00   7.36947e-02   1.12579e-01  -6.95370e-01
+   3  bkg_yield_2   4.70178e+05   1.13602e+03   1.42724e-02  -3.82343e-01
+   4  mean2        2.01027e+03   2.12702e-04   1.09330e-05   1.35801e-01
+   5  sig_yield_2   2.14146e+06   1.68809e+03   1.29476e-02   4.97091e-01
+   6  sigma2       4.29151e-01   4.63012e-04   1.07690e-02  -2.71891e-01
                                ERR DEF= 0.5
- EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  7    ERR DEF=0.5
-  2.212e+06  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
-  0.000e+00  9.751e-04  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
-  0.000e+00  0.000e+00  2.396e-05  0.000e+00  0.000e+00  0.000e+00  0.000e+00 
-  0.000e+00  0.000e+00  0.000e+00  6.547e+05  0.000e+00  0.000e+00  0.000e+00 
-  0.000e+00  0.000e+00  0.000e+00  0.000e+00  4.689e-08  0.000e+00  0.000e+00 
-  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  2.283e+06  0.000e+00 
-  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00  1.802e-07 
-ERR MATRIX APPROXIMATE
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  2.145e-01 -3.404e-02  3.185e+02 -1.132e-05 -3.116e+02 -6.789e-05 
+ -3.404e-02  5.433e-03 -5.272e+01  1.778e-06  5.159e+01  1.143e-05 
+  3.185e+02 -5.272e+01  1.291e+06 -1.724e-02 -8.194e+05 -2.121e-01 
+ -1.132e-05  1.778e-06 -1.724e-02  4.524e-08  1.688e-02  3.648e-09 
+ -3.116e+02  5.159e+01 -8.194e+05  1.688e-02  2.850e+06  2.082e-01 
+ -6.789e-05  1.143e-05 -2.121e-01  3.648e-09  2.082e-01  2.144e-07 
+ERR MATRIX NOT POS-DEF
  PARAMETER  CORRELATION COEFFICIENTS  
-       NO.  GLOBAL      1      2      3      4      5      6      7
-        1  0.00000   1.000  0.000  0.000  0.000  0.000  0.000  0.000
-        2  0.00000   0.000  1.000  0.000  0.000  0.000  0.000  0.000
-        3  0.00000   0.000  0.000  1.000  0.000  0.000  0.000  0.000
-        4  0.00000   0.000  0.000  0.000  1.000  0.000  0.000  0.000
-        5  0.00000   0.000  0.000  0.000  0.000  1.000  0.000  0.000
-        6  0.00000   0.000  0.000  0.000  0.000  0.000  1.000  0.000
-        7  0.00000   0.000  0.000  0.000  0.000  0.000  0.000  1.000
- ERR MATRIX APPROXIMATE
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.99776   1.000 -0.997  0.605 -0.115 -0.399 -0.317
+        2  0.99788  -0.997  1.000 -0.630  0.113  0.415  0.335
+        3  0.71912   0.605 -0.630  1.000 -0.071 -0.427 -0.403
+        4  0.11651  -0.115  0.113 -0.071  1.000  0.047  0.037
+        5  0.48748  -0.399  0.415 -0.427  0.047  1.000  0.266
+        6  0.44740  -0.317  0.335 -0.403  0.037  0.266  1.000
+ ERR MATRIX NOT POS-DEF
 [#1] INFO:Minization -- RooMinuit::optimizeConst: activating const optimization
  **********
- **   13 **MINOS        3500
+ **   13 **MINOS        3000
  **********
  FUNCTION MUST BE MINIMIZED BEFORE CALLING MINOs     
  FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
  START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 5.00e-05
- FCN=-3.23205e+07 FROM MIGRAD    STATUS=INITIATE       49 CALLS          50 TOTAL
+ FCN=-3.23205e+07 FROM MIGRAD    STATUS=INITIATE       24 CALLS          25 TOTAL
                      EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
   EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
   NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
-   1  N2           7.26809e+02   1.42335e+03   5.26316e-01   0.00000e+00
-   2  a2           2.00211e+03   3.12255e-02   0.00000e+00   1.77663e+00
-   3  b2           1.23652e+00   4.89511e-03   0.00000e+00   3.84466e+00
-   4  bkg_yield_2   4.70144e+05   8.09144e+02   0.00000e+00  -8.70455e-01
-   5  mean2        2.01027e+03   2.16548e-04   0.00000e+00  -2.04591e+02
-   6  sig_yield_2   2.14151e+06   1.51090e+03   0.00000e+00  -2.96483e-01
-   7  sigma2       4.29163e-01   4.24474e-04   0.00000e+00   2.82059e+00
+   1  a2           2.00212e+03   4.59824e-01   2.07495e-01   3.79169e+00
+   2  b2           1.23426e+00   7.36947e-02   3.69412e-02  -1.14516e+00
+   3  bkg_yield_2   4.70178e+05   1.13602e+03   1.63258e-03  -3.66608e+00
+   4  mean2        2.01027e+03   2.12702e-04   1.07339e-04  -1.05968e+00
+   5  sig_yield_2   2.14146e+06   1.68809e+03   1.32450e-03  -5.91680e+00
+   6  sigma2       4.29151e-01   4.63012e-04   1.06816e-03  -4.03422e+00
                                ERR DEF= 0.5
  MIGRAD FAILS TO FIND IMPROVEMENT
  COVARIANCE MATRIX CALCULATED SUCCESSFULLY
- FCN=-3.23205e+07 FROM HESSE     STATUS=OK             60 CALLS         121 TOTAL
-                     EDM=0.0164497    STRATEGY= 1      ERROR MATRIX ACCURATE 
+ FCN=-3.23205e+07 FROM HESSE     STATUS=OK             52 CALLS          88 TOTAL
+                     EDM=3.39279e-06    STRATEGY= 1      ERROR MATRIX ACCURATE 
   EXT PARAMETER                                   STEP         FIRST   
   NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
-   1  N2           7.26809e+02   3.41647e+03   5.00000e-01  -1.86265e-08
-   2  a2           2.00211e+03   1.35842e-01   5.49367e-02  -2.14483e+00
-   3  b2           1.23652e+00   2.22855e-02   9.61711e-03   4.33054e+00
-   4  bkg_yield_2   4.70144e+05   9.74239e+02   4.56506e-03   2.44801e+00
-   5  mean2        2.01027e+03   2.16649e-04   4.29007e-04  -2.03649e+02
-   6  sig_yield_2   2.14151e+06   1.61820e+03   4.65396e-03   6.80857e+00
-   7  sigma2       4.29163e-01   4.57742e-04   3.84427e-03   8.45292e+00
+   1  a2           2.00212e+03   1.34240e-01   5.49350e-02  -1.15844e-01
+   2  b2           1.23426e+00   2.20522e-02   9.61753e-03  -6.61931e-01
+   3  bkg_yield_2   4.70178e+05   9.73743e+02   4.56519e-03  -3.47554e-01
+   4  mean2        2.01027e+03   2.16647e-04   4.29004e-04  -8.02145e-02
+   5  sig_yield_2   2.14146e+06   1.61788e+03   4.65384e-03   1.18795e+00
+   6  sigma2       4.29151e-01   4.57661e-04   3.84422e-03   1.59798e+00
                                ERR DEF= 0.5
- MINUIT WARNING IN MIGRAD  
- ============== Negative diagonal element 2 in Error Matrix
- MINUIT WARNING IN MIGRAD  
- ============== 1.00013 added to diagonal of error matrix
  MIGRAD FAILS TO FIND IMPROVEMENT
- MIGRAD TERMINATED WITHOUT CONVERGENCE.
- FCN=-3.23205e+07 FROM MIGRAD    STATUS=FAILED        185 CALLS         186 TOTAL
-                     EDM=12.0542    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   0.0 per cent
-  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+ MACHINE ACCURACY LIMITS FURTHER IMPROVEMENT.
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=-3.23205e+07 FROM MIGRAD    STATUS=CONVERGED     165 CALLS         166 TOTAL
+                     EDM=3.07219e-09    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
   NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
-   1  N2           1.56569e+03   3.55274e+03  -0.00000e+00   0.00000e+00
-   2  a2           2.00212e+03   1.45010e+00  -0.00000e+00   3.61485e+00
-   3  b2           1.23431e+00   1.29699e+00   0.00000e+00  -1.67697e+00
-   4  bkg_yield_2   4.70177e+05   4.52070e+05   0.00000e+00  -3.33281e+00
-   5  mean2        2.01027e+03   2.50856e-03  -0.00000e+00   3.90600e-01
-   6  sig_yield_2   2.14147e+06   8.28013e+05   0.00000e+00  -4.16217e+00
-   7  sigma2       4.29152e-01   2.81613e-01   0.00000e+00  -1.93642e+00
+   1  a2           2.00212e+03   1.12994e-01   2.19740e-02  -3.83989e-03
+   2  b2           1.23425e+00   1.85837e-02   3.84701e-03  -2.07834e-02
+   3  bkg_yield_2   4.70179e+05   9.57936e+02   1.82608e-03  -6.96168e-03
+   4  mean2        2.01027e+03   2.16630e-04   1.71602e-04  -3.33775e-02
+   5  sig_yield_2   2.14146e+06   1.60880e+03   1.86154e-03   1.42835e-02
+   6  sigma2       4.29150e-01   4.55472e-04   1.53769e-03   1.44148e-02
                                ERR DEF= 0.5
- EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  7    ERR DEF=0.5
-  2.032e+14  1.488e+01 -1.449e-01  3.207e+04 -3.048e-03  2.730e+04  2.218e-02 
-  1.488e+01  2.491e+00  5.866e-05 -1.010e+00 -5.096e-04  8.868e+00  1.840e-06 
- -1.449e-01  5.866e-05  1.993e+00 -3.083e+00 -1.918e-03  5.761e-01  3.835e-07 
-  3.207e+04 -1.010e+00 -3.083e+00  2.421e+11 -1.012e+03 -4.922e+05 -1.207e-01 
- -3.048e-03 -5.096e-04 -1.918e-03 -1.012e+03  6.293e-06 -2.363e+02 -6.654e-06 
-  2.730e+04  8.868e+00  5.761e-01 -4.922e+05 -2.363e+02  8.123e+11  1.105e-01 
-  2.218e-02  1.840e-06  3.835e-07 -1.207e-01 -6.654e-06  1.105e-01  9.396e-02 
-ERR MATRIX APPROXIMATE
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=0.5
+  1.278e-02 -2.005e-03  2.709e+01 -4.499e-07 -2.705e+01 -6.961e-06 
+ -2.005e-03  3.454e-04 -6.477e+00  5.034e-08  6.469e+00  1.775e-06 
+  2.709e+01 -6.477e+00  9.176e+05 -1.500e-03 -4.469e+05 -1.359e-01 
+ -4.499e-07  5.034e-08 -1.500e-03  4.693e-08  1.500e-03  3.907e-10 
+ -2.705e+01  6.469e+00 -4.469e+05  1.500e-03  2.588e+06  1.358e-01 
+ -6.961e-06  1.775e-06 -1.359e-01  3.907e-10  1.358e-01  2.075e-07 
  PARAMETER  CORRELATION COEFFICIENTS  
-       NO.  GLOBAL      1      2      3      4      5      6      7
-        1  0.00000   1.000  0.000 -0.000  0.000 -0.000  0.000  0.000
-        2  0.83048   0.000  1.000  0.000 -0.000 -0.129  0.000  0.000
-        3  0.98753  -0.000  0.000  1.000 -0.000 -0.542  0.000  0.000
-        4  0.99450   0.000 -0.000 -0.000  1.000 -0.820 -0.000 -0.000
-        5  0.99627  -0.000 -0.129 -0.542 -0.820  1.000 -0.105 -0.009
-        6  0.77098   0.000  0.000  0.000 -0.000 -0.105  1.000  0.000
-        7  0.09973   0.000  0.000  0.000 -0.000 -0.009  0.000  1.000
- ERR MATRIX APPROXIMATE
- MINUIT WARNING IN HESSE
- ============== Second derivative enters zero, param 1
- MINUIT WARNING IN HESSE
- ============== Second derivative zero for parameter1
-  MNHESS FAILS AND WILL RETURN DIAGONAL MATRIX. 
-    THE POSITIVE MINOS ERROR OF PARAMETER   1, N2 EXCEEDS ITS LIMIT.
-    THE NEGATIVE MINOS ERROR OF PARAMETER   1, N2 EXCEEDS ITS LIMIT.
- MINUIT WARNING IN MIGRAD  
- ============== VARIABLE1 IS AT ITS LOWER ALLOWED LIMIT.
- MINUIT WARNING IN MIGRAD  
- ============== Negative diagonal element 2 in Error Matrix
- MINUIT WARNING IN MIGRAD  
- ============== 1.00009 added to diagonal of error matrix
- MIGRAD FAILS WITH STRATEGY=0.   WILL TRY WITH STRATEGY=1.
- MINUIT WARNING IN HESSE
- ============== Second derivative enters zero, param 1
- MINUIT WARNING IN HESSE
- ============== Second derivative zero for parameter1
-  MNHESS FAILS AND WILL RETURN DIAGONAL MATRIX. 
- FCN=-3.23205e+07 FROM MINOS     STATUS=PROBLEMS     2864 CALLS        3053 TOTAL
-                     EDM=12.0542    STRATEGY= 1  ERROR MATRIX UNCERTAINTY 100.0 per cent
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.96131   1.000 -0.954  0.250 -0.018 -0.149 -0.135
+        2  0.96480  -0.954  1.000 -0.364  0.013  0.216  0.210
+        3  0.53522   0.250 -0.364  1.000 -0.007 -0.290 -0.311
+        4  0.02783  -0.018  0.013 -0.007  1.000  0.004  0.004
+        5  0.34354  -0.149  0.216 -0.290  0.004  1.000  0.185
+        6  0.36266  -0.135  0.210 -0.311  0.004  0.185  1.000
+ FCN=-3.23205e+07 FROM MINOS     STATUS=SUCCESSFUL    645 CALLS         811 TOTAL
+                     EDM=3.07219e-09    STRATEGY= 1      ERROR MATRIX ACCURATE 
   EXT PARAMETER                  PARABOLIC         MINOS ERRORS        
   NO.   NAME      VALUE            ERROR      NEGATIVE      POSITIVE   
-   1  N2           1.56569e+03   3.41468e+03   at limit      at limit   
-   2  a2           2.00212e+03   3.11456e-02  -1.04471e-01   1.02030e-01
-   3  b2           1.23431e+00   4.88794e-03  -1.68503e-02   1.71214e-02
-   4  bkg_yield_2   4.70177e+05   8.09182e+02  -9.35833e+02   9.49777e+02
-   5  mean2        2.01027e+03   2.16547e-04  -2.16579e-04   2.16558e-04
-   6  sig_yield_2   2.14147e+06   1.51088e+03  -1.58428e+03   1.59207e+03
-   7  sigma2       4.29152e-01   4.24467e-04  -4.49249e-04   4.51073e-04
+   1  a2           2.00212e+03   1.12994e-01  -1.04897e-01   1.01592e-01
+   2  b2           1.23425e+00   1.85837e-02  -1.67903e-02   1.71494e-02
+   3  bkg_yield_2   4.70179e+05   9.57936e+02  -9.49484e+02   9.51829e+02
+   4  mean2        2.01027e+03   2.16630e-04  -2.16623e-04   2.16622e-04
+   5  sig_yield_2   2.14146e+06   1.60880e+03  -1.60479e+03   1.60464e+03
+   6  sigma2       4.29150e-01   4.55472e-04  -4.54344e-04   4.54616e-04
                                ERR DEF= 0.5
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
@@ -668,12 +642,12 @@ ERR MATRIX APPROXIMATE
 [#1] INFO:InputArguments -- Printing Yields
 RooArgList:: = (sig_yield_2,bkg_yield_2)
 [#1] INFO:InputArguments -- yield in pdf: sig_yield_2 2.14146e+06
-[#1] INFO:InputArguments -- yield in pdf: bkg_yield_2 470178
+[#1] INFO:InputArguments -- yield in pdf: bkg_yield_2 470179
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:Eval -- Checking Likelihood normalization:  
 [#1] INFO:Eval -- Yield of specie  Sum of Row in Matrix   Norm
 [#1] INFO:Eval -- 2.14146e+06 2.14146e+06 1
-[#1] INFO:Eval -- 470178 470178 1
+[#1] INFO:Eval -- 470179 470179 1
 [#1] INFO:Eval -- Calculating sWeight
 === Event 0%
 === Event 10%
@@ -709,7 +683,7 @@ RooArgList:: = (sig_yield_2,bkg_yield_2)
 [#1] INFO:Plotting -- RooAbsPdf::plotOn(model_pos) only plotting range [2004.47,2020.11], curve is normalized to data in given range
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(model_pos_Int[DTF_Mass|plotRange]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-Total asymmetry before weighting: -0.0105812 +/- 0.000480592
-Total asymmetry after signal weighting: -0.0109116 +/- 5.77422e-08
-computation time/s: 946.65
-computation time/min: 15.7775
+Total asymmetry before weighting: -0.0105812 +/- 0.000480594
+Total asymmetry after signal weighting: -0.0109024 +/- 5.77427e-08
+computation time/s: 430.345
+computation time/min: 7.17242

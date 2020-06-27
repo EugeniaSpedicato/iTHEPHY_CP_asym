@@ -23,6 +23,68 @@ Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_pT_reco_Dst_pos_dev
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_phi_reco_Dst_pos_dev.pdf has been created
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_theta_reco_Dst_pos_dev.pdf has been created
 Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_eta_reco_Dst_pos_dev.pdf has been created
+Info in <TCanvas::Print>: pdf file output/up_pdf/deviation/h_pT_reco_Dst_dev_weighted.pdf has been created
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
+Error in <TFile::WriteTObject>: Directory output/histOut_D02Kmpip_15_Up.root is not writable
 Info in <TCanvas::Print>: pdf file output/up_pdf/single/tot/h_pT_reco_Pi.pdf has been created
 Info in <TCanvas::Print>: pdf file output/up_pdf/single/pos/h_pT_reco_Pi_pos.pdf has been created
 Info in <TCanvas::Print>: pdf file output/up_pdf/single/neg/h_pT_reco_Pi_neg.pdf has been created

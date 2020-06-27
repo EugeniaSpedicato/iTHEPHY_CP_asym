@@ -10,6 +10,10 @@ Processing eff.cc++("$dir", "all", "up_down")...
 === Event 70%
 === Event 80%
 === Event 90%
+
+
+weighted asymmetry: -0.639987
+
 Total: 
 Reconstructed number of pions: 1.06902e+07, eff.: 0.866676 +/- 9.67873e-05
 Reconstructed number of Kaons: 1.04414e+07, eff.: 0.846506 +/- 0.000102635
@@ -40,5 +44,5 @@ Kaons: 0.00496572 +/- 0.000309468 , in sigmas: 16.046
 soft Pions: -8.11184e-05 +/- 0.000325209 , in sigmas: 0.249435
 D0: -0.00485381 +/- 0.000332418 , in sigmas: 14.6015
 Dst: -0.00449393 +/- 0.000379372 , in sigmas: 11.8457
-computation time/s: 109.523
-computation time/min: 1.82538
+computation time/s: 93.6577
+computation time/min: 1.56096

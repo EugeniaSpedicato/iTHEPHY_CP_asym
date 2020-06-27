@@ -1,7 +1,6 @@
 #include "eff.h"
 #include <chrono>
 #include "TROOT.h"
-//#include "omp.h"
 
 void setcolors(vector<TH1F*> v_hist, vector<TH1F*> v_hist_pos, vector<TH1F*> v_hist_neg)
 {
@@ -79,7 +78,7 @@ void printhists(vector<TH1F*> v_hist, vector<TH1F*> v_hist_pos, vector<TH1F*> v_
     c->SaveAs(save_name.c_str());
   }
 }
-void printdevhists(vector<TH1F*> v_get_hist_pos, vector<TH1F*> v_get_hist_neg, string polarisation)
+void printdevhists(vector<TH1F*> v_get_hist_pos, vector<TH1F*> v_get_hist_neg, string polarisation, bool dst = false)
 {
   TF1 func("0*x", "0*x", -5., 11000.);
   int size = v_get_hist_pos.size();
@@ -121,29 +120,36 @@ void printdevhists(vector<TH1F*> v_get_hist_pos, vector<TH1F*> v_get_hist_neg, s
     save_name = "output/"+directory+"/deviation/"+new_title+".pdf";
     c->SaveAs(save_name.c_str());
     v_hist_pos.at(i)->Write();
-    if(title_name == "h_pT_reco_Dst_dev")
+  }
+  if(dst==true)
     {
-	  v_hist_pos.at(i)->SetName("h_pT_reco_Dst_dev_weighted");
+	  v_hist_pos.at(0)->SetName("h_pT_reco_Dst_dev_weighted");
 	  TFile *f;
 	  if(polarisation == "up") f = new TFile("output/histOut_D02Kmpip_15_Up.root");
 	  else if(polarisation == "down") f = new TFile("output/histOut_D02Kmpip_15_Dw.root");
 	  else f = new TFile("output/histOut_all_data_test.root");
 	  TH1F *h_weight = (TH1F*)f->Get("h_Dst_pT_data_sw");
-	  v_hist_pos.at(i)->Multiply(h_weight);
-	  v_hist_pos.at(i)->Draw();
+	  //v_hist_pos.at(0)->Multiply(h_weight);
+	  v_hist_pos.at(0)->Draw();
 	  func.Draw("same");
       save_name = "output/"+directory+"/deviation/h_pT_reco_Dst_dev_weighted.pdf";
-      c->SaveAs(save_name.c_str());
-      v_hist_pos.at(i)->Write();
-      double err =0;
-      //#pragma omp parallel for schedule(dynamic,2)
-      for (int i = 0; i<180;++i)
+      c->SaveAs(("output/"+directory+"/deviation/h_pT_reco_Dst_dev_weighted.pdf").c_str());
+      double err = 0.;
+      double as = 0.;
+      for (int j = 0; j< 180;++j)
       {
-		err += sqrt(v_hist_pos.at(i)->GetBinError(i));
+		v_hist_pos.at(0)->SetBinContent(j, v_hist_pos.at(0)->GetBinContent(j)*h_weight->GetBinContent(j));
+		as += v_hist_pos.at(0)->GetBinContent(j);
 	  }
-      cout << "weighted asymmetry: " << v_hist_pos.at(i)->GetSumOfWeights() << "+/-" << err << endl;
+	  as /= 180.;
+	  for (int j = 0; j< 180;++j)
+          {
+		err += pow(v_hist_pos.at(0)->GetBinContent(j) - as, 2.);
+	  }
+	  err /= 179.;
+	  err = sqrt(err);
+      cout <<endl<< endl << "weighted asymmetry: " << as << " +/- " << err << endl << endl;
 	}
-  }
 }
 
 vector<double> get_eff(vector<double> v_n_ges, vector<double> v_n_reco)
@@ -251,7 +257,7 @@ void hist_divide(vector<TH1F*> v_hist, vector<TH1F*> v_hist_reco)
   }
 }
 
-void eff(string dir, string sample, string polarisation)
+void eff(string dir, string sample, string polarisation) 
 {
   uint64_t start_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
   string input_name = dir+"/"+sample+".root";
@@ -742,7 +748,7 @@ void eff(string dir, string sample, string polarisation)
   printdevhists(v_SPi_hist_reco_pos, v_SPi_hist_reco_neg, polarisation);
   printdevhists(v_K_hist_reco_pos, v_K_hist_reco_neg, polarisation);
   printdevhists(v_D0_hist_reco_pos, v_D0_hist_reco_neg, polarisation);
-  printdevhists(v_Dst_hist_reco_pos, v_Dst_hist_reco_neg, polarisation);
+  printdevhists(v_Dst_hist_reco_pos, v_Dst_hist_reco_neg, polarisation, true);
 
   
   h_pT_reco_Pi->Write();
@@ -917,7 +923,6 @@ void eff(string dir, string sample, string polarisation)
   double plus_err = 0.;
   double min_err = 0.;
   int size = h_phi_SPi->GetNbinsX();
-  //su#pragma omp parallel for schedule(dynamic,2)
   for(int i = 0; i < size/2; ++i)
   {
     phi_min = h_phi_reco_SPi->GetBinContent(i);
@@ -993,5 +998,4 @@ void eff(string dir, string sample, string polarisation)
   float elapsed = (end_time - start_time)*0.000001;
   std::cout << "computation time/s: " << elapsed << std::endl;
   std::cout << "computation time/min: " << elapsed/60. << std::endl;
-
 }

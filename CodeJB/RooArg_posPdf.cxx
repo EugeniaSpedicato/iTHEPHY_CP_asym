@@ -18,12 +18,10 @@ ClassImp(RooArg_posPdf);
 
  RooArg_posPdf::RooArg_posPdf(const char *name, const char *title, 
                         RooAbsReal& _DTF_Mass,
-                        RooAbsReal& _N2,
                         RooAbsReal& _a2,
                         RooAbsReal& _b2) :
    RooAbsPdf(name,title), 
    DTF_Mass("DTF_Mass","DTF_Mass",this,_DTF_Mass),
-   N2("N2","N2",this,_N2),
    a2("a2","a2",this,_a2),
    b2("b2","b2",this,_b2)
  { 
@@ -33,7 +31,6 @@ ClassImp(RooArg_posPdf);
  RooArg_posPdf::RooArg_posPdf(const RooArg_posPdf& other, const char* name) :  
    RooAbsPdf(other,name), 
    DTF_Mass("DTF_Mass",this,other.DTF_Mass),
-   N2("N2",this,other.N2),
    a2("a2",this,other.a2),
    b2("b2",this,other.b2)
  { 
@@ -44,7 +41,7 @@ ClassImp(RooArg_posPdf);
  Double_t RooArg_posPdf::evaluate() const 
  { 
    // ENTER EXPRESSION IN TERMS OF VARIABLE ARGUMENTS HERE 
-   return N2*pow(DTF_Mass-a2,b2) ; 
+   return pow(DTF_Mass-a2,b2) ; 
  } 
 
 
