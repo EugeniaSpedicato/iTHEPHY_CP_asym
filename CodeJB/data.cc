@@ -438,6 +438,15 @@ void data(string dir, string sample, string polarisation)
   cout << "Total asymmetry before weighting: " << asym << " +/- " << err << endl;
   cout << "Total asymmetry after signal weighting: " << asymSW << " +/- " << errSW << endl;
 
+  if(polarisation == "up") nPosSW *= 0.85017/0.842512;
+  else if(polarisation == "down") nPosSW *= 0.850674/0.84266;
+  else nPosSW *= 0.850425/0.842585;
+
+  asymSW = (nPosSW - nNegSW)/(nPosSW + nNegSW);
+  errSW = nPosSW * nNegSW / pow(nPosSW + nNegSW, 3.); err = 2 * sqrt(errSW);
+
+  cout << "Total asymmetry after signal and K weighting: " << asymSW << " +/- " << errSW << endl;
+
   uint64_t end_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
   float elapsed = (end_time - start_time)*0.000001;
   std::cout << "computation time/s: " << elapsed << std::endl;

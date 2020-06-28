@@ -723,5 +723,6 @@ RooArgList:: = (sig_yield_2,bkg_yield_2)
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(model_pos_Int[DTF_Mass|plotRange]_Norm[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 Total asymmetry before weighting: -8.27318e-05 +/- 0.000560041
 Total asymmetry after signal weighting: -0.00122236 +/- 7.84116e-08
-computation time/s: 410.138
-computation time/min: 6.83563
+Total asymmetry after signal and K weighting: 0.00351033 +/- 7.80401e-08
+computation time/s: 426.031
+computation time/min: 7.10051

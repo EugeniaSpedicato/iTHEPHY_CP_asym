@@ -257,14 +257,14 @@ void hist_divide(vector<TH1F*> v_hist, vector<TH1F*> v_hist_reco)
   }
 }
 
-void eff(string dir, string sample, string polarisation) 
+void eff(string dir, string sample, string polarisation)
 {
   uint64_t start_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
   string input_name = dir+"/"+sample+".root";
   TChain *ntp = new TChain("ntp");
   ntp->Add(input_name.c_str());
-	
-	
+
+
   TCanvas *c_test = new TCanvas();
 
   string saving;
@@ -744,13 +744,109 @@ void eff(string dir, string sample, string polarisation)
   output_hist_name = "output/histOut_"+sample+".root";
   TFile *out_hist_fi = new TFile(output_hist_name.c_str(),"RECREATE");
 
+  h_pT_reco_Pi_pos->Write();
+  h_pT_reco_K_pos->Write();
+  h_pT_reco_SPi_pos->Write();
+  h_pT_reco_D0_pos->Write();
+  h_pT_reco_Dst_pos->Write();
+
+  h_phi_reco_Pi_pos->Write();
+  h_phi_reco_K_pos->Write();
+  h_phi_reco_SPi_pos->Write();
+  h_phi_reco_D0_pos->Write();
+  h_phi_reco_Dst_pos->Write();
+
+  h_theta_reco_Pi_pos->Write();
+  h_theta_reco_K_pos->Write();
+  h_theta_reco_SPi_pos->Write();
+  h_theta_reco_D0_pos->Write();
+  h_theta_reco_Dst_pos->Write();
+
+  h_eta_reco_Pi_pos->Write();
+  h_eta_reco_K_pos->Write();
+  h_eta_reco_SPi_pos->Write();
+  h_eta_reco_D0_pos->Write();
+  h_eta_reco_Dst_pos->Write();
+
+  h_pT_Pi_pos->Write();
+  h_pT_K_pos->Write();
+  h_pT_SPi_pos->Write();
+  h_pT_D0_pos->Write();
+  h_pT_Dst_pos->Write();
+
+  h_phi_Pi_pos->Write();
+  h_phi_K_pos->Write();
+  h_phi_SPi_pos->Write();
+  h_phi_D0_pos->Write();
+  h_phi_Dst_pos->Write();
+
+  h_theta_Pi_pos->Write();
+  h_theta_K_pos->Write();
+  h_theta_SPi_pos->Write();
+  h_theta_D0_pos->Write();
+  h_theta_Dst_pos->Write();
+
+  h_eta_Pi_pos->Write();
+  h_eta_K_pos->Write();
+  h_eta_SPi_pos->Write();
+  h_eta_D0_pos->Write();
+  h_eta_Dst_pos->Write();
+
+  h_pT_Pi_neg->Write();
+  h_pT_K_neg->Write();
+  h_pT_SPi_neg->Write();
+  h_pT_D0_neg->Write();
+  h_pT_Dst_neg->Write();
+
+  h_phi_Pi_neg->Write();
+  h_phi_K_neg->Write();
+  h_phi_SPi_neg->Write();
+  h_phi_D0_neg->Write();
+  h_phi_Dst_neg->Write();
+
+  h_theta_Pi_neg->Write();
+  h_theta_K_neg->Write();
+  h_theta_SPi_neg->Write();
+  h_theta_D0_neg->Write();
+  h_theta_Dst_neg->Write();
+
+  h_eta_Pi_neg->Write();
+  h_eta_K_neg->Write();
+  h_eta_SPi_neg->Write();
+  h_eta_D0_neg->Write();
+  h_eta_Dst_neg->Write();
+
+  h_pT_reco_Pi_neg->Write();
+  h_pT_reco_K_neg->Write();
+  h_pT_reco_SPi_neg->Write();
+  h_pT_reco_D0_neg->Write();
+  h_pT_reco_Dst_neg->Write();
+
+  h_phi_reco_Pi_neg->Write();
+  h_phi_reco_K_neg->Write();
+  h_phi_reco_SPi_neg->Write();
+  h_phi_reco_D0_neg->Write();
+  h_phi_reco_Dst_neg->Write();
+
+  h_theta_reco_Pi_neg->Write();
+  h_theta_reco_K_neg->Write();
+  h_theta_reco_SPi_neg->Write();
+  h_theta_reco_D0_neg->Write();
+  h_theta_reco_Dst_neg->Write();
+
+  h_eta_reco_Pi_neg->Write();
+  h_eta_reco_K_neg->Write();
+  h_eta_reco_SPi_neg->Write();
+  h_eta_reco_D0_neg->Write();
+  h_eta_reco_Dst_neg->Write();
+
   printdevhists(v_Pi_hist_reco_pos, v_Pi_hist_reco_neg, polarisation);
   printdevhists(v_SPi_hist_reco_pos, v_SPi_hist_reco_neg, polarisation);
   printdevhists(v_K_hist_reco_pos, v_K_hist_reco_neg, polarisation);
   printdevhists(v_D0_hist_reco_pos, v_D0_hist_reco_neg, polarisation);
   printdevhists(v_Dst_hist_reco_pos, v_Dst_hist_reco_neg, polarisation, true);
 
-  
+
   h_pT_reco_Pi->Write();
   h_pT_reco_K->Write();
   h_pT_reco_SPi->Write();
@@ -777,7 +873,7 @@ void eff(string dir, string sample, string polarisation)
   h_eta_reco_D0->Write();
   h_eta_reco_Dst->Write();
 
-
+/*
   h_pT_reco_Pi_pos->Write();
   h_pT_reco_K_pos->Write();
   h_pT_reco_SPi_pos->Write();
@@ -800,35 +896,13 @@ void eff(string dir, string sample, string polarisation)
   h_eta_reco_K_pos->Write();
   h_eta_reco_SPi_pos->Write();
   h_eta_reco_D0_pos->Write();
-  h_eta_reco_Dst_pos->Write();
+  h_eta_reco_Dst_pos->Write();*/
 
 
 
-  h_pT_reco_Pi_neg->Write();
-  h_pT_reco_K_neg->Write();
-  h_pT_reco_SPi_neg->Write();
-  h_pT_reco_D0_neg->Write();
-  h_pT_reco_Dst_neg->Write();
+  hist_divide(v_K_hist_pos,v_K_hist_reco_pos);
+  hist_divide(v_K_hist_neg,v_K_hist_reco_neg);
 
-  h_phi_reco_Pi_neg->Write();
-  h_phi_reco_K_neg->Write();
-  h_phi_reco_SPi_neg->Write();
-  h_phi_reco_D0_neg->Write();
-  h_phi_reco_Dst_neg->Write();
-
-  h_theta_reco_Pi_neg->Write();
-  h_theta_reco_K_neg->Write();
-  h_theta_reco_SPi_neg->Write();
-  h_theta_reco_D0_neg->Write();
-  h_theta_reco_Dst_neg->Write();
-
-  h_eta_reco_Pi_neg->Write();
-  h_eta_reco_K_neg->Write();
-  h_eta_reco_SPi_neg->Write();
-  h_eta_reco_D0_neg->Write();
-  h_eta_reco_Dst_neg->Write();
-
-  
   hist_divide(v_Pi_hist,v_Pi_hist_reco);
   hist_divide(v_K_hist,v_K_hist_reco);
   hist_divide(v_SPi_hist,v_SPi_hist_reco);
@@ -836,13 +910,11 @@ void eff(string dir, string sample, string polarisation)
   hist_divide(v_Dst_hist,v_Dst_hist_reco);
 
   hist_divide(v_Pi_hist_pos,v_Pi_hist_reco_pos);
-  hist_divide(v_K_hist_pos,v_K_hist_reco_pos);
   hist_divide(v_SPi_hist_pos,v_SPi_hist_reco_pos);
   hist_divide(v_D0_hist_pos,v_D0_hist_reco_pos);
   hist_divide(v_Dst_hist_pos,v_Dst_hist_reco_pos);
 
   hist_divide(v_Pi_hist_neg,v_Pi_hist_reco_neg);
-  hist_divide(v_K_hist_neg,v_K_hist_reco_neg);
   hist_divide(v_SPi_hist_neg,v_SPi_hist_reco_neg);
   hist_divide(v_D0_hist_neg,v_D0_hist_reco_neg);
   hist_divide(v_Dst_hist_neg,v_Dst_hist_reco_neg);
@@ -901,6 +973,22 @@ void eff(string dir, string sample, string polarisation)
   cout << "soft Pions: " << dev_SPi << " +/- " << dev_SPi_err << " , in sigmas: " << abs(dev_SPi/dev_SPi_err) << endl;
   cout << "D0: " << dev_D0 << " +/- " << dev_D0_err << " , in sigmas: " << abs(dev_D0/dev_D0_err) << endl;
   cout << "Dst: " << dev_Dst << " +/- " << dev_Dst_err << " , in sigmas: " << abs(dev_Dst/dev_Dst_err) << endl;
+
+
+  nD0_reco_pos *= v_eff_pos.at(1)/v_eff_neg.at(1);
+  nDst_reco_pos *= v_eff_pos.at(1)/v_eff_neg.at(1);
+
+  dev_D0 = (nD0_reco_pos - nD0_reco_neg)/(nD0_reco_pos + nD0_reco_neg);
+  dev_Dst = (nDst_reco_pos - nDst_reco_neg)/(nDst_reco_pos + nDst_reco_neg);
+
+
+  dev_D0_err = 2*sqrt(pow(nD0_reco_pos,2.)*nD0_reco_neg + pow(nD0_reco_neg,2.)*nD0_reco_pos)/pow(nD0_reco_pos + nD0_reco_neg,2.);
+  dev_Dst_err = 2*sqrt(pow(nDst_reco_pos,2.)*nDst_reco_neg + pow(nDst_reco_neg,2.)*nDst_reco_pos)/pow(nDst_reco_pos + nDst_reco_neg,2.);
+
+  cout << "D0 K weight: " << dev_D0 << " +/- " << dev_D0_err << " , in sigmas: " << abs(dev_D0/dev_D0_err) << endl;
+  cout << "Dst K weight: " << dev_Dst << " +/- " << dev_Dst_err << " , in sigmas: " << abs(dev_Dst/dev_Dst_err) << endl;
+
+  cout << endl << endl << v_eff_pos.at(1)/v_eff_neg.at(1) << endl;
 
   sethists(v_Pi_hist_reco, v_Pi_hist_reco_pos, v_Pi_hist_reco_neg);
   sethists(v_SPi_hist_reco, v_SPi_hist_reco_pos, v_SPi_hist_reco_neg);
@@ -991,7 +1079,14 @@ void eff(string dir, string sample, string polarisation)
   h_phi_test_SPi_neg->Draw("hist same");
   saving = "output/"+directory+"/test/h_phi_test_SPi_combined.pdf";
   c_test->Print(saving.c_str());
-  
+
+
+
+
+
+
+
+
 
 
   uint64_t end_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
