@@ -354,7 +354,8 @@ void data(string dir, string sample, string polarisation)
 
   TCanvas *canvas2 = new TCanvas();
   gStyle->SetLegendTextSize(0.033);
-  TLegend *l = new TLegend(0.6,0.6,0.9,0.9);
+  TLegend *l = new TLegend(0.5,0.65,0.9,0.9);
+  l->SetBorderSize(0);
   l->SetHeader("iTEPHY project 2020", "c");
   l->AddEntry(h_Dst_pT_MC, "MC simulation #p_T(#D^*)/GeV", "f");
   l->AddEntry(h_Dst_pT_data_sw, "Unfolded data #p_T(#D^*)/GeV", "lep");
