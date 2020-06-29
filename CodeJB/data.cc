@@ -354,10 +354,10 @@ void data(string dir, string sample, string polarisation)
 
   TCanvas *canvas2 = new TCanvas();
   gStyle->SetLegendTextSize(0.033);
-  TLegend *l = new TLegend(0.75,0.75,0.9,0.9);
+  TLegend *l = new TLegend(0.6,0.6,0.9,0.9);
   l->SetHeader("iTEPHY project 2020", "c");
-  l->AddEntry(h_Dst_pT_MC, "MC simulation p_T(D^*)/GeV", "f");
-  l->AddEntry(h_Dst_pT_data_sw, "Unfolded data p_T(D^*)/GeV", "lep");
+  l->AddEntry(h_Dst_pT_MC, "MC simulation #p_T(#D^*)/GeV", "f");
+  l->AddEntry(h_Dst_pT_data_sw, "Unfolded data #p_T(#D^*)/GeV", "lep");
 
   h_Dst_pT_MC->Draw("hist");
   h_Dst_pT_data_sw->Draw("same");
