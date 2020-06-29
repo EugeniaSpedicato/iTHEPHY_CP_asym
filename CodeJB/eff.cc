@@ -132,23 +132,23 @@ void printdevhists(vector<TH1F*> v_get_hist_pos, vector<TH1F*> v_get_hist_neg, s
 	  //v_hist_pos.at(0)->Multiply(h_weight);
 	  v_hist_pos.at(0)->Draw();
 	  func.Draw("same");
-      save_name = "output/"+directory+"/deviation/h_pT_reco_Dst_dev_weighted.pdf";
-      c->SaveAs(("output/"+directory+"/deviation/h_pT_reco_Dst_dev_weighted.pdf").c_str());
-      double err = 0.;
-      double as = 0.;
-      for (int j = 0; j< 180;++j)
-      {
-		v_hist_pos.at(0)->SetBinContent(j, v_hist_pos.at(0)->GetBinContent(j)*h_weight->GetBinContent(j));
-		as += v_hist_pos.at(0)->GetBinContent(j);
+    save_name = "output/"+directory+"/deviation/h_pT_reco_Dst_dev_weighted.pdf";
+    c->SaveAs(("output/"+directory+"/deviation/h_pT_reco_Dst_dev_weighted.pdf").c_str());
+    double err = 0.;
+    double as = 0.;
+    for (int j = 0; j< 180;++j)
+    {
+		  v_hist_pos.at(0)->SetBinContent(j, v_hist_pos.at(0)->GetBinContent(j)*h_weight->GetBinContent(j));
+		  as += v_hist_pos.at(0)->GetBinContent(j);
 	  }
 	  as /= 180.;
 	  for (int j = 0; j< 180;++j)
-          {
-		err += pow(v_hist_pos.at(0)->GetBinContent(j) - as, 2.);
+    {
+		  err += pow(v_hist_pos.at(0)->GetBinContent(j) - as, 2.);
 	  }
 	  err /= 179.;
 	  err = sqrt(err);
-      cout <<endl<< endl << "weighted asymmetry: " << as << " +/- " << err << endl << endl;
+    cout <<endl<< endl << "weighted asymmetry: " << as << " +/- " << err << endl << endl;
 	}
 }
 
@@ -744,6 +744,8 @@ void eff(string dir, string sample, string polarisation)
   output_hist_name = "output/histOut_"+sample+".root";
   TFile *out_hist_fi = new TFile(output_hist_name.c_str(),"RECREATE");
 
+  h_pT_Dst->Write();
+
   h_pT_reco_Pi_pos->Write();
   h_pT_reco_K_pos->Write();
   h_pT_reco_SPi_pos->Write();
@@ -840,20 +842,11 @@ void eff(string dir, string sample, string polarisation)
   h_eta_reco_D0_neg->Write();
   h_eta_reco_Dst_neg->Write();
 
-  printdevhists(v_Pi_hist_reco_pos, v_Pi_hist_reco_neg, polarisation);
-  printdevhists(v_SPi_hist_reco_pos, v_SPi_hist_reco_neg, polarisation);
-  printdevhists(v_K_hist_reco_pos, v_K_hist_reco_neg, polarisation);
-  printdevhists(v_D0_hist_reco_pos, v_D0_hist_reco_neg, polarisation);
-  printdevhists(v_Dst_hist_reco_pos, v_Dst_hist_reco_neg, polarisation, true);
-
-
   h_pT_reco_Pi->Write();
   h_pT_reco_K->Write();
   h_pT_reco_SPi->Write();
   h_pT_reco_D0->Write();
   h_pT_reco_Dst->Write();
-
-  h_pT_Dst->Write();
 
   h_phi_reco_Pi->Write();
   h_phi_reco_K->Write();
@@ -872,6 +865,13 @@ void eff(string dir, string sample, string polarisation)
   h_eta_reco_SPi->Write();
   h_eta_reco_D0->Write();
   h_eta_reco_Dst->Write();
+  printdevhists(v_Pi_hist_reco_pos, v_Pi_hist_reco_neg, polarisation);
+  printdevhists(v_SPi_hist_reco_pos, v_SPi_hist_reco_neg, polarisation);
+  printdevhists(v_K_hist_reco_pos, v_K_hist_reco_neg, polarisation);
+  printdevhists(v_D0_hist_reco_pos, v_D0_hist_reco_neg, polarisation);
+  printdevhists(v_Dst_hist_reco_pos, v_Dst_hist_reco_neg, polarisation, true);
+
+
 
 /*
   h_pT_reco_Pi_pos->Write();

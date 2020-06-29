@@ -20,6 +20,7 @@
 #include "RooFitResult.h"
 #include "RooMinuit.h"
 #include "TROOT.h"
+#include "TLegend.h"
 using namespace RooFit;
 
 void printdevhists(TH1F *h_pos, TH1F *h_neg, string polarisation, string var, bool weighted)
@@ -234,15 +235,16 @@ void data(string dir, string sample, string polarisation)
   RooMinuit(*nll_pos).minos();
   //model_pos->fitTo(*dataset2, Extended(), NumCPU(nThreads), RooFit::PrintLevel(-1), RooFit::PrintEvalErrors(-1));
   RooStats::SPlot *sData2 = new RooStats::SPlot("sData2", "An SPlot2", *dataset2, model_pos, RooArgList(*sig_yield_2, *bkg_yield_2));
-/*  TFile *f;
+  TFile *f;
   if(polarisation=="up")f = new TFile("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Up_GEN.root");
-  else if(polarisation=="up") f = new TFile("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Dw_GEN.root");
+  else if(polarisation=="down") f = new TFile("output/histOut_minisample_Dst2D0pi_D02Kpi_2016_Dw_GEN.root");
   else f = new TFile("output/histOut_all.root");
   TH1F *h_Dst_pT_MC = (TH1F*)f->Get("h_pT_Dst");
   double nMCEvents = h_Dst_pT_MC->GetEntries();
   h_Dst_pT_MC->Scale(1./nMCEvents);
   h_Dst_pT_MC->SetLineColor(kAzure);
-*/
+  h_Dst_pT_MC->SetFillColor(kAzure);
+
   TH1F *h_Dst_DTF_pos = new TH1F("h_Dst_DTF_pos", ";DTF Mass/MeV; Event", 30, 2005., 2020.);
   TH1F *h_Dst_DTF_neg = new TH1F("h_Dst_DTF_neg", ";DsTF Mass/MeV; Event", 30, 2005., 2020.);
   TH1F *h_Dst_DTF_pos_sw = new TH1F("h_Dst_DTF_pos_sw", ";DTF Mass/MeV; Event", 30, 2005., 2020.);
@@ -351,8 +353,13 @@ void data(string dir, string sample, string polarisation)
 
 
   TCanvas *canvas2 = new TCanvas();
+  gStyle->SetLegendTextSize(0.033);
+  TLegend *l = new TLegend(0.75,0.75,0.9,0.9);
+  l->SetHeader("iTEPHY project 2020", "c");
+  l->AddEntry(h_Dst_pT_MC, "MC simulation p_T(D^*)/GeV", "f");
+  l->AddEntry(h_Dst_pT_data_sw, "Unfolded data p_T(D^*)/GeV", "lep");
 
-  //h_Dst_pT_MC->Draw("hist");
+  h_Dst_pT_MC->Draw("hist");
   h_Dst_pT_data_sw->Draw("same");
   canvas2->SaveAs(("output/data/plots/"+polarisation+"/MC_data_comp.pdf").c_str());
   //h_Dst_pT_data_sw->Divide(h_Dst_pT_MC);
@@ -390,11 +397,11 @@ void data(string dir, string sample, string polarisation)
   canvas2->SaveAs(("output/data/plots/"+polarisation+"/model_data_pos.pdf").c_str());
 
 
-  //h_Dst_pT_MC->Draw();
+/*  //h_Dst_pT_MC->Draw();
   h_Dst_pT_data->Draw("same");
   h_Dst_pT_data_nw->Draw("same");
   h_Dst_pT_data_sw->Draw("same");
-  canvas2->SaveAs(("output/data/plots/"+polarisation+"/MC_data_comp.pdf").c_str());
+  canvas2->SaveAs(("output/data/plots/"+polarisation+"/MC_data_comp.pdf").c_str());*/
 
 
   h_Dst_eta_phi_plane_pos->Add(h_Dst_eta_phi_plane_neg, -1.);

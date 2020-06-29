@@ -6,7 +6,6 @@ Info in <TCanvas::Print>: pdf file output/data/plots/up/model.pdf has been creat
 Info in <TCanvas::Print>: pdf file output/data/plots/up/model_data.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/up/model_pos.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/up/model_data_pos.pdf has been created
-Info in <TCanvas::Print>: pdf file output/data/plots/up/MC_data_comp.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/up/eta_phi_plane.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/up/h_Dst_asymDTF.pdf has been created
 Info in <TCanvas::Print>: pdf file output/data/plots/up/h_Dst_asymDTF_sw.pdf has been created

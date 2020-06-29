@@ -26,13 +26,13 @@ Processing data.cc++("$dir", "D02Kmpip_15_Up", "up")...
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_neg_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF2) first = 336904 last = 505356 Likelihood offset now set to 293887
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF1) first = 168452 last = 336904 Likelihood offset now set to 295595
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF4) first = 673808 last = 842260 Likelihood offset now set to 294173
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF3) first = 505356 last = 673808 Likelihood offset now set to 294554
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF0) first = 0 last = 168452 Likelihood offset now set to 294147
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF7) first = 1179164 last = 1347616 Likelihood offset now set to -1.73757e+07
 [#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF5) first = 842260 last = 1010712 Likelihood offset now set to 295640
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF1) first = 168452 last = 336904 Likelihood offset now set to 295595
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF3) first = 505356 last = 673808 Likelihood offset now set to 294554
 [#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF6) first = 1010712 last = 1179164 Likelihood offset now set to 294024
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF7) first = 1179164 last = 1347616 Likelihood offset now set to -1.73757e+07
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF0) first = 0 last = 168452 Likelihood offset now set to 294147
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_neg_dataset1_GOF4) first = 673808 last = 842260 Likelihood offset now set to 294173
  MINUIT WARNING IN HESSE   
  ============== Negative diagonal element 1 in Error Matrix
  MINUIT WARNING IN HESSE   
@@ -286,14 +286,14 @@ RooArgList:: = (sig_yield,bkg_yield)
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
 [#1] INFO:NumericIntegration -- RooRealIntegral::init(arg_pos_Int[DTF_Mass]) using numeric integrator RooIntegrator1D to calculate Int(DTF_Mass)
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF4) first = 645940 last = 807425 Likelihood offset now set to 282850
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF1) first = 161485 last = 322970 Likelihood offset now set to 281639
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF5) first = 807425 last = 968910 Likelihood offset now set to 281767
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF3) first = 484455 last = 645940 Likelihood offset now set to 281893
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF6) first = 968910 last = 1130395 Likelihood offset now set to 282233
 [#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF2) first = 322970 last = 484455 Likelihood offset now set to 282328
-[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF7) first = 1130395 last = 1291880 Likelihood offset now set to -1.66051e+07
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF5) first = 807425 last = 968910 Likelihood offset now set to 281767
 [#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF0) first = 0 last = 161485 Likelihood offset now set to 282975
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF6) first = 968910 last = 1130395 Likelihood offset now set to 282233
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF4) first = 645940 last = 807425 Likelihood offset now set to 282850
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF7) first = 1130395 last = 1291880 Likelihood offset now set to -1.66051e+07
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF1) first = 161485 last = 322970 Likelihood offset now set to 281639
+[#1] INFO:Minization -- RooNLLVar::evaluatePartition(nll_model_pos_dataset2_GOF3) first = 484455 last = 645940 Likelihood offset now set to 281893
  MINUIT WARNING IN HESSE   
  ============== Negative diagonal element 1 in Error Matrix
  MINUIT WARNING IN HESSE   
@@ -570,5 +570,5 @@ RooArgList:: = (sig_yield_2,bkg_yield_2)
 Total asymmetry before weighting: -0.0211372 +/- 0.000679247
 Total asymmetry after signal weighting: -0.0210059 +/- 1.15344e-07
 Total asymmetry after signal and K weighting: -0.0164833 +/- 1.14853e-07
-computation time/s: 207.13
-computation time/min: 3.45216
+computation time/s: 178.788
+computation time/min: 2.9798
