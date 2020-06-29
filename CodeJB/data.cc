@@ -349,7 +349,7 @@ void data(string dir, string sample, string polarisation)
   h_Dst_pT_data_sw->Scale(1./h_Dst_pT_data_sw->GetSumOfWeights());
   h_Dst_pT_data_sw->SetMarkerColor(kBlack);
   h_Dst_pT_data_sw->SetMarkerStyle(8);
-  h_Dst_pT_data_sw->SetMarkerSize(0.1);
+  h_Dst_pT_data_sw->SetMarkerSize(0.5);
 
 
   TCanvas *canvas2 = new TCanvas();
@@ -361,6 +361,7 @@ void data(string dir, string sample, string polarisation)
 
   h_Dst_pT_MC->Draw("hist");
   h_Dst_pT_data_sw->Draw("same");
+  l->Draw("same");
   canvas2->SaveAs(("output/data/plots/"+polarisation+"/MC_data_comp.pdf").c_str());
   //h_Dst_pT_data_sw->Divide(h_Dst_pT_MC);
 
